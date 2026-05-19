@@ -21,8 +21,8 @@ const game = article.gameSlug ? getGame(article.gameSlug) : undefined;
     title={article.title}
     description={article.excerpt}
   />
-  <article class="px-6 py-12 lg:px-12 max-w-3xl">
-    <p class="text-sm text-ink-300 mb-8 dark:text-ink-400">
+  <article class="page-container-below-header max-w-3xl">
+    <p class="text-sm text-muted mb-8">
       {article.readTime} · {new Date(article.publishedAt).toLocaleDateString('en-US', { dateStyle: 'long' })}
       {game && <> · <a href={`/${game.slug}`} class="cozy-link">{game.name}</a></>}
     </p>
@@ -35,7 +35,7 @@ const game = article.gameSlug ? getGame(article.gameSlug) : undefined;
         Imagine lantern-lit paths, illustrated maps, and step-by-step walkthroughs that never rush you.
         That is the Mochileaf reading experience we are building toward.
       </p>
-      <h2 class="font-display text-xl text-ink-700 dark:text-cream-100">What comes next</h2>
+      <h2 class="font-display text-xl text-primary">What comes next</h2>
       <p>
         Connect your content API, drop in MDX, or wire up a headless CMS. The routing and SEO structure
         are already in place.

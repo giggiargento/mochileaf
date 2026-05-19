@@ -23,14 +23,14 @@ const articles = getArticlesByGame(game.slug).slice(0, 2);
 
 <GameHubLayout game={game} title="Home">
   <div class:list={['relative overflow-hidden', `bg-gradient-to-br ${game.coverGradient}`]}>
-    <div class="px-6 py-16 lg:px-12 md:py-24">
-      <p class="text-xs font-medium uppercase tracking-widest text-sage-500 dark:text-sage-300">
+    <div class="page-container py-16 md:py-24">
+      <p class="text-xs font-medium uppercase tracking-widest text-accent">
         {game.tagline}
       </p>
-      <h1 class="mt-2 font-display text-4xl md:text-5xl text-ink-700 dark:text-cream-50 max-w-2xl">
+      <h1 class="mt-2 font-display text-4xl md:text-5xl text-primary max-w-2xl">
         Welcome to {game.name}
       </h1>
-      <p class="mt-4 max-w-xl text-lg text-ink-500 dark:text-ink-200">{game.description}</p>
+      <p class="mt-4 max-w-xl text-lg text-secondary">{game.description}</p>
       <div class="mt-8 flex flex-wrap gap-3">
         <Button href={`/${game.slug}/guides`}>Browse guides</Button>
         <Button href={`/${game.slug}/characters`} variant="secondary">Meet characters</Button>
@@ -38,28 +38,32 @@ const articles = getArticlesByGame(game.slug).slice(0, 2);
     </div>
   </div>
 
-  <div class="px-6 py-6 lg:px-12">
+  <div class="page-container py-6">
     <AdPlaceholder slot="banner" />
   </div>
 
-  <section class="px-6 py-12 lg:px-12">
+  <section class="pb-12">
     <PageHeader title="Featured characters" description="Meet the gentle souls of this world." />
+    <div class="page-container pt-8 pb-0">
     <ContentGrid columns={3}>
       {characters.map((c) => <CharacterCard character={c} gameSlug={game.slug} />)}
     </ContentGrid>
     <div class="mt-6 text-center">
       <a href={`/${game.slug}/characters`} class="cozy-link text-sm font-semibold">View all characters →</a>
     </div>
+    </div>
   </section>
 
-  <section class="px-6 py-12 lg:px-12 border-t border-cream-200/60 dark:border-ink-700/40">
+  <section class="pb-12 border-t border-default">
     <PageHeader title="Latest from the hub" />
+    <div class="page-container pt-8 pb-0">
     <ContentGrid columns={2}>
       {articles.map((a) => <ArticleCard article={a} />)}
     </ContentGrid>
+    </div>
   </section>
 
-  <div class="px-6 py-8 lg:px-12">
+  <div class="page-container py-8">
     <AdPlaceholder slot="inline" />
   </div>
 </GameHubLayout>

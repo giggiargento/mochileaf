@@ -14,9 +14,9 @@ const { game } = Astro.props;
 
 <GameHubLayout game={game} title="Search">
   <PageHeader title="Search" description={`Find guides, characters, and news in ${game.name}.`} />
-  <div class="px-6 py-12 lg:px-12 max-w-xl">
+  <div class="page-container-below-header max-w-xl">
     <form role="search" class="cozy-card p-6" action={`/${game.slug}/search`} method="get">
-      <label for="q" class="block text-sm font-medium text-ink-500 mb-2 dark:text-ink-200">
+      <label for="q" class="block text-sm font-medium text-secondary mb-2">
         Search this hub
       </label>
       <div class="flex gap-3">
@@ -25,7 +25,7 @@ const { game } = Astro.props;
           id="q"
           name="q"
           placeholder="Lantern festival, Elara, builds..."
-          class="flex-1 rounded-xl border border-cream-200 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage-300 dark:border-ink-600 dark:bg-ink-800 dark:text-cream-100"
+          class="flex-1 rounded-xl border border-default bg-card px-4 py-3 text-sm text-primary focus:outline-none focus:ring-2 focus:ring-sage-300"
         />
         <button
           type="submit"
@@ -35,7 +35,7 @@ const { game } = Astro.props;
         </button>
       </div>
     </form>
-    <p class="mt-6 text-sm text-ink-300 dark:text-ink-400">
+    <p class="mt-6 text-sm text-muted">
       Client-side search can be wired to Pagefind, Fuse.js, or your API. This form is ready for integration.
     </p>
     <div id="search-results" class="mt-8 space-y-4" hidden>

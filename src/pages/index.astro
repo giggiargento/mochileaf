@@ -8,13 +8,13 @@ import UpdateItem from '../components/home/UpdateItem.astro';
 import Newsletter from '../components/home/Newsletter.astro';
 import PromoBanner from '../components/home/PromoBanner.astro';
 import AdPlaceholder from '../components/ui/AdPlaceholder.astro';
-import { games, getFeaturedGames } from '../data/games';
+import { getFeaturedGames } from '../data/games';
 import { getFeaturedArticles, getTrendingArticles } from '../data/articles';
 import { updates } from '../data/updates';
 
 const featuredGames = getFeaturedGames();
 const featuredArticles = getFeaturedArticles();
-const trendingArticles = getTrendingArticles();
+const trendingArticles = getTrendingArticles().slice(0, 2);
 ---
 
 <GlobalLayout
@@ -23,47 +23,45 @@ const trendingArticles = getTrendingArticles();
 >
   <Hero />
 
-  <div class="px-6 lg:px-12">
+  <div class="page-container py-4">
     <AdPlaceholder slot="banner" label="Top banner" />
   </div>
 
-  <section id="games" class="px-6 py-16 lg:px-12">
+  <section class="page-container py-16">
     <SectionHeader
       title="Featured games"
       subtitle="Each world has its own cozy content hub — guides, builds, and stories."
+      href="/games"
+      linkLabel="All games"
     />
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {featuredGames.map((game) => <GameCard game={game} />)}
     </div>
-    {games.filter((g) => g.status === 'coming-soon').length > 0 && (
-      <div class="mt-10">
-        <h3 class="text-sm font-semibold text-ink-400 mb-4 dark:text-ink-300">Coming soon</h3>
-        <div class="grid gap-6 sm:grid-cols-2 max-w-xl">
-          {games.filter((g) => g.status === 'coming-soon').map((game) => <GameCard game={game} />)}
-        </div>
-      </div>
-    )}
   </section>
 
-  <section class="px-6 py-8 lg:px-12">
+  <section class="page-container py-8">
     <AdPlaceholder slot="inline" />
   </section>
 
-  <section class="px-6 py-16 lg:px-12">
-    <div class="grid gap-10 lg:grid-cols-3">
-      <div class="lg:col-span-2">
+  <section class="page-container py-16">
+    <div class="grid gap-10 lg:grid-cols-3 lg:items-stretch">
+      <div class="lg:col-span-2 flex flex-col">
         <SectionHeader
-          id="updates"
           title="Latest updates"
           subtitle="Patch notes, events, and gentle announcements."
         />
-        <ul class="cozy-card divide-y divide-cream-200 px-6 dark:divide-ink-700">
+        <ul class="panel-soft flex-1 divide-y divide-[var(--border-default)] px-6">
           {updates.slice(0, 5).map((update) => <UpdateItem update={update} />)}
         </ul>
       </div>
-      <div>
-        <SectionHeader title="Trending" subtitle="What the community is reading." />
-        <div class="space-y-4">
+      <div class="flex flex-col">
+        <SectionHeader
+          title="Trending"
+          subtitle="What the community is reading."
+          href="/articles"
+          linkLabel="All articles"
+        />
+        <div class="trending-stack">
           {trendingArticles.map((article) => (
             <ArticleCard article={article} />
           ))}
@@ -79,17 +77,19 @@ const trendingArticles = getTrendingArticles();
     ctaHref="/about"
   />
 
-  <section id="articles" class="px-6 py-16 lg:px-12">
+  <section class="page-container py-16">
     <SectionHeader
       title="Featured articles"
       subtitle="Editorial guides and cozy stories from across our hubs."
+      href="/articles"
+      linkLabel="All articles"
     />
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {featuredArticles.map((article) => <ArticleCard article={article} />)}
     </div>
   </section>
 
-  <section class="px-6 py-8 lg:px-12">
+  <section class="page-container py-8">
     <AdPlaceholder slot="footer" label="Footer ad" />
   </section>
 

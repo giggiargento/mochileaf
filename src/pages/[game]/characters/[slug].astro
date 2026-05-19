@@ -24,7 +24,7 @@ const { game, character } = Astro.props;
 ---
 
 <GameHubLayout game={game} title={character.name}>
-  <article class="px-6 py-12 lg:px-12 max-w-4xl">
+  <article class="page-container-below-header max-w-4xl">
     <a href={`/${game.slug}/characters`} class="cozy-link text-sm font-medium">← All characters</a>
     <div class="mt-8 grid gap-10 md:grid-cols-2">
       <div class="aspect-square rounded-[var(--radius-card)] bg-gradient-to-br from-sage-100 to-mist-100 flex items-center justify-center text-8xl dark:from-sage-500/20 dark:to-mist-300/10" aria-hidden="true">
@@ -35,8 +35,8 @@ const { game, character } = Astro.props;
           {character.tier && <Badge variant="sage">Tier {character.tier}</Badge>}
           {character.element && <Badge variant="mist">{character.element}</Badge>}
         </div>
-        <h1 class="font-display text-4xl text-ink-700 dark:text-cream-100">{character.name}</h1>
-        <p class="mt-2 text-lg font-medium text-sage-400">{character.role}</p>
+        <h1 class="font-display text-4xl text-primary">{character.name}</h1>
+        <p class="mt-2 text-lg font-medium text-accent">{character.role}</p>
         <p class="mt-6 prose-cozy">{character.description}</p>
         <div class="mt-8 flex gap-3">
           <Button href={`/${game.slug}/builds`}>View builds</Button>

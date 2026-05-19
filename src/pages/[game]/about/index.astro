@@ -14,13 +14,13 @@ const { game } = Astro.props;
 
 <GameHubLayout game={game} title="About">
   <PageHeader title={`About ${game.name}`} description={game.tagline} />
-  <article class="px-6 py-12 lg:px-12 max-w-3xl prose-cozy">
+  <article class="page-container-below-header max-w-3xl prose-cozy">
     <p>{game.description}</p>
     <p>
       This hub is part of Mochileaf — a multi-game cozy content platform. Here you'll find characters,
       builds, tier lists, guides, and news curated with a warm, editorial touch.
     </p>
-    <h2 class="font-display text-xl text-ink-700 mt-8 dark:text-cream-100">Hub sections</h2>
+    <h2 class="font-display text-xl text-primary mt-8">Hub sections</h2>
     <ul class="list-disc pl-6 space-y-2 mt-4">
       <li><a href={`/${game.slug}/characters`} class="cozy-link">Characters</a> — profiles and lore</li>
       <li><a href={`/${game.slug}/builds`} class="cozy-link">Builds</a> — relaxed loadouts</li>
