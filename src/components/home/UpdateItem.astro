@@ -1,6 +1,7 @@
 ---
 import type { Update } from '../../types';
 import { getGame } from '../../data/games';
+import Icon from '../ui/Icon.astro';
 
 interface Props {
   update: Update;
@@ -8,6 +9,7 @@ interface Props {
 
 const { update } = Astro.props;
 const game = update.gameSlug ? getGame(update.gameSlug) : undefined;
+const href = update.gameSlug ? `/${update.gameSlug}/news` : '/articles';
 
 const typeLabels: Record<Update['type'], string> = {
   patch: 'Patch',
@@ -15,20 +17,40 @@ const typeLabels: Record<Update['type'], string> = {
   content: 'New content',
   community: 'Community',
 };
+
+const typeIcons: Record<Update['type'], string> = {
+  patch: 'cloud',
+  event: 'calendar-star',
+  content: 'book-open',
+  community: 'users-three',
+};
 ---
 
-<li class="flex gap-4 py-4 border-b border-cream-200 last:border-0 dark:border-ink-700">
-  <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sage-100 text-sage-500 dark:bg-sage-500/20 dark:text-sage-200" aria-hidden="true">
-    {update.type === 'patch' && '☁️'}
-    {update.type === 'event' && '🎋'}
-    {update.type === 'content' && '📖'}
-    {update.type === 'community' && '🍵'}
+<li class="flex gap-4 py-4">
+  <div
+    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-nav text-accent"
+    aria-hidden="true"
+  >
+    <Icon name={typeIcons[update.type]} size={20} weight="regular" />
   </div>
   <div class="min-w-0 flex-1">
-    <p class="text-xs font-medium uppercase tracking-wide text-sage-400">{typeLabels[update.type]}</p>
-    <p class="mt-0.5 font-medium text-ink-600 dark:text-cream-100">{update.title}</p>
-    <p class="mt-1 text-sm text-ink-300 dark:text-ink-400">
-      {game ? `${game.name} · ` : ''}
+    <p class="text-xs font-medium uppercase tracking-wide text-accent">{typeLabels[update.type]}</p>
+    <h3 class="mt-0.5 font-medium leading-snug">
+      <a href={href} class="cozy-link no-underline hover:underline">
+        {update.title}
+      </a>
+    </h3>
+    <p class="mt-1 text-sm text-muted">
+      {
+        game ? (
+          <>
+            <a href={`/${game.slug}`} class="cozy-link no-underline hover:underline">
+              {game.name}
+            </a>
+            {' · '}
+          </>
+        ) : null
+      }
       <time datetime={update.date}>
         {new Date(update.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
       </time>

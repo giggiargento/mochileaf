@@ -1,6 +1,7 @@
 ---
 import type { NavItem } from '../../types';
 import Logo from './Logo.astro';
+import Icon from '../ui/Icon.astro';
 import ThemeToggle from '../ui/ThemeToggle.astro';
 
 interface Props {
@@ -9,10 +10,10 @@ interface Props {
 }
 
 const { title = 'Menu', items } = Astro.props;
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
-<header class="sticky top-0 z-50 border-b border-cream-200/80 bg-cream-50/90 backdrop-blur-md lg:hidden dark:border-ink-700/60 dark:bg-ink-900/90">
+<header class="sticky top-0 z-50 border-b border-default bg-nav backdrop-blur-md lg:hidden transition-colors duration-300">
   <div class="flex items-center justify-between gap-4 px-4 py-3">
     <Logo compact />
     <div class="flex items-center gap-2">
@@ -20,42 +21,42 @@ const currentPath = Astro.url.pathname;
       <button
         type="button"
         id="mobile-menu-btn"
-        class="flex h-10 w-10 items-center justify-center rounded-xl border border-cream-200 bg-white/80 text-ink-500 dark:border-ink-700 dark:bg-ink-800/80 dark:text-ink-200"
+        class="flex h-10 w-10 items-center justify-center rounded-xl border border-default bg-card text-secondary"
         aria-expanded="false"
         aria-controls="mobile-menu"
         aria-label="Open menu"
       >
-        <svg class="h-5 w-5 menu-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-        <svg class="hidden h-5 w-5 menu-close" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
+        <Icon name="list" size={22} class="menu-open" />
+        <Icon name="x" size={22} class="menu-close hidden" />
       </button>
     </div>
   </div>
 
   <nav
     id="mobile-menu"
-    class="hidden border-t border-cream-200 bg-cream-50 px-4 py-4 dark:border-ink-700 dark:bg-ink-900"
+    class="hidden border-t border-default bg-nav px-4 py-4"
     aria-label={title}
   >
-    <p class="mb-3 text-xs font-medium uppercase tracking-widest text-ink-300 dark:text-ink-400">{title}</p>
+    <p class="mb-3 text-xs font-medium uppercase tracking-widest text-muted">{title}</p>
     <ul class="space-y-1">
       {
         items.map((item) => {
-          const isActive = currentPath === item.href || currentPath.startsWith(item.href + '/');
+          const href = item.href.replace(/\/$/, '') || '/';
+          const matches = items.filter((nav) => {
+            const navHref = nav.href.replace(/\/$/, '') || '/';
+            return (
+              currentPath === navHref ||
+              (navHref !== '/' && currentPath.startsWith(`${navHref}/`))
+            );
+          });
+          const bestMatch = matches.sort(
+            (a, b) => (b.href.replace(/\/$/, '') || '/').length - (a.href.replace(/\/$/, '') || '/').length,
+          )[0];
+          const isActive = (bestMatch?.href.replace(/\/$/, '') || '/') === href;
           return (
             <li>
-              <a
-                href={item.href}
-                class:list={[
-                  'block rounded-xl px-4 py-3 text-sm font-medium transition-colors',
-                  isActive
-                    ? 'bg-sage-100 text-sage-500 dark:bg-sage-500/20 dark:text-sage-200'
-                    : 'text-ink-500 hover:bg-cream-100 dark:text-ink-200 dark:hover:bg-ink-800',
-                ]}
-              >
+              <a href={item.href} class:list={['nav-link block', isActive && 'nav-link-active']}>
+                {item.icon && <Icon name={item.icon} size={18} class="shrink-0 opacity-80" />}
                 {item.label}
               </a>
             </li>

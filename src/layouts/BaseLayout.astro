@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 import AmbientBackground from '../components/layout/AmbientBackground.astro';
 import { formatTitle, getDescription } from '../utils/seo';
 
@@ -34,6 +35,7 @@ const pageDescription = getDescription(description);
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Nunito:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <ClientRouter />
     <script is:inline>
       (function () {
         const key = 'mochileaf-theme';

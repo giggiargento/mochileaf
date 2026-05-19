@@ -8,11 +8,11 @@ interface Props {
 const { entry } = Astro.props;
 
 const tierColors: Record<TierEntry['tier'], string> = {
-  S: 'bg-sage-200 text-sage-500 dark:bg-sage-500/30 dark:text-sage-200',
+  S: 'bg-sage-200 text-sage-600 dark:bg-sage-600/30 dark:text-sage-200',
   A: 'bg-mist-200 text-mist-300 dark:bg-mist-300/20 dark:text-mist-100',
   B: 'bg-lavender-200 text-lavender-300 dark:bg-lavender-300/20 dark:text-lavender-100',
   C: 'bg-honey-200 text-honey-300 dark:bg-honey-300/20 dark:text-honey-200',
-  D: 'bg-cream-200 text-ink-300 dark:bg-ink-700 dark:text-ink-300',
+  D: 'bg-muted text-muted',
 };
 ---
 
@@ -22,7 +22,7 @@ const tierColors: Record<TierEntry['tier'], string> = {
   </div>
   <div class="flex flex-wrap gap-2 items-center">
     {entry.characters.map((name) => (
-      <span class="rounded-[var(--radius-pill)] bg-cream-100 px-4 py-2 text-sm font-medium text-ink-500 dark:bg-ink-700 dark:text-ink-100">
+      <span class="rounded-[var(--radius-pill)] bg-muted px-4 py-2 text-sm font-medium text-secondary">
         {name}
       </span>
     ))}

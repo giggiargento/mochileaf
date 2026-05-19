@@ -24,13 +24,13 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
     {game && <Badge variant="default">{game.name}</Badge>}
     {article.trending && <Badge variant="blossom">Trending</Badge>}
   </div>
-  <h3 class="font-display text-lg text-ink-700 dark:text-cream-100 line-clamp-2">
-    <a href={`/articles/${article.slug}`} class="hover:text-sage-500 transition-colors dark:hover:text-sage-300">
+  <h3 class="font-display text-lg text-primary line-clamp-2">
+    <a href={`/articles/${article.slug}`} class="hover:text-accent transition-colors">
       {article.title}
     </a>
   </h3>
-  <p class="mt-2 text-sm text-ink-400 flex-1 line-clamp-3 dark:text-ink-300">{article.excerpt}</p>
-  <footer class="mt-4 flex items-center gap-3 text-xs text-ink-300 dark:text-ink-400">
+  <p class="mt-2 text-sm text-secondary flex-1 line-clamp-3">{article.excerpt}</p>
+  <footer class="mt-4 flex items-center gap-3 text-xs text-muted">
     <time datetime={article.publishedAt}>
       {new Date(article.publishedAt).toLocaleDateString('en-US', {
         month: 'short',

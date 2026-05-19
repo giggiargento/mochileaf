@@ -1,4 +1,6 @@
 ---
+import Icon from '../ui/Icon.astro';
+
 interface Props {
   href?: string;
   compact?: boolean;
@@ -9,14 +11,14 @@ const { href = '/', compact = false } = Astro.props;
 
 <a href={href} class="group flex items-center gap-2.5" aria-label="Mochileaf home">
   <span
-    class="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-sage-200 to-mist-200 text-lg shadow-soft transition-transform group-hover:scale-105 dark:from-sage-500/30 dark:to-mist-300/20"
+    class="flex h-9 w-9 items-center justify-center rounded-2xl bg-sage-100 text-accent shadow-soft transition-transform duration-300 group-hover:scale-105"
     aria-hidden="true"
   >
-    🍃
+    <Icon name="leaf" size={20} weight="regular" />
   </span>
   {
     !compact && (
-      <span class="font-display text-xl font-semibold text-ink-700 dark:text-cream-100">
+      <span class="font-display text-xl font-semibold text-primary">
         Mochileaf
       </span>
     )

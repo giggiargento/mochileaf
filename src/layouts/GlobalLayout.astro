@@ -18,16 +18,13 @@ const { title, description } = Astro.props;
   <Sidebar items={globalNav} subtitle="Cozy Gaming" title="Mochileaf">
     <div slot="footer" class="space-y-3">
       <ThemeToggle />
-      <p class="text-xs text-ink-300 dark:text-ink-400">Soft fantasy · Peaceful play</p>
+      <p class="text-xs text-muted">Soft fantasy · Peaceful play</p>
     </div>
   </Sidebar>
 
   <MobileNav items={globalNav} title="Mochileaf" />
 
-  <div class="lg:pl-64">
-    <header class="hidden lg:flex items-center justify-end gap-4 px-8 py-4 border-b border-cream-200/60 dark:border-ink-700/40">
-      <ThemeToggle />
-    </header>
+  <div class="lg:pl-64 bg-page min-h-screen transition-colors duration-300">
     <main>
       <slot />
     </main>

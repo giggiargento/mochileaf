@@ -17,11 +17,11 @@ const difficultyLabels = {
 
 <article class="cozy-card p-6">
   <div class="flex flex-wrap gap-2 mb-3">
-  {build.tags.map((tag) => (
+    {build.tags.map((tag) => (
       <Badge variant="sage" size="sm">{tag}</Badge>
     ))}
   </div>
-  <h3 class="font-display text-lg text-ink-700 dark:text-cream-100">{build.name}</h3>
-  <p class="mt-2 text-sm text-ink-400 dark:text-ink-300">{build.summary}</p>
-  <p class="mt-4 text-xs font-medium text-sage-400">{difficultyLabels[build.difficulty]}</p>
+  <h3 class="font-display text-lg text-primary">{build.name}</h3>
+  <p class="mt-2 text-sm text-secondary">{build.summary}</p>
+  <p class="mt-4 text-xs font-medium text-accent">{difficultyLabels[build.difficulty]}</p>
 </article>

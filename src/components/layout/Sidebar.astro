@@ -1,6 +1,7 @@
 ---
 import type { NavItem } from '../../types';
 import Logo from './Logo.astro';
+import Icon from '../ui/Icon.astro';
 
 interface Props {
   title?: string;
@@ -18,58 +19,61 @@ const {
   backLabel = 'Back to home',
 } = Astro.props;
 
-const currentPath = Astro.url.pathname;
+const normalizePath = (path: string) => {
+  const trimmed = path.replace(/\/$/, '');
+  return trimmed === '' ? '/' : trimmed;
+};
+
+const currentPath = normalizePath(Astro.url.pathname);
+const backPath = normalizePath(backHref);
+const showBackLink = backPath !== currentPath;
 ---
 
 <aside
-  class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 border-r border-cream-200/80 bg-cream-50/95 backdrop-blur-md dark:border-ink-700/60 dark:bg-ink-900/95"
+  class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 border-r border-default bg-nav transition-colors duration-300"
   aria-label="Main navigation"
 >
   <div class="flex flex-col h-full p-6">
     <div class="mb-8">
-      {backHref !== Astro.url.pathname ? (
+      {showBackLink ? (
         <a
           href={backHref}
-          class="mb-4 inline-flex items-center gap-1.5 text-sm text-ink-300 hover:text-sage-500 transition-colors dark:text-ink-400 dark:hover:text-sage-300"
+          class="mb-4 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent"
         >
-          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-          </svg>
+          <Icon name="arrow-left" size={16} />
           {backLabel}
         </a>
       ) : (
         <Logo />
       )}
       {subtitle && (
-        <p class="mt-3 text-xs font-medium uppercase tracking-widest text-sage-400 dark:text-sage-300">
-          {subtitle}
-        </p>
+        <p class="mt-3 text-xs font-medium uppercase tracking-widest text-accent">{subtitle}</p>
       )}
-      <h2 class="mt-1 font-display text-lg text-ink-600 dark:text-cream-100">{title}</h2>
+      <h2 class="mt-1 font-display text-lg text-primary">{title}</h2>
     </div>
 
     <nav class="flex-1 space-y-1">
       {
         items.map((item) => {
-          const matches = items.filter(
-            (nav) =>
-              currentPath === nav.href ||
-              currentPath === `${nav.href}/` ||
-              (nav.href !== '/' && currentPath.startsWith(`${nav.href}/`)),
-          );
-          const bestMatch = matches.sort((a, b) => b.href.length - a.href.length)[0];
-          const isActive = bestMatch?.href === item.href;
+          const href = item.href.replace(/\/$/, '') || '/';
+          const matches = items.filter((nav) => {
+            const navHref = nav.href.replace(/\/$/, '') || '/';
+            return (
+              currentPath === navHref ||
+              (navHref !== '/' && currentPath.startsWith(`${navHref}/`))
+            );
+          });
+          const bestMatch = matches.sort(
+            (a, b) => (b.href.replace(/\/$/, '') || '/').length - (a.href.replace(/\/$/, '') || '/').length,
+          )[0];
+          const isActive = (bestMatch?.href.replace(/\/$/, '') || '/') === href;
           return (
             <a
               href={item.href}
-              class:list={[
-                'flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-200',
-                isActive
-                  ? 'bg-sage-100 text-sage-500 dark:bg-sage-500/20 dark:text-sage-200'
-                  : 'text-ink-400 hover:bg-cream-100 hover:text-ink-600 dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-cream-100',
-              ]}
+              class:list={['nav-link', isActive && 'nav-link-active']}
               aria-current={isActive ? 'page' : undefined}
             >
+              {item.icon && <Icon name={item.icon} size={18} class="shrink-0 opacity-80" />}
               {item.label}
             </a>
           );
@@ -77,7 +81,7 @@ const currentPath = Astro.url.pathname;
       }
     </nav>
 
-    <div class="mt-auto pt-6 border-t border-cream-200 dark:border-ink-700">
+    <div class="mt-auto pt-6 border-t border-default">
       <slot name="footer" />
     </div>
   </div>

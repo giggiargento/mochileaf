@@ -1,6 +1,7 @@
 ---
 import type { Game } from '../../types';
 import Badge from '../ui/Badge.astro';
+import Icon from '../ui/Icon.astro';
 
 interface Props {
   game: Game;
@@ -17,7 +18,7 @@ const accentVariants = {
 ---
 
 <a
-  href={game.status === 'active' ? `/${game.slug}` : '#games'}
+  href={game.status === 'active' ? `/${game.slug}` : '/games'}
   class:list={[
     'cozy-card group block overflow-hidden',
     game.status === 'coming-soon' && 'opacity-80 cursor-default',
@@ -27,21 +28,19 @@ const accentVariants = {
   <div class:list={['aspect-[16/10] bg-gradient-to-br', game.coverGradient]} />
   <div class="p-6">
     <div class="flex items-start justify-between gap-3">
-      <h3 class="font-display text-xl text-ink-700 group-hover:text-sage-500 transition-colors dark:text-cream-100 dark:group-hover:text-sage-300">
+      <h3 class="font-display text-xl text-primary group-hover:text-accent transition-colors duration-300">
         {game.name}
       </h3>
       <Badge variant={accentVariants[game.accent]}>
         {game.status === 'coming-soon' ? 'Soon' : 'Hub'}
       </Badge>
     </div>
-    <p class="mt-2 text-sm text-ink-400 line-clamp-2 dark:text-ink-300">{game.tagline}</p>
+    <p class="mt-2 text-sm text-secondary line-clamp-2">{game.tagline}</p>
     {
       game.status === 'active' && (
-        <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-sage-500 dark:text-sage-300">
+        <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
           Enter hub
-          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-          </svg>
+          <Icon name="arrow-right" size={16} class="transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       )
     }
