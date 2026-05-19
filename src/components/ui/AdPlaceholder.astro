@@ -16,16 +16,16 @@ const sizeClasses = {
 
 <aside
   class:list={[
-    'flex flex-col items-center justify-center rounded-[var(--radius-card)] border border-dashed border-cream-300 bg-cream-100/50 text-center dark:border-ink-600 dark:bg-ink-800/30',
+    'flex flex-col items-center justify-center rounded-[var(--radius-card)] border border-dashed border-default bg-muted/50 text-center',
     sizeClasses[slot],
   ]}
   data-ad-slot={slot}
   aria-label={label}
 >
-  <span class="text-xs font-medium uppercase tracking-widest text-ink-300 dark:text-ink-400">
+  <span class="text-xs font-medium uppercase tracking-widest text-muted">
     {label}
   </span>
-  <span class="mt-1 text-sm text-ink-300 dark:text-ink-400">
+  <span class="mt-1 text-sm text-muted">
     Ad space · AdSense ready
   </span>
 </aside>

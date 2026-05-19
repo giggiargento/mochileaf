@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "@phosphor-icons/web/light";
+@import "@phosphor-icons/web/regular";
 
 @theme {
   --font-display: "Fraunces", Georgia, serif;
@@ -14,6 +16,7 @@
   --color-sage-300: #9fb89a;
   --color-sage-400: #7a9a74;
   --color-sage-500: #5c7d56;
+  --color-sage-600: #4a6645;
 
   --color-mist-100: #e8f0ee;
   --color-mist-200: #c8ddd8;
@@ -42,12 +45,78 @@
   --color-ink-800: #1f1d1b;
   --color-ink-900: #141312;
 
-  --shadow-soft: 0 4px 24px -4px rgb(74 68 60 / 0.08);
-  --shadow-card: 0 8px 32px -8px rgb(74 68 60 / 0.12);
-  --shadow-lift: 0 16px 48px -12px rgb(74 68 60 / 0.15);
+  --shadow-soft: 0 4px 24px -4px rgb(42 39 36 / 0.08);
+  --shadow-card: 0 8px 32px -8px rgb(42 39 36 / 0.1);
+  --shadow-lift: 0 16px 48px -12px rgb(42 39 36 / 0.14);
 
   --radius-card: 1.25rem;
   --radius-pill: 9999px;
+}
+
+/* Semantic tokens — light mode */
+:root {
+  color-scheme: light;
+  --bg-page: #fdfbf7;
+  --bg-nav: #f8f4ec;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8f4ec;
+  --bg-muted: #f0e9dc;
+  --text-primary: #2a2724;
+  --text-secondary: #4a443c;
+  --text-muted: #6b6359;
+  --text-accent: #5c7d56;
+  --text-accent-hover: #4a6645;
+  --border-default: #e5dac8;
+  --border-subtle: #f0e9dc;
+  --nav-active-bg: #e8efe6;
+  --nav-active-text: #4a6645;
+  --nav-hover-bg: #f0e9dc;
+
+  /* Badge / label — light backgrounds need darker text */
+  --label-default-bg: #f0e9dc;
+  --label-default-text: #4a443c;
+  --label-sage-bg: #e8efe6;
+  --label-sage-text: #3d5239;
+  --label-blossom-bg: #f5e8e8;
+  --label-blossom-text: #7a4f4f;
+  --label-mist-bg: #e8f0ee;
+  --label-mist-text: #3d6b62;
+  --label-lavender-bg: #ede8f5;
+  --label-lavender-text: #5e4a78;
+  --label-honey-bg: #f5f0e3;
+  --label-honey-text: #6b5a32;
+}
+
+html.dark {
+  color-scheme: dark;
+  --bg-page: #141312;
+  --bg-nav: #1f1d1b;
+  --bg-card: #2a2724;
+  --bg-card-hover: #3a3530;
+  --bg-muted: #3a3530;
+  --text-primary: #f8f4ec;
+  --text-secondary: #e5dac8;
+  --text-muted: #c9c2b8;
+  --text-accent: #c5d9c0;
+  --text-accent-hover: #e8efe6;
+  --border-default: #3a3530;
+  --border-subtle: #2a2724;
+  --nav-active-bg: rgb(92 125 86 / 0.25);
+  --nav-active-text: #e8efe6;
+  --nav-hover-bg: #3a3530;
+
+  --label-default-bg: #3a3530;
+  --label-default-text: #e5dac8;
+  --label-sage-bg: rgb(92 125 86 / 0.3);
+  --label-sage-text: #e8efe6;
+  --label-blossom-bg: rgb(212 165 165 / 0.2);
+  --label-blossom-text: #f5e8e8;
+  --label-mist-bg: rgb(159 196 188 / 0.2);
+  --label-mist-text: #e8f0ee;
+  --label-lavender-bg: rgb(184 165 212 / 0.2);
+  --label-lavender-text: #ede8f5;
+  --label-honey-bg: rgb(212 196 154 / 0.2);
+  --label-honey-text: #f5f0e3;
 }
 
 @layer base {
@@ -55,27 +124,15 @@
     scroll-behavior: smooth;
   }
 
-  html.dark {
-    color-scheme: dark;
-  }
-
   body {
-    @apply font-body text-ink-600 bg-cream-50 antialiased transition-colors duration-300;
-  }
-
-  html.dark body {
-    @apply text-ink-100 bg-ink-900;
+    @apply font-body antialiased transition-colors duration-300;
+    background-color: var(--bg-page);
+    color: var(--text-secondary);
   }
 
   h1, h2, h3, h4 {
-    @apply font-display text-ink-700 tracking-tight;
-  }
-
-  html.dark h1,
-  html.dark h2,
-  html.dark h3,
-  html.dark h4 {
-    @apply text-cream-100;
+    @apply font-display tracking-tight;
+    color: var(--text-primary);
   }
 
   ::selection {
@@ -83,37 +140,90 @@
   }
 
   html.dark ::selection {
-    @apply bg-sage-500/40 text-cream-100;
+    @apply bg-sage-500/50 text-cream-100;
   }
 }
 
 @layer components {
-  .cozy-card {
-    @apply rounded-[var(--radius-card)] bg-white/80 backdrop-blur-sm border border-cream-200/80 shadow-[var(--shadow-card)] transition-all duration-300;
+  .bg-page {
+    background-color: var(--bg-page);
   }
 
-  html.dark .cozy-card {
-    @apply bg-ink-800/80 border-ink-700/60;
+  .bg-nav {
+    background-color: var(--bg-nav);
+  }
+
+  .bg-card {
+    background-color: var(--bg-card);
+  }
+
+  .border-default {
+    border-color: var(--border-default);
+  }
+
+  .border-subtle {
+    border-color: var(--border-subtle);
+  }
+
+  .text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .text-accent {
+    color: var(--text-accent);
+  }
+
+  .cozy-card {
+    @apply rounded-[var(--radius-card)] backdrop-blur-sm shadow-[var(--shadow-card)] transition-all duration-300 ease-out;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-default);
   }
 
   .cozy-card:hover {
-    @apply shadow-[var(--shadow-lift)] -translate-y-0.5;
+    @apply shadow-[var(--shadow-lift)] -translate-y-1;
+    background-color: var(--bg-card-hover);
+  }
+
+  .cozy-card:active {
+    @apply translate-y-0 shadow-[var(--shadow-card)];
   }
 
   .cozy-link {
-    @apply text-sage-500 hover:text-sage-400 transition-colors underline-offset-4 hover:underline;
+    color: var(--text-accent);
+    @apply transition-colors underline-offset-4 hover:underline;
   }
 
-  html.dark .cozy-link {
-    @apply text-sage-300 hover:text-sage-200;
+  .cozy-link:hover {
+    color: var(--text-accent-hover);
   }
 
   .section-title {
-    @apply font-display text-2xl md:text-3xl text-ink-700;
+    @apply font-display text-2xl md:text-3xl;
+    color: var(--text-primary);
   }
 
-  html.dark .section-title {
-    @apply text-cream-100;
+  .nav-link {
+    @apply flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-300 ease-out;
+    color: var(--text-muted);
+  }
+
+  .nav-link:hover {
+    background-color: var(--nav-hover-bg);
+    color: var(--text-primary);
+    @apply translate-x-0.5;
+  }
+
+  .nav-link-active {
+    background-color: var(--nav-active-bg);
+    color: var(--nav-active-text);
   }
 
   .ambient-orb {
@@ -121,13 +231,84 @@
     animation: float 8s ease-in-out infinite;
   }
 
-  .prose-cozy {
-    @apply text-ink-400 leading-relaxed space-y-4;
+  html.dark .ambient-orb {
+    opacity: 0.2;
   }
 
-  html.dark .prose-cozy {
-    @apply text-ink-200;
+  .prose-cozy {
+    @apply leading-relaxed space-y-4;
+    color: var(--text-secondary);
   }
+
+  .page-container {
+    @apply mx-auto max-w-6xl px-6 lg:px-12;
+  }
+
+  .page-container-below-header {
+    @apply mx-auto max-w-6xl px-6 pt-8 pb-16 lg:px-12 lg:pt-10;
+  }
+
+  .panel-soft {
+    border-radius: var(--radius-card);
+    background-color: var(--bg-card);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-default);
+  }
+
+  /* Home: trending cards fill height beside latest-updates panel */
+  .trending-stack {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    min-height: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .trending-stack {
+      gap: 1.25rem;
+    }
+  }
+
+  .trending-stack > * {
+    flex: 1 1 0;
+    min-height: 0;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-[var(--radius-pill)] font-medium;
+  }
+
+  .badge-default {
+    background: var(--label-default-bg);
+    color: var(--label-default-text);
+  }
+
+  .badge-sage {
+    background: var(--label-sage-bg);
+    color: var(--label-sage-text);
+  }
+
+  .badge-blossom {
+    background: var(--label-blossom-bg);
+    color: var(--label-blossom-text);
+  }
+
+  .badge-mist {
+    background: var(--label-mist-bg);
+    color: var(--label-mist-text);
+  }
+
+  .badge-lavender {
+    background: var(--label-lavender-bg);
+    color: var(--label-lavender-text);
+  }
+
+  .badge-honey {
+    background: var(--label-honey-bg);
+    color: var(--label-honey-text);
+  }
+
 }
 
 @layer utilities {
@@ -170,6 +351,20 @@
   }
 }
 
+/* Soft page transitions (Astro View Transitions) */
+@keyframes fade-soft {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+::view-transition-old(root) {
+  animation: fade-soft 0.2s ease-out reverse;
+}
+
+::view-transition-new(root) {
+  animation: fade-soft 0.35s ease-out forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ambient-orb,
   .animate-fade-in,
@@ -177,7 +372,13 @@
     animation: none;
   }
 
-  .cozy-card:hover {
+  .cozy-card:hover,
+  .nav-link:hover {
     transform: none;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
   }
 }

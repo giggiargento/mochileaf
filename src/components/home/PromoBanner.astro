@@ -1,28 +1,30 @@
 ---
 import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
 
 interface Props {
   title: string;
   description: string;
   ctaLabel?: string;
   ctaHref?: string;
-  gradient?: string;
 }
 
 const {
   title,
   description,
   ctaLabel = 'Discover',
-  ctaHref = '#games',
-  gradient = 'from-lavender-100 via-cream-100 to-mist-100 dark:from-lavender-300/10 dark:via-ink-800 dark:to-mist-300/10',
+  ctaHref = '/about',
 } = Astro.props;
 ---
 
-<section class="px-6 lg:px-12">
-  <div class:list={['cozy-card overflow-hidden bg-gradient-to-r p-8 md:p-12 md:flex md:items-center md:justify-between md:gap-8', gradient]}>
+<section class="page-container py-4">
+  <div class="panel-soft p-8 md:p-12 md:flex md:items-center md:justify-between md:gap-8 transition-all duration-300 hover:shadow-[var(--shadow-lift)]">
     <div class="max-w-xl">
-      <h2 class="font-display text-2xl md:text-3xl text-ink-700 dark:text-cream-100">{title}</h2>
-      <p class="mt-3 text-ink-400 dark:text-ink-300">{description}</p>
+      <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-sage-100 text-accent">
+        <Icon name="leaf" size={22} weight="regular" />
+      </div>
+      <h2 class="font-display text-2xl md:text-3xl text-primary">{title}</h2>
+      <p class="mt-3 text-secondary">{description}</p>
     </div>
     <Button href={ctaHref} class="mt-6 md:mt-0 shrink-0">{ctaLabel}</Button>
   </div>

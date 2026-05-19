@@ -1,0 +1,18 @@
+---
+interface Props {
+  /** Phosphor icon name in kebab-case, e.g. "house", "game-controller" */
+  name: string;
+  weight?: 'light' | 'regular' | 'bold' | 'fill' | 'thin' | 'duotone';
+  size?: number;
+  class?: string;
+}
+
+const { name, weight = 'light', size = 20, class: className = '' } = Astro.props;
+const weightClass = weight === 'regular' ? 'ph' : `ph-${weight}`;
+---
+
+<i
+  class:list={[weightClass, `ph-${name}`, 'inline-block leading-none', className]}
+  style={`font-size: ${size}px`}
+  aria-hidden="true"
+></i>
