@@ -1,0 +1,33 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import ContentGrid from '../../../components/game/ContentGrid.astro';
+import CharacterCard from '../../../components/game/CharacterCard.astro';
+import { games } from '../../../data/games';
+import { getCharactersByGame } from '../../../data/characters';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active')
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const characters = getCharactersByGame(game.slug);
+---
+
+<GameHubLayout game={game} title="Characters" description={`All characters in ${game.name}`}>
+  <PageHeader
+    title="Characters"
+    description="Discover every companion, their roles, and cozy lore snippets."
+  />
+  <div class="px-6 py-12 lg:px-12">
+    {characters.length > 0 ? (
+      <ContentGrid columns={3}>
+        {characters.map((c) => <CharacterCard character={c} gameSlug={game.slug} />)}
+      </ContentGrid>
+    ) : (
+      <p class="prose-cozy text-center py-16">Character profiles coming soon for this hub.</p>
+    )}
+  </div>
+</GameHubLayout>

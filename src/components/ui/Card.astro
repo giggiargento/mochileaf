@@ -1,0 +1,41 @@
+---
+interface Props {
+  href?: string;
+  padding?: 'none' | 'sm' | 'md' | 'lg';
+  hover?: boolean;
+  class?: string;
+}
+
+const {
+  href,
+  padding = 'md',
+  hover = true,
+  class: className = '',
+} = Astro.props;
+
+const paddings = {
+  none: '',
+  sm: 'p-4',
+  md: 'p-6',
+  lg: 'p-8',
+};
+
+const classes = [
+  'cozy-card block overflow-hidden',
+  hover && 'hover:-translate-y-0.5',
+  paddings[padding],
+  className,
+].filter(Boolean).join(' ');
+---
+
+{
+  href ? (
+    <a href={href} class={classes}>
+      <slot />
+    </a>
+  ) : (
+    <div class={classes}>
+      <slot />
+    </div>
+  )
+}

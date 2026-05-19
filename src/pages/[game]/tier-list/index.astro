@@ -1,0 +1,29 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import TierRow from '../../../components/game/TierRow.astro';
+import { games } from '../../../data/games';
+import { getTierListForGame } from '../../../data/tier-list';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active')
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const tiers = getTierListForGame(game.slug);
+---
+
+<GameHubLayout game={game} title="Tier List">
+  <PageHeader
+    title="Tier list"
+    description="A gentle ranking for cozy strategists — updated with community warmth, not rage."
+  />
+  <div class="px-6 py-12 lg:px-12 max-w-3xl space-y-4">
+    {tiers.map((entry) => <TierRow entry={entry} />)}
+    <p class="text-sm text-ink-300 mt-8 dark:text-ink-400">
+      Tier lists are placeholder data. Connect your API or CMS for live rankings.
+    </p>
+  </div>
+</GameHubLayout>

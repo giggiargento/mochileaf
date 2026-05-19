@@ -1,0 +1,32 @@
+---
+import type { Character } from '../../types';
+import Badge from '../ui/Badge.astro';
+
+interface Props {
+  character: Character;
+  gameSlug: string;
+}
+
+const { character, gameSlug } = Astro.props;
+
+const tierVariants: Record<string, 'sage' | 'mist' | 'lavender' | 'default'> = {
+  S: 'sage',
+  A: 'mist',
+  B: 'lavender',
+  C: 'default',
+};
+---
+
+<a href={`/${gameSlug}/characters/${character.slug}`} class="cozy-card block p-6 group">
+  <div class="aspect-square rounded-2xl bg-gradient-to-br from-sage-100 to-mist-100 mb-4 flex items-center justify-center text-4xl dark:from-sage-500/20 dark:to-mist-300/10" aria-hidden="true">
+    🌿
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <h3 class="font-display text-lg text-ink-700 group-hover:text-sage-500 transition-colors dark:text-cream-100">
+      {character.name}
+    </h3>
+    {character.tier && <Badge variant={tierVariants[character.tier]}>{character.tier}</Badge>}
+  </div>
+  <p class="text-sm font-medium text-sage-400">{character.role}</p>
+  <p class="mt-2 text-sm text-ink-400 line-clamp-2 dark:text-ink-300">{character.description}</p>
+</a>

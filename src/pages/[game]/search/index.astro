@@ -1,0 +1,45 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import { games } from '../../../data/games';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active')
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+---
+
+<GameHubLayout game={game} title="Search">
+  <PageHeader title="Search" description={`Find guides, characters, and news in ${game.name}.`} />
+  <div class="px-6 py-12 lg:px-12 max-w-xl">
+    <form role="search" class="cozy-card p-6" action={`/${game.slug}/search`} method="get">
+      <label for="q" class="block text-sm font-medium text-ink-500 mb-2 dark:text-ink-200">
+        Search this hub
+      </label>
+      <div class="flex gap-3">
+        <input
+          type="search"
+          id="q"
+          name="q"
+          placeholder="Lantern festival, Elara, builds..."
+          class="flex-1 rounded-xl border border-cream-200 bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage-300 dark:border-ink-600 dark:bg-ink-800 dark:text-cream-100"
+        />
+        <button
+          type="submit"
+          class="rounded-xl bg-sage-400 px-5 py-3 text-sm font-semibold text-white hover:bg-sage-500 transition-colors"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+    <p class="mt-6 text-sm text-ink-300 dark:text-ink-400">
+      Client-side search can be wired to Pagefind, Fuse.js, or your API. This form is ready for integration.
+    </p>
+    <div id="search-results" class="mt-8 space-y-4" hidden>
+      <!-- API / client search results mount here -->
+    </div>
+  </div>
+</GameHubLayout>

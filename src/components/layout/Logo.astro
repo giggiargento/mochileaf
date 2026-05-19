@@ -1,0 +1,24 @@
+---
+interface Props {
+  href?: string;
+  compact?: boolean;
+}
+
+const { href = '/', compact = false } = Astro.props;
+---
+
+<a href={href} class="group flex items-center gap-2.5" aria-label="Mochileaf home">
+  <span
+    class="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-sage-200 to-mist-200 text-lg shadow-soft transition-transform group-hover:scale-105 dark:from-sage-500/30 dark:to-mist-300/20"
+    aria-hidden="true"
+  >
+    🍃
+  </span>
+  {
+    !compact && (
+      <span class="font-display text-xl font-semibold text-ink-700 dark:text-cream-100">
+        Mochileaf
+      </span>
+    )
+  }
+</a>

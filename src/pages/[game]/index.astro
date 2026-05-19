@@ -1,0 +1,65 @@
+---
+import GameHubLayout from '../../layouts/GameHubLayout.astro';
+import PageHeader from '../../components/game/PageHeader.astro';
+import ContentGrid from '../../components/game/ContentGrid.astro';
+import CharacterCard from '../../components/game/CharacterCard.astro';
+import ArticleCard from '../../components/home/ArticleCard.astro';
+import Button from '../../components/ui/Button.astro';
+import AdPlaceholder from '../../components/ui/AdPlaceholder.astro';
+import { games, getGame } from '../../data/games';
+import { getCharactersByGame } from '../../data/characters';
+import { getArticlesByGame } from '../../data/articles';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active')
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const characters = getCharactersByGame(game.slug).slice(0, 3);
+const articles = getArticlesByGame(game.slug).slice(0, 2);
+---
+
+<GameHubLayout game={game} title="Home">
+  <div class:list={['relative overflow-hidden', `bg-gradient-to-br ${game.coverGradient}`]}>
+    <div class="px-6 py-16 lg:px-12 md:py-24">
+      <p class="text-xs font-medium uppercase tracking-widest text-sage-500 dark:text-sage-300">
+        {game.tagline}
+      </p>
+      <h1 class="mt-2 font-display text-4xl md:text-5xl text-ink-700 dark:text-cream-50 max-w-2xl">
+        Welcome to {game.name}
+      </h1>
+      <p class="mt-4 max-w-xl text-lg text-ink-500 dark:text-ink-200">{game.description}</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <Button href={`/${game.slug}/guides`}>Browse guides</Button>
+        <Button href={`/${game.slug}/characters`} variant="secondary">Meet characters</Button>
+      </div>
+    </div>
+  </div>
+
+  <div class="px-6 py-6 lg:px-12">
+    <AdPlaceholder slot="banner" />
+  </div>
+
+  <section class="px-6 py-12 lg:px-12">
+    <PageHeader title="Featured characters" description="Meet the gentle souls of this world." />
+    <ContentGrid columns={3}>
+      {characters.map((c) => <CharacterCard character={c} gameSlug={game.slug} />)}
+    </ContentGrid>
+    <div class="mt-6 text-center">
+      <a href={`/${game.slug}/characters`} class="cozy-link text-sm font-semibold">View all characters →</a>
+    </div>
+  </section>
+
+  <section class="px-6 py-12 lg:px-12 border-t border-cream-200/60 dark:border-ink-700/40">
+    <PageHeader title="Latest from the hub" />
+    <ContentGrid columns={2}>
+      {articles.map((a) => <ArticleCard article={a} />)}
+    </ContentGrid>
+  </section>
+
+  <div class="px-6 py-8 lg:px-12">
+    <AdPlaceholder slot="inline" />
+  </div>
+</GameHubLayout>

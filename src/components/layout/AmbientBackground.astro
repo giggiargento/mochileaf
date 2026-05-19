@@ -1,0 +1,25 @@
+---
+interface Props {
+  variant?: 'home' | 'game';
+}
+
+const { variant = 'home' } = Astro.props;
+---
+
+<div class="pointer-events-none fixed inset-0 overflow-hidden -z-10" aria-hidden="true">
+  {
+    variant === 'home' ? (
+      <>
+        <div class="ambient-orb top-[-10%] right-[-5%] h-96 w-96 bg-blossom-200/60 dark:bg-blossom-300/10" />
+        <div class="ambient-orb bottom-[10%] left-[-8%] h-80 w-80 bg-sage-200/50 dark:bg-sage-500/10 stagger-2" />
+        <div class="ambient-orb top-[40%] left-[30%] h-64 w-64 bg-mist-200/40 dark:bg-mist-300/10 stagger-3" />
+        <div class="ambient-orb top-[20%] right-[25%] h-48 w-48 bg-lavender-200/30 dark:bg-lavender-300/10 stagger-4" />
+      </>
+    ) : (
+      <>
+        <div class="ambient-orb top-[-5%] right-[10%] h-72 w-72 bg-sage-200/40 dark:bg-sage-500/10" />
+        <div class="ambient-orb bottom-[20%] left-[-5%] h-64 w-64 bg-mist-200/35 dark:bg-mist-300/10 stagger-2" />
+      </>
+    )
+  }
+</div>

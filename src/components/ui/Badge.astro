@@ -1,0 +1,32 @@
+---
+interface Props {
+  variant?: 'default' | 'sage' | 'blossom' | 'mist' | 'lavender' | 'honey';
+  size?: 'sm' | 'md';
+}
+
+const { variant = 'default', size = 'sm' } = Astro.props;
+
+const variants = {
+  default: 'bg-cream-200 text-ink-500 dark:bg-ink-700 dark:text-ink-200',
+  sage: 'bg-sage-100 text-sage-500 dark:bg-sage-500/20 dark:text-sage-200',
+  blossom: 'bg-blossom-100 text-blossom-300 dark:bg-blossom-300/20 dark:text-blossom-200',
+  mist: 'bg-mist-100 text-mist-300 dark:bg-mist-300/20 dark:text-mist-100',
+  lavender: 'bg-lavender-100 text-lavender-300 dark:bg-lavender-300/20 dark:text-lavender-100',
+  honey: 'bg-honey-100 text-honey-300 dark:bg-honey-300/20 dark:text-honey-200',
+};
+
+const sizes = {
+  sm: 'px-2.5 py-0.5 text-xs',
+  md: 'px-3 py-1 text-sm',
+};
+---
+
+<span
+  class:list={[
+    'inline-flex items-center rounded-[var(--radius-pill)] font-medium',
+    variants[variant],
+    sizes[size],
+  ]}
+>
+  <slot />
+</span>

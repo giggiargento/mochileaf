@@ -1,0 +1,32 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import ArticleCard from '../../../components/home/ArticleCard.astro';
+import ContentGrid from '../../../components/game/ContentGrid.astro';
+import { games } from '../../../data/games';
+import { getArticlesByGame } from '../../../data/articles';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active')
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const news = getArticlesByGame(game.slug).filter((a) => a.category === 'news' || a.category === 'update');
+const allArticles = getArticlesByGame(game.slug);
+const displayArticles = news.length > 0 ? news : allArticles;
+---
+
+<GameHubLayout game={game} title="News">
+  <PageHeader title="News &amp; updates" description="Patch notes, events, and hub announcements." />
+  <div class="px-6 py-12 lg:px-12">
+    {displayArticles.length > 0 ? (
+      <ContentGrid columns={2}>
+        {displayArticles.map((a) => <ArticleCard article={a} />)}
+      </ContentGrid>
+    ) : (
+      <p class="prose-cozy text-center py-16">No news yet — the forest is quiet today.</p>
+    )}
+  </div>
+</GameHubLayout>

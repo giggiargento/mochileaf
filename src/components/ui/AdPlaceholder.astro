@@ -1,0 +1,31 @@
+---
+interface Props {
+  slot?: 'banner' | 'sidebar' | 'inline' | 'footer';
+  label?: string;
+}
+
+const { slot = 'inline', label = 'Advertisement' } = Astro.props;
+
+const sizeClasses = {
+  banner: 'min-h-[90px] md:min-h-[120px]',
+  sidebar: 'min-h-[250px]',
+  inline: 'min-h-[120px]',
+  footer: 'min-h-[90px]',
+};
+---
+
+<aside
+  class:list={[
+    'flex flex-col items-center justify-center rounded-[var(--radius-card)] border border-dashed border-cream-300 bg-cream-100/50 text-center dark:border-ink-600 dark:bg-ink-800/30',
+    sizeClasses[slot],
+  ]}
+  data-ad-slot={slot}
+  aria-label={label}
+>
+  <span class="text-xs font-medium uppercase tracking-widest text-ink-300 dark:text-ink-400">
+    {label}
+  </span>
+  <span class="mt-1 text-sm text-ink-300 dark:text-ink-400">
+    Ad space · AdSense ready
+  </span>
+</aside>

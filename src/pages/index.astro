@@ -1,0 +1,97 @@
+---
+import GlobalLayout from '../layouts/GlobalLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import SectionHeader from '../components/home/SectionHeader.astro';
+import GameCard from '../components/home/GameCard.astro';
+import ArticleCard from '../components/home/ArticleCard.astro';
+import UpdateItem from '../components/home/UpdateItem.astro';
+import Newsletter from '../components/home/Newsletter.astro';
+import PromoBanner from '../components/home/PromoBanner.astro';
+import AdPlaceholder from '../components/ui/AdPlaceholder.astro';
+import { games, getFeaturedGames } from '../data/games';
+import { getFeaturedArticles, getTrendingArticles } from '../data/articles';
+import { updates } from '../data/updates';
+
+const featuredGames = getFeaturedGames();
+const featuredArticles = getFeaturedArticles();
+const trendingArticles = getTrendingArticles();
+---
+
+<GlobalLayout
+  title="Mochileaf"
+  description="A warm, elegant cozy gaming platform — guides, builds, tier lists, and editorial stories for peaceful play."
+>
+  <Hero />
+
+  <div class="px-6 lg:px-12">
+    <AdPlaceholder slot="banner" label="Top banner" />
+  </div>
+
+  <section id="games" class="px-6 py-16 lg:px-12">
+    <SectionHeader
+      title="Featured games"
+      subtitle="Each world has its own cozy content hub — guides, builds, and stories."
+    />
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {featuredGames.map((game) => <GameCard game={game} />)}
+    </div>
+    {games.filter((g) => g.status === 'coming-soon').length > 0 && (
+      <div class="mt-10">
+        <h3 class="text-sm font-semibold text-ink-400 mb-4 dark:text-ink-300">Coming soon</h3>
+        <div class="grid gap-6 sm:grid-cols-2 max-w-xl">
+          {games.filter((g) => g.status === 'coming-soon').map((game) => <GameCard game={game} />)}
+        </div>
+      </div>
+    )}
+  </section>
+
+  <section class="px-6 py-8 lg:px-12">
+    <AdPlaceholder slot="inline" />
+  </section>
+
+  <section class="px-6 py-16 lg:px-12">
+    <div class="grid gap-10 lg:grid-cols-3">
+      <div class="lg:col-span-2">
+        <SectionHeader
+          id="updates"
+          title="Latest updates"
+          subtitle="Patch notes, events, and gentle announcements."
+        />
+        <ul class="cozy-card divide-y divide-cream-200 px-6 dark:divide-ink-700">
+          {updates.slice(0, 5).map((update) => <UpdateItem update={update} />)}
+        </ul>
+      </div>
+      <div>
+        <SectionHeader title="Trending" subtitle="What the community is reading." />
+        <div class="space-y-4">
+          {trendingArticles.map((article) => (
+            <ArticleCard article={article} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <PromoBanner
+    title="Slow down. Play softly."
+    description="Mochileaf celebrates games that breathe — no rush, no noise. Just warm light and thoughtful guides."
+    ctaLabel="Our philosophy"
+    ctaHref="/about"
+  />
+
+  <section id="articles" class="px-6 py-16 lg:px-12">
+    <SectionHeader
+      title="Featured articles"
+      subtitle="Editorial guides and cozy stories from across our hubs."
+    />
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {featuredArticles.map((article) => <ArticleCard article={article} />)}
+    </div>
+  </section>
+
+  <section class="px-6 py-8 lg:px-12">
+    <AdPlaceholder slot="footer" label="Footer ad" />
+  </section>
+
+  <Newsletter />
+</GlobalLayout>

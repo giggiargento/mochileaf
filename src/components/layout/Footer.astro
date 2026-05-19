@@ -1,0 +1,36 @@
+---
+import Logo from './Logo.astro';
+---
+
+<footer class="border-t border-cream-200 bg-cream-100/50 dark:border-ink-700 dark:bg-ink-800/30">
+  <div class="mx-auto max-w-6xl px-6 py-12 md:py-16">
+    <div class="grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <Logo />
+        <p class="mt-4 max-w-sm text-sm text-ink-400 leading-relaxed dark:text-ink-300">
+          A calming home for cozy gaming — guides, builds, and stories wrapped in soft fantasy warmth.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-ink-600 dark:text-cream-100">Explore</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="/#games" class="cozy-link">Games</a></li>
+          <li><a href="/#articles" class="cozy-link">Articles</a></li>
+          <li><a href="/about" class="cozy-link">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold text-ink-600 dark:text-cream-100">Featured Hubs</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="/whisperwood" class="cozy-link">Whisperwood</a></li>
+          <li><a href="/stardew-haven" class="cozy-link">Stardew Haven</a></li>
+          <li><a href="/moonlit-tides" class="cozy-link">Moonlit Tides</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 flex flex-col gap-4 border-t border-cream-200 pt-8 text-sm text-ink-300 dark:border-ink-700 dark:text-ink-400 md:flex-row md:items-center md:justify-between">
+      <p>&copy; {new Date().getFullYear()} Mochileaf. Crafted with care.</p>
+      <p class="text-xs">Placeholder content for MVP demonstration.</p>
+    </div>
+  </div>
+</footer>

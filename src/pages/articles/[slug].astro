@@ -1,0 +1,45 @@
+---
+import GlobalLayout from '../../layouts/GlobalLayout.astro';
+import PageHeader from '../../components/game/PageHeader.astro';
+import { articles } from '../../data/articles';
+import { getGame } from '../../data/games';
+
+export function getStaticPaths() {
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const game = article.gameSlug ? getGame(article.gameSlug) : undefined;
+---
+
+<GlobalLayout title={article.title} description={article.excerpt}>
+  <PageHeader
+    badge={article.category}
+    title={article.title}
+    description={article.excerpt}
+  />
+  <article class="px-6 py-12 lg:px-12 max-w-3xl">
+    <p class="text-sm text-ink-300 mb-8 dark:text-ink-400">
+      {article.readTime} · {new Date(article.publishedAt).toLocaleDateString('en-US', { dateStyle: 'long' })}
+      {game && <> · <a href={`/${game.slug}`} class="cozy-link">{game.name}</a></>}
+    </p>
+    <div class="prose-cozy space-y-6">
+      <p>
+        This is placeholder article content. Replace with CMS or API-driven markdown when ready.
+        The layout supports long-form editorial guides with cozy typography and generous spacing.
+      </p>
+      <p>
+        Imagine lantern-lit paths, illustrated maps, and step-by-step walkthroughs that never rush you.
+        That is the Mochileaf reading experience we are building toward.
+      </p>
+      <h2 class="font-display text-xl text-ink-700 dark:text-cream-100">What comes next</h2>
+      <p>
+        Connect your content API, drop in MDX, or wire up a headless CMS. The routing and SEO structure
+        are already in place.
+      </p>
+    </div>
+  </article>
+</GlobalLayout>

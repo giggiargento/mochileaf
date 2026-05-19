@@ -1,0 +1,44 @@
+---
+import type { Article } from '../../types';
+import Badge from '../ui/Badge.astro';
+import { getGame } from '../../data/games';
+
+interface Props {
+  article: Article;
+}
+
+const { article } = Astro.props;
+const game = article.gameSlug ? getGame(article.gameSlug) : undefined;
+
+const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' | 'lavender'> = {
+  news: 'mist',
+  guide: 'sage',
+  editorial: 'lavender',
+  update: 'default',
+};
+---
+
+<article class="cozy-card p-6 h-full flex flex-col">
+  <div class="flex flex-wrap items-center gap-2 mb-3">
+    <Badge variant={categoryVariants[article.category]}>{article.category}</Badge>
+    {game && <Badge variant="default">{game.name}</Badge>}
+    {article.trending && <Badge variant="blossom">Trending</Badge>}
+  </div>
+  <h3 class="font-display text-lg text-ink-700 dark:text-cream-100 line-clamp-2">
+    <a href={`/articles/${article.slug}`} class="hover:text-sage-500 transition-colors dark:hover:text-sage-300">
+      {article.title}
+    </a>
+  </h3>
+  <p class="mt-2 text-sm text-ink-400 flex-1 line-clamp-3 dark:text-ink-300">{article.excerpt}</p>
+  <footer class="mt-4 flex items-center gap-3 text-xs text-ink-300 dark:text-ink-400">
+    <time datetime={article.publishedAt}>
+      {new Date(article.publishedAt).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      })}
+    </time>
+    <span aria-hidden="true">·</span>
+    <span>{article.readTime} read</span>
+  </footer>
+</article>

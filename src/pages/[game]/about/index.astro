@@ -1,0 +1,32 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import { games } from '../../../data/games';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active')
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+---
+
+<GameHubLayout game={game} title="About">
+  <PageHeader title={`About ${game.name}`} description={game.tagline} />
+  <article class="px-6 py-12 lg:px-12 max-w-3xl prose-cozy">
+    <p>{game.description}</p>
+    <p>
+      This hub is part of Mochileaf — a multi-game cozy content platform. Here you'll find characters,
+      builds, tier lists, guides, and news curated with a warm, editorial touch.
+    </p>
+    <h2 class="font-display text-xl text-ink-700 mt-8 dark:text-cream-100">Hub sections</h2>
+    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <li><a href={`/${game.slug}/characters`} class="cozy-link">Characters</a> — profiles and lore</li>
+      <li><a href={`/${game.slug}/builds`} class="cozy-link">Builds</a> — relaxed loadouts</li>
+      <li><a href={`/${game.slug}/tier-list`} class="cozy-link">Tier list</a> — community rankings</li>
+      <li><a href={`/${game.slug}/guides`} class="cozy-link">Guides</a> — walkthroughs</li>
+      <li><a href={`/${game.slug}/news`} class="cozy-link">News</a> — updates and events</li>
+    </ul>
+  </article>
+</GameHubLayout>
