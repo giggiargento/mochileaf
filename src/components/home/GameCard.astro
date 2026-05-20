@@ -31,7 +31,7 @@ const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
   ]}
   aria-disabled={game.status === 'coming-soon' ? true : undefined}
 >
-  <div class="relative aspect-[16/10] overflow-hidden">
+  <div class="game-card-media relative aspect-[16/10] overflow-hidden">
     {
       cardImage ? (
         <div
@@ -42,7 +42,7 @@ const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
             alt={cardAlt}
             width={640}
             height={400}
-            class="h-full w-full object-cover opacity-50 transition-opacity duration-500 ease-out group-hover:opacity-100"
+            class="game-card-image h-full w-full object-cover"
             loading="lazy"
             decoding="async"
           />
@@ -50,7 +50,7 @@ const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
       ) : (
         <div
           class:list={[
-            'h-full w-full bg-gradient-to-br opacity-50 transition-opacity duration-500 group-hover:opacity-100',
+            'game-card-fallback h-full w-full bg-gradient-to-br',
             game.coverGradient,
           ]}
           aria-hidden="true"

@@ -196,6 +196,52 @@ html.dark {
     @apply translate-y-0 shadow-[var(--shadow-card)];
   }
 
+  /* Game hub cards — fully muted + warm cream at rest, full color on hover */
+  .game-card-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: color-mix(in srgb, var(--color-cream-100) 42%, var(--color-honey-100) 18%);
+    opacity: 0.55;
+    transition: opacity 500ms ease-out;
+  }
+
+  .group:hover .game-card-media::after {
+    opacity: 0;
+  }
+
+  .game-card-image {
+    filter: grayscale(1) sepia(0.24) brightness(1.1) contrast(0.9) hue-rotate(6deg);
+    transition: filter 500ms ease-out;
+  }
+
+  .group:hover .game-card-image {
+    filter: none;
+  }
+
+  html.dark .game-card-media::after {
+    background: color-mix(in srgb, var(--color-cream-200) 28%, var(--bg-page) 72%);
+    opacity: 0.45;
+  }
+
+  html.dark .game-card-image {
+    filter: grayscale(1) sepia(0.2) brightness(0.94) contrast(0.92) hue-rotate(4deg);
+  }
+
+  html.dark .group:hover .game-card-image {
+    filter: none;
+  }
+
+  .game-card-fallback {
+    filter: grayscale(1) sepia(0.18) saturate(0.25) brightness(1.06);
+    transition: filter 500ms ease-out;
+  }
+
+  .group:hover .game-card-fallback {
+    filter: none;
+  }
+
   .cozy-link {
     color: var(--text-accent);
     @apply transition-colors underline-offset-4 hover:underline;
