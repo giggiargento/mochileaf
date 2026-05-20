@@ -1,7 +1,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const BRAND_DIR = path.join(process.cwd(), 'public', 'brand');
+const PUBLIC_DIR = path.join(process.cwd(), 'public');
+const BRAND_DIR = path.join(PUBLIC_DIR, 'brand');
+
+function publicFile(name: string, extensions: string[]): string | null {
+  for (const ext of extensions) {
+    if (fs.existsSync(path.join(PUBLIC_DIR, `${name}${ext}`))) return `/${name}${ext}`;
+  }
+  return null;
+}
 
 function brandFile(...names: string[]): string | null {
   for (const name of names) {
@@ -32,7 +40,11 @@ export const hasBrandLogotipo = Boolean(brandLogotipo);
 export const hasBrandLogo = Boolean(brandLogo);
 export const hasBrandIcon = Boolean(brandIcon);
 
-export const brandFavicon = brandFile('favicon');
+/** Prefer public/favicon.png, then brand/favicon.*, then other public favicon.* */
+export const brandFavicon =
+  publicFile('favicon', ['.png']) ??
+  brandFile('favicon') ??
+  publicFile('favicon', ['.svg', '.webp', '.ico']);
 
 /** Accessible / SEO label for brand images */
 export const brandAlt = 'Mochileaf — cozy gaming guides and walkthroughs';
