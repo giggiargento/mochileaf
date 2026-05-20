@@ -1,0 +1,62 @@
+---
+import type { Article } from '../../types';
+import type { Game } from '../../types';
+import { articleBodies } from '../../data/article-bodies';
+import { getArticleListHref, getArticleListLabel } from '../../utils/article-routes';
+
+interface Props {
+  article: Article;
+  game?: Game;
+}
+
+const { article, game } = Astro.props;
+const sections = articleBodies[article.slug];
+const backHref = getArticleListHref(article);
+const backLabel = getArticleListLabel(article);
+---
+
+<a href={backHref} class="cozy-link text-sm font-medium">
+  ← {backLabel}
+</a>
+
+<article class="article-column mt-8">
+  <p class="text-sm text-muted mb-8">
+    {article.readTime} · {new Date(article.publishedAt).toLocaleDateString('en-US', { dateStyle: 'long' })}
+    {game && (
+      <>
+        {' '}
+        · <a href={`/${game.slug}`} class="cozy-link">{game.name}</a>
+      </>
+    )}
+  </p>
+  <div class="prose-cozy space-y-6">
+    {
+      sections ? (
+        sections.map((section) => (
+          <section>
+            {section.heading && <h2 class="font-display text-xl text-primary">{section.heading}</h2>}
+            {section.paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </section>
+        ))
+      ) : (
+        <>
+          <p>
+            This is placeholder article content. Replace with CMS or API-driven markdown when ready.
+            The layout supports long-form editorial guides with cozy typography and generous spacing.
+          </p>
+          <p>
+            Imagine lantern-lit paths, illustrated maps, and step-by-step walkthroughs that never rush you.
+            That is the Mochileaf reading experience we are building toward.
+          </p>
+          <h2 class="font-display text-xl text-primary">What comes next</h2>
+          <p>
+            Connect your content API, drop in MDX, or wire up a headless CMS. The routing and SEO structure
+            are already in place.
+          </p>
+        </>
+      )
+    }
+  </div>
+</article>

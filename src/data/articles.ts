@@ -1,4 +1,5 @@
 import type { Article } from '../types';
+import { isGuideCategory, isNewsCategory } from '../utils/article-routes';
 
 export const articles: Article[] = [
   {
@@ -14,15 +15,38 @@ export const articles: Article[] = [
     trending: true,
   },
   {
-    slug: 'spring-planting-tips',
-    title: 'Spring Planting: Slow Living on the Farm',
+    slug: 'stardew-valley-year-one-guide',
+    title: 'Stardew Valley Year One: A Calm Starter Route',
     excerpt:
-      'Which crops pair best with rainy weeks, and how to design a garden that feels like a watercolor painting.',
+      'Spring crops, early mining, and community center basics — a relaxed first year without min-max stress.',
     category: 'guide',
-    gameSlug: 'stardew-haven',
+    gameSlug: 'stardew-valley',
     publishedAt: '2026-05-10',
-    readTime: '6 min',
+    readTime: '9 min',
     featured: true,
+    trending: true,
+  },
+  {
+    slug: 'stardew-community-center-bundles',
+    title: 'Community Center Bundles Explained',
+    excerpt:
+      'Room-by-room bundle priorities, seasonal deadlines, and what to stash before you turn in your first items.',
+    category: 'guide',
+    gameSlug: 'stardew-valley',
+    publishedAt: '2026-04-28',
+    readTime: '11 min',
+    featured: true,
+  },
+  {
+    slug: 'stardew-spring-crops-profit',
+    title: 'Best Spring Crops for Your First Season',
+    excerpt:
+      'Potatoes, strawberries, and cauliflower compared — gold per day, seed costs, and low-effort layouts for new farmers.',
+    category: 'guide',
+    gameSlug: 'stardew-valley',
+    publishedAt: '2026-04-15',
+    readTime: '7 min',
+    trending: true,
   },
   {
     slug: 'patch-1-4-notes',
@@ -77,4 +101,12 @@ export function getTrendingArticles(): Article[] {
 
 export function getArticlesByGame(gameSlug: string): Article[] {
   return articles.filter((a) => a.gameSlug === gameSlug);
+}
+
+export function getNewsByGame(gameSlug: string): Article[] {
+  return getArticlesByGame(gameSlug).filter((a) => isNewsCategory(a.category));
+}
+
+export function getGuidesByGame(gameSlug: string): Article[] {
+  return getArticlesByGame(gameSlug).filter((a) => isGuideCategory(a.category));
 }

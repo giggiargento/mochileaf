@@ -1,0 +1,29 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import ArticleDetail from '../../../components/article/ArticleDetail.astro';
+import { articles } from '../../../data/articles';
+import { getGame } from '../../../data/games';
+import { isGuideCategory } from '../../../utils/article-routes';
+
+export function getStaticPaths() {
+  return articles
+    .filter((a) => a.gameSlug && isGuideCategory(a.category))
+    .map((article) => {
+      const game = getGame(article.gameSlug!)!;
+      return {
+        params: { game: article.gameSlug, slug: article.slug },
+        props: { article, game },
+      };
+    });
+}
+
+const { article, game } = Astro.props;
+---
+
+<GameHubLayout game={game} title={article.title} description={article.excerpt}>
+  <PageHeader badge="Guide" title={article.title} description={article.excerpt} />
+  <div class="page-container-below-header">
+    <ArticleDetail article={article} game={game} />
+  </div>
+</GameHubLayout>

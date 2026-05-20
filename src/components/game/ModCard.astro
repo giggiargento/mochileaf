@@ -1,0 +1,45 @@
+---
+import type { Mod } from '../../types';
+import Badge from '../ui/Badge.astro';
+import Icon from '../ui/Icon.astro';
+
+interface Props {
+  mod: Mod;
+}
+
+const { mod } = Astro.props;
+
+const categoryLabels = {
+  framework: 'Framework',
+  'quality-of-life': 'Quality of life',
+  content: 'Content',
+  visual: 'Visual',
+} as const;
+
+---
+
+<a
+  href={mod.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="cozy-card group block p-6 h-full"
+>
+  <div class="flex flex-wrap gap-2 mb-3">
+    <Badge variant="honey" size="sm">{categoryLabels[mod.category]}</Badge>
+    {mod.tags.map((tag) => (
+      <Badge variant="sage" size="sm">{tag}</Badge>
+    ))}
+  </div>
+  <h3 class="font-display text-lg text-primary group-hover:text-accent transition-colors duration-300">
+    {mod.name}
+  </h3>
+  <p class="mt-2 text-sm text-secondary leading-relaxed">{mod.summary}</p>
+  <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+    View mod page
+    <Icon
+      name="arrow-square-out"
+      size={16}
+      class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+    />
+  </span>
+</a>

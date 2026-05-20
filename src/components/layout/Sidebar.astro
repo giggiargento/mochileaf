@@ -1,31 +1,30 @@
 ---
 import type { NavItem } from '../../types';
 import Logo from './Logo.astro';
+import NavLinks from './NavLinks.astro';
 import Icon from '../ui/Icon.astro';
+import { normalizeNavPath } from '../../utils/navigation';
+import { hasBrandLogotipo, hasBrandIsologo } from '../../utils/brand';
+
+const hasBrandHeader = hasBrandLogotipo || hasBrandIsologo;
 
 interface Props {
+  /** Shown below brand lockup on game hubs (e.g. game name) */
   title?: string;
-  subtitle?: string;
   items: NavItem[];
   backHref?: string;
   backLabel?: string;
 }
 
 const {
-  title = 'Mochileaf',
-  subtitle,
+  title,
   items,
   backHref = '/',
   backLabel = 'Back to home',
 } = Astro.props;
 
-const normalizePath = (path: string) => {
-  const trimmed = path.replace(/\/$/, '');
-  return trimmed === '' ? '/' : trimmed;
-};
-
-const currentPath = normalizePath(Astro.url.pathname);
-const backPath = normalizePath(backHref);
+const currentPath = normalizeNavPath(Astro.url.pathname);
+const backPath = normalizeNavPath(backHref);
 const showBackLink = backPath !== currentPath;
 ---
 
@@ -35,50 +34,32 @@ const showBackLink = backPath !== currentPath;
 >
   <div class="flex flex-col h-full p-6">
     <div class="mb-8">
-      {showBackLink ? (
+      <Logo variant="wordmark" fullWidth />
+      {showBackLink && (
         <a
           href={backHref}
-          class="mb-4 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent"
+          class="mt-5 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent"
         >
           <Icon name="arrow-left" size={16} />
           {backLabel}
         </a>
-      ) : (
-        <Logo />
       )}
-      {subtitle && (
-        <p class="mt-3 text-xs font-medium uppercase tracking-widest text-accent">{subtitle}</p>
-      )}
-      <h2 class="mt-1 font-display text-lg text-primary">{title}</h2>
+      {
+        title && (
+          <h2
+            class:list={[
+              'font-display text-lg text-primary',
+              hasBrandHeader ? 'mt-5' : 'mt-3',
+            ]}
+          >
+            {title}
+          </h2>
+        )
+      }
     </div>
 
-    <nav class="flex-1 space-y-1">
-      {
-        items.map((item) => {
-          const href = item.href.replace(/\/$/, '') || '/';
-          const matches = items.filter((nav) => {
-            const navHref = nav.href.replace(/\/$/, '') || '/';
-            return (
-              currentPath === navHref ||
-              (navHref !== '/' && currentPath.startsWith(`${navHref}/`))
-            );
-          });
-          const bestMatch = matches.sort(
-            (a, b) => (b.href.replace(/\/$/, '') || '/').length - (a.href.replace(/\/$/, '') || '/').length,
-          )[0];
-          const isActive = (bestMatch?.href.replace(/\/$/, '') || '/') === href;
-          return (
-            <a
-              href={item.href}
-              class:list={['nav-link', isActive && 'nav-link-active']}
-              aria-current={isActive ? 'page' : undefined}
-            >
-              {item.icon && <Icon name={item.icon} size={18} class="shrink-0 opacity-80" />}
-              {item.label}
-            </a>
-          );
-        })
-      }
+    <nav class="flex-1 overflow-y-auto">
+      <NavLinks items={items} currentPath={currentPath} />
     </nav>
 
     <div class="mt-auto pt-6 border-t border-default">

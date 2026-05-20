@@ -4,30 +4,10 @@ import Icon from './Icon.astro';
 
 <button
   type="button"
-  id="theme-toggle"
+  data-theme-toggle
   class="relative flex h-10 w-10 items-center justify-center rounded-full border border-default bg-card text-secondary shadow-soft transition-all duration-300 hover:text-accent hover:border-sage-300 hover:-translate-y-0.5"
   aria-label="Toggle dark mode"
 >
   <Icon name="moon" size={20} class="dark:hidden" />
   <Icon name="sun" size={20} class="hidden dark:inline-block" />
 </button>
-
-<script>
-  const STORAGE_KEY = 'mochileaf-theme';
-
-  function getPreferredTheme(): 'light' | 'dark' {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === 'light' || stored === 'dark') return stored;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
-  function applyTheme(theme: 'light' | 'dark') {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem(STORAGE_KEY, theme);
-  }
-
-  document.getElementById('theme-toggle')?.addEventListener('click', () => {
-    const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-    applyTheme(next);
-  });
-</script>

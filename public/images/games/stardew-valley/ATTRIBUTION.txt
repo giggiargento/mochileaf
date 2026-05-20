@@ -1,0 +1,12 @@
+Stardew Valley game images — Mochileaf fan site cache
+
+Steam store art (cover.jpg, card.jpg)
+  App ID 413150 — Stardew Valley by ConcernedApe
+  https://store.steampowered.com/app/413150/
+  Used for promotional context on this fan hub.
+
+Villager portraits (characters/*.png)
+  Primary: stardew-valley-data npm package (MIT), if available
+  Fallback: Stardew Valley Wiki (Fandom) portrait files
+
+Trademarks belong to their respective owners. This site is unofficial.

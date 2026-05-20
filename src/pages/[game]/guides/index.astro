@@ -4,7 +4,7 @@ import PageHeader from '../../../components/game/PageHeader.astro';
 import ArticleCard from '../../../components/home/ArticleCard.astro';
 import ContentGrid from '../../../components/game/ContentGrid.astro';
 import { games } from '../../../data/games';
-import { getArticlesByGame } from '../../../data/articles';
+import { getGuidesByGame } from '../../../data/articles';
 
 export function getStaticPaths() {
   return games
@@ -13,7 +13,7 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
-const guides = getArticlesByGame(game.slug).filter((a) => a.category === 'guide');
+const guides = getGuidesByGame(game.slug);
 ---
 
 <GameHubLayout game={game} title="Guides">

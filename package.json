@@ -10,7 +10,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sync:images": "node scripts/sync-game-images.mjs"
   },
   "dependencies": {
     "@phosphor-icons/web": "^2.1.2",

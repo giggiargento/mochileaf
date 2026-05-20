@@ -1,26 +1,95 @@
 ---
 import Icon from '../ui/Icon.astro';
+import {
+  brandIsologo,
+  brandLogotipo,
+  brandLogoDark,
+  brandIcon,
+  brandIconDark,
+  hasBrandIcon,
+  brandAlt,
+} from '../../utils/brand';
 
 interface Props {
   href?: string;
-  compact?: boolean;
+  /** isologo: compact lockup · wordmark: logotipo · icon: mobile mark */
+  variant?: 'isologo' | 'wordmark' | 'icon';
+  /** Span full width of parent */
+  fullWidth?: boolean;
+  /** Taller lockup when fullWidth (footer) */
+  size?: 'default' | 'footer';
 }
 
-const { href = '/', compact = false } = Astro.props;
+const { href = '/', variant = 'isologo', fullWidth = false, size = 'default' } = Astro.props;
+
+const isIcon = variant === 'icon';
+const isWordmark = variant === 'wordmark';
+
+const lightSrc = isIcon
+  ? brandIcon
+  : isWordmark
+    ? brandLogotipo ?? brandIsologo
+    : brandIsologo ?? brandLogotipo;
+
+const darkSrc = isIcon ? brandIconDark ?? brandIcon : brandLogoDark;
+
+const useImage = isIcon ? hasBrandIcon || Boolean(lightSrc) : Boolean(lightSrc);
+
+const imgClass = isIcon
+  ? 'h-9 w-9 object-contain'
+  : fullWidth
+    ? size === 'footer'
+      ? 'w-full h-auto min-h-[5.25rem] max-h-[10.5rem] object-contain object-left'
+      : 'w-full h-auto min-h-10 object-contain object-left'
+    : isWordmark
+      ? 'h-12 w-auto max-w-full object-contain object-left'
+      : 'h-11 w-auto max-w-[220px] object-contain object-left';
 ---
 
-<a href={href} class="group flex items-center gap-2.5" aria-label="Mochileaf home">
-  <span
-    class="flex h-9 w-9 items-center justify-center rounded-2xl bg-sage-100 text-accent shadow-soft transition-transform duration-300 group-hover:scale-105"
-    aria-hidden="true"
-  >
-    <Icon name="leaf" size={20} weight="regular" />
-  </span>
+<a
+  href={href}
+  class:list={[
+    'group shrink-0 items-center',
+    fullWidth ? 'block w-full' : 'inline-flex',
+  ]}
+  aria-label="Mochileaf home"
+>
   {
-    !compact && (
-      <span class="font-display text-xl font-semibold text-primary">
-        Mochileaf
-      </span>
+    useImage && lightSrc ? (
+      <>
+        <img
+          src={lightSrc}
+          alt={brandAlt}
+          width={isIcon ? 36 : fullWidth ? (size === 'footer' ? 672 : 208) : undefined}
+          height={isIcon ? 36 : fullWidth ? (size === 'footer' ? 120 : 56) : isWordmark ? 48 : 44}
+          class:list={[imgClass, darkSrc && darkSrc !== lightSrc && 'dark:hidden']}
+          loading="eager"
+          decoding="async"
+        />
+        {darkSrc && darkSrc !== lightSrc && (
+          <img
+            src={darkSrc}
+            alt={brandAlt}
+            width={isIcon ? 36 : fullWidth ? (size === 'footer' ? 672 : 208) : undefined}
+            height={isIcon ? 36 : fullWidth ? (size === 'footer' ? 120 : 56) : isWordmark ? 48 : 44}
+            class:list={[imgClass, 'hidden dark:block']}
+            loading="eager"
+            decoding="async"
+          />
+        )}
+      </>
+    ) : (
+      <>
+        <span
+          class="flex h-9 w-9 items-center justify-center rounded-2xl bg-sage-100 text-accent shadow-soft transition-transform duration-300 group-hover:scale-105"
+          aria-hidden="true"
+        >
+          <Icon name="leaf" size={20} weight="regular" />
+        </span>
+        {!isIcon && (
+          <span class="font-display text-xl font-semibold text-primary">Mochileaf</span>
+        )}
+      </>
     )
   }
 </a>

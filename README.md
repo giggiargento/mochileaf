@@ -90,7 +90,7 @@ Example hub URLs:
 | Game           | Slug            | Hub        |
 | -------------- | --------------- | ---------- |
 | Whisperwood    | `whisperwood`   | Full demo  |
-| Stardew Haven  | `stardew-haven` | Hub shell  |
+| Stardew Valley | `stardew-valley` | Villagers, mods, guides |
 | Moonlit Tides  | `moonlit-tides` | Hub shell  |
 | Petal Dreams   | `petal-dreams`  | Coming soon|
 

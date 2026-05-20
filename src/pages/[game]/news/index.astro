@@ -4,7 +4,7 @@ import PageHeader from '../../../components/game/PageHeader.astro';
 import ArticleCard from '../../../components/home/ArticleCard.astro';
 import ContentGrid from '../../../components/game/ContentGrid.astro';
 import { games } from '../../../data/games';
-import { getArticlesByGame } from '../../../data/articles';
+import { getNewsByGame } from '../../../data/articles';
 
 export function getStaticPaths() {
   return games
@@ -13,17 +13,15 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
-const news = getArticlesByGame(game.slug).filter((a) => a.category === 'news' || a.category === 'update');
-const allArticles = getArticlesByGame(game.slug);
-const displayArticles = news.length > 0 ? news : allArticles;
+const news = getNewsByGame(game.slug);
 ---
 
 <GameHubLayout game={game} title="News">
   <PageHeader title="News &amp; updates" description="Patch notes, events, and hub announcements." />
   <div class="page-container-below-header">
-    {displayArticles.length > 0 ? (
+    {news.length > 0 ? (
       <ContentGrid columns={2}>
-        {displayArticles.map((a) => <ArticleCard article={a} />)}
+        {news.map((a) => <ArticleCard article={a} />)}
       </ContentGrid>
     ) : (
       <p class="prose-cozy text-center py-16">No news yet — the forest is quiet today.</p>

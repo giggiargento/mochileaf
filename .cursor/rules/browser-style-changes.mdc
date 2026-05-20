@@ -1,0 +1,45 @@
+---
+description: Prioritize browser preview CSS changes when the user applies them from DevTools
+alwaysApply: true
+---
+
+# Browser style changes (CSS_CHANGE)
+
+When the user sends style changes from the browser preview (blocks with `CSS_CHANGE`, `selector`, `elementClasses`, `oldValue`, `newValue`, or similar):
+
+## Priority
+
+- **Treat the browser preview as the source of truth** for layout and appearance. The user is fine-tuning visually when text instructions are unclear.
+- **Do not preserve existing CSS** that contradicts the preview just because it was there before. Update or remove conflicting declarations so the persisted code matches what they saw in the browser.
+- **Apply every listed property** with the exact `newValue` (units and format included).
+
+## Where to persist
+
+1. Find the target via `selector`, `elementClasses`, or `elementPath`.
+2. Prefer the project's normal style location:
+   - Global/component CSS: `src/styles/global.css` and co-located stylesheets
+   - Tailwind: update `class` / `className` when a utility maps cleanly
+   - CSS modules, styled-components, or inline `style` only when that is what the component uses
+3. **Never rely on inline styles in the browser** as the final state — write the same rules into source files so a refresh keeps the look.
+
+## Make preview changes actually work
+
+- If the preview sets `display: flex` on a parent but a child uses `position: absolute`, **fix the conflict** so centering/sizing from the preview is visible after refresh (adjust or remove absolute/inset rules when needed).
+- If `padding-top` replaces a `top` offset, avoid doubling spacing — align with the preview intent, not duplicate offsets.
+
+## When unsure
+
+- Prefer the **visual result** implied by the batch of changes over older comments or assumptions.
+- Only ask the user if selectors are ambiguous across multiple unrelated components.
+
+## After applying
+
+- Briefly confirm which file(s) were updated so they know a normal refresh will keep the styles.
+- Do **not** add extra Tailwind classes or “improve” layout beyond what the preview shows.
+
+## Preview / navigation quirks (Mochileaf)
+
+- Cursor browser preview may inject **inline `style`** on nodes; those are not in git. After client navigations they can make portraits look wrong until cleared.
+- **Do not** duplicate styles in both `global.css` and `.astro` `class` unless the preview used utilities.
+- Full reload: `data-astro-reload` on character detail links; hard refresh `Ctrl+Shift+R` if HMR looks stale.
+- Theme after auto-refresh follows **`localStorage` `mochileaf-theme`**, not how the preview looked before reload. Theme logic lives only in `src/scripts/theme.client.ts` + the inline blocker in `BaseLayout.astro`.

@@ -2,6 +2,7 @@
 import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
 import { games } from '../../../data/games';
+import { getGameNavForGame } from '../../../data/game-nav';
 
 export function getStaticPaths() {
   return games
@@ -10,23 +11,38 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
+const navItems = getGameNavForGame(game).filter((item) => item.href !== `/${game.slug}`);
+const isStardew = game.slug === 'stardew-valley';
 ---
 
 <GameHubLayout game={game} title="About">
   <PageHeader title={`About ${game.name}`} description={game.tagline} />
-  <article class="page-container-below-header max-w-3xl prose-cozy">
+  <div class="page-container-below-header">
+    <article class="article-column prose-cozy">
     <p>{game.description}</p>
     <p>
-      This hub is part of Mochileaf — a multi-game cozy content platform. Here you'll find characters,
-      builds, tier lists, guides, and news curated with a warm, editorial touch.
+      This hub is part of Mochileaf — an editorial cozy gaming site with guides, news, and reference
+      pages written in plain language. We are not affiliated with the game's publisher or developer.
     </p>
-    <h2 class="font-display text-xl text-primary mt-8">Hub sections</h2>
+    {
+      isStardew && (
+        <p>
+          Stardew Valley is a farming and life sim by ConcernedApe. On PC, many players extend the
+          game with community mods — see our <a href={`/${game.slug}/mods`} class="cozy-link">mods list</a> for
+          frameworks and quality-of-life tools.
+        </p>
+      )
+    }
+    <h2 class="font-display text-xl text-primary mt-8">What you will find here</h2>
     <ul class="list-disc pl-6 space-y-2 mt-4">
-      <li><a href={`/${game.slug}/characters`} class="cozy-link">Characters</a> — profiles and lore</li>
-      <li><a href={`/${game.slug}/builds`} class="cozy-link">Builds</a> — relaxed loadouts</li>
-      <li><a href={`/${game.slug}/tier-list`} class="cozy-link">Tier list</a> — community rankings</li>
-      <li><a href={`/${game.slug}/guides`} class="cozy-link">Guides</a> — walkthroughs</li>
-      <li><a href={`/${game.slug}/news`} class="cozy-link">News</a> — updates and events</li>
+      {
+        navItems.map((item) => (
+          <li>
+            <a href={item.href} class="cozy-link">{item.label}</a>
+          </li>
+        ))
+      }
     </ul>
-  </article>
+    </article>
+  </div>
 </GameHubLayout>

@@ -2,8 +2,10 @@
 import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import Badge from '../../../components/ui/Badge.astro';
 import Button from '../../../components/ui/Button.astro';
+import Icon from '../../../components/ui/Icon.astro';
 import { games } from '../../../data/games';
 import { characters, getCharacter } from '../../../data/characters';
+import { getHubCopy } from '../../../utils/game-hub';
 
 export function getStaticPaths() {
   return characters
@@ -21,16 +23,40 @@ export function getStaticPaths() {
 }
 
 const { game, character } = Astro.props;
+const hubCopy = getHubCopy(game);
+const isStardew = game.slug === 'stardew-valley';
+const portraitAlt = `${character.name} — ${character.role} in ${game.name}`;
+const listLabel = hubCopy.charactersTitle.toLowerCase();
 ---
 
 <GameHubLayout game={game} title={character.name}>
   <article class="page-container-below-header max-w-4xl">
-    <a href={`/${game.slug}/characters`} class="cozy-link text-sm font-medium">← All characters</a>
-    <div class="mt-8 grid gap-10 md:grid-cols-2">
-      <div class="aspect-square rounded-[var(--radius-card)] bg-gradient-to-br from-sage-100 to-mist-100 flex items-center justify-center text-8xl dark:from-sage-500/20 dark:to-mist-300/10" aria-hidden="true">
-        🌿
+    <a href={`/${game.slug}/characters`} class="cozy-link text-sm font-medium">
+      ← All {listLabel}
+    </a>
+    <div class="mt-8 grid h-fit gap-8 md:grid-cols-2 md:items-start">
+      <div class="character-portrait-frame min-w-0">
+        <div class="character-portrait-inner">
+        {
+          character.image ? (
+            <img
+              src={character.image}
+              alt={portraitAlt}
+              width={320}
+              height={400}
+              class="character-portrait-img pixel-portrait"
+              loading="eager"
+              decoding="async"
+            />
+          ) : (
+            <div class="character-portrait-placeholder" aria-hidden="true">
+              <Icon name="user-circle" size={72} weight="light" />
+            </div>
+          )
+        }
+        </div>
       </div>
-      <div>
+      <div class="min-w-0">
         <div class="flex flex-wrap gap-2 mb-4">
           {character.tier && <Badge variant="sage">Tier {character.tier}</Badge>}
           {character.element && <Badge variant="mist">{character.element}</Badge>}
@@ -38,9 +64,20 @@ const { game, character } = Astro.props;
         <h1 class="font-display text-4xl text-primary">{character.name}</h1>
         <p class="mt-2 text-lg font-medium text-accent">{character.role}</p>
         <p class="mt-6 prose-cozy">{character.description}</p>
-        <div class="mt-8 flex gap-3">
-          <Button href={`/${game.slug}/builds`}>View builds</Button>
-          <Button href={`/${game.slug}/tier-list`} variant="secondary">Tier list</Button>
+        <div class="mt-8 flex flex-wrap gap-3">
+          {
+            isStardew ? (
+              <>
+                <Button href={`/${game.slug}/guides`}>Guides</Button>
+                <Button href={`/${game.slug}/mods`} variant="secondary">Mods</Button>
+              </>
+            ) : (
+              <>
+                <Button href={`/${game.slug}/builds`}>View builds</Button>
+                <Button href={`/${game.slug}/tier-list`} variant="secondary">Tier list</Button>
+              </>
+            )
+          }
         </div>
       </div>
     </div>

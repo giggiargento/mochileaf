@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 import AmbientBackground from '../components/layout/AmbientBackground.astro';
 import { formatTitle, getDescription } from '../utils/seo';
+import { brandFavicon } from '../utils/brand';
 
 interface Props {
   title: string;
@@ -22,7 +23,17 @@ const pageDescription = getDescription(description);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={pageDescription} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {
+      brandFavicon ? (
+        <link
+          rel="icon"
+          href={brandFavicon}
+          type={brandFavicon.endsWith('.svg') ? 'image/svg+xml' : brandFavicon.endsWith('.png') ? 'image/png' : 'image/webp'}
+        />
+      ) : (
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      )
+    }
     <link rel="canonical" href={Astro.url.href} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
@@ -38,13 +49,16 @@ const pageDescription = getDescription(description);
     <ClientRouter />
     <script is:inline>
       (function () {
-        const key = 'mochileaf-theme';
-        const stored = localStorage.getItem(key);
-        const dark =
-          stored === 'dark' ||
-          (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        if (dark) document.documentElement.classList.add('dark');
+        var k = 'mochileaf-theme';
+        var s = localStorage.getItem(k);
+        var d =
+          s === 'dark' ||
+          (s !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', d);
       })();
+    </script>
+    <script>
+      import '../scripts/theme.client.ts';
     </script>
     <slot name="head" />
   </head>

@@ -1,37 +1,67 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
 import Button from '../ui/Button.astro';
 import Icon from '../ui/Icon.astro';
+
+const heroImagePath = '/images/hero-image.png';
+const heroImageExists = fs.existsSync(
+  path.join(process.cwd(), 'public', 'images', 'hero-image.png'),
+);
+
+const heroImageAlt =
+  'Illustration of a cozy fantasy gaming world — warm light, soft nature, and peaceful adventure';
 ---
 
-<section class="page-container py-16 md:py-24">
-  <div class="mx-auto max-w-4xl text-center animate-fade-in">
-    <p class="mb-4 inline-flex items-center gap-2 rounded-[var(--radius-pill)] border border-default bg-nav px-4 py-1.5 text-sm font-medium text-accent">
-      <Icon name="sparkle" size={16} weight="regular" />
-      Cozy gaming, beautifully told
-    </p>
-    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl text-primary text-balance leading-tight">
-      Where peaceful play meets
-      <span class="italic text-accent">editorial elegance</span>
-    </h1>
-    <p class="mx-auto mt-6 max-w-2xl text-lg text-secondary leading-relaxed">
-      Mochileaf is your warm sanctuary for guides, builds, and stories — inspired by soft fantasy,
-      Studio Ghibli atmospheres, and the gentle rhythm of cozy gaming culture.
-    </p>
-    <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-      <Button href="/games" size="lg">
-        <Icon name="game-controller" size={18} weight="regular" class="text-white" />
-        Explore games
-      </Button>
-      <Button href="/articles" variant="secondary" size="lg">
-        <Icon name="article" size={18} weight="regular" />
-        Read articles
-      </Button>
+<section class="page-container py-12 md:py-16 lg:py-20">
+  <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+    <div class="animate-fade-in text-left">
+      <p
+        class="mb-4 inline-flex items-center gap-2 rounded-[var(--radius-pill)] border border-default bg-nav px-4 py-1.5 text-sm font-medium text-accent"
+      >
+        <Icon name="sparkle" size={16} weight="regular" />
+        Cozy gaming, beautifully told
+      </p>
+      <h1 class="font-display text-4xl text-primary text-balance leading-tight md:text-5xl lg:text-[3.25rem]">
+        Where peaceful play meets
+        <span class="italic text-accent">editorial elegance</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-lg text-secondary leading-relaxed">
+        Mochileaf is your warm sanctuary for guides, builds, and stories — inspired by soft fantasy,
+        Studio Ghibli atmospheres, and the gentle rhythm of cozy gaming culture.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-start gap-3 md:mt-10 md:gap-4">
+        <Button href="/games" size="lg">
+          <Icon name="game-controller" size={18} weight="regular" class="text-white" />
+          Explore games
+        </Button>
+        <Button href="/articles" variant="secondary" size="lg">
+          <Icon name="article" size={18} weight="regular" />
+          Read articles
+        </Button>
+      </div>
     </div>
-  </div>
 
-  <div class="mx-auto mt-16 grid max-w-5xl grid-cols-3 gap-4 opacity-90 md:gap-6" aria-hidden="true">
-    <div class="aspect-[4/5] rounded-[var(--radius-card)] bg-gradient-to-br from-sage-200 to-mist-100 shadow-card dark:from-sage-600/30 dark:to-mist-300/15" />
-    <div class="aspect-[4/5] rounded-[var(--radius-card)] bg-gradient-to-br from-blossom-200 to-honey-100 shadow-card translate-y-4 dark:from-blossom-300/20 dark:to-honey-300/15" />
-    <div class="aspect-[4/5] rounded-[var(--radius-card)] bg-gradient-to-br from-lavender-200 to-mist-100 shadow-card dark:from-lavender-300/20 dark:to-mist-300/15" />
+    <div class="animate-fade-in lg:justify-self-end">
+      {
+        heroImageExists ? (
+          <img
+            src={heroImagePath}
+            alt={heroImageAlt}
+            width={640}
+            height={640}
+            class="mx-auto w-full max-w-lg object-contain lg:max-w-none"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        ) : (
+          <div
+            class="mx-auto aspect-square w-full max-w-lg rounded-[var(--radius-card)] bg-gradient-to-br from-sage-200 via-mist-100 to-blossom-100 shadow-card dark:from-sage-600/25 dark:via-mist-300/15 dark:to-blossom-300/15 lg:max-w-none"
+            aria-hidden="true"
+          />
+        )
+      }
+    </div>
   </div>
 </section>

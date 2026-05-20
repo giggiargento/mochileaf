@@ -23,10 +23,10 @@ export const updates: Update[] = [
   },
   {
     id: '4',
-    title: 'Stardew Haven — Spring event live',
-    gameSlug: 'stardew-haven',
-    date: '2026-04-28',
-    type: 'event',
+    title: 'Stardew Valley 1.6 — new festival, pets, and late-game areas',
+    gameSlug: 'stardew-valley',
+    date: '2024-11-04',
+    type: 'patch',
   },
   {
     id: '5',

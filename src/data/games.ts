@@ -13,13 +13,14 @@ export const games: Game[] = [
     status: 'active',
   },
   {
-    slug: 'stardew-haven',
-    name: 'Stardew Haven',
-    tagline: 'Cozy farming beneath a painted sky',
+    slug: 'stardew-valley',
+    name: 'Stardew Valley',
+    tagline: 'Farming, friendship, and quiet seasons in Pelican Town',
     description:
-      'Tend your garden, share tea with neighbors, and watch seasons drift by in watercolor warmth.',
+      'Grow crops, explore the mines, befriend villagers, and restore the community center at your own pace — a cozy farming life sim loved worldwide.',
     accent: 'honey',
     coverGradient: 'from-honey-200/80 via-blossom-100 to-cream-50',
+    coverImage: '/images/games/stardew-valley/cover.jpg',
     featured: true,
     status: 'active',
   },

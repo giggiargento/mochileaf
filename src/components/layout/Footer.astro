@@ -1,33 +1,51 @@
 ---
 import Logo from './Logo.astro';
+import { getFeaturedGames } from '../../data/games';
+
+const featuredGames = getFeaturedGames();
 ---
 
 <footer class="border-t border-default bg-nav transition-colors duration-300">
   <div class="page-container py-12 md:py-16">
     <div class="grid gap-10 md:grid-cols-4">
       <div class="md:col-span-2">
-        <Logo />
-        <p class="mt-4 max-w-sm text-sm text-secondary leading-relaxed">
+        <div class="w-full max-w-[31.5rem]">
+          <Logo variant="isologo" fullWidth size="footer" />
+        </div>
+        <p class="mt-6 max-w-sm text-sm text-secondary leading-relaxed">
           A calming home for cozy gaming — guides, builds, and stories wrapped in soft fantasy warmth.
         </p>
       </div>
-      <div>
-        <h3 class="text-sm font-semibold text-primary">Explore</h3>
+
+      <nav aria-labelledby="footer-site-nav">
+        <h2 id="footer-site-nav" class="text-sm font-semibold text-primary">
+          Cozy games, guides &amp; articles
+        </h2>
         <ul class="mt-4 space-y-2 text-sm">
-          <li><a href="/games" class="cozy-link">Games</a></li>
-          <li><a href="/articles" class="cozy-link">Articles</a></li>
-          <li><a href="/about" class="cozy-link">About</a></li>
+          <li><a href="/games" class="cozy-link">Browse cozy games</a></li>
+          <li><a href="/articles" class="cozy-link">Read guides &amp; articles</a></li>
+          <li><a href="/about" class="cozy-link">About Mochileaf</a></li>
         </ul>
-      </div>
-      <div>
-        <h3 class="text-sm font-semibold text-primary">Featured Hubs</h3>
+      </nav>
+
+      <nav aria-labelledby="footer-game-hubs">
+        <h2 id="footer-game-hubs" class="text-sm font-semibold text-primary">
+          Featured cozy game hubs
+        </h2>
         <ul class="mt-4 space-y-2 text-sm">
-          <li><a href="/whisperwood" class="cozy-link">Whisperwood</a></li>
-          <li><a href="/stardew-haven" class="cozy-link">Stardew Haven</a></li>
-          <li><a href="/moonlit-tides" class="cozy-link">Moonlit Tides</a></li>
+          {
+            featuredGames.map((game) => (
+              <li>
+                <a href={`/${game.slug}`} class="cozy-link">
+                  {game.name} guides &amp; wiki
+                </a>
+              </li>
+            ))
+          }
         </ul>
-      </div>
+      </nav>
     </div>
+
     <div class="mt-12 flex flex-col gap-4 border-t border-default pt-8 text-sm text-muted md:flex-row md:items-center md:justify-between">
       <p>&copy; {new Date().getFullYear()} Mochileaf. Crafted with care.</p>
       <p class="text-xs">Placeholder content for MVP demonstration.</p>

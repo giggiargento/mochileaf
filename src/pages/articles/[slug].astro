@@ -1,8 +1,9 @@
 ---
 import GlobalLayout from '../../layouts/GlobalLayout.astro';
 import PageHeader from '../../components/game/PageHeader.astro';
+import ArticleDetail from '../../components/article/ArticleDetail.astro';
 import { articles } from '../../data/articles';
-import { getGame } from '../../data/games';
+import { getArticleHref } from '../../utils/article-routes';
 
 export function getStaticPaths() {
   return articles.map((article) => ({
@@ -12,7 +13,10 @@ export function getStaticPaths() {
 }
 
 const { article } = Astro.props;
-const game = article.gameSlug ? getGame(article.gameSlug) : undefined;
+
+if (article.gameSlug) {
+  return Astro.redirect(getArticleHref(article), 301);
+}
 ---
 
 <GlobalLayout title={article.title} description={article.excerpt}>
@@ -21,25 +25,7 @@ const game = article.gameSlug ? getGame(article.gameSlug) : undefined;
     title={article.title}
     description={article.excerpt}
   />
-  <article class="page-container-below-header max-w-3xl">
-    <p class="text-sm text-muted mb-8">
-      {article.readTime} · {new Date(article.publishedAt).toLocaleDateString('en-US', { dateStyle: 'long' })}
-      {game && <> · <a href={`/${game.slug}`} class="cozy-link">{game.name}</a></>}
-    </p>
-    <div class="prose-cozy space-y-6">
-      <p>
-        This is placeholder article content. Replace with CMS or API-driven markdown when ready.
-        The layout supports long-form editorial guides with cozy typography and generous spacing.
-      </p>
-      <p>
-        Imagine lantern-lit paths, illustrated maps, and step-by-step walkthroughs that never rush you.
-        That is the Mochileaf reading experience we are building toward.
-      </p>
-      <h2 class="font-display text-xl text-primary">What comes next</h2>
-      <p>
-        Connect your content API, drop in MDX, or wire up a headless CMS. The routing and SEO structure
-        are already in place.
-      </p>
-    </div>
-  </article>
+  <div class="page-container-below-header">
+    <ArticleDetail article={article} />
+  </div>
 </GlobalLayout>

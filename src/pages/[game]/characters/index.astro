@@ -5,6 +5,7 @@ import ContentGrid from '../../../components/game/ContentGrid.astro';
 import CharacterCard from '../../../components/game/CharacterCard.astro';
 import { games } from '../../../data/games';
 import { getCharactersByGame } from '../../../data/characters';
+import { getHubCopy } from '../../../utils/game-hub';
 
 export function getStaticPaths() {
   return games
@@ -14,20 +15,26 @@ export function getStaticPaths() {
 
 const { game } = Astro.props;
 const characters = getCharactersByGame(game.slug);
+const hubCopy = getHubCopy(game);
 ---
 
-<GameHubLayout game={game} title="Characters" description={`All characters in ${game.name}`}>
-  <PageHeader
-    title="Characters"
-    description="Discover every companion, their roles, and cozy lore snippets."
-  />
+<GameHubLayout
+  game={game}
+  title={hubCopy.charactersTitle}
+  description={`${hubCopy.charactersTitle} in ${game.name} — profiles and cozy summaries.`}
+>
+  <PageHeader title={hubCopy.charactersTitle} description={hubCopy.charactersDescription} />
   <div class="page-container-below-header">
-    {characters.length > 0 ? (
-      <ContentGrid columns={3}>
-        {characters.map((c) => <CharacterCard character={c} gameSlug={game.slug} />)}
-      </ContentGrid>
-    ) : (
-      <p class="prose-cozy text-center py-16">Character profiles coming soon for this hub.</p>
-    )}
+    {
+      characters.length > 0 ? (
+        <ContentGrid columns={3}>
+          {characters.map((c) => (
+            <CharacterCard character={c} gameSlug={game.slug} />
+          ))}
+        </ContentGrid>
+      ) : (
+        <p class="prose-cozy text-center py-16">Profiles for this hub are being written with care.</p>
+      )
+    }
   </div>
 </GameHubLayout>

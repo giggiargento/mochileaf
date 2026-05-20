@@ -1,0 +1,52 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import ContentGrid from '../../../components/game/ContentGrid.astro';
+import ModCard from '../../../components/game/ModCard.astro';
+import { games } from '../../../data/games';
+import { getModsByGame } from '../../../data/mods';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active')
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const gameMods = getModsByGame(game.slug);
+const isStardew = game.slug === 'stardew-valley';
+---
+
+<GameHubLayout
+  game={game}
+  title={isStardew ? 'Mods' : 'Mods'}
+  description={
+    isStardew
+      ? 'Recommended Stardew Valley mods for PC — frameworks, quality-of-life tools, and community expansions.'
+      : `Mod recommendations for ${game.name}`
+  }
+>
+  <PageHeader
+    title={isStardew ? 'Recommended mods' : 'Mods'}
+    description={
+      isStardew
+        ? 'Curated PC mods with original summaries. Always check mod pages for the latest version and compatibility notes.'
+        : 'Mod lists for this hub are being curated.'
+    }
+  />
+  <div class="page-container-below-header">
+    {
+      gameMods.length > 0 ? (
+        <ContentGrid columns={2}>
+          {gameMods.map((mod) => (
+            <ModCard mod={mod} />
+          ))}
+        </ContentGrid>
+      ) : (
+        <p class="prose-cozy text-center py-16">
+          Mod recommendations for this game are on the way.
+        </p>
+      )
+    }
+  </div>
+</GameHubLayout>

@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/stardew-haven",
+      "destination": "/stardew-valley",
+      "permanent": true
+    },
+    {
+      "source": "/stardew-haven/:path*",
+      "destination": "/stardew-valley/:path*",
+      "permanent": true
+    }
+  ]
+}

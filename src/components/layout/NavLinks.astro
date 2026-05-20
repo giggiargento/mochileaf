@@ -1,0 +1,82 @@
+---
+import type { NavItem } from '../../types';
+import Icon from '../ui/Icon.astro';
+import {
+  findBestNavMatch,
+  isNavItemActive,
+  isNavParentActive,
+  normalizeNavPath,
+} from '../../utils/navigation';
+
+interface Props {
+  items: NavItem[];
+  currentPath: string;
+}
+
+const { items, currentPath } = Astro.props;
+const path = normalizeNavPath(currentPath);
+const bestMatch = findBestNavMatch(items, path);
+---
+
+<ul class="space-y-1" role="list">
+  {
+    items.map((item) => {
+      const hasChildren = Boolean(item.children?.length);
+      const parentActive = hasChildren
+        ? isNavParentActive(item, path)
+        : isNavItemActive(item, bestMatch);
+
+      return (
+        <li
+          class:list={['nav-group', hasChildren && parentActive && 'nav-group-open']}
+        >
+          <a
+            href={item.href}
+            class:list={['nav-link', parentActive && 'nav-link-active']}
+            aria-current={!hasChildren && parentActive ? 'page' : undefined}
+            aria-expanded={hasChildren ? parentActive : undefined}
+          >
+            {item.icon && <Icon name={item.icon} size={18} class="shrink-0 opacity-80" />}
+            <span class="flex-1">{item.label}</span>
+            {
+              hasChildren && (
+                <Icon
+                  name="caret-down"
+                  size={14}
+                  class="nav-group-caret shrink-0 opacity-60"
+                  aria-hidden="true"
+                />
+              )
+            }
+          </a>
+          {
+            hasChildren && (
+              <ul
+                class="nav-sublist nav-sublist-collapsible space-y-0.5"
+                role="group"
+                aria-label={`${item.label} hubs`}
+              >
+                {
+                  item.children!.map((child) => {
+                    const childActive = isNavItemActive(child, bestMatch);
+                    return (
+                      <li>
+                        <a
+                          href={child.href}
+                          class:list={['nav-link nav-link-sub', childActive && 'nav-link-active']}
+                          aria-current={childActive ? 'page' : undefined}
+                        >
+                          {child.label}
+                        </a>
+                      </li>
+                    );
+                  })
+                }
+              </ul>
+            )
+          }
+        </li>
+      );
+    })
+  }
+</ul>

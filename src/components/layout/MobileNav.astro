@@ -1,8 +1,10 @@
 ---
 import type { NavItem } from '../../types';
 import Logo from './Logo.astro';
+import NavLinks from './NavLinks.astro';
 import Icon from '../ui/Icon.astro';
 import ThemeToggle from '../ui/ThemeToggle.astro';
+import { normalizeNavPath } from '../../utils/navigation';
 
 interface Props {
   title?: string;
@@ -10,12 +12,12 @@ interface Props {
 }
 
 const { title = 'Menu', items } = Astro.props;
-const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+const currentPath = normalizeNavPath(Astro.url.pathname);
 ---
 
 <header class="sticky top-0 z-50 border-b border-default bg-nav backdrop-blur-md lg:hidden transition-colors duration-300">
   <div class="flex items-center justify-between gap-4 px-4 py-3">
-    <Logo compact />
+    <Logo variant="icon" />
     <div class="flex items-center gap-2">
       <ThemeToggle />
       <button
@@ -38,32 +40,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     aria-label={title}
   >
     <p class="mb-3 text-xs font-medium uppercase tracking-widest text-muted">{title}</p>
-    <ul class="space-y-1">
-      {
-        items.map((item) => {
-          const href = item.href.replace(/\/$/, '') || '/';
-          const matches = items.filter((nav) => {
-            const navHref = nav.href.replace(/\/$/, '') || '/';
-            return (
-              currentPath === navHref ||
-              (navHref !== '/' && currentPath.startsWith(`${navHref}/`))
-            );
-          });
-          const bestMatch = matches.sort(
-            (a, b) => (b.href.replace(/\/$/, '') || '/').length - (a.href.replace(/\/$/, '') || '/').length,
-          )[0];
-          const isActive = (bestMatch?.href.replace(/\/$/, '') || '/') === href;
-          return (
-            <li>
-              <a href={item.href} class:list={['nav-link block', isActive && 'nav-link-active']}>
-                {item.icon && <Icon name={item.icon} size={18} class="shrink-0 opacity-80" />}
-                {item.label}
-              </a>
-            </li>
-          );
-        })
-      }
-    </ul>
+    <NavLinks items={items} currentPath={currentPath} />
   </nav>
 </header>
 

@@ -2,6 +2,7 @@
 import type { Article } from '../../types';
 import Badge from '../ui/Badge.astro';
 import { getGame } from '../../data/games';
+import { getArticleHref } from '../../utils/article-routes';
 
 interface Props {
   article: Article;
@@ -25,7 +26,7 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
     {article.trending && <Badge variant="blossom">Trending</Badge>}
   </div>
   <h3 class="font-display text-lg text-primary line-clamp-2">
-    <a href={`/articles/${article.slug}`} class="hover:text-accent transition-colors">
+    <a href={getArticleHref(article)} class="hover:text-accent transition-colors">
       {article.title}
     </a>
   </h3>

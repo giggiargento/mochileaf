@@ -1,5 +1,6 @@
 ---
 import type { Game } from '../../types';
+import { gameHeaderImagePath } from '../../utils/game-images';
 import Badge from '../ui/Badge.astro';
 import Icon from '../ui/Icon.astro';
 
@@ -15,18 +16,49 @@ const accentVariants = {
   lavender: 'lavender' as const,
   honey: 'honey' as const,
 };
+
+/** Override in games.ts, else `header.jpg` in the game folder when the hub has cover art. */
+const cardImage =
+  game.cardImage ?? (game.coverImage ? gameHeaderImagePath(game.slug) : undefined);
+const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
 ---
 
 <a
   href={game.status === 'active' ? `/${game.slug}` : '/games'}
   class:list={[
-    'cozy-card group block overflow-hidden',
+    'cozy-card group flex h-full flex-col overflow-hidden',
     game.status === 'coming-soon' && 'opacity-80 cursor-default',
   ]}
   aria-disabled={game.status === 'coming-soon' ? true : undefined}
 >
-  <div class:list={['aspect-[16/10] bg-gradient-to-br', game.coverGradient]} />
-  <div class="p-6">
+  <div class="relative aspect-[16/10] overflow-hidden">
+    {
+      cardImage ? (
+        <div
+          class="h-full w-full origin-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
+        >
+          <img
+            src={cardImage}
+            alt={cardAlt}
+            width={640}
+            height={400}
+            class="h-full w-full object-cover opacity-50 transition-opacity duration-500 ease-out group-hover:opacity-100"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      ) : (
+        <div
+          class:list={[
+            'h-full w-full bg-gradient-to-br opacity-50 transition-opacity duration-500 group-hover:opacity-100',
+            game.coverGradient,
+          ]}
+          aria-hidden="true"
+        />
+      )
+    }
+  </div>
+  <div class="flex flex-1 flex-col p-6">
     <div class="flex items-start justify-between gap-3">
       <h3 class="font-display text-xl text-primary group-hover:text-accent transition-colors duration-300">
         {game.name}
@@ -38,7 +70,7 @@ const accentVariants = {
     <p class="mt-2 text-sm text-secondary line-clamp-2">{game.tagline}</p>
     {
       game.status === 'active' && (
-        <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+        <span class="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-accent">
           Enter hub
           <Icon name="arrow-right" size={16} class="transition-transform duration-300 group-hover:translate-x-1" />
         </span>
