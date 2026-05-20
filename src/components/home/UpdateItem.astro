@@ -1,6 +1,9 @@
 ---
 import type { Update } from '../../types';
+import { articles } from '../../data/articles';
 import { getGame } from '../../data/games';
+import { getArticleHref } from '../../utils/article-routes';
+import { getGameDisplayName } from '../../utils/game-display';
 import Icon from '../ui/Icon.astro';
 
 interface Props {
@@ -9,7 +12,14 @@ interface Props {
 
 const { update } = Astro.props;
 const game = update.gameSlug ? getGame(update.gameSlug) : undefined;
-const href = update.gameSlug ? `/${update.gameSlug}/news` : '/articles';
+
+let href = update.gameSlug ? `/${update.gameSlug}/news` : '/articles';
+if (update.articleSlug && update.gameSlug) {
+  const article = articles.find(
+    (a) => a.slug === update.articleSlug && a.gameSlug === update.gameSlug,
+  );
+  if (article) href = getArticleHref(article);
+}
 
 const typeLabels: Record<Update['type'], string> = {
   patch: 'Patch',
@@ -45,7 +55,7 @@ const typeIcons: Record<Update['type'], string> = {
         game ? (
           <>
             <a href={`/${game.slug}`} class="cozy-link no-underline hover:underline">
-              {game.name}
+              {getGameDisplayName(game, 'short')}
             </a>
             {' · '}
           </>

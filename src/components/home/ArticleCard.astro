@@ -3,6 +3,7 @@ import type { Article } from '../../types';
 import Badge from '../ui/Badge.astro';
 import { getGame } from '../../data/games';
 import { getArticleHref } from '../../utils/article-routes';
+import { getGameDisplayName } from '../../utils/game-display';
 
 interface Props {
   article: Article;
@@ -22,7 +23,13 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
 <article class="cozy-card p-6 h-full flex flex-col">
   <div class="flex flex-wrap items-center gap-2 mb-3">
     <Badge variant={categoryVariants[article.category]}>{article.category}</Badge>
-    {game && <Badge variant="default">{game.name}</Badge>}
+    {
+      game && (
+        <a href={`/${game.slug}`} class="hover:opacity-90">
+          <Badge variant="default">{getGameDisplayName(game, 'short')}</Badge>
+        </a>
+      )
+    }
     {article.trending && <Badge variant="blossom">Trending</Badge>}
   </div>
   <h3 class="font-display text-lg text-primary line-clamp-2">

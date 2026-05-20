@@ -1,6 +1,7 @@
 import type { Game, NavItem } from '../types';
 import { games } from '../data/games';
 import { getGameNavForGame } from '../data/game-nav';
+import { getGameDisplayName } from './game-display';
 
 export function normalizeNavPath(path: string): string {
   const trimmed = path.replace(/\/$/, '');
@@ -43,7 +44,7 @@ function activeGameNavChildren(): NavItem[] {
   return games
     .filter((g) => g.status === 'active')
     .map((game) => ({
-      label: game.name,
+      label: getGameDisplayName(game, 'short'),
       href: `/${game.slug}`,
     }));
 }

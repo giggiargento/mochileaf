@@ -24,6 +24,25 @@ const defaultSections: NavSection[] = [
 
 /** Per-game sidebar sections — omit pages that do not fit the game. */
 const navBySlug: Record<string, NavSection[]> = {
+  'animal-crossing-new-horizons': [
+    { label: 'Home', path: '', icon: 'house' },
+    { label: 'Villagers', path: 'characters', icon: 'users' },
+    { label: 'Homes', path: 'houses', icon: 'armchair' },
+    { label: 'Items', path: 'items', icon: 'package' },
+    { label: 'Island tours', path: 'island-tours', icon: 'television' },
+    { label: 'Guides', path: 'guides', icon: 'book-open' },
+    { label: 'About', path: 'about', icon: 'info' },
+  ],
+  'neverness-to-everness': [
+    { label: 'Home', path: '', icon: 'house' },
+    { label: 'Characters', path: 'characters', icon: 'users' },
+    { label: 'Teams', path: 'teams', icon: 'users-three' },
+    { label: 'Tier list', path: 'tier-list', icon: 'medal' },
+    { label: 'Guides', path: 'guides', icon: 'book-open' },
+    { label: 'News', path: 'news', icon: 'newspaper' },
+    { label: 'Search', path: 'search', icon: 'magnifying-glass' },
+    { label: 'About', path: 'about', icon: 'info' },
+  ],
   'stardew-valley': [
     { label: 'Home', path: '', icon: 'house' },
     { label: 'Villagers', path: 'characters', icon: 'users' },

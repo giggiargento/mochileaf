@@ -1,6 +1,8 @@
 export interface Game {
   slug: string;
   name: string;
+  /** Short label in tight UI (e.g. sidebar on mobile). */
+  shortName?: string;
   tagline: string;
   description: string;
   accent: 'sage' | 'blossom' | 'mist' | 'lavender' | 'honey';
@@ -35,6 +37,46 @@ export interface Character {
   /** Portrait path under /public */
   image?: string;
   tier?: 'S' | 'A' | 'B' | 'C';
+  rarity?: 'S' | 'A';
+  /** ACNH — lower rank = more searched (1 is top). */
+  popularRank?: number;
+  personality?: string;
+  species?: string;
+  houseStyle?: string;
+  houseDescription?: string;
+}
+
+export interface GameItem {
+  slug: string;
+  name: string;
+  gameSlug: string;
+  category: 'tool' | 'furniture' | 'diy' | 'clothing' | 'recipe' | 'other';
+  summary: string;
+  howToGet: string;
+  image?: string;
+}
+
+export interface IslandTour {
+  slug: string;
+  title: string;
+  gameSlug: string;
+  /** YouTube video ID (watch?v=ID). */
+  youtubeId: string;
+  channel: string;
+  summary: string;
+  tags: string[];
+}
+
+export interface Team {
+  slug: string;
+  name: string;
+  gameSlug: string;
+  /** Character slugs in recommended order (main DPS first). */
+  memberSlugs: string[];
+  focus: string;
+  summary: string;
+  tags: string[];
+  difficulty: 'easy' | 'medium' | 'hard';
 }
 
 export interface Build {
@@ -58,9 +100,24 @@ export interface Mod {
   url: string;
 }
 
+export interface TierMember {
+  label: string;
+  slug?: string;
+}
+
 export interface TierEntry {
   tier: 'S' | 'A' | 'B' | 'C' | 'D';
-  characters: string[];
+  members: TierMember[];
+}
+
+export interface Update {
+  id: string;
+  title: string;
+  gameSlug?: string;
+  /** When set, links to the canonical hub article URL. */
+  articleSlug?: string;
+  date: string;
+  type: 'patch' | 'event' | 'content' | 'community';
 }
 
 export interface NavItem {
@@ -68,12 +125,4 @@ export interface NavItem {
   href: string;
   icon?: string;
   children?: NavItem[];
-}
-
-export interface Update {
-  id: string;
-  title: string;
-  gameSlug?: string;
-  date: string;
-  type: 'patch' | 'event' | 'content' | 'community';
 }

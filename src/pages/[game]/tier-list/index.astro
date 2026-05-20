@@ -21,9 +21,21 @@ const tiers = getTierListForGame(game.slug);
     description="A gentle ranking for cozy strategists — updated with community warmth, not rage."
   />
   <div class="page-container-below-header max-w-3xl space-y-4">
-    {tiers.map((entry) => <TierRow entry={entry} />)}
-    <p class="text-sm text-muted mt-8">
-      Tier lists are placeholder data. Connect your API or CMS for live rankings.
-    </p>
+    {tiers.map((entry) => <TierRow entry={entry} gameSlug={game.slug} />)}
+    {
+      game.slug !== 'neverness-to-everness' && (
+        <p class="text-sm text-muted mt-8">
+          Tier lists are placeholder data. Connect your API or CMS for live rankings.
+        </p>
+      )
+    }
+    {
+      game.slug === 'neverness-to-everness' && (
+        <p class="text-sm text-muted mt-8">
+          Rankings favor story comfort and F2P value — not speedrun leaderboards. Patch shifts will be
+          noted in hub news.
+        </p>
+      )
+    }
   </div>
 </GameHubLayout>

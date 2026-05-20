@@ -1,0 +1,35 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import ContentGrid from '../../../components/game/ContentGrid.astro';
+import ItemCard from '../../../components/game/ItemCard.astro';
+import { games } from '../../../data/games';
+import { getItemsByGame } from '../../../data/items-acnh';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active' && getItemsByGame(g.slug).length > 0)
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const items = getItemsByGame(game.slug);
+---
+
+<GameHubLayout
+  game={game}
+  title="Items"
+  description={`Useful tools, DIYs, and catalog favorites in ${game.name}.`}
+>
+  <PageHeader
+    title="Items & DIYs"
+    description="Tools, furniture lines, and bell economy staples — what they are for and how to grab them without wiki overwhelm."
+  />
+  <div class="page-container-below-header">
+    <ContentGrid columns={2}>
+      {items.map((item) => (
+        <ItemCard item={item} />
+      ))}
+    </ContentGrid>
+  </div>
+</GameHubLayout>

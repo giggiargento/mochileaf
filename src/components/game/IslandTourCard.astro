@@ -1,0 +1,55 @@
+---
+import type { IslandTour } from '../../types';
+import Badge from '../ui/Badge.astro';
+import Icon from '../ui/Icon.astro';
+
+interface Props {
+  tour: IslandTour;
+}
+
+const { tour } = Astro.props;
+const youtubeUrl = `https://www.youtube.com/watch?v=${tour.youtubeId}`;
+const thumb = `https://img.youtube.com/vi/${tour.youtubeId}/hqdefault.jpg`;
+---
+
+<article class="cozy-card group overflow-hidden">
+  <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" class="block">
+    <div class="relative aspect-video overflow-hidden bg-muted">
+      <img
+        src={thumb}
+        alt=""
+        width={480}
+        height={270}
+        class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+        loading="lazy"
+        decoding="async"
+      />
+      <span
+        class="absolute inset-0 flex items-center justify-center bg-black/25 transition-colors group-hover:bg-black/35"
+        aria-hidden="true"
+      >
+        <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-accent shadow-soft">
+          <Icon name="play-circle" size={28} weight="fill" />
+        </span>
+      </span>
+    </div>
+    <div class="p-6">
+      <p class="text-xs font-medium text-muted">{tour.channel}</p>
+      <h3 class="mt-1 font-display text-lg text-primary transition-colors group-hover:text-accent">
+        {tour.title}
+      </h3>
+      <p class="mt-2 text-sm text-secondary line-clamp-2">{tour.summary}</p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {tour.tags.map((tag) => (
+          <Badge variant="lavender" size="sm">
+            {tag}
+          </Badge>
+        ))}
+      </div>
+      <p class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+        Watch on YouTube
+        <Icon name="arrow-square-out" size={16} />
+      </p>
+    </div>
+  </a>
+</article>

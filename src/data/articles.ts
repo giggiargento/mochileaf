@@ -3,16 +3,48 @@ import { isGuideCategory, isNewsCategory } from '../utils/article-routes';
 
 export const articles: Article[] = [
   {
-    slug: 'lantern-festival-guide',
-    title: 'Lantern Festival: A Cozy Walkthrough',
+    slug: 'acnh-island-setup-beginner',
+    title: 'ACNH Island Setup for New Mayors',
     excerpt:
-      'Follow the firefly paths, unlock hidden tea houses, and collect every memory lantern without rushing.',
+      'Resident Services, first bridges, and where to place homes — a calm first week without terraform regret.',
     category: 'guide',
-    gameSlug: 'whisperwood',
-    publishedAt: '2026-05-12',
-    readTime: '8 min',
+    gameSlug: 'animal-crossing-new-horizons',
+    publishedAt: '2026-05-19',
+    readTime: '9 min',
     featured: true,
     trending: true,
+  },
+  {
+    slug: 'acnh-villager-hunting-tips',
+    title: 'Finding Villagers You Actually Want',
+    excerpt:
+      'Mystery islands, amiibo camps, and patience — how to hunt Raymond (or your cozy favorite) without burnout.',
+    category: 'guide',
+    gameSlug: 'animal-crossing-new-horizons',
+    publishedAt: '2026-05-18',
+    readTime: '7 min',
+    featured: true,
+  },
+  {
+    slug: 'acnh-five-star-island-tips',
+    title: 'Five-Star Island Tips (Without Stress)',
+    excerpt:
+      'Flow, fencing, and clutter control — what Isabelle actually checks, explained in plain language.',
+    category: 'guide',
+    gameSlug: 'animal-crossing-new-horizons',
+    publishedAt: '2026-05-17',
+    readTime: '6 min',
+    trending: true,
+  },
+  {
+    slug: 'acnh-hub-welcome',
+    title: 'ACNH Hub on Mochileaf',
+    excerpt:
+      'Villager tabs, home styles, items, and YouTube island tours — your cozy Animal Crossing corner.',
+    category: 'news',
+    gameSlug: 'animal-crossing-new-horizons',
+    publishedAt: '2026-05-19',
+    readTime: '2 min',
   },
   {
     slug: 'stardew-valley-year-one-guide',
@@ -49,17 +81,6 @@ export const articles: Article[] = [
     trending: true,
   },
   {
-    slug: 'patch-1-4-notes',
-    title: 'Patch 1.4 — Softer Nights & New Music',
-    excerpt:
-      'Ambient tracks at dusk, gentler weather transitions, and quality-of-life touches for peaceful sessions.',
-    category: 'update',
-    gameSlug: 'whisperwood',
-    publishedAt: '2026-05-08',
-    readTime: '4 min',
-    trending: true,
-  },
-  {
     slug: 'cozy-gaming-rituals',
     title: 'Building a Cozy Gaming Ritual',
     excerpt:
@@ -70,15 +91,99 @@ export const articles: Article[] = [
     featured: true,
   },
   {
-    slug: 'biolume-shores-map',
-    title: 'Biolume Shores: Illustrated Map Notes',
+    slug: 'nte-beginner-guide',
+    title: 'Neverness to Everness Beginner Guide',
     excerpt:
-      'Hand-drawn landmarks, secret coves, and the quietest anchor spots for sunset sailing.',
+      'Esper cycles, stamina priorities, and your first team — a calm route through the opening hours without reroll anxiety.',
     category: 'guide',
-    gameSlug: 'moonlit-tides',
-    publishedAt: '2026-05-03',
+    gameSlug: 'neverness-to-everness',
+    publishedAt: '2026-05-18',
     readTime: '10 min',
+    featured: true,
     trending: true,
+  },
+  {
+    slug: 'nte-redeem-codes',
+    title: 'NTE Redeem Codes (Working List)',
+    excerpt:
+      'Where to paste codes in-game, what rewards to expect, and how often to check back when new campaigns drop.',
+    category: 'guide',
+    gameSlug: 'neverness-to-everness',
+    publishedAt: '2026-05-17',
+    readTime: '4 min',
+    trending: true,
+  },
+  {
+    slug: 'nte-daily-routine',
+    title: 'NTE Daily & Weekly Routine',
+    excerpt:
+      'A checklist for resin, City Tycoon, anomalies, and events — finish the essentials in under thirty minutes when you are busy.',
+    category: 'guide',
+    gameSlug: 'neverness-to-everness',
+    publishedAt: '2026-05-16',
+    readTime: '7 min',
+    featured: true,
+  },
+  {
+    slug: 'nte-city-tycoon-chiz',
+    title: 'City Tycoon & Free S-Rank Chiz',
+    excerpt:
+      'How the Grain Market ties into Chiz, why the free S-rank matters for F2P, and a light weekly rhythm for city upgrades.',
+    category: 'guide',
+    gameSlug: 'neverness-to-everness',
+    publishedAt: '2026-05-15',
+    readTime: '8 min',
+  },
+  {
+    slug: 'nte-f2p-friendly',
+    title: 'How F2P Friendly Is NTE?',
+    excerpt:
+      'Pull pacing, Chiz from City Tycoon, and where premium value actually shows up — honest notes for budget players.',
+    category: 'guide',
+    gameSlug: 'neverness-to-everness',
+    publishedAt: '2026-05-14',
+    readTime: '6 min',
+  },
+  {
+    slug: 'nte-element-esper-cycle',
+    title: 'Elements & the Esper Cycle',
+    excerpt:
+      'Cosmos, Anima, Incantation, Chaos, Psyche, and Lakshana — what they mean for team building and reactions.',
+    category: 'guide',
+    gameSlug: 'neverness-to-everness',
+    publishedAt: '2026-05-13',
+    readTime: '9 min',
+  },
+  {
+    slug: 'nte-gacha-pity',
+    title: 'Gacha, Banners & Pity (Overview)',
+    excerpt:
+      'Soft pity, hard pity, and event banners explained in plain language — no pressure to pull day one.',
+    category: 'guide',
+    gameSlug: 'neverness-to-everness',
+    publishedAt: '2026-05-12',
+    readTime: '5 min',
+  },
+  {
+    slug: 'nte-tier-list-notes',
+    title: 'NTE Tier List — How We Rank',
+    excerpt:
+      'Our cozy tier list focuses on story comfort and F2P value, not whale speedruns. Read before you reshuffle your roster.',
+    category: 'update',
+    gameSlug: 'neverness-to-everness',
+    publishedAt: '2026-05-11',
+    readTime: '3 min',
+  },
+  {
+    slug: 'nte-launch-welcome',
+    title: 'NTE Hub Is Live on Mochileaf',
+    excerpt:
+      'Characters, team comps, and starter guides for Neverness to Everness — more builds and tools coming over time.',
+    category: 'news',
+    gameSlug: 'neverness-to-everness',
+    publishedAt: '2026-05-19',
+    readTime: '2 min',
+    featured: true,
   },
   {
     slug: 'community-tea-gathering',

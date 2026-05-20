@@ -3,6 +3,7 @@ import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
 import ContentGrid from '../../../components/game/ContentGrid.astro';
 import CharacterCard from '../../../components/game/CharacterCard.astro';
+import VillagerDirectory from '../../../components/game/acnh/VillagerDirectory.astro';
 import { games } from '../../../data/games';
 import { getCharactersByGame } from '../../../data/characters';
 import { getHubCopy } from '../../../utils/game-hub';
@@ -16,6 +17,7 @@ export function getStaticPaths() {
 const { game } = Astro.props;
 const characters = getCharactersByGame(game.slug);
 const hubCopy = getHubCopy(game);
+const isAcnh = game.slug === 'animal-crossing-new-horizons';
 ---
 
 <GameHubLayout
@@ -26,7 +28,9 @@ const hubCopy = getHubCopy(game);
   <PageHeader title={hubCopy.charactersTitle} description={hubCopy.charactersDescription} />
   <div class="page-container-below-header">
     {
-      characters.length > 0 ? (
+      isAcnh ? (
+        <VillagerDirectory game={game} />
+      ) : characters.length > 0 ? (
         <ContentGrid columns={3}>
           {characters.map((c) => (
             <CharacterCard character={c} gameSlug={game.slug} />

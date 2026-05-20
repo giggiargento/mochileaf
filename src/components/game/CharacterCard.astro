@@ -55,9 +55,13 @@ const portraitAlt = `${character.name} — ${character.role}`;
       {character.tier && <Badge variant={tierVariants[character.tier]}>{character.tier}</Badge>}
     </div>
     <p class="mt-2 text-sm font-medium text-accent">{character.role}</p>
-    {character.element && (
-      <p class="mt-1 text-xs font-medium uppercase tracking-wide text-muted">{character.element}</p>
-    )}
+    {
+      (character.personality || character.species || character.element) && (
+        <p class="mt-1 text-xs font-medium uppercase tracking-wide text-muted">
+          {[character.personality, character.species, character.element].filter(Boolean).join(' · ')}
+        </p>
+      )
+    }
     <p class="mt-2 text-sm text-secondary line-clamp-2">{character.description}</p>
   </div>
 </a>

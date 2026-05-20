@@ -25,6 +25,8 @@ export function getStaticPaths() {
 const { game, character } = Astro.props;
 const hubCopy = getHubCopy(game);
 const isStardew = game.slug === 'stardew-valley';
+const isNte = game.slug === 'neverness-to-everness';
+const isAcnh = game.slug === 'animal-crossing-new-horizons';
 const portraitAlt = `${character.name} — ${character.role} in ${game.name}`;
 const listLabel = hubCopy.charactersTitle.toLowerCase();
 ---
@@ -58,18 +60,41 @@ const listLabel = hubCopy.charactersTitle.toLowerCase();
       </div>
       <div class="min-w-0">
         <div class="flex flex-wrap gap-2 mb-4">
+          {character.rarity && <Badge variant="blossom">{character.rarity}-rank</Badge>}
           {character.tier && <Badge variant="sage">Tier {character.tier}</Badge>}
+          {character.personality && <Badge variant="mist">{character.personality}</Badge>}
+          {character.species && <Badge variant="lavender">{character.species}</Badge>}
           {character.element && <Badge variant="mist">{character.element}</Badge>}
         </div>
         <h1 class="font-display text-4xl text-primary">{character.name}</h1>
         <p class="mt-2 text-lg font-medium text-accent">{character.role}</p>
         <p class="mt-6 prose-cozy">{character.description}</p>
+        {
+          isAcnh && character.houseDescription && (
+            <section id="house" class="mt-10 scroll-mt-24 rounded-2xl border border-default bg-card p-6">
+              <h2 class="font-display text-xl text-primary">
+                {character.houseStyle ?? 'Home style'}
+              </h2>
+              <p class="mt-3 prose-cozy text-sm">{character.houseDescription}</p>
+            </section>
+          )
+        }
         <div class="mt-8 flex flex-wrap gap-3">
           {
             isStardew ? (
               <>
                 <Button href={`/${game.slug}/guides`}>Guides</Button>
                 <Button href={`/${game.slug}/mods`} variant="secondary">Mods</Button>
+              </>
+            ) : isNte ? (
+              <>
+                <Button href={`/${game.slug}/teams`}>Team comps</Button>
+                <Button href={`/${game.slug}/tier-list`} variant="secondary">Tier list</Button>
+              </>
+            ) : isAcnh ? (
+              <>
+                <Button href={`/${game.slug}/houses`}>All homes</Button>
+                <Button href={`/${game.slug}/island-tours`} variant="secondary">Island tours</Button>
               </>
             ) : (
               <>

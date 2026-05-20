@@ -15,6 +15,8 @@ export function getStaticPaths() {
 const { game } = Astro.props;
 const builds = getBuildsByGame(game.slug);
 const isStardew = game.slug === 'stardew-valley';
+const isNte = game.slug === 'neverness-to-everness';
+const isAcnh = game.slug === 'animal-crossing-new-horizons';
 ---
 
 <GameHubLayout game={game} title="Builds">
@@ -29,6 +31,22 @@ const isStardew = game.slug === 'stardew-valley';
           <p>
             Stardew Valley does not use character builds or loadouts. For PC enhancements, visit our
             <a href={`/${game.slug}/mods`} class="cozy-link">recommended mods</a> page instead.
+          </p>
+        </div>
+      ) : isNte ? (
+        <div class="prose-cozy max-w-2xl mx-auto text-center py-16">
+          <p>
+            Per-character weapon and Arc Disc builds are on the way. For now, browse recommended{' '}
+            <a href={`/${game.slug}/teams`} class="cozy-link">team comps</a> and character profiles.
+          </p>
+        </div>
+      ) : isAcnh ? (
+        <div class="prose-cozy max-w-2xl mx-auto text-center py-16">
+          <p>
+            Animal Crossing hubs focus on villagers and decorating. Visit{' '}
+            <a href={`/${game.slug}/characters`} class="cozy-link">villagers</a>,{' '}
+            <a href={`/${game.slug}/houses`} class="cozy-link">homes</a>, or{' '}
+            <a href={`/${game.slug}/items`} class="cozy-link">items</a> instead.
           </p>
         </div>
       ) : builds.length > 0 ? (

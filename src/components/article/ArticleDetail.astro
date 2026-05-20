@@ -3,6 +3,7 @@ import type { Article } from '../../types';
 import type { Game } from '../../types';
 import { articleBodies } from '../../data/article-bodies';
 import { getArticleListHref, getArticleListLabel } from '../../utils/article-routes';
+import { getGameDisplayName } from '../../utils/game-display';
 
 interface Props {
   article: Article;
@@ -25,7 +26,7 @@ const backLabel = getArticleListLabel(article);
     {game && (
       <>
         {' '}
-        · <a href={`/${game.slug}`} class="cozy-link">{game.name}</a>
+        · <a href={`/${game.slug}`} class="cozy-link">{getGameDisplayName(game, 'short')}</a>
       </>
     )}
   </p>

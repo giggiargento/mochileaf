@@ -1,0 +1,40 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import ContentGrid from '../../../components/game/ContentGrid.astro';
+import TeamCard from '../../../components/game/TeamCard.astro';
+import { games } from '../../../data/games';
+import { getTeamsByGame } from '../../../data/teams';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active' && getTeamsByGame(g.slug).length > 0)
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const teams = getTeamsByGame(game.slug);
+const hubLabel = game.shortName ?? 'NTE';
+---
+
+<GameHubLayout
+  game={game}
+  title="Teams"
+  description={`Recommended team compositions for ${game.name} — cozy notes, not spreadsheet meta.`}
+>
+  <PageHeader
+    title="Team comps"
+    description={`Suggested lineups for ${hubLabel} — who to run together, what each group is for, and when to swap members as your roster grows.`}
+  />
+  <div class="page-container-below-header">
+    <ContentGrid columns={2}>
+      {teams.map((team) => (
+        <TeamCard team={team} gameSlug={game.slug} />
+      ))}
+    </ContentGrid>
+    <p class="prose-cozy mx-auto mt-12 max-w-2xl text-center text-sm text-muted">
+      Individual weapon and Arc Disc builds are coming later. For now, use these teams as a map —
+      then open each character for role and element notes.
+    </p>
+  </div>
+</GameHubLayout>

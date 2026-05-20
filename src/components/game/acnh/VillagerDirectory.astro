@@ -1,0 +1,109 @@
+---
+import type { Game } from '../../../types';
+import CharacterCard from '../CharacterCard.astro';
+import ContentGrid from '../ContentGrid.astro';
+import {
+  getOtherAcnhVillagers,
+  getPopularAcnhVillagers,
+} from '../../../data/characters-acnh';
+
+interface Props {
+  game: Game;
+}
+
+const { game } = Astro.props;
+const popular = getPopularAcnhVillagers();
+const allOthers = getOtherAcnhVillagers();
+---
+
+<div class="acnh-villager-directory" data-acnh-tabs>
+  <div
+    class="mb-8 flex flex-wrap gap-2 border-b border-default pb-4"
+    role="tablist"
+    aria-label="Villager lists"
+  >
+    <button
+      type="button"
+      role="tab"
+      id="tab-popular"
+      aria-selected="true"
+      aria-controls="panel-popular"
+      data-acnh-tab="popular"
+      class="acnh-tab active rounded-[var(--radius-pill)] px-4 py-2 text-sm font-semibold transition-colors"
+    >
+      Most searched
+    </button>
+    <button
+      type="button"
+      role="tab"
+      id="tab-all"
+      aria-selected="false"
+      aria-controls="panel-all"
+      data-acnh-tab="all"
+      class="acnh-tab rounded-[var(--radius-pill)] px-4 py-2 text-sm font-semibold transition-colors"
+    >
+      More villagers
+    </button>
+  </div>
+
+  <div id="panel-popular" role="tabpanel" aria-labelledby="tab-popular" data-acnh-panel="popular">
+    <p class="prose-cozy mb-6 max-w-2xl text-sm">
+      Fan favorites and high-traffic villagers — the ones players hunt on mystery islands and amiibo
+      camps.
+    </p>
+    <ContentGrid columns={3}>
+      {popular.map((c) => (
+        <CharacterCard character={c} gameSlug={game.slug} />
+      ))}
+    </ContentGrid>
+  </div>
+
+  <div id="panel-all" role="tabpanel" aria-labelledby="tab-all" data-acnh-panel="all" hidden>
+    <p class="prose-cozy mb-6 max-w-2xl text-sm">
+      More personalities to round out themed neighborhoods — normals, peppies, and lazy comfort picks.
+    </p>
+    <ContentGrid columns={3}>
+      {allOthers.map((c) => (
+        <CharacterCard character={c} gameSlug={game.slug} />
+      ))}
+    </ContentGrid>
+  </motion.div>
+</div>
+
+<script>
+  const root = document.querySelector('[data-acnh-tabs]');
+  if (root) {
+    const tabs = root.querySelectorAll<HTMLButtonElement>('[data-acnh-tab]');
+    const panels = root.querySelectorAll<HTMLElement>('[data-acnh-panel]');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const id = tab.getAttribute('data-acnh-tab');
+        tabs.forEach((t) => {
+          const active = t === tab;
+          t.classList.toggle('active', active);
+          t.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        panels.forEach((panel) => {
+          const show = panel.getAttribute('data-acnh-panel') === id;
+          panel.hidden = !show;
+        });
+      });
+    });
+  }
+</script>
+
+<style>
+  .acnh-tab {
+    color: var(--text-secondary);
+    background: transparent;
+  }
+  .acnh-tab:hover {
+    color: var(--text-accent);
+    background: var(--bg-muted);
+  }
+  .acnh-tab.active {
+    color: var(--text-accent);
+    background: var(--bg-muted);
+  }
+</style>

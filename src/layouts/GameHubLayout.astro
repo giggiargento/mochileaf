@@ -17,11 +17,12 @@ interface Props {
 const { game, title, description } = Astro.props;
 const navItems = getGameNav(game);
 const pageDescription = description ?? game.description;
+const hubTitle = game.shortName ?? game.name;
 ---
 
 <BaseLayout title={`${game.name} — ${title}`} description={pageDescription} ambient="game">
   <Sidebar
-    title={game.name}
+    title={hubTitle}
     items={navItems}
     backHref="/"
     backLabel="All games"
@@ -32,7 +33,7 @@ const pageDescription = description ?? game.description;
     </div>
   </Sidebar>
 
-  <MobileNav items={navItems} title={game.name} />
+  <MobileNav items={navItems} title={hubTitle} />
 
   <div class="lg:pl-64 bg-page min-h-screen transition-colors duration-300">
     <main class="min-h-[60vh]">

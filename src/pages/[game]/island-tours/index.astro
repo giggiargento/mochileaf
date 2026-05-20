@@ -1,0 +1,39 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import ContentGrid from '../../../components/game/ContentGrid.astro';
+import IslandTourCard from '../../../components/game/IslandTourCard.astro';
+import { games } from '../../../data/games';
+import { getIslandToursByGame } from '../../../data/island-tours-acnh';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active' && getIslandToursByGame(g.slug).length > 0)
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const tours = getIslandToursByGame(game.slug);
+---
+
+<GameHubLayout
+  game={game}
+  title="Island tours"
+  description={`YouTube island tours for ${game.name} inspiration.`}
+>
+  <PageHeader
+    title="Island tours"
+    description="Cozy YouTube walks through themed islands — opens on YouTube in a new tab. Save layouts you love for your own build sessions."
+  />
+  <div class="page-container-below-header">
+    <ContentGrid columns={2}>
+      {tours.map((tour) => (
+        <IslandTourCard tour={tour} />
+      ))}
+    </ContentGrid>
+    <p class="prose-cozy mx-auto mt-12 max-w-2xl text-center text-sm text-muted">
+      Videos are third-party content. Channels and tours may update or move — search YouTube for
+      “ACNH island tour” anytime for fresh ideas.
+    </p>
+  </div>
+</GameHubLayout>

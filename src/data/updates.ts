@@ -2,17 +2,19 @@ import type { Update } from '../types';
 
 export const updates: Update[] = [
   {
-    id: '1',
-    title: 'Whisperwood Patch 1.4 — Evening Ambience',
-    gameSlug: 'whisperwood',
-    date: '2026-05-08',
-    type: 'patch',
+    id: 'acnh-1',
+    title: 'ACNH hub — villagers, homes, items, and island tours',
+    gameSlug: 'animal-crossing-new-horizons',
+    articleSlug: 'acnh-hub-welcome',
+    date: '2026-05-19',
+    type: 'content',
   },
   {
-    id: '2',
-    title: 'New guide: Moonlit Tides shore map',
-    gameSlug: 'moonlit-tides',
-    date: '2026-05-03',
+    id: 'nte-1',
+    title: 'NTE hub is live — characters, teams, and starter guides',
+    gameSlug: 'neverness-to-everness',
+    articleSlug: 'nte-launch-welcome',
+    date: '2026-05-19',
     type: 'content',
   },
   {

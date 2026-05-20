@@ -128,9 +128,23 @@ Trademarks belong to their respective owners. This site is unofficial.
   fs.writeFileSync(path.join(base, 'ATTRIBUTION.txt'), attribution, 'utf8');
 }
 
+async function syncNevernessToEverness() {
+  const { syncNevernessToEverness: syncNte } = await import('./sync-nte-images.mjs');
+  await syncNte();
+}
+
+async function syncAnimalCrossingNewHorizons() {
+  const { syncAnimalCrossingNewHorizons: syncAcnh } = await import('./sync-acnh-images.mjs');
+  await syncAcnh();
+}
+
 async function main() {
   console.log('Syncing game images…\n');
   await syncStardewValley();
+  console.log('');
+  await syncNevernessToEverness();
+  console.log('');
+  await syncAnimalCrossingNewHorizons();
   console.log('\nDone. Files under public/images/games/');
 }
 

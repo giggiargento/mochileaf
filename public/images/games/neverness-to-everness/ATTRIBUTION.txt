@@ -1,0 +1,10 @@
+Neverness to Everness — Mochileaf fan site cache
+
+Character portraits (characters/*.webp)
+  Public paths on nteguide.com — unofficial fan reference.
+
+Hub images (cover.jpg, header.jpg, card.jpg)
+  Key art / icon from neverness.gg (DotGG fan wiki), or nteguide.com og fallback.
+  Game © Hotta Studio / Level Infinite. This hub is unofficial.
+
+Replace or remove assets if requested by rights holders.

@@ -3,9 +3,10 @@ import type { TierEntry } from '../../types';
 
 interface Props {
   entry: TierEntry;
+  gameSlug?: string;
 }
 
-const { entry } = Astro.props;
+const { entry, gameSlug } = Astro.props;
 
 const tierColors: Record<TierEntry['tier'], string> = {
   S: 'bg-sage-200 text-sage-600 dark:bg-sage-600/30 dark:text-sage-200',
@@ -17,14 +18,32 @@ const tierColors: Record<TierEntry['tier'], string> = {
 ---
 
 <div class="cozy-card flex flex-col sm:flex-row gap-4 p-5">
-  <div class:list={['flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-display text-xl font-bold', tierColors[entry.tier]]}>
+  <div
+    class:list={[
+      'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl font-display text-xl font-bold',
+      tierColors[entry.tier],
+    ]}
+  >
     {entry.tier}
   </div>
   <div class="flex flex-wrap gap-2 items-center">
-    {entry.characters.map((name) => (
-      <span class="rounded-[var(--radius-pill)] bg-muted px-4 py-2 text-sm font-medium text-secondary">
-        {name}
-      </span>
-    ))}
+    {
+      entry.members.map((member) => {
+        const href =
+          gameSlug && member.slug ? `/${gameSlug}/characters/${member.slug}` : undefined;
+        return href ? (
+          <a
+            href={href}
+            class="rounded-[var(--radius-pill)] bg-muted px-4 py-2 text-sm font-medium text-secondary transition-colors hover:bg-sage-100 hover:text-accent dark:hover:bg-sage-600/20"
+          >
+            {member.label}
+          </a>
+        ) : (
+          <span class="rounded-[var(--radius-pill)] bg-muted px-4 py-2 text-sm font-medium text-secondary">
+            {member.label}
+          </span>
+        );
+      })
+    }
   </div>
 </div>

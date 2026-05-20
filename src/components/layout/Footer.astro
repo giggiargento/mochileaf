@@ -1,6 +1,7 @@
 ---
 import Logo from './Logo.astro';
 import { getFeaturedGames } from '../../data/games';
+import { getGameDisplayName } from '../../utils/game-display';
 
 const featuredGames = getFeaturedGames();
 ---
@@ -37,7 +38,7 @@ const featuredGames = getFeaturedGames();
             featuredGames.map((game) => (
               <li>
                 <a href={`/${game.slug}`} class="cozy-link">
-                  {game.name} guides &amp; wiki
+                  {getGameDisplayName(game, 'short')} guides &amp; wiki
                 </a>
               </li>
             ))

@@ -2,13 +2,15 @@ import type { Game } from '../types';
 
 export const games: Game[] = [
   {
-    slug: 'whisperwood',
-    name: 'Whisperwood',
-    tagline: 'A gentle adventure through misty forests',
+    slug: 'animal-crossing-new-horizons',
+    name: 'Animal Crossing: New Horizons',
+    shortName: 'ACNH',
+    tagline: 'Island life, villager neighbors, and dreamy tours',
     description:
-      'Explore lantern-lit groves, befriend woodland spirits, and uncover stories woven into every leaf.',
-    accent: 'sage',
-    coverGradient: 'from-sage-200/80 via-mist-100 to-cream-50',
+      'Meet popular villagers, peek at their default homes, bookmark handy items, and watch cozy island tours on YouTube — all at a calm pace.',
+    accent: 'blossom',
+    coverGradient: 'from-blossom-200/80 via-mist-100 to-cream-50',
+    coverImage: '/images/games/animal-crossing-new-horizons/cover.jpg',
     featured: true,
     status: 'active',
   },
@@ -25,13 +27,15 @@ export const games: Game[] = [
     status: 'active',
   },
   {
-    slug: 'moonlit-tides',
-    name: 'Moonlit Tides',
-    tagline: 'Serene sailing on bioluminescent seas',
+    slug: 'neverness-to-everness',
+    name: 'Neverness to Everness',
+    shortName: 'NTE',
+    tagline: 'Urban fantasy action — teams, elements, and calm meta notes',
     description:
-      'Chart quiet shores, collect sea glass memories, and listen to the ocean hum lullabies.',
-    accent: 'mist',
-    coverGradient: 'from-mist-200/80 via-lavender-100 to-cream-50',
+      'Fan hub for NTE: S-rank roster, gentle tier list, team comps, and starter guides — cozy pacing, no spreadsheet panic.',
+    accent: 'lavender',
+    coverGradient: 'from-lavender-200/80 via-mist-100 to-cream-50',
+    coverImage: '/images/games/neverness-to-everness/cover.jpg',
     featured: true,
     status: 'active',
   },

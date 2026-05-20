@@ -9,6 +9,46 @@
       "source": "/stardew-haven/:path*",
       "destination": "/stardew-valley/:path*",
       "permanent": true
+    },
+    {
+      "source": "/nte",
+      "destination": "/neverness-to-everness",
+      "permanent": true
+    },
+    {
+      "source": "/nte/:path*",
+      "destination": "/neverness-to-everness/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/acnh",
+      "destination": "/animal-crossing-new-horizons",
+      "permanent": true
+    },
+    {
+      "source": "/acnh/:path*",
+      "destination": "/animal-crossing-new-horizons/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/whisperwood",
+      "destination": "/games",
+      "permanent": true
+    },
+    {
+      "source": "/whisperwood/:path*",
+      "destination": "/games",
+      "permanent": true
+    },
+    {
+      "source": "/moonlit-tides",
+      "destination": "/games",
+      "permanent": true
+    },
+    {
+      "source": "/moonlit-tides/:path*",
+      "destination": "/games",
+      "permanent": true
     }
   ]
 }
