@@ -2,9 +2,10 @@
 interface Props {
   variant?: 'default' | 'sage' | 'blossom' | 'mist' | 'lavender' | 'honey';
   size?: 'sm' | 'md';
+  class?: string;
 }
 
-const { variant = 'default', size = 'sm' } = Astro.props;
+const { variant = 'default', size = 'sm', class: className } = Astro.props;
 
 const variants = {
   default: 'badge-default',
@@ -21,6 +22,6 @@ const sizes = {
 };
 ---
 
-<span class:list={['badge', variants[variant], sizes[size]]}>
+<span class:list={['badge', variants[variant], sizes[size], className]}>
   <slot />
 </span>

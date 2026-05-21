@@ -6,6 +6,9 @@ import Icon from '../../../components/ui/Icon.astro';
 import { games } from '../../../data/games';
 import { characters, getCharacter } from '../../../data/characters';
 import { getHubCopy } from '../../../utils/game-hub';
+import DecorInspirationGallery from '../../../components/game/acnh/DecorInspirationGallery.astro';
+import { getAcnhDecorForCharacter } from '../../../data/character-decor-acnh';
+import { acnhPinterestBoards } from '../../../data/pinterest-boards-acnh';
 
 export function getStaticPaths() {
   return characters
@@ -24,19 +27,23 @@ export function getStaticPaths() {
 
 const { game, character } = Astro.props;
 const hubCopy = getHubCopy(game);
-const isStardew = game.slug === 'stardew-valley';
-const isNte = game.slug === 'neverness-to-everness';
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
+const hasHouseCard = isAcnh && Boolean(character.houseDescription);
 const portraitAlt = `${character.name} — ${character.role} in ${game.name}`;
 const listLabel = hubCopy.charactersTitle.toLowerCase();
+const characterDecor = isAcnh ? getAcnhDecorForCharacter(character.slug) : [];
+const characterPinterestBoard =
+  isAcnh && character.slug in acnhPinterestBoards
+    ? acnhPinterestBoards[character.slug as keyof typeof acnhPinterestBoards]
+    : undefined;
 ---
 
 <GameHubLayout game={game} title={character.name}>
-  <article class="page-container-below-header max-w-4xl">
+  <div class="page-container-below-header">
     <a href={`/${game.slug}/characters`} class="cozy-link text-sm font-medium">
       ← All {listLabel}
     </a>
-    <div class="mt-8 grid h-fit gap-8 md:grid-cols-2 md:items-start">
+    <div class="character-detail-grid mt-8">
       <div class="character-portrait-frame min-w-0">
         <div class="character-portrait-inner">
         {
@@ -58,20 +65,30 @@ const listLabel = hubCopy.charactersTitle.toLowerCase();
         }
         </div>
       </div>
-      <div class="min-w-0">
-        <div class="flex flex-wrap gap-2 mb-4">
-          {character.rarity && <Badge variant="blossom">{character.rarity}-rank</Badge>}
-          {character.tier && <Badge variant="sage">Tier {character.tier}</Badge>}
-          {character.personality && <Badge variant="mist">{character.personality}</Badge>}
-          {character.species && <Badge variant="lavender">{character.species}</Badge>}
-          {character.element && <Badge variant="mist">{character.element}</Badge>}
+      <div
+        class:list={[
+          'character-detail-panel min-w-0',
+          hasHouseCard && 'character-detail-panel--balanced',
+        ]}
+      >
+        <div class="character-detail-intro">
+          <div class="mb-4 flex flex-wrap gap-2">
+            {character.rarity && <Badge variant="blossom">{character.rarity}-rank</Badge>}
+            {character.tier && <Badge variant="sage">Tier {character.tier}</Badge>}
+            {character.personality && <Badge variant="mist">{character.personality}</Badge>}
+            {character.species && <Badge variant="lavender">{character.species}</Badge>}
+            {character.element && <Badge variant="mist">{character.element}</Badge>}
+          </div>
+          <h1 class="font-display text-4xl text-primary">{character.name}</h1>
+          <p class="mt-2 text-lg font-medium text-accent">{character.role}</p>
+          <p class="mt-6 prose-cozy">{character.description}</p>
         </div>
-        <h1 class="font-display text-4xl text-primary">{character.name}</h1>
-        <p class="mt-2 text-lg font-medium text-accent">{character.role}</p>
-        <p class="mt-6 prose-cozy">{character.description}</p>
         {
-          isAcnh && character.houseDescription && (
-            <section id="house" class="mt-10 scroll-mt-24 rounded-2xl border border-default bg-card p-6">
+          hasHouseCard && (
+            <section
+              id="house"
+              class="character-house-card scroll-mt-24 rounded-[var(--radius-card)] border border-default bg-card p-6"
+            >
               <h2 class="font-display text-xl text-primary">
                 {character.houseStyle ?? 'Home style'}
               </h2>
@@ -79,32 +96,41 @@ const listLabel = hubCopy.charactersTitle.toLowerCase();
             </section>
           )
         }
-        <div class="mt-8 flex flex-wrap gap-3">
-          {
-            isStardew ? (
-              <>
-                <Button href={`/${game.slug}/guides`}>Guides</Button>
-                <Button href={`/${game.slug}/mods`} variant="secondary">Mods</Button>
-              </>
-            ) : isNte ? (
-              <>
-                <Button href={`/${game.slug}/teams`}>Team comps</Button>
-                <Button href={`/${game.slug}/tier-list`} variant="secondary">Tier list</Button>
-              </>
-            ) : isAcnh ? (
-              <>
-                <Button href={`/${game.slug}/houses`}>All homes</Button>
-                <Button href={`/${game.slug}/island-tours`} variant="secondary">Island tours</Button>
-              </>
-            ) : (
-              <>
-                <Button href={`/${game.slug}/builds`}>View builds</Button>
-                <Button href={`/${game.slug}/tier-list`} variant="secondary">Tier list</Button>
-              </>
-            )
-          }
-        </div>
       </div>
     </div>
-  </article>
+    {
+      characterDecor.length > 0 && (
+        <section class="mt-16">
+          <h2 class="font-display text-2xl text-primary">
+            Decor inspiration for {character.name}
+          </h2>
+        <p class="mt-2 max-w-2xl text-sm text-secondary">
+          Moodboard pins curated for this villager — tap a photo for a preview, then open the pin on Pinterest if you like it.
+        </p>
+        <div class="mt-8">
+          <DecorInspirationGallery items={characterDecor} emptyBoardKey={character.slug in acnhPinterestBoards ? (character.slug as keyof typeof acnhPinterestBoards) : 'homes'} />
+        </div>
+        {
+          characterPinterestBoard && (
+            <div class="mt-10 flex flex-col items-center gap-3 text-center">
+              <p class="max-w-md text-sm text-muted">
+                Showing {characterDecor.length} ideas here — the full moodboard has more on Pinterest.
+              </p>
+              <Button
+                href={characterPinterestBoard}
+                variant="secondary"
+                size="lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name="arrow-square-out" size={18} />
+                See more on Pinterest
+              </Button>
+            </div>
+          )
+        }
+        </section>
+      )
+    }
+  </div>
 </GameHubLayout>

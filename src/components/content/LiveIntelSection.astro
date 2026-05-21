@@ -1,0 +1,68 @@
+---
+import type { LiveFeed } from '../../utils/live-content';
+import { getLiveUpdatedAt } from '../../utils/live-content';
+
+interface Props {
+  feeds: LiveFeed[];
+}
+
+const { feeds } = Astro.props;
+const updatedAt = getLiveUpdatedAt();
+
+if (feeds.length === 0) return null;
+
+const formattedDate = updatedAt
+  ? new Date(updatedAt).toLocaleString('en-US', {
+      dateStyle: 'medium',
+      timeStyle: 'short',
+    })
+  : null;
+---
+
+<section class="border-t border-default py-12" aria-labelledby="live-intel-heading">
+  <div class="page-container">
+    <h2 id="live-intel-heading" class="font-display text-2xl text-primary">
+      Live intel
+    </h2>
+    <p class="mt-2 max-w-2xl text-sm text-secondary">
+      Pulled from the web via search API — a cozy snapshot, not a wiki scrape. Review sources
+      before treating codes or meta as gospel.
+      {formattedDate && <span class="block mt-1 text-muted">Last refresh: {formattedDate}</span>}
+    </p>
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      {
+        feeds.map((feed) => (
+          <article class="cozy-card p-6">
+            <h3 class="font-display text-lg text-primary">{feed.label}</h3>
+            <p class="mt-3 text-sm text-secondary leading-relaxed">{feed.summary}</p>
+            {
+              feed.sources.length > 0 && (
+                <ul class="mt-4 space-y-2 border-t border-default pt-4">
+                  {feed.sources.map((source) => (
+                    <li>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="cozy-link text-sm font-medium"
+                      >
+                        {source.title}
+                      </a>
+                      {source.snippet && (
+                        <p class="mt-0.5 text-xs text-muted line-clamp-2">{source.snippet}</p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )
+            }
+          </article>
+        ))
+      }
+    </div>
+    <p class="mt-6 text-xs text-muted">
+      Refresh locally with <code class="text-sage-500">npm run content:refresh</code> (requires
+      <code class="text-sage-500">TAVILY_API_KEY</code> in <code class="text-sage-500">.env</code>).
+    </p>
+  </div>
+</section>

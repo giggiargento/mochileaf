@@ -20,48 +20,58 @@ const tierVariants: Record<string, 'sage' | 'mist' | 'lavender' | 'default'> = {
 const portraitAlt = `${character.name} — ${character.role}`;
 ---
 
-<a href={`/${gameSlug}/characters/${character.slug}`} class="cozy-card group block overflow-hidden">
-  <div class="relative aspect-[16/10] overflow-hidden">
-    {
-      character.image ? (
-        <img
-          src={character.image}
-          alt={portraitAlt}
-          width={460}
-          height={288}
-          class="pixel-portrait h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
-          loading="lazy"
-          decoding="async"
-        />
-      ) : (
-        <div
-          class="flex h-full w-full items-center justify-center bg-gradient-to-br from-sage-100 to-mist-100 dark:from-sage-600/25 dark:to-mist-300/15"
-          aria-hidden="true"
-        >
-          <Icon name="user-circle" size={48} weight="light" class="text-accent" />
-        </div>
-      )
-    }
-    <div
-      class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent"
-      aria-hidden="true"
-    />
-  </div>
-  <div class="p-6">
-    <div class="flex items-start justify-between gap-3">
-      <h3 class="font-display text-xl text-primary group-hover:text-accent transition-colors duration-300">
+<a
+  href={`/${gameSlug}/characters/${character.slug}`}
+  class="cozy-card group relative block p-5 sm:p-6"
+  data-astro-reload
+>
+  {
+    character.tier && (
+      <Badge
+        variant={tierVariants[character.tier]}
+        class="absolute top-5 right-5 z-10 sm:top-6 sm:right-6"
+      >
+        {character.tier}
+      </Badge>
+    )
+  }
+  <div
+    class:list={[
+      'flex items-center gap-4 sm:gap-5',
+      character.tier && 'pr-10 sm:pr-12',
+    ]}
+  >
+    <div class="character-card-avatar shrink-0">
+      {
+        character.image ? (
+          <img
+            src={character.image}
+            alt={portraitAlt}
+            width={96}
+            height={96}
+            class="character-card-avatar-img pixel-portrait"
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <div class="character-card-avatar-placeholder">
+            <Icon name="user-circle" size={40} weight="light" class="text-accent" />
+          </div>
+        )
+      }
+    </div>
+    <div class="min-w-0 flex-1 text-left">
+      <h3 class="font-display text-lg leading-tight text-primary transition-colors duration-300 group-hover:text-accent sm:text-xl">
         {character.name}
       </h3>
-      {character.tier && <Badge variant={tierVariants[character.tier]}>{character.tier}</Badge>}
+      <p class="mt-1 text-sm font-medium text-accent">{character.role}</p>
+      {
+        (character.personality || character.species || character.element) && (
+          <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-muted">
+            {[character.personality, character.species, character.element].filter(Boolean).join(' · ')}
+          </p>
+        )
+      }
     </div>
-    <p class="mt-2 text-sm font-medium text-accent">{character.role}</p>
-    {
-      (character.personality || character.species || character.element) && (
-        <p class="mt-1 text-xs font-medium uppercase tracking-wide text-muted">
-          {[character.personality, character.species, character.element].filter(Boolean).join(' · ')}
-        </p>
-      )
-    }
-    <p class="mt-2 text-sm text-secondary line-clamp-2">{character.description}</p>
   </div>
 </a>

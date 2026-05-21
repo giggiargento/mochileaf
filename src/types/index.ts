@@ -126,3 +126,15 @@ export interface NavItem {
   icon?: string;
   children?: NavItem[];
 }
+
+/** ACNH interior decor inspiration (local image + optional Pinterest source). */
+export interface DecorInspiration {
+  id: string;
+  title: string;
+  /** e.g. cottagecore, minimalist loft */
+  style?: string;
+  /** Path under public/, e.g. /images/games/.../inspiration/01.webp */
+  image: string;
+  /** Original pin URL for credit */
+  sourceUrl?: string;
+}

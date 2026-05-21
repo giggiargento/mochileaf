@@ -11,7 +11,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "sync:images": "node scripts/sync-game-images.mjs"
+    "sync:images": "node scripts/sync-game-images.mjs",
+    "content:refresh": "node scripts/refresh-live-content.mjs",
+    "inspiration:import": "node scripts/import-pinterest-board.mjs"
   },
   "dependencies": {
     "@phosphor-icons/web": "^2.1.2",

@@ -1,0 +1,40 @@
+---
+import type { DecorInspiration } from '../../../types';
+import Icon from '../../ui/Icon.astro';
+
+interface Props {
+  item: DecorInspiration;
+  masonry?: boolean;
+}
+
+const { item, masonry = true } = Astro.props;
+---
+
+<article class:list={[masonry && 'decor-masonry-item', 'group']}>
+  <button
+    type="button"
+    class="decor-masonry-tile cozy-card relative block w-full overflow-hidden text-left"
+    data-decor-preview
+    data-image={item.image}
+    data-title={item.title}
+    data-source-url={item.sourceUrl ?? ''}
+    aria-label={`Preview: ${item.title}`}
+  >
+    <img
+      src={item.image}
+      alt=""
+      width={360}
+      height={480}
+      class="decor-masonry-img"
+      loading="lazy"
+      decoding="async"
+    />
+    <span
+      class="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-center gap-1 bg-gradient-to-t from-black/55 to-transparent px-3 py-3 text-xs font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+      aria-hidden="true"
+    >
+      Preview
+      <Icon name="magnifying-glass-plus" size={14} />
+    </span>
+  </button>
+</article>

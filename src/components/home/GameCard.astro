@@ -1,6 +1,8 @@
 ---
 import type { Game } from '../../types';
+import { getGameCardAsset } from '../../data/game-assets';
 import { gameHeaderImagePath } from '../../utils/game-images';
+import CozyImage from '../ui/CozyImage.astro';
 import Badge from '../ui/Badge.astro';
 import Icon from '../ui/Icon.astro';
 
@@ -17,9 +19,9 @@ const accentVariants = {
   honey: 'honey' as const,
 };
 
-/** Override in games.ts, else `header.jpg` in the game folder when the hub has cover art. */
-const cardImage =
-  game.cardImage ?? (game.coverImage ? gameHeaderImagePath(game.slug) : undefined);
+const cardAsset = getGameCardAsset(game.slug);
+const legacyCardUrl =
+  game.cardImage ?? (game.coverImage && !cardAsset ? gameHeaderImagePath(game.slug) : undefined);
 const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
 ---
 
@@ -33,12 +35,26 @@ const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
 >
   <div class="game-card-media relative aspect-[16/10] overflow-hidden">
     {
-      cardImage ? (
+      cardAsset ? (
+        <div
+          class="h-full w-full origin-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
+        >
+          <CozyImage
+            src={cardAsset}
+            alt={cardAlt}
+            class="game-card-image h-full w-full object-cover"
+            widths={[400, 640, 960]}
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width={640}
+            height={400}
+          />
+        </div>
+      ) : legacyCardUrl ? (
         <div
           class="h-full w-full origin-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
         >
           <img
-            src={cardImage}
+            src={legacyCardUrl}
             alt={cardAlt}
             width={640}
             height={400}

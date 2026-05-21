@@ -1,7 +1,7 @@
 /**
  * Animal Crossing: New Horizons assets → public/images/games/animal-crossing-new-horizons/
  * Villagers: Fandom wiki og:image (Animal Crossing Wiki).
- * Hub: Wikipedia box art (ACNH is not on Steam — App 1091500 is Cyberpunk 2077).
+ * Hub banner/card: src/assets/games/animal-crossing-new-horizons/hub-hero.png (CozyImage) — not synced here.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,20 +12,23 @@ const BASE = path.join(ROOT, 'public', 'images', 'games', 'animal-crossing-new-h
 const VILLAGERS = path.join(BASE, 'villagers');
 const USER_AGENT = 'Mochileaf/1.0 (fan site; local asset sync)';
 
-/** Official retail box art (Wikimedia). */
+/**
+ * Hub banner: wide gameplay still (1920×1067) — box art is ~316px square and pixelates on the hero.
+ * Home card: 1280px box art (reads well at 16:10).
+ */
 const HUB_ART = {
   cover:
-    'https://upload.wikimedia.org/wikipedia/en/1/1f/Animal_Crossing_New_Horizons.jpg',
+    'https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Animal_Crossing_New_Horizons_Gameplay.jpg/1920px-Animal_Crossing_New_Horizons_Gameplay.jpg',
   header:
-    'https://upload.wikimedia.org/wikipedia/en/1/1f/Animal_Crossing_New_Horizons.jpg',
+    'https://upload.wikimedia.org/wikipedia/en/thumb/6/6c/Animal_Crossing_New_Horizons_Gameplay.jpg/1920px-Animal_Crossing_New_Horizons_Gameplay.jpg',
   card:
-    'https://upload.wikimedia.org/wikipedia/en/1/1f/Animal_Crossing_New_Horizons.jpg',
+    'https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Animal_Crossing_New_Horizons.jpg/1280px-Animal_Crossing_New_Horizons.jpg',
 };
 
 /** Direct CDN URLs when wiki fetch is blocked. */
 const FALLBACK_IMAGES = {
-  raymond:
-    'https://static.wikia.nocookie.net/animalcrossing/images/e/e4/Raymond_NH_Icon.png/revision/latest/scale-to-width-down/350?cb=20201008050131',
+  /** Fandom CDN often 404s; Nookipedia redirect is reliable. */
+  raymond: 'https://nookipedia.com/wiki/Special:Redirect/file/Raymond%20NH.png',
 };
 
 /** slug → Fandom wiki page title */
@@ -113,8 +116,9 @@ export async function syncAnimalCrossingNewHorizons() {
     path.join(BASE, 'ATTRIBUTION.txt'),
     `Animal Crossing: New Horizons — Mochileaf fan cache
 
-Villager portraits: Animal Crossing Wiki (Fandom) og:image URLs.
-Hub images: Wikipedia box art (fair use thumbnail on fan site).
+Villager portraits: Fandom og:image; Raymond uses Nookipedia file redirect.
+Hub banner/header: Wikipedia gameplay still (1920px wide).
+Hub card: Wikipedia box art (1280px).
 Animal Crossing © Nintendo. Unofficial fan site.
 `,
     'utf8',

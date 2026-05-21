@@ -1,9 +1,15 @@
 ---
 import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
-import HouseCard from '../../../components/game/acnh/HouseCard.astro';
+import DecorInspirationGallery from '../../../components/game/acnh/DecorInspirationGallery.astro';
+import Button from '../../../components/ui/Button.astro';
+import Icon from '../../../components/ui/Icon.astro';
 import { games } from '../../../data/games';
-import { acnhVillagers } from '../../../data/characters-acnh';
+import {
+  acnhDecorInspiration,
+  acnhPinterestBoardUrl,
+  getAcnhHomesGallery,
+} from '../../../data/decor-inspiration-acnh';
 
 export function getStaticPaths() {
   return games
@@ -12,21 +18,49 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
-const withHouses = acnhVillagers.filter((v) => v.houseDescription);
+const galleryItems = getAcnhHomesGallery();
+const hasMoreOnPinterest = acnhDecorInspiration.length > galleryItems.length;
 ---
 
 <GameHubLayout
   game={game}
-  title="Villager homes"
-  description={`Default home styles and interiors for popular ${game.shortName ?? 'ACNH'} villagers.`}
+  title="Homes"
+  description="Interior decor inspiration for Animal Crossing: New Horizons — cozy room ideas and moodboard layouts."
 >
   <PageHeader
-    title="Villager homes"
-    description="Exterior themes and default interior vibes — tap a card for full house notes on each villager’s profile."
+    title="Homes & decor inspiration"
+    description="A calm moodboard of interior ideas — cottage corners, minimalist studies, and soft lighting setups to bookmark before you open the catalog."
   />
-  <div class="page-container-below-header space-y-4">
-    {withHouses.map((villager) => (
-      <HouseCard villager={villager} gameSlug={game.slug} />
-    ))}
+  <div class="page-container-below-header">
+    <DecorInspirationGallery items={galleryItems} showEmptyHelp emptyBoardKey="homes" />
+    {
+      galleryItems.length > 0 && acnhPinterestBoardUrl && (
+        <div class="mt-10 flex flex-col items-center gap-3 text-center">
+          {
+            hasMoreOnPinterest && (
+              <p class="max-w-md text-sm text-muted">
+                Showing {galleryItems.length} ideas here — the full moodboard has more on Pinterest.
+              </p>
+            )
+          }
+          <Button
+            href={acnhPinterestBoardUrl}
+            variant="secondary"
+            size="lg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="arrow-square-out" size={18} />
+            See more on Pinterest
+          </Button>
+        </div>
+      )
+    }
+    <p class="mt-10 max-w-2xl text-sm text-muted">
+      Looking for each villager’s default interior notes?
+      <a href={`/${game.slug}/characters`} class="cozy-link">
+        Browse villagers →
+      </a>
+    </p>
   </div>
 </GameHubLayout>

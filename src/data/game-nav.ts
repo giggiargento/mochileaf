@@ -37,7 +37,6 @@ const navBySlug: Record<string, NavSection[]> = {
     { label: 'Home', path: '', icon: 'house' },
     { label: 'Characters', path: 'characters', icon: 'users' },
     { label: 'Teams', path: 'teams', icon: 'users-three' },
-    { label: 'Tier list', path: 'tier-list', icon: 'medal' },
     { label: 'Guides', path: 'guides', icon: 'book-open' },
     { label: 'News', path: 'news', icon: 'newspaper' },
     { label: 'Search', path: 'search', icon: 'magnifying-glass' },

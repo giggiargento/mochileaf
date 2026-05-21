@@ -32,7 +32,8 @@ const nteShortRedirects = {
   '/nte': { status: 301, destination: '/neverness-to-everness' },
   '/nte/characters': { status: 301, destination: '/neverness-to-everness/characters' },
   '/nte/teams': { status: 301, destination: '/neverness-to-everness/teams' },
-  '/nte/tier-list': { status: 301, destination: '/neverness-to-everness/tier-list' },
+  '/nte/tier-list': { status: 301, destination: '/neverness-to-everness' },
+  '/neverness-to-everness/tier-list': { status: 301, destination: '/neverness-to-everness' },
   '/nte/guides': { status: 301, destination: '/neverness-to-everness/guides' },
   '/nte/news': { status: 301, destination: '/neverness-to-everness/news' },
   '/nte/about': { status: 301, destination: '/neverness-to-everness/about' },
@@ -45,6 +46,12 @@ const acnhShortRedirects = {
   '/acnh/houses': { status: 301, destination: '/animal-crossing-new-horizons/houses' },
   '/acnh/items': { status: 301, destination: '/animal-crossing-new-horizons/items' },
   '/acnh/island-tours': { status: 301, destination: '/animal-crossing-new-horizons/island-tours' },
+  '/acnh/inspiration': { status: 301, destination: '/animal-crossing-new-horizons/houses' },
+  '/neverness-to-everness/inspiration': { status: 301, destination: '/animal-crossing-new-horizons/houses' },
+  '/animal-crossing-new-horizons/inspiration': {
+    status: 301,
+    destination: '/animal-crossing-new-horizons/houses',
+  },
   '/acnh/guides': { status: 301, destination: '/animal-crossing-new-horizons/guides' },
   '/acnh/about': { status: 301, destination: '/animal-crossing-new-horizons/about' },
 };

@@ -1,0 +1,101 @@
+---
+import type { DecorInspiration } from '../../../types';
+import DecorInspirationCard from './DecorInspirationCard.astro';
+import Icon from '../../ui/Icon.astro';
+import { acnhPinterestBoards } from '../../../data/pinterest-boards-acnh';
+
+interface Props {
+  items: DecorInspiration[];
+  showEmptyHelp?: boolean;
+  emptyBoardKey?: keyof typeof acnhPinterestBoards;
+}
+
+const { items, showEmptyHelp = false, emptyBoardKey = 'homes' } = Astro.props;
+const exampleBoard = acnhPinterestBoards[emptyBoardKey] ?? acnhPinterestBoards.homes;
+const galleryId = `decor-gallery-${emptyBoardKey}`;
+---
+
+{
+  items.length > 0 ? (
+    <div data-decor-gallery={galleryId}>
+      <div class="decor-masonry" role="list">
+        {items.map((item) => (
+          <DecorInspirationCard item={item} />
+        ))}
+      </div>
+
+      <dialog class="decor-lightbox" aria-labelledby="decor-lightbox-title">
+        <div class="decor-lightbox-shell" data-decor-lightbox-shell>
+          <button
+            type="button"
+            class="decor-lightbox-close"
+            data-decor-lightbox-close
+            aria-label="Close preview"
+          >
+            <Icon name="x" size={18} />
+          </button>
+
+          <figure class="decor-lightbox-frame">
+            <img
+              src=""
+              alt=""
+              class="decor-lightbox-img"
+              data-decor-lightbox-img
+            />
+          </figure>
+
+          <div class="decor-lightbox-meta">
+            <p
+              id="decor-lightbox-title"
+              class="decor-lightbox-title"
+              data-decor-lightbox-title
+            />
+            <a
+              href="#"
+              class="decor-lightbox-pinterest"
+              data-decor-lightbox-pinterest
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="arrow-square-out" size={14} />
+              Pinterest
+            </a>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  ) : (
+    showEmptyHelp && (
+      <div class="cozy-card max-w-2xl p-8 text-left">
+        <p class="text-sm text-secondary leading-relaxed">
+          Todavía no hay imágenes. Importá un tablero público de Pinterest:
+        </p>
+        <p class="mt-3 rounded-xl border border-default bg-muted/40 px-4 py-3 font-mono text-xs text-primary">
+          npm run inspiration:import -- homes &lt;link-del-tablero&gt;
+        </p>
+        <p class="mt-2 rounded-xl border border-default bg-muted/40 px-4 py-3 font-mono text-xs text-primary">
+          npm run inspiration:import -- character raymond &lt;link&gt;
+        </p>
+        <p class="mt-3 text-xs text-muted">
+          Tablero de ejemplo:
+          <a
+            href={exampleBoard}
+            class="cozy-link break-all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {exampleBoard}
+          </a>
+        </p>
+      </div>
+    )
+  )
+}
+
+{
+  items.length > 0 && (
+    <script>
+      import '../../../scripts/decor-lightbox.client.ts';
+    </script>
+  )
+}

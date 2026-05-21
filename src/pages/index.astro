@@ -19,7 +19,7 @@ const trendingArticles = getTrendingArticles().slice(0, 2);
 
 <GlobalLayout
   title="Mochileaf"
-  description="A warm, elegant cozy gaming platform — guides, builds, tier lists, and editorial stories for peaceful play."
+  description="A warm cozy gaming platform — game hubs, guides, and gentle stories for Animal Crossing, Stardew Valley, NTE, and more."
 >
   <Hero />
 
@@ -59,7 +59,7 @@ const trendingArticles = getTrendingArticles().slice(0, 2);
         />
         <div class="trending-stack">
           {trendingArticles.map((article) => (
-            <ArticleCard article={article} />
+            <ArticleCard article={article} compact />
           ))}
         </div>
       </div>

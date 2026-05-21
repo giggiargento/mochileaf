@@ -1,7 +1,6 @@
 /**
- * Game hub card image on home + /games.
- * Drop `public/images/games/{slug}/header.jpg` (16:10) and replace the file anytime —
- * no games.ts edit needed unless you override with `cardImage`.
+ * Legacy public URLs for game cards / banners.
+ * Prefer `src/assets/games/{slug}/` + `src/data/game-assets.ts` + `<CozyImage />` (WebP, responsive).
  */
 export function gameHeaderImagePath(slug: string): string {
   return `/images/games/${slug}/header.jpg`;

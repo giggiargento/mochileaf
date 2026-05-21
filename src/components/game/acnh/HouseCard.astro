@@ -13,6 +13,7 @@ const { villager, gameSlug } = Astro.props;
 <a
   href={`/${gameSlug}/characters/${villager.slug}#house`}
   class="cozy-card group flex flex-col overflow-hidden sm:flex-row"
+  data-astro-reload
 >
   {
     villager.image && (

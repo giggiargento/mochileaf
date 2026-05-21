@@ -14,7 +14,7 @@ const hubCopyBySlug: Record<string, HubCopy> = {
     charactersDescription:
       'Most searched neighbors plus more fan favorites — personality, species, and who to invite next.',
     featuredSectionTitle: 'Popular villagers',
-    primaryCta: { label: 'Villager homes', path: 'houses' },
+    primaryCta: { label: 'Decor inspiration', path: 'houses' },
     secondaryCta: { label: 'Island tours', path: 'island-tours' },
   },
   'neverness-to-everness': {

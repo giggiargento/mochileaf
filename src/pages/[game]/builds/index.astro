@@ -27,21 +27,21 @@ const isAcnh = game.slug === 'animal-crossing-new-horizons';
   <div class="page-container-below-header">
     {
       isStardew ? (
-        <div class="prose-cozy max-w-2xl mx-auto text-center py-16">
+        <div class="prose-cozy py-16">
           <p>
             Stardew Valley does not use character builds or loadouts. For PC enhancements, visit our
             <a href={`/${game.slug}/mods`} class="cozy-link">recommended mods</a> page instead.
           </p>
         </div>
       ) : isNte ? (
-        <div class="prose-cozy max-w-2xl mx-auto text-center py-16">
+        <div class="prose-cozy py-16">
           <p>
             Per-character weapon and Arc Disc builds are on the way. For now, browse recommended{' '}
             <a href={`/${game.slug}/teams`} class="cozy-link">team comps</a> and character profiles.
           </p>
         </div>
       ) : isAcnh ? (
-        <div class="prose-cozy max-w-2xl mx-auto text-center py-16">
+        <div class="prose-cozy py-16">
           <p>
             Animal Crossing hubs focus on villagers and decorating. Visit{' '}
             <a href={`/${game.slug}/characters`} class="cozy-link">villagers</a>,{' '}

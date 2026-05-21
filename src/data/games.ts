@@ -7,10 +7,9 @@ export const games: Game[] = [
     shortName: 'ACNH',
     tagline: 'Island life, villager neighbors, and dreamy tours',
     description:
-      'Meet popular villagers, peek at their default homes, bookmark handy items, and watch cozy island tours on YouTube — all at a calm pace.',
+      'Decor inspiration galleries, popular villagers, handy items, and cozy island tours — all at a calm pace.',
     accent: 'blossom',
     coverGradient: 'from-blossom-200/80 via-mist-100 to-cream-50',
-    coverImage: '/images/games/animal-crossing-new-horizons/cover.jpg',
     featured: true,
     status: 'active',
   },
@@ -32,7 +31,7 @@ export const games: Game[] = [
     shortName: 'NTE',
     tagline: 'Urban fantasy action — teams, elements, and calm meta notes',
     description:
-      'Fan hub for NTE: S-rank roster, gentle tier list, team comps, and starter guides — cozy pacing, no spreadsheet panic.',
+      'Fan hub for NTE: roster notes, team comps, and starter guides — cozy pacing, no spreadsheet panic.',
     accent: 'lavender',
     coverGradient: 'from-lavender-200/80 via-mist-100 to-cream-50',
     coverImage: '/images/games/neverness-to-everness/cover.jpg',

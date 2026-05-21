@@ -11,17 +11,28 @@ export function applyTheme(doc: Document = document): void {
   doc.documentElement.classList.toggle('dark', resolveDark());
 }
 
-function clearPortraitPreviewStyles(): void {
-  document
+function clearPortraitPreviewStyles(doc: Document = document): void {
+  doc
     .querySelectorAll('.character-portrait-inner, .character-portrait-img')
     .forEach((el) => {
       el.removeAttribute('style');
     });
 }
 
+function settleCharacterDetailLayout(doc: Document = document): void {
+  if (!doc.querySelector('.character-detail-grid')) return;
+  clearPortraitPreviewStyles(doc);
+  const panel = doc.querySelector<HTMLElement>('.character-detail-panel--balanced');
+  if (panel) void panel.offsetHeight;
+}
+
 function onNavigate(): void {
   applyTheme();
   clearPortraitPreviewStyles();
+  requestAnimationFrame(() => {
+    settleCharacterDetailLayout();
+    document.fonts?.ready.then(() => settleCharacterDetailLayout());
+  });
 }
 
 applyTheme();
@@ -37,6 +48,7 @@ document.addEventListener('click', (event) => {
 
 document.addEventListener('astro:before-swap', (event) => {
   applyTheme(event.newDocument);
+  clearPortraitPreviewStyles(event.newDocument);
 });
 
 document.addEventListener('astro:page-load', onNavigate);
