@@ -21,40 +21,40 @@ const showUnit = shouldRenderAdUnits() && hasManualAdUnit(slot);
 const unitAttrs = getAdUnitAttrs(slot);
 const adTest = isAdSenseTestMode();
 
-const sizeClasses = {
-  banner: 'min-h-[90px] md:min-h-[120px]',
-  sidebar: 'min-h-[250px] max-w-[300px] mx-auto',
-  inline: 'min-h-[90px] md:min-h-[120px]',
-  footer: 'min-h-[90px] md:min-h-[120px]',
-};
+const variantClass = slot === 'sidebar' ? 'ad-slot--sidebar' : 'ad-slot--horizontal';
 ---
 
 {
   showUnit && client && adSlot ? (
-    <aside class:list={['ad-slot', sizeClasses[slot]]} data-ad-slot={slot} aria-label={label}>
-      <ins
-        class="adsbygoogle"
-        style="display:block"
-        data-ad-client={client}
-        data-ad-slot={adSlot}
-        data-ad-format={unitAttrs.format}
-        data-full-width-responsive={unitAttrs.fullWidthResponsive ? 'true' : 'false'}
-        {...(adTest ? { 'data-adtest': 'on' } : {})}
-      />
+    <aside
+      class:list={['ad-slot', 'ad-slot-frame', variantClass]}
+      data-ad-slot={slot}
+      aria-label={label}
+    >
+      <p class="ad-slot-label">{label}</p>
+      <div class="ad-slot-inner">
+        <ins
+          class="adsbygoogle"
+          style="display:block"
+          data-ad-client={client}
+          data-ad-slot={adSlot}
+          data-ad-format={unitAttrs.format}
+          data-full-width-responsive={unitAttrs.fullWidthResponsive ? 'true' : 'false'}
+          {...(adTest ? { 'data-adtest': 'on' } : {})}
+        />
+      </div>
       <script is:inline>
         (function () {
           var el = document.currentScript && document.currentScript.previousElementSibling;
-          if (el) el.setAttribute('data-adsense-requested', 'true');
+          var ins = el && el.querySelector('.adsbygoogle');
+          if (ins) ins.setAttribute('data-adsense-requested', 'true');
           (adsbygoogle = window.adsbygoogle || []).push({});
         })();
       </script>
     </aside>
   ) : (
     <aside
-      class:list={[
-        'flex flex-col items-center justify-center rounded-[var(--radius-card)] border border-dashed border-default bg-muted/50 text-center',
-        sizeClasses[slot],
-      ]}
+      class:list={['ad-slot', 'ad-slot-frame', 'ad-slot--placeholder', variantClass]}
       data-ad-slot={slot}
       aria-label={label}
     >

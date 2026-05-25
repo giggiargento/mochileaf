@@ -72,5 +72,9 @@ export function getAdUnitAttrs(placement: AdPlacement): {
   format: string;
   fullWidthResponsive: boolean;
 } {
-  return { format: 'auto', fullWidthResponsive: true };
+  if (placement === 'sidebar') {
+    return { format: 'rectangle', fullWidthResponsive: false };
+  }
+  /* Horizontal banner — avoids auto sizing to ~280px tall empty blocks. */
+  return { format: 'horizontal', fullWidthResponsive: false };
 }

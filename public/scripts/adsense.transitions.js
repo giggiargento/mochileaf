@@ -34,5 +34,36 @@
     });
   }
 
-  document.addEventListener('astro:page-load', pushNewUnits);
+  function markFilledSlots() {
+    document.querySelectorAll('.ad-slot-frame').forEach(function (slot) {
+      if (slot.querySelector('.adsbygoogle iframe')) {
+        slot.classList.add('ad-slot--filled');
+      }
+    });
+  }
+
+  /** Hide empty ins height when Google returns no fill (400). */
+  function tidyUnfilledSlots() {
+    window.setTimeout(function () {
+      document.querySelectorAll('.ad-slot .adsbygoogle').forEach(function (ins) {
+        var slot = ins.closest('.ad-slot');
+        if (!slot) return;
+        if (ins.querySelector('iframe')) {
+          slot.classList.add('ad-slot--filled');
+          return;
+        }
+        ins.style.height = '0';
+        ins.style.minHeight = '0';
+      });
+    }, 5000);
+  }
+
+  function refresh() {
+    pushNewUnits();
+    markFilledSlots();
+    tidyUnfilledSlots();
+  }
+
+  document.addEventListener('astro:page-load', refresh);
+  refresh();
 })();
