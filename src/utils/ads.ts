@@ -32,8 +32,34 @@ export function isAdSenseConfigured(): boolean {
   return Boolean(getAdSenseClient() && getAdSlot('inline'));
 }
 
+/** Same numeric slot as inline — do not request as a rectangle (causes 400s). */
+function sidebarUsesDedicatedSlot(): boolean {
+  const sidebar = getAdSlot('sidebar');
+  const inline = getAdSlot('inline');
+  return Boolean(sidebar && inline && sidebar !== inline);
+}
+
 export function hasManualAdUnit(placement: AdPlacement): boolean {
-  return isAdSenseConfigured() && Boolean(getAdSlot(placement));
+  if (!isAdSenseConfigured() || !getAdSlot(placement)) return false;
+  if (placement === 'sidebar' && !sidebarUsesDedicatedSlot()) return false;
+  return true;
+}
+
+/** Allowed production hostnames (comma-separated in PUBLIC_ADSENSE_ALLOWED_HOSTS). */
+export function getAdSenseAllowedHosts(): string[] {
+  const raw =
+    import.meta.env.PUBLIC_ADSENSE_ALLOWED_HOSTS?.trim() ||
+    'mochileaf.com,www.mochileaf.com';
+  return raw.split(',').map((h) => h.trim()).filter(Boolean);
+}
+
+export function allowAdSenseOnLocalhost(): boolean {
+  return import.meta.env.PUBLIC_ADSENSE_ALLOW_LOCALHOST === 'true';
+}
+
+/** Render real units in build; skip in `astro dev` and on disallowed hosts (client). */
+export function shouldRenderAdUnits(): boolean {
+  return isAdSenseConfigured() && !import.meta.env.DEV;
 }
 
 /** ins attributes per layout — horizontal body vs square sidebar. */
@@ -41,8 +67,5 @@ export function getAdUnitAttrs(placement: AdPlacement): {
   format: string;
   fullWidthResponsive: boolean;
 } {
-  if (placement === 'sidebar') {
-    return { format: 'rectangle', fullWidthResponsive: false };
-  }
   return { format: 'auto', fullWidthResponsive: true };
 }

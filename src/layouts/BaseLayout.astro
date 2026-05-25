@@ -4,10 +4,17 @@ import { ClientRouter } from 'astro:transitions';
 import AmbientBackground from '../components/layout/AmbientBackground.astro';
 import { formatTitle, getDescription } from '../utils/seo';
 import { brandFavicon } from '../utils/brand';
-import { isAdSenseConfigured, getAdSenseClient } from '../utils/ads';
+import {
+  getAdSenseClient,
+  getAdSenseAllowedHosts,
+  allowAdSenseOnLocalhost,
+  shouldRenderAdUnits,
+} from '../utils/ads';
 
 const adSenseClient = getAdSenseClient();
-const adSenseEnabled = isAdSenseConfigured();
+const adSenseEnabled = shouldRenderAdUnits();
+const adSenseHosts = getAdSenseAllowedHosts().join(',');
+const adSenseAllowLocal = allowAdSenseOnLocalhost();
 
 interface Props {
   title: string;
@@ -21,7 +28,12 @@ const pageDescription = getDescription(description);
 ---
 
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  data-adsense-client={adSenseEnabled ? adSenseClient : undefined}
+  data-adsense-hosts={adSenseEnabled ? adSenseHosts : undefined}
+  data-adsense-allow-localhost={adSenseAllowLocal ? 'true' : undefined}
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,26 +76,10 @@ const pageDescription = getDescription(description);
         document.documentElement.classList.toggle('dark', d);
       })();
     </script>
-    {
-      adSenseEnabled && (
-        <script
-          is:inline
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adSenseClient}`}
-          crossorigin="anonymous"
-        />
-      )
-    }
     <script>
       import '../scripts/theme.client.ts';
     </script>
-    {
-      adSenseEnabled && (
-        <script>
-          import '../scripts/adsense.client.ts';
-        </script>
-      )
-    }
+    {adSenseEnabled && <script src="/scripts/adsense.boot.js" defer></script>}
     <slot name="head" />
   </head>
   <body class="min-h-screen">

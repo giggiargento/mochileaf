@@ -1,8 +1,6 @@
 ---
 import type { Game } from '../../types';
-import { getGameCardAsset } from '../../data/game-assets';
-import { gameHeaderImagePath } from '../../utils/game-images';
-import CozyImage from '../ui/CozyImage.astro';
+import { gameCardImagePath } from '../../utils/game-images';
 import Badge from '../ui/Badge.astro';
 import Icon from '../ui/Icon.astro';
 
@@ -19,14 +17,14 @@ const accentVariants = {
   honey: 'honey' as const,
 };
 
-const cardAsset = getGameCardAsset(game.slug);
-const legacyCardUrl =
-  game.cardImage ?? (game.coverImage && !cardAsset ? gameHeaderImagePath(game.slug) : undefined);
+const cardSrc = gameCardImagePath(game.slug);
 const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
+const hubHref = game.status === 'active' ? `/${game.slug}` : '/games';
 ---
 
 <a
-  href={game.status === 'active' ? `/${game.slug}` : '/games'}
+  href={hubHref}
+  data-astro-reload
   class:list={[
     'cozy-card group flex h-full flex-col overflow-hidden',
     game.status === 'coming-soon' && 'opacity-80 cursor-default',
@@ -35,26 +33,12 @@ const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
 >
   <div class="game-card-media relative aspect-[16/10] overflow-hidden">
     {
-      cardAsset ? (
-        <div
-          class="h-full w-full origin-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
-        >
-          <CozyImage
-            src={cardAsset}
-            alt={cardAlt}
-            class="game-card-image h-full w-full object-cover"
-            widths={[400, 640, 960]}
-            sizes="(max-width: 768px) 100vw, 33vw"
-            width={640}
-            height={400}
-          />
-        </div>
-      ) : legacyCardUrl ? (
+      cardSrc ? (
         <div
           class="h-full w-full origin-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
         >
           <img
-            src={legacyCardUrl}
+            src={cardSrc}
             alt={cardAlt}
             width={640}
             height={400}

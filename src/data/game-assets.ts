@@ -15,6 +15,7 @@ const gameAssets: Record<string, GameAssetSet> = {
     card: acnhHubHero,
   },
   'neverness-to-everness': {
+    cover: nteCardHero,
     card: nteCardHero,
   },
 };

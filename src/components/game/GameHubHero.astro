@@ -1,6 +1,7 @@
 ---
 import CozyImage from '../ui/CozyImage.astro';
 import { getGameCoverAsset } from '../../data/game-assets';
+import { gameHeaderImagePath } from '../../utils/game-images';
 import type { Game } from '../../types';
 
 interface Props {
@@ -9,8 +10,8 @@ interface Props {
 
 const { game } = Astro.props;
 const coverAsset = getGameCoverAsset(game.slug);
-const legacyCover = game.coverImage;
-const showCover = coverAsset ?? legacyCover;
+const publicCover = gameHeaderImagePath(game.slug) ?? game.coverImage;
+const showCover = coverAsset ?? publicCover;
 ---
 
 <div
@@ -34,9 +35,9 @@ const showCover = coverAsset ?? legacyCover;
     )
   }
   {
-    !coverAsset && legacyCover && (
+    !coverAsset && publicCover && (
       <img
-        src={legacyCover}
+        src={publicCover}
         alt=""
         class="absolute inset-0 h-full w-full object-cover object-bottom"
         loading="eager"

@@ -35,6 +35,7 @@ export const games: Game[] = [
     accent: 'lavender',
     coverGradient: 'from-lavender-200/80 via-mist-100 to-cream-50',
     coverImage: '/images/games/neverness-to-everness/cover.jpg',
+    cardImage: '/images/games/neverness-to-everness/card.jpg',
     featured: true,
     status: 'active',
   },

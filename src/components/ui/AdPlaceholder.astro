@@ -4,6 +4,7 @@ import {
   getAdSlot,
   getAdUnitAttrs,
   hasManualAdUnit,
+  shouldRenderAdUnits,
   type AdPlacement,
 } from '../../utils/ads';
 
@@ -15,7 +16,7 @@ interface Props {
 const { slot = 'inline', label = 'Advertisement' } = Astro.props;
 const client = getAdSenseClient();
 const adSlot = getAdSlot(slot);
-const showUnit = hasManualAdUnit(slot);
+const showUnit = shouldRenderAdUnits() && hasManualAdUnit(slot);
 const unitAttrs = getAdUnitAttrs(slot);
 
 const sizeClasses = {
@@ -37,7 +38,6 @@ const sizeClasses = {
         data-ad-format={unitAttrs.format}
         data-full-width-responsive={unitAttrs.fullWidthResponsive ? 'true' : 'false'}
       />
-      <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </aside>
   ) : (
     <aside
