@@ -40,34 +40,7 @@ function slugify(name) {
     .replace(/(^-|-$)/g, '');
 }
 
-/** Prefer 128px dodo.ac thumb instead of full-size icon PNG. */
-function pickImageUrl(imageCellHtml) {
-  const srcset = imageCellHtml.match(/srcset="([^"]+)"/)?.[1];
-  if (srcset) {
-    const candidates = srcset.split(',').map((part) => part.trim().split(/\s+/)[0]);
-    const thumb128 = candidates.find((url) => /\/128px-/.test(url));
-    if (thumb128) return thumb128;
-    const thumb64 = candidates.find((url) => /\/64px-/.test(url));
-    if (thumb64) return thumb64;
-    const full = [...candidates].reverse().find((url) => url && !url.includes('/thumb/'));
-    if (full) return toDodoThumb(full, 128) ?? full;
-  }
-  const direct = imageCellHtml.match(
-    /https:\/\/dodo\.ac\/np\/images\/[0-9a-f]\/[0-9a-f]+\/[^"'\s]+\.png/g,
-  );
-  if (direct?.[0]) return toDodoThumb(direct[0], 128) ?? direct[0];
-  const src = imageCellHtml.match(/src="(https:\/\/dodo\.ac\/[^"]+)"/)?.[1];
-  return src ? (toDodoThumb(src, 128) ?? src) : '';
-}
-
-function toDodoThumb(fullUrl, px = 128) {
-  if (!fullUrl?.includes('dodo.ac/np/images/') || fullUrl.includes('/thumb/')) return fullUrl;
-  const m = fullUrl.match(/dodo\.ac\/np\/images\/(.+)\/([^/]+\.png)$/i);
-  if (!m) return fullUrl;
-  return `https://dodo.ac/np/images/thumb/${m[1]}/${px}px-${m[2]}`;
-}
-
-/** @param {string} html */
+import { pickImageUrlFromWikiCell } from './lib/dodo-images.mjs';
 function parseTableRows(html) {
   const rows = [...html.matchAll(/<tr>([\s\S]*?)<\/tr>/g)].map((m) => m[1]);
   const items = [];
@@ -81,7 +54,7 @@ function parseTableRows(html) {
       stripHtml(cells[1]);
     if (!name) continue;
 
-    const image = pickImageUrl(cells[2]);
+    const image = pickImageUrlFromWikiCell(cells[2]);
     if (!image) continue;
 
     const buy = stripHtml(cells[3]);

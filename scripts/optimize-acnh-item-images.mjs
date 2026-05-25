@@ -1,11 +1,12 @@
 /**
- * Normalize ACNH item icons: 128px dodo thumbs (fast) or local WebP mirror (--local).
+ * Normalize ACNH item icons: repair URLs, optional 64px thumbs, optional local WebP (--local).
  * Run: npm run items:optimize-images
  *      npm run items:optimize-images -- --local
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { toFullDodoIcon, toDodoThumb } from './lib/dodo-images.mjs';
 import { fetchImageBuffer, mapPool, writeSquareWebp } from './lib/image-optimize.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -14,14 +15,8 @@ const ITEMS_DIR = path.join(ROOT, 'public', 'images', 'games', 'animal-crossing-
 const SIZE = 128;
 const CONCURRENCY = 10;
 const mirrorLocal = process.argv.includes('--local');
+const useThumbs = process.argv.includes('--thumbs');
 const force = process.argv.includes('--force');
-
-function toDodoThumb(fullUrl, px = 128) {
-  if (!fullUrl?.includes('dodo.ac/np/images/') || fullUrl.includes('/thumb/')) return fullUrl;
-  const m = fullUrl.match(/dodo\.ac\/np\/images\/(.+)\/([^/]+\.png)$/i);
-  if (!m) return fullUrl;
-  return `https://dodo.ac/np/images/thumb/${m[1]}/${px}px-${m[2]}`;
-}
 
 function publicPath(categoryId, slug) {
   return `/images/games/animal-crossing-new-horizons/items/${categoryId}/${slug}.webp`;
@@ -36,24 +31,30 @@ async function main() {
   /** @type {{ categoryId: string; item: object }[]} */
   const work = [];
 
-  let thumbsRewritten = 0;
+  let repaired = 0;
 
   for (const [categoryId, group] of Object.entries(catalog.categories)) {
     for (const item of group.items) {
-      if (item.image?.includes('dodo.ac/np/images/') && !item.image.includes('/thumb/')) {
-        item.image = toDodoThumb(item.image, 128);
-        thumbsRewritten++;
+      const before = item.image;
+      let next = toFullDodoIcon(before);
+      if (useThumbs && next.includes('dodo.ac/np/images/') && !next.includes('/thumb/')) {
+        next = toDodoThumb(next, 64);
       }
+      if (next !== before) repaired++;
+      item.image = next;
       work.push({ categoryId, item });
     }
   }
 
-  console.log(`Thumb URLs: ${thumbsRewritten} items now use 128px dodo.ac icons.`);
+  console.log(`Repaired/updated ${repaired} item image URLs.`);
 
   if (!mirrorLocal) {
-    catalog.imageCredit = 'Nookipedia / dodo.ac (128px thumbs)';
+    catalog.imageCredit = useThumbs
+      ? 'Nookipedia / dodo.ac (64px thumbs)'
+      : 'Nookipedia / dodo.ac';
     fs.writeFileSync(CATALOG_PATH, JSON.stringify(catalog));
-    console.log('Catalog updated. Run with --local to mirror WebP under public/.');
+    console.log('Catalog saved. Default uses full dodo.ac icons (reliable).');
+    console.log('Optional: --thumbs (64px) or --local (WebP mirror).');
     return;
   }
 
@@ -71,7 +72,7 @@ async function main() {
       return;
     }
 
-    const source = item.image;
+    const source = toFullDodoIcon(item.image);
     if (!source?.startsWith('http')) {
       skipped++;
       return;
