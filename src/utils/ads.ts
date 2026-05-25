@@ -62,6 +62,11 @@ export function shouldRenderAdUnits(): boolean {
   return isAdSenseConfigured() && !import.meta.env.DEV;
 }
 
+/** Shows Google test ads (use only to verify markup while the account is new). */
+export function isAdSenseTestMode(): boolean {
+  return import.meta.env.PUBLIC_ADSENSE_TEST === 'true';
+}
+
 /** ins attributes per layout — horizontal body vs square sidebar. */
 export function getAdUnitAttrs(placement: AdPlacement): {
   format: string;

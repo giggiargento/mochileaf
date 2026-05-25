@@ -79,7 +79,17 @@ const pageDescription = getDescription(description);
     <script>
       import '../scripts/theme.client.ts';
     </script>
-    {adSenseEnabled && <script src="/scripts/adsense.boot.js" defer></script>}
+    {
+      adSenseEnabled && adSenseClient && (
+        <script
+          is:inline
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adSenseClient}`}
+          crossorigin="anonymous"
+        />
+      )
+    }
+    {adSenseEnabled && <script src="/scripts/adsense.transitions.js" defer></script>}
     <slot name="head" />
   </head>
   <body class="min-h-screen">
