@@ -365,6 +365,32 @@ html.dark {
     overscroll-behavior: contain;
   }
 
+  /* Phosphor icons — mobile menu open/close (list ↔ x) */
+  .mobile-menu-btn [data-icon='close'] {
+    display: none;
+  }
+
+  .mobile-menu-btn[aria-expanded='true'] [data-icon='open'] {
+    display: none;
+  }
+
+  .mobile-menu-btn[aria-expanded='true'] [data-icon='close'] {
+    display: inline-block;
+  }
+
+  /* Phosphor icons — theme toggle (moon ↔ sun) */
+  .theme-toggle [data-icon='sun'] {
+    display: none;
+  }
+
+  html.dark .theme-toggle [data-icon='moon'] {
+    display: none;
+  }
+
+  html.dark .theme-toggle [data-icon='sun'] {
+    display: inline-block;
+  }
+
   @media (max-width: 1023px) {
     .nav-link-sub {
       min-height: 2.75rem;

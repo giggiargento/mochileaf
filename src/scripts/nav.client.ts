@@ -7,8 +7,6 @@ function closeMobileMenu() {
   menu.classList.add('hidden');
   btn.setAttribute('aria-expanded', 'false');
   btn.setAttribute('aria-label', 'Open menu');
-  btn.querySelector('.menu-open')?.classList.remove('hidden');
-  btn.querySelector('.menu-close')?.classList.add('hidden');
 }
 
 function toggleMobileMenu() {
@@ -19,8 +17,6 @@ function toggleMobileMenu() {
   const isOpen = menu.classList.toggle('hidden') === false;
   btn.setAttribute('aria-expanded', String(isOpen));
   btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-  btn.querySelector('.menu-open')?.classList.toggle('hidden', isOpen);
-  btn.querySelector('.menu-close')?.classList.toggle('hidden', !isOpen);
 }
 
 function onNavClick(event: Event) {

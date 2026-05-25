@@ -5,14 +5,23 @@ interface Props {
   weight?: 'light' | 'regular' | 'bold' | 'fill' | 'thin' | 'duotone';
   size?: number;
   class?: string;
+  /** Optional slot marker for CSS-driven show/hide (theme, mobile menu). */
+  'data-icon'?: string;
 }
 
-const { name, weight = 'light', size = 20, class: className = '' } = Astro.props;
+const {
+  name,
+  weight = 'light',
+  size = 20,
+  class: className = '',
+  'data-icon': dataIcon,
+} = Astro.props;
 const weightClass = weight === 'regular' ? 'ph' : `ph-${weight}`;
 ---
 
 <i
   class:list={[weightClass, `ph-${name}`, 'inline-block leading-none', className]}
   style={`font-size: ${size}px`}
+  data-icon={dataIcon}
   aria-hidden="true"
 ></i>
