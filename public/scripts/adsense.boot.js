@@ -1,6 +1,6 @@
 /**
  * AdSense bootstrap — plain script (no Astro data-astro-exec).
- * Skips localhost and non-allowed hosts to avoid doubleclick 400 noise in dev.
+ * The adsbygoogle.js tag in <head> must not have any custom data-* attributes.
  */
 (function () {
   var root = document.documentElement;
@@ -20,29 +20,43 @@
 
   if (!hostAllowed()) return;
 
-  var LIB = 'data-mochileaf-adsense-lib';
   var UNIT = 'data-adsense-requested';
+  var libSrc =
+    'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' +
+    encodeURIComponent(client);
+  var libPromise = null;
+
+  function findLibraryScript() {
+    var scripts = document.head.getElementsByTagName('script');
+    for (var i = 0; i < scripts.length; i++) {
+      if ((scripts[i].src || '') === libSrc) return scripts[i];
+    }
+    return null;
+  }
 
   function loadLibrary() {
-    return new Promise(function (resolve) {
-      var existing = document.querySelector('script[' + LIB + ']');
+    if (libPromise) return libPromise;
+    libPromise = new Promise(function (resolve) {
+      var existing = findLibraryScript();
       if (existing) {
-        if (existing.getAttribute('data-loaded') === 'true') resolve();
-        else existing.addEventListener('load', function () { resolve(); }, { once: true });
+        if (existing.readyState === 'complete' || existing.readyState === 'loaded') {
+          resolve();
+          return;
+        }
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', resolve, { once: true });
         return;
       }
+
       var s = document.createElement('script');
       s.async = true;
-      s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + encodeURIComponent(client);
+      s.src = libSrc;
       s.crossOrigin = 'anonymous';
-      s.setAttribute(LIB, 'true');
-      s.addEventListener('load', function () {
-        s.setAttribute('data-loaded', 'true');
-        resolve();
-      });
-      s.addEventListener('error', function () { resolve(); });
+      s.addEventListener('load', resolve, { once: true });
+      s.addEventListener('error', resolve, { once: true });
       document.head.appendChild(s);
     });
+    return libPromise;
   }
 
   function pushUnits(scope) {
@@ -56,9 +70,13 @@
   }
 
   function refresh() {
-    loadLibrary().then(function () { pushUnits(); });
+    loadLibrary().then(function () {
+      pushUnits();
+    });
   }
 
   refresh();
-  document.addEventListener('astro:page-load', function () { refresh(); });
+  document.addEventListener('astro:page-load', function () {
+    refresh();
+  });
 })();
