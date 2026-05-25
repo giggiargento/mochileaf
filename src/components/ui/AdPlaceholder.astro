@@ -1,5 +1,11 @@
 ---
-import { getAdSenseClient, getAdSlot, hasManualAdUnit, type AdPlacement } from '../../utils/ads';
+import {
+  getAdSenseClient,
+  getAdSlot,
+  getAdUnitAttrs,
+  hasManualAdUnit,
+  type AdPlacement,
+} from '../../utils/ads';
 
 interface Props {
   slot?: AdPlacement;
@@ -10,12 +16,13 @@ const { slot = 'inline', label = 'Advertisement' } = Astro.props;
 const client = getAdSenseClient();
 const adSlot = getAdSlot(slot);
 const showUnit = hasManualAdUnit(slot);
+const unitAttrs = getAdUnitAttrs(slot);
 
 const sizeClasses = {
   banner: 'min-h-[90px] md:min-h-[120px]',
-  sidebar: 'min-h-[250px]',
-  inline: 'min-h-[120px]',
-  footer: 'min-h-[90px]',
+  sidebar: 'min-h-[250px] max-w-[300px] mx-auto',
+  inline: 'min-h-[90px] md:min-h-[120px]',
+  footer: 'min-h-[90px] md:min-h-[120px]',
 };
 ---
 
@@ -27,8 +34,8 @@ const sizeClasses = {
         style="display:block"
         data-ad-client={client}
         data-ad-slot={adSlot}
-        data-ad-format="auto"
-        data-full-width-responsive="true"
+        data-ad-format={unitAttrs.format}
+        data-full-width-responsive={unitAttrs.fullWidthResponsive ? 'true' : 'false'}
       />
     </aside>
   ) : (
@@ -41,9 +48,7 @@ const sizeClasses = {
       aria-label={label}
     >
       <span class="text-xs font-medium uppercase tracking-widest text-muted">{label}</span>
-      <span class="mt-1 text-sm text-muted">
-        {client ? 'Set slot ID in .env to show ads here' : 'Ad space · AdSense ready'}
-      </span>
+      <span class="mt-1 text-sm text-muted">Ad space · AdSense ready</span>
     </aside>
   )
 }
