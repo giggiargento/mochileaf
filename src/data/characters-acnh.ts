@@ -172,6 +172,20 @@ export const acnhVillagers: Character[] = [
       'Sleepy cinnamon-roll energy. Pairs well with mossy paths and outdoor picnic spots.',
   },
   {
+    slug: 'bea',
+    name: 'Bea',
+    role: 'Normal dog',
+    personality: 'Normal',
+    species: 'Dog',
+    gameSlug,
+    image: img('bea'),
+    houseStyle: 'Neighborhood cafe',
+    houseDescription:
+      'Lecture desks, soup kettles, and espresso corners — her interior reads like a cozy corner bakery and coffee stop.',
+    description:
+      'Friendly beagle energy with a nature hobby. Cottagecore yards and grandma-core picnic nooks suit her perfectly.',
+  },
+  {
     slug: 'audie',
     name: 'Audie',
     role: 'Peppy wolf',
@@ -203,9 +217,9 @@ export const acnhVillagers: Character[] = [
   {
     slug: 'maple',
     name: 'Maple',
-    role: 'Normal cub',
+    role: 'Normal bear cub',
     personality: 'Normal',
-    species: 'Cub',
+    species: 'Bear cub',
     gameSlug,
     image: img('maple'),
     houseStyle: 'Warm woodland',
@@ -213,6 +227,20 @@ export const acnhVillagers: Character[] = [
       'Wooden block furniture and a quilted calm — simple, soft, and very autumn.',
     description:
       'Gentle normal cub who fits cottage and pumpkin-patch seasons without trying.',
+  },
+  {
+    slug: 'fauna',
+    name: 'Fauna',
+    role: 'Normal deer',
+    personality: 'Normal',
+    species: 'Deer',
+    gameSlug,
+    image: img('fauna'),
+    houseStyle: 'Forest cottage',
+    houseDescription:
+      'Classic wooden pieces with soft lighting and plants — a woodland cabin that feels lived-in and calm.',
+    description:
+      'The cottagecore deer everyone recognizes. Sweet dialogue and forest yards that photograph beautifully in every season.',
   },
   {
     slug: 'coco',
@@ -273,9 +301,9 @@ export const acnhVillagers: Character[] = [
   {
     slug: 'lolly',
     name: 'Lolly',
-    role: 'Normal dog',
+    role: 'Normal cat',
     personality: 'Normal',
-    species: 'Dog',
+    species: 'Cat',
     gameSlug,
     image: img('lolly'),
     houseStyle: 'Book nook',
@@ -300,12 +328,7 @@ export const acnhVillagers: Character[] = [
   },
 ];
 
-export function getPopularAcnhVillagers(): Character[] {
-  return [...acnhVillagers]
-    .filter((v) => v.popularRank != null)
-    .sort((a, b) => (a.popularRank ?? 99) - (b.popularRank ?? 99));
-}
-
-export function getOtherAcnhVillagers(): Character[] {
-  return acnhVillagers.filter((v) => v.popularRank == null);
+/** All ACNH villagers for the directory — alphabetical by name. */
+export function getAcnhVillagers(): Character[] {
+  return [...acnhVillagers].sort((a, b) => a.name.localeCompare(b.name, 'en'));
 }

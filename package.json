@@ -13,7 +13,8 @@
     "astro": "astro",
     "sync:images": "node scripts/sync-game-images.mjs",
     "content:refresh": "node scripts/refresh-live-content.mjs",
-    "inspiration:import": "node scripts/import-pinterest-board.mjs"
+    "inspiration:import": "node scripts/import-pinterest-board.mjs",
+    "items:import": "node scripts/import-acnh-items.mjs"
   },
   "dependencies": {
     "@phosphor-icons/web": "^2.1.2",

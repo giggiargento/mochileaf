@@ -1,35 +1,30 @@
 ---
 import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
-import ContentGrid from '../../../components/game/ContentGrid.astro';
-import ItemCard from '../../../components/game/ItemCard.astro';
+import ItemDirectory from '../../../components/game/acnh/ItemDirectory.astro';
 import { games } from '../../../data/games';
-import { getItemsByGame } from '../../../data/items-acnh';
+import { hasAcnhItems } from '../../../data/items-acnh';
 
 export function getStaticPaths() {
   return games
-    .filter((g) => g.status === 'active' && getItemsByGame(g.slug).length > 0)
+    .filter((g) => g.status === 'active' && hasAcnhItems(g.slug))
     .map((game) => ({ params: { game: game.slug }, props: { game } }));
 }
 
 const { game } = Astro.props;
-const items = getItemsByGame(game.slug);
+const isAcnh = game.slug === 'animal-crossing-new-horizons';
 ---
 
 <GameHubLayout
   game={game}
   title="Items"
-  description={`Useful tools, DIYs, and catalog favorites in ${game.name}.`}
+  description={`Browse furniture and interior items in ${game.name} — by type, with icons from Nookipedia.`}
 >
   <PageHeader
-    title="Items & DIYs"
-    description="Tools, furniture lines, and bell economy staples — what they are for and how to grab them without wiki overwhelm."
+    title="Items & decor"
+    description="Housewares, wallpaper, rugs, and more — grouped like Nookipedia. Search within each tab to find something fast."
   />
   <div class="page-container-below-header">
-    <ContentGrid columns={2}>
-      {items.map((item) => (
-        <ItemCard item={item} />
-      ))}
-    </ContentGrid>
+    {isAcnh && <ItemDirectory game={game} />}
   </div>
 </GameHubLayout>

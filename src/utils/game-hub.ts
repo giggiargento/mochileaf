@@ -12,7 +12,7 @@ const hubCopyBySlug: Record<string, HubCopy> = {
   'animal-crossing-new-horizons': {
     charactersTitle: 'Villagers',
     charactersDescription:
-      'Most searched neighbors plus more fan favorites — personality, species, and who to invite next.',
+      'Fan-favorite neighbors in one place — personality, species, home style, and decor moodboards.',
     featuredSectionTitle: 'Popular villagers',
     primaryCta: { label: 'Decor inspiration', path: 'houses' },
     secondaryCta: { label: 'Island tours', path: 'island-tours' },

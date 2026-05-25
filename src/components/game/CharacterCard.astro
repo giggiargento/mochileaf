@@ -17,6 +17,37 @@ const tierVariants: Record<string, 'sage' | 'mist' | 'lavender' | 'default'> = {
   C: 'default',
 };
 
+const cornerLabel = character.tier ?? character.personality;
+const cornerVariant = character.tier
+  ? tierVariants[character.tier]
+  : 'mist';
+
+/** ACNH: personality is the corner badge — subtitle is species only (e.g. Bear cub, not "Smug cat"). */
+const personalityInCorner = character.personality === cornerLabel;
+
+/** Animal label after personality in role ("Normal bear cub" → "bear cub") when it matches species. */
+function cardSpeciesLabel(): string | undefined {
+  if (!character.species) return undefined;
+  if (character.role) {
+    const tail = character.role.replace(/^\S+\s+/, '').trim();
+    if (tail.length > character.species.length) return tail;
+  }
+  return character.species;
+}
+
+const accentLine =
+  personalityInCorner && cardSpeciesLabel() ? cardSpeciesLabel() : character.role;
+
+const sublineParts = personalityInCorner
+  ? []
+  : [
+      ...(character.personality && character.personality !== cornerLabel
+        ? [character.personality]
+        : []),
+      ...(character.species ? [character.species] : []),
+      ...(character.element ? [character.element] : []),
+    ];
+
 const portraitAlt = `${character.name} — ${character.role}`;
 ---
 
@@ -26,19 +57,19 @@ const portraitAlt = `${character.name} — ${character.role}`;
   data-astro-reload
 >
   {
-    character.tier && (
+    cornerLabel && (
       <Badge
-        variant={tierVariants[character.tier]}
+        variant={cornerVariant}
         class="absolute top-5 right-5 z-10 sm:top-6 sm:right-6"
       >
-        {character.tier}
+        {cornerLabel}
       </Badge>
     )
   }
   <div
     class:list={[
       'flex items-center gap-4 sm:gap-5',
-      character.tier && 'pr-10 sm:pr-12',
+      cornerLabel && 'pr-10 sm:pr-12',
     ]}
   >
     <div class="character-card-avatar shrink-0">
@@ -64,11 +95,11 @@ const portraitAlt = `${character.name} — ${character.role}`;
       <h3 class="font-display text-lg leading-tight text-primary transition-colors duration-300 group-hover:text-accent sm:text-xl">
         {character.name}
       </h3>
-      <p class="mt-1 text-sm font-medium text-accent">{character.role}</p>
+      <p class="mt-1 text-sm font-medium text-accent">{accentLine}</p>
       {
-        (character.personality || character.species || character.element) && (
+        sublineParts.length > 0 && (
           <p class="mt-0.5 text-xs font-medium uppercase tracking-wide text-muted">
-            {[character.personality, character.species, character.element].filter(Boolean).join(' · ')}
+            {sublineParts.join(' · ')}
           </p>
         )
       }

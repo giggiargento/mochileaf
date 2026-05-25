@@ -1,48 +1,45 @@
 ---
-import type { GameItem } from '../../types';
-import Badge from '../ui/Badge.astro';
+import type { AcnhCatalogItem } from '../../data/items-acnh';
 
 interface Props {
-  item: GameItem;
+  item: AcnhCatalogItem;
+  compact?: boolean;
 }
 
-const { item } = Astro.props;
-
-const categoryLabels: Record<GameItem['category'], string> = {
-  tool: 'Tool',
-  furniture: 'Furniture',
-  diy: 'DIY',
-  clothing: 'Clothing',
-  recipe: 'Recipe',
-  other: 'Other',
-};
+const { item, compact = false } = Astro.props;
+const howToGet = item.source && item.source !== '—' ? item.source : undefined;
+const priceBits = [item.buy && `Buy: ${item.buy}`, item.sell && `Sell: ${item.sell}`]
+  .filter(Boolean)
+  .join(' · ');
+const titleAttr = [howToGet, priceBits].filter(Boolean).join(' — ');
 ---
 
-<article class="cozy-card overflow-hidden">
-  <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-mist-100 to-honey-100 dark:from-mist-300/15 dark:to-honey-300/10">
-    {
-      item.image ? (
-        <img
-          src={item.image}
-          alt=""
-          width={400}
-          height={300}
-          class="h-full w-full object-contain p-4"
-          loading="lazy"
-          decoding="async"
-        />
-      ) : null
-    }
+<article
+  class:list={['item-card', compact && 'item-card--compact', 'cozy-card']}
+  title={titleAttr || item.name}
+>
+  <div class="item-card__media">
+    <img
+      src={item.image}
+      alt=""
+      width={compact ? 64 : 96}
+      height={compact ? 64 : 96}
+      class="item-card__img"
+      loading="lazy"
+      decoding="async"
+    />
   </div>
-  <div class="p-6">
-    <Badge variant="mist" size="sm">
-      {categoryLabels[item.category]}
-    </Badge>
-    <h3 class="mt-3 font-display text-lg text-primary">{item.name}</h3>
-    <p class="mt-2 text-sm text-secondary">{item.summary}</p>
-    <p class="mt-3 text-xs text-muted">
-      <span class="font-semibold text-accent">How to get:</span>
-      {item.howToGet}
-    </p>
+  <div class="item-card__body">
+    <h3 class="item-card__name">{item.name}</h3>
+    {
+      !compact && howToGet && (
+        <p class="item-card__meta">
+          <span class="font-semibold text-accent">From:</span> {howToGet}
+        </p>
+      )
+    }
+    {
+      !compact && priceBits && <p class="item-card__price">{priceBits}</p>
+    }
   </div>
 </article>

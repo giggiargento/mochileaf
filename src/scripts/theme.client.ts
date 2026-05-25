@@ -3,8 +3,7 @@ const THEME_KEY = 'mochileaf-theme';
 export function resolveDark(): boolean {
   const stored = localStorage.getItem(THEME_KEY);
   if (stored === 'dark') return true;
-  if (stored === 'light') return false;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  return false;
 }
 
 export function applyTheme(doc: Document = document): void {
