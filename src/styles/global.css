@@ -293,10 +293,31 @@ html.dark {
     transition: transform 0.2s ease-out;
   }
 
-  .nav-group:hover .nav-group-caret,
-  .nav-group:focus-within .nav-group-caret,
+  .nav-group-row .nav-link {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .nav-group-toggle {
+    @apply flex shrink-0 items-center justify-center rounded-xl border border-transparent px-2.5 transition-colors duration-300;
+    color: var(--text-muted);
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+  }
+
+  .nav-group-toggle:hover {
+    background-color: var(--nav-hover-bg);
+    color: var(--text-primary);
+  }
+
   .nav-group-open .nav-group-caret {
     transform: rotate(180deg);
+  }
+
+  @media (hover: hover) {
+    .nav-group:hover .nav-group-caret {
+      transform: rotate(180deg);
+    }
   }
 
   .nav-sublist {
@@ -317,17 +338,37 @@ html.dark {
       margin-top 0.2s ease-out;
   }
 
-  .nav-group:hover .nav-sublist-collapsible,
-  .nav-group:focus-within .nav-sublist-collapsible,
+  @media (hover: hover) {
+    .nav-group:hover .nav-sublist-collapsible,
+    .nav-group:focus-within .nav-sublist-collapsible {
+      max-height: 24rem;
+      margin-top: 0.25rem;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
   .nav-group-open .nav-sublist-collapsible {
-    max-height: 12rem;
+    max-height: 24rem;
     margin-top: 0.25rem;
     opacity: 1;
     pointer-events: auto;
   }
 
   .nav-link-sub {
-    @apply gap-2 py-2 pl-3 pr-3 text-xs font-medium;
+    @apply gap-2 py-2.5 pl-3 pr-3 text-sm font-medium;
+  }
+
+  .mobile-menu-panel {
+    max-height: min(70vh, calc(100dvh - 4rem));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  @media (max-width: 1023px) {
+    .nav-link-sub {
+      min-height: 2.75rem;
+    }
   }
 
   /* In-game pixel portraits (Stardew Valley, etc.) */

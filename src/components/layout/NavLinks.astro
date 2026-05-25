@@ -30,25 +30,34 @@ const bestMatch = findBestNavMatch(items, path);
         <li
           class:list={['nav-group', hasChildren && parentActive && 'nav-group-open']}
         >
-          <a
-            href={item.href}
-            class:list={['nav-link', parentActive && 'nav-link-active']}
-            aria-current={!hasChildren && parentActive ? 'page' : undefined}
-            aria-expanded={hasChildren ? parentActive : undefined}
-          >
-            {item.icon && <Icon name={item.icon} size={18} class="shrink-0 opacity-80" />}
-            <span class="flex-1">{item.label}</span>
+          <div class="nav-group-row flex min-w-0 items-stretch">
+            <a
+              href={item.href}
+              class:list={['nav-link min-w-0 flex-1', parentActive && 'nav-link-active']}
+              aria-current={!hasChildren && parentActive ? 'page' : undefined}
+            >
+              {item.icon && <Icon name={item.icon} size={18} class="shrink-0 opacity-80" />}
+              <span class="flex-1">{item.label}</span>
+            </a>
             {
               hasChildren && (
-                <Icon
-                  name="caret-down"
-                  size={14}
-                  class="nav-group-caret shrink-0 opacity-60"
-                  aria-hidden="true"
-                />
+                <button
+                  type="button"
+                  class="nav-group-toggle"
+                  data-nav-toggle
+                  aria-expanded={parentActive ? 'true' : 'false'}
+                  aria-label={`${parentActive ? 'Hide' : 'Show'} ${item.label} submenu`}
+                >
+                  <Icon
+                    name="caret-down"
+                    size={14}
+                    class="nav-group-caret shrink-0 opacity-60"
+                    aria-hidden="true"
+                  />
+                </button>
               )
             }
-          </a>
+          </div>
           {
             hasChildren && (
               <ul

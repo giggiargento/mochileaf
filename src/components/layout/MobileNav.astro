@@ -9,10 +9,19 @@ import { normalizeNavPath } from '../../utils/navigation';
 interface Props {
   title?: string;
   items: NavItem[];
+  backHref?: string;
+  backLabel?: string;
 }
 
-const { title = 'Menu', items } = Astro.props;
+const {
+  title = 'Menu',
+  items,
+  backHref = '/',
+  backLabel = 'Back to home',
+} = Astro.props;
 const currentPath = normalizeNavPath(Astro.url.pathname);
+const backPath = normalizeNavPath(backHref);
+const showBackLink = backPath !== currentPath;
 ---
 
 <header class="sticky top-0 z-50 border-b border-default bg-nav backdrop-blur-md lg:hidden transition-colors duration-300">
@@ -36,25 +45,21 @@ const currentPath = normalizeNavPath(Astro.url.pathname);
 
   <nav
     id="mobile-menu"
-    class="hidden border-t border-default bg-nav px-4 py-4"
+    class="mobile-menu-panel hidden border-t border-default bg-nav px-4 py-4"
     aria-label={title}
   >
+    {
+      showBackLink && (
+        <a
+          href={backHref}
+          class="mb-4 inline-flex min-h-11 items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent"
+        >
+          <Icon name="arrow-left" size={16} />
+          {backLabel}
+        </a>
+      )
+    }
     <p class="mb-3 text-xs font-medium uppercase tracking-widest text-muted">{title}</p>
     <NavLinks items={items} currentPath={currentPath} />
   </nav>
 </header>
-
-<script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  const openIcon = btn?.querySelector('.menu-open');
-  const closeIcon = btn?.querySelector('.menu-close');
-
-  btn?.addEventListener('click', () => {
-    const isOpen = menu?.classList.toggle('hidden') === false;
-    btn.setAttribute('aria-expanded', String(isOpen));
-    btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-    openIcon?.classList.toggle('hidden', isOpen);
-    closeIcon?.classList.toggle('hidden', !isOpen);
-  });
-</script>
