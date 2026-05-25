@@ -26,3 +26,6 @@ pnpm-debug.log*
 .vercel
 
 scripts/.cache/
+
+# Generated ACNH item WebP cache (run npm run items:optimize-images after import)
+public/images/games/animal-crossing-new-horizons/items/

@@ -14,12 +14,17 @@
     "sync:images": "node scripts/sync-game-images.mjs",
     "content:refresh": "node scripts/refresh-live-content.mjs",
     "inspiration:import": "node scripts/import-pinterest-board.mjs",
-    "items:import": "node scripts/import-acnh-items.mjs"
+    "items:import": "node scripts/import-acnh-items.mjs",
+    "items:optimize-images": "node scripts/optimize-acnh-item-images.mjs",
+    "villagers:optimize-images": "node scripts/optimize-acnh-villagers.mjs"
   },
   "dependencies": {
     "@phosphor-icons/web": "^2.1.2",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.5",
     "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }

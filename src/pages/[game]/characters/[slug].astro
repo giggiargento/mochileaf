@@ -8,6 +8,7 @@ import { characters, getCharacter } from '../../../data/characters';
 import { getHubCopy } from '../../../utils/game-hub';
 import DecorInspirationGallery from '../../../components/game/acnh/DecorInspirationGallery.astro';
 import { getAcnhDecorForCharacter } from '../../../data/character-decor-acnh';
+import { villagerPortrait } from '../../../data/characters-acnh';
 import { acnhPinterestBoards } from '../../../data/pinterest-boards-acnh';
 
 export function getStaticPaths() {
@@ -36,6 +37,8 @@ const characterPinterestBoard =
   isAcnh && character.slug in acnhPinterestBoards
     ? acnhPinterestBoards[character.slug as keyof typeof acnhPinterestBoards]
     : undefined;
+const portraitSrc =
+  isAcnh && character.image ? villagerPortrait(character.slug, 256) : character.image;
 ---
 
 <GameHubLayout game={game} title={character.name}>
@@ -49,7 +52,7 @@ const characterPinterestBoard =
         {
           character.image ? (
             <img
-              src={character.image}
+              src={portraitSrc}
               alt={portraitAlt}
               width={320}
               height={400}

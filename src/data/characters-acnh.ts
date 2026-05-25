@@ -1,8 +1,12 @@
 import type { Character } from '../types';
 
 const gameSlug = 'animal-crossing-new-horizons';
-const img = (slug: string) =>
-  `/images/games/animal-crossing-new-horizons/villagers/${slug}.png`;
+
+/** Card/list size — run npm run villagers:optimize-images after sync. */
+export const villagerPortrait = (slug: string, size: 128 | 256 = 128) =>
+  `/images/games/${gameSlug}/villagers/${slug}-${size}.webp`;
+
+const img = (slug: string) => villagerPortrait(slug, 128);
 
 /** Popular + fan-favorite villagers for the ACNH hub. */
 export const acnhVillagers: Character[] = [

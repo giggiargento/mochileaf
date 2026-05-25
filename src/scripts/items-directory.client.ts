@@ -15,6 +15,8 @@ type CatalogCategories = Record<
   }
 >;
 
+const PAGE_SIZE = 72;
+
 function escapeHtml(text: string): string {
   return text
     .replace(/&/g, '&amp;')
@@ -49,9 +51,11 @@ function initDirectory(root: HTMLElement) {
   const defaultTab = root.dataset.defaultTab ?? 'housewares';
   let activeTab = defaultTab;
   let query = '';
+  let visibleCount = PAGE_SIZE;
 
   const searchInput = root.querySelector<HTMLInputElement>('.acnh-item-directory__search');
   const countEl = root.querySelector('[data-item-count]');
+  const paginationEl = root.querySelector('[data-item-pagination]');
   const tabButtons = [...root.querySelectorAll<HTMLButtonElement>('[data-tab]')];
   const panels = [...root.querySelectorAll<HTMLElement>('[data-tab-panel]')];
 
@@ -66,26 +70,63 @@ function initDirectory(root: HTMLElement) {
     return items.filter((item) => item.name.toLowerCase().includes(q));
   }
 
+  function renderPagination(total: number, shown: number) {
+    if (!paginationEl) return;
+
+    if (total === 0) {
+      paginationEl.innerHTML = '';
+      paginationEl.hidden = true;
+      return;
+    }
+
+  if (shown >= total) {
+      paginationEl.innerHTML =
+        total <= PAGE_SIZE
+          ? ''
+          : `<p class="acnh-item-pagination__done text-sm text-muted">Showing all ${total.toLocaleString()} items</p>`;
+      paginationEl.hidden = shown >= total && total <= PAGE_SIZE;
+      return;
+    }
+
+    paginationEl.hidden = false;
+    paginationEl.innerHTML = `<button type="button" class="acnh-item-pagination__more" data-load-more>
+      Load more <span class="text-muted">(${shown.toLocaleString()} of ${total.toLocaleString()})</span>
+    </button>`;
+
+    paginationEl.querySelector('[data-load-more]')?.addEventListener('click', () => {
+      visibleCount += PAGE_SIZE;
+      renderGrid();
+    });
+  }
+
   function renderGrid() {
     const panel = panels.find((p) => p.dataset.tabPanel === activeTab);
     const grid = panel?.querySelector('[data-item-grid]');
     if (!grid) return;
 
     const items = filteredItems();
-    grid.innerHTML = items.map(itemCardHtml).join('');
+    const total = items.length;
+    const slice = items.slice(0, visibleCount);
+    grid.innerHTML =
+      slice.length > 0
+        ? slice.map(itemCardHtml).join('')
+        : '<p class="col-span-full text-sm text-muted">No items match your search.</p>';
 
     if (countEl) {
       const label = catalog[activeTab]?.label ?? activeTab;
-      const total = itemsForTab(activeTab).length;
+      const tabTotal = itemsForTab(activeTab).length;
       countEl.textContent =
         query.trim() === ''
-          ? `${items.length.toLocaleString()} ${label.toLowerCase()}`
-          : `${items.length.toLocaleString()} of ${total.toLocaleString()} ${label.toLowerCase()}`;
+          ? `${Math.min(visibleCount, total).toLocaleString()} of ${tabTotal.toLocaleString()} ${label.toLowerCase()}`
+          : `${total.toLocaleString()} match · ${tabTotal.toLocaleString()} in tab`;
     }
+
+    renderPagination(total, slice.length);
   }
 
   function setActiveTab(tabId: string) {
     activeTab = tabId;
+    visibleCount = PAGE_SIZE;
     tabButtons.forEach((btn) => {
       const on = btn.dataset.tab === tabId;
       btn.classList.toggle('is-active', on);
@@ -109,6 +150,7 @@ function initDirectory(root: HTMLElement) {
 
   searchInput?.addEventListener('input', () => {
     query = searchInput.value;
+    visibleCount = PAGE_SIZE;
     renderGrid();
   });
 

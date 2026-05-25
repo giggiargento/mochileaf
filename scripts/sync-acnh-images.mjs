@@ -114,6 +114,17 @@ export async function syncAnimalCrossingNewHorizons() {
   await tryDl(HUB_ART.header, path.join(BASE, 'header.jpg'));
   await tryDl(HUB_ART.card, path.join(BASE, 'card.jpg'));
 
+  console.log('ACNH — villager WebP (128 + 256)…');
+  const { writeSquareWebp } = await import('./lib/image-optimize.mjs');
+  for (const slug of Object.keys(WIKI_NAMES)) {
+    const png = path.join(VILLAGERS, `${slug}.png`);
+    if (!fs.existsSync(png)) continue;
+    const buf = fs.readFileSync(png);
+    for (const size of [128, 256]) {
+      await writeSquareWebp(buf, path.join(VILLAGERS, `${slug}-${size}.webp`), size);
+    }
+  }
+
   fs.writeFileSync(
     path.join(BASE, 'ATTRIBUTION.txt'),
     `Animal Crossing: New Horizons — Mochileaf fan cache

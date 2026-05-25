@@ -950,6 +950,38 @@ html.dark {
   opacity: 0.75;
 }
 
+.acnh-item-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+}
+
+.acnh-item-pagination__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-default);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.acnh-item-pagination__more:hover {
+  border-color: var(--color-sage-300);
+  color: var(--text-accent);
+  transform: translateY(-1px);
+}
+
+.acnh-item-pagination__done {
+  margin: 0;
+  text-align: center;
+}
+
 .item-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(7.25rem, 1fr));
