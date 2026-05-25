@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "@phosphor-icons/web/light";
 @import "@phosphor-icons/web/regular";
 
 @theme {
@@ -365,30 +364,31 @@ html.dark {
     overscroll-behavior: contain;
   }
 
-  /* Phosphor icons — mobile menu open/close (list ↔ x) */
-  .mobile-menu-btn [data-icon='close'] {
-    display: none;
+  .icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    line-height: 0;
+    transition: color 0.2s ease-out, transform 0.2s ease-out;
   }
 
-  .mobile-menu-btn[aria-expanded='true'] [data-icon='open'] {
-    display: none;
+  .icon-btn:hover {
+    color: var(--text-accent);
   }
 
-  .mobile-menu-btn[aria-expanded='true'] [data-icon='close'] {
-    display: inline-block;
+  .icon-btn:focus-visible {
+    outline: 2px solid var(--color-sage-400);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
   }
 
-  /* Phosphor icons — theme toggle (moon ↔ sun) */
-  .theme-toggle [data-icon='sun'] {
-    display: none;
-  }
-
-  html.dark .theme-toggle [data-icon='moon'] {
-    display: none;
-  }
-
-  html.dark .theme-toggle [data-icon='sun'] {
-    display: inline-block;
+  .icon-btn:active {
+    transform: scale(0.94);
   }
 
   @media (max-width: 1023px) {

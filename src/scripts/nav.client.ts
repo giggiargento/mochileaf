@@ -1,4 +1,14 @@
 /** Mobile menu + collapsible nav groups (touch-friendly, survives View Transitions). */
+
+function syncMenuIcon() {
+  const btn = document.querySelector('#mobile-menu-btn');
+  const icon = btn?.querySelector('i');
+  if (!btn || !icon) return;
+  const open = btn.getAttribute('aria-expanded') === 'true';
+  icon.classList.remove('ph-list', 'ph-x');
+  icon.classList.add(open ? 'ph-x' : 'ph-list');
+}
+
 function closeMobileMenu() {
   const menu = document.querySelector('#mobile-menu');
   const btn = document.querySelector('#mobile-menu-btn');
@@ -7,6 +17,7 @@ function closeMobileMenu() {
   menu.classList.add('hidden');
   btn.setAttribute('aria-expanded', 'false');
   btn.setAttribute('aria-label', 'Open menu');
+  syncMenuIcon();
 }
 
 function toggleMobileMenu() {
@@ -17,6 +28,7 @@ function toggleMobileMenu() {
   const isOpen = menu.classList.toggle('hidden') === false;
   btn.setAttribute('aria-expanded', String(isOpen));
   btn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  syncMenuIcon();
 }
 
 function onNavClick(event: Event) {
