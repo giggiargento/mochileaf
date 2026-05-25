@@ -1,0 +1,3 @@
+# Copy to public/ads.txt and replace pub-XXXXXXXXXXXXXXXX with your AdSense publisher ID.
+# AdSense → Account → Account information → Publisher ID (without "ca-" prefix in some UIs — use full ca-pub-… in the line below as Google documents).
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

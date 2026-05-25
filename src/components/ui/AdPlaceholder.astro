@@ -1,10 +1,15 @@
 ---
+import { getAdSenseClient, getAdSlot, hasManualAdUnit, type AdPlacement } from '../../utils/ads';
+
 interface Props {
-  slot?: 'banner' | 'sidebar' | 'inline' | 'footer';
+  slot?: AdPlacement;
   label?: string;
 }
 
 const { slot = 'inline', label = 'Advertisement' } = Astro.props;
+const client = getAdSenseClient();
+const adSlot = getAdSlot(slot);
+const showUnit = hasManualAdUnit(slot);
 
 const sizeClasses = {
   banner: 'min-h-[90px] md:min-h-[120px]',
@@ -14,18 +19,31 @@ const sizeClasses = {
 };
 ---
 
-<aside
-  class:list={[
-    'flex flex-col items-center justify-center rounded-[var(--radius-card)] border border-dashed border-default bg-muted/50 text-center',
-    sizeClasses[slot],
-  ]}
-  data-ad-slot={slot}
-  aria-label={label}
->
-  <span class="text-xs font-medium uppercase tracking-widest text-muted">
-    {label}
-  </span>
-  <span class="mt-1 text-sm text-muted">
-    Ad space · AdSense ready
-  </span>
-</aside>
+{
+  showUnit && client && adSlot ? (
+    <aside class:list={['ad-slot', sizeClasses[slot]]} data-ad-slot={slot} aria-label={label}>
+      <ins
+        class="adsbygoogle block w-full"
+        style="display:block"
+        data-ad-client={client}
+        data-ad-slot={adSlot}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+    </aside>
+  ) : (
+    <aside
+      class:list={[
+        'flex flex-col items-center justify-center rounded-[var(--radius-card)] border border-dashed border-default bg-muted/50 text-center',
+        sizeClasses[slot],
+      ]}
+      data-ad-slot={slot}
+      aria-label={label}
+    >
+      <span class="text-xs font-medium uppercase tracking-widest text-muted">{label}</span>
+      <span class="mt-1 text-sm text-muted">
+        {client ? 'Set slot ID in .env to show ads here' : 'Ad space · AdSense ready'}
+      </span>
+    </aside>
+  )
+}
