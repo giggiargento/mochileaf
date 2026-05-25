@@ -1,17 +1,14 @@
-/** Request ad fill after Astro client navigations (View Transitions). */
-function pushAdSense() {
-  try {
-    const w = window as Window & { adsbygoogle?: unknown[] };
-    w.adsbygoogle = w.adsbygoogle || [];
-    w.adsbygoogle.push({});
-  } catch {
-    /* AdSense throws if a slot was already filled — safe to ignore. */
-  }
+/** One push per ad unit (required by AdSense). Safe before the library loads — uses the queue pattern. */
+function pushEachAdUnit(root: ParentNode = document) {
+  root.querySelectorAll('ins.adsbygoogle').forEach(() => {
+    try {
+      const w = window as Window & { adsbygoogle?: { push: (x: object) => void } };
+      (w.adsbygoogle = w.adsbygoogle || []).push({});
+    } catch {
+      /* already filled */
+    }
+  });
 }
 
-document.addEventListener('astro:page-load', pushAdSense);
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', pushAdSense);
-} else {
-  pushAdSense();
-}
+/** Re-fill after Astro client navigations (new ins nodes, inline scripts do not re-run). */
+document.addEventListener('astro:page-load', () => pushEachAdUnit());
