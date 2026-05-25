@@ -22,8 +22,13 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
 };
 ---
 
-<article class="cozy-card p-6 h-full flex flex-col">
-  <div class="flex flex-wrap items-center gap-2 mb-3">
+<article
+  class:list={[
+    'cozy-card flex min-w-0 flex-col p-6',
+    compact ? 'h-auto lg:h-full' : 'h-full',
+  ]}
+>
+  <div class="mb-3 flex min-w-0 flex-wrap items-center gap-2">
     <Badge variant={categoryVariants[article.category]}>{article.category}</Badge>
     {
       game && (
@@ -34,23 +39,23 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
     }
     {article.trending && <Badge variant="blossom">Trending</Badge>}
   </div>
-  <h3 class="font-display text-lg text-primary line-clamp-2">
+  <h3 class="font-display line-clamp-2 min-w-0 text-lg text-primary">
     <a href={getArticleHref(article)} class="hover:text-accent transition-colors">
       {article.title}
     </a>
   </h3>
   <p
     class:list={[
-      'mt-2 text-sm text-secondary',
-      compact ? 'line-clamp-2' : 'flex-1 line-clamp-3',
+      'mt-2 min-w-0 text-sm text-secondary',
+      compact ? 'line-clamp-2 lg:flex-1 lg:min-h-0' : 'flex-1 line-clamp-3',
     ]}
   >
     {article.excerpt}
   </p>
   <footer
     class:list={[
-      'flex items-center gap-3 text-xs text-muted',
-      compact ? 'mt-auto pt-4' : 'mt-4',
+      'flex shrink-0 items-center gap-3 text-xs text-muted',
+      compact ? 'mt-4 pt-0 lg:mt-auto lg:pt-4' : 'mt-4',
     ]}
   >
     <time datetime={article.publishedAt}>
