@@ -48,3 +48,10 @@ export const brandFavicon =
 
 /** Accessible / SEO label for brand images */
 export const brandAlt = 'Mochileaf — cozy gaming guides and walkthroughs';
+
+/** Default share image — add public/og.jpg (1200×630) when you have one. */
+export const brandOgImage =
+  publicFile('og', ['.jpg', '.jpeg', '.png', '.webp']) ??
+  brandFile('isologo', 'logotipo') ??
+  brandIcon ??
+  '/favicon.png';

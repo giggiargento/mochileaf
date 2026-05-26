@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -64,6 +65,12 @@ const removedGameRedirects = {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mochileaf.com',
+  integrations: [
+    sitemap({
+      // Utility search UIs — thin pages, not useful in organic results.
+      filter: (page) => !page.includes('/search'),
+    }),
+  ],
   redirects: {
     ...stardewLegacyRedirects,
     ...nteShortRedirects,

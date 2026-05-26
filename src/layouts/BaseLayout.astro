@@ -2,7 +2,14 @@
 import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 import AmbientBackground from '../components/layout/AmbientBackground.astro';
-import { formatTitle, getDescription } from '../utils/seo';
+import {
+  formatTitle,
+  getDescription,
+  resolveCanonicalUrl,
+  resolveOgImageUrl,
+  buildWebsiteJsonLd,
+  brandAlt,
+} from '../utils/seo';
 import { brandFavicon } from '../utils/brand';
 import {
   getAdSenseClient,
@@ -19,12 +26,18 @@ const adSenseAllowLocal = allowAdSenseOnLocalhost();
 interface Props {
   title: string;
   description?: string;
+  /** Path (/og.jpg) or absolute URL for social previews. */
+  image?: string;
   ambient?: 'home' | 'game' | 'none';
 }
 
-const { title, description, ambient = 'home' } = Astro.props;
+const { title, description, image, ambient = 'home' } = Astro.props;
 const pageTitle = formatTitle(title);
 const pageDescription = getDescription(description);
+const canonicalUrl = resolveCanonicalUrl(Astro);
+const ogImageUrl = resolveOgImageUrl(Astro, image);
+const websiteJsonLd = buildWebsiteJsonLd(Astro);
+const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 ---
 
 <!doctype html>
@@ -50,11 +63,23 @@ const pageDescription = getDescription(description);
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       )
     }
-    <link rel="canonical" href={Astro.url.href} />
+    <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Mochileaf" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content={brandAlt} />
+    {googleSiteVerification && (
+      <meta name="google-site-verification" content={googleSiteVerification} />
+    )}
+    <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
     <title>{pageTitle}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

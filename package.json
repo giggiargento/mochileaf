@@ -23,6 +23,7 @@
     "creators:download-avatar": "node scripts/download-creator-from-ig-page.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.2",
     "@phosphor-icons/web": "^2.1.2",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.5",
