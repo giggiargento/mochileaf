@@ -1,30 +1,140 @@
 ---
 import GlobalLayout from '../layouts/GlobalLayout.astro';
-import PageHeader from '../components/game/PageHeader.astro';
+import Icon from '../components/ui/Icon.astro';
+import { BEACONS_PROFILE } from '../utils/beacons';
 ---
 
-<GlobalLayout title="About" description="Learn about Mochileaf — a cozy gaming content platform built for calm, beautiful play.">
-  <PageHeader
-    badge="Our story"
-    title="A sanctuary for cozy gamers"
-    description="Mochileaf was born from a love of games that feel like a warm cup of tea — peaceful, visual, and full of heart."
-  />
-  <div class="page-container-below-header">
-    <article class="prose-cozy">
-    <p>
-      We believe gaming content can be editorial, elegant, and calming. No neon overload, no aggressive
-      esports energy — just thoughtful guides, gentle tier lists, and stories that honor the worlds you love.
-    </p>
-    <p>
-      Each game on Mochileaf gets its own dedicated hub with characters, builds, news, and guides — all
-      wrapped in a consistent design system inspired by soft fantasy and anime-inspired interfaces.
-    </p>
-    <h2 class="font-display text-2xl text-primary mt-10">Built for growth</h2>
-    <p>
-      This MVP is structured for future API integration, AdSense placement, and multi-game expansion.
-      Add a game to <code class="text-sage-500">src/data/games.ts</code>, create routes under
-      <code class="text-sage-500">src/pages/[game]/</code>, and your hub is ready.
-    </p>
+<GlobalLayout
+  title="About Giggi"
+  description="Meet Giggi — cozy gaming creator from Argentina sharing dreamy games, desk setups, and a little corner of comfort on Mochileaf."
+>
+  <header class="animate-fade-in">
+    <div class="page-container pt-10 pb-4 text-left lg:pt-12">
+      <div class="flex items-start gap-4 sm:gap-5">
+        <div
+          class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blossom-100 text-accent sm:h-16 sm:w-16"
+          aria-hidden="true"
+        >
+          <Icon name="user-circle" size={36} weight="regular" />
+        </div>
+        <div class="min-w-0">
+          <p class="mb-2 text-xs font-medium uppercase tracking-widest text-accent">About me</p>
+          <h1 class="font-display text-3xl text-primary md:text-4xl">Hi lovelies! 🌸✨</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-container-below-header space-y-14">
+    <article class="prose-cozy max-w-3xl">
+      <p>
+        I’m Giggi, a cozy content creator from Argentina who’s completely in love with cozy gaming,
+        Studio Ghibli vibes, pastel aesthetics, and cute little things that make everyday life feel
+        magical 🧸🎐
+      </p>
+      <p>
+        I created this space to share cozy games, dreamy desk setups, gaming inspiration, and a little
+        corner of comfort for anyone who loves slow mornings, soft lights, relaxing worlds, and wholesome
+        communities. Whether you’re here looking for your next cozy game obsession or just want to feel
+        inspired while sipping your favorite drink, you’re always welcome here 💕
+      </p>
+      <p>
+        When I’m not creating content, you’ll probably find me collecting manga, building cute keyboard
+        setups, organizing my desk, watching anime, or spending time with my two pitbulls, Pipo and Nina
+        🌷✨
+      </p>
+      <p>
+        This website is my little cozy world on the internet, and I’m so happy you’re here 🍃
+      </p>
     </article>
+
+    <section aria-labelledby="mochileaf-story-heading">
+      <h2 id="mochileaf-story-heading" class="section-title mb-6 flex items-center gap-2">
+        <Icon name="plant" size={22} weight="regular" class="text-accent" aria-hidden="true" />
+        How Mochileaf began
+      </h2>
+      <article class="prose-cozy max-w-3xl">
+        <p>
+          Mochileaf started as a small personal dream — a cozy little corner on the internet made for people
+          who love relaxing games, comforting spaces, and creative inspiration 🌿✨
+        </p>
+        <p>
+          At first, I simply wanted to build a place where cozy gamers could discover new games, setups,
+          creators, and wholesome projects. But along the way, Mochileaf became something much more personal
+          to me. It turned into a fun creative project where I could learn, experiment, and improve my web
+          design and development skills while building something that truly feels like “me” 🧸💻
+        </p>
+        <p>
+          One of my biggest goals with Mochileaf is to create a collaborative space where content creators and
+          indie game developers can share little pieces of their projects, passions, and creativity with the
+          community. I love the idea of supporting talented people, discovering hidden gems, and helping cozy
+          projects feel seen and appreciated 🌸
+        </p>
+        <p>
+          At the same time, I hope Mochileaf can continue growing into a real business and creative journey
+          that allows me to keep evolving professionally, create new opportunities, and generate extra income
+          to support my dreams. One of my biggest dreams is to visit Japan someday — a place that has inspired
+          so much of the cozy and magical aesthetic behind everything I create 🍃✨
+        </p>
+        <p>
+          More than anything, Mochileaf is a space built with love, creativity, curiosity, and the hope of
+          making the internet feel a little softer and more inspiring for cozy gamers around the world 🤍
+        </p>
+      </article>
+    </section>
+
+    <section aria-labelledby="mochileaf-name-heading">
+      <h2 id="mochileaf-name-heading" class="section-title mb-6 flex items-center gap-2">
+        <Icon name="sparkle" size={22} weight="regular" class="text-accent" aria-hidden="true" />
+        Why Mochileaf?
+      </h2>
+      <article class="prose-cozy max-w-3xl">
+        <p>
+          When I was choosing a name, I knew I wanted something cozy — a little generic and open enough to
+          hold the worlds I love, but still tender and warm. Something that could wrap around games, setups,
+          creators, and quiet inspiration without feeling boxed in.
+        </p>
+        <p>
+          I played with a few ideas, and Mochileaf was the one that felt most like home: soft, peaceful, and
+          comforting, like a place you’d want to settle into with a warm drink. It’s cozy on purpose — the
+          kind of name that whispers “take your time” instead of shouting for attention 🍃
+        </p>
+      </article>
+    </section>
+
+    <article class="prose-cozy max-w-3xl">
+      <p>
+        I really hope you enjoy what I’m building here. Make yourself comfortable, wander at your own pace,
+        and if any ideas, feedback, or cozy discoveries come to mind — I’d genuinely love to hear from you 💕
+      </p>
+    </article>
+
+    <section
+      class="panel-soft w-full p-8 text-center md:p-10"
+      aria-labelledby="about-contact-heading"
+    >
+      <div
+        class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-blossom-100 text-accent"
+        aria-hidden="true"
+      >
+        <Icon name="chat-circle" size={26} weight="regular" />
+      </div>
+      <h2 id="about-contact-heading" class="font-display text-xl text-primary md:text-2xl">
+        Share an idea with me
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-secondary">
+        Whether it’s a game we should cover, a creator to feature, a typo you spotted, or just a cozy hello —
+        reach out anytime. I read every message when I can and I’m always happy to chat.
+      </p>
+      <a
+        href={BEACONS_PROFILE}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-6 inline-flex items-center justify-center gap-2 rounded-[var(--radius-pill)] border border-default bg-page px-6 py-3 text-sm font-semibold text-primary transition-all duration-300 hover:border-sage-300 hover:text-accent"
+      >
+        Contact via Beacons
+        <Icon name="arrow-square-out" size={16} />
+      </a>
+    </section>
   </div>
 </GlobalLayout>

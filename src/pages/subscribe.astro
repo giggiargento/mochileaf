@@ -1,0 +1,10 @@
+---
+import { beaconsSubscribeUrl } from '../utils/beacons';
+
+/**
+ * Hand off to Beacons. Text fragment may scroll to "email" on the page (Chrome/Safari);
+ * otherwise users see the form if the Email block is at the bottom of giggiland.
+ */
+const destination = beaconsSubscribeUrl({ hash: ':~:text=email' });
+return Astro.redirect(destination, 302);
+---

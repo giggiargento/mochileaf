@@ -127,6 +127,23 @@ export interface NavItem {
   children?: NavItem[];
 }
 
+/** Cozy Creators — featured collaborators (external pages). */
+export interface CozyCreator {
+  slug: string;
+  name: string;
+  /** Display handle, with or without @ (e.g. giggiland). */
+  handle: string;
+  bio: string;
+  /** Creator page (Beacons, YouTube channel, site, etc.) */
+  url: string;
+  /** Profile photo under public/, e.g. /images/creators/giggiland.jpg */
+  image?: string;
+  /** CTA on the card, e.g. "Follow on Instagram". */
+  linkLabel?: string;
+  accent?: Game['accent'];
+  featured?: boolean;
+}
+
 /** ACNH interior decor inspiration (local image + optional Pinterest source). */
 export interface DecorInspiration {
   id: string;

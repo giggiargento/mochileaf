@@ -1,0 +1,20 @@
+{
+  "updatedAt": "2026-05-25T23:54:15.598Z",
+  "creators": {
+    "giggiland": {
+      "slug": "giggiland",
+      "handle": "giggiland",
+      "name": "Giggiland",
+      "error": "Instagram rate limit (429). Wait and retry, or configure INSTAGRAM_ACCESS_TOKEN + INSTAGRAM_BUSINESS_USER_ID.",
+      "syncedAt": "2026-05-25T23:54:12.519Z"
+    },
+    "cozyquartzz": {
+      "slug": "cozyquartzz",
+      "handle": "cozyquartzz",
+      "name": "courtney ₊˚✩",
+      "image": "/images/creators/cozyquartzz.jpg",
+      "syncedAt": "2026-05-26T00:00:00.000Z",
+      "source": "instagram-page"
+    }
+  }
+}

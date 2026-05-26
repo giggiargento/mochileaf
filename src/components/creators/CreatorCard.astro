@@ -1,0 +1,77 @@
+---
+import type { CozyCreator } from '../../types';
+import Icon from '../ui/Icon.astro';
+import { resolveCreatorBanner } from '../../utils/creator-images';
+
+interface Props {
+  creator: CozyCreator;
+}
+
+const { creator } = Astro.props;
+
+const accentGradients: Record<NonNullable<CozyCreator['accent']>, string> = {
+  sage: 'from-sage-200 via-mist-100 to-cream-50',
+  blossom: 'from-blossom-200 via-blossom-100 to-cream-50',
+  mist: 'from-mist-200 via-mist-100 to-cream-50',
+  lavender: 'from-lavender-200 via-lavender-100 to-cream-50',
+  honey: 'from-honey-200 via-honey-100 to-cream-50',
+};
+
+const gradient = accentGradients[creator.accent ?? 'sage'];
+const avatarSrc = resolveCreatorBanner(creator.slug, creator.image);
+const handle = creator.handle.startsWith('@') ? creator.handle : `@${creator.handle}`;
+const linkLabel = creator.linkLabel ?? 'Follow on Instagram';
+---
+
+<a
+  href={creator.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="cozy-card group flex flex-row items-center gap-4 p-4 sm:gap-5 sm:p-5"
+>
+  <div class="shrink-0">
+    {
+      avatarSrc ? (
+        <img
+          src={avatarSrc}
+          alt={`${creator.name} profile`}
+          width={96}
+          height={96}
+          class="h-20 w-20 rounded-full object-cover object-center ring-2 ring-[var(--border-default)] transition-transform duration-300 group-hover:scale-[1.02] sm:h-24 sm:w-24"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : (
+        <div
+          class:list={[
+            'flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br ring-2 ring-[var(--border-default)] sm:h-24 sm:w-24',
+            gradient,
+          ]}
+          aria-hidden="true"
+        >
+          <Icon name="heart" size={28} weight="regular" class="text-accent" />
+        </div>
+      )
+    }
+  </div>
+
+  <div class="min-w-0 flex-1 text-left">
+    <h3 class="font-display text-lg text-primary transition-colors duration-300 group-hover:text-accent">
+      {creator.name}
+    </h3>
+    <p class="mt-0.5 text-sm font-medium text-muted">{handle}</p>
+    {
+      creator.bio?.trim() && (
+        <p class="mt-2 text-sm leading-relaxed text-secondary line-clamp-2">{creator.bio}</p>
+      )
+    }
+  </div>
+
+  <span
+    class="inline-flex shrink-0 items-center justify-center gap-2 self-center rounded-[var(--radius-pill)] bg-sage-500 px-4 py-2.5 text-sm font-semibold text-white shadow-soft transition-all duration-300 group-hover:bg-sage-600 group-hover:-translate-y-0.5 sm:px-5 sm:py-3"
+  >
+    <span class="hidden sm:inline">{linkLabel}</span>
+    <span class="sm:hidden">Follow</span>
+    <Icon name="instagram-logo" size={18} class="text-white" />
+  </span>
+</a>

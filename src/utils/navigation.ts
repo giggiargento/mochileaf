@@ -58,7 +58,8 @@ export const globalNav: NavItem[] = [
     children: activeGameNavChildren(),
   },
   { label: 'Articles', href: '/articles', icon: 'article' },
-  { label: 'About', href: '/about', icon: 'info' },
+  { label: 'Cozy Creators', href: '/cozy-creators', icon: 'heart' },
+  { label: 'About', href: '/about', icon: 'user-circle' },
 ];
 
 export function getGameNav(game: Game): NavItem[] {
