@@ -1,0 +1,190 @@
+---
+import type { Character, AcnhVillagerDetails } from '../../../types';
+import Badge from '../../ui/Badge.astro';
+
+interface Props {
+  character: Character;
+  details: AcnhVillagerDetails;
+}
+
+const { character, details } = Astro.props;
+const info = details.villagerInfo;
+const house = details.house;
+
+const houseRows: { label: string; value?: string }[] = [
+  { label: 'Roof', value: house.roof },
+  { label: 'Siding', value: house.siding },
+  { label: 'Door', value: house.door },
+  { label: 'Wallpaper', value: house.wallpaper },
+  { label: 'Flooring', value: house.flooring },
+  { label: 'Music', value: house.music },
+].filter((row) => row.value);
+
+const showHouse =
+  houseRows.length > 0 ||
+  house.furniture?.length ||
+  house.exteriorImage ||
+  house.interiorImage ||
+  character.houseDescription;
+---
+
+<section class="villager-detail-sections mt-16 space-y-12" aria-label="Villager details">
+  {
+    showHouse && (
+      <div id="house">
+        <h2 class="section-title mb-4 scroll-mt-24">
+          {character.houseStyle ? `House — ${character.houseStyle}` : 'House'}
+        </h2>
+        <p class="mb-4 max-w-2xl text-sm text-secondary">In New Horizons</p>
+        {
+          character.houseDescription && (
+            <p class="prose-cozy mb-6 max-w-3xl text-sm">{character.houseDescription}</p>
+          )
+        }
+        {
+          (house.exteriorImage || house.interiorImage) && (
+            <div class="mb-6 grid gap-4 sm:grid-cols-2">
+              {
+                house.exteriorImage && (
+                  <figure class="aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] border border-default bg-card p-2 shadow-soft">
+                    <img
+                      src={house.exteriorImage}
+                      alt={`${character.name} house exterior in New Horizons`}
+                      width={400}
+                      height={300}
+                      class="h-full w-full object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                )
+              }
+              {
+                house.interiorImage && (
+                  <figure class="aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] border border-default bg-card shadow-soft">
+                    <img
+                      src={house.interiorImage}
+                      alt={`${character.name} house interior in New Horizons`}
+                      width={400}
+                      height={300}
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                )
+              }
+            </div>
+          )
+        }
+        {
+          houseRows.length > 0 && (
+            <div class="cozy-table-wrap mb-6">
+              <table class="cozy-table">
+                <tbody>
+                  {houseRows.map((row) => (
+                    <tr>
+                      <th scope="row">{row.label}</th>
+                      <td>{row.value}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )
+        }
+        {
+          house.musicNote && (
+            <p class="mb-4 text-xs text-muted">{house.musicNote}</p>
+          )
+        }
+        {
+          house.furniture && house.furniture.length > 0 && (
+            <div>
+              <h3 class="text-sm font-semibold text-primary">Notable furniture</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                {house.furniture.map((item) => (
+                  <Badge variant="mist" size="sm">
+                    {item}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          )
+        }
+      </div>
+    )
+  }
+
+  {
+    (details.languages.length > 0 || details.amiibo) && (
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-stretch" style="width: 100%;">
+        {
+          details.languages.length > 0 && (
+            <div id="languages" class="scroll-mt-24 flex min-h-0 flex-col w-full">
+              <h2 class="section-title mb-4">Names in other languages</h2>
+              <div class="cozy-table-wrap flex-1 min-h-0 w-full" style="height: fit-content;">
+                <table class="cozy-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Language</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Romanization</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {details.languages.map((row) => (
+                      <tr>
+                        <th scope="row">{row.language}</th>
+                        <td>{row.name}</td>
+                        <td class="text-muted">{row.romanization ?? '—'}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )
+        }
+
+        {
+          details.amiibo && (
+            <div id="amiibo" class="scroll-mt-24 flex min-h-0 flex-col flex-1" style="width: 100%;">
+              <h2 class="section-title mb-4">amiibo card</h2>
+              <div
+                class="cozy-table-wrap flex-1 min-h-0 flex items-center justify-center p-3"
+                style="width: 370px; height: fit-content;"
+              >
+                {
+                  details.amiibo.image && (
+                    <img
+                      src={details.amiibo.image}
+                      alt={`${character.name} amiibo card #${details.amiibo.number}`}
+                      width={180}
+                      height={280}
+                      class="h-full w-[520px] max-w-full object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )
+                }
+              </div>
+            </div>
+          )
+        }
+      </div>
+    )
+  }
+
+  {
+    details.sourceUrl && (
+      <p class="text-xs text-muted">
+        New Horizons reference data from{' '}
+        <a href={details.sourceUrl} class="cozy-link" target="_blank" rel="noopener noreferrer">
+          Nookipedia
+        </a>
+        .
+      </p>
+    )
+  }
+</section>

@@ -73,7 +73,8 @@ export function getAdUnitAttrs(placement: AdPlacement): {
   fullWidthResponsive: boolean;
 } {
   if (placement === 'sidebar') {
-    return { format: 'rectangle', fullWidthResponsive: false };
+    /* Square unit — frame is 1:1 in CSS; avoid rectangle (300×250). */
+    return { format: 'auto', fullWidthResponsive: false };
   }
   /* Horizontal banner — avoids auto sizing to ~280px tall empty blocks. */
   return { format: 'horizontal', fullWidthResponsive: false };

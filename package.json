@@ -17,6 +17,7 @@
     "items:import": "node scripts/import-acnh-items.mjs",
     "items:optimize-images": "node scripts/optimize-acnh-item-images.mjs",
     "villagers:optimize-images": "node scripts/optimize-acnh-villagers.mjs",
+    "villagers:import-details": "node scripts/import-acnh-villager-details.mjs",
     "creators:sync-avatar": "node scripts/sync-creator-avatar.mjs",
     "creators:sync": "node scripts/sync-cozy-creators.mjs",
     "creators:download-avatar": "node scripts/download-creator-from-ig-page.mjs"

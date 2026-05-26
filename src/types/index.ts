@@ -46,6 +46,55 @@ export interface Character {
   houseDescription?: string;
 }
 
+/** New Horizons villager reference data (from Nookipedia import). */
+export interface AcnhVillagerDetails {
+  intro?: string;
+  appearance?: string;
+  personality?: string;
+  villagerInfo: {
+    birthday?: string;
+    starSign?: string;
+    personality?: string;
+    subPersonality?: string;
+    catchphrase?: string;
+    quote?: string;
+    gender?: string;
+    defaultClothing?: string;
+    umbrella?: string;
+    hobby?: string;
+    favoriteStyles?: string[];
+    favoriteColors?: string[];
+    bag?: string;
+    food?: string;
+    drink?: string;
+  };
+  house: {
+    roof?: string;
+    siding?: string;
+    door?: string;
+    wallpaper?: string;
+    flooring?: string;
+    music?: string;
+    musicNote?: string;
+    furniture?: string[];
+    exteriorImage?: string;
+    interiorImage?: string;
+  };
+  languages: {
+    language: string;
+    name: string;
+    romanization?: string;
+  }[];
+  amiibo?: {
+    number: string;
+    series?: string;
+    starSign?: string;
+    birthday?: string;
+    image?: string;
+  };
+  sourceUrl?: string;
+}
+
 export interface GameItem {
   slug: string;
   name: string;

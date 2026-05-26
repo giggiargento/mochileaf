@@ -35,7 +35,7 @@ const variantClass = slot === 'sidebar' ? 'ad-slot--sidebar' : 'ad-slot--horizon
       <div class="ad-slot-inner">
         <ins
           class="adsbygoogle"
-          style="display:block"
+          style={slot === 'sidebar' ? 'display:block;width:100%;height:100%' : 'display:block'}
           data-ad-client={client}
           data-ad-slot={adSlot}
           data-ad-format={unitAttrs.format}

@@ -7,9 +7,11 @@ import { games } from '../../../data/games';
 import { characters, getCharacter } from '../../../data/characters';
 import { getHubCopy } from '../../../utils/game-hub';
 import DecorInspirationGallery from '../../../components/game/acnh/DecorInspirationGallery.astro';
+import VillagerDetailSections from '../../../components/game/acnh/VillagerDetailSections.astro';
 import { getAcnhDecorForCharacter } from '../../../data/character-decor-acnh';
 import { villagerPortrait } from '../../../data/characters-acnh';
 import { acnhPinterestBoards } from '../../../data/pinterest-boards-acnh';
+import { getAcnhVillagerDetails } from '../../../utils/acnh-villager-details';
 
 export function getStaticPaths() {
   return characters
@@ -29,7 +31,7 @@ export function getStaticPaths() {
 const { game, character } = Astro.props;
 const hubCopy = getHubCopy(game);
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
-const hasHouseCard = isAcnh && Boolean(character.houseDescription);
+const acnhDetails = isAcnh ? getAcnhVillagerDetails(character.slug) : undefined;
 const portraitAlt = `${character.name} — ${character.role} in ${game.name}`;
 const listLabel = hubCopy.charactersTitle.toLowerCase();
 const characterDecor = isAcnh ? getAcnhDecorForCharacter(character.slug) : [];
@@ -39,6 +41,44 @@ const characterPinterestBoard =
     : undefined;
 const portraitSrc =
   isAcnh && character.image ? villagerPortrait(character.slug, 256) : character.image;
+
+const villagerInfoRows =
+  acnhDetails?.villagerInfo
+    ? ([
+        { label: 'Birthday', value: acnhDetails.villagerInfo.birthday },
+        { label: 'Star sign', value: acnhDetails.villagerInfo.starSign },
+        { label: 'Personality', value: acnhDetails.villagerInfo.personality },
+        { label: 'Subtype', value: acnhDetails.villagerInfo.subPersonality },
+        {
+          label: 'Catchphrase',
+          value: acnhDetails.villagerInfo.catchphrase
+            ? `“${acnhDetails.villagerInfo.catchphrase}”`
+            : undefined,
+        },
+        {
+          label: 'Picture quote',
+          value: acnhDetails.villagerInfo.quote ? `“${acnhDetails.villagerInfo.quote}”` : undefined,
+        },
+        { label: 'Gender', value: acnhDetails.villagerInfo.gender },
+        { label: 'Default clothing', value: acnhDetails.villagerInfo.defaultClothing },
+        { label: 'Hobby', value: acnhDetails.villagerInfo.hobby },
+        {
+          label: 'Favorite styles',
+          value: acnhDetails.villagerInfo.favoriteStyles?.length
+            ? acnhDetails.villagerInfo.favoriteStyles.join(', ')
+            : undefined,
+        },
+        {
+          label: 'Favorite colors',
+          value: acnhDetails.villagerInfo.favoriteColors?.length
+            ? acnhDetails.villagerInfo.favoriteColors.join(', ')
+            : undefined,
+        },
+        { label: 'Bag', value: acnhDetails.villagerInfo.bag },
+        { label: 'Snack', value: acnhDetails.villagerInfo.food },
+        { label: 'Drink', value: acnhDetails.villagerInfo.drink },
+      ] as { label: string; value?: string }[]).filter((row) => row.value)
+    : [];
 ---
 
 <GameHubLayout game={game} title={character.name}>
@@ -47,6 +87,7 @@ const portraitSrc =
       ← All {listLabel}
     </a>
     <div class="character-detail-grid mt-8">
+      <div class="min-w-0 space-y-4">
       <div class="character-portrait-frame min-w-0">
         <div class="character-portrait-inner">
         {
@@ -68,12 +109,22 @@ const portraitSrc =
         }
         </div>
       </div>
-      <div
-        class:list={[
-          'character-detail-panel min-w-0',
-          hasHouseCard && 'character-detail-panel--balanced',
-        ]}
-      >
+      {villagerInfoRows.length > 0 && (
+        <div class="cozy-table-wrap">
+          <table class="cozy-table">
+            <tbody>
+              {villagerInfoRows.map((row) => (
+                <tr>
+                  <th scope="row">{row.label}</th>
+                  <td>{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      </div>
+      <div class="character-detail-panel min-w-0">
         <div class="character-detail-intro">
           <div class="mb-4 flex flex-wrap gap-2">
             {character.rarity && <Badge variant="blossom">{character.rarity}-rank</Badge>}
@@ -85,25 +136,71 @@ const portraitSrc =
           <h1 class="font-display text-4xl text-primary">{character.name}</h1>
           <p class="mt-2 text-lg font-medium text-accent">{character.role}</p>
           <p class="mt-6 prose-cozy">{character.description}</p>
+
+          {
+            isAcnh && (
+              <div class="mt-8">
+                <h2 class="font-display text-xl text-primary">Explore this villager</h2>
+                <p class="mt-2 text-base leading-relaxed text-secondary">
+                  Jump into house details and decor inspiration — perfect for planning themes and cozy
+                  neighborhoods.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <a
+                    href="#house"
+                    class="inline-flex items-center justify-center rounded-[var(--radius-pill)] bg-sage-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition-colors hover:bg-sage-600"
+                  >
+                    House
+                  </a>
+                  {
+                    characterDecor.length > 0 && (
+                      <a
+                        href="#decor"
+                        class="inline-flex items-center justify-center rounded-[var(--radius-pill)] border border-default bg-page px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-sage-300 hover:text-accent"
+                      >
+                        Decor inspiration
+                      </a>
+                    )
+                  }
+                </div>
+              </div>
+            )
+          }
+
+          {
+            acnhDetails && (acnhDetails.appearance || acnhDetails.personality) && (
+              <section class="mt-8" aria-label="Characteristics">
+                <h2 class="section-title mb-4">Characteristics</h2>
+                <div class="prose-cozy max-w-3xl space-y-4">
+                  {acnhDetails.appearance && (
+                    <div>
+                      <h3 class="text-sm font-semibold uppercase tracking-wide text-muted">
+                        Appearance
+                      </h3>
+                      <p class="mt-2">{acnhDetails.appearance}</p>
+                    </div>
+                  )}
+                  {acnhDetails.personality && (
+                    <div>
+                      <h3 class="text-sm font-semibold uppercase tracking-wide text-muted">
+                        Personality
+                      </h3>
+                      <p class="mt-2">{acnhDetails.personality}</p>
+                    </div>
+                  )}
+                </div>
+              </section>
+            )
+          }
         </div>
-        {
-          hasHouseCard && (
-            <section
-              id="house"
-              class="character-house-card scroll-mt-24 rounded-[var(--radius-card)] border border-default bg-card p-6"
-            >
-              <h2 class="font-display text-xl text-primary">
-                {character.houseStyle ?? 'Home style'}
-              </h2>
-              <p class="mt-3 prose-cozy text-sm">{character.houseDescription}</p>
-            </section>
-          )
-        }
       </div>
     </div>
+
+    {acnhDetails && <VillagerDetailSections character={character} details={acnhDetails} />}
+
     {
       characterDecor.length > 0 && (
-        <section class="mt-16">
+        <section class="mt-16" id="decor">
           <h2 class="font-display text-2xl text-primary">
             Decor inspiration for {character.name}
           </h2>

@@ -1,0 +1,2342 @@
+{
+  "updatedAt": "2026-05-26T00:34:44.897Z",
+  "source": "https://nookipedia.com/",
+  "villagers": {
+    "raymond": {
+      "appearance": "Raymond is a gray cat with a black tail, black paws, black ears with pink insides, and blonde hair that is neatly combed to the right. He wears glasses and has eyes like the cats that have complete, with his left eye being green and his right eye being brown. He appears to be designed after white-collar workers, featuring an appearance, house, catchphrase, and picture quote that all reference elements of a typical businessperson or office worker.",
+      "personality": "Raymond is a villager that falls under the smug personality. He will not find it hard to converse with other villagers, as he is very polite and lively. He also may be seen flirting with the player, regardless of their gender. He may sometimes appear conceited when talking to himself. In, he goes to sleep at 2:00 AM and wakes up at 7:00 AM if no ordinances are in place.",
+      "villagerInfo": {
+        "birthday": "October 1",
+        "starSign": "Libra",
+        "personality": "Smug",
+        "subPersonality": "B",
+        "catchphrase": "crisp",
+        "quote": "Stay on brand!",
+        "gender": "Male",
+        "defaultClothing": "waistcoat (Gray)",
+        "umbrella": "bat umbrella",
+        "hobby": "Nature",
+        "favoriteStyles": [
+          "Elegant",
+          "Cool"
+        ],
+        "favoriteColors": [
+          "Black",
+          "Gray"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "black slate roof",
+        "siding": "simple black-brick trim",
+        "door": "green iron grill door",
+        "wallpaper": "office wall",
+        "flooring": "monochromatic tile flooring",
+        "music": "K.K. Cruisin'",
+        "musicNote": "Does not contain a stereo initially",
+        "furniture": [
+          "office desk",
+          "whiteboard",
+          "document stack",
+          "desktop computer",
+          "water cooler",
+          "modern office chair",
+          "iron worktable",
+          "safe",
+          "den chair",
+          "wall clock",
+          "document stack",
+          "fax machine",
+          "formal paper",
+          "den desk",
+          "mug",
+          "Newton's cradle"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Raymond_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Raymond_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ジャック",
+          "romanization": "Jakku"
+        },
+        {
+          "language": "Korean",
+          "name": "잭슨",
+          "romanization": "Jaekseun"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "杰克",
+          "romanization": "Jiékè"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "傑克"
+        },
+        {
+          "language": "French",
+          "name": "Raymond"
+        },
+        {
+          "language": "Spanish",
+          "name": "Narciso"
+        },
+        {
+          "language": "Italian",
+          "name": "Raimondo"
+        },
+        {
+          "language": "German",
+          "name": "Gunnar"
+        },
+        {
+          "language": "Dutch",
+          "name": "Raymond"
+        },
+        {
+          "language": "Russian",
+          "name": "Реймонд",
+          "romanization": "Rejmond"
+        }
+      ],
+      "amiibo": {
+        "number": "431",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Libra",
+        "birthday": "October 1",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/431_Raymond_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Raymond"
+    },
+    "marshal": {
+      "appearance": "Marshal is a white squirrel with pink cheeks and pastel purple on the inside of his ears. His slanted eyes and frown bear some resemblance to Static's pre- appearance. In, his eyes are dark green, whereas in previous installments, they were black. He has cream-tipped hands and feet as well as a cream swirl in his tail. These features make him resemble a marshmallow.",
+      "personality": "Marshal is a villager that falls under the smug personality. He will not find it hard to converse with other villagers, as he is very polite and lively. He also may be seen flirting with the player, regardless of their gender. He may sometimes appear conceited when talking to himself. His unseen hobby is dancing, and will also enjoy the usual hobbies. He will appear enthusiastic when going to the player's house. Marshal will wake up at 7:00 AM and fall asleep at 2:00 AM.",
+      "villagerInfo": {
+        "birthday": "September 29",
+        "starSign": "Libra",
+        "personality": "Smug",
+        "subPersonality": "A",
+        "catchphrase": "sulky",
+        "quote": "Seize the day.",
+        "gender": "Male",
+        "defaultClothing": "puffy vest (Navy blue)",
+        "umbrella": "logo umbrella",
+        "hobby": "Music",
+        "favoriteStyles": [
+          "Elegant",
+          "Cool"
+        ],
+        "favoriteColors": [
+          "Aqua",
+          "Blue"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "light-gray stone roof",
+        "siding": "white stucco exterior",
+        "door": "gray common door",
+        "wallpaper": "Blue Delicate-Blooms Wall",
+        "flooring": "Modern Wood Flooring",
+        "music": "K.K. Bossa",
+        "furniture": [
+          "Double Sofa",
+          "Upright Piano",
+          "Piano Bench",
+          "Mini Fridge",
+          "Cream and Sugar",
+          "Open Frame Kitchen",
+          "Simple Kettle",
+          "Blue Kitchen Mat",
+          "Ironwood Cupboard",
+          "Iron Worktable",
+          "Cuckoo Clock",
+          "Iron Entrance Mat",
+          "Portable Record Player",
+          "Coffee Grinder",
+          "Espresso Maker",
+          "Stovetop Espresso Maker",
+          "Menu Chalkboard",
+          "Ironwood Low Table",
+          "Coffee Cup"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Marshal_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Marshal_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ジュン",
+          "romanization": "Jun"
+        },
+        {
+          "language": "Korean",
+          "name": "쭈니",
+          "romanization": "Jjuni"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "小润",
+          "romanization": "XiaoRùn"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "小潤"
+        },
+        {
+          "language": "French",
+          "name": "Mathéo"
+        },
+        {
+          "language": "Spanish",
+          "name": "Munchi"
+        },
+        {
+          "language": "Italian",
+          "name": "Scott"
+        },
+        {
+          "language": "German",
+          "name": "Huschke"
+        },
+        {
+          "language": "Dutch",
+          "name": "Marshal"
+        },
+        {
+          "language": "Russian",
+          "name": "Маршал",
+          "romanization": "Marshal"
+        }
+      ],
+      "amiibo": {
+        "number": "264",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Libra",
+        "birthday": "September 29",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/264_Marshal_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Marshal"
+    },
+    "judy": {
+      "appearance": "Judy is a bear cub with light blue fur that fades into pastel pink across her body. Her face is white and she has rosy cheeks, with a small black nose, a V-shaped mouth, white paw pads on her feet, and a round white tail. The insides of her ears are a pale shade of cream. She wears cyan eyeshadow and has thick black eyelashes, and dark purple starry eyes. When she's shocked, her eyes turn white with a small dark purple iris and black pupils, and also gains eye wrinkles. When her eyes are closed, there's still some visible sparkles on her eyelashes.",
+      "personality": "Judy has a snooty personality. She will appear uptown, classy, and chic. With this, she will appear rude, belittling and snobbish when talking to others, usually criticizing their dress sense or fashion. She is able to get along with cranky, big sister, smug, and other snooty villagers. She will have her fitness questioned by a jock villager. She will not get along with normal villagers, due to their kindness and politeness towards their neighbors.",
+      "villagerInfo": {
+        "birthday": "March 10",
+        "starSign": "Pisces",
+        "personality": "Snooty",
+        "subPersonality": "A",
+        "catchphrase": "myohmy",
+        "quote": "I'm dancing my dreams away.",
+        "gender": "Female",
+        "defaultClothing": "fairy-tale dress (Pink)",
+        "umbrella": "white shiny-bows parasol",
+        "hobby": "Music",
+        "favoriteStyles": [
+          "Cute",
+          "Elegant"
+        ],
+        "favoriteColors": [
+          "Pink",
+          "White"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "blue wooden-tile roof",
+        "siding": "light-blue cobblestones",
+        "door": "pink simple door",
+        "wallpaper": "Starry Wall",
+        "flooring": "Blue Dot Flooring",
+        "music": "K.K. Lullaby",
+        "furniture": [
+          "Starry Garland",
+          "Wooden Block Bed",
+          "Wooden Block Table",
+          "Wooden Block Wall Clock",
+          "Wooden Block Bench",
+          "Wooden Block Stool",
+          "Humidifier",
+          "Wooden Block Chair",
+          "Wooden Block Bookshelf",
+          "Old Fashioned Alarm Clock",
+          "Wooden Block Chest",
+          "Wooden Block Stereo"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Judy_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Judy_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "みすず",
+          "romanization": "Misuzu"
+        },
+        {
+          "language": "Korean",
+          "name": "미애",
+          "romanization": "Miae"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "美玲",
+          "romanization": "Měilíng"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "美玲"
+        },
+        {
+          "language": "French",
+          "name": "Laura"
+        },
+        {
+          "language": "Spanish",
+          "name": "Rosezna"
+        },
+        {
+          "language": "Italian",
+          "name": "Misuzu"
+        },
+        {
+          "language": "German",
+          "name": "Misuzu"
+        },
+        {
+          "language": "Dutch",
+          "name": "Judy"
+        },
+        {
+          "language": "Russian",
+          "name": "Джуди",
+          "romanization": "Dzhudi"
+        }
+      ],
+      "amiibo": {
+        "number": "430",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Pisces",
+        "birthday": "March 10",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/430_Judy_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Judy"
+    },
+    "ankha": {
+      "intro": "Ankha is a snooty cat in the. She first appeared in as an islander, and after being absent in, she appears in all subsequent games as a villager. Her name is likely derived from the '' '', which is the Egyptian hieroglyphic character that reads ''life''. Her Japanese catchphrase, ''kufufu'', is a combination of the Pharaoh, and ''ufufu'', a Japanese onomatopoeia for laughter. Egyptians worshiped cats and had a cat goddess,, which may be the basis for Ankha's design.",
+      "appearance": "Ankha is a navy blue-and-gold-striped cat. She wears navy blue eyeliner in the style of Egyptian royalty: surrounding the eyes, and wings out towards the outside of the bottom corners. She has orange eyeshadow which can be seen when she blinks. Her large black pupils look upwards, and her mouth is constantly curved into a scowl, even when she is happy. Her headgear is an upright golden Egyptian cobra with blue stripes. She has a slightly different style in, where she lacks the normal pharaoh headdress, which was replaced with a scarab head pendant, but it was changed back to a headdress in.",
+      "personality": "As a snooty islander in,, and, Ankha is talkative and vain; she is warmer than her mainland counterparts and focus on being well-liked as well as beautiful, but she can still be catty or rude in some situations. As a snooty villager from onward, Ankha will appear arrogant and snobbish towards the player and other villagers, but will appear friendly and nice in some discussions, provided they are mature and do not insult her lifestyle. She finds appearance important, and will get angry or upset if someone criticizes her sense of style or fitness, which means a conversation between her and a jock personality may leave either one upset or angry. Her attitude towards the player changes, as she begins to warm up to them, but she will still retain some arrogance and subtle rudeness. She may not get along with lazy villagers, due to their lifestyles - lazy villagers having a strong interest in food or relaxing, both of which will make her uncomfortable, angry, and upset when in conversation. She will upset peppy villagers, usually by gossiping about them, and finding small things to judge them on. She will get along well with normal, cranky, and other snooty villagers.",
+      "villagerInfo": {
+        "birthday": "September 22",
+        "starSign": "Virgo",
+        "personality": "Snooty",
+        "subPersonality": "B",
+        "catchphrase": "me meow",
+        "quote": "All that glitters is not gold.",
+        "gender": "Female",
+        "defaultClothing": "palatial tank dress",
+        "umbrella": "ghost umbrella",
+        "hobby": "Nature",
+        "favoriteStyles": [
+          "Gorgeous",
+          "Simple"
+        ],
+        "favoriteColors": [
+          "Colorful",
+          "Brown"
+        ],
+        "bag": "Paper",
+        "food": "Lollipop",
+        "drink": "Soda can"
+      },
+      "house": {
+        "roof": "orange stone roof",
+        "siding": "yellow stucco exterior",
+        "door": "purple metal-accent door",
+        "wallpaper": "Ancient Wall",
+        "flooring": "Pyramid Tile",
+        "music": "K.K. Bazaar",
+        "musicNote": "Does not contain a stereo initially",
+        "furniture": [
+          "Golden Toilet",
+          "Pyramid",
+          "Wall Mounted Candle",
+          "Golden Casket",
+          "Libra Scale",
+          "Gold Bars",
+          "Golden Dishes"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Ankha_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Ankha_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ナイル",
+          "romanization": "Nairu"
+        },
+        {
+          "language": "Korean",
+          "name": "클레오",
+          "romanization": "Keulleo"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "艳后",
+          "romanization": "Yànhòu"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "艷后"
+        },
+        {
+          "language": "French",
+          "name": "Neferti"
+        },
+        {
+          "language": "Spanish",
+          "name": "Patri"
+        },
+        {
+          "language": "Italian",
+          "name": "Cleo"
+        },
+        {
+          "language": "German",
+          "name": "Kleo"
+        },
+        {
+          "language": "Dutch",
+          "name": "Ankha"
+        },
+        {
+          "language": "Russian",
+          "name": "Анка",
+          "romanization": "Anka"
+        }
+      ],
+      "amiibo": {
+        "number": "188",
+        "series": "Animal Crossing amiibo",
+        "starSign": "Virgo",
+        "birthday": "September 22",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/188_Ankha_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Ankha"
+    },
+    "sherb": {
+      "appearance": "Sherb is a goat with pale blue fur and a deeper blue tuft of hair leaning to the left. He has pale gray hooves, and horns which are striped with light gray and a darker shade of gray. His pupils are large and black, and his eyes are slightly slanted upwards. He has a coral pink nose and a 3-shaped mouth which connects to his nose. His inner ears are pale orange and he has pale pink cheeks just below his eyes. Much like Kidd, he does not have a beard, making him look fairly youthful compared to the other male goats.",
+      "personality": "As a lazy villager, Sherb has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Sherb goes to sleep at 11 PM and wakes up at 8 AM.",
+      "villagerInfo": {
+        "birthday": "January 18",
+        "starSign": "Capricorn",
+        "personality": "Lazy",
+        "subPersonality": "A",
+        "catchphrase": "bawwww",
+        "quote": "Forty winks is never enough.",
+        "gender": "Male",
+        "defaultClothing": "snowy sweater (Gray)",
+        "umbrella": "vinyl umbrella",
+        "hobby": "Nature",
+        "favoriteStyles": [
+          "Simple",
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Gray",
+          "Blue"
+        ],
+        "bag": "Veggie-print",
+        "food": "Chocolate donut",
+        "drink": "Tea can or yellow mug"
+      },
+      "house": {
+        "roof": "white wooden roof",
+        "siding": "mint-blue stucco exterior",
+        "door": "blue rustic door",
+        "wallpaper": "Purple Moroccan Wall",
+        "flooring": "Simple Purple Flooring",
+        "music": "Hypno K.K.",
+        "furniture": [
+          "Cute DIY Table",
+          "Cute Floor Lamp",
+          "Wooden Mini Table",
+          "Cute Sofa",
+          "Cute Bed",
+          "Cute Wardrobe",
+          "Cute Tea Table",
+          "Cute Music Player",
+          "Old Fashioned Alarm Clock"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Sherb_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Sherb_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "レム",
+          "romanization": "Remu"
+        },
+        {
+          "language": "Korean",
+          "name": "래미",
+          "romanization": "Raemi"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "雷姆",
+          "romanization": "Léimǔ"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "雷姆"
+        },
+        {
+          "language": "French",
+          "name": "Capri"
+        },
+        {
+          "language": "Spanish",
+          "name": "Morfeo"
+        },
+        {
+          "language": "Italian",
+          "name": "Capraldo"
+        },
+        {
+          "language": "German",
+          "name": "Morpheus"
+        },
+        {
+          "language": "Dutch",
+          "name": "Sherb"
+        },
+        {
+          "language": "Russian",
+          "name": "Шерб",
+          "romanization": "Sherb"
+        }
+      ],
+      "amiibo": {
+        "number": "425",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Capricorn",
+        "birthday": "January 18",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/425_Sherb_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Sherb"
+    },
+    "diana": {
+      "appearance": "Diana is a white deer with pink cheeks. She also has pinkish-purple hair and a black nose. Her hooves are pink with light blue rings at the cuffs. The inside of her ears are light blue and have the same pinkish-purple color around the edges. Her ears also have pink tips.",
+      "personality": "Diana is a snooty villager, and will first appear rude and arrogant towards the player, often talking about herself and her own experiences, but will be nice and pleasurable if the conversation is mature and non-insulting. She may also talk about the style and appearance of other villagers, usually other female villagers such as normal, peppy, big sister, and other snooty villagers. Diana will soon warm up to the player, confiding in them about her own personal feelings but still keeping subtly rude. She will find it hard to get along with other villagers, specifically jock and lazy villagers who have conflicting lifestyles compared to her own. She may get on with cranky villagers, who also enjoy gossiping about the appearance and lifestyles of others, as well as smug villagers, who share a love and knowledge for fashion.",
+      "villagerInfo": {
+        "birthday": "January 4",
+        "starSign": "Capricorn",
+        "personality": "Snooty",
+        "subPersonality": "A",
+        "catchphrase": "no doy",
+        "quote": "Sometimes you have to lose to win.",
+        "gender": "Female",
+        "defaultClothing": "mysterious dress (Purple)",
+        "umbrella": "black chic umbrella",
+        "hobby": "Education",
+        "favoriteStyles": [
+          "Elegant",
+          "Gorgeous"
+        ],
+        "favoriteColors": [
+          "Purple",
+          "Pink"
+        ],
+        "bag": "Veggie-print",
+        "food": "Chocolate donut",
+        "drink": "Tea can or yellow mug"
+      },
+      "house": {
+        "roof": "light-gray thatch roof",
+        "siding": "white cobblestones",
+        "door": "white iron grill door",
+        "wallpaper": "White Botanical-Tile Wall",
+        "flooring": "Stone Tile",
+        "music": "Farewell",
+        "furniture": [
+          "Beach Towel",
+          "Rattan Low Table",
+          "Whirlpool Bath",
+          "Shower Set",
+          "Shell Bed",
+          "Rattan Vanity",
+          "Deer Decoration",
+          "Lily Record Player",
+          "Fireplace",
+          "Rattan End Table",
+          "Fragrance Sticks"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Diana_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Diana_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ナタリー",
+          "romanization": "Natarī"
+        },
+        {
+          "language": "Korean",
+          "name": "나탈리",
+          "romanization": "Natari"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "倪家莉",
+          "romanization": "Níjiālì"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "倪家莉"
+        },
+        {
+          "language": "French",
+          "name": "Didi"
+        },
+        {
+          "language": "Spanish",
+          "name": "Bambina"
+        },
+        {
+          "language": "Italian",
+          "name": "Diana"
+        },
+        {
+          "language": "German",
+          "name": "Vroni"
+        },
+        {
+          "language": "Dutch",
+          "name": "Diana"
+        },
+        {
+          "language": "Russian",
+          "name": "Диана",
+          "romanization": "Diana"
+        }
+      ],
+      "amiibo": {
+        "number": "089",
+        "series": "Series 1–4",
+        "starSign": "Capricorn",
+        "birthday": "January 4",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/089_Diana_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Diana"
+    },
+    "bob": {
+      "intro": "Bob is a lazy cat villager in the who appears in all games to date. His name may be derived from. His Japanese catchphrase, ''neko'', means \"cat,\" relating to his species. According to series co-creator Hisashi Nogami, Bob was the first villager created, and his January 1 birthday came as a result of that.",
+      "appearance": "Bob is a purple cat with dark purple polka dots, half-closed lazy yellow eyes, and light purple paws. The inside of his ears are pink, and his tail is purple with darker purple stripes.",
+      "personality": "As a lazy villager, Bob has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Bob goes to sleep at 11 PM and wakes up at 8 AM.",
+      "villagerInfo": {
+        "birthday": "January 1",
+        "starSign": "Capricorn",
+        "personality": "Lazy",
+        "subPersonality": "B",
+        "catchphrase": "pthhpth",
+        "quote": "You only live once...or nine times.",
+        "gender": "Male",
+        "defaultClothing": "blossom tee (Pink)",
+        "umbrella": "eggy parasol",
+        "hobby": "Play",
+        "favoriteStyles": [
+          "Simple",
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Colorful",
+          "Red"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "turquoise slate roof",
+        "siding": "yellow stucco exterior",
+        "door": "red wooden door",
+        "wallpaper": "blue playroom wall",
+        "flooring": "colorful puzzle flooring",
+        "music": "Neapolitan",
+        "furniture": [
+          "wooden block stereo",
+          "wooden block bed",
+          "wooden block chair",
+          "wooden block table",
+          "wooden block bookshelf",
+          "wooden block bench",
+          "wooden block chest",
+          "wooden block toy",
+          "toy box",
+          "wooden block wall clock"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Bob_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Bob_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ニコバン",
+          "romanization": "Nikoban"
+        },
+        {
+          "language": "Korean",
+          "name": "히죽",
+          "romanization": "Hijuk"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "阿判",
+          "romanization": "Āpàn"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "阿判"
+        },
+        {
+          "language": "French",
+          "name": "Robert"
+        },
+        {
+          "language": "Spanish",
+          "name": "Arándano"
+        },
+        {
+          "language": "Italian",
+          "name": "Bob"
+        },
+        {
+          "language": "German",
+          "name": "Jens"
+        },
+        {
+          "language": "Dutch",
+          "name": "Bob"
+        },
+        {
+          "language": "Russian",
+          "name": "Боб",
+          "romanization": "Bob"
+        }
+      ],
+      "amiibo": {
+        "number": "018",
+        "series": "Series 1–4",
+        "starSign": "Capricorn",
+        "birthday": "January 1",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/018_Bob_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Bob"
+    },
+    "molly": {
+      "appearance": "Molly is a mallard duck with black oval eyes and a golden yellow beak. There are dark brown markings on top of her beak, forming what looks like a crown. Molly has a white stomach, and yellow striped legs. Her wings and markings on top of her head are a shade of brown. She has round pink cheeks.",
+      "personality": "Molly is a normal villager, meaning she is very kind-hearted, sweet and hospitable. She is very motherly and caring, even to flowers around town as she is often carrying a watering can around. She is a self-proclaimed bookworm, often talking about book titles she enjoys reading. She is quite the clean freak, often worrying about the cleanliness of her home. Molly is very kind and neighborly and is easy to befriend due to her generally kind nature.",
+      "villagerInfo": {
+        "birthday": "March 7",
+        "starSign": "Pisces",
+        "personality": "Normal",
+        "subPersonality": "A",
+        "catchphrase": "quackidee",
+        "quote": "Like water off a duck's back.",
+        "gender": "Female",
+        "defaultClothing": "pintuck-pleated dress (Lime)",
+        "umbrella": "white shiny-bows parasol",
+        "hobby": "Nature",
+        "favoriteStyles": [
+          "Cute",
+          "Simple"
+        ],
+        "favoriteColors": [
+          "Yellow",
+          "Pink"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "orange thatch roof",
+        "siding": "light-brown log exterior",
+        "door": "maple wooden door",
+        "wallpaper": "Lattice Wall",
+        "flooring": "Light Herringbone Flooring",
+        "music": "K.K. Ballad",
+        "furniture": [
+          "Antique Bureau",
+          "Wooden Simple Bed",
+          "Fancy Violin",
+          "Double Sofa",
+          "Music Stand",
+          "Wooden Bookshelf",
+          "Potted Ivy",
+          "Wooden Low Table",
+          "Wooden Chest",
+          "Tea Set",
+          "Ivory Small Round Mat",
+          "Red Dotted Rug",
+          "Cute Music Player",
+          "Yucca"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Molly_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Molly_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "カモミ",
+          "romanization": "Kamomi"
+        },
+        {
+          "language": "Korean",
+          "name": "귀오미",
+          "romanization": "Gwiomi"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "亚美",
+          "romanization": "Yàměi"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "亞美"
+        },
+        {
+          "language": "French",
+          "name": "Molly"
+        },
+        {
+          "language": "Spanish",
+          "name": "Deira"
+        },
+        {
+          "language": "Italian",
+          "name": "Molly"
+        },
+        {
+          "language": "German",
+          "name": "Monika"
+        },
+        {
+          "language": "Dutch",
+          "name": "Molly"
+        },
+        {
+          "language": "Russian",
+          "name": "Молли",
+          "romanization": "Molli"
+        }
+      ],
+      "amiibo": {
+        "number": "099",
+        "series": "Animal Crossing amiibo",
+        "starSign": "Pisces",
+        "birthday": "March 7",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/099_Molly_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Molly"
+    },
+    "marina": {
+      "intro": "Marina is a normal octopus in the. She first appeared in as an islander, and she appears in all subsequent games as a villager. Her name comes from \"marinus,\" Latin for \"of the sea,\" which relates to her species.",
+      "appearance": "Marina in.\nMarina is a pink octopus with yellow cheeks and black eyes. Her eyes gain smaller, white pupils when she is shocked. She has a tuft of hair on her forehead. On the back of her head is a pink bow.",
+      "personality": "==== ====\nAs a normal islander in, Marina has a peaceful, spacey nature prone to daydreaming and getting lost in thought. In conversation, she frequently reads the player's aura or comments on the natural beauty of the island. Due to her fanciful outlook on life, she is often kind in dealing with the player but can easily wander off into mystical, eccentric, or even nonsensical conversation. She meditates frequently in her pursuit of harmony and tranquility and will request furniture from the player that she believes will improve her meditation. ==== onwards====\nMarina is a normal villager. She will appear friendly and motherly to the player. When she asks the player for favors, she will feel bad asking the player to do so. She will be easy to befriend. She may not get along well with cranky and snooty villagers. She has a very kind personality.",
+      "villagerInfo": {
+        "birthday": "June 26",
+        "starSign": "Cancer",
+        "personality": "Normal",
+        "subPersonality": "B",
+        "catchphrase": "blurp",
+        "quote": "If you can't say something nice, don't say anything at all.",
+        "gender": "Female",
+        "defaultClothing": "dreamy sweater (Pink)",
+        "umbrella": "candy umbrella",
+        "hobby": "Music",
+        "favoriteStyles": [
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Pink",
+          "Red"
+        ],
+        "bag": "Veggie-print",
+        "food": "Chocolate donut",
+        "drink": "Tea can or yellow mug"
+      },
+      "house": {
+        "roof": "brown thatch roof",
+        "siding": "beige cobblestones",
+        "door": "pink simple door",
+        "wallpaper": "Strawberry-Chocolate Wall",
+        "flooring": "Berry-Chocolates Flooring",
+        "music": "Soulful K.K.",
+        "furniture": [
+          "Claw Foot Tub",
+          "Cute Bed",
+          "Cute Floor Lamp",
+          "Cute Sofa",
+          "Tankless Toilet",
+          "Cute DIY Table",
+          "Cute Vanity",
+          "Cute Tea Table",
+          "Cute Music Player"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Marina_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Marina_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "タコリーナ",
+          "romanization": "Takorīna"
+        },
+        {
+          "language": "Korean",
+          "name": "문리나",
+          "romanization": "Munrina"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "章立娜",
+          "romanization": "Zhānglìnà"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "章立娜"
+        },
+        {
+          "language": "French",
+          "name": "Marina"
+        },
+        {
+          "language": "Spanish",
+          "name": "Marina"
+        },
+        {
+          "language": "Italian",
+          "name": "Marina"
+        },
+        {
+          "language": "German",
+          "name": "Marianne"
+        },
+        {
+          "language": "Dutch",
+          "name": "Marina"
+        },
+        {
+          "language": "Russian",
+          "name": "Марина",
+          "romanization": "Marina"
+        }
+      ],
+      "amiibo": {
+        "number": "234",
+        "series": "Series 5",
+        "starSign": "Cancer",
+        "birthday": "June 26",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/234_Marina_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Marina"
+    },
+    "zucker": {
+      "appearance": "Zucker is an octopus, resembling the Japanese snack takoyaki, with a bamboo toothpick stuck in his head. His head resembles a takoyaki ball with his green freckles resembling seasonings put on takoyaki, and his \"hair\" representing a sauce that is usually served with takoyaki. He has black, oval-shaped eyes, which turn to white with black outlines when he is shocked. His body is a similar shade of red as Octavian's.",
+      "personality": "As a lazy villager, Zucker has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Zucker goes to sleep at 11 PM and wakes up at 8 AM.",
+      "villagerInfo": {
+        "birthday": "March 8",
+        "starSign": "Pisces",
+        "personality": "Lazy",
+        "subPersonality": "A",
+        "catchphrase": "bloop",
+        "quote": "There's no such thing as luck.",
+        "gender": "Male",
+        "defaultClothing": "happi tee (Blue)",
+        "umbrella": "blue umbrella",
+        "hobby": "Nature",
+        "favoriteStyles": [
+          "Simple",
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Blue",
+          "Yellow"
+        ],
+        "bag": "Veggie-print",
+        "food": "Chocolate donut",
+        "drink": "Tea can or yellow mug"
+      },
+      "house": {
+        "roof": "dark-brown thatch roof",
+        "siding": "tan panel siding",
+        "door": "red rustic door",
+        "wallpaper": "Chain-Link Fence",
+        "flooring": "Backyard Lawn",
+        "music": "Spring Blossoms",
+        "musicNote": "Does not contain a stereo initially",
+        "furniture": [
+          "Log Bench",
+          "Cotton Candy Stall",
+          "Outdoor Generator",
+          "Party Garland",
+          "Cooler Box",
+          "Outdoor Table",
+          "Stall",
+          "Portable Radio",
+          "Stand Mixer",
+          "Cutting Board",
+          "Steamer Basket Set",
+          "Cardboard Box",
+          "Cardboard Box"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Zucker_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Zucker_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "タコヤ",
+          "romanization": "Takoya"
+        },
+        {
+          "language": "Korean",
+          "name": "탁호",
+          "romanization": "Takho"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "章丸丸",
+          "romanization": "Zhāng wánwán"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "章丸丸"
+        },
+        {
+          "language": "French",
+          "name": "Marvin"
+        },
+        {
+          "language": "Spanish",
+          "name": "Paulino"
+        },
+        {
+          "language": "Italian",
+          "name": "Poldo"
+        },
+        {
+          "language": "German",
+          "name": "Ottokar"
+        },
+        {
+          "language": "Dutch",
+          "name": "Zucker"
+        },
+        {
+          "language": "Russian",
+          "name": "Цукер",
+          "romanization": "Tsuker"
+        }
+      ],
+      "amiibo": {
+        "number": "364",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Pisces",
+        "birthday": "March 8",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/364_Zucker_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Zucker"
+    },
+    "beau": {
+      "appearance": "Beau is a deer that resembles either an or a, two species of antelope. He has bright orange fur and sports black-tipped ears and hooves. He has striped antlers, white circles around his eyes, peach eyelids, a white snout, and a brown nose and philtrum.",
+      "personality": "As a lazy villager, Beau has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Beau goes to sleep at 11 PM and wakes up at 8 AM.",
+      "villagerInfo": {
+        "birthday": "April 5",
+        "starSign": "Aries",
+        "personality": "Lazy",
+        "subPersonality": "A",
+        "catchphrase": "saltlick",
+        "quote": "You snooze, you lose.",
+        "gender": "Male",
+        "defaultClothing": "reindeer sweater (Green)",
+        "umbrella": "melon umbrella",
+        "hobby": "Nature",
+        "favoriteStyles": [
+          "Simple",
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Beige",
+          "Orange"
+        ],
+        "bag": "Paper",
+        "food": "Lollipop",
+        "drink": "Soda can"
+      },
+      "house": {
+        "roof": "natural slate roof",
+        "siding": "light-brown log exterior",
+        "door": "yellow simple door",
+        "wallpaper": "Meadow Vista",
+        "flooring": "Daisy Meadow",
+        "music": "Mountain Song",
+        "furniture": [
+          "Brick Oven",
+          "Firewood",
+          "Pond Stone",
+          "Sleeping Bag",
+          "Smoker",
+          "Log Bench",
+          "Outdoor Picnic Set",
+          "Blue Vinyl Sheet",
+          "Cassette Player",
+          "Picnic Basket"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Beau_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Beau_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ペーター",
+          "romanization": "Pētā"
+        },
+        {
+          "language": "Korean",
+          "name": "피터",
+          "romanization": "Piteo"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "彼得",
+          "romanization": "Bǐ Dé"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "彼得"
+        },
+        {
+          "language": "French",
+          "name": "Stefaon"
+        },
+        {
+          "language": "Spanish",
+          "name": "Lope"
+        },
+        {
+          "language": "Italian",
+          "name": "Gigi"
+        },
+        {
+          "language": "German",
+          "name": "Martin"
+        },
+        {
+          "language": "Dutch",
+          "name": "Beau"
+        },
+        {
+          "language": "Russian",
+          "name": "Бью",
+          "romanization": "Byu"
+        }
+      ],
+      "amiibo": {
+        "number": "167",
+        "series": "Animal Crossing amiibo",
+        "starSign": "Aries",
+        "birthday": "April 5",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/167_Beau_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Beau"
+    },
+    "bea": {
+      "intro": "Bea is a normal dog villager in the. She first appeared in, and after her appearance in, she remained absent from the series until. Her name may be derived from ''Beagle'', a breed of dog. Her catchphrase is likely derived from \",\" an old children's folk song about a dog and a farmer. This may also relate to her hobby and house request.",
+      "appearance": "Bea is a brown dog with a muddy looking mouth and dark brown ears; the eyelids of her half-closed eyes are a matching shade of brown. Both her hind and fore paws also have dark brown tips.",
+      "personality": "Bea has a normal personality, which means she is very friendly and well-mannered. Bea is also very sweet and likes to talk. Bea appears to be rather shy at times, but once players get close to her and become her friend, her shy personality breaks and she becomes more outgoing. She will easily get upset and as all normal villagers, will become sad when bullied.",
+      "villagerInfo": {
+        "birthday": "October 15",
+        "starSign": "Libra",
+        "personality": "Normal",
+        "subPersonality": "A",
+        "catchphrase": "bingo",
+        "quote": "The perfect pair complements each other.",
+        "gender": "Female",
+        "defaultClothing": "striped maxi dress (Orange)",
+        "umbrella": "mint umbrella",
+        "hobby": "Nature",
+        "favoriteStyles": [
+          "Simple",
+          "Cool"
+        ],
+        "favoriteColors": [
+          "Aqua",
+          "Green"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "orange thatch roof",
+        "siding": "light-brown cobblestones",
+        "door": "common door",
+        "wallpaper": "Blackboard Wall",
+        "flooring": "Cork Flooring",
+        "music": "Drivin'",
+        "furniture": [
+          "Rattan Armchair",
+          "Lecture Hall Desk",
+          "Monstera",
+          "Menu Chalkboard",
+          "Pot Rack",
+          "Laptop",
+          "Cute Music Player",
+          "Diner Counter Table",
+          "Soup Kettle",
+          "Soup Kettle",
+          "Soup Kettle",
+          "Soup Kettle",
+          "Open Frame Kitchen",
+          "Iron Entrance Mat",
+          "Espresso Maker",
+          "Infused Water Dispenser",
+          "Simple Kettle"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Bea_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Bea_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ベーグル",
+          "romanization": "Bēguru"
+        },
+        {
+          "language": "Korean",
+          "name": "베이글",
+          "romanization": "Beigeul"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "贝果",
+          "romanization": "Bèi Guǒ"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "貝果"
+        },
+        {
+          "language": "French",
+          "name": "Béa"
+        },
+        {
+          "language": "Spanish",
+          "name": "Bea"
+        },
+        {
+          "language": "Italian",
+          "name": "Cucciola"
+        },
+        {
+          "language": "German",
+          "name": "Bea"
+        },
+        {
+          "language": "Dutch",
+          "name": "Bea"
+        },
+        {
+          "language": "Russian",
+          "name": "Беа",
+          "romanization": "Bea"
+        }
+      ],
+      "sourceUrl": "https://nookipedia.com/wiki/Bea"
+    },
+    "audie": {
+      "appearance": "Audie is an orange wolf with a whitish yellow coloration on her snout, hands, feet, and the tip of her tail. She resembles a fox, and her catchphrase \"foxtrot\" references her fox-like appearance. She has a pair of white sunglasses with purple lenses resting on her forehead, along with teal coloration inside her ears and blonde hair swept to the side. She has blue eyes with prominent lashes and yellow eyeshadow.",
+      "personality": "As a peppy villager, Audie will appear cheerful and friendly, and sometimes will reward others with gifts and compliments. To some villagers however, Audie can appear to be rude sometimes. She has a short attention span and may have the tendency to overreact about small things. She will be easy to befriend, taking comfort in those she talks to most. She may, however, feel insulted when talking to snooty or cranky villagers, who may gossip about her or disagree with her style. She may also find it difficult to talk with lazy villagers, but she gives out comfort to jocks, who are the male equivalent to the peppy villagers. She also gets along well with normal, big sister, and smug villagers.",
+      "villagerInfo": {
+        "birthday": "August 31",
+        "starSign": "Virgo",
+        "personality": "Peppy",
+        "subPersonality": "A",
+        "catchphrase": "foxtrot",
+        "quote": "Be the kind of person your future self won't regret having been.",
+        "gender": "Female",
+        "defaultClothing": "tropical muumuu (Mint)",
+        "umbrella": "fairy-tale umbrella",
+        "hobby": "Fitness",
+        "favoriteStyles": [
+          "Cute",
+          "Active"
+        ],
+        "favoriteColors": [
+          "Green",
+          "White"
+        ],
+        "bag": "Veggie-print",
+        "food": "Chocolate donut",
+        "drink": "Tea can or yellow mug"
+      },
+      "house": {
+        "roof": "orange thatch roof",
+        "siding": "mint-blue stucco exterior",
+        "door": "white latticework door",
+        "wallpaper": "Tropical Vista",
+        "flooring": "Green Floral Flooring",
+        "music": "K.K. Island",
+        "furniture": [
+          "Rattan End Table",
+          "Tape Deck",
+          "Open Frame Kitchen",
+          "Diner Neon Sign",
+          "Menu Chalkboard",
+          "Double Door Refrigerator",
+          "Cardboard Box",
+          "Fruit Basket",
+          "Wall Fan",
+          "Rattan Low Table",
+          "Coconut Juice",
+          "Yellow Kitchen Mat",
+          "Palm Tree Lamp"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Audie_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Audie_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "モニカ",
+          "romanization": "Monika"
+        },
+        {
+          "language": "Korean",
+          "name": "모니카",
+          "romanization": "Monika"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "莫妮卡",
+          "romanization": "Mònīkǎ"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "莫妮卡"
+        },
+        {
+          "language": "French",
+          "name": "Monica"
+        },
+        {
+          "language": "Spanish",
+          "name": "Mónica"
+        },
+        {
+          "language": "Italian",
+          "name": "Lupilia"
+        },
+        {
+          "language": "German",
+          "name": "Katharina"
+        },
+        {
+          "language": "Dutch",
+          "name": "Audie"
+        },
+        {
+          "language": "Russian",
+          "name": "Оди",
+          "romanization": "Odi"
+        }
+      ],
+      "amiibo": {
+        "number": "428",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Virgo",
+        "birthday": "August 31",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/428_Audie_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Audie"
+    },
+    "stitches": {
+      "appearance": "Stitches is a bear cub with the appearance of a teddy bear, stitched together with a bright purple forehead and tail, an orange face and body, ''x''-shaped eyes, and two ears of different colors. His left ear is blue and light green and his right ear is dark green and orange. His limbs are all colored differently; his left arm is dark green, his right arm is blue, his left leg is dark orange, and his right leg is light green. He has a small, white muzzle with a bear smile and nose, as well as a white stomach.",
+      "personality": "As a lazy villager, Stitches has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Stitches goes to sleep at 11 PM and wakes up at 8 AM.",
+      "villagerInfo": {
+        "birthday": "February 10",
+        "starSign": "Aquarius",
+        "personality": "Lazy",
+        "subPersonality": "B",
+        "catchphrase": "stuffin'",
+        "quote": "A stitch in time saves nine.",
+        "gender": "Male",
+        "defaultClothing": "starry tank",
+        "umbrella": "panda umbrella",
+        "hobby": "Play",
+        "favoriteStyles": [
+          "Simple",
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Colorful",
+          "White"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "green striped roof",
+        "siding": "yellow stucco exterior",
+        "door": "burgundy basic door",
+        "wallpaper": "Blue Quilt Wall",
+        "flooring": "Patchwork-Tile Flooring",
+        "music": "I Love You",
+        "furniture": [
+          "Mom's Cushion",
+          "Wooden Block Toy",
+          "Toy Box",
+          "Wooden Simple Bed",
+          "Baby Chair",
+          "Mom's Plushie",
+          "Wooden Chest",
+          "Mom's Lively Kitchen Mat",
+          "Cute Music Player",
+          "Wooden Block Stool",
+          "Mom's Pen Stand",
+          "Wooden Mini Table",
+          "Mom's Tissue Box",
+          "Wooden Low Table",
+          "Modeling Clay",
+          "Study Poster",
+          "Mom's Embroidery",
+          "Yellow Checked Rug",
+          "Baby Bear"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Stitches_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Stitches_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "パッチ",
+          "romanization": "Patchi"
+        },
+        {
+          "language": "Korean",
+          "name": "패치",
+          "romanization": "Paechi"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "玩具熊",
+          "romanization": "Wánjù xióng"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "玩具熊"
+        },
+        {
+          "language": "French",
+          "name": "Miro"
+        },
+        {
+          "language": "Spanish",
+          "name": "Parches"
+        },
+        {
+          "language": "Italian",
+          "name": "Toppetta"
+        },
+        {
+          "language": "German",
+          "name": "Berry"
+        },
+        {
+          "language": "Dutch",
+          "name": "Stitches"
+        },
+        {
+          "language": "Russian",
+          "name": "Стичес",
+          "romanization": "Stiches"
+        }
+      ],
+      "amiibo": {
+        "number": "318",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Aquarius",
+        "birthday": "February 10",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/318_Stitches_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Stitches"
+    },
+    "maple": {
+      "intro": "Maple is a normal bear cub villager in the who appears in all games to date. Her name may come from ''maple'' trees, which are known to bear light-brown leaves, referring to Maple's fur color. Her catchphrase, \"honey,\" refers to how bears enjoy eating honey.",
+      "appearance": "Maple is a brown bear cub with a cream-colored muzzle, hands, and feet. She has bangs, a black nose, and pink blush. In, her eyes are much smaller and more displaced, her muzzle is instead tan, her blush is smaller, and her nose is larger. Moreover, she has dark brown eyebrows, and she wears a red ribbon on the back of her head.",
+      "personality": "Maple is a kind, caring and calm character like all normal villagers. Like all normal villagers, she will easily become upset or offended by other villagers, particularly lazy villagers who mislead her in conversation and cranky villagers who have a rude, scheming nature. She enjoys the usual hobbies, such as; fishing and bug catching, usually to keep her active. As with all other villagers, she will enjoy the player's company at her house where she may tell the player to \"ignore the mess\" &ndash; a concern she shares with other normal villagers. In, she will talk about an unseen character called Moppina, a mop referred to as her friend which reflects on the normal personality type who has hygiene and cleanliness concerns. She will get along well with other normal villagers and peppy villagers, appearing mother-like in conversation. She will also get on well with snooty and smug villagers, who enjoy the good natured personality of the normal villager, who often compliment them.",
+      "villagerInfo": {
+        "birthday": "June 15",
+        "starSign": "Gemini",
+        "personality": "Normal",
+        "subPersonality": "B",
+        "catchphrase": "honey",
+        "quote": "Waste not, want not.",
+        "gender": "Female",
+        "defaultClothing": "tree sweater",
+        "umbrella": "candy umbrella",
+        "hobby": "Education",
+        "favoriteStyles": [
+          "Simple",
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Beige",
+          "Green"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "brown wooden roof",
+        "siding": "beige clay exterior",
+        "door": "windowed door",
+        "wallpaper": "Green Blossoming Wall",
+        "flooring": "Wooden-Knot Flooring",
+        "music": "Forest Life",
+        "furniture": [
+          "Gas Range",
+          "Wooden Simple Bed",
+          "Magazine Rack",
+          "Birdcage",
+          "Wood Burning Stove",
+          "Mom's Cushion",
+          "Anthurium Plant",
+          "Wooden End Table",
+          "Cute Music Player",
+          "Mini Fridge",
+          "Revolving Spice Rack",
+          "Macrame Tapestry",
+          "Retro Dotted Rug",
+          "Wooden Low Table",
+          "Magazine",
+          "Mug",
+          "Pot Rack",
+          "Baby Bear"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Maple_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Maple_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "メープル",
+          "romanization": "Mēpuru"
+        },
+        {
+          "language": "Korean",
+          "name": "메이첼",
+          "romanization": "Meychel"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "小枫",
+          "romanization": "Xiǎofēng"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "小楓"
+        },
+        {
+          "language": "French",
+          "name": "Léa"
+        },
+        {
+          "language": "Spanish",
+          "name": "Dulce"
+        },
+        {
+          "language": "Italian",
+          "name": "Dulcinea"
+        },
+        {
+          "language": "German",
+          "name": "Mona"
+        },
+        {
+          "language": "Dutch",
+          "name": "Maple"
+        },
+        {
+          "language": "Russian",
+          "name": "Мейпл",
+          "romanization": "Meypl"
+        }
+      ],
+      "amiibo": {
+        "number": "294",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Gemini",
+        "birthday": "June 15",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/294_Maple_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Maple"
+    },
+    "fauna": {
+      "appearance": "Fauna is a brown deer with orange accents on her face and limbs. She has red spots for her cheeks, and bright-pink coloring on the insides of her ears. She has multiple light-brown spots on the back of her head. Her hooves are yellow as well.",
+      "personality": "Fauna has a normal personality, so she will act shy, but caring toward the player. She will get along well with villagers of any personality type. She will have hygiene concerns, represented when the player visits her house, and she will state her embarrassment at the supposedly unclean appearance of her home. She will mention her interest in reading and the various books she reads. She also will enjoy writing and receiving letters.",
+      "villagerInfo": {
+        "birthday": "March 26",
+        "starSign": "Aries",
+        "personality": "Normal",
+        "subPersonality": "A",
+        "catchphrase": "dearie",
+        "quote": "The first step is always the hardest.",
+        "gender": "Female",
+        "defaultClothing": "Bohemian tunic dress (Red)",
+        "umbrella": "raindrop umbrella",
+        "hobby": "Nature",
+        "favoriteStyles": [
+          "Simple",
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Beige",
+          "White"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "brown stone roof",
+        "siding": "beige stucco exterior",
+        "door": "maple rustic door",
+        "wallpaper": "Red-Brick Wall",
+        "flooring": "Mint Dot Flooring",
+        "music": "K.K. Stroll",
+        "furniture": [
+          "Wooden Block Bed",
+          "Wooden Block Bookshelf",
+          "Pot Rack",
+          "Gas Range",
+          "Wooden Block Chair",
+          "Wooden Block Chest",
+          "Portable Record Player",
+          "Wooden Block Table",
+          "Mini Fridge",
+          "Cutting Board",
+          "Cuckoo Clock",
+          "Vintage TV Tray",
+          "Tree's Bounty Lamp",
+          "Wooden Block Stool",
+          "Book Stands"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Fauna_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Fauna_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ドレミ",
+          "romanization": "Doremi"
+        },
+        {
+          "language": "Korean",
+          "name": "솔미",
+          "romanization": "Solmi"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "音音",
+          "romanization": "Yīn yīn"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "音音"
+        },
+        {
+          "language": "French",
+          "name": "Bibi"
+        },
+        {
+          "language": "Spanish",
+          "name": "Fauna"
+        },
+        {
+          "language": "Italian",
+          "name": "Cervina"
+        },
+        {
+          "language": "German",
+          "name": "Fatima"
+        },
+        {
+          "language": "Dutch",
+          "name": "Fauna"
+        },
+        {
+          "language": "Russian",
+          "name": "Фауна",
+          "romanization": "Fauna"
+        }
+      ],
+      "amiibo": {
+        "number": "019",
+        "series": "Series 1–4",
+        "starSign": "Aries",
+        "birthday": "March 26",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/019_Fauna_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Fauna"
+    },
+    "coco": {
+      "intro": "Coco is a normal rabbit villager in the who appears in all games to date. She is the only normal rabbit in the series. Her English name may come from her coconut-like head. Her Japanese name comes from the historical era known as the during which small clay figures known as '' '' were produced. Like the gyroids, these ''haniwa'' figures are what Coco's appearance is based on.",
+      "appearance": "Coco is a tan, clay-like rabbit with hollow eyes and mouth, similar in appearance to a Gyroid. Her legs are slightly darker than the rest of her body. There is what appears to be a seam or fold around the top of her head. Her face is always expressionless, regardless of her emotions, though when surprised, her eyes become slightly bigger.",
+      "personality": "Coco has a normal personality, so she will act shy, but caring toward the player. She will get along well with villagers of any personality type. She will have hygiene concerns, represented when the player visits her house, and she will state her embarrassment at the supposedly unclean appearance of her home. She will mention her interest in reading and the various books she reads. She also will enjoy writing and receiving letters.",
+      "villagerInfo": {
+        "birthday": "March 1",
+        "starSign": "Pisces",
+        "personality": "Normal",
+        "subPersonality": "B",
+        "catchphrase": "doyoing",
+        "quote": "Don't put off till tomorrow what you can do today.",
+        "gender": "Female",
+        "defaultClothing": "layered tank dress (Beige)",
+        "umbrella": "leaf umbrella",
+        "hobby": "Education",
+        "favoriteStyles": [
+          "Simple",
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Beige",
+          "Green"
+        ],
+        "bag": "Veggie-print",
+        "food": "Chocolate donut",
+        "drink": "Tea can or yellow mug"
+      },
+      "house": {
+        "roof": "beige thatch roof",
+        "siding": "classy zen exterior",
+        "door": "rustic door",
+        "wallpaper": "Rammed-Earth Wall",
+        "flooring": "Floral Rush-Mat Flooring",
+        "music": "K.K. Jongara",
+        "musicNote": "Does not contain a stereo initially",
+        "furniture": [
+          "Old Fashioned Washtub",
+          "Classic Pitcher",
+          "Tiki Torch",
+          "Stone Stool",
+          "Hay Bed",
+          "Stone Table",
+          "Clothesline",
+          "Unglazed Dish Set",
+          "Pot"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Coco_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Coco_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "やよい",
+          "romanization": "Yayoi"
+        },
+        {
+          "language": "Korean",
+          "name": "이요",
+          "romanization": "Iyo"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "仰韶"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "仰韶"
+        },
+        {
+          "language": "French",
+          "name": "Coco"
+        },
+        {
+          "language": "Spanish",
+          "name": "Cocoloca"
+        },
+        {
+          "language": "Italian",
+          "name": "Coco"
+        },
+        {
+          "language": "German",
+          "name": "Koko"
+        },
+        {
+          "language": "Dutch",
+          "name": "Coco"
+        },
+        {
+          "language": "Russian",
+          "name": "Коко",
+          "romanization": "Koko"
+        }
+      ],
+      "amiibo": {
+        "number": "150",
+        "series": "Animal Crossing amiibo",
+        "starSign": "Pisces",
+        "birthday": "March 1",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/150_Coco_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Coco"
+    },
+    "chrissy": {
+      "appearance": "Chrissy in.\nChrissy is a white rabbit with a pink polka-dot hood, a blonde fringe, a green nose, and pink blush. She has two pink eyelashes near the bottom of her eyes. She has black eyes with white sparkles in them, although her eyes change to pink when she is shocked. She is almost identical in appearance to Francine, the differences being that Chrissy is pink instead of blue, and Francine has different eyes. She is almost always smiling.",
+      "personality": "As a peppy villager, Chrissy will have the tendency to over-react in conversations about trivial subjects such as appearing in competitions and the chance of her losing. This sometimes triggers her to ask for a certain item of clothing or furniture which she needs to enter a competition. She, like other peppy villagers, will rarely be discouraged from doing anything, including the usual hobbies. She will also have a short attention span, which means she will soon forget arguments or tasks given to the player which were not completed. She says that the color pink suits her best. She will be, like all peppy villagers, friendly and excitable, and she will come out of her house often. She will rarely get discouraged from doing anything. She will often ask the player for a fossil because she is interested in hunting for them. Keep in mind that she may have a mean attitude to snooty villagers and will blame the player for something she dislikes. Rather than becoming sad when other villagers make rude comments, she will become enraged. She doesn't eat too much, so this will not be a problem for her since jocks won't make fun of her. Cranky and snooty villagers will make fun of her, calling her names. She will get along with jock, lazy, normal and other peppy villagers who seem to be open minded to her, but may annoy snooty and cranky villagers due to her upbeat and cheery personality.",
+      "villagerInfo": {
+        "birthday": "August 28",
+        "starSign": "Virgo",
+        "personality": "Peppy",
+        "subPersonality": "B",
+        "catchphrase": "sparkles",
+        "quote": "A fool and their Bells are soon parted.",
+        "gender": "Female",
+        "defaultClothing": "marble-dots dress (White)",
+        "umbrella": "white shiny-bows parasol",
+        "hobby": "Fashion",
+        "favoriteStyles": [
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Pink",
+          "White"
+        ],
+        "bag": "Pink",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "pink wooden-tile roof",
+        "siding": "mint-blue stucco exterior",
+        "door": "pink iron grill door",
+        "wallpaper": "Red Dotted Wall",
+        "flooring": "Cute Red-Tile Flooring",
+        "music": "Bubblegum K.K.",
+        "furniture": [
+          "Cute Chair",
+          "Cute Bed",
+          "Cute Floor Lamp",
+          "Cute Wall Mounted Clock",
+          "Cute Tea Table",
+          "Cute Wardrobe",
+          "Cute Music Player",
+          "Francine's Photo",
+          "Cute Vanity",
+          "Cute Sofa",
+          "Cute DIY Table"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Chrissy_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Chrissy_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "クリスチーヌ",
+          "romanization": "Kurisuchīnu"
+        },
+        {
+          "language": "Korean",
+          "name": "크리스틴",
+          "romanization": "Keuliseutin"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "克莉琪",
+          "romanization": "Kè lì qí"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "克莉琪"
+        },
+        {
+          "language": "French",
+          "name": "Kristine"
+        },
+        {
+          "language": "Spanish",
+          "name": "Lali"
+        },
+        {
+          "language": "Italian",
+          "name": "Natascha"
+        },
+        {
+          "language": "German",
+          "name": "Anne"
+        },
+        {
+          "language": "Dutch",
+          "name": "Chrissy"
+        },
+        {
+          "language": "Russian",
+          "name": "Крисси",
+          "romanization": "Krissi"
+        }
+      ],
+      "amiibo": {
+        "number": "300",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Virgo",
+        "birthday": "August 28",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/300_Chrissy_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Chrissy"
+    },
+    "tangy": {
+      "intro": "Tangy is a peppy cat villager in the who appears in all games to date. Her name is derived from ''tangerine'', a citrus fruit similar to oranges, which relates to her appearance, as well as ''tangy'', an adjective used to describe those fruits. Her Japanese catchphrase, \",\" is a type of mandarin orange.",
+      "appearance": "Tangy is a cat with an orange fruit appearance, as well as a green leaf on her head, similar to Tank. The insides of her ears are pink. Her eyes seem to be looking southeast, but she will become cross-eyed when looking up or down. She has small indents all over her body, making her resemble an orange, tangerine, or a clementine (which are all tangy fruits, hence her name).",
+      "personality": "Tangy, as a peppy villager, will always appear to be in a good mood. She will get along with other villagers, including the player, making it easy to befriend her and gain her picture in. She will enjoy the usual hobbies, and may ask the player for bugs or fish that she finds cute or has read about in Ms. Nintendique, an unseen magazine read by snooty and peppy villagers in. Often she says she's \"feeling kinda bloated\" because she \"ate, like, 50 pounds of.\" She will easily get upset, but due to a short attention span she will forget ever having the conversation. Like all peppy villagers, she dreams of becoming famous in the future. She will get on well with normal, lazy, and other peppy villagers, but may annoy snooty and cranky villagers with her upbeat personality.",
+      "villagerInfo": {
+        "birthday": "June 17",
+        "starSign": "Gemini",
+        "personality": "Peppy",
+        "subPersonality": "B",
+        "catchphrase": "reeeeOWR",
+        "quote": "When life gives you lemons, make lemonade!",
+        "gender": "Female",
+        "defaultClothing": "retro dress (Green)",
+        "umbrella": "strawberry umbrella",
+        "hobby": "Music",
+        "favoriteStyles": [
+          "Simple",
+          "Cute"
+        ],
+        "favoriteColors": [
+          "Green",
+          "Yellow"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "green striped roof",
+        "siding": "orange stucco exterior",
+        "door": "white wooden door",
+        "wallpaper": "Orange Wall",
+        "flooring": "Green Retro Flooring",
+        "music": "I Love You",
+        "furniture": [
+          "Coconut Wall Planter",
+          "Juicy Apple TV",
+          "Palm Tree Lamp",
+          "Pear Bed",
+          "Orange End Table",
+          "Apple Chair",
+          "Cherry Speakers",
+          "Peach Chair",
+          "Pear Wardrobe",
+          "Cardboard Box",
+          "Cardboard Box",
+          "Fruit Basket",
+          "Fruit Wreath",
+          "Peach Surprise Box",
+          "Orange End Table",
+          "Orange Dress",
+          "Infused Water Dispenser",
+          "Orange Wall Mounted Clock"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Tangy_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Tangy_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ヒャクパー",
+          "romanization": "Hyakupā"
+        },
+        {
+          "language": "Korean",
+          "name": "백프로",
+          "romanization": "Baekpeuro"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "纯纯",
+          "romanization": "Chúnchún"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "純純"
+        },
+        {
+          "language": "French",
+          "name": "Marine"
+        },
+        {
+          "language": "Spanish",
+          "name": "Tricia"
+        },
+        {
+          "language": "Italian",
+          "name": "Arancina"
+        },
+        {
+          "language": "German",
+          "name": "Tanja"
+        },
+        {
+          "language": "Dutch",
+          "name": "Tangy"
+        },
+        {
+          "language": "Russian",
+          "name": "Тэнджи",
+          "romanization": "Te`ndzhi"
+        }
+      ],
+      "amiibo": {
+        "number": "244",
+        "series": "Series 5",
+        "starSign": "Gemini",
+        "birthday": "June 17",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/244_Tangy_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Tangy"
+    },
+    "merengue": {
+      "appearance": "Merengue is a pink rhinoceros with white hooves and hair. Her horn is red with dark red spots and is surrounded by green semicircles so it resembles a strawberry.",
+      "personality": "As a normal villager, Merengue will appear friendly and hospitable towards the player and other villagers. Like other normal villagers, she will have an unseen obsession with hygiene and cleanliness, which she mentions when the player visits her in her home. Other than her hygiene interests, she will appear neutral and open-minded when discussing hobbies. She will get along easily with other villagers, but may conflict with lazy villagers when they talk about food and leading her on to suggesting making them dinner or lunch.",
+      "villagerInfo": {
+        "birthday": "March 19",
+        "starSign": "Pisces",
+        "personality": "Normal",
+        "subPersonality": "A",
+        "catchphrase": "shortcake",
+        "quote": "Life is a piece of cake.",
+        "gender": "Female",
+        "defaultClothing": "chef's outfit (Red)",
+        "umbrella": "lacy parasol",
+        "hobby": "Nature",
+        "favoriteStyles": [
+          "Cute",
+          "Simple"
+        ],
+        "favoriteColors": [
+          "White",
+          "Red"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "red slate roof",
+        "siding": "beige cobblestones",
+        "door": "beige basic door",
+        "wallpaper": "Pastel Dotted Wall",
+        "flooring": "Mint Dot Flooring",
+        "music": "K.K. Ballad",
+        "musicNote": "Does not contain a stereo initially",
+        "furniture": [
+          "Double Door Refrigerator",
+          "Menu Chalkboard",
+          "Cute Sofa",
+          "Kitchen Island",
+          "Cute Tea Table",
+          "Portable Radio",
+          "Potted Ivy",
+          "Chef's Outfit",
+          "Wooden Low Table",
+          "Cream and Sugar",
+          "Tea Set",
+          "Diner Counter Table",
+          "Microwave",
+          "Stand Mixer",
+          "Soft Serve Lamp"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Merengue_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Merengue_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "パティ",
+          "romanization": "Pati"
+        },
+        {
+          "language": "Korean",
+          "name": "스트로베리",
+          "romanization": "Seuteuroberi"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "草莓",
+          "romanization": "CǎoMéi"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "草莓"
+        },
+        {
+          "language": "French",
+          "name": "Patty"
+        },
+        {
+          "language": "Spanish",
+          "name": "Natura"
+        },
+        {
+          "language": "Italian",
+          "name": "Irina"
+        },
+        {
+          "language": "German",
+          "name": "Maria"
+        },
+        {
+          "language": "Dutch",
+          "name": "Merengue"
+        },
+        {
+          "language": "Russian",
+          "name": "Меренг",
+          "romanization": "Mereng"
+        }
+      ],
+      "amiibo": {
+        "number": "285",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Pisces",
+        "birthday": "March 19",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/285_Merengue_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Merengue"
+    },
+    "lolly": {
+      "appearance": "Lolly in.\nLolly is a blue-gray tabby cat with a big round head and no visible nose. She has black ears and black stripes on her arms, tail, and ears, as well as her head sides, back, and top; they were changed to look more dark gray in New Horizons. The inside of her ears are pink and light pink. Her paws are tipped white, and her muzzle is white and circular. She has a \"3\" shaped mouth, and her eyes resemble the number 6. When she looks up, her eyes resemble the number 9.",
+      "personality": "Like most normal or \"sweet\" villagers, Lolly will be very sensitive and kind. She will be easily upset or offended by other villagers, particularly lazy or cranky villagers. She enjoys the usual hobbies, which are fashion, bug catching, fishing, and furniture. As with all other villagers, she will enjoy the player's company at her house where she may tell the player to \"ignore the mess\", a concern she shares with other normal villagers. She will get along well with other normal villagers and peppy villagers, appearing mother-like in conversation.",
+      "villagerInfo": {
+        "birthday": "March 27",
+        "starSign": "Aries",
+        "personality": "Normal",
+        "subPersonality": "B",
+        "catchphrase": "bonbon",
+        "quote": "Laughter is the best medicine.",
+        "gender": "Female",
+        "defaultClothing": "snowy sweater (Gray)",
+        "umbrella": "snowflake umbrella",
+        "hobby": "Music",
+        "favoriteStyles": [
+          "Simple"
+        ],
+        "favoriteColors": [
+          "Gray",
+          "Pink"
+        ],
+        "bag": "Classy",
+        "food": "Sandwich",
+        "drink": "Smoothie or coffee cup"
+      },
+      "house": {
+        "roof": "turquoise slate roof",
+        "siding": "light-brown stucco exterior",
+        "door": "white windowed door",
+        "wallpaper": "Modern Wood Wall",
+        "flooring": "Green Vinyl Flooring",
+        "music": "Forest Life",
+        "furniture": [
+          "Double Sofa",
+          "Wooden Block Bed",
+          "Double Door Refrigerator",
+          "Wooden Stool",
+          "Wooden Block Chest",
+          "Portable Record Player",
+          "Wooden Block Bookshelf",
+          "Kitchen Island",
+          "Mini DIY Workbench",
+          "Old Fashioned Alarm Clock",
+          "Wooden Block Wall Clock",
+          "Potted Ivy"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Lolly_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Lolly_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "ラムネ",
+          "romanization": "Ramune"
+        },
+        {
+          "language": "Korean",
+          "name": "사이다",
+          "romanization": "Saida"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "柠檬娜",
+          "romanization": "Níngméngnà"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "檸檬娜"
+        },
+        {
+          "language": "French",
+          "name": "Linette"
+        },
+        {
+          "language": "Spanish",
+          "name": "Feli"
+        },
+        {
+          "language": "Italian",
+          "name": "Maty"
+        },
+        {
+          "language": "German",
+          "name": "Feline"
+        },
+        {
+          "language": "Dutch",
+          "name": "Lolly"
+        },
+        {
+          "language": "Russian",
+          "name": "Лолли",
+          "romanization": "Lolli"
+        }
+      ],
+      "amiibo": {
+        "number": "333",
+        "series": "Series 1–5 (New Horizons)",
+        "starSign": "Aries",
+        "birthday": "March 27",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/333_Lolly_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Lolly"
+    },
+    "poppy": {
+      "appearance": "Poppy is a red squirrel with a cream muzzle, tail stripe, and tipped paws. Her ears are turquoise blue on the inside, and her nose is orange.",
+      "personality": "Poppy has a normal personality, which means she is very friendly, and likes to talk to the player. She rarely gets mad, even if hit with a net. But doing so may make her depressed. She will act motherly to the player and other villagers. She will act sweet and hospitable to the player.",
+      "villagerInfo": {
+        "birthday": "August 5",
+        "starSign": "Leo",
+        "personality": "Normal",
+        "subPersonality": "B",
+        "catchphrase": "nutty",
+        "quote": "It's all about positive thinking!",
+        "gender": "Female",
+        "defaultClothing": "alpinist dress (Green)",
+        "umbrella": "mini-flower-print umbrella",
+        "hobby": "Education",
+        "favoriteStyles": [
+          "Cute",
+          "Elegant"
+        ],
+        "favoriteColors": [
+          "Green",
+          "Yellow"
+        ],
+        "bag": "Veggie-print",
+        "food": "Chocolate donut",
+        "drink": "Tea can or yellow mug"
+      },
+      "house": {
+        "roof": "brown tile roof",
+        "siding": "light-gray stucco exterior",
+        "door": "red vertical-panes door",
+        "wallpaper": "Autumn Wall",
+        "flooring": "Colored-Leaves Flooring",
+        "music": "Forest Life",
+        "furniture": [
+          "Simple DIY Workbench",
+          "Log Garden Lounge",
+          "Tree's Bounty Arch",
+          "Wooden Bucket",
+          "Log Round Table",
+          "Log Bench",
+          "Tiny Library",
+          "Traditional Balancing Toy",
+          "Picnic Basket",
+          "Log Stool",
+          "Portable Record Player",
+          "Leaf Campfire"
+        ],
+        "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Poppy_NH_Model.png",
+        "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Poppy_NH.jpg"
+      },
+      "languages": [
+        {
+          "language": "Japanese",
+          "name": "グミ",
+          "romanization": "Gumi"
+        },
+        {
+          "language": "Korean",
+          "name": "다람",
+          "romanization": "Daram"
+        },
+        {
+          "language": "Chinese (Simplified)",
+          "name": "软糖",
+          "romanization": "RuǎnTáng"
+        },
+        {
+          "language": "Chinese (Traditional)",
+          "name": "軟糖"
+        },
+        {
+          "language": "French",
+          "name": "Irène"
+        },
+        {
+          "language": "Spanish",
+          "name": "Encina"
+        },
+        {
+          "language": "Italian",
+          "name": "Granella"
+        },
+        {
+          "language": "German",
+          "name": "Trita"
+        },
+        {
+          "language": "Dutch",
+          "name": "Poppy"
+        },
+        {
+          "language": "Russian",
+          "name": "Поппи",
+          "romanization": "Poppi"
+        }
+      ],
+      "amiibo": {
+        "number": "052",
+        "series": "Series 1–4",
+        "starSign": "Leo",
+        "birthday": "August 5",
+        "image": "https://nookipedia.com/wiki/Special:Redirect/file/052_Poppy_amiibo_card_NA.png"
+      },
+      "sourceUrl": "https://nookipedia.com/wiki/Poppy"
+    }
+  }
+}

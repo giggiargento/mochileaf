@@ -279,7 +279,25 @@ html.dark {
     color: var(--text-primary);
   }
 
+  /* When a nav row has a caret toggle (e.g. "Games"), hover should highlight the whole row.
+     Otherwise the link and the toggle get different hover backgrounds and look "cut". */
+  .nav-group-row:has(.nav-group-toggle):hover .nav-link {
+    background-color: var(--nav-hover-bg);
+    color: var(--text-primary);
+  }
+
+  .nav-group-row:has(.nav-group-toggle):hover .nav-group-toggle {
+    background-color: var(--nav-hover-bg);
+    color: var(--text-primary);
+  }
+
   .nav-link-active {
+    background-color: var(--nav-active-bg);
+    color: var(--nav-active-text);
+  }
+
+  /* Keep caret toggle consistent with active background on "Games" row. */
+  .nav-group-open .nav-group-toggle {
     background-color: var(--nav-active-bg);
     color: var(--nav-active-text);
   }
@@ -292,9 +310,15 @@ html.dark {
     transition: transform 0.2s ease-out;
   }
 
-  .nav-group-row .nav-link {
+  /* Only flatten the seam between link + caret toggle (e.g. Games). */
+  .nav-group-row:has(.nav-group-toggle) .nav-link {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+  }
+
+  .nav-group-row:has(.nav-group-toggle) .nav-group-toggle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .nav-group-toggle {
@@ -309,8 +333,29 @@ html.dark {
     color: var(--text-primary);
   }
 
+  /* "Games" row hover: paint the whole row once (no separate arrow background). */
+  .nav-group-row:has(.nav-group-toggle):hover {
+    background-color: var(--nav-hover-bg);
+    border-radius: 0.75rem; /* rounded-xl */
+  }
+  .nav-group-row:has(.nav-group-toggle):hover .nav-link,
+  .nav-group-row:has(.nav-group-toggle):hover .nav-group-toggle {
+    background-color: transparent;
+  }
+
   .nav-group-open .nav-group-caret {
     transform: rotate(180deg);
+  }
+
+  .nav-group-open .nav-group-row:has(.nav-group-toggle) {
+    background-color: var(--nav-active-bg);
+    border-radius: 0.75rem;
+  }
+
+  .nav-group-open .nav-group-row:has(.nav-group-toggle) .nav-link,
+  .nav-group-open .nav-group-row:has(.nav-group-toggle) .nav-group-toggle {
+    background-color: transparent;
+    color: var(--nav-active-text);
   }
 
   @media (hover: hover) {
@@ -765,6 +810,57 @@ html.dark {
     color: var(--text-secondary);
   }
 
+  .cozy-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--border-default);
+    background-color: var(--bg-card);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .cozy-table {
+    width: 100%;
+    height: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .cozy-table th,
+  .cozy-table td {
+    padding: 0.65rem 1rem;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid var(--border-default);
+  }
+
+  .cozy-table thead th {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    background-color: var(--bg-muted);
+  }
+
+  .cozy-table tbody tr:last-child th,
+  .cozy-table tbody tr:last-child td {
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .cozy-table tbody th[scope='row'] {
+    width: 38%;
+    max-width: 12rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+
+  .cozy-table tbody td {
+    color: var(--text-secondary);
+  }
+
   .article-column {
     @apply max-w-3xl text-left;
   }
@@ -1103,11 +1199,18 @@ html.dark {
   line-height: 1.35;
 }
 
-/* Ad slots — framed banner area; horizontal ≈90px, sidebar ≈250px. */
+/* Ad slots — horizontal ≈90px tall; sidebar = square (1:1) within nav width. */
 .ad-slot {
   display: block;
   width: 100%;
   min-width: 250px;
+}
+
+.ad-slot--sidebar {
+  /* Sidebar is lg:w-64 with p-6 — content ~208px; square must not force 250px min. */
+  min-width: 0;
+  max-width: none;
+  margin-inline: 0;
 }
 
 .ad-slot-frame {
@@ -1129,11 +1232,12 @@ html.dark {
   max-height: 7.5rem;
 }
 
-.ad-slot--sidebar {
-  min-height: 15.625rem;
-  max-height: 18.75rem;
-  max-width: 300px;
-  margin-inline: auto;
+.ad-slot--sidebar.ad-slot-frame {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  min-height: 0;
+  max-height: none;
+  padding: 0.5rem;
 }
 
 .ad-slot-label {
@@ -1160,8 +1264,12 @@ html.dark {
 }
 
 .ad-slot--sidebar .ad-slot-inner {
-  min-height: 15rem;
-  max-width: 300px;
+  flex: 1 1 auto;
+  align-self: stretch;
+  width: 100%;
+  min-height: 0;
+  max-width: none;
+  aspect-ratio: 1 / 1;
 }
 
 .ad-slot ins.adsbygoogle {
@@ -1174,6 +1282,14 @@ html.dark {
 .ad-slot--horizontal ins.adsbygoogle {
   min-height: 0;
   max-height: 5.625rem;
+}
+
+.ad-slot--sidebar ins.adsbygoogle {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .ad-slot--filled.ad-slot-frame {
@@ -1191,7 +1307,8 @@ html.dark {
 }
 
 .ad-slot--placeholder.ad-slot--sidebar {
-  min-height: 15.625rem;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
