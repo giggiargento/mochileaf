@@ -44,6 +44,14 @@ const characterPinterestBoard =
     : undefined;
 const portraitSrc =
   isAcnh && character.image ? villagerPortrait(character.slug, 256) : character.image;
+const nteElementIconPath: Record<string, string> = {
+  Cosmos: '/images/games/neverness-to-everness/icons/Cosmos.webp',
+  Anima: '/images/games/neverness-to-everness/icons/Anima.webp',
+  Incantation: '/images/games/neverness-to-everness/icons/Incantation.webp',
+  Chaos: '/images/games/neverness-to-everness/icons/Chaos.webp',
+  Psyche: '/images/games/neverness-to-everness/icons/Psyche.webp',
+  Lakshana: '/images/games/neverness-to-everness/icons/Lakshana.webp',
+};
 
 const villagerInfoRows =
   acnhDetails?.villagerInfo
@@ -136,7 +144,22 @@ const villagerInfoRows =
             {character.species && <Badge variant="lavender">{character.species}</Badge>}
             {character.element && <Badge variant="mist">{character.element}</Badge>}
           </div>
-          <h1 class="font-display text-4xl text-primary">{character.name}</h1>
+          <h1 class="font-display text-4xl text-primary flex items-center gap-3">
+            {
+              isNte && character.element && nteElementIconPath[character.element] && (
+                <img
+                  src={nteElementIconPath[character.element]}
+                  alt={character.element}
+                  width={36}
+                  height={36}
+                  class="h-9 w-9 rounded-full border border-default object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              )
+            }
+            <span>{character.name}</span>
+          </h1>
           <p class="mt-2 text-lg font-medium text-accent">{character.role}</p>
           <p class="mt-6 prose-cozy">{character.description}</p>
 
@@ -264,11 +287,14 @@ const villagerInfoRows =
               <h3 class="font-display text-xl text-primary">Esper skill priority</h3>
               <ol class="mt-4 space-y-2">
                 {nteGuide.skillPriority.map((skill, i) => (
-                  <li class="flex items-center gap-3 rounded-xl border border-default bg-card p-2.5">
+                  <li class="flex min-h-[80px] flex-col justify-center rounded-xl border border-default bg-card p-3">
+                    <div class="flex items-center gap-3">
                     <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-muted text-xs font-semibold text-primary">
                       {i + 1}
                     </span>
-                    <span class="text-sm text-secondary">{skill}</span>
+                      <p class="text-sm font-semibold text-primary">{skill.skill}</p>
+                    </div>
+                    <p class="mt-1 text-xs text-secondary">{skill.scales}</p>
                   </li>
                 ))}
               </ol>
@@ -279,10 +305,20 @@ const villagerInfoRows =
               <ul class="mt-4 space-y-3">
                 {nteGuide.farming.map((item) => (
                   <li class="rounded-xl border border-default bg-card p-3">
-                    <p class="text-sm font-semibold text-primary">{item.name}</p>
-                    <p class="mt-1 text-xs text-secondary">{item.purpose}</p>
-                    <p class="mt-1 text-xs font-medium text-accent">Where: {item.location}</p>
-                    {item.tip && <p class="mt-1 text-xs text-muted">Tip: {item.tip}</p>}
+                    <p class="flex flex-wrap items-baseline gap-x-1.5 gap-y-0.5 text-sm">
+                      <span class="font-semibold text-primary">{item.name}</span>
+                      <span class="text-xs text-secondary">- {item.purpose}</span>
+                    </p>
+                    <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-accent">
+                      <Icon name="map-pin" size={12} />
+                      <span>Where: {item.location}</span>
+                    </p>
+                    {item.tip && (
+                      <p class="mt-1 inline-flex items-start gap-1.5 text-xs text-muted">
+                        <Icon name="lightbulb" size={12} class="mt-0.5" />
+                        <span>Tip: {item.tip}</span>
+                      </p>
+                    )}
                   </li>
                 ))}
               </ul>

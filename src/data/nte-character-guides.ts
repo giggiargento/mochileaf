@@ -1,27 +1,27 @@
 import type { Character, NteCharacterGuide } from '../types';
 
-const iconBase = '/images/games/neverness-to-everness/icons';
-
-const elementIcon: Record<string, string> = {
-  Cosmos: `${iconBase}/Cosmos.webp`,
-  Anima: `${iconBase}/Anima.webp`,
-  Incantation: `${iconBase}/Incantation.webp`,
-  Chaos: `${iconBase}/Chaos.webp`,
-  Psyche: `${iconBase}/Psyche.webp`,
-  Lakshana: `${iconBase}/Lakshana.webp`,
-};
-
 const defaultsByRole: Record<string, Omit<NteCharacterGuide, 'buildSummary'>> = {
   Attack: {
     diskSets: [
-      { name: '4pc DPS core set', note: 'Prioritize Crit Rate / Crit DMG / ATK.' },
-      { name: '2pc Element support', note: 'Match element bonus to this character.' },
+      {
+        name: 'The Rain That Shook the World (S)',
+        note: 'Strong general DPS Arc for burst carries with reliable damage scaling.',
+      },
+      {
+        name: 'First Step to Success (A)',
+        note: 'Accessible bridge Arc for early progression while farming better S options.',
+      },
     ],
     modules: [
-      { name: 'Crit module line', note: 'Main source of burst consistency.' },
-      { name: 'ATK + Cycle Rate module', note: 'Smooth rotations and skill uptime.' },
+      { name: 'S-tier Module line', note: 'Prioritize CRIT/ATK rolls for burst consistency.' },
+      { name: 'A-tier Module fallback', note: 'Use ATK + Cycle Rate until best rolls drop.' },
     ],
-    skillPriority: ['Ultimate', 'Skill', 'Basic Attack', 'Support Skill'],
+    skillPriority: [
+      { skill: 'Ultimate', scales: 'Main burst multiplier and finisher damage.' },
+      { skill: 'Skill', scales: 'Core rotation damage and esper-cycle trigger value.' },
+      { skill: 'Basic Attack', scales: 'Sustained on-field DPS between cooldowns.' },
+      { skill: 'Support Skill', scales: 'Swap-in utility and secondary cycle effects.' },
+    ],
     farming: [
       {
         name: 'Esper EXP materials',
@@ -45,14 +45,25 @@ const defaultsByRole: Record<string, Omit<NteCharacterGuide, 'buildSummary'>> = 
   },
   Support: {
     diskSets: [
-      { name: '4pc Utility set', note: 'Buff uptime, healing, or shield value.' },
-      { name: '2pc Energy/Cycle set', note: 'Faster support-skill rotations.' },
+      {
+        name: 'Eternal Waltz (S)',
+        note: 'Great sustain-oriented Arc for supports that cast Ultimate frequently.',
+      },
+      {
+        name: 'Call of the Twisted City (A)',
+        note: 'Stable A-rank fallback for heal-focused or utility-heavy support setups.',
+      },
     ],
     modules: [
-      { name: 'Cycle Rate module line', note: 'Enables more frequent Esper triggers.' },
-      { name: 'HP/DEF utility line', note: 'Survivability on longer fights.' },
+      { name: 'S-tier Utility Modules', note: 'Cycle Rate + HP/DEF for stable support uptime.' },
+      { name: 'A-tier Utility Modules', note: 'Use mixed defensive rolls until better drops.' },
     ],
-    skillPriority: ['Support Skill', 'Skill', 'Ultimate', 'Basic Attack'],
+    skillPriority: [
+      { skill: 'Support Skill', scales: 'Buff/heal/shield potency and utility uptime.' },
+      { skill: 'Skill', scales: 'Secondary support effects and cycle consistency.' },
+      { skill: 'Ultimate', scales: 'Team-wide burst utility and emergency stabilization.' },
+      { skill: 'Basic Attack', scales: 'Minor personal damage; lowest impact for supports.' },
+    ],
     farming: [
       {
         name: 'Esper EXP materials',
@@ -76,14 +87,25 @@ const defaultsByRole: Record<string, Omit<NteCharacterGuide, 'buildSummary'>> = 
   },
   Defense: {
     diskSets: [
-      { name: '4pc Guard set', note: 'Damage reduction and frontline uptime.' },
-      { name: '2pc Utility set', note: 'Extra team value while tanking.' },
+      {
+        name: 'Your Happiness is Priceless (S)',
+        note: 'Defensive Arc with strong team sustain value for frontline roles.',
+      },
+      {
+        name: 'Umbrella (A)',
+        note: 'Comfortable A-rank tank fallback while waiting for premium defensive Arcs.',
+      },
     ],
     modules: [
-      { name: 'DEF/HP module line', note: 'Frontline stability first.' },
-      { name: 'Cycle Rate utility line', note: 'Keep control/support active.' },
+      { name: 'S-tier Tank Modules', note: 'DEF/HP lines for frontline stability.' },
+      { name: 'A-tier Tank Modules', note: 'Bridge option with mixed DEF + utility stats.' },
     ],
-    skillPriority: ['Skill', 'Support Skill', 'Ultimate', 'Basic Attack'],
+    skillPriority: [
+      { skill: 'Skill', scales: 'Mitigation/shield values and frontline control.' },
+      { skill: 'Support Skill', scales: 'Team protection and taunt/control utility.' },
+      { skill: 'Ultimate', scales: 'Defensive burst impact and clutch survival windows.' },
+      { skill: 'Basic Attack', scales: 'Low-impact personal damage on tanks.' },
+    ],
     farming: [
       {
         name: 'Esper EXP materials',
@@ -107,14 +129,25 @@ const defaultsByRole: Record<string, Omit<NteCharacterGuide, 'buildSummary'>> = 
   },
   Assist: {
     diskSets: [
-      { name: '4pc Utility set', note: 'Team buffs and control value.' },
-      { name: '2pc Energy/Cycle set', note: 'Frequent utility activations.' },
+      {
+        name: 'Marching Beyond Time (S)',
+        note: 'High-value utility Arc for teams that benefit from support-cycle acceleration.',
+      },
+      {
+        name: 'A Time Will Come (A)',
+        note: 'Flexible A-rank option that fits mixed-type team compositions.',
+      },
     ],
     modules: [
-      { name: 'Cycle Rate module line', note: 'Primary stat line for assist units.' },
-      { name: 'HP/ATK hybrid line', note: 'Balance personal value and survival.' },
+      { name: 'S-tier Assist Modules', note: 'Cycle Rate-focused setup for frequent utility.' },
+      { name: 'A-tier Assist Modules', note: 'Hybrid setup balancing uptime and survival.' },
     ],
-    skillPriority: ['Support Skill', 'Ultimate', 'Skill', 'Basic Attack'],
+    skillPriority: [
+      { skill: 'Support Skill', scales: 'Primary assist utility and team buff uptime.' },
+      { skill: 'Ultimate', scales: 'Big utility spikes and rotation acceleration.' },
+      { skill: 'Skill', scales: 'Supplemental control/setup effects.' },
+      { skill: 'Basic Attack', scales: 'Minimal gain versus support-focused upgrades.' },
+    ],
     farming: [
       {
         name: 'Esper EXP materials',
@@ -142,12 +175,22 @@ const customGuides: Record<string, Partial<NteCharacterGuide>> = {
   hotori: {
     buildSummary:
       'On-field Cosmos DPS. Build for crit consistency and burst windows in teams with Nanally/Jiuyuan.',
-    skillPriority: ['Ultimate', 'Skill', 'Support Skill', 'Basic Attack'],
+    skillPriority: [
+      { skill: 'Ultimate', scales: 'Largest burst spike and carry conversion.' },
+      { skill: 'Skill', scales: 'Core DPS loop and cycle trigger pressure.' },
+      { skill: 'Support Skill', scales: 'Swap burst contribution and utility damage.' },
+      { skill: 'Basic Attack', scales: 'Fill damage while waiting for key cooldowns.' },
+    ],
   },
   nanally: {
     buildSummary:
       'Core Anima sustain/support. Prioritize support uptime and survivability over personal damage.',
-    skillPriority: ['Support Skill', 'Ultimate', 'Skill', 'Basic Attack'],
+    skillPriority: [
+      { skill: 'Support Skill', scales: 'Healing ticks, sustain uptime, and team safety.' },
+      { skill: 'Ultimate', scales: 'Emergency stabilization and support burst value.' },
+      { skill: 'Skill', scales: 'Secondary sustain/control utility.' },
+      { skill: 'Basic Attack', scales: 'Lowest-impact upgrade on this role.' },
+    ],
   },
   jiuyuan: {
     buildSummary:
@@ -183,20 +226,13 @@ function fallbackRole(role: string): keyof typeof defaultsByRole {
 export function getNteCharacterGuide(character: Character): NteCharacterGuide {
   const defaults = defaultsByRole[fallbackRole(character.role)];
   const custom = customGuides[character.slug] ?? {};
-  const elementImg = character.element ? elementIcon[character.element] : undefined;
 
   return {
     buildSummary:
       custom.buildSummary ??
       `${character.name} works best in ${character.element ?? 'team'}-aligned comps where ${character.role.toLowerCase()} value is prioritized.`,
-    diskSets: (custom.diskSets ?? defaults.diskSets).map((set) => ({
-      ...set,
-      image: set.image ?? elementImg,
-    })),
-    modules: (custom.modules ?? defaults.modules).map((module) => ({
-      ...module,
-      image: module.image ?? elementImg,
-    })),
+    diskSets: custom.diskSets ?? defaults.diskSets,
+    modules: custom.modules ?? defaults.modules,
     skillPriority: custom.skillPriority ?? defaults.skillPriority,
     farming: custom.farming ?? defaults.farming,
   };

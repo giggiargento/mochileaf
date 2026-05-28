@@ -63,11 +63,17 @@ export interface NteFarmingItem {
   image?: string;
 }
 
+export interface NteSkillPriorityItem {
+  skill: string;
+  /** What improves when this skill is leveled. */
+  scales: string;
+}
+
 export interface NteCharacterGuide {
   buildSummary: string;
   diskSets: NteBuildItem[];
   modules: NteBuildItem[];
-  skillPriority: string[];
+  skillPriority: NteSkillPriorityItem[];
   farming: NteFarmingItem[];
 }
 
