@@ -28,8 +28,8 @@ const hubLabel = game.shortName ?? 'NTE';
   />
   <div class="page-container-below-header">
     <ContentGrid columns={2}>
-      {teams.map((team) => (
-        <TeamCard team={team} gameSlug={game.slug} />
+      {teams.map((team, i) => (
+        <TeamCard team={team} gameSlug={game.slug} index={i + 1} />
       ))}
     </ContentGrid>
     <p class="mt-12 max-w-2xl text-sm text-muted">

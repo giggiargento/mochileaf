@@ -861,6 +861,174 @@ html.dark {
     color: var(--text-secondary);
   }
 
+  /* NTE team comp cards — large portraits; notes fade in-place (no grid shift) */
+  .team-comp-card.cozy-card:hover,
+  .team-comp-card.cozy-card:active {
+    transform: none;
+  }
+
+  .team-comp-swap {
+    position: relative;
+  }
+
+  .team-comp-layer {
+    transition:
+      opacity 0.32s ease,
+      visibility 0.32s ease;
+  }
+
+  @media (min-width: 640px) {
+    .team-comp-details {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow-y: auto;
+      background-color: var(--bg-card);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .team-comp-card__face {
+      position: relative;
+      z-index: 1;
+    }
+
+    .team-comp-card:hover .team-comp-card__face,
+    .team-comp-card:focus-within .team-comp-card__face {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .team-comp-card:hover .team-comp-details,
+    .team-comp-card:focus-within .team-comp-details {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  .team-comp-card:hover .team-comp-hint,
+  .team-comp-card:focus-within .team-comp-hint {
+    opacity: 0;
+  }
+
+  .team-comp-hint {
+    transition: opacity 0.2s ease;
+  }
+
+  .team-comp-roster {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .team-comp-portrait {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: calc(var(--radius-card) - 0.35rem);
+    border: 1px solid var(--border-default);
+    background: color-mix(in srgb, var(--bg-muted) 45%, var(--bg-card));
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .team-comp-slot__link:hover .team-comp-portrait,
+  .team-comp-slot__link:focus-visible .team-comp-portrait {
+    border-color: color-mix(in srgb, var(--text-accent) 55%, var(--border-default));
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-2px);
+  }
+
+  .team-comp-portrait__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 8%;
+    transform: scale(1.12);
+    transition: transform 0.35s ease;
+  }
+
+  .team-comp-slot__link:hover .team-comp-portrait__img {
+    transform: scale(1.18);
+  }
+
+  .team-comp-portrait__fallback {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      to bottom,
+      var(--color-lavender-100),
+      var(--color-mist-100)
+    );
+  }
+
+  html.dark .team-comp-portrait__fallback {
+    background: linear-gradient(
+      to bottom,
+      rgb(184 165 212 / 0.2),
+      rgb(159 196 188 / 0.12)
+    );
+  }
+
+  .team-comp-portrait__element {
+    position: absolute;
+    bottom: 0.35rem;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    max-width: calc(100% - 0.5rem);
+    font-size: 0.5625rem;
+    padding: 0.15rem 0.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .team-comp-role {
+    margin: 0.4rem 0 0;
+    text-align: center;
+    font-size: 0.625rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+
+  .team-comp-details-mobile summary {
+    list-style: none;
+  }
+
+  .team-comp-details-mobile summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .team-comp-details-mobile[open] summary {
+    color: var(--text-primary);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .team-comp-portrait,
+    .team-comp-portrait__img,
+    .team-comp-layer {
+      transition: none;
+    }
+  }
+
   .article-column {
     @apply max-w-3xl text-left;
   }

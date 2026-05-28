@@ -46,6 +46,31 @@ export interface Character {
   houseDescription?: string;
 }
 
+export interface NteBuildItem {
+  name: string;
+  note?: string;
+  /** Optional local asset path under /public. */
+  image?: string;
+}
+
+export interface NteFarmingItem {
+  name: string;
+  purpose: string;
+  /** Where to farm it in-game (mode, anomaly, shop, etc.). */
+  location: string;
+  /** Optional route tip for faster daily farming. */
+  tip?: string;
+  image?: string;
+}
+
+export interface NteCharacterGuide {
+  buildSummary: string;
+  diskSets: NteBuildItem[];
+  modules: NteBuildItem[];
+  skillPriority: string[];
+  farming: NteFarmingItem[];
+}
+
 /** New Horizons villager reference data (from Nookipedia import). */
 export interface AcnhVillagerDetails {
   intro?: string;
@@ -116,14 +141,22 @@ export interface IslandTour {
   tags: string[];
 }
 
+export interface TeamMemberSlot {
+  slug: string;
+  /** Squad role on the comp card (e.g. "Main DPS"). */
+  compRole: string;
+}
+
 export interface Team {
   slug: string;
   name: string;
   gameSlug: string;
-  /** Character slugs in recommended order (main DPS first). */
-  memberSlugs: string[];
+  /** Roster in recommended slot order (main carry first). */
+  members: TeamMemberSlot[];
   focus: string;
   summary: string;
+  /** Passive/element/faction synergies activated by this lineup. */
+  synergies: string[];
   tags: string[];
   difficulty: 'easy' | 'medium' | 'hard';
 }

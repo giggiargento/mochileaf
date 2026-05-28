@@ -15,7 +15,7 @@ const gameAssets: Record<string, GameAssetSet> = {
     card: acnhHubHero,
   },
   'neverness-to-everness': {
-    cover: nteCardHero,
+    /* Hub landing uses public cover.jpg; card-hero is for home /games cards only. */
     card: nteCardHero,
   },
 };

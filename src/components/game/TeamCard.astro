@@ -6,9 +6,11 @@ import { getCharacter } from '../../data/characters';
 interface Props {
   team: Team;
   gameSlug: string;
+  /** 1-based label, e.g. "Team 01". */
+  index?: number;
 }
 
-const { team, gameSlug } = Astro.props;
+const { team, gameSlug, index } = Astro.props;
 
 const difficultyLabels = {
   easy: 'Relaxed',
@@ -16,49 +18,221 @@ const difficultyLabels = {
   hard: 'Focused',
 };
 
-const members = team.memberSlugs
-  .map((slug) => getCharacter(gameSlug, slug))
-  .filter((c): c is NonNullable<typeof c> => Boolean(c));
+const elementBadgeVariant: Record<
+  string,
+  'sage' | 'mist' | 'lavender' | 'blossom' | 'honey' | 'default'
+> = {
+  Anima: 'sage',
+  Cosmos: 'lavender',
+  Incantation: 'lavender',
+  Chaos: 'blossom',
+  Lakshana: 'honey',
+  Psyche: 'mist',
+};
+
+const roster = team.members
+  .map((slot) => {
+    const character = getCharacter(gameSlug, slot.slug);
+    if (!character) return null;
+    return { slot, character };
+  })
+  .filter((row): row is NonNullable<typeof row> => Boolean(row));
+
+const teamLabel = index != null ? `Team ${String(index).padStart(2, '0')}` : undefined;
+
+const elementIconPath: Record<string, string> = {
+  Cosmos: '/images/games/neverness-to-everness/icons/Cosmos.webp',
+  Anima: '/images/games/neverness-to-everness/icons/Anima.webp',
+  Incantation: '/images/games/neverness-to-everness/icons/Incantation.webp',
+  Chaos: '/images/games/neverness-to-everness/icons/Chaos.webp',
+  Psyche: '/images/games/neverness-to-everness/icons/Psyche.webp',
+  Lakshana: '/images/games/neverness-to-everness/icons/Lakshana.webp',
+};
+
+const reactionByPair: Record<string, string> = {
+  'Anima|Cosmos': 'Blossom',
+  'Anima|Incantation': 'Hexed',
+  'Chaos|Incantation': 'Scorched',
+  'Chaos|Psyche': 'Nova',
+  'Lakshana|Psyche': 'Stain',
+  'Cosmos|Lakshana': 'Remora',
+};
+
+function pairKey(a?: string, b?: string): string | undefined {
+  if (!a || !b) return undefined;
+  return [a, b].sort().join('|');
+}
+
+const cycles = roster
+  .map((entry, i) => {
+    const next = roster[i + 1];
+    if (!next) return null;
+    const left = entry.character.element;
+    const right = next.character.element;
+    const key = pairKey(left, right);
+    if (!left || !right || !key) return null;
+    const reaction = reactionByPair[key];
+    if (!reaction) return null;
+    return {
+      left,
+      right,
+      leftIcon: elementIconPath[left],
+      rightIcon: elementIconPath[right],
+      reaction,
+    };
+  })
+  .filter((row): row is NonNullable<typeof row> => Boolean(row));
 ---
 
-<article class="cozy-card overflow-hidden">
-  <div class="flex flex-wrap gap-2 p-6 pb-0">
-    {team.tags.map((tag) => (
-      <Badge variant="lavender" size="sm">{tag}</Badge>
-    ))}
+<article class="team-comp-card cozy-card group overflow-hidden">
+  <div class="team-comp-swap">
+    <div class="team-comp-card__face team-comp-layer p-5 pb-4">
+      <div class="flex items-start justify-between gap-3">
+        <div class="min-w-0">
+          {
+            teamLabel && (
+              <p class="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-muted">
+                {teamLabel}
+              </p>
+            )
+          }
+          <h3 class="font-display text-xl text-primary leading-tight">{team.name}</h3>
+          <p class="mt-1 text-xs font-medium text-accent">{team.focus}</p>
+        </div>
+        <p class="shrink-0 text-[0.65rem] font-semibold uppercase tracking-wide text-muted">
+          {difficultyLabels[team.difficulty]}
+        </p>
+      </div>
+
+      <ul class="team-comp-roster mt-5" aria-label={`${team.name} roster`}>
+        {
+          roster.map(({ slot, character }) => (
+            <li class="team-comp-slot min-w-0">
+              <a
+                href={`/${gameSlug}/characters/${character.slug}`}
+                class="team-comp-slot__link block rounded-[calc(var(--radius-card)-0.35rem)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-400"
+                data-astro-reload
+              >
+                <div class="team-comp-portrait">
+                  {
+                    character.image ? (
+                      <img
+                        src={character.image}
+                        alt={character.name}
+                        width={120}
+                        height={160}
+                        class="team-comp-portrait__img"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    ) : (
+                      <span class="team-comp-portrait__fallback font-display text-2xl text-accent">
+                        {character.name.charAt(0)}
+                      </span>
+                    )
+                  }
+                  {
+                    character.element && (
+                      <Badge
+                        variant={elementBadgeVariant[character.element] ?? 'default'}
+                        size="sm"
+                        class="team-comp-portrait__element"
+                      >
+                        {character.element}
+                      </Badge>
+                    )
+                  }
+                </div>
+                <p class="team-comp-role">{slot.compRole}</p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <p class="team-comp-hint mt-3 text-center text-[0.65rem] font-medium text-muted max-sm:hidden">
+        Hover for notes
+      </p>
+    </div>
+
+    <div class="team-comp-details team-comp-layer max-sm:hidden" aria-hidden="true">
+      <div class="team-comp-details__inner p-5">
+        <div class="flex items-start justify-between gap-3">
+          <div class="min-w-0">
+            {
+              teamLabel && (
+                <p class="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-muted">
+                  {teamLabel}
+                </p>
+              )
+            }
+            <h3 class="font-display text-lg text-primary leading-tight">{team.name}</h3>
+          </div>
+          <p class="shrink-0 text-[0.65rem] font-semibold uppercase tracking-wide text-muted">
+            {difficultyLabels[team.difficulty]}
+          </p>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {team.tags.map((tag) => (
+            <Badge variant="lavender" size="sm">
+              {tag}
+            </Badge>
+          ))}
+        </div>
+        {cycles.length > 0 && (
+          <div class="mt-4 rounded-xl border border-default bg-muted/35 p-3">
+            <p class="mb-2 text-[0.65rem] font-semibold uppercase tracking-wide text-muted">
+              Esper chains
+            </p>
+            <ul class="space-y-2 text-xs">
+              {cycles.map((cycle) => (
+                <li class="flex items-center gap-2 text-secondary">
+                  <img src={cycle.leftIcon} alt={cycle.left} width={20} height={20} class="h-5 w-5 rounded-full" loading="lazy" decoding="async" />
+                  <span class="text-muted">+</span>
+                  <img src={cycle.rightIcon} alt={cycle.right} width={20} height={20} class="h-5 w-5 rounded-full" loading="lazy" decoding="async" />
+                  <span class="text-muted">→</span>
+                  <span class="font-semibold text-primary">{cycle.reaction}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <p class="mt-3 text-xs leading-relaxed text-secondary">{team.summary}</p>
+      </div>
+    </div>
   </div>
-  <div class="p-6 pt-4">
-    <p class="text-xs font-semibold uppercase tracking-wide text-accent">{team.focus}</p>
-    <h3 class="mt-1 font-display text-xl text-primary">{team.name}</h3>
-    <p class="mt-3 text-sm text-secondary">{team.summary}</p>
-    <ul class="mt-5 flex flex-wrap gap-2" aria-label="Recommended members">
-      {
-        members.map((c) => (
-          <li>
-            <a
-              href={`/${gameSlug}/characters/${c.slug}`}
-              class="inline-flex items-center gap-2 rounded-full bg-muted px-3 py-1.5 text-sm font-medium text-secondary transition-colors hover:text-accent"
-              data-astro-reload
-            >
-              {
-                c.image ? (
-                  <img
-                    src={c.image}
-                    alt=""
-                    width={24}
-                    height={24}
-                    class="h-6 w-6 rounded-full object-cover object-top"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                ) : null
-              }
-              {c.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-    <p class="mt-4 text-xs font-medium text-muted">{difficultyLabels[team.difficulty]}</p>
-  </div>
+
+  <details class="team-comp-details-mobile border-t border-default sm:hidden">
+    <summary class="cursor-pointer px-5 py-3 text-xs font-semibold text-accent">
+      Team notes
+    </summary>
+    <div class="px-5 pb-5 pt-0">
+      <div class="flex flex-wrap gap-2">
+        {team.tags.map((tag) => (
+          <Badge variant="lavender" size="sm">
+            {tag}
+          </Badge>
+        ))}
+      </div>
+      {cycles.length > 0 && (
+        <div class="mt-4 rounded-xl border border-default bg-muted/35 p-3">
+          <p class="mb-2 text-[0.65rem] font-semibold uppercase tracking-wide text-muted">
+            Esper chains
+          </p>
+          <ul class="space-y-2 text-xs">
+            {cycles.map((cycle) => (
+              <li class="flex items-center gap-2 text-secondary">
+                <img src={cycle.leftIcon} alt={cycle.left} width={20} height={20} class="h-5 w-5 rounded-full" loading="lazy" decoding="async" />
+                <span class="text-muted">+</span>
+                <img src={cycle.rightIcon} alt={cycle.right} width={20} height={20} class="h-5 w-5 rounded-full" loading="lazy" decoding="async" />
+                <span class="text-muted">→</span>
+                <span class="font-semibold text-primary">{cycle.reaction}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <p class="mt-3 text-xs leading-relaxed text-secondary">{team.summary}</p>
+    </div>
+  </details>
 </article>
