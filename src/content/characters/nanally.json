@@ -1,0 +1,25 @@
+{
+  "slug": "nanally",
+  "name": "Nanally",
+  "role": "Support",
+  "element": "Anima",
+  "rarity": "S",
+  "tier": "S",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/nanally.webp",
+  "description": "A steady Anima support who keeps the party safe while reactions stay active — strong in teams that want healing without sacrificing damage uptime.",
+  "seo": {
+    "title": "Nanally — Support",
+    "description": "A steady Anima support who keeps the party safe while reactions stay active — strong in teams that want healing without sacrificing damage uptime."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Anima"
+  ]
+}

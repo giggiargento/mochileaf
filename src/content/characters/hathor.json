@@ -1,0 +1,25 @@
+{
+  "slug": "hathor",
+  "name": "Hathor",
+  "role": "Support",
+  "element": "Lakshana",
+  "rarity": "S",
+  "tier": "A",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/hathor.webp",
+  "description": "Lakshana support with strong defensive tools. Excellent in content that punishes squishy teams.",
+  "seo": {
+    "title": "Hathor — Support",
+    "description": "Lakshana support with strong defensive tools. Excellent in content that punishes squishy teams."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Lakshana"
+  ]
+}

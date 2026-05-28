@@ -1,0 +1,132 @@
+{
+  "slug": "coco",
+  "name": "Coco",
+  "role": "Normal rabbit",
+  "personality": "Normal",
+  "species": "Rabbit",
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/coco-128.webp",
+  "houseStyle": "Haunted cute",
+  "houseDescription": "Gyroid choir and hollow-eyed charm — spooky, but still oddly cozy.",
+  "description": "Empty-eyed icon of the game. Players love her for weird, liminal, and horror-cute builds.",
+  "seo": {
+    "title": "Coco — Normal rabbit",
+    "description": "Empty-eyed icon of the game. Players love her for weird, liminal, and horror-cute builds."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Normal",
+    "Rabbit"
+  ],
+  "acnh": {
+    "intro": "Coco is a normal rabbit villager in the who appears in all games to date. She is the only normal rabbit in the series. Her English name may come from her coconut-like head. Her Japanese name comes from the historical era known as the during which small clay figures known as '' '' were produced. Like the gyroids, these ''haniwa'' figures are what Coco's appearance is based on.",
+    "appearance": "Coco is a tan, clay-like rabbit with hollow eyes and mouth, similar in appearance to a Gyroid. Her legs are slightly darker than the rest of her body. There is what appears to be a seam or fold around the top of her head. Her face is always expressionless, regardless of her emotions, though when surprised, her eyes become slightly bigger.",
+    "personality": "Coco has a normal personality, so she will act shy, but caring toward the player. She will get along well with villagers of any personality type. She will have hygiene concerns, represented when the player visits her house, and she will state her embarrassment at the supposedly unclean appearance of her home. She will mention her interest in reading and the various books she reads. She also will enjoy writing and receiving letters.",
+    "villagerInfo": {
+      "birthday": "March 1",
+      "starSign": "Pisces",
+      "personality": "Normal",
+      "subPersonality": "B",
+      "catchphrase": "doyoing",
+      "quote": "Don't put off till tomorrow what you can do today.",
+      "gender": "Female",
+      "defaultClothing": "layered tank dress (Beige)",
+      "umbrella": "leaf umbrella",
+      "hobby": "Education",
+      "favoriteStyles": [
+        "Simple",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "Green"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "beige thatch roof",
+      "siding": "classy zen exterior",
+      "door": "rustic door",
+      "wallpaper": "Rammed-Earth Wall",
+      "flooring": "Floral Rush-Mat Flooring",
+      "music": "K.K. Jongara",
+      "musicNote": "Does not contain a stereo initially",
+      "furniture": [
+        "Old Fashioned Washtub",
+        "Classic Pitcher",
+        "Tiki Torch",
+        "Stone Stool",
+        "Hay Bed",
+        "Stone Table",
+        "Clothesline",
+        "Unglazed Dish Set",
+        "Pot"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Coco_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Coco_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "やよい",
+        "romanization": "Yayoi"
+      },
+      {
+        "language": "Korean",
+        "name": "이요",
+        "romanization": "Iyo"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "仰韶"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "仰韶"
+      },
+      {
+        "language": "French",
+        "name": "Coco"
+      },
+      {
+        "language": "Spanish",
+        "name": "Cocoloca"
+      },
+      {
+        "language": "Italian",
+        "name": "Coco"
+      },
+      {
+        "language": "German",
+        "name": "Koko"
+      },
+      {
+        "language": "Dutch",
+        "name": "Coco"
+      },
+      {
+        "language": "Russian",
+        "name": "Коко",
+        "romanization": "Koko"
+      }
+    ],
+    "amiibo": {
+      "number": "150",
+      "series": "Animal Crossing amiibo",
+      "starSign": "Pisces",
+      "birthday": "March 1",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/150_Coco_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Coco"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "slug": "poppy",
+  "name": "Poppy",
+  "role": "Normal squirrel",
+  "personality": "Normal",
+  "species": "Squirrel",
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/poppy-128.webp",
+  "houseStyle": "Soft retro",
+  "houseDescription": "Classic cute furniture in muted reds — compact and cheerful without loud colors.",
+  "description": "Tiny red squirrel with a gentle normal personality — easy to love, easy to place.",
+  "seo": {
+    "title": "Poppy — Normal squirrel",
+    "description": "Tiny red squirrel with a gentle normal personality — easy to love, easy to place."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Normal",
+    "Squirrel"
+  ],
+  "acnh": {
+    "appearance": "Poppy is a red squirrel with a cream muzzle, tail stripe, and tipped paws. Her ears are turquoise blue on the inside, and her nose is orange.",
+    "personality": "Poppy has a normal personality, which means she is very friendly, and likes to talk to the player. She rarely gets mad, even if hit with a net. But doing so may make her depressed. She will act motherly to the player and other villagers. She will act sweet and hospitable to the player.",
+    "villagerInfo": {
+      "birthday": "August 5",
+      "starSign": "Leo",
+      "personality": "Normal",
+      "subPersonality": "B",
+      "catchphrase": "nutty",
+      "quote": "It's all about positive thinking!",
+      "gender": "Female",
+      "defaultClothing": "alpinist dress (Green)",
+      "umbrella": "mini-flower-print umbrella",
+      "hobby": "Education",
+      "favoriteStyles": [
+        "Cute",
+        "Elegant"
+      ],
+      "favoriteColors": [
+        "Green",
+        "Yellow"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "brown tile roof",
+      "siding": "light-gray stucco exterior",
+      "door": "red vertical-panes door",
+      "wallpaper": "Autumn Wall",
+      "flooring": "Colored-Leaves Flooring",
+      "music": "Forest Life",
+      "furniture": [
+        "Simple DIY Workbench",
+        "Log Garden Lounge",
+        "Tree's Bounty Arch",
+        "Wooden Bucket",
+        "Log Round Table",
+        "Log Bench",
+        "Tiny Library",
+        "Traditional Balancing Toy",
+        "Picnic Basket",
+        "Log Stool",
+        "Portable Record Player",
+        "Leaf Campfire"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Poppy_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Poppy_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "グミ",
+        "romanization": "Gumi"
+      },
+      {
+        "language": "Korean",
+        "name": "다람",
+        "romanization": "Daram"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "软糖",
+        "romanization": "RuǎnTáng"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "軟糖"
+      },
+      {
+        "language": "French",
+        "name": "Irène"
+      },
+      {
+        "language": "Spanish",
+        "name": "Encina"
+      },
+      {
+        "language": "Italian",
+        "name": "Granella"
+      },
+      {
+        "language": "German",
+        "name": "Trita"
+      },
+      {
+        "language": "Dutch",
+        "name": "Poppy"
+      },
+      {
+        "language": "Russian",
+        "name": "Поппи",
+        "romanization": "Poppi"
+      }
+    ],
+    "amiibo": {
+      "number": "052",
+      "series": "Series 1–4",
+      "starSign": "Leo",
+      "birthday": "August 5",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/052_Poppy_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Poppy"
+  }
+}

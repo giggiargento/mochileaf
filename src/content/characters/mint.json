@@ -1,0 +1,25 @@
+{
+  "slug": "mint",
+  "name": "Mint",
+  "role": "Assist",
+  "element": "Cosmos",
+  "rarity": "A",
+  "tier": "C",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/mint.webp",
+  "description": "Cosmos assist with utility buffs. Helpful in exploration and co-op until dedicated supports are leveled.",
+  "seo": {
+    "title": "Mint — Assist",
+    "description": "Cosmos assist with utility buffs. Helpful in exploration and co-op until dedicated supports are leveled."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cosmos"
+  ]
+}

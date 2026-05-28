@@ -1,0 +1,67 @@
+{
+  "characterSlug": "skia",
+  "gameSlug": "neverness-to-everness",
+  "buildSummary": "Skia works best in Incantation-aligned comps where attack value is prioritized.",
+  "diskSets": [
+    {
+      "name": "The Rain That Shook the World (S)",
+      "note": "Strong general DPS Arc for burst carries with reliable damage scaling."
+    },
+    {
+      "name": "First Step to Success (A)",
+      "note": "Accessible bridge Arc for early progression while farming better S options."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Module line",
+      "note": "Prioritize CRIT/ATK rolls for burst consistency."
+    },
+    {
+      "name": "A-tier Module fallback",
+      "note": "Use ATK + Cycle Rate until best rolls drop."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Ultimate",
+      "scales": "Main burst multiplier and finisher damage."
+    },
+    {
+      "skill": "Skill",
+      "scales": "Core rotation damage and esper-cycle trigger value."
+    },
+    {
+      "skill": "Basic Attack",
+      "scales": "Sustained on-field DPS between cooldowns."
+    },
+    {
+      "skill": "Support Skill",
+      "scales": "Swap-in utility and secondary cycle effects."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Level cap and ascension breakpoints.",
+      "location": "Rabbit Hole > Character Growth simulations",
+      "tip": "Spend daily stamina here first until your main DPS hits next ascension cap."
+    },
+    {
+      "name": "Weapon/Arc upgrade mats",
+      "purpose": "Main damage multiplier.",
+      "location": "Rabbit Hole > Arc/Weapon material anomalies",
+      "tip": "Farm on days matching your Arc upgrade route before side content."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Crit/ATK scaling.",
+      "location": "Anomaly Investigation > Module domains",
+      "tip": "Use these after EXP/Arc mats; module gains are strongest mid/late progression."
+    }
+  ],
+  "seo": {
+    "title": "Skia build guide",
+    "description": "Skia works best in Incantation-aligned comps where attack value is prioritized."
+  }
+}

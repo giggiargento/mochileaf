@@ -1,0 +1,141 @@
+{
+  "slug": "tangy",
+  "name": "Tangy",
+  "role": "Peppy cat",
+  "personality": "Peppy",
+  "species": "Cat",
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/tangy-128.webp",
+  "houseStyle": "Citrus lounge",
+  "houseDescription": "Orange and green retro pieces — reads like a sunny sixties sitting room.",
+  "description": "Orange slice energy in dialogue and design. Fun anchor for fruit and diner islands.",
+  "seo": {
+    "title": "Tangy — Peppy cat",
+    "description": "Orange slice energy in dialogue and design. Fun anchor for fruit and diner islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Peppy",
+    "Cat"
+  ],
+  "acnh": {
+    "intro": "Tangy is a peppy cat villager in the who appears in all games to date. Her name is derived from ''tangerine'', a citrus fruit similar to oranges, which relates to her appearance, as well as ''tangy'', an adjective used to describe those fruits. Her Japanese catchphrase, \",\" is a type of mandarin orange.",
+    "appearance": "Tangy is a cat with an orange fruit appearance, as well as a green leaf on her head, similar to Tank. The insides of her ears are pink. Her eyes seem to be looking southeast, but she will become cross-eyed when looking up or down. She has small indents all over her body, making her resemble an orange, tangerine, or a clementine (which are all tangy fruits, hence her name).",
+    "personality": "Tangy, as a peppy villager, will always appear to be in a good mood. She will get along with other villagers, including the player, making it easy to befriend her and gain her picture in. She will enjoy the usual hobbies, and may ask the player for bugs or fish that she finds cute or has read about in Ms. Nintendique, an unseen magazine read by snooty and peppy villagers in. Often she says she's \"feeling kinda bloated\" because she \"ate, like, 50 pounds of.\" She will easily get upset, but due to a short attention span she will forget ever having the conversation. Like all peppy villagers, she dreams of becoming famous in the future. She will get on well with normal, lazy, and other peppy villagers, but may annoy snooty and cranky villagers with her upbeat personality.",
+    "villagerInfo": {
+      "birthday": "June 17",
+      "starSign": "Gemini",
+      "personality": "Peppy",
+      "subPersonality": "B",
+      "catchphrase": "reeeeOWR",
+      "quote": "When life gives you lemons, make lemonade!",
+      "gender": "Female",
+      "defaultClothing": "retro dress (Green)",
+      "umbrella": "strawberry umbrella",
+      "hobby": "Music",
+      "favoriteStyles": [
+        "Simple",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Green",
+        "Yellow"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "green striped roof",
+      "siding": "orange stucco exterior",
+      "door": "white wooden door",
+      "wallpaper": "Orange Wall",
+      "flooring": "Green Retro Flooring",
+      "music": "I Love You",
+      "furniture": [
+        "Coconut Wall Planter",
+        "Juicy Apple TV",
+        "Palm Tree Lamp",
+        "Pear Bed",
+        "Orange End Table",
+        "Apple Chair",
+        "Cherry Speakers",
+        "Peach Chair",
+        "Pear Wardrobe",
+        "Cardboard Box",
+        "Cardboard Box",
+        "Fruit Basket",
+        "Fruit Wreath",
+        "Peach Surprise Box",
+        "Orange End Table",
+        "Orange Dress",
+        "Infused Water Dispenser",
+        "Orange Wall Mounted Clock"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Tangy_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Tangy_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ヒャクパー",
+        "romanization": "Hyakupā"
+      },
+      {
+        "language": "Korean",
+        "name": "백프로",
+        "romanization": "Baekpeuro"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "纯纯",
+        "romanization": "Chúnchún"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "純純"
+      },
+      {
+        "language": "French",
+        "name": "Marine"
+      },
+      {
+        "language": "Spanish",
+        "name": "Tricia"
+      },
+      {
+        "language": "Italian",
+        "name": "Arancina"
+      },
+      {
+        "language": "German",
+        "name": "Tanja"
+      },
+      {
+        "language": "Dutch",
+        "name": "Tangy"
+      },
+      {
+        "language": "Russian",
+        "name": "Тэнджи",
+        "romanization": "Te`ndzhi"
+      }
+    ],
+    "amiibo": {
+      "number": "244",
+      "series": "Series 5",
+      "starSign": "Gemini",
+      "birthday": "June 17",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/244_Tangy_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Tangy"
+  }
+}

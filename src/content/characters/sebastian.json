@@ -1,0 +1,20 @@
+{
+  "slug": "sebastian",
+  "name": "Sebastian",
+  "role": "Programmer",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/sebastian.png",
+  "description": "Lives in the basement, codes by night, and rides his motorcycle when the coast is clear. Responds well to patience and thoughtful gifts.",
+  "seo": {
+    "title": "Sebastian — Programmer",
+    "description": "Lives in the basement, codes by night, and rides his motorcycle when the coast is clear. Responds well to patience and thoughtful gifts."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": []
+}

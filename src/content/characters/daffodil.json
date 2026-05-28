@@ -1,0 +1,25 @@
+{
+  "slug": "daffodil",
+  "name": "Daffodil",
+  "role": "Support",
+  "element": "Chaos",
+  "rarity": "S",
+  "tier": "S",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/daffodil.webp",
+  "description": "Core Break and Turbid Burn enabler. Awakening spikes team damage — a high-value sub-DPS/support in meta Turbid teams.",
+  "seo": {
+    "title": "Daffodil — Support",
+    "description": "Core Break and Turbid Burn enabler. Awakening spikes team damage — a high-value sub-DPS/support in meta Turbid teams."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Chaos"
+  ]
+}

@@ -27,5 +27,9 @@ pnpm-debug.log*
 
 scripts/.cache/
 
+# Generated editorial exports (npm run export:*)
+exports/review/**
+!exports/review/README.md
+
 # Generated ACNH item WebP cache (run npm run items:optimize-images after import)
 public/images/games/animal-crossing-new-horizons/items/

@@ -1,0 +1,23 @@
+{
+  "slug": "petal-dreams",
+  "name": "Petal Dreams",
+  "tagline": "Coming soon — a garden of floating islands",
+  "description": "A new world of soft petals and sky bridges is taking shape. Join the newsletter to be first.",
+  "accent": "blossom",
+  "coverGradient": "from-blossom-200/80 via-lavender-100 to-cream-50",
+  "featured": false,
+  "status": "coming-soon",
+  "seo": {
+    "title": "Petal Dreams guides & cozy tips",
+    "description": "A new world of soft petals and sky bridges is taking shape. Join the newsletter to be first."
+  },
+  "genres": [],
+  "platforms": [],
+  "cozyMechanics": [],
+  "similarGames": [],
+  "beginnerTips": [],
+  "tags": [
+    "Petal Dreams"
+  ],
+  "about": "A new world of soft petals and sky bridges is taking shape. Join the newsletter to be first."
+}

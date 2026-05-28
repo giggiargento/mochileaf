@@ -1,0 +1,140 @@
+{
+  "slug": "raymond",
+  "name": "Raymond",
+  "role": "Smug cat",
+  "personality": "Smug",
+  "species": "Cat",
+  "popularRank": 1,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/raymond-128.webp",
+  "houseStyle": "Office loft",
+  "houseDescription": "Dark wood paneling, a desk setup, and ironwood pieces — reads like a tiny studio apartment with serious catalog taste.",
+  "description": "The villager who sparked endless campsite hunts. Calm, formal, and endlessly photogenic in minimalist room shots.",
+  "seo": {
+    "title": "Raymond — Smug cat",
+    "description": "The villager who sparked endless campsite hunts. Calm, formal, and endlessly photogenic in minimalist room shots."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Smug",
+    "Cat"
+  ],
+  "acnh": {
+    "appearance": "Raymond is a gray cat with a black tail, black paws, black ears with pink insides, and blonde hair that is neatly combed to the right. He wears glasses and has eyes like the cats that have complete, with his left eye being green and his right eye being brown. He appears to be designed after white-collar workers, featuring an appearance, house, catchphrase, and picture quote that all reference elements of a typical businessperson or office worker.",
+    "personality": "Raymond is a villager that falls under the smug personality. He will not find it hard to converse with other villagers, as he is very polite and lively. He also may be seen flirting with the player, regardless of their gender. He may sometimes appear conceited when talking to himself. In, he goes to sleep at 2:00 AM and wakes up at 7:00 AM if no ordinances are in place.",
+    "villagerInfo": {
+      "birthday": "October 1",
+      "starSign": "Libra",
+      "personality": "Smug",
+      "subPersonality": "B",
+      "catchphrase": "crisp",
+      "quote": "Stay on brand!",
+      "gender": "Male",
+      "defaultClothing": "waistcoat (Gray)",
+      "umbrella": "bat umbrella",
+      "hobby": "Nature",
+      "favoriteStyles": [
+        "Elegant",
+        "Cool"
+      ],
+      "favoriteColors": [
+        "Black",
+        "Gray"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "black slate roof",
+      "siding": "simple black-brick trim",
+      "door": "green iron grill door",
+      "wallpaper": "office wall",
+      "flooring": "monochromatic tile flooring",
+      "music": "K.K. Cruisin'",
+      "musicNote": "Does not contain a stereo initially",
+      "furniture": [
+        "office desk",
+        "whiteboard",
+        "document stack",
+        "desktop computer",
+        "water cooler",
+        "modern office chair",
+        "iron worktable",
+        "safe",
+        "den chair",
+        "wall clock",
+        "document stack",
+        "fax machine",
+        "formal paper",
+        "den desk",
+        "mug",
+        "Newton's cradle"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Raymond_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Raymond_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ジャック",
+        "romanization": "Jakku"
+      },
+      {
+        "language": "Korean",
+        "name": "잭슨",
+        "romanization": "Jaekseun"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "杰克",
+        "romanization": "Jiékè"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "傑克"
+      },
+      {
+        "language": "French",
+        "name": "Raymond"
+      },
+      {
+        "language": "Spanish",
+        "name": "Narciso"
+      },
+      {
+        "language": "Italian",
+        "name": "Raimondo"
+      },
+      {
+        "language": "German",
+        "name": "Gunnar"
+      },
+      {
+        "language": "Dutch",
+        "name": "Raymond"
+      },
+      {
+        "language": "Russian",
+        "name": "Реймонд",
+        "romanization": "Rejmond"
+      }
+    ],
+    "amiibo": {
+      "number": "431",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Libra",
+      "birthday": "October 1",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/431_Raymond_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Raymond"
+  }
+}

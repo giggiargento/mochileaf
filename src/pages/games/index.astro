@@ -2,10 +2,10 @@
 import GlobalLayout from '../../layouts/GlobalLayout.astro';
 import PageHeader from '../../components/game/PageHeader.astro';
 import GameCard from '../../components/home/GameCard.astro';
-import { games } from '../../data/games';
+import { allGames, routableGames } from '../../lib/content/registry';
 
-const activeGames = games.filter((g) => g.status === 'active');
-const comingSoon = games.filter((g) => g.status === 'coming-soon');
+const activeGames = routableGames;
+const comingSoon = allGames.filter((g) => g.status === 'coming-soon');
 ---
 
 <GlobalLayout

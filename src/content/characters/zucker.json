@@ -1,0 +1,137 @@
+{
+  "slug": "zucker",
+  "name": "Zucker",
+  "role": "Lazy octopus",
+  "personality": "Lazy",
+  "species": "Octopus",
+  "popularRank": 10,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/zucker-128.webp",
+  "houseStyle": "Beach takoyaki",
+  "houseDescription": "Sand floor, beach tables, and food stalls — literal seaside snack bar energy indoors.",
+  "description": "Takoyaki face and lazy jokes. Fan-favorite for tropical and food-themed islands.",
+  "seo": {
+    "title": "Zucker — Lazy octopus",
+    "description": "Takoyaki face and lazy jokes. Fan-favorite for tropical and food-themed islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Lazy",
+    "Octopus"
+  ],
+  "acnh": {
+    "appearance": "Zucker is an octopus, resembling the Japanese snack takoyaki, with a bamboo toothpick stuck in his head. His head resembles a takoyaki ball with his green freckles resembling seasonings put on takoyaki, and his \"hair\" representing a sauce that is usually served with takoyaki. He has black, oval-shaped eyes, which turn to white with black outlines when he is shocked. His body is a similar shade of red as Octavian's.",
+    "personality": "As a lazy villager, Zucker has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Zucker goes to sleep at 11 PM and wakes up at 8 AM.",
+    "villagerInfo": {
+      "birthday": "March 8",
+      "starSign": "Pisces",
+      "personality": "Lazy",
+      "subPersonality": "A",
+      "catchphrase": "bloop",
+      "quote": "There's no such thing as luck.",
+      "gender": "Male",
+      "defaultClothing": "happi tee (Blue)",
+      "umbrella": "blue umbrella",
+      "hobby": "Nature",
+      "favoriteStyles": [
+        "Simple",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Blue",
+        "Yellow"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "dark-brown thatch roof",
+      "siding": "tan panel siding",
+      "door": "red rustic door",
+      "wallpaper": "Chain-Link Fence",
+      "flooring": "Backyard Lawn",
+      "music": "Spring Blossoms",
+      "musicNote": "Does not contain a stereo initially",
+      "furniture": [
+        "Log Bench",
+        "Cotton Candy Stall",
+        "Outdoor Generator",
+        "Party Garland",
+        "Cooler Box",
+        "Outdoor Table",
+        "Stall",
+        "Portable Radio",
+        "Stand Mixer",
+        "Cutting Board",
+        "Steamer Basket Set",
+        "Cardboard Box",
+        "Cardboard Box"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Zucker_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Zucker_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "タコヤ",
+        "romanization": "Takoya"
+      },
+      {
+        "language": "Korean",
+        "name": "탁호",
+        "romanization": "Takho"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "章丸丸",
+        "romanization": "Zhāng wánwán"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "章丸丸"
+      },
+      {
+        "language": "French",
+        "name": "Marvin"
+      },
+      {
+        "language": "Spanish",
+        "name": "Paulino"
+      },
+      {
+        "language": "Italian",
+        "name": "Poldo"
+      },
+      {
+        "language": "German",
+        "name": "Ottokar"
+      },
+      {
+        "language": "Dutch",
+        "name": "Zucker"
+      },
+      {
+        "language": "Russian",
+        "name": "Цукер",
+        "romanization": "Tsuker"
+      }
+    ],
+    "amiibo": {
+      "number": "364",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Pisces",
+      "birthday": "March 8",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/364_Zucker_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Zucker"
+  }
+}

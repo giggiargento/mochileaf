@@ -1,0 +1,25 @@
+{
+  "slug": "hotori",
+  "name": "Hotori",
+  "role": "Attack",
+  "element": "Cosmos",
+  "rarity": "S",
+  "tier": "A",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/hotori.webp",
+  "description": "Reliable Cosmos DPS for mid-game accounts. Friendly kit for players learning Esper cycles and team energy management.",
+  "seo": {
+    "title": "Hotori — Attack",
+    "description": "Reliable Cosmos DPS for mid-game accounts. Friendly kit for players learning Esper cycles and team energy management."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cosmos"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "edgar",
+  "name": "Edgar",
+  "role": "Attack",
+  "element": "Psyche",
+  "rarity": "A",
+  "tier": "C",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/edgar.webp",
+  "description": "Psyche DPS for early roster filling. Replace over time as S-rank DPS units join your main teams.",
+  "seo": {
+    "title": "Edgar — Attack",
+    "description": "Psyche DPS for early roster filling. Replace over time as S-rank DPS units join your main teams."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Psyche"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "emily",
+  "name": "Emily",
+  "role": "Salon Stylist",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/emily.png",
+  "description": "Works at the saloon and practices crystal healing on the side. Bright, creative, and happiest when you bring gems or cloth.",
+  "seo": {
+    "title": "Emily — Salon Stylist",
+    "description": "Works at the saloon and practices crystal healing on the side. Bright, creative, and happiest when you bring gems or cloth."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": []
+}

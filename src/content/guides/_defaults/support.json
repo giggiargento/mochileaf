@@ -1,0 +1,61 @@
+{
+  "buildSummary": "Core Anima sustain/support. Prioritize support uptime and survivability over personal damage.",
+  "diskSets": [
+    {
+      "name": "Eternal Waltz (S)",
+      "note": "Great sustain-oriented Arc for supports that cast Ultimate frequently."
+    },
+    {
+      "name": "Call of the Twisted City (A)",
+      "note": "Stable A-rank fallback for heal-focused or utility-heavy support setups."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Utility Modules",
+      "note": "Cycle Rate + HP/DEF for stable support uptime."
+    },
+    {
+      "name": "A-tier Utility Modules",
+      "note": "Use mixed defensive rolls until better drops."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Support Skill",
+      "scales": "Healing ticks, sustain uptime, and team safety."
+    },
+    {
+      "skill": "Ultimate",
+      "scales": "Emergency stabilization and support burst value."
+    },
+    {
+      "skill": "Skill",
+      "scales": "Secondary sustain/control utility."
+    },
+    {
+      "skill": "Basic Attack",
+      "scales": "Lowest-impact upgrade on this role."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Reach survivability breakpoints.",
+      "location": "Rabbit Hole > Character Growth simulations",
+      "tip": "Keep supports within 10 levels of your main carry for safer anomaly runs."
+    },
+    {
+      "name": "Support-skill upgrade mats",
+      "purpose": "Buff/heal scaling.",
+      "location": "Rabbit Hole > Skill material anomalies",
+      "tip": "Prioritize the support skill node before basic attack upgrades."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Cooldown and durability value.",
+      "location": "Anomaly Investigation > Module domains",
+      "tip": "Target Cycle Rate and HP/DEF lines for consistency."
+    }
+  ]
+}

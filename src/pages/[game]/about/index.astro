@@ -1,48 +1,112 @@
 ---
 import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
-import { games } from '../../../data/games';
+import { games, getGame } from '../../../data/games';
 import { getGameNavForGame } from '../../../data/game-nav';
+import type { GameContent } from '../../../content/schemas';
+import { displayStringList } from '../../../content/schemas/shared';
+import { resolveContentSeo } from '../../../lib/content/seo';
 
 export function getStaticPaths() {
   return games
     .filter((g) => g.status === 'active')
-    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+    .map((game) => ({ params: { game: game.slug }, props: { game: getGame(game.slug)! } }));
 }
 
 const { game } = Astro.props;
+const hub = game as GameContent;
+const seo = resolveContentSeo(hub.seo, {
+  title: `About ${game.name}`,
+  description: hub.about ?? game.description,
+});
 const navItems = getGameNavForGame(game).filter((item) => item.href !== `/${game.slug}`);
 const isStardew = game.slug === 'stardew-valley';
 ---
 
-<GameHubLayout game={game} title="About">
+<GameHubLayout game={game} title={seo.title} description={seo.description}>
   <PageHeader title={`About ${game.name}`} description={game.tagline} />
   <div class="page-container-below-header">
     <article class="prose-cozy">
-    <p>{game.description}</p>
-    <p>
-      This hub is part of Mochileaf — an editorial cozy gaming site with guides, news, and reference
-      pages written in plain language. We are not affiliated with the game's publisher or developer.
-    </p>
-    {
-      isStardew && (
-        <p>
-          Stardew Valley is a farming and life sim by ConcernedApe. On PC, many players extend the
-          game with community mods — see our <a href={`/${game.slug}/mods`} class="cozy-link">mods list</a> for
-          frameworks and quality-of-life tools.
-        </p>
-      )
-    }
-    <h2 class="font-display text-xl text-primary mt-8">What you will find here</h2>
-    <ul class="list-disc pl-6 space-y-2 mt-4">
+      <p>{hub.about ?? game.description}</p>
+      <p>
+        This hub is part of Mochileaf — an editorial cozy gaming site with guides, news, and reference
+        pages written in plain language. We are not affiliated with the game's publisher or developer.
+      </p>
       {
-        navItems.map((item) => (
-          <li>
-            <a href={item.href} class="cozy-link">{item.label}</a>
-          </li>
-        ))
+        isStardew && (
+          <p>
+            Stardew Valley is a farming and life sim by ConcernedApe. On PC, many players extend the
+            game with community mods — see our <a href={`/${game.slug}/mods`} class="cozy-link">mods list</a> for
+            frameworks and quality-of-life tools.
+          </p>
+        )
       }
-    </ul>
+
+      {
+        displayStringList(hub.genres).length > 0 && (
+          <>
+            <h2 class="font-display text-xl text-primary mt-8">Genres</h2>
+            <ul class="list-disc pl-6 space-y-2 mt-4">
+              {displayStringList(hub.genres).map((genre) => <li>{genre}</li>)}
+            </ul>
+          </>
+        )
+      }
+
+      {
+        displayStringList(hub.platforms).length > 0 && (
+          <>
+            <h2 class="font-display text-xl text-primary mt-8">Platforms</h2>
+            <ul class="list-disc pl-6 space-y-2 mt-4">
+              {displayStringList(hub.platforms).map((platform) => <li>{platform}</li>)}
+            </ul>
+          </>
+        )
+      }
+
+      {
+        displayStringList(hub.cozyMechanics).length > 0 && (
+          <>
+            <h2 class="font-display text-xl text-primary mt-8">Cozy mechanics</h2>
+            <ul class="list-disc pl-6 space-y-2 mt-4">
+              {displayStringList(hub.cozyMechanics).map((item) => <li>{item}</li>)}
+            </ul>
+          </>
+        )
+      }
+
+      {
+        displayStringList(hub.beginnerTips).length > 0 && (
+          <>
+            <h2 class="font-display text-xl text-primary mt-8">Beginner tips</h2>
+            <ul class="list-disc pl-6 space-y-2 mt-4">
+              {displayStringList(hub.beginnerTips).map((tip) => <li>{tip}</li>)}
+            </ul>
+          </>
+        )
+      }
+
+      {
+        displayStringList(hub.similarGames).length > 0 && (
+          <>
+            <h2 class="font-display text-xl text-primary mt-8">Similar games</h2>
+            <ul class="list-disc pl-6 space-y-2 mt-4">
+              {displayStringList(hub.similarGames).map((title) => <li>{title}</li>)}
+            </ul>
+          </>
+        )
+      }
+
+      <h2 class="font-display text-xl text-primary mt-8">What you will find here</h2>
+      <ul class="list-disc pl-6 space-y-2 mt-4">
+        {
+          navItems.map((item) => (
+            <li>
+              <a href={item.href} class="cozy-link">{item.label}</a>
+            </li>
+          ))
+        }
+      </ul>
     </article>
   </div>
 </GameHubLayout>

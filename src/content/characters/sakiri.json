@@ -1,0 +1,25 @@
+{
+  "slug": "sakiri",
+  "name": "Sakiri",
+  "role": "Attack",
+  "element": "Incantation",
+  "rarity": "S",
+  "tier": "S",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/sakiri.webp",
+  "description": "Incantation DPS with crisp skill cycles. Pairs well with buffers who amplify Incantation damage and crit consistency.",
+  "seo": {
+    "title": "Sakiri — Attack",
+    "description": "Incantation DPS with crisp skill cycles. Pairs well with buffers who amplify Incantation damage and crit consistency."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Incantation"
+  ]
+}

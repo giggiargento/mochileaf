@@ -1,0 +1,137 @@
+{
+  "slug": "molly",
+  "name": "Molly",
+  "role": "Normal duck",
+  "personality": "Normal",
+  "species": "Duck",
+  "popularRank": 8,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/molly-128.webp",
+  "houseStyle": "Rustic kitchen",
+  "houseDescription": "Bread oven, wooden counters, and warm lighting — cottagecore before the hashtag.",
+  "description": "Soft yellow bill and gentle dialogue. A comfort villager for players who want calm mornings.",
+  "seo": {
+    "title": "Molly — Normal duck",
+    "description": "Soft yellow bill and gentle dialogue. A comfort villager for players who want calm mornings."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Normal",
+    "Duck"
+  ],
+  "acnh": {
+    "appearance": "Molly is a mallard duck with black oval eyes and a golden yellow beak. There are dark brown markings on top of her beak, forming what looks like a crown. Molly has a white stomach, and yellow striped legs. Her wings and markings on top of her head are a shade of brown. She has round pink cheeks.",
+    "personality": "Molly is a normal villager, meaning she is very kind-hearted, sweet and hospitable. She is very motherly and caring, even to flowers around town as she is often carrying a watering can around. She is a self-proclaimed bookworm, often talking about book titles she enjoys reading. She is quite the clean freak, often worrying about the cleanliness of her home. Molly is very kind and neighborly and is easy to befriend due to her generally kind nature.",
+    "villagerInfo": {
+      "birthday": "March 7",
+      "starSign": "Pisces",
+      "personality": "Normal",
+      "subPersonality": "A",
+      "catchphrase": "quackidee",
+      "quote": "Like water off a duck's back.",
+      "gender": "Female",
+      "defaultClothing": "pintuck-pleated dress (Lime)",
+      "umbrella": "white shiny-bows parasol",
+      "hobby": "Nature",
+      "favoriteStyles": [
+        "Cute",
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Yellow",
+        "Pink"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "orange thatch roof",
+      "siding": "light-brown log exterior",
+      "door": "maple wooden door",
+      "wallpaper": "Lattice Wall",
+      "flooring": "Light Herringbone Flooring",
+      "music": "K.K. Ballad",
+      "furniture": [
+        "Antique Bureau",
+        "Wooden Simple Bed",
+        "Fancy Violin",
+        "Double Sofa",
+        "Music Stand",
+        "Wooden Bookshelf",
+        "Potted Ivy",
+        "Wooden Low Table",
+        "Wooden Chest",
+        "Tea Set",
+        "Ivory Small Round Mat",
+        "Red Dotted Rug",
+        "Cute Music Player",
+        "Yucca"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Molly_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Molly_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "カモミ",
+        "romanization": "Kamomi"
+      },
+      {
+        "language": "Korean",
+        "name": "귀오미",
+        "romanization": "Gwiomi"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "亚美",
+        "romanization": "Yàměi"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "亞美"
+      },
+      {
+        "language": "French",
+        "name": "Molly"
+      },
+      {
+        "language": "Spanish",
+        "name": "Deira"
+      },
+      {
+        "language": "Italian",
+        "name": "Molly"
+      },
+      {
+        "language": "German",
+        "name": "Monika"
+      },
+      {
+        "language": "Dutch",
+        "name": "Molly"
+      },
+      {
+        "language": "Russian",
+        "name": "Молли",
+        "romanization": "Molli"
+      }
+    ],
+    "amiibo": {
+      "number": "099",
+      "series": "Animal Crossing amiibo",
+      "starSign": "Pisces",
+      "birthday": "March 7",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/099_Molly_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Molly"
+  }
+}

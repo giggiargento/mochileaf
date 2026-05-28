@@ -1,0 +1,133 @@
+{
+  "slug": "beau",
+  "name": "Beau",
+  "role": "Lazy deer",
+  "personality": "Lazy",
+  "species": "Deer",
+  "popularRank": 11,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/beau-128.webp",
+  "houseStyle": "Natural cabin",
+  "houseDescription": "Log and mushroom lamps with earthy tones — forest picnic mood year-round.",
+  "description": "Sleepy cinnamon-roll energy. Pairs well with mossy paths and outdoor picnic spots.",
+  "seo": {
+    "title": "Beau — Lazy deer",
+    "description": "Sleepy cinnamon-roll energy. Pairs well with mossy paths and outdoor picnic spots."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Lollipop"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Lazy",
+    "Deer"
+  ],
+  "acnh": {
+    "appearance": "Beau is a deer that resembles either an or a, two species of antelope. He has bright orange fur and sports black-tipped ears and hooves. He has striped antlers, white circles around his eyes, peach eyelids, a white snout, and a brown nose and philtrum.",
+    "personality": "As a lazy villager, Beau has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Beau goes to sleep at 11 PM and wakes up at 8 AM.",
+    "villagerInfo": {
+      "birthday": "April 5",
+      "starSign": "Aries",
+      "personality": "Lazy",
+      "subPersonality": "A",
+      "catchphrase": "saltlick",
+      "quote": "You snooze, you lose.",
+      "gender": "Male",
+      "defaultClothing": "reindeer sweater (Green)",
+      "umbrella": "melon umbrella",
+      "hobby": "Nature",
+      "favoriteStyles": [
+        "Simple",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "Orange"
+      ],
+      "bag": "Paper",
+      "food": "Lollipop",
+      "drink": "Soda can"
+    },
+    "house": {
+      "roof": "natural slate roof",
+      "siding": "light-brown log exterior",
+      "door": "yellow simple door",
+      "wallpaper": "Meadow Vista",
+      "flooring": "Daisy Meadow",
+      "music": "Mountain Song",
+      "furniture": [
+        "Brick Oven",
+        "Firewood",
+        "Pond Stone",
+        "Sleeping Bag",
+        "Smoker",
+        "Log Bench",
+        "Outdoor Picnic Set",
+        "Blue Vinyl Sheet",
+        "Cassette Player",
+        "Picnic Basket"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Beau_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Beau_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ペーター",
+        "romanization": "Pētā"
+      },
+      {
+        "language": "Korean",
+        "name": "피터",
+        "romanization": "Piteo"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "彼得",
+        "romanization": "Bǐ Dé"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "彼得"
+      },
+      {
+        "language": "French",
+        "name": "Stefaon"
+      },
+      {
+        "language": "Spanish",
+        "name": "Lope"
+      },
+      {
+        "language": "Italian",
+        "name": "Gigi"
+      },
+      {
+        "language": "German",
+        "name": "Martin"
+      },
+      {
+        "language": "Dutch",
+        "name": "Beau"
+      },
+      {
+        "language": "Russian",
+        "name": "Бью",
+        "romanization": "Byu"
+      }
+    ],
+    "amiibo": {
+      "number": "167",
+      "series": "Animal Crossing amiibo",
+      "starSign": "Aries",
+      "birthday": "April 5",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/167_Beau_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Beau"
+  }
+}

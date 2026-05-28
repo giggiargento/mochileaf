@@ -20,7 +20,18 @@
     "villagers:import-details": "node scripts/import-acnh-villager-details.mjs",
     "creators:sync-avatar": "node scripts/sync-creator-avatar.mjs",
     "creators:sync": "node scripts/sync-cozy-creators.mjs",
-    "creators:download-avatar": "node scripts/download-creator-from-ig-page.mjs"
+    "creators:download-avatar": "node scripts/download-creator-from-ig-page.mjs",
+    "content:migrate": "tsx scripts/migrate-content.ts",
+    "content:lint": "tsx scripts/content-lint.ts",
+    "export:all": "tsx scripts/export/cli.ts all",
+    "export:characters": "tsx scripts/export/cli.ts characters",
+    "export:games": "tsx scripts/export/cli.ts games",
+    "export:guides": "tsx scripts/export/cli.ts guides",
+    "export:articles": "tsx scripts/export/cli.ts articles",
+    "export:acnh": "tsx scripts/export/cli.ts game acnh",
+    "export:stardew": "tsx scripts/export/cli.ts game stardew",
+    "export:nte": "tsx scripts/export/cli.ts game nte",
+    "export:game": "tsx scripts/export/cli.ts game"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
@@ -30,6 +41,9 @@
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "tsx": "^4.20.3",
+    "yaml": "^2.8.0",
+    "zod": "^3.25.76"
   }
 }

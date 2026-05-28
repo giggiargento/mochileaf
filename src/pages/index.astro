@@ -13,8 +13,8 @@ import { getFeaturedArticles, getTrendingArticles } from '../data/articles';
 import { updates } from '../data/updates';
 
 const featuredGames = getFeaturedGames();
-const featuredArticles = getFeaturedArticles();
-const trendingArticles = getTrendingArticles().slice(0, 2);
+const featuredArticles = await getFeaturedArticles();
+const trendingArticles = (await getTrendingArticles()).slice(0, 2);
 ---
 
 <GlobalLayout

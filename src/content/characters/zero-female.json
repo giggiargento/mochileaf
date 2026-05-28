@@ -1,0 +1,25 @@
+{
+  "slug": "zero-female",
+  "name": "Zero (F)",
+  "role": "Attack",
+  "element": "Cosmos",
+  "rarity": "S",
+  "tier": "A",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/zero-female.webp",
+  "description": "Another Cosmos carry with strong burst windows. Works in double-Cosmos setups with Hotori or Xun for elemental consistency.",
+  "seo": {
+    "title": "Zero (F) — Attack",
+    "description": "Another Cosmos carry with strong burst windows. Works in double-Cosmos setups with Hotori or Xun for elemental consistency."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cosmos"
+  ]
+}

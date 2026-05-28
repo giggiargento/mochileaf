@@ -1,0 +1,24 @@
+{
+  "slug": "animal-crossing-new-horizons",
+  "name": "Animal Crossing: New Horizons",
+  "shortName": "ACNH",
+  "tagline": "Island life, villager neighbors, and dreamy tours",
+  "description": "Decor inspiration galleries, popular villagers, handy items, and cozy island tours — all at a calm pace.",
+  "accent": "blossom",
+  "coverGradient": "from-blossom-200/80 via-mist-100 to-cream-50",
+  "featured": true,
+  "status": "active",
+  "seo": {
+    "title": "Animal Crossing: New Horizons guides & cozy tips",
+    "description": "Decor inspiration galleries, popular villagers, handy items, and cozy island tours — all at a calm pace."
+  },
+  "genres": [],
+  "platforms": [],
+  "cozyMechanics": [],
+  "similarGames": [],
+  "beginnerTips": [],
+  "tags": [
+    "ACNH"
+  ],
+  "about": "Decor inspiration galleries, popular villagers, handy items, and cozy island tours — all at a calm pace."
+}

@@ -1,0 +1,134 @@
+{
+  "slug": "diana",
+  "name": "Diana",
+  "role": "Snooty deer",
+  "personality": "Snooty",
+  "species": "Deer",
+  "popularRank": 6,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/diana-128.webp",
+  "houseStyle": "Cabin chic",
+  "houseDescription": "Classic elegant pieces with a cool silver-and-white palette — polished without feeling cold.",
+  "description": "Graceful and a little reserved. Great anchor villager for sophisticated forest or spa islands.",
+  "seo": {
+    "title": "Diana — Snooty deer",
+    "description": "Graceful and a little reserved. Great anchor villager for sophisticated forest or spa islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Snooty",
+    "Deer"
+  ],
+  "acnh": {
+    "appearance": "Diana is a white deer with pink cheeks. She also has pinkish-purple hair and a black nose. Her hooves are pink with light blue rings at the cuffs. The inside of her ears are light blue and have the same pinkish-purple color around the edges. Her ears also have pink tips.",
+    "personality": "Diana is a snooty villager, and will first appear rude and arrogant towards the player, often talking about herself and her own experiences, but will be nice and pleasurable if the conversation is mature and non-insulting. She may also talk about the style and appearance of other villagers, usually other female villagers such as normal, peppy, big sister, and other snooty villagers. Diana will soon warm up to the player, confiding in them about her own personal feelings but still keeping subtly rude. She will find it hard to get along with other villagers, specifically jock and lazy villagers who have conflicting lifestyles compared to her own. She may get on with cranky villagers, who also enjoy gossiping about the appearance and lifestyles of others, as well as smug villagers, who share a love and knowledge for fashion.",
+    "villagerInfo": {
+      "birthday": "January 4",
+      "starSign": "Capricorn",
+      "personality": "Snooty",
+      "subPersonality": "A",
+      "catchphrase": "no doy",
+      "quote": "Sometimes you have to lose to win.",
+      "gender": "Female",
+      "defaultClothing": "mysterious dress (Purple)",
+      "umbrella": "black chic umbrella",
+      "hobby": "Education",
+      "favoriteStyles": [
+        "Elegant",
+        "Gorgeous"
+      ],
+      "favoriteColors": [
+        "Purple",
+        "Pink"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "light-gray thatch roof",
+      "siding": "white cobblestones",
+      "door": "white iron grill door",
+      "wallpaper": "White Botanical-Tile Wall",
+      "flooring": "Stone Tile",
+      "music": "Farewell",
+      "furniture": [
+        "Beach Towel",
+        "Rattan Low Table",
+        "Whirlpool Bath",
+        "Shower Set",
+        "Shell Bed",
+        "Rattan Vanity",
+        "Deer Decoration",
+        "Lily Record Player",
+        "Fireplace",
+        "Rattan End Table",
+        "Fragrance Sticks"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Diana_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Diana_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ナタリー",
+        "romanization": "Natarī"
+      },
+      {
+        "language": "Korean",
+        "name": "나탈리",
+        "romanization": "Natari"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "倪家莉",
+        "romanization": "Níjiālì"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "倪家莉"
+      },
+      {
+        "language": "French",
+        "name": "Didi"
+      },
+      {
+        "language": "Spanish",
+        "name": "Bambina"
+      },
+      {
+        "language": "Italian",
+        "name": "Diana"
+      },
+      {
+        "language": "German",
+        "name": "Vroni"
+      },
+      {
+        "language": "Dutch",
+        "name": "Diana"
+      },
+      {
+        "language": "Russian",
+        "name": "Диана",
+        "romanization": "Diana"
+      }
+    ],
+    "amiibo": {
+      "number": "089",
+      "series": "Series 1–4",
+      "starSign": "Capricorn",
+      "birthday": "January 4",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/089_Diana_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Diana"
+  }
+}

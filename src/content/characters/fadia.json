@@ -1,0 +1,25 @@
+{
+  "slug": "fadia",
+  "name": "Fadia",
+  "role": "Support",
+  "element": "Psyche",
+  "rarity": "S",
+  "tier": "A",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/fadia.webp",
+  "description": "Psyche support tied to ETD-4 story beats. Excellent when you want shields, setup, and synergy with Baicang-led defensive lines.",
+  "seo": {
+    "title": "Fadia — Support",
+    "description": "Psyche support tied to ETD-4 story beats. Excellent when you want shields, setup, and synergy with Baicang-led defensive lines."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Psyche"
+  ]
+}

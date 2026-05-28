@@ -1,0 +1,25 @@
+{
+  "slug": "xun",
+  "name": "Xun",
+  "role": "Attack",
+  "element": "Cosmos",
+  "rarity": "S",
+  "tier": "B",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/xun.webp",
+  "description": "Cosmos attacker with steady output. A good third slot when Hotori or Zero leads damage.",
+  "seo": {
+    "title": "Xun — Attack",
+    "description": "Cosmos attacker with steady output. A good third slot when Hotori or Zero leads damage."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cosmos"
+  ]
+}

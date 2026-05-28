@@ -1,9 +1,8 @@
-import detailsData from '../data/acnh-villager-details.json';
 import type { AcnhVillagerDetails } from '../types';
+import { getCharacterBySlug } from '../lib/content/characters';
 
 export function getAcnhVillagerDetails(slug: string): AcnhVillagerDetails | undefined {
-  return (detailsData.villagers as Record<string, AcnhVillagerDetails>)[slug];
+  const character = getCharacterBySlug(slug);
+  if (!character?.acnh) return undefined;
+  return character.acnh as AcnhVillagerDetails;
 }
-
-export const acnhVillagerDetailsUpdatedAt = detailsData.updatedAt;
-export const acnhVillagerDetailsSource = detailsData.source;

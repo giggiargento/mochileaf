@@ -1,0 +1,133 @@
+{
+  "slug": "lolly",
+  "name": "Lolly",
+  "role": "Normal cat",
+  "personality": "Normal",
+  "species": "Cat",
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/lolly-128.webp",
+  "houseStyle": "Book nook",
+  "houseDescription": "Wooden bookcase stacks and a warm reading corner — library cafe at home.",
+  "description": "Warm cookies-and-books vibe. A steady favorite for calm, hygge neighborhoods.",
+  "seo": {
+    "title": "Lolly — Normal cat",
+    "description": "Warm cookies-and-books vibe. A steady favorite for calm, hygge neighborhoods."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Normal",
+    "Cat"
+  ],
+  "acnh": {
+    "appearance": "Lolly in.\nLolly is a blue-gray tabby cat with a big round head and no visible nose. She has black ears and black stripes on her arms, tail, and ears, as well as her head sides, back, and top; they were changed to look more dark gray in New Horizons. The inside of her ears are pink and light pink. Her paws are tipped white, and her muzzle is white and circular. She has a \"3\" shaped mouth, and her eyes resemble the number 6. When she looks up, her eyes resemble the number 9.",
+    "personality": "Like most normal or \"sweet\" villagers, Lolly will be very sensitive and kind. She will be easily upset or offended by other villagers, particularly lazy or cranky villagers. She enjoys the usual hobbies, which are fashion, bug catching, fishing, and furniture. As with all other villagers, she will enjoy the player's company at her house where she may tell the player to \"ignore the mess\", a concern she shares with other normal villagers. She will get along well with other normal villagers and peppy villagers, appearing mother-like in conversation.",
+    "villagerInfo": {
+      "birthday": "March 27",
+      "starSign": "Aries",
+      "personality": "Normal",
+      "subPersonality": "B",
+      "catchphrase": "bonbon",
+      "quote": "Laughter is the best medicine.",
+      "gender": "Female",
+      "defaultClothing": "snowy sweater (Gray)",
+      "umbrella": "snowflake umbrella",
+      "hobby": "Music",
+      "favoriteStyles": [
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Gray",
+        "Pink"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "turquoise slate roof",
+      "siding": "light-brown stucco exterior",
+      "door": "white windowed door",
+      "wallpaper": "Modern Wood Wall",
+      "flooring": "Green Vinyl Flooring",
+      "music": "Forest Life",
+      "furniture": [
+        "Double Sofa",
+        "Wooden Block Bed",
+        "Double Door Refrigerator",
+        "Wooden Stool",
+        "Wooden Block Chest",
+        "Portable Record Player",
+        "Wooden Block Bookshelf",
+        "Kitchen Island",
+        "Mini DIY Workbench",
+        "Old Fashioned Alarm Clock",
+        "Wooden Block Wall Clock",
+        "Potted Ivy"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Lolly_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Lolly_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ラムネ",
+        "romanization": "Ramune"
+      },
+      {
+        "language": "Korean",
+        "name": "사이다",
+        "romanization": "Saida"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "柠檬娜",
+        "romanization": "Níngméngnà"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "檸檬娜"
+      },
+      {
+        "language": "French",
+        "name": "Linette"
+      },
+      {
+        "language": "Spanish",
+        "name": "Feli"
+      },
+      {
+        "language": "Italian",
+        "name": "Maty"
+      },
+      {
+        "language": "German",
+        "name": "Feline"
+      },
+      {
+        "language": "Dutch",
+        "name": "Lolly"
+      },
+      {
+        "language": "Russian",
+        "name": "Лолли",
+        "romanization": "Lolli"
+      }
+    ],
+    "amiibo": {
+      "number": "333",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Aries",
+      "birthday": "March 27",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/333_Lolly_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Lolly"
+  }
+}

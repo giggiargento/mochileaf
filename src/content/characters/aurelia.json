@@ -1,0 +1,25 @@
+{
+  "slug": "aurelia",
+  "name": "Aurelia",
+  "role": "Defense",
+  "element": "Anima",
+  "rarity": "A",
+  "tier": "B",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/aurelia.webp",
+  "description": "Anima defender who bridges early and mid game. Pairs with Jiuyuan or Nanally for comfortable Anima resonance lines.",
+  "seo": {
+    "title": "Aurelia — Defense",
+    "description": "Anima defender who bridges early and mid game. Pairs with Jiuyuan or Nanally for comfortable Anima resonance lines."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Anima"
+  ]
+}

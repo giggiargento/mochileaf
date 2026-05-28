@@ -1,0 +1,141 @@
+{
+  "slug": "stitches",
+  "name": "Stitches",
+  "role": "Lazy bear cub",
+  "personality": "Lazy",
+  "species": "Bear cub",
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/stitches-128.webp",
+  "houseStyle": "Toy box",
+  "houseDescription": "Mix-and-match colorful furniture with a child’s-bedroom feel — patchwork cute.",
+  "description": "Patchwork cub with a permanent smile. Beloved on kidcore and candy-colored islands.",
+  "seo": {
+    "title": "Stitches — Lazy bear cub",
+    "description": "Patchwork cub with a permanent smile. Beloved on kidcore and candy-colored islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Lazy",
+    "Bear cub"
+  ],
+  "acnh": {
+    "appearance": "Stitches is a bear cub with the appearance of a teddy bear, stitched together with a bright purple forehead and tail, an orange face and body, ''x''-shaped eyes, and two ears of different colors. His left ear is blue and light green and his right ear is dark green and orange. His limbs are all colored differently; his left arm is dark green, his right arm is blue, his left leg is dark orange, and his right leg is light green. He has a small, white muzzle with a bear smile and nose, as well as a white stomach.",
+    "personality": "As a lazy villager, Stitches has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Stitches goes to sleep at 11 PM and wakes up at 8 AM.",
+    "villagerInfo": {
+      "birthday": "February 10",
+      "starSign": "Aquarius",
+      "personality": "Lazy",
+      "subPersonality": "B",
+      "catchphrase": "stuffin'",
+      "quote": "A stitch in time saves nine.",
+      "gender": "Male",
+      "defaultClothing": "starry tank",
+      "umbrella": "panda umbrella",
+      "hobby": "Play",
+      "favoriteStyles": [
+        "Simple",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Colorful",
+        "White"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "green striped roof",
+      "siding": "yellow stucco exterior",
+      "door": "burgundy basic door",
+      "wallpaper": "Blue Quilt Wall",
+      "flooring": "Patchwork-Tile Flooring",
+      "music": "I Love You",
+      "furniture": [
+        "Mom's Cushion",
+        "Wooden Block Toy",
+        "Toy Box",
+        "Wooden Simple Bed",
+        "Baby Chair",
+        "Mom's Plushie",
+        "Wooden Chest",
+        "Mom's Lively Kitchen Mat",
+        "Cute Music Player",
+        "Wooden Block Stool",
+        "Mom's Pen Stand",
+        "Wooden Mini Table",
+        "Mom's Tissue Box",
+        "Wooden Low Table",
+        "Modeling Clay",
+        "Study Poster",
+        "Mom's Embroidery",
+        "Yellow Checked Rug",
+        "Baby Bear"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Stitches_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Stitches_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "パッチ",
+        "romanization": "Patchi"
+      },
+      {
+        "language": "Korean",
+        "name": "패치",
+        "romanization": "Paechi"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "玩具熊",
+        "romanization": "Wánjù xióng"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "玩具熊"
+      },
+      {
+        "language": "French",
+        "name": "Miro"
+      },
+      {
+        "language": "Spanish",
+        "name": "Parches"
+      },
+      {
+        "language": "Italian",
+        "name": "Toppetta"
+      },
+      {
+        "language": "German",
+        "name": "Berry"
+      },
+      {
+        "language": "Dutch",
+        "name": "Stitches"
+      },
+      {
+        "language": "Russian",
+        "name": "Стичес",
+        "romanization": "Stiches"
+      }
+    ],
+    "amiibo": {
+      "number": "318",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Aquarius",
+      "birthday": "February 10",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/318_Stitches_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Stitches"
+  }
+}

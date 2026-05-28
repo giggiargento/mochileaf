@@ -1,0 +1,137 @@
+{
+  "slug": "fauna",
+  "name": "Fauna",
+  "role": "Normal deer",
+  "personality": "Normal",
+  "species": "Deer",
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/fauna-128.webp",
+  "houseStyle": "Forest cottage",
+  "houseDescription": "Classic wooden pieces with soft lighting and plants — a woodland cabin that feels lived-in and calm.",
+  "description": "The cottagecore deer everyone recognizes. Sweet dialogue and forest yards that photograph beautifully in every season.",
+  "seo": {
+    "title": "Fauna — Normal deer",
+    "description": "The cottagecore deer everyone recognizes. Sweet dialogue and forest yards that photograph beautifully in every season."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Normal",
+    "Deer"
+  ],
+  "acnh": {
+    "appearance": "Fauna is a brown deer with orange accents on her face and limbs. She has red spots for her cheeks, and bright-pink coloring on the insides of her ears. She has multiple light-brown spots on the back of her head. Her hooves are yellow as well.",
+    "personality": "Fauna has a normal personality, so she will act shy, but caring toward the player. She will get along well with villagers of any personality type. She will have hygiene concerns, represented when the player visits her house, and she will state her embarrassment at the supposedly unclean appearance of her home. She will mention her interest in reading and the various books she reads. She also will enjoy writing and receiving letters.",
+    "villagerInfo": {
+      "birthday": "March 26",
+      "starSign": "Aries",
+      "personality": "Normal",
+      "subPersonality": "A",
+      "catchphrase": "dearie",
+      "quote": "The first step is always the hardest.",
+      "gender": "Female",
+      "defaultClothing": "Bohemian tunic dress (Red)",
+      "umbrella": "raindrop umbrella",
+      "hobby": "Nature",
+      "favoriteStyles": [
+        "Simple",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "White"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "brown stone roof",
+      "siding": "beige stucco exterior",
+      "door": "maple rustic door",
+      "wallpaper": "Red-Brick Wall",
+      "flooring": "Mint Dot Flooring",
+      "music": "K.K. Stroll",
+      "furniture": [
+        "Wooden Block Bed",
+        "Wooden Block Bookshelf",
+        "Pot Rack",
+        "Gas Range",
+        "Wooden Block Chair",
+        "Wooden Block Chest",
+        "Portable Record Player",
+        "Wooden Block Table",
+        "Mini Fridge",
+        "Cutting Board",
+        "Cuckoo Clock",
+        "Vintage TV Tray",
+        "Tree's Bounty Lamp",
+        "Wooden Block Stool",
+        "Book Stands"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Fauna_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Fauna_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ドレミ",
+        "romanization": "Doremi"
+      },
+      {
+        "language": "Korean",
+        "name": "솔미",
+        "romanization": "Solmi"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "音音",
+        "romanization": "Yīn yīn"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "音音"
+      },
+      {
+        "language": "French",
+        "name": "Bibi"
+      },
+      {
+        "language": "Spanish",
+        "name": "Fauna"
+      },
+      {
+        "language": "Italian",
+        "name": "Cervina"
+      },
+      {
+        "language": "German",
+        "name": "Fatima"
+      },
+      {
+        "language": "Dutch",
+        "name": "Fauna"
+      },
+      {
+        "language": "Russian",
+        "name": "Фауна",
+        "romanization": "Fauna"
+      }
+    ],
+    "amiibo": {
+      "number": "019",
+      "series": "Series 1–4",
+      "starSign": "Aries",
+      "birthday": "March 26",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/019_Fauna_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Fauna"
+  }
+}

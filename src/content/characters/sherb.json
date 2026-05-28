@@ -1,0 +1,132 @@
+{
+  "slug": "sherb",
+  "name": "Sherb",
+  "role": "Lazy goat",
+  "personality": "Lazy",
+  "species": "Goat",
+  "popularRank": 5,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/sherb-128.webp",
+  "houseStyle": "Ice cream parlor",
+  "houseDescription": "Pastel dessert-shop furniture with a soft strawberry palette — gentle, round, and very cozy.",
+  "description": "Blueberry pie jokes and nap energy. One of the most relaxed villagers for quiet island moods.",
+  "seo": {
+    "title": "Sherb — Lazy goat",
+    "description": "Blueberry pie jokes and nap energy. One of the most relaxed villagers for quiet island moods."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Lazy",
+    "Goat"
+  ],
+  "acnh": {
+    "appearance": "Sherb is a goat with pale blue fur and a deeper blue tuft of hair leaning to the left. He has pale gray hooves, and horns which are striped with light gray and a darker shade of gray. His pupils are large and black, and his eyes are slightly slanted upwards. He has a coral pink nose and a 3-shaped mouth which connects to his nose. His inner ears are pale orange and he has pale pink cheeks just below his eyes. Much like Kidd, he does not have a beard, making him look fairly youthful compared to the other male goats.",
+    "personality": "As a lazy villager, Sherb has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Sherb goes to sleep at 11 PM and wakes up at 8 AM.",
+    "villagerInfo": {
+      "birthday": "January 18",
+      "starSign": "Capricorn",
+      "personality": "Lazy",
+      "subPersonality": "A",
+      "catchphrase": "bawwww",
+      "quote": "Forty winks is never enough.",
+      "gender": "Male",
+      "defaultClothing": "snowy sweater (Gray)",
+      "umbrella": "vinyl umbrella",
+      "hobby": "Nature",
+      "favoriteStyles": [
+        "Simple",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Gray",
+        "Blue"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "white wooden roof",
+      "siding": "mint-blue stucco exterior",
+      "door": "blue rustic door",
+      "wallpaper": "Purple Moroccan Wall",
+      "flooring": "Simple Purple Flooring",
+      "music": "Hypno K.K.",
+      "furniture": [
+        "Cute DIY Table",
+        "Cute Floor Lamp",
+        "Wooden Mini Table",
+        "Cute Sofa",
+        "Cute Bed",
+        "Cute Wardrobe",
+        "Cute Tea Table",
+        "Cute Music Player",
+        "Old Fashioned Alarm Clock"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Sherb_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Sherb_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "レム",
+        "romanization": "Remu"
+      },
+      {
+        "language": "Korean",
+        "name": "래미",
+        "romanization": "Raemi"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "雷姆",
+        "romanization": "Léimǔ"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "雷姆"
+      },
+      {
+        "language": "French",
+        "name": "Capri"
+      },
+      {
+        "language": "Spanish",
+        "name": "Morfeo"
+      },
+      {
+        "language": "Italian",
+        "name": "Capraldo"
+      },
+      {
+        "language": "German",
+        "name": "Morpheus"
+      },
+      {
+        "language": "Dutch",
+        "name": "Sherb"
+      },
+      {
+        "language": "Russian",
+        "name": "Шерб",
+        "romanization": "Sherb"
+      }
+    ],
+    "amiibo": {
+      "number": "425",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Capricorn",
+      "birthday": "January 18",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/425_Sherb_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Sherb"
+  }
+}

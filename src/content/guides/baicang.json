@@ -1,0 +1,67 @@
+{
+  "characterSlug": "baicang",
+  "gameSlug": "neverness-to-everness",
+  "buildSummary": "Frontline Incantation anchor with strong control value; keeps pressure stable for break comps.",
+  "diskSets": [
+    {
+      "name": "Your Happiness is Priceless (S)",
+      "note": "Defensive Arc with strong team sustain value for frontline roles."
+    },
+    {
+      "name": "Umbrella (A)",
+      "note": "Comfortable A-rank tank fallback while waiting for premium defensive Arcs."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Tank Modules",
+      "note": "DEF/HP lines for frontline stability."
+    },
+    {
+      "name": "A-tier Tank Modules",
+      "note": "Bridge option with mixed DEF + utility stats."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Skill",
+      "scales": "Mitigation/shield values and frontline control."
+    },
+    {
+      "skill": "Support Skill",
+      "scales": "Team protection and taunt/control utility."
+    },
+    {
+      "skill": "Ultimate",
+      "scales": "Defensive burst impact and clutch survival windows."
+    },
+    {
+      "skill": "Basic Attack",
+      "scales": "Low-impact personal damage on tanks."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Tank breakpoints for boss content.",
+      "location": "Rabbit Hole > Character Growth simulations",
+      "tip": "Raise DEF units early if your team gets one-shot in anomalies."
+    },
+    {
+      "name": "Defense skill materials",
+      "purpose": "Shield/mitigation scaling.",
+      "location": "Rabbit Hole > Skill material anomalies",
+      "tip": "Upgrade mitigation skills before damage skills on tanks."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "DEF/HP line progression.",
+      "location": "Anomaly Investigation > Module domains",
+      "tip": "Focus defensive substats first, then utility."
+    }
+  ],
+  "seo": {
+    "title": "Baicang build guide",
+    "description": "Frontline Incantation anchor with strong control value; keeps pressure stable for break comps."
+  }
+}

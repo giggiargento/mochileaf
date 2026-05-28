@@ -1,0 +1,20 @@
+{
+  "slug": "linus",
+  "name": "Linus",
+  "role": "Forager",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/linus.png",
+  "description": "Lives in a tent north of town and respects the valley’s wild places. Appreciates foraged goods and kindness more than expensive gifts.",
+  "seo": {
+    "title": "Linus — Forager",
+    "description": "Lives in a tent north of town and respects the valley’s wild places. Appreciates foraged goods and kindness more than expensive gifts."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": []
+}

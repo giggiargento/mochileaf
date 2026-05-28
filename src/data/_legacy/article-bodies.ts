@@ -1,4 +1,4 @@
-export interface ArticleBodySection {
+﻿export interface ArticleBodySection {
   heading?: string;
   paragraphs: string[];
 }
@@ -7,28 +7,28 @@ export const articleBodies: Record<string, ArticleBodySection[]> = {
   'stardew-valley-year-one-guide': [
     {
       paragraphs: [
-        'Your first year in Stardew Valley is about rhythm, not perfection. Wake up, water crops, check the town, and leave energy for one “main” goal — mines, fishing, or friendship — before sundown.',
+        'Your first year in Stardew Valley is about rhythm, not perfection. Wake up, water crops, check the town, and leave energy for one ÔÇ£mainÔÇØ goal ÔÇö mines, fishing, or friendship ÔÇö before sundown.',
         'This guide assumes you are playing at a cozy pace: no strict min-max, just a route that avoids common bottlenecks.',
       ],
     },
     {
       heading: 'Spring priorities',
       paragraphs: [
-        'Plant mixed crops early (potatoes and cauliflower are safe). Save gold for Strawberry Seeds at the Egg Festival on the 13th — plant them the same day for strong mid-season income.',
+        'Plant mixed crops early (potatoes and cauliflower are safe). Save gold for Strawberry Seeds at the Egg Festival on the 13th ÔÇö plant them the same day for strong mid-season income.',
         'Visit the Community Center as soon as it unlocks and read bundle requirements. Stash one of each forage item you find instead of selling everything on day one.',
       ],
     },
     {
       heading: 'Mining and tools',
       paragraphs: [
-        'Upgrade your watering can on a rainy day in Spring or early Summer so you do not miss crop days. Push to floor 40–80 in the mines before Summer if you want better combat drops.',
+        'Upgrade your watering can on a rainy day in Spring or early Summer so you do not miss crop days. Push to floor 40ÔÇô80 in the mines before Summer if you want better combat drops.',
         'Eat foraged food or cheap salads from the saloon instead of buying stacks of energy items.',
       ],
     },
     {
       heading: 'Relationships without burnout',
       paragraphs: [
-        'Talk to everyone you pass. Gift twice per week once you know tastes — loved gifts matter more than expensive ones.',
+        'Talk to everyone you pass. Gift twice per week once you know tastes ÔÇö loved gifts matter more than expensive ones.',
         'Check birthdays on the calendar in your farmhouse; one loved gift on a birthday equals several normal gifts.',
       ],
     },
@@ -42,14 +42,14 @@ export const articleBodies: Record<string, ArticleBodySection[]> = {
     {
       heading: 'What to prepare early',
       paragraphs: [
-        'Keep a chest labeled “bundles” near your farm. Drop in seasonal forages, one quality crop when asked, and fish when you catch a required species.',
-        'The Bulletin Board bundle needs help from other villagers — start friendship early if you want to finish it before late game.',
+        'Keep a chest labeled ÔÇ£bundlesÔÇØ near your farm. Drop in seasonal forages, one quality crop when asked, and fish when you catch a required species.',
+        'The Bulletin Board bundle needs help from other villagers ÔÇö start friendship early if you want to finish it before late game.',
       ],
     },
     {
       heading: 'Room order many players prefer',
       paragraphs: [
-        'Crafts Room and Pantry are friendly for year one. Boiler Room needs mining access; Vault needs cash — save 25,000g when you are comfortable. Fish Tank and Bulletin Board are long-term projects across seasons.',
+        'Crafts Room and Pantry are friendly for year one. Boiler Room needs mining access; Vault needs cash ÔÇö save 25,000g when you are comfortable. Fish Tank and Bulletin Board are long-term projects across seasons.',
       ],
     },
   ],
@@ -62,8 +62,8 @@ export const articleBodies: Record<string, ArticleBodySection[]> = {
     {
       heading: 'Crop snapshot',
       paragraphs: [
-        'Potatoes: cheap seeds, chance of extra harvest — great for day 5–12 income. Cauliflower: one big payout if planted by day 5. Strawberries: best if bought at the festival and planted immediately.',
-        'Green beans keep producing after the first harvest — good if you hate replanting every few days.',
+        'Potatoes: cheap seeds, chance of extra harvest ÔÇö great for day 5ÔÇô12 income. Cauliflower: one big payout if planted by day 5. Strawberries: best if bought at the festival and planted immediately.',
+        'Green beans keep producing after the first harvest ÔÇö good if you hate replanting every few days.',
       ],
     },
     {
@@ -76,7 +76,7 @@ export const articleBodies: Record<string, ArticleBodySection[]> = {
   'acnh-island-setup-beginner': [
     {
       paragraphs: [
-        'Your first days on the island are about unlocking tools, placing infrastructure, and leaving room for later terraforming. Move slowly — paths and rivers are easier to adjust once you have the vaulting pole and ladder.',
+        'Your first days on the island are about unlocking tools, placing infrastructure, and leaving room for later terraforming. Move slowly ÔÇö paths and rivers are easier to adjust once you have the vaulting pole and ladder.',
       ],
     },
     {
@@ -90,7 +90,7 @@ export const articleBodies: Record<string, ArticleBodySection[]> = {
   'acnh-villager-hunting-tips': [
     {
       paragraphs: [
-        'Hunting a specific villager is part luck, part routine. Mystery tours, campsite amiibo, and trading with friends are the three main paths — pick the one that matches your budget and patience.',
+        'Hunting a specific villager is part luck, part routine. Mystery tours, campsite amiibo, and trading with friends are the three main paths ÔÇö pick the one that matches your budget and patience.',
       ],
     },
     {
@@ -103,13 +103,13 @@ export const articleBodies: Record<string, ArticleBodySection[]> = {
   'nte-beginner-guide': [
     {
       paragraphs: [
-        'Neverness to Everness (NTE) opens fast — new systems, elements, and banners appear within the first hour. This guide keeps your first week simple: one main DPS, one support, and daily habits you can repeat without burnout.',
+        'Neverness to Everness (NTE) opens fast ÔÇö new systems, elements, and banners appear within the first hour. This guide keeps your first week simple: one main DPS, one support, and daily habits you can repeat without burnout.',
       ],
     },
     {
       heading: 'Pick a main team early',
       paragraphs: [
-        'If you are free-to-play, invest in Chiz from City Tycoon first — full S-rank path without gacha. Pair with any Cosmos or Anima support you already own (Mint, Jiuyuan, or Nanally).',
+        'If you are free-to-play, invest in Chiz from City Tycoon first ÔÇö full S-rank path without gacha. Pair with any Cosmos or Anima support you already own (Mint, Jiuyuan, or Nanally).',
         'Pulled Baicang or Daffodil? Check our Turbid Burn team comp on the Teams page before spreading resources across too many DPS units.',
       ],
     },
@@ -117,7 +117,7 @@ export const articleBodies: Record<string, ArticleBodySection[]> = {
       heading: 'Stamina and dailies',
       paragraphs: [
         'Spend resin on account-progression materials before farming perfect artifacts. Finish daily commissions and City Tycoon check-ins before long anomaly grinds.',
-        'When tired, stop after dailies — NTE rewards consistency more than single six-hour sessions.',
+        'When tired, stop after dailies ÔÇö NTE rewards consistency more than single six-hour sessions.',
       ],
     },
     {
@@ -130,7 +130,7 @@ export const articleBodies: Record<string, ArticleBodySection[]> = {
   'nte-redeem-codes': [
     {
       paragraphs: [
-        'Redeem codes from the in-game menu (Settings → Account → Redeem). Codes expire — treat this page as a reminder to check official social posts, not a live database.',
+        'Redeem codes from the in-game menu (Settings ÔåÆ Account ÔåÆ Redeem). Codes expire ÔÇö treat this page as a reminder to check official social posts, not a live database.',
       ],
     },
     {
@@ -174,7 +174,7 @@ export const articleBodies: Record<string, ArticleBodySection[]> = {
     {
       heading: 'Free power spikes',
       paragraphs: [
-        'Chiz (City Tycoon) is the headline — plan Grain Market upgrades weekly. Story units and trial stages also grant usable gear for your first teams.',
+        'Chiz (City Tycoon) is the headline ÔÇö plan Grain Market upgrades weekly. Story units and trial stages also grant usable gear for your first teams.',
       ],
     },
     {

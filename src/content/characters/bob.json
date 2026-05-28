@@ -1,0 +1,134 @@
+{
+  "slug": "bob",
+  "name": "Bob",
+  "role": "Lazy cat",
+  "personality": "Lazy",
+  "species": "Cat",
+  "popularRank": 7,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/bob-128.webp",
+  "houseStyle": "Playful retro",
+  "houseDescription": "Kiddie and pastel items with a loose, cluttered charm — feels lived-in and silly.",
+  "description": "pUhYoNgMiSt fan favorite since forever. Lazy energy and meme status keep him in the most-wanted lists.",
+  "seo": {
+    "title": "Bob — Lazy cat",
+    "description": "pUhYoNgMiSt fan favorite since forever. Lazy energy and meme status keep him in the most-wanted lists."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Lazy",
+    "Cat"
+  ],
+  "acnh": {
+    "intro": "Bob is a lazy cat villager in the who appears in all games to date. His name may be derived from. His Japanese catchphrase, ''neko'', means \"cat,\" relating to his species. According to series co-creator Hisashi Nogami, Bob was the first villager created, and his January 1 birthday came as a result of that.",
+    "appearance": "Bob is a purple cat with dark purple polka dots, half-closed lazy yellow eyes, and light purple paws. The inside of his ears are pink, and his tail is purple with darker purple stripes.",
+    "personality": "As a lazy villager, Bob has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Bob goes to sleep at 11 PM and wakes up at 8 AM.",
+    "villagerInfo": {
+      "birthday": "January 1",
+      "starSign": "Capricorn",
+      "personality": "Lazy",
+      "subPersonality": "B",
+      "catchphrase": "pthhpth",
+      "quote": "You only live once...or nine times.",
+      "gender": "Male",
+      "defaultClothing": "blossom tee (Pink)",
+      "umbrella": "eggy parasol",
+      "hobby": "Play",
+      "favoriteStyles": [
+        "Simple",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Colorful",
+        "Red"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "turquoise slate roof",
+      "siding": "yellow stucco exterior",
+      "door": "red wooden door",
+      "wallpaper": "blue playroom wall",
+      "flooring": "colorful puzzle flooring",
+      "music": "Neapolitan",
+      "furniture": [
+        "wooden block stereo",
+        "wooden block bed",
+        "wooden block chair",
+        "wooden block table",
+        "wooden block bookshelf",
+        "wooden block bench",
+        "wooden block chest",
+        "wooden block toy",
+        "toy box",
+        "wooden block wall clock"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Bob_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Bob_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ニコバン",
+        "romanization": "Nikoban"
+      },
+      {
+        "language": "Korean",
+        "name": "히죽",
+        "romanization": "Hijuk"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "阿判",
+        "romanization": "Āpàn"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "阿判"
+      },
+      {
+        "language": "French",
+        "name": "Robert"
+      },
+      {
+        "language": "Spanish",
+        "name": "Arándano"
+      },
+      {
+        "language": "Italian",
+        "name": "Bob"
+      },
+      {
+        "language": "German",
+        "name": "Jens"
+      },
+      {
+        "language": "Dutch",
+        "name": "Bob"
+      },
+      {
+        "language": "Russian",
+        "name": "Боб",
+        "romanization": "Bob"
+      }
+    ],
+    "amiibo": {
+      "number": "018",
+      "series": "Series 1–4",
+      "starSign": "Capricorn",
+      "birthday": "January 1",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/018_Bob_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Bob"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "slug": "judy",
+  "name": "Judy",
+  "role": "Snooty bear cub",
+  "personality": "Snooty",
+  "species": "Bear cub",
+  "popularRank": 3,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/judy-128.webp",
+  "houseStyle": "Pastel living room",
+  "houseDescription": "Pink and cream cute set pieces with soft lighting — built for dreamy screenshot tours.",
+  "description": "Sparkly eyes and a gentle snooty attitude. Often hunted for elegant, feminine room themes.",
+  "seo": {
+    "title": "Judy — Snooty bear cub",
+    "description": "Sparkly eyes and a gentle snooty attitude. Often hunted for elegant, feminine room themes."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Snooty",
+    "Bear cub"
+  ],
+  "acnh": {
+    "appearance": "Judy is a bear cub with light blue fur that fades into pastel pink across her body. Her face is white and she has rosy cheeks, with a small black nose, a V-shaped mouth, white paw pads on her feet, and a round white tail. The insides of her ears are a pale shade of cream. She wears cyan eyeshadow and has thick black eyelashes, and dark purple starry eyes. When she's shocked, her eyes turn white with a small dark purple iris and black pupils, and also gains eye wrinkles. When her eyes are closed, there's still some visible sparkles on her eyelashes.",
+    "personality": "Judy has a snooty personality. She will appear uptown, classy, and chic. With this, she will appear rude, belittling and snobbish when talking to others, usually criticizing their dress sense or fashion. She is able to get along with cranky, big sister, smug, and other snooty villagers. She will have her fitness questioned by a jock villager. She will not get along with normal villagers, due to their kindness and politeness towards their neighbors.",
+    "villagerInfo": {
+      "birthday": "March 10",
+      "starSign": "Pisces",
+      "personality": "Snooty",
+      "subPersonality": "A",
+      "catchphrase": "myohmy",
+      "quote": "I'm dancing my dreams away.",
+      "gender": "Female",
+      "defaultClothing": "fairy-tale dress (Pink)",
+      "umbrella": "white shiny-bows parasol",
+      "hobby": "Music",
+      "favoriteStyles": [
+        "Cute",
+        "Elegant"
+      ],
+      "favoriteColors": [
+        "Pink",
+        "White"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "blue wooden-tile roof",
+      "siding": "light-blue cobblestones",
+      "door": "pink simple door",
+      "wallpaper": "Starry Wall",
+      "flooring": "Blue Dot Flooring",
+      "music": "K.K. Lullaby",
+      "furniture": [
+        "Starry Garland",
+        "Wooden Block Bed",
+        "Wooden Block Table",
+        "Wooden Block Wall Clock",
+        "Wooden Block Bench",
+        "Wooden Block Stool",
+        "Humidifier",
+        "Wooden Block Chair",
+        "Wooden Block Bookshelf",
+        "Old Fashioned Alarm Clock",
+        "Wooden Block Chest",
+        "Wooden Block Stereo"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Judy_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Judy_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "みすず",
+        "romanization": "Misuzu"
+      },
+      {
+        "language": "Korean",
+        "name": "미애",
+        "romanization": "Miae"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "美玲",
+        "romanization": "Měilíng"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "美玲"
+      },
+      {
+        "language": "French",
+        "name": "Laura"
+      },
+      {
+        "language": "Spanish",
+        "name": "Rosezna"
+      },
+      {
+        "language": "Italian",
+        "name": "Misuzu"
+      },
+      {
+        "language": "German",
+        "name": "Misuzu"
+      },
+      {
+        "language": "Dutch",
+        "name": "Judy"
+      },
+      {
+        "language": "Russian",
+        "name": "Джуди",
+        "romanization": "Dzhudi"
+      }
+    ],
+    "amiibo": {
+      "number": "430",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Pisces",
+      "birthday": "March 10",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/430_Judy_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Judy"
+  }
+}

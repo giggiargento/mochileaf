@@ -1,0 +1,25 @@
+{
+  "slug": "skia",
+  "name": "Skia",
+  "role": "Attack",
+  "element": "Incantation",
+  "rarity": "A",
+  "tier": "C",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/skia.webp",
+  "description": "Incantation attacker with ETD-4 flavor. Fun alongside Baicang and Fadia when building theme teams over pure meta.",
+  "seo": {
+    "title": "Skia — Attack",
+    "description": "Incantation attacker with ETD-4 flavor. Fun alongside Baicang and Fadia when building theme teams over pure meta."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Incantation"
+  ]
+}

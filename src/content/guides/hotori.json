@@ -1,0 +1,67 @@
+{
+  "characterSlug": "hotori",
+  "gameSlug": "neverness-to-everness",
+  "buildSummary": "On-field Cosmos DPS. Build for crit consistency and burst windows in teams with Nanally/Jiuyuan.",
+  "diskSets": [
+    {
+      "name": "The Rain That Shook the World (S)",
+      "note": "Strong general DPS Arc for burst carries with reliable damage scaling."
+    },
+    {
+      "name": "First Step to Success (A)",
+      "note": "Accessible bridge Arc for early progression while farming better S options."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Module line",
+      "note": "Prioritize CRIT/ATK rolls for burst consistency."
+    },
+    {
+      "name": "A-tier Module fallback",
+      "note": "Use ATK + Cycle Rate until best rolls drop."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Ultimate",
+      "scales": "Largest burst spike and carry conversion."
+    },
+    {
+      "skill": "Skill",
+      "scales": "Core DPS loop and cycle trigger pressure."
+    },
+    {
+      "skill": "Support Skill",
+      "scales": "Swap burst contribution and utility damage."
+    },
+    {
+      "skill": "Basic Attack",
+      "scales": "Fill damage while waiting for key cooldowns."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Level cap and ascension breakpoints.",
+      "location": "Rabbit Hole > Character Growth simulations",
+      "tip": "Spend daily stamina here first until your main DPS hits next ascension cap."
+    },
+    {
+      "name": "Weapon/Arc upgrade mats",
+      "purpose": "Main damage multiplier.",
+      "location": "Rabbit Hole > Arc/Weapon material anomalies",
+      "tip": "Farm on days matching your Arc upgrade route before side content."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Crit/ATK scaling.",
+      "location": "Anomaly Investigation > Module domains",
+      "tip": "Use these after EXP/Arc mats; module gains are strongest mid/late progression."
+    }
+  ],
+  "seo": {
+    "title": "Hotori build guide",
+    "description": "On-field Cosmos DPS. Build for crit consistency and burst windows in teams with Nanally/Jiuyuan."
+  }
+}

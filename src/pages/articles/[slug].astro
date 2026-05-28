@@ -2,30 +2,51 @@
 import GlobalLayout from '../../layouts/GlobalLayout.astro';
 import PageHeader from '../../components/game/PageHeader.astro';
 import ArticleDetail from '../../components/article/ArticleDetail.astro';
-import { articles } from '../../data/articles';
+import { getArticleEntry, loadArticleEntries } from '../../data/articles';
 import { getArticleHref } from '../../utils/article-routes';
+import { render } from 'astro:content';
+import { resolveContentSeo } from '../../lib/content/seo';
 
-export function getStaticPaths() {
-  return articles.map((article) => ({
-    params: { slug: article.slug },
-    props: { article },
-  }));
+export async function getStaticPaths() {
+  const entries = await loadArticleEntries();
+  return entries
+    .filter((entry) => !entry.data.gameSlug)
+    .map((entry) => {
+      const slug = entry.id.replace(/\.md$/, '');
+      const article = {
+        slug,
+        title: entry.data.title,
+        excerpt: entry.data.excerpt,
+        category: entry.data.category,
+        publishedAt: entry.data.publishedAt,
+        readTime: entry.data.readTime,
+        featured: entry.data.featured,
+        trending: entry.data.trending,
+      };
+      return { params: { slug }, props: { article, entryId: entry.id } };
+    });
 }
 
-const { article } = Astro.props;
+const { article, entryId } = Astro.props;
 
 if (article.gameSlug) {
   return Astro.redirect(getArticleHref(article), 301);
 }
+
+const entry = await getArticleEntry(article.slug);
+if (!entry) throw new Error(`Missing article entry: ${entryId}`);
+const { Content } = await render(entry);
+const seo = resolveContentSeo(entry.data.seo, {
+  title: article.title,
+  description: article.excerpt,
+});
 ---
 
-<GlobalLayout title={article.title} description={article.excerpt}>
-  <PageHeader
-    badge={article.category}
-    title={article.title}
-    description={article.excerpt}
-  />
+<GlobalLayout title={seo.title} description={seo.description}>
+  <PageHeader badge={article.category} title={article.title} description={article.excerpt} />
   <div class="page-container-below-header">
-    <ArticleDetail article={article} />
+    <ArticleDetail article={article}>
+      <Content />
+    </ArticleDetail>
   </div>
 </GlobalLayout>

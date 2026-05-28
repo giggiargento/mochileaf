@@ -1,5 +1,5 @@
 import type { Game, NavItem } from '../types';
-import { games } from '../data/games';
+import { routableGames } from '../lib/content/registry';
 import { getGameNavForGame } from '../data/game-nav';
 import { getGameDisplayName } from './game-display';
 
@@ -41,8 +41,7 @@ export function isNavParentActive(item: NavItem, currentPath: string): boolean {
 }
 
 function activeGameNavChildren(): NavItem[] {
-  return games
-    .filter((g) => g.status === 'active')
+  return routableGames
     .map((game) => ({
       label: getGameDisplayName(game, 'short'),
       href: `/${game.slug}`,

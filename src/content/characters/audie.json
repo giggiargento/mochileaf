@@ -1,0 +1,136 @@
+{
+  "slug": "audie",
+  "name": "Audie",
+  "role": "Peppy wolf",
+  "personality": "Peppy",
+  "species": "Wolf",
+  "popularRank": 12,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/audie-128.webp",
+  "houseStyle": "Retro tiki lounge",
+  "houseDescription": "Bright rattan and palm with vintage flair — vacation home that never quite left the seventies.",
+  "description": "Named after a long-time fan and full of pep. Great for colorful, music-forward islands.",
+  "seo": {
+    "title": "Audie — Peppy wolf",
+    "description": "Named after a long-time fan and full of pep. Great for colorful, music-forward islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Peppy",
+    "Wolf"
+  ],
+  "acnh": {
+    "appearance": "Audie is an orange wolf with a whitish yellow coloration on her snout, hands, feet, and the tip of her tail. She resembles a fox, and her catchphrase \"foxtrot\" references her fox-like appearance. She has a pair of white sunglasses with purple lenses resting on her forehead, along with teal coloration inside her ears and blonde hair swept to the side. She has blue eyes with prominent lashes and yellow eyeshadow.",
+    "personality": "As a peppy villager, Audie will appear cheerful and friendly, and sometimes will reward others with gifts and compliments. To some villagers however, Audie can appear to be rude sometimes. She has a short attention span and may have the tendency to overreact about small things. She will be easy to befriend, taking comfort in those she talks to most. She may, however, feel insulted when talking to snooty or cranky villagers, who may gossip about her or disagree with her style. She may also find it difficult to talk with lazy villagers, but she gives out comfort to jocks, who are the male equivalent to the peppy villagers. She also gets along well with normal, big sister, and smug villagers.",
+    "villagerInfo": {
+      "birthday": "August 31",
+      "starSign": "Virgo",
+      "personality": "Peppy",
+      "subPersonality": "A",
+      "catchphrase": "foxtrot",
+      "quote": "Be the kind of person your future self won't regret having been.",
+      "gender": "Female",
+      "defaultClothing": "tropical muumuu (Mint)",
+      "umbrella": "fairy-tale umbrella",
+      "hobby": "Fitness",
+      "favoriteStyles": [
+        "Cute",
+        "Active"
+      ],
+      "favoriteColors": [
+        "Green",
+        "White"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "orange thatch roof",
+      "siding": "mint-blue stucco exterior",
+      "door": "white latticework door",
+      "wallpaper": "Tropical Vista",
+      "flooring": "Green Floral Flooring",
+      "music": "K.K. Island",
+      "furniture": [
+        "Rattan End Table",
+        "Tape Deck",
+        "Open Frame Kitchen",
+        "Diner Neon Sign",
+        "Menu Chalkboard",
+        "Double Door Refrigerator",
+        "Cardboard Box",
+        "Fruit Basket",
+        "Wall Fan",
+        "Rattan Low Table",
+        "Coconut Juice",
+        "Yellow Kitchen Mat",
+        "Palm Tree Lamp"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Audie_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Audie_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "モニカ",
+        "romanization": "Monika"
+      },
+      {
+        "language": "Korean",
+        "name": "모니카",
+        "romanization": "Monika"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "莫妮卡",
+        "romanization": "Mònīkǎ"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "莫妮卡"
+      },
+      {
+        "language": "French",
+        "name": "Monica"
+      },
+      {
+        "language": "Spanish",
+        "name": "Mónica"
+      },
+      {
+        "language": "Italian",
+        "name": "Lupilia"
+      },
+      {
+        "language": "German",
+        "name": "Katharina"
+      },
+      {
+        "language": "Dutch",
+        "name": "Audie"
+      },
+      {
+        "language": "Russian",
+        "name": "Оди",
+        "romanization": "Odi"
+      }
+    ],
+    "amiibo": {
+      "number": "428",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Virgo",
+      "birthday": "August 31",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/428_Audie_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Audie"
+  }
+}

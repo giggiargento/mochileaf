@@ -1,0 +1,25 @@
+{
+  "slug": "zero-male",
+  "name": "Zero (M)",
+  "role": "Attack",
+  "element": "Cosmos",
+  "rarity": "S",
+  "tier": "B",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/zero-male.webp",
+  "description": "Cosmos burst damage with straightforward rotations. A flexible pick when you need a second DPS in Cosmos-heavy teams.",
+  "seo": {
+    "title": "Zero (M) — Attack",
+    "description": "Cosmos burst damage with straightforward rotations. A flexible pick when you need a second DPS in Cosmos-heavy teams."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cosmos"
+  ]
+}

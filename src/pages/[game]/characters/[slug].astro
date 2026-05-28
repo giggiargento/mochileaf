@@ -3,8 +3,8 @@ import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import Badge from '../../../components/ui/Badge.astro';
 import Button from '../../../components/ui/Button.astro';
 import Icon from '../../../components/ui/Icon.astro';
-import { games } from '../../../data/games';
-import { characters, getCharacter } from '../../../data/characters';
+import { getCharacter } from '../../../data/characters';
+import { routableCharacters, routableGames } from '../../../lib/content/registry';
 import { getHubCopy } from '../../../utils/game-hub';
 import DecorInspirationGallery from '../../../components/game/acnh/DecorInspirationGallery.astro';
 import VillagerDetailSections from '../../../components/game/acnh/VillagerDetailSections.astro';
@@ -13,15 +13,11 @@ import { villagerPortrait } from '../../../data/characters-acnh';
 import { acnhPinterestBoards } from '../../../data/pinterest-boards-acnh';
 import { getAcnhVillagerDetails } from '../../../utils/acnh-villager-details';
 import { getNteCharacterGuide } from '../../../data/nte-character-guides';
+import { resolveContentSeo } from '../../../lib/content/seo';
 
 export function getStaticPaths() {
-  return characters
-    .filter((character) => {
-      const game = games.find((g) => g.slug === character.gameSlug);
-      return game && game.status === 'active';
-    })
-    .map((character) => {
-      const game = games.find((g) => g.slug === character.gameSlug)!;
+  return routableCharacters.map((character) => {
+      const game = routableGames.find((g) => g.slug === character.gameSlug)!;
       return {
         params: { game: character.gameSlug, slug: character.slug },
         props: { game, character },
@@ -37,6 +33,10 @@ const acnhDetails = isAcnh ? getAcnhVillagerDetails(character.slug) : undefined;
 const nteGuide = isNte ? getNteCharacterGuide(character) : undefined;
 const portraitAlt = `${character.name} — ${character.role} in ${game.name}`;
 const listLabel = hubCopy.charactersTitle.toLowerCase();
+const characterSeo = resolveContentSeo(character.seo, {
+  title: character.name,
+  description: character.description,
+});
 const characterDecor = isAcnh ? getAcnhDecorForCharacter(character.slug) : [];
 const characterPinterestBoard =
   isAcnh && character.slug in acnhPinterestBoards
@@ -92,7 +92,7 @@ const villagerInfoRows =
     : [];
 ---
 
-<GameHubLayout game={game} title={character.name}>
+<GameHubLayout game={game} title={characterSeo.title} description={characterSeo.description}>
   <div class="page-container-below-header">
     <a href={`/${game.slug}/characters`} class="cozy-link text-sm font-medium">
       ← All {listLabel}

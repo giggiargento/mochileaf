@@ -13,7 +13,7 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
-const news = getNewsByGame(game.slug);
+const news = await getNewsByGame(game.slug);
 ---
 
 <GameHubLayout game={game} title="News">

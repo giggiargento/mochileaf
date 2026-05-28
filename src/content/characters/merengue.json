@@ -1,0 +1,138 @@
+{
+  "slug": "merengue",
+  "name": "Merengue",
+  "role": "Normal rhino",
+  "personality": "Normal",
+  "species": "Rhino",
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/merengue-128.webp",
+  "houseStyle": "Bakery sweet",
+  "houseDescription": "Cakes, pastry tables, and soft pink — dessert shop disguised as a home.",
+  "description": "Strawberry-shortcake rhino. One of the sweetest normals for food-themed builds.",
+  "seo": {
+    "title": "Merengue — Normal rhino",
+    "description": "Strawberry-shortcake rhino. One of the sweetest normals for food-themed builds."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Normal",
+    "Rhino"
+  ],
+  "acnh": {
+    "appearance": "Merengue is a pink rhinoceros with white hooves and hair. Her horn is red with dark red spots and is surrounded by green semicircles so it resembles a strawberry.",
+    "personality": "As a normal villager, Merengue will appear friendly and hospitable towards the player and other villagers. Like other normal villagers, she will have an unseen obsession with hygiene and cleanliness, which she mentions when the player visits her in her home. Other than her hygiene interests, she will appear neutral and open-minded when discussing hobbies. She will get along easily with other villagers, but may conflict with lazy villagers when they talk about food and leading her on to suggesting making them dinner or lunch.",
+    "villagerInfo": {
+      "birthday": "March 19",
+      "starSign": "Pisces",
+      "personality": "Normal",
+      "subPersonality": "A",
+      "catchphrase": "shortcake",
+      "quote": "Life is a piece of cake.",
+      "gender": "Female",
+      "defaultClothing": "chef's outfit (Red)",
+      "umbrella": "lacy parasol",
+      "hobby": "Nature",
+      "favoriteStyles": [
+        "Cute",
+        "Simple"
+      ],
+      "favoriteColors": [
+        "White",
+        "Red"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "red slate roof",
+      "siding": "beige cobblestones",
+      "door": "beige basic door",
+      "wallpaper": "Pastel Dotted Wall",
+      "flooring": "Mint Dot Flooring",
+      "music": "K.K. Ballad",
+      "musicNote": "Does not contain a stereo initially",
+      "furniture": [
+        "Double Door Refrigerator",
+        "Menu Chalkboard",
+        "Cute Sofa",
+        "Kitchen Island",
+        "Cute Tea Table",
+        "Portable Radio",
+        "Potted Ivy",
+        "Chef's Outfit",
+        "Wooden Low Table",
+        "Cream and Sugar",
+        "Tea Set",
+        "Diner Counter Table",
+        "Microwave",
+        "Stand Mixer",
+        "Soft Serve Lamp"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Merengue_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Merengue_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "パティ",
+        "romanization": "Pati"
+      },
+      {
+        "language": "Korean",
+        "name": "스트로베리",
+        "romanization": "Seuteuroberi"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "草莓",
+        "romanization": "CǎoMéi"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "草莓"
+      },
+      {
+        "language": "French",
+        "name": "Patty"
+      },
+      {
+        "language": "Spanish",
+        "name": "Natura"
+      },
+      {
+        "language": "Italian",
+        "name": "Irina"
+      },
+      {
+        "language": "German",
+        "name": "Maria"
+      },
+      {
+        "language": "Dutch",
+        "name": "Merengue"
+      },
+      {
+        "language": "Russian",
+        "name": "Меренг",
+        "romanization": "Mereng"
+      }
+    ],
+    "amiibo": {
+      "number": "285",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Pisces",
+      "birthday": "March 19",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/285_Merengue_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Merengue"
+  }
+}

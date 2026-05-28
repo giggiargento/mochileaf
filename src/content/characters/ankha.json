@@ -1,0 +1,132 @@
+{
+  "slug": "ankha",
+  "name": "Ankha",
+  "role": "Snooty cat",
+  "personality": "Snooty",
+  "species": "Cat",
+  "popularRank": 4,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/ankha-128.webp",
+  "houseStyle": "Egyptian gold",
+  "houseDescription": "Pyramid roof exterior with golden sarcophagus and royal antiques inside — dramatic and unmistakable.",
+  "description": "Regal, mysterious, and iconic. Her house is a set piece players love to rebuild on Harv’s Island.",
+  "seo": {
+    "title": "Ankha — Snooty cat",
+    "description": "Regal, mysterious, and iconic. Her house is a set piece players love to rebuild on Harv’s Island."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Lollipop"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Snooty",
+    "Cat"
+  ],
+  "acnh": {
+    "intro": "Ankha is a snooty cat in the. She first appeared in as an islander, and after being absent in, she appears in all subsequent games as a villager. Her name is likely derived from the '' '', which is the Egyptian hieroglyphic character that reads ''life''. Her Japanese catchphrase, ''kufufu'', is a combination of the Pharaoh, and ''ufufu'', a Japanese onomatopoeia for laughter. Egyptians worshiped cats and had a cat goddess,, which may be the basis for Ankha's design.",
+    "appearance": "Ankha is a navy blue-and-gold-striped cat. She wears navy blue eyeliner in the style of Egyptian royalty: surrounding the eyes, and wings out towards the outside of the bottom corners. She has orange eyeshadow which can be seen when she blinks. Her large black pupils look upwards, and her mouth is constantly curved into a scowl, even when she is happy. Her headgear is an upright golden Egyptian cobra with blue stripes. She has a slightly different style in, where she lacks the normal pharaoh headdress, which was replaced with a scarab head pendant, but it was changed back to a headdress in.",
+    "personality": "As a snooty islander in,, and, Ankha is talkative and vain; she is warmer than her mainland counterparts and focus on being well-liked as well as beautiful, but she can still be catty or rude in some situations. As a snooty villager from onward, Ankha will appear arrogant and snobbish towards the player and other villagers, but will appear friendly and nice in some discussions, provided they are mature and do not insult her lifestyle. She finds appearance important, and will get angry or upset if someone criticizes her sense of style or fitness, which means a conversation between her and a jock personality may leave either one upset or angry. Her attitude towards the player changes, as she begins to warm up to them, but she will still retain some arrogance and subtle rudeness. She may not get along with lazy villagers, due to their lifestyles - lazy villagers having a strong interest in food or relaxing, both of which will make her uncomfortable, angry, and upset when in conversation. She will upset peppy villagers, usually by gossiping about them, and finding small things to judge them on. She will get along well with normal, cranky, and other snooty villagers.",
+    "villagerInfo": {
+      "birthday": "September 22",
+      "starSign": "Virgo",
+      "personality": "Snooty",
+      "subPersonality": "B",
+      "catchphrase": "me meow",
+      "quote": "All that glitters is not gold.",
+      "gender": "Female",
+      "defaultClothing": "palatial tank dress",
+      "umbrella": "ghost umbrella",
+      "hobby": "Nature",
+      "favoriteStyles": [
+        "Gorgeous",
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Colorful",
+        "Brown"
+      ],
+      "bag": "Paper",
+      "food": "Lollipop",
+      "drink": "Soda can"
+    },
+    "house": {
+      "roof": "orange stone roof",
+      "siding": "yellow stucco exterior",
+      "door": "purple metal-accent door",
+      "wallpaper": "Ancient Wall",
+      "flooring": "Pyramid Tile",
+      "music": "K.K. Bazaar",
+      "musicNote": "Does not contain a stereo initially",
+      "furniture": [
+        "Golden Toilet",
+        "Pyramid",
+        "Wall Mounted Candle",
+        "Golden Casket",
+        "Libra Scale",
+        "Gold Bars",
+        "Golden Dishes"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Ankha_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Ankha_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ナイル",
+        "romanization": "Nairu"
+      },
+      {
+        "language": "Korean",
+        "name": "클레오",
+        "romanization": "Keulleo"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "艳后",
+        "romanization": "Yànhòu"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "艷后"
+      },
+      {
+        "language": "French",
+        "name": "Neferti"
+      },
+      {
+        "language": "Spanish",
+        "name": "Patri"
+      },
+      {
+        "language": "Italian",
+        "name": "Cleo"
+      },
+      {
+        "language": "German",
+        "name": "Kleo"
+      },
+      {
+        "language": "Dutch",
+        "name": "Ankha"
+      },
+      {
+        "language": "Russian",
+        "name": "Анка",
+        "romanization": "Anka"
+      }
+    ],
+    "amiibo": {
+      "number": "188",
+      "series": "Animal Crossing amiibo",
+      "starSign": "Virgo",
+      "birthday": "September 22",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/188_Ankha_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Ankha"
+  }
+}

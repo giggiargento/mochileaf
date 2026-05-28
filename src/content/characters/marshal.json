@@ -1,0 +1,142 @@
+{
+  "slug": "marshal",
+  "name": "Marshal",
+  "role": "Smug squirrel",
+  "personality": "Smug",
+  "species": "Squirrel",
+  "popularRank": 2,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/marshal-128.webp",
+  "houseStyle": "Campsite cozy",
+  "houseDescription": "Teepee centerpiece with log furniture and a fire pit vibe — warm, compact, and very catalog-friendly.",
+  "description": "Soft teal cheeks and a tiny frown that reads as charm. A perennial favorite for peaceful island cores.",
+  "seo": {
+    "title": "Marshal — Smug squirrel",
+    "description": "Soft teal cheeks and a tiny frown that reads as charm. A perennial favorite for peaceful island cores."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Smug",
+    "Squirrel"
+  ],
+  "acnh": {
+    "appearance": "Marshal is a white squirrel with pink cheeks and pastel purple on the inside of his ears. His slanted eyes and frown bear some resemblance to Static's pre- appearance. In, his eyes are dark green, whereas in previous installments, they were black. He has cream-tipped hands and feet as well as a cream swirl in his tail. These features make him resemble a marshmallow.",
+    "personality": "Marshal is a villager that falls under the smug personality. He will not find it hard to converse with other villagers, as he is very polite and lively. He also may be seen flirting with the player, regardless of their gender. He may sometimes appear conceited when talking to himself. His unseen hobby is dancing, and will also enjoy the usual hobbies. He will appear enthusiastic when going to the player's house. Marshal will wake up at 7:00 AM and fall asleep at 2:00 AM.",
+    "villagerInfo": {
+      "birthday": "September 29",
+      "starSign": "Libra",
+      "personality": "Smug",
+      "subPersonality": "A",
+      "catchphrase": "sulky",
+      "quote": "Seize the day.",
+      "gender": "Male",
+      "defaultClothing": "puffy vest (Navy blue)",
+      "umbrella": "logo umbrella",
+      "hobby": "Music",
+      "favoriteStyles": [
+        "Elegant",
+        "Cool"
+      ],
+      "favoriteColors": [
+        "Aqua",
+        "Blue"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "light-gray stone roof",
+      "siding": "white stucco exterior",
+      "door": "gray common door",
+      "wallpaper": "Blue Delicate-Blooms Wall",
+      "flooring": "Modern Wood Flooring",
+      "music": "K.K. Bossa",
+      "furniture": [
+        "Double Sofa",
+        "Upright Piano",
+        "Piano Bench",
+        "Mini Fridge",
+        "Cream and Sugar",
+        "Open Frame Kitchen",
+        "Simple Kettle",
+        "Blue Kitchen Mat",
+        "Ironwood Cupboard",
+        "Iron Worktable",
+        "Cuckoo Clock",
+        "Iron Entrance Mat",
+        "Portable Record Player",
+        "Coffee Grinder",
+        "Espresso Maker",
+        "Stovetop Espresso Maker",
+        "Menu Chalkboard",
+        "Ironwood Low Table",
+        "Coffee Cup"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Marshal_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Marshal_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ジュン",
+        "romanization": "Jun"
+      },
+      {
+        "language": "Korean",
+        "name": "쭈니",
+        "romanization": "Jjuni"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "小润",
+        "romanization": "XiaoRùn"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "小潤"
+      },
+      {
+        "language": "French",
+        "name": "Mathéo"
+      },
+      {
+        "language": "Spanish",
+        "name": "Munchi"
+      },
+      {
+        "language": "Italian",
+        "name": "Scott"
+      },
+      {
+        "language": "German",
+        "name": "Huschke"
+      },
+      {
+        "language": "Dutch",
+        "name": "Marshal"
+      },
+      {
+        "language": "Russian",
+        "name": "Маршал",
+        "romanization": "Marshal"
+      }
+    ],
+    "amiibo": {
+      "number": "264",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Libra",
+      "birthday": "September 29",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/264_Marshal_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Marshal"
+  }
+}

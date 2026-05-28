@@ -1,0 +1,20 @@
+{
+  "slug": "lewis",
+  "name": "Lewis",
+  "role": "Mayor of Pelican Town",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/lewis.png",
+  "description": "Keeps the community center project on track and hosts seasonal festivals. Loves local produce and a well-kept farm.",
+  "seo": {
+    "title": "Lewis — Mayor of Pelican Town",
+    "description": "Keeps the community center project on track and hosts seasonal festivals. Loves local produce and a well-kept farm."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": []
+}

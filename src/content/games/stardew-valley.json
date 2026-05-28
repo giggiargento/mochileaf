@@ -1,0 +1,31 @@
+{
+  "slug": "stardew-valley",
+  "name": "Stardew Valley",
+  "tagline": "Farming, friendship, and quiet seasons in Pelican Town",
+  "description": "Grow crops, explore the mines, befriend villagers, and restore the community center at your own pace — a cozy farming life sim loved worldwide.",
+  "accent": "honey",
+  "coverGradient": "from-honey-200/80 via-blossom-100 to-cream-50",
+  "coverImage": "/images/games/stardew-valley/cover.jpg",
+  "featured": true,
+  "status": "active",
+  "seo": {
+    "title": "Stardew Valley guides & cozy tips",
+    "description": "Grow crops, explore the mines, befriend villagers, and restore the community center at your own pace — a cozy farming life sim loved worldwide."
+  },
+  "genres": ["Life sim", "Farming", "RPG"],
+  "platforms": ["PC", "Mac", "Switch", "PlayStation", "Xbox", "Mobile"],
+  "cozyMechanics": [
+    "Seasonal farming at your own pace",
+    "Friendship and gifts without combat pressure",
+    "Community Center bundles as a long-term cozy goal"
+  ],
+  "similarGames": [],
+  "beginnerTips": [
+    "Water crops daily until sprinklers unlock",
+    "Talk to villagers you pass on the way to the farm"
+  ],
+  "tags": [
+    "Stardew Valley"
+  ],
+  "about": "Grow crops, explore the mines, befriend villagers, and restore the community center at your own pace — a cozy farming life sim loved worldwide."
+}

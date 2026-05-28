@@ -1,0 +1,25 @@
+{
+  "slug": "adler",
+  "name": "Adler",
+  "role": "Defense",
+  "element": "Chaos",
+  "rarity": "A",
+  "tier": "C",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/adler.webp",
+  "description": "Chaos defense option for niche content. Solid filler until you pull a top-tier defensive S-rank.",
+  "seo": {
+    "title": "Adler — Defense",
+    "description": "Chaos defense option for niche content. Solid filler until you pull a top-tier defensive S-rank."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Chaos"
+  ]
+}

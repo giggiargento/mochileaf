@@ -1,3 +1,10 @@
+export interface ContentSeo {
+  title?: string;
+  description?: string;
+  image?: string;
+  keywords?: string[];
+}
+
 export interface Game {
   slug: string;
   name: string;
@@ -13,6 +20,15 @@ export interface Game {
   cardImage?: string;
   featured?: boolean;
   status: 'active' | 'coming-soon';
+  /** Optional editorial + SEO fields (from content/games/*.json). */
+  seo?: ContentSeo;
+  genres?: string[];
+  platforms?: string[];
+  cozyMechanics?: string[];
+  similarGames?: string[];
+  beginnerTips?: string[];
+  tags?: string[];
+  about?: string;
 }
 
 export interface Article {
@@ -44,6 +60,17 @@ export interface Character {
   species?: string;
   houseStyle?: string;
   houseDescription?: string;
+  seo?: ContentSeo;
+  likes?: string[];
+  dislikes?: string[];
+  favoriteGifts?: string[];
+  favoriteFoods?: string[];
+  routines?: { label: string; location: string; time?: string }[];
+  relationships?: { name: string; note: string }[];
+  trivia?: string[];
+  tags?: string[];
+  /** ACNH extended reference blocks (content/characters/*.json). */
+  acnh?: AcnhVillagerDetails;
 }
 
 export interface NteBuildItem {

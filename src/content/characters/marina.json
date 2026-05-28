@@ -1,0 +1,132 @@
+{
+  "slug": "marina",
+  "name": "Marina",
+  "role": "Normal octopus",
+  "personality": "Normal",
+  "species": "Octopus",
+  "popularRank": 9,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/marina-128.webp",
+  "houseStyle": "Ocean candy",
+  "houseDescription": "Cute set in pink and teal with music-player energy — bubbly, round, and camera-ready.",
+  "description": "One of only a few octopus villagers. Sweet voice lines and a house that pops in tours.",
+  "seo": {
+    "title": "Marina — Normal octopus",
+    "description": "One of only a few octopus villagers. Sweet voice lines and a house that pops in tours."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Normal",
+    "Octopus"
+  ],
+  "acnh": {
+    "intro": "Marina is a normal octopus in the. She first appeared in as an islander, and she appears in all subsequent games as a villager. Her name comes from \"marinus,\" Latin for \"of the sea,\" which relates to her species.",
+    "appearance": "Marina in.\nMarina is a pink octopus with yellow cheeks and black eyes. Her eyes gain smaller, white pupils when she is shocked. She has a tuft of hair on her forehead. On the back of her head is a pink bow.",
+    "personality": "==== ====\nAs a normal islander in, Marina has a peaceful, spacey nature prone to daydreaming and getting lost in thought. In conversation, she frequently reads the player's aura or comments on the natural beauty of the island. Due to her fanciful outlook on life, she is often kind in dealing with the player but can easily wander off into mystical, eccentric, or even nonsensical conversation. She meditates frequently in her pursuit of harmony and tranquility and will request furniture from the player that she believes will improve her meditation. ==== onwards====\nMarina is a normal villager. She will appear friendly and motherly to the player. When she asks the player for favors, she will feel bad asking the player to do so. She will be easy to befriend. She may not get along well with cranky and snooty villagers. She has a very kind personality.",
+    "villagerInfo": {
+      "birthday": "June 26",
+      "starSign": "Cancer",
+      "personality": "Normal",
+      "subPersonality": "B",
+      "catchphrase": "blurp",
+      "quote": "If you can't say something nice, don't say anything at all.",
+      "gender": "Female",
+      "defaultClothing": "dreamy sweater (Pink)",
+      "umbrella": "candy umbrella",
+      "hobby": "Music",
+      "favoriteStyles": [
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Pink",
+        "Red"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "brown thatch roof",
+      "siding": "beige cobblestones",
+      "door": "pink simple door",
+      "wallpaper": "Strawberry-Chocolate Wall",
+      "flooring": "Berry-Chocolates Flooring",
+      "music": "Soulful K.K.",
+      "furniture": [
+        "Claw Foot Tub",
+        "Cute Bed",
+        "Cute Floor Lamp",
+        "Cute Sofa",
+        "Tankless Toilet",
+        "Cute DIY Table",
+        "Cute Vanity",
+        "Cute Tea Table",
+        "Cute Music Player"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Marina_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Marina_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "タコリーナ",
+        "romanization": "Takorīna"
+      },
+      {
+        "language": "Korean",
+        "name": "문리나",
+        "romanization": "Munrina"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "章立娜",
+        "romanization": "Zhānglìnà"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "章立娜"
+      },
+      {
+        "language": "French",
+        "name": "Marina"
+      },
+      {
+        "language": "Spanish",
+        "name": "Marina"
+      },
+      {
+        "language": "Italian",
+        "name": "Marina"
+      },
+      {
+        "language": "German",
+        "name": "Marianne"
+      },
+      {
+        "language": "Dutch",
+        "name": "Marina"
+      },
+      {
+        "language": "Russian",
+        "name": "Марина",
+        "romanization": "Marina"
+      }
+    ],
+    "amiibo": {
+      "number": "234",
+      "series": "Series 5",
+      "starSign": "Cancer",
+      "birthday": "June 26",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/234_Marina_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Marina"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "jiuyuan",
+  "name": "Jiuyuan",
+  "role": "Support",
+  "element": "Anima",
+  "rarity": "S",
+  "tier": "A",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/jiuyuan.webp",
+  "description": "Anima support with strong party utility. Great second slot when Nanally is booked elsewhere or you want double-Anima stability.",
+  "seo": {
+    "title": "Jiuyuan — Support",
+    "description": "Anima support with strong party utility. Great second slot when Nanally is booked elsewhere or you want double-Anima stability."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Anima"
+  ]
+}

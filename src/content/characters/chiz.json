@@ -1,0 +1,25 @@
+{
+  "slug": "chiz",
+  "name": "Chiz",
+  "role": "Attack",
+  "element": "Cosmos",
+  "rarity": "S",
+  "tier": "S",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/chiz.webp",
+  "description": "Free S-rank DPS from City Tycoon — full awakenings without gacha. Grain Market mechanics reward patient play and daily city check-ins.",
+  "seo": {
+    "title": "Chiz — Attack",
+    "description": "Free S-rank DPS from City Tycoon — full awakenings without gacha. Grain Market mechanics reward patient play and daily city check-ins."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cosmos"
+  ]
+}

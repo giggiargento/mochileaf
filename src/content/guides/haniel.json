@@ -1,0 +1,67 @@
+{
+  "characterSlug": "haniel",
+  "gameSlug": "neverness-to-everness",
+  "buildSummary": "Haniel works best in Lakshana-aligned comps where assist value is prioritized.",
+  "diskSets": [
+    {
+      "name": "Marching Beyond Time (S)",
+      "note": "High-value utility Arc for teams that benefit from support-cycle acceleration."
+    },
+    {
+      "name": "A Time Will Come (A)",
+      "note": "Flexible A-rank option that fits mixed-type team compositions."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Assist Modules",
+      "note": "Cycle Rate-focused setup for frequent utility."
+    },
+    {
+      "name": "A-tier Assist Modules",
+      "note": "Hybrid setup balancing uptime and survival."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Support Skill",
+      "scales": "Primary assist utility and team buff uptime."
+    },
+    {
+      "skill": "Ultimate",
+      "scales": "Big utility spikes and rotation acceleration."
+    },
+    {
+      "skill": "Skill",
+      "scales": "Supplemental control/setup effects."
+    },
+    {
+      "skill": "Basic Attack",
+      "scales": "Minimal gain versus support-focused upgrades."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Unlock assist utility checkpoints.",
+      "location": "Rabbit Hole > Character Growth simulations",
+      "tip": "Bring assists to ascension breakpoints that unlock key passive nodes."
+    },
+    {
+      "name": "Support upgrade mats",
+      "purpose": "Improve buff/control consistency.",
+      "location": "Rabbit Hole > Skill material anomalies",
+      "tip": "Prioritize control/buff skill ranks over personal DPS."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Cycle and utility scaling.",
+      "location": "Anomaly Investigation > Module domains",
+      "tip": "Cycle Rate + utility lines generally outperform pure ATK on assists."
+    }
+  ],
+  "seo": {
+    "title": "Haniel build guide",
+    "description": "Haniel works best in Lakshana-aligned comps where assist value is prioritized."
+  }
+}

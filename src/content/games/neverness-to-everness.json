@@ -1,0 +1,26 @@
+{
+  "slug": "neverness-to-everness",
+  "name": "Neverness to Everness",
+  "shortName": "NTE",
+  "tagline": "Urban fantasy action — teams, elements, and calm meta notes",
+  "description": "Fan hub for NTE: roster notes, team comps, and starter guides — cozy pacing, no spreadsheet panic.",
+  "accent": "lavender",
+  "coverGradient": "from-lavender-200/80 via-mist-100 to-cream-50",
+  "coverImage": "/images/games/neverness-to-everness/cover.jpg",
+  "cardImage": "/images/games/neverness-to-everness/card.jpg",
+  "featured": true,
+  "status": "active",
+  "seo": {
+    "title": "Neverness to Everness guides & cozy tips",
+    "description": "Fan hub for NTE: roster notes, team comps, and starter guides — cozy pacing, no spreadsheet panic."
+  },
+  "genres": [],
+  "platforms": [],
+  "cozyMechanics": [],
+  "similarGames": [],
+  "beginnerTips": [],
+  "tags": [
+    "NTE"
+  ],
+  "about": "Fan hub for NTE: roster notes, team comps, and starter guides — cozy pacing, no spreadsheet panic."
+}

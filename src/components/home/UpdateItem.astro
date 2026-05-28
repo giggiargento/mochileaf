@@ -1,6 +1,6 @@
 ---
 import type { Update } from '../../types';
-import { articles } from '../../data/articles';
+import { loadArticles } from '../../data/articles';
 import { getGame } from '../../data/games';
 import { getArticleHref } from '../../utils/article-routes';
 import { getGameDisplayName } from '../../utils/game-display';
@@ -12,6 +12,7 @@ interface Props {
 
 const { update } = Astro.props;
 const game = update.gameSlug ? getGame(update.gameSlug) : undefined;
+const articles = await loadArticles();
 
 let href = update.gameSlug ? `/${update.gameSlug}/news` : '/articles';
 if (update.articleSlug && update.gameSlug) {
