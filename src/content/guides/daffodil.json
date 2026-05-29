@@ -1,15 +1,15 @@
 {
   "characterSlug": "daffodil",
   "gameSlug": "neverness-to-everness",
-  "buildSummary": "Break-focused Chaos support/sub-DPS. Central enabler for high-pressure reaction teams.",
+  "buildSummary": "Chaos support who blooms during awakenings—build for team tempo and spectacle, not personal damage charts.",
   "diskSets": [
     {
       "name": "Eternal Waltz (S)",
-      "note": "Great sustain-oriented Arc for supports that cast Ultimate frequently."
+      "note": "A gentle sustain Arc for supports who lean on their Ultimate often."
     },
     {
       "name": "Call of the Twisted City (A)",
-      "note": "Stable A-rank fallback for heal-focused or utility-heavy support setups."
+      "note": "A calm support Arc while you farm something more specialized."
     }
   ],
   "modules": [
@@ -62,6 +62,6 @@
   ],
   "seo": {
     "title": "Daffodil build guide",
-    "description": "Break-focused Chaos support/sub-DPS. Central enabler for high-pressure reaction teams."
+    "description": "Chaos support who blooms during awakenings—build for team tempo and spectacle, not personal damage charts."
   }
 }

@@ -13,6 +13,10 @@ export const articleSchema = z
     readTime: z.string().min(1),
     featured: z.boolean().optional(),
     trending: z.boolean().optional(),
+    /** Hero image above the body, e.g. /images/games/{slug}/cover.jpg */
+    coverImage: z.string().optional(),
+    /** Optional credit line under the hero image */
+    coverCaption: z.string().optional(),
     seo: seoSchema,
     draft: z.boolean().optional(),
     publishable: z.boolean().optional(),

@@ -46,6 +46,27 @@ export function documentHeader(title: string, source: string, count: number): st
   ].join('\n');
 }
 
+export function combinedGameHeader(gameSlug: string, label: string): string {
+  return [
+    `# ${label.toUpperCase()} — editorial review`,
+    '',
+    `**Generated:** ${new Date().toISOString().slice(0, 16).replace('T', ' ')} UTC`,
+    `**Game:** \`${gameSlug}\``,
+    '',
+    '> Single-file export for editorial review. Paste into ChatGPT or share with reviewers.',
+    '',
+  ].join('\n');
+}
+
+export function sectionHeader(title: string, source: string, count: number): string {
+  return [
+    `## ${title}`,
+    '',
+    `**Entries:** ${count} · **Source:** \`${source}\``,
+    '',
+  ].join('\n');
+}
+
 export function formatGame(game: GameContent): string {
   return [
     `## ${game.name}`,

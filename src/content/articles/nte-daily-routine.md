@@ -18,4 +18,4 @@ Collect idle rewards and mail. Complete daily commissions. Run one resin activit
 
 ## Weekly reset
 
-Prioritize weekly bosses and limited shops. Refresh anomaly bounties if you chase account EXP. Plan banner pulls around weekly income, not impulse.
+Touch weekly bosses and limited shops when you have the energy—skip them on busy weeks without guilt. Refresh anomaly bounties if you are chasing account levels. If you pull on banners, let weekly income set the pace instead of impulse.

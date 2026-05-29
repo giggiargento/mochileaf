@@ -31,6 +31,7 @@ const navBySlug: Record<string, NavSection[]> = {
     { label: 'Items', path: 'items', icon: 'package' },
     { label: 'Island tours', path: 'island-tours', icon: 'television' },
     { label: 'Guides', path: 'guides', icon: 'book-open' },
+    { label: 'News', path: 'news', icon: 'newspaper' },
     { label: 'About', path: 'about', icon: 'info' },
   ],
   'neverness-to-everness': [

@@ -1,15 +1,15 @@
 {
   "characterSlug": "adler",
   "gameSlug": "neverness-to-everness",
-  "buildSummary": "Adler works best in Chaos-aligned comps where defense value is prioritized.",
+  "buildSummary": "Chaos defender with a stormy guard fantasy—lean into defense modules and skills that keep the front row steady.",
   "diskSets": [
     {
       "name": "Your Happiness is Priceless (S)",
-      "note": "Defensive Arc with strong team sustain value for frontline roles."
+      "note": "A defensive Arc that helps frontliners stay upright during longer fights."
     },
     {
       "name": "Umbrella (A)",
-      "note": "Comfortable A-rank tank fallback while waiting for premium defensive Arcs."
+      "note": "A sturdy tank Arc for early chapters while you chase dream defensive sets."
     }
   ],
   "modules": [
@@ -19,7 +19,7 @@
     },
     {
       "name": "A-tier Tank Modules",
-      "note": "Bridge option with mixed DEF + utility stats."
+      "note": "Mixed defense rolls until a premium tank set appears."
     }
   ],
   "skillPriority": [
@@ -62,6 +62,6 @@
   ],
   "seo": {
     "title": "Adler build guide",
-    "description": "Adler works best in Chaos-aligned comps where defense value is prioritized."
+    "description": "Chaos defender with a stormy guard fantasy—lean into defense modules and skills that keep the front row steady."
   }
 }

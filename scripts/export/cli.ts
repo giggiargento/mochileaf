@@ -10,10 +10,12 @@
  *   npm run export:acnh
  *   npm run export:stardew
  *   npm run export:nte
- *   npm run export:game -- stardew guides
+ *   npm run export:game -- stardew
+ *   npm run export:game -- nte split   # 5 separate files (legacy)
  */
 import { resolveGameSlug, shortLabel } from './game-aliases';
 import {
+  combinedGameHeader,
   documentHeader,
   filterArticles,
   formatArticle,
@@ -21,6 +23,7 @@ import {
   formatGame,
   formatGuide,
   joinEntries,
+  sectionHeader,
 } from './format';
 import {
   loadArticles,
@@ -87,46 +90,34 @@ function exportArticlesAll(articles = loadArticles()) {
   return writeExport('articles-all.md', body);
 }
 
-function exportGameBundle(gameSlug: string, bundle: GameBundle) {
+type GameSection = { fileKey: string; title: string; source: string; entries: string[] };
+
+function collectGameSections(gameSlug: string, bundle: GameBundle): GameSection[] {
   const label = shortLabel(gameSlug);
-  const paths: string[] = [];
+  const sections: GameSection[] = [];
 
   const characters = sortByName(
     bundle.characters.filter((c) => c.gameSlug === gameSlug),
   );
   if (characters.length > 0) {
-    paths.push(
-      writeExport(
-        `${label}-characters.md`,
-        joinEntries(
-          documentHeader(
-            `${label.toUpperCase()} characters`,
-            `src/content/characters/ (${gameSlug})`,
-            characters.length,
-          ),
-          characters.map(formatCharacter),
-        ),
-      ),
-    );
+    sections.push({
+      fileKey: 'characters',
+      title: `${label.toUpperCase()} characters`,
+      source: `src/content/characters/ (${gameSlug})`,
+      entries: characters.map(formatCharacter),
+    });
   }
 
   const buildGuides = [...bundle.guides]
     .filter((g) => g.gameSlug === gameSlug)
     .sort((a, b) => a.characterSlug.localeCompare(b.characterSlug, 'en'));
   if (buildGuides.length > 0) {
-    paths.push(
-      writeExport(
-        `${label}-build-guides.md`,
-        joinEntries(
-          documentHeader(
-            `${label.toUpperCase()} build guides`,
-            `src/content/guides/ (${gameSlug})`,
-            buildGuides.length,
-          ),
-          buildGuides.map(formatGuide),
-        ),
-      ),
-    );
+    sections.push({
+      fileKey: 'build-guides',
+      title: `${label.toUpperCase()} build guides`,
+      source: `src/content/guides/ (${gameSlug})`,
+      entries: buildGuides.map(formatGuide),
+    });
   }
 
   const guideArticles = filterArticles(bundle.articles, {
@@ -134,19 +125,12 @@ function exportGameBundle(gameSlug: string, bundle: GameBundle) {
     category: 'guide',
   }).sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title, 'en'));
   if (guideArticles.length > 0) {
-    paths.push(
-      writeExport(
-        `${label}-guides.md`,
-        joinEntries(
-          documentHeader(
-            `${label.toUpperCase()} guide articles`,
-            `src/content/articles/ (${gameSlug}, category: guide)`,
-            guideArticles.length,
-          ),
-          guideArticles.map(formatArticle),
-        ),
-      ),
-    );
+    sections.push({
+      fileKey: 'guides',
+      title: `${label.toUpperCase()} guide articles`,
+      source: `src/content/articles/ (${gameSlug}, category: guide)`,
+      entries: guideArticles.map(formatArticle),
+    });
   }
 
   const newsArticles = filterArticles(bundle.articles, {
@@ -154,41 +138,76 @@ function exportGameBundle(gameSlug: string, bundle: GameBundle) {
     category: 'news',
   }).sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title, 'en'));
   if (newsArticles.length > 0) {
-    paths.push(
-      writeExport(
-        `${label}-news.md`,
-        joinEntries(
-          documentHeader(
-            `${label.toUpperCase()} news articles`,
-            `src/content/articles/ (${gameSlug}, category: news)`,
-            newsArticles.length,
-          ),
-          newsArticles.map(formatArticle),
-        ),
-      ),
-    );
+    sections.push({
+      fileKey: 'news',
+      title: `${label.toUpperCase()} news articles`,
+      source: `src/content/articles/ (${gameSlug}, category: news)`,
+      entries: newsArticles.map(formatArticle),
+    });
   }
 
   const allGameArticles = filterArticles(bundle.articles, { gameSlug }).sort((a, b) =>
     a.frontmatter.title.localeCompare(b.frontmatter.title, 'en'),
   );
   if (allGameArticles.length > 0) {
+    sections.push({
+      fileKey: 'articles',
+      title: `${label.toUpperCase()} articles (all categories)`,
+      source: `src/content/articles/ (${gameSlug})`,
+      entries: allGameArticles.map(formatArticle),
+    });
+  }
+
+  return sections;
+}
+
+function exportGameBundleCombined(gameSlug: string, bundle: GameBundle) {
+  const label = shortLabel(gameSlug);
+  const sections = collectGameSections(gameSlug, bundle);
+  if (sections.length === 0) {
+    throw new Error(`No exportable content for game "${gameSlug}".`);
+  }
+
+  const parts: string[] = [combinedGameHeader(gameSlug, label)];
+  for (const section of sections) {
+    parts.push(
+      joinEntries(
+        sectionHeader(section.title, section.source, section.entries.length),
+        section.entries,
+      ),
+    );
+  }
+
+  return [writeExport(`${label}-review.md`, parts.join('\n\n---\n\n'))];
+}
+
+function exportGameBundleSplit(gameSlug: string, bundle: GameBundle) {
+  const label = shortLabel(gameSlug);
+  const paths: string[] = [];
+
+  for (const section of collectGameSections(gameSlug, bundle)) {
     paths.push(
       writeExport(
-        `${label}-articles.md`,
+        `${label}-${section.fileKey}.md`,
         joinEntries(
-          documentHeader(
-            `${label.toUpperCase()} articles (all categories)`,
-            `src/content/articles/ (${gameSlug})`,
-            allGameArticles.length,
-          ),
-          allGameArticles.map(formatArticle),
+          documentHeader(section.title, section.source, section.entries.length),
+          section.entries,
         ),
       ),
     );
   }
 
+  if (paths.length === 0) {
+    throw new Error(`No exportable content for game "${gameSlug}".`);
+  }
+
   return paths;
+}
+
+function exportGameBundle(gameSlug: string, bundle: GameBundle, mode: 'combined' | 'split') {
+  return mode === 'split'
+    ? exportGameBundleSplit(gameSlug, bundle)
+    : exportGameBundleCombined(gameSlug, bundle);
 }
 
 function exportAll() {
@@ -206,7 +225,7 @@ function exportAll() {
   };
 
   for (const game of loadGames()) {
-    paths.push(...exportGameBundle(game.slug, bundle));
+    paths.push(...exportGameBundle(game.slug, bundle, 'split'));
   }
 
   const editorials = filterArticles(bundle.articles, {}).filter((a) => !a.frontmatter.gameSlug);
@@ -239,7 +258,7 @@ Commands:
   games        exports/review/games-all.md
   guides       exports/review/guides-all.md (NTE JSON build guides)
   articles     exports/review/articles-all.md
-  game <alias> Per-game bundle (e.g. acnh, stardew, nte)
+  game <alias> [split]  One review file per game (default), or 5 files with split
 
 npm scripts:
   npm run export:all
@@ -250,6 +269,7 @@ npm scripts:
   npm run export:acnh
   npm run export:stardew
   npm run export:nte
+  npm run export:game -- acnh split
 `);
 }
 
@@ -280,12 +300,18 @@ try {
       written = [exportArticlesAll()];
       break;
     case 'game': {
-      const gameSlug = resolveGameSlug(rest[0] ?? '');
-      written = exportGameBundle(gameSlug, {
-        characters: loadCharacters(),
-        guides: loadGuides(),
-        articles: loadArticles(),
-      });
+      const args = rest.filter((a) => a !== '--split');
+      const split = rest.includes('split') || rest.includes('--split');
+      const gameSlug = resolveGameSlug(args[0] ?? '');
+      written = exportGameBundle(
+        gameSlug,
+        {
+          characters: loadCharacters(),
+          guides: loadGuides(),
+          articles: loadArticles(),
+        },
+        split ? 'split' : 'combined',
+      );
       break;
     }
     default:

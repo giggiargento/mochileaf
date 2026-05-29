@@ -83,6 +83,9 @@ const liveFeeds = getLiveFeedsForGame(game.slug);
         {hubArticles.map((a) => <ArticleCard article={a} />)}
       </ContentGrid>
       <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm font-semibold">
+        <a href={`/${game.slug}/news`} class="cozy-link">
+          All news →
+        </a>
         <a href={`/${game.slug}/guides`} class="cozy-link">
           All guides →
         </a>

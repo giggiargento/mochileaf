@@ -2,10 +2,9 @@
 import GlobalLayout from '../../layouts/GlobalLayout.astro';
 import PageHeader from '../../components/game/PageHeader.astro';
 import GameCard from '../../components/home/GameCard.astro';
-import { allGames, routableGames } from '../../lib/content/registry';
+import { routableGames } from '../../lib/content/registry';
 
 const activeGames = routableGames;
-const comingSoon = allGames.filter((g) => g.status === 'coming-soon');
 ---
 
 <GlobalLayout
@@ -22,14 +21,5 @@ const comingSoon = allGames.filter((g) => g.status === 'coming-soon');
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {activeGames.map((game) => <GameCard game={game} />)}
     </div>
-
-    {comingSoon.length > 0 && (
-      <div class="mt-14">
-        <h2 class="section-title mb-6">Coming soon</h2>
-        <div class="grid gap-6 sm:grid-cols-2 max-w-xl">
-          {comingSoon.map((game) => <GameCard game={game} />)}
-        </div>
-      </div>
-    )}
   </div>
 </GlobalLayout>

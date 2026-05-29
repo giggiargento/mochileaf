@@ -1,7 +1,7 @@
 {
   "characterSlug": "mint",
   "gameSlug": "neverness-to-everness",
-  "buildSummary": "Mint works best in Cosmos-aligned comps where assist value is prioritized.",
+  "buildSummary": "Cosmos assist for relaxed exploration—utility and uptime beat raw attack numbers.",
   "diskSets": [
     {
       "name": "Marching Beyond Time (S)",
@@ -62,6 +62,6 @@
   ],
   "seo": {
     "title": "Mint build guide",
-    "description": "Mint works best in Cosmos-aligned comps where assist value is prioritized."
+    "description": "Cosmos assist for relaxed exploration—utility and uptime beat raw attack numbers."
   }
 }

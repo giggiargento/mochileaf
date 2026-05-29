@@ -119,7 +119,14 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.
     <slot name="head" />
   </head>
   <body class="min-h-screen">
-    {ambient !== 'none' && <AmbientBackground variant={ambient === 'game' ? 'game' : 'home'} />}
+    {
+      ambient !== 'none' && (
+        <AmbientBackground
+          transition:persist={`mochi-ambient-${ambient}`}
+          variant={ambient === 'game' ? 'game' : 'home'}
+        />
+      )
+    }
     <slot />
   </body>
 </html>

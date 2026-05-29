@@ -810,6 +810,57 @@ html.dark {
     color: var(--text-secondary);
   }
 
+  .prose-cozy h2 {
+    @apply font-display text-xl pt-2;
+    color: var(--text-primary);
+  }
+
+  .prose-cozy strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .article-cover {
+    @apply mb-8 overflow-hidden rounded-2xl shadow-[var(--shadow-soft)];
+    border: 1px solid var(--border-default);
+    background-color: var(--bg-card);
+  }
+
+  .article-cover img {
+    @apply block h-auto w-full object-cover;
+    max-height: min(28rem, 56vw);
+  }
+
+  .article-cover-caption {
+    @apply px-4 py-3 text-xs leading-relaxed;
+    border-top: 1px solid var(--border-default);
+    color: var(--text-muted);
+  }
+
+  .prose-cozy figure.article-inline-figure {
+    @apply my-8 overflow-hidden rounded-2xl shadow-[var(--shadow-soft)];
+    border: 1px solid var(--border-default);
+    background-color: var(--bg-card);
+  }
+
+  .prose-cozy figure.article-inline-figure img {
+    @apply block h-auto w-full object-cover;
+    max-height: min(24rem, 50vw);
+  }
+
+  .prose-cozy figure.article-inline-figure figcaption {
+    @apply px-4 py-3 text-xs leading-relaxed;
+    border-top: 1px solid var(--border-default);
+    color: var(--text-muted);
+  }
+
+  .prose-cozy > img,
+  .prose-cozy p > img:only-child {
+    @apply my-8 block h-auto w-full rounded-2xl object-cover shadow-[var(--shadow-soft)];
+    border: 1px solid var(--border-default);
+    max-height: min(24rem, 50vw);
+  }
+
   .cozy-table-wrap {
     overflow-x: auto;
     border-radius: var(--radius-card);
@@ -1076,6 +1127,31 @@ html.dark {
     }
   }
 
+  /* Article cards — reliable multi-line ellipsis (Tailwind line-clamp can miss in flex cards) */
+  .article-card-excerpt--lines-2,
+  .article-card-excerpt--lines-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+
+  .article-card-excerpt--lines-2 {
+    -webkit-line-clamp: 2;
+  }
+
+  .article-card-excerpt--lines-3 {
+    -webkit-line-clamp: 3;
+  }
+
+  .article-card-title--lines-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
   .badge {
     @apply inline-flex items-center gap-1 rounded-[var(--radius-pill)] font-medium;
   }
@@ -1152,18 +1228,34 @@ html.dark {
   }
 }
 
-/* Soft page transitions (Astro View Transitions) */
-@keyframes fade-soft {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Astro View Transitions — avoid overlapping crossfade (ghost/double layout) */
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+::view-transition-group(root) {
+  background-color: var(--bg-page);
 }
 
 ::view-transition-old(root) {
-  animation: fade-soft 0.2s ease-out reverse;
+  animation: vt-fade-out 0.12s ease-in both;
+  z-index: 1;
 }
 
 ::view-transition-new(root) {
-  animation: fade-soft 0.35s ease-out forwards;
+  animation: vt-fade-in 0.18s ease-out 0.1s both;
+  z-index: 2;
 }
 
 /* ACNH item directory */

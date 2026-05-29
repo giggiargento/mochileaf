@@ -15,7 +15,7 @@ const { title, description } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} ambient="home">
-  <Sidebar items={globalNav}>
+  <Sidebar items={globalNav} persistKey="mochi-sidebar-home">
     <div slot="footer" class="space-y-3">
       <ThemeToggle />
       <p class="text-xs text-muted">Soft fantasy · Peaceful play</p>

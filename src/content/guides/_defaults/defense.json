@@ -1,13 +1,13 @@
 {
-  "buildSummary": "Frontline Incantation anchor with strong control value; keeps pressure stable for break comps.",
+  "buildSummary": "Frontline build notes—control and protection first so the party can keep its rhythm.",
   "diskSets": [
     {
       "name": "Your Happiness is Priceless (S)",
-      "note": "Defensive Arc with strong team sustain value for frontline roles."
+      "note": "A defensive Arc that helps frontliners stay upright during longer fights."
     },
     {
       "name": "Umbrella (A)",
-      "note": "Comfortable A-rank tank fallback while waiting for premium defensive Arcs."
+      "note": "A sturdy tank Arc for early chapters while you chase dream defensive sets."
     }
   ],
   "modules": [
@@ -17,7 +17,7 @@
     },
     {
       "name": "A-tier Tank Modules",
-      "note": "Bridge option with mixed DEF + utility stats."
+      "note": "Mixed defense rolls until a premium tank set appears."
     }
   ],
   "skillPriority": [

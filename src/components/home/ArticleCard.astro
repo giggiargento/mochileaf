@@ -39,15 +39,19 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
     }
     {article.trending && <Badge variant="blossom">Trending</Badge>}
   </div>
-  <h3 class="font-display line-clamp-2 min-w-0 text-lg text-primary">
-    <a href={getArticleHref(article)} class="hover:text-accent transition-colors">
+  <h3 class="article-card-title--lines-2 font-display min-w-0 text-lg text-primary">
+    <a
+      href={getArticleHref(article)}
+      class="hover:text-accent transition-colors"
+      data-astro-reload
+    >
       {article.title}
     </a>
   </h3>
   <p
     class:list={[
-      'mt-2 min-w-0 text-sm text-secondary',
-      compact ? 'line-clamp-2 lg:flex-1 lg:min-h-0' : 'flex-1 line-clamp-3',
+      'mt-2 min-w-0 text-sm leading-snug text-secondary',
+      compact ? 'article-card-excerpt--lines-2' : 'article-card-excerpt--lines-3 flex-1',
     ]}
   >
     {article.excerpt}

@@ -14,6 +14,8 @@ interface Props {
   items: NavItem[];
   backHref?: string;
   backLabel?: string;
+  /** View-transition persist id — must differ between global home nav and each game hub */
+  persistKey?: string;
 }
 
 const {
@@ -21,6 +23,7 @@ const {
   items,
   backHref = '/',
   backLabel = 'Back to home',
+  persistKey,
 } = Astro.props;
 
 const currentPath = normalizeNavPath(Astro.url.pathname);
@@ -29,8 +32,10 @@ const showBackLink = backPath !== currentPath;
 ---
 
 <aside
+  {...(persistKey ? { 'transition:persist': persistKey } : {})}
   class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0 lg:left-0 lg:z-40 border-r border-default bg-nav transition-colors duration-300"
   aria-label="Main navigation"
+  data-nav-sidebar
 >
   <div class="flex h-full min-w-0 flex-col p-6">
     <div class="mb-8 min-w-0">

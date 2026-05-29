@@ -1,6 +1,6 @@
 ---
 title: "Stardew Valley Year One: A Calm Starter Route"
-excerpt: "Spring crops, early mining, and community center basics — a relaxed first year without min-max stress."
+excerpt: "Spring crops, early mining, and community center basics—a relaxed first year at your own farm pace."
 category: "guide"
 gameSlug: "stardew-valley"
 publishedAt: "2026-05-10"
@@ -9,11 +9,11 @@ featured: true
 trending: true
 seo:
   title: "Stardew Valley Year One: A Calm Starter Route"
-  description: "Spring crops, early mining, and community center basics — a relaxed first year without min-max stress."
+  description: "A calm Stardew Valley year-one route—spring crops, mining, friendships, and community center basics without rush."
 ---
 Your first year in Stardew Valley is about rhythm, not perfection. Wake up, water crops, check the town, and leave energy for one “main” goal — mines, fishing, or friendship — before sundown.
 
-This guide assumes you are playing at a cozy pace: no strict min-max, just a route that avoids common bottlenecks.
+This guide assumes you are playing at a cozy pace: no rush, just a route that avoids common first-year bottlenecks.
 
 ## Spring priorities
 

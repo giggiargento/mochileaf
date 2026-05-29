@@ -47,7 +47,11 @@ const typeIcons: Record<Update['type'], string> = {
   <div class="min-w-0 flex-1">
     <p class="text-xs font-medium uppercase tracking-wide text-accent">{typeLabels[update.type]}</p>
     <h3 class="mt-0.5 font-medium leading-snug">
-      <a href={href} class="cozy-link no-underline hover:underline">
+      <a
+        href={href}
+        class="cozy-link no-underline hover:underline"
+        {...(update.articleSlug ? { 'data-astro-reload': true } : {})}
+      >
         {update.title}
       </a>
     </h3>

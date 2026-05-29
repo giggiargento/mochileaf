@@ -3,7 +3,7 @@ import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
 import ArticleDetail from '../../../components/article/ArticleDetail.astro';
 import { getGame } from '../../../data/games';
-import { getArticleEntry, loadArticleEntries } from '../../../data/articles';
+import { articleSlugFromId, loadArticleEntries } from '../../../data/articles';
 import { isGuideCategory } from '../../../utils/article-routes';
 import { render } from 'astro:content';
 import { resolveContentSeo } from '../../../lib/content/seo';
@@ -13,7 +13,7 @@ export async function getStaticPaths() {
   return entries
     .filter((entry) => entry.data.gameSlug && isGuideCategory(entry.data.category))
     .map((entry) => {
-      const slug = entry.id.replace(/\.md$/, '');
+      const slug = articleSlugFromId(entry.id);
       const game = getGame(entry.data.gameSlug!)!;
       const article = {
         slug,
@@ -25,21 +25,22 @@ export async function getStaticPaths() {
         readTime: entry.data.readTime,
         featured: entry.data.featured,
         trending: entry.data.trending,
+        coverImage: entry.data.coverImage,
+        coverCaption: entry.data.coverCaption,
       };
       return {
         params: { game: entry.data.gameSlug, slug },
-        props: { article, game, entryId: entry.id },
+        props: { article, game, entry },
       };
     });
 }
 
-const { article, game, entryId } = Astro.props;
-const entry = await getArticleEntry(article.slug);
-if (!entry) throw new Error(`Missing article entry: ${entryId}`);
+const { article, game, entry } = Astro.props;
 const { Content } = await render(entry);
 const seo = resolveContentSeo(entry.data.seo, {
   title: article.title,
   description: article.excerpt,
+  image: entry.data.coverImage ?? entry.data.seo?.image,
 });
 ---
 

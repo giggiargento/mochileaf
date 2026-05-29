@@ -2,6 +2,8 @@
 
 Written copy lives here — **not** in Astro components. All entries are validated with **Zod** at build time.
 
+**Voice & tone:** see [`docs/EDITORIAL.md`](../../docs/EDITORIAL.md) (cozy magazine, not tier-list optimizer).
+
 ## Layout
 
 | Folder | Format | Astro collection | Schema |
@@ -74,13 +76,23 @@ category: guide
 gameSlug: stardew-valley
 publishedAt: "2026-05-28"
 readTime: "8 min"
+coverImage: "/images/games/stardew-valley/cover.jpg"
+coverCaption: "Optional credit under the hero image"
 seo:
   title: "Page title"
   description: "Meta description"
 ---
 
 Markdown body…
+
+<!-- Inline image with caption (HTML in .md is fine): -->
+<figure class="article-inline-figure">
+  <img src="/images/games/stardew-valley/header.jpg" alt="Describe the image" width="1200" height="675" loading="lazy" decoding="async" />
+  <figcaption>Caption text</figcaption>
+</figure>
 ```
+
+Put images under `public/images/` (often `public/images/games/{game-slug}/`). `coverImage` shows above the body; `seo.image` can override the social preview if set.
 
 Use `draft: true` while writing. Global editorials omit `gameSlug`.
 

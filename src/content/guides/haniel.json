@@ -1,7 +1,7 @@
 {
   "characterSlug": "haniel",
   "gameSlug": "neverness-to-everness",
-  "buildSummary": "Haniel works best in Lakshana-aligned comps where assist value is prioritized.",
+  "buildSummary": "Lakshana assist for unhurried fights—small buffs and timing matter more than burst stats here.",
   "diskSets": [
     {
       "name": "Marching Beyond Time (S)",
@@ -62,6 +62,6 @@
   ],
   "seo": {
     "title": "Haniel build guide",
-    "description": "Haniel works best in Lakshana-aligned comps where assist value is prioritized."
+    "description": "Lakshana assist for unhurried fights—small buffs and timing matter more than burst stats here."
   }
 }

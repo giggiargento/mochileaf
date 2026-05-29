@@ -2,7 +2,7 @@
 import GlobalLayout from '../../layouts/GlobalLayout.astro';
 import PageHeader from '../../components/game/PageHeader.astro';
 import ArticleDetail from '../../components/article/ArticleDetail.astro';
-import { getArticleEntry, loadArticleEntries } from '../../data/articles';
+import { articleSlugFromId, loadArticleEntries } from '../../data/articles';
 import { getArticleHref } from '../../utils/article-routes';
 import { render } from 'astro:content';
 import { resolveContentSeo } from '../../lib/content/seo';
@@ -12,29 +12,30 @@ export async function getStaticPaths() {
   return entries
     .filter((entry) => !entry.data.gameSlug)
     .map((entry) => {
-      const slug = entry.id.replace(/\.md$/, '');
+      const slug = articleSlugFromId(entry.id);
       const article = {
         slug,
         title: entry.data.title,
         excerpt: entry.data.excerpt,
         category: entry.data.category,
+        gameSlug: entry.data.gameSlug,
         publishedAt: entry.data.publishedAt,
         readTime: entry.data.readTime,
         featured: entry.data.featured,
         trending: entry.data.trending,
+        coverImage: entry.data.coverImage,
+        coverCaption: entry.data.coverCaption,
       };
-      return { params: { slug }, props: { article, entryId: entry.id } };
+      return { params: { slug }, props: { article, entry } };
     });
 }
 
-const { article, entryId } = Astro.props;
+const { article, entry } = Astro.props;
 
 if (article.gameSlug) {
   return Astro.redirect(getArticleHref(article), 301);
 }
 
-const entry = await getArticleEntry(article.slug);
-if (!entry) throw new Error(`Missing article entry: ${entryId}`);
 const { Content } = await render(entry);
 const seo = resolveContentSeo(entry.data.seo, {
   title: article.title,

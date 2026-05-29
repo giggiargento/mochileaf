@@ -1,20 +1,25 @@
 ---
 import type { Article } from '../../types';
 import type { Game } from '../../types';
+import ArticleCover from './ArticleCover.astro';
 import { getArticleListHref, getArticleListLabel } from '../../utils/article-routes';
 import { getGameDisplayName } from '../../utils/game-display';
 
 interface Props {
   article: Article;
   game?: Game;
+  coverImage?: string;
+  coverCaption?: string;
 }
 
-const { article, game } = Astro.props;
+const { article, game, coverImage, coverCaption } = Astro.props;
+const heroSrc = coverImage ?? article.coverImage;
+const heroCaption = coverCaption ?? article.coverCaption;
 const backHref = getArticleListHref(article);
 const backLabel = getArticleListLabel(article);
 ---
 
-<a href={backHref} class="cozy-link text-sm font-medium">
+<a href={backHref} class="cozy-link text-sm font-medium" data-astro-reload>
   ← {backLabel}
 </a>
 
@@ -28,6 +33,15 @@ const backLabel = getArticleListLabel(article);
       </>
     )}
   </p>
+  {
+    heroSrc && (
+      <ArticleCover
+        src={heroSrc}
+        alt={article.title}
+        caption={heroCaption}
+      />
+    )
+  }
   <div class="prose-cozy space-y-6">
     <slot />
   </div>

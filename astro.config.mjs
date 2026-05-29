@@ -54,6 +54,7 @@ const acnhShortRedirects = {
     destination: '/animal-crossing-new-horizons/houses',
   },
   '/acnh/guides': { status: 301, destination: '/animal-crossing-new-horizons/guides' },
+  '/acnh/news': { status: 301, destination: '/animal-crossing-new-horizons/news' },
   '/acnh/about': { status: 301, destination: '/animal-crossing-new-horizons/about' },
 };
 

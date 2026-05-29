@@ -2,8 +2,8 @@
   "slug": "neverness-to-everness",
   "name": "Neverness to Everness",
   "shortName": "NTE",
-  "tagline": "Urban fantasy action — teams, elements, and calm meta notes",
-  "description": "Fan hub for NTE: roster notes, team comps, and starter guides — cozy pacing, no spreadsheet panic.",
+  "tagline": "Urban fantasy action — characters, teams, and gentle starter guides",
+  "description": "Character spotlights, team ideas, and beginner-friendly notes for Neverness to Everness—curated at a calm, magazine pace.",
   "accent": "lavender",
   "coverGradient": "from-lavender-200/80 via-mist-100 to-cream-50",
   "coverImage": "/images/games/neverness-to-everness/cover.jpg",
@@ -12,7 +12,7 @@
   "status": "active",
   "seo": {
     "title": "Neverness to Everness guides & cozy tips",
-    "description": "Fan hub for NTE: roster notes, team comps, and starter guides — cozy pacing, no spreadsheet panic."
+    "description": "Character spotlights, team ideas, and beginner-friendly notes for Neverness to Everness—curated at a calm, magazine pace."
   },
   "genres": [],
   "platforms": [],
@@ -22,5 +22,5 @@
   "tags": [
     "NTE"
   ],
-  "about": "Fan hub for NTE: roster notes, team comps, and starter guides — cozy pacing, no spreadsheet panic."
+  "about": "Character spotlights, team ideas, and beginner-friendly notes for Neverness to Everness—curated at a calm, magazine pace."
 }

@@ -1,0 +1,51 @@
+---
+description: Mochileaf voice, tone, and content balance — cozy magazine, not tier-list wiki
+alwaysApply: true
+---
+
+# Mochileaf editorial direction
+
+## What we are / are not
+
+**Avoid feeling like:** spreadsheet gacha optimizer, generic tier-list site, sterile wiki, SEO farm, min-max hub.
+
+**Aim for:** curated cozy gaming magazine, aesthetic character guides, welcoming discovery, visually driven calm, companion for casual and dedicated players.
+
+## Writing style
+
+- Warm, natural, mobile-readable (short paragraphs; 1–2 sentences on cards).
+- Prioritize: playstyle feel, atmosphere, visual identity, accessibility, personality, cozy loops.
+- Technical copy: beginner-friendly; ~70% editorial / ~30% build optimization on mixed pages.
+- Curated, not dumped — encourage exploration; visuals matter as much as data.
+
+**Do not use** unless strictly necessary: meta-defining claims, roster/spreadsheet jargon, speculative balance.
+
+**Banned phrasing (examples):** must pull, best in slot, meta defining, mandatory unit, bridges early and mid game, comfortable resonance lines, roster filling, meta anchor, filler unit.
+
+```text
+# BAD
+Anima defender who bridges early and mid game. Premier Turbid Burn anchor.
+
+# GOOD
+Soft-spoken Anima guardian — calm frontline presence while you learn the element.
+Incantation tank with ink-and-verse gravitas; fights feel deliberate and ceremonial.
+```
+
+## SEO
+
+- Trustworthy, evergreen, clear — not keyword stuffing or clickbait.
+- No speculative or patch-temporary meta claims in `description` / `seo.description` / excerpts.
+- SEO fields should sound human, not like ranking copy.
+
+## Facts & uncertainty
+
+- Only state mechanics or unlock paths when verifiable in source material.
+- If unsure: soften wording, omit, or use `TODO: …` in drafts — **never invent** stats, banners, or tier placements.
+
+## Where this applies
+
+- `src/content/**` (characters, games, guides, articles)
+- UI copy on hub/character/guide pages
+- Export review text should reflect the same voice
+
+Full reference: `docs/EDITORIAL.md`

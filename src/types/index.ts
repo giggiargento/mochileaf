@@ -41,6 +41,8 @@ export interface Article {
   readTime: string;
   featured?: boolean;
   trending?: boolean;
+  coverImage?: string;
+  coverCaption?: string;
 }
 
 export interface Character {

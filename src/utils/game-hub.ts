@@ -20,7 +20,7 @@ const hubCopyBySlug: Record<string, HubCopy> = {
   'neverness-to-everness': {
     charactersTitle: 'Characters',
     charactersDescription:
-      'S-rank and standout A-ranks — roles, elements, and short bios to pick your next favorite without wiki overload.',
+      'Meet the cast by mood and element—short editorial bios to find faces you might enjoy traveling with.',
     featuredSectionTitle: 'Featured characters',
     primaryCta: { label: 'Team comps', path: 'teams' },
     secondaryCta: { label: 'Browse guides', path: 'guides' },

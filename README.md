@@ -2,6 +2,8 @@
 
 A warm, elegant cozy gaming content platform built with **Astro** and **Tailwind CSS**. Inspired by Studio Ghibli atmospheres, soft fantasy aesthetics, and editorial calm — not esports energy.
 
+**Editorial direction:** [`docs/EDITORIAL.md`](docs/EDITORIAL.md)
+
 ## Features
 
 - **Global home page** — hero, featured games, updates, articles, trending, promos, newsletter, ad placeholders

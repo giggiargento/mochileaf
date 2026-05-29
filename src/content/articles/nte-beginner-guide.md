@@ -1,6 +1,6 @@
 ---
 title: "Neverness to Everness Beginner Guide"
-excerpt: "Esper cycles, stamina priorities, and your first team — a calm route through the opening hours without reroll anxiety."
+excerpt: "Your first team, daily habits, and stamina basics — a calm route through the opening hours without reroll pressure."
 category: "guide"
 gameSlug: "neverness-to-everness"
 publishedAt: "2026-05-18"
@@ -9,22 +9,22 @@ featured: true
 trending: true
 seo:
   title: "Neverness to Everness Beginner Guide"
-  description: "Esper cycles, stamina priorities, and your first team — a calm route through the opening hours without reroll anxiety."
+  description: "Your first team, daily habits, and stamina basics — a calm Neverness to Everness starter guide without reroll pressure."
 ---
-Neverness to Everness (NTE) opens fast — new systems, elements, and banners appear within the first hour. This guide keeps your first week simple: one main DPS, one support, and daily habits you can repeat without burnout.
+Neverness to Everness opens quickly—new faces, elements, and menus arrive within the first hour. This guide keeps your first week gentle: one striker you enjoy, one support who keeps everyone standing, and a short daily routine you can repeat without burnout.
 
-## Pick a main team early
+## Pick a small team early
 
-If you are free-to-play, invest in Chiz from City Tycoon first — full S-rank path without gacha. Pair with any Cosmos or Anima support you already own (Mint, Jiuyuan, or Nanally).
+If you are playing without spending, Chiz from City Tycoon is a welcoming first striker—earned through the city mode, not the banner. Pair him with whichever Cosmos or Anima support you already have (Mint, Jiuyuan, or Nanally feel especially friendly).
 
-Pulled Baicang or Daffodil? Check our Turbid Burn team comp on the Teams page before spreading resources across too many DPS units.
+Lucky enough to welcome Baicang or Daffodil early? Browse the Teams page for ideas, then focus upgrades on one squad before spreading resources across the whole roster.
 
 ## Stamina and dailies
 
-Spend resin on account-progression materials before farming perfect artifacts. Finish daily commissions and City Tycoon check-ins before long anomaly grinds.
+Spend natural stamina on account growth first—levels, ascensions, and story tools—before chasing perfect gear. Finish daily commissions and a quick City Tycoon visit before long anomaly sessions.
 
-When tired, stop after dailies — NTE rewards consistency more than single six-hour sessions.
+When you are tired, stop after dailies. NTE tends to reward steady check-ins more than rare marathon nights.
 
-## What to ignore at first
+## What to save for later
 
-Perfect sub-stats, max awakenings on every banner character, and every side event shop. Come back to those after story chapter 2 and a stable twelve-unit roster.
+Perfect stat rolls, max awakenings on every new face, and every limited shop trinket. Circle back after you clear early story and know which characters you actually enjoy using.

@@ -26,6 +26,7 @@ const hubTitle = game.shortName ?? game.name;
     items={navItems}
     backHref="/"
     backLabel="All games"
+    persistKey={`mochi-sidebar-${game.slug}`}
   >
     <div slot="footer" class="space-y-4">
       <ThemeToggle />

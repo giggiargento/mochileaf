@@ -1,25 +1,25 @@
 {
   "characterSlug": "zero-male",
   "gameSlug": "neverness-to-everness",
-  "buildSummary": "Zero (M) works best in Cosmos-aligned comps where attack value is prioritized.",
+  "buildSummary": "Cosmos striker with an easy rhythm—simple skill priority and steady modules help newcomers stay in control.",
   "diskSets": [
     {
       "name": "The Rain That Shook the World (S)",
-      "note": "Strong general DPS Arc for burst carries with reliable damage scaling."
+      "note": "A versatile damage Arc that suits strikers who like clear burst moments."
     },
     {
       "name": "First Step to Success (A)",
-      "note": "Accessible bridge Arc for early progression while farming better S options."
+      "note": "A dependable early Arc while you work toward fancier sets."
     }
   ],
   "modules": [
     {
       "name": "S-tier Module line",
-      "note": "Prioritize CRIT/ATK rolls for burst consistency."
+      "note": "Attack and crit stats keep burst moments feeling sharp."
     },
     {
       "name": "A-tier Module fallback",
-      "note": "Use ATK + Cycle Rate until best rolls drop."
+      "note": "Attack and cycle rate are fine placeholders while better pieces arrive."
     }
   ],
   "skillPriority": [
@@ -29,7 +29,7 @@
     },
     {
       "skill": "Skill",
-      "scales": "Core rotation damage and esper-cycle trigger value."
+      "scales": "Core rotation damage and swap timing."
     },
     {
       "skill": "Basic Attack",
@@ -45,7 +45,7 @@
       "name": "Esper EXP materials",
       "purpose": "Level cap and ascension breakpoints.",
       "location": "Rabbit Hole > Character Growth simulations",
-      "tip": "Spend daily stamina here first until your main DPS hits next ascension cap."
+      "tip": "Spend daily stamina here first until your main striker reaches the next ascension cap."
     },
     {
       "name": "Weapon/Arc upgrade mats",
@@ -57,11 +57,11 @@
       "name": "Module enhancement chips",
       "purpose": "Crit/ATK scaling.",
       "location": "Anomaly Investigation > Module domains",
-      "tip": "Use these after EXP/Arc mats; module gains are strongest mid/late progression."
+      "tip": "Save module farming for after basics—modules matter most once your core team is settled."
     }
   ],
   "seo": {
     "title": "Zero (M) build guide",
-    "description": "Zero (M) works best in Cosmos-aligned comps where attack value is prioritized."
+    "description": "Cosmos striker with an easy rhythm—simple skill priority and steady modules help newcomers stay in control."
   }
 }

@@ -1,13 +1,21 @@
 import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import type { Article } from '../../types';
 import { isPublishableArticle, type ArticleFrontmatter } from '../../content/schemas/article';
 
-let articlesCache: Article[] | null = null;
-let entriesCache: Awaited<ReturnType<typeof loadArticleEntries>> | null = null;
+type ArticleEntry = CollectionEntry<'articles'>;
 
-function entryToArticle(entry: { id: string; data: ArticleFrontmatter }): Article {
+let articlesCache: Article[] | null = null;
+let entriesCache: ArticleEntry[] | null = null;
+
+/** Filename slug from collection id (handles optional path prefix / extension). */
+export function articleSlugFromId(id: string): string {
+  return id.replace(/^.*[/\\]/, '').replace(/\.mdx?$/i, '');
+}
+
+function entryToArticle(entry: ArticleEntry): Article {
   return {
-    slug: entry.id.replace(/\.md$/, ''),
+    slug: articleSlugFromId(entry.id),
     title: entry.data.title,
     excerpt: entry.data.excerpt,
     category: entry.data.category,
@@ -16,27 +24,35 @@ function entryToArticle(entry: { id: string; data: ArticleFrontmatter }): Articl
     readTime: entry.data.readTime,
     featured: entry.data.featured,
     trending: entry.data.trending,
+    coverImage: entry.data.coverImage,
+    coverCaption: entry.data.coverCaption,
   };
 }
 
-export async function loadArticleEntries() {
-  if (!entriesCache) {
-    const entries = await getCollection('articles');
-    entriesCache = entries.filter(({ data }) => isPublishableArticle(data));
-  }
-  return entriesCache;
+export async function loadArticleEntries(): Promise<ArticleEntry[]> {
+  if (!import.meta.env.DEV && entriesCache) return entriesCache;
+
+  const entries = await getCollection('articles');
+  const publishable = entries.filter(({ data }) => isPublishableArticle(data));
+
+  if (!import.meta.env.DEV) entriesCache = publishable;
+  return publishable;
 }
 
 export async function loadArticles(): Promise<Article[]> {
-  if (articlesCache) return articlesCache;
+  if (!import.meta.env.DEV && articlesCache) return articlesCache;
+
   const entries = await loadArticleEntries();
-  articlesCache = entries.map(entryToArticle);
-  return articlesCache;
+  const articles = entries.map(entryToArticle);
+
+  if (!import.meta.env.DEV) articlesCache = articles;
+  return articles;
 }
 
-export async function getArticleEntry(slug: string) {
+export async function getArticleEntry(slug: string): Promise<ArticleEntry | undefined> {
+  const normalized = articleSlugFromId(slug);
   const entries = await loadArticleEntries();
-  return entries.find((e) => e.id === `${slug}.md` || e.id === slug);
+  return entries.find((e) => articleSlugFromId(e.id) === normalized);
 }
 
 export async function renderArticle(slug: string) {

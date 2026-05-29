@@ -2,6 +2,30 @@ import type { Update } from '../types';
 
 export const updates: Update[] = [
   {
+    id: 'acnh-2',
+    title: 'ACNH 3.0.3 — anniversary leaf statue hits Nook Shopping',
+    gameSlug: 'animal-crossing-new-horizons',
+    articleSlug: 'acnh-update-3-0-3-leaf-statue',
+    date: '2026-05-28',
+    type: 'patch',
+  },
+  {
+    id: 'nte-2',
+    title: 'NTE 1.1 Dreamwalk Corridor launches June 3',
+    gameSlug: 'neverness-to-everness',
+    articleSlug: 'nte-version-1-1-dreamwalk-corridor',
+    date: '2026-05-28',
+    type: 'patch',
+  },
+  {
+    id: 'sv-1',
+    title: 'Stardew 1.7 — Clint and Sandy become marriage candidates',
+    gameSlug: 'stardew-valley',
+    articleSlug: 'stardew-1-7-clint-sandy-romance',
+    date: '2026-05-28',
+    type: 'patch',
+  },
+  {
     id: 'acnh-1',
     title: 'ACNH hub — villagers, homes, items, and island tours',
     gameSlug: 'animal-crossing-new-horizons',
@@ -29,12 +53,5 @@ export const updates: Update[] = [
     gameSlug: 'stardew-valley',
     date: '2024-11-04',
     type: 'patch',
-  },
-  {
-    id: '5',
-    title: 'Petal Dreams — first teaser drops',
-    gameSlug: 'petal-dreams',
-    date: '2026-04-25',
-    type: 'content',
   },
 ];
