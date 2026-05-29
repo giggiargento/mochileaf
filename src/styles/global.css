@@ -491,6 +491,39 @@ html.dark {
     cursor: zoom-in;
   }
 
+  /* Game hub news — 2-column masonry; cover image only when article has coverImage */
+  .news-masonry {
+    column-count: 1;
+    column-gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .news-masonry {
+      column-count: 2;
+    }
+  }
+
+  .news-masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+
+  .news-masonry-media {
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .news-masonry-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.45s ease-out;
+  }
+
+  .news-masonry-item:hover .news-masonry-img {
+    transform: scale(1.02);
+  }
+
   /* Decor inspiration lightbox — fixed width, natural height, centered */
   .decor-lightbox {
     position: fixed;

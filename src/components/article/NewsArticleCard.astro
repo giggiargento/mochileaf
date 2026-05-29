@@ -1,0 +1,82 @@
+---
+import type { Article } from '../../types';
+import Badge from '../ui/Badge.astro';
+import { getGame } from '../../data/games';
+import { getArticleHref } from '../../utils/article-routes';
+import { getGameDisplayName } from '../../utils/game-display';
+
+interface Props {
+  article: Article;
+  /** Hide hub badge when listing news inside that game's hub */
+  hideGameBadge?: boolean;
+}
+
+const { article, hideGameBadge = true } = Astro.props;
+const game = article.gameSlug ? getGame(article.gameSlug) : undefined;
+const href = getArticleHref(article);
+const hasCover = Boolean(article.coverImage);
+
+const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' | 'lavender'> = {
+  news: 'mist',
+  guide: 'sage',
+  editorial: 'lavender',
+  update: 'default',
+};
+---
+
+<article class="news-masonry-item">
+  <div class="cozy-card flex min-w-0 flex-col overflow-hidden">
+    {
+      hasCover && (
+        <a
+          href={href}
+          class="news-masonry-media block overflow-hidden"
+          data-astro-reload
+          aria-label={`Read: ${article.title}`}
+        >
+          <img
+            src={article.coverImage}
+            alt={article.title}
+            width={640}
+            height={360}
+            class="news-masonry-img"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      )
+    }
+    <div class="flex min-w-0 flex-col p-6">
+      <div class="mb-3 flex min-w-0 flex-wrap items-center gap-2">
+        <Badge variant={categoryVariants[article.category]}>{article.category}</Badge>
+        {
+          !hideGameBadge && game && (
+            <a href={`/${game.slug}`} class="hover:opacity-90">
+              <Badge variant="default">{getGameDisplayName(game, 'short')}</Badge>
+            </a>
+          )
+        }
+        {article.trending && <Badge variant="blossom">Trending</Badge>}
+      </div>
+      <h3 class="article-card-title--lines-2 font-display min-w-0 text-lg text-primary">
+        <a href={href} class="hover:text-accent transition-colors" data-astro-reload>
+          {article.title}
+        </a>
+      </h3>
+      <p class="article-card-excerpt--lines-3 mt-2 min-w-0 text-sm leading-snug text-secondary">
+        {article.excerpt}
+      </p>
+      <footer class="mt-4 flex shrink-0 items-center gap-3 text-xs text-muted">
+        <time datetime={article.publishedAt}>
+          {new Date(article.publishedAt).toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+          })}
+        </time>
+        <span aria-hidden="true">·</span>
+        <span>{article.readTime} read</span>
+      </footer>
+    </div>
+  </div>
+</article>

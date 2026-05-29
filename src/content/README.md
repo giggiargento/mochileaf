@@ -34,6 +34,8 @@ npm run content:lint   # fast check without full build
 npm run build          # Astro + Zod validation on all collections
 ```
 
+If article **cover images** vanish in `npm run dev` but work after `npm run build`, run `npm run dev` again (it syncs content) or `npx astro sync` after pulling — see `scripts/ensure-articles-content-schema.mjs`.
+
 **Required on every entry:** `seo.title` and `seo.description` (non-empty).
 
 **TODO placeholders** (`TODO: …` at the start of a string) are allowed in drafts but:

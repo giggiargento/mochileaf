@@ -6,7 +6,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
-import { articleSchema } from '../src/content/schemas/article';
+import { articleSchemaStrict as articleSchema } from '../src/content/schemas/article';
 import { characterSchema } from '../src/content/schemas/character';
 import { gameSchema } from '../src/content/schemas/game';
 import { guideDefaultsSchema, guideSchema } from '../src/content/schemas/guide';

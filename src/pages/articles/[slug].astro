@@ -46,7 +46,11 @@ const seo = resolveContentSeo(entry.data.seo, {
 <GlobalLayout title={seo.title} description={seo.description}>
   <PageHeader badge={article.category} title={article.title} description={article.excerpt} />
   <div class="page-container-below-header">
-    <ArticleDetail article={article}>
+    <ArticleDetail
+      article={article}
+      coverImage={entry.data.coverImage}
+      coverCaption={entry.data.coverCaption}
+    >
       <Content />
     </ArticleDetail>
   </div>

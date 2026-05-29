@@ -7,8 +7,8 @@ publishedAt: "2026-05-28"
 readTime: "6 min"
 featured: true
 trending: true
-coverImage: "/images/games/neverness-to-everness/header.png"
-coverCaption: "Hethereau at dusk — version 1.1 adds Sunward Island and more city life."
+coverImage: "/images/games/neverness-to-everness/news/dreamwalk-corridor-1-1.jpg"
+coverCaption: "Version 1.1 Dreamwalk Corridor — key art from Hotta Studio's May 2026 special program."
 seo:
   title: "Neverness to Everness 1.1 Dreamwalk Corridor — June 2026"
   description: "NTE version 1.1 Dreamwalk Corridor launches June 3, 2026 with Lacrimosa, Chaos, Sunward Island, and new city activities—a calm overview for returning players."
@@ -22,11 +22,6 @@ If you have been exploring Hethereau at your own pace, this update reads less li
 The update continues the Dreamwalk storyline and adds **Sunward Island**, a summery area tied to new anomaly content—including a location called the **Corridor of Echoes**, which preview footage suggests will feel more dreamlike than your usual commission route.
 
 That combination—bright tourism vibes plus surreal combat spaces—is very on-brand for NTE's urban fantasy mood.
-
-<figure class="article-inline-figure">
-  <img src="/images/games/neverness-to-everness/arcs/Youthful_Fantasy.webp" alt="Dreamlike fantasy art from Neverness to Everness" width="1200" height="675" loading="lazy" decoding="async" />
-  <figcaption>Dreamwalk Corridor leans into the game's softer, sunlit side before the Corridor of Echoes turns surreal.</figcaption>
-</figure>
 
 ## Two new playable characters
 

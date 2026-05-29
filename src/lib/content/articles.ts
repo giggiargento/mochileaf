@@ -13,6 +13,13 @@ export function articleSlugFromId(id: string): string {
   return id.replace(/^.*[/\\]/, '').replace(/\.mdx?$/i, '');
 }
 
+/** Newest first (publishedAt YYYY-MM-DD). */
+export function sortArticlesByDateDesc<T extends { publishedAt: string }>(articles: T[]): T[] {
+  return [...articles].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  );
+}
+
 function entryToArticle(entry: ArticleEntry): Article {
   return {
     slug: articleSlugFromId(entry.id),
@@ -43,7 +50,7 @@ export async function loadArticles(): Promise<Article[]> {
   if (!import.meta.env.DEV && articlesCache) return articlesCache;
 
   const entries = await loadArticleEntries();
-  const articles = entries.map(entryToArticle);
+  const articles = sortArticlesByDateDesc(entries.map(entryToArticle));
 
   if (!import.meta.env.DEV) articlesCache = articles;
   return articles;
@@ -69,10 +76,10 @@ export async function getFeaturedArticles(): Promise<Article[]> {
 
 export async function getTrendingArticles(): Promise<Article[]> {
   const all = await loadArticles();
-  return all.filter((a) => a.trending);
+  return sortArticlesByDateDesc(all.filter((a) => a.trending));
 }
 
 export async function getArticlesByGame(gameSlug: string): Promise<Article[]> {
   const all = await loadArticles();
-  return all.filter((a) => a.gameSlug === gameSlug);
+  return sortArticlesByDateDesc(all.filter((a) => a.gameSlug === gameSlug));
 }

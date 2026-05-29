@@ -1,8 +1,7 @@
 ---
 import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
-import ArticleCard from '../../../components/home/ArticleCard.astro';
-import ContentGrid from '../../../components/game/ContentGrid.astro';
+import NewsArticleCard from '../../../components/article/NewsArticleCard.astro';
 import { games } from '../../../data/games';
 import { getNewsByGame } from '../../../data/articles';
 
@@ -20,9 +19,11 @@ const news = await getNewsByGame(game.slug);
   <PageHeader title="News &amp; updates" description="Patch notes, events, and hub announcements." />
   <div class="page-container-below-header">
     {news.length > 0 ? (
-      <ContentGrid columns={2}>
-        {news.map((a) => <ArticleCard article={a} />)}
-      </ContentGrid>
+      <div class="news-masonry" role="list">
+        {news.map((a) => (
+          <NewsArticleCard article={a} />
+        ))}
+      </div>
     ) : (
       <p class="prose-cozy text-center py-16">No news yet — the forest is quiet today.</p>
     )}

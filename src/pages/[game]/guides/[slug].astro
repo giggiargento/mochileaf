@@ -47,7 +47,12 @@ const seo = resolveContentSeo(entry.data.seo, {
 <GameHubLayout game={game} title={seo.title} description={seo.description}>
   <PageHeader badge="Guide" title={article.title} description={article.excerpt} />
   <div class="page-container-below-header">
-    <ArticleDetail article={article} game={game}>
+    <ArticleDetail
+      article={article}
+      game={game}
+      coverImage={entry.data.coverImage}
+      coverCaption={entry.data.coverCaption}
+    >
       <Content />
     </ArticleDetail>
   </div>

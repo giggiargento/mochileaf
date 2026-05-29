@@ -63,9 +63,14 @@ const removedGameRedirects = {
   '/moonlit-tides': { status: 301, destination: '/games' },
 };
 
+import rehypeRaw from 'rehype-raw';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mochileaf.com',
+  markdown: {
+    rehypePlugins: [rehypeRaw],
+  },
   integrations: [
     sitemap({
       // Utility search UIs — thin pages, not useful in organic results.
