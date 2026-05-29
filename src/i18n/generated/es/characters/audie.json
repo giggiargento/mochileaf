@@ -1,0 +1,37 @@
+{
+  "role": "lobo lleno de vida",
+  "description": "Lleva el nombre de un fanático desde hace mucho tiempo y está lleno de energía. Ideal para islas coloridas y llenas de música.",
+  "houseStyle": "Salón tiki retro",
+  "houseDescription": "Ratán y palmeras brillantes con un toque vintage: una casa de vacaciones que nunca abandonó los años setenta.",
+  "seoTitle": "Audie - Lobo lleno de vida",
+  "seoDescription": "Lleva el nombre de un fanático desde hace mucho tiempo y está lleno de energía. Ideal para islas coloridas y llenas de música.",
+  "acnh": {
+    "appearance": "Lobo con un estilo alegre y brillante: colores alegres y una cola que se mueve en cada conversación.",
+    "personality": "Audie, que lleva el nombre de un fan de toda la vida y está lleno de energía, lleva la energía del festival a las tardes tranquilas. Es alegre, se emociona fácilmente y le encantan las coloridas historias isleñas.",
+    "house": {
+      "roof": "techo de paja naranja",
+      "siding": "exterior de estuco azul menta",
+      "door": "puerta de celosía blanca",
+      "wallpaper": "Vista Tropical",
+      "flooring": "Suelo floral verde",
+      "music": "KK Isla"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Aptitud física",
+      "defaultClothing": "muumuu tropical (menta)",
+      "umbrella": "paraguas de cuento de hadas",
+      "bag": "estampado vegetal",
+      "food": "donut de chocolate",
+      "drink": "Lata de té o taza amarilla.",
+      "favoriteStyles": [
+        "Lindo",
+        "Activo"
+      ],
+      "favoriteColors": [
+        "Verde",
+        "Blanco"
+      ]
+    }
+  }
+}

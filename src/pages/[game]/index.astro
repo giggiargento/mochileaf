@@ -5,7 +5,7 @@ import ContentGrid from '../../components/game/ContentGrid.astro';
 import CharacterCard from '../../components/game/CharacterCard.astro';
 import ArticleCard from '../../components/home/ArticleCard.astro';
 import AdPlaceholder from '../../components/ui/AdPlaceholder.astro';
-import { games, getGame } from '../../data/games';
+import { games, getGame as getLocalizedGame } from '../../data/games';
 import { getCharactersByGame } from '../../data/characters';
 import { getNewsByGame, getGuidesByGame } from '../../data/articles';
 import { getHubCopy } from '../../utils/game-hub';
@@ -13,6 +13,7 @@ import Button from '../../components/ui/Button.astro';
 import LiveIntelSection from '../../components/content/LiveIntelSection.astro';
 import GameHubHero from '../../components/game/GameHubHero.astro';
 import { getLiveFeedsForGame } from '../../utils/live-content';
+import { usePageLocale } from '../../lib/i18n/use-page-locale';
 
 export function getStaticPaths() {
   return games
@@ -20,33 +21,36 @@ export function getStaticPaths() {
     .map((game) => ({ params: { game: game.slug }, props: { game } }));
 }
 
-const { game } = Astro.props;
-const hubCopy = getHubCopy(game);
+const { game: hubGame } = Astro.props;
+const { locale, tr, hub } = usePageLocale(Astro.currentLocale);
+const game = getLocalizedGame(hubGame.slug, locale) ?? hubGame;
+const hubCopy = getHubCopy(game, locale);
+const hubBase = hub(game.slug);
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
 const featuredCount =
   game.slug === 'neverness-to-everness' || isAcnh ? 6 : 3;
 const characters = getCharactersByGame(game.slug).slice(0, featuredCount);
 const hubArticles = [
-  ...(await getNewsByGame(game.slug)),
-  ...(await getGuidesByGame(game.slug)),
+  ...(await getNewsByGame(game.slug, locale)),
+  ...(await getGuidesByGame(game.slug, locale)),
 ]
   .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
   .slice(0, 2);
 const liveFeeds = getLiveFeedsForGame(game.slug);
 ---
 
-<GameHubLayout game={game} title="Home">
+<GameHubLayout game={game} title={tr('hub.home')}>
   <GameHubHero game={game}>
       <p class="text-xs font-medium uppercase tracking-widest text-accent">
         {game.tagline}
       </p>
       <h1 class="mt-2 font-display text-4xl md:text-5xl text-primary max-w-2xl">
-        Welcome to {game.name}
+        {tr('hub.welcome', { game: game.name })}
       </h1>
       <p class="mt-4 max-w-xl text-lg text-secondary">{game.description}</p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <Button href={`/${game.slug}/${hubCopy.primaryCta.path}`}>{hubCopy.primaryCta.label}</Button>
-        <Button href={`/${game.slug}/${hubCopy.secondaryCta.path}`} variant="secondary">
+        <Button href={`${hubBase}/${hubCopy.primaryCta.path}`}>{hubCopy.primaryCta.label}</Button>
+        <Button href={`${hubBase}/${hubCopy.secondaryCta.path}`} variant="secondary">
           {hubCopy.secondaryCta.label}
         </Button>
       </div>
@@ -62,8 +66,8 @@ const liveFeeds = getLiveFeedsForGame(game.slug);
         {characters.map((c) => <CharacterCard character={c} gameSlug={game.slug} />)}
       </ContentGrid>
       <div class="mt-6 text-center">
-        <a href={`/${game.slug}/characters`} class="cozy-link text-sm font-semibold">
-          View all {hubCopy.charactersTitle.toLowerCase()} →
+        <a href={`${hubBase}/characters`} class="cozy-link text-sm font-semibold">
+          {tr('hub.viewAll', { list: hubCopy.charactersTitle.toLowerCase() })}
         </a>
       </div>
     </div>
@@ -71,11 +75,9 @@ const liveFeeds = getLiveFeedsForGame(game.slug);
 
   <section class="pb-12 border-t border-default">
     <PageHeader
-      title="Latest from the hub"
+      title={tr('hub.latest')}
       description={
-        game.slug === 'neverness-to-everness'
-          ? 'Starter guides and hub news for Neverness to Everness.'
-          : undefined
+        game.slug === 'neverness-to-everness' ? tr('hub.latestNte') : undefined
       }
     />
     <div class="page-container pt-8 pb-0">
@@ -83,27 +85,27 @@ const liveFeeds = getLiveFeedsForGame(game.slug);
         {hubArticles.map((a) => <ArticleCard article={a} />)}
       </ContentGrid>
       <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm font-semibold">
-        <a href={`/${game.slug}/news`} class="cozy-link">
-          All news →
+        <a href={`${hubBase}/news`} class="cozy-link">
+          {tr('hub.allNews')}
         </a>
-        <a href={`/${game.slug}/guides`} class="cozy-link">
-          All guides →
+        <a href={`${hubBase}/guides`} class="cozy-link">
+          {tr('hub.allGuides')}
         </a>
         {
           game.slug === 'neverness-to-everness' && (
-            <a href={`/${game.slug}/teams`} class="cozy-link">
-              Team comps →
+            <a href={`${hubBase}/teams`} class="cozy-link">
+              {tr('hub.teamComps')}
             </a>
           )
         }
         {
           isAcnh && (
             <>
-              <a href={`/${game.slug}/houses`} class="cozy-link">
-                Decor & homes →
+              <a href={`${hubBase}/houses`} class="cozy-link">
+                {tr('hub.decorHomes')}
               </a>
-              <a href={`/${game.slug}/island-tours`} class="cozy-link">
-                Island tours →
+              <a href={`${hubBase}/island-tours`} class="cozy-link">
+                {tr('hub.islandTours')}
               </a>
             </>
           )

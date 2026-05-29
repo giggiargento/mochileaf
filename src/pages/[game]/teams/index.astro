@@ -5,6 +5,8 @@ import ContentGrid from '../../../components/game/ContentGrid.astro';
 import TeamCard from '../../../components/game/TeamCard.astro';
 import { games } from '../../../data/games';
 import { getTeamsByGame } from '../../../data/teams';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return games
@@ -13,18 +15,15 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
+const { locale, tr } = usePageLocale(Astro.currentLocale);
 const teams = getTeamsByGame(game.slug);
 const hubLabel = game.shortName ?? 'NTE';
 ---
 
-<GameHubLayout
-  game={game}
-  title="Teams"
-  description={`Recommended team compositions for ${game.name} — cozy notes, not spreadsheet meta.`}
->
+<GameHubLayout game={game} title={t('nav.teams', locale)} description={tr('teams.meta', { game: game.name })}>
   <PageHeader
-    title="Team comps"
-    description={`Suggested lineups for ${hubLabel} — who to run together, what each group is for, and when to swap members as your roster grows.`}
+    title={tr('teams.title')}
+    description={tr('teams.description', { hub: hubLabel })}
   />
   <div class="page-container-below-header">
     <ContentGrid columns={2}>
@@ -32,9 +31,6 @@ const hubLabel = game.shortName ?? 'NTE';
         <TeamCard team={team} gameSlug={game.slug} index={i + 1} />
       ))}
     </ContentGrid>
-    <p class="mt-12 max-w-2xl text-sm text-muted">
-      Individual weapon and Arc Disc builds are coming later. For now, use these teams as a map —
-      then open each character for role and element notes.
-    </p>
+    <p class="mt-12 max-w-2xl text-sm text-muted">{tr('teams.footer')}</p>
   </div>
 </GameHubLayout>

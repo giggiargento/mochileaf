@@ -1,0 +1,61 @@
+{
+  "buildSummary": "Golpe de encantamiento con ritmo similar al de un verso: las mejoras de habilidades y las ventanas de ráfaga segura son lo primero.",
+  "diskSets": [
+    {
+      "name": "The Rain That Shook the World (S)",
+      "note": "Un arco de daño versátil que se adapta a los delanteros a quienes les gustan los momentos de explosión claros."
+    },
+    {
+      "name": "First Step to Success (A)",
+      "note": "Un arco inicial confiable mientras trabajas en escenarios más sofisticados."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Module line",
+      "note": "Las estadísticas de ataque y crítico hacen que los momentos explosivos se sientan nítidos."
+    },
+    {
+      "name": "A-tier Module fallback",
+      "note": "La velocidad de ataque y ciclo son buenos marcadores de posición mientras llegan mejores piezas."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Último",
+      "scales": "Multiplicador de ráfaga principal y daño finalizador."
+    },
+    {
+      "skill": "Habilidad",
+      "scales": "Daño de rotación del núcleo y sincronización de intercambio."
+    },
+    {
+      "skill": "Ataque básico",
+      "scales": "DPS sostenido en el campo entre tiempos de reutilización."
+    },
+    {
+      "skill": "Habilidad de apoyo",
+      "scales": "Utilidad swap y efectos del ciclo secundario."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Límite de nivel y puntos de interrupción de ascensión.",
+      "location": "Rabbit Hole > Simulaciones de crecimiento de personajes",
+      "tip": "Gasta resistencia diaria aquí primero hasta que tu delantero principal alcance el siguiente límite de ascensión."
+    },
+    {
+      "name": "Weapon/Arc upgrade mats",
+      "purpose": "Multiplicador de daño principal.",
+      "location": "Madriguera del conejo > Anomalías del material del arco/armas",
+      "tip": "Cultive en días que coincidan con su ruta de actualización de Arc antes del contenido secundario."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Escalado de críticos/ATK.",
+      "location": "Investigación de anomalías > Dominios del módulo",
+      "tip": "Guarde el cultivo de módulos para después de lo básico: los módulos son más importantes una vez que su equipo principal está establecido."
+    }
+  ]
+}

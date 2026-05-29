@@ -1,0 +1,61 @@
+{
+  "buildSummary": "Lakshana apoya con energía regia y protectora: invierte en barreras y ritmo antes de atacar.",
+  "diskSets": [
+    {
+      "name": "Eternal Waltz (S)",
+      "note": "Un arco de sostenido suave para soportes que se apoyan en su Ultimate con frecuencia."
+    },
+    {
+      "name": "Call of the Twisted City (A)",
+      "note": "Un arco de apoyo tranquilo mientras cultivas algo más especializado."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Utility Modules",
+      "note": "Tasa de ciclo + HP/DEF para un tiempo de actividad de soporte estable."
+    },
+    {
+      "name": "A-tier Utility Modules",
+      "note": "Utilice tiradas defensivas mixtas hasta que caigan mejores."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Habilidad de apoyo",
+      "scales": "Potencia de mejora/curación/escudo y tiempo de actividad de la utilidad."
+    },
+    {
+      "skill": "Habilidad",
+      "scales": "Efectos de soporte secundario y consistencia del ciclo."
+    },
+    {
+      "skill": "Último",
+      "scales": "Utilidad de ráfaga y estabilización de emergencia para todo el equipo."
+    },
+    {
+      "skill": "Ataque básico",
+      "scales": "Daños personales menores; impacto más bajo para los soportes."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Alcanza puntos de interrupción de supervivencia.",
+      "location": "Rabbit Hole > Simulaciones de crecimiento de personajes",
+      "tip": "Mantenga los soportes dentro de los 10 niveles de su transporte principal para recorridos de anomalías más seguros."
+    },
+    {
+      "name": "Support-skill upgrade mats",
+      "purpose": "Escalado de mejora/curación.",
+      "location": "Madriguera del conejo > Anomalías en el material de habilidades",
+      "tip": "Priorice el nodo de habilidades de soporte antes de las actualizaciones de ataques básicos."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Valor de enfriamiento y durabilidad.",
+      "location": "Investigación de anomalías > Dominios del módulo",
+      "tip": "Tasa de ciclo objetivo y líneas HP/DEF para mayor coherencia."
+    }
+  ]
+}

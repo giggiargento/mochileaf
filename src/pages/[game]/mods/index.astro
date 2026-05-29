@@ -5,6 +5,8 @@ import ContentGrid from '../../../components/game/ContentGrid.astro';
 import ModCard from '../../../components/game/ModCard.astro';
 import { games } from '../../../data/games';
 import { getModsByGame } from '../../../data/mods';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return games
@@ -13,26 +15,19 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
+const { locale, tr } = usePageLocale(Astro.currentLocale);
 const gameMods = getModsByGame(game.slug);
 const isStardew = game.slug === 'stardew-valley';
 ---
 
 <GameHubLayout
   game={game}
-  title={isStardew ? 'Mods' : 'Mods'}
-  description={
-    isStardew
-      ? 'Recommended Stardew Valley mods for PC — frameworks, quality-of-life tools, and community expansions.'
-      : `Mod recommendations for ${game.name}`
-  }
+  title={t('nav.mods', locale)}
+  description={isStardew ? tr('mods.metaStardew') : tr('mods.metaDefault', { game: game.name })}
 >
   <PageHeader
-    title={isStardew ? 'Recommended mods' : 'Mods'}
-    description={
-      isStardew
-        ? 'Curated PC mods with original summaries. Always check mod pages for the latest version and compatibility notes.'
-        : 'Mod lists for this hub are being curated.'
-    }
+    title={isStardew ? tr('mods.titleStardew') : tr('mods.title')}
+    description={isStardew ? tr('mods.descriptionStardew') : tr('mods.descriptionDefault')}
   />
   <div class="page-container-below-header">
     {
@@ -43,9 +38,7 @@ const isStardew = game.slug === 'stardew-valley';
           ))}
         </ContentGrid>
       ) : (
-        <p class="prose-cozy text-center py-16">
-          Mod recommendations for this game are on the way.
-        </p>
+        <p class="prose-cozy text-center py-16">{tr('mods.empty')}</p>
       )
     }
   </div>

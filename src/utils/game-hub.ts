@@ -1,4 +1,6 @@
 import type { Game } from '../types';
+import { defaultLocale, type Locale } from '../i18n/config';
+import { t } from '../i18n/messages';
 
 interface HubCopy {
   charactersTitle: string;
@@ -8,45 +10,42 @@ interface HubCopy {
   secondaryCta: { label: string; path: string };
 }
 
-const hubCopyBySlug: Record<string, HubCopy> = {
-  'animal-crossing-new-horizons': {
-    charactersTitle: 'Villagers',
-    charactersDescription:
-      'Fan-favorite neighbors in one place — personality, species, home style, and decor moodboards.',
-    featuredSectionTitle: 'Popular villagers',
-    primaryCta: { label: 'Decor inspiration', path: 'houses' },
-    secondaryCta: { label: 'Island tours', path: 'island-tours' },
-  },
-  'neverness-to-everness': {
-    charactersTitle: 'Characters',
-    charactersDescription:
-      'Meet the cast by mood and element—short editorial bios to find faces you might enjoy traveling with.',
-    featuredSectionTitle: 'Featured characters',
-    primaryCta: { label: 'Team comps', path: 'teams' },
-    secondaryCta: { label: 'Browse guides', path: 'guides' },
-  },
-  'stardew-valley': {
-    charactersTitle: 'Villagers',
-    charactersDescription:
-      'Meet the people of Pelican Town — gifts, schedules, and heart events at a calm, readable pace.',
-    featuredSectionTitle: 'Featured villagers',
-    primaryCta: { label: 'Browse guides', path: 'guides' },
-    secondaryCta: { label: 'Meet villagers', path: 'characters' },
-  },
+const gameHubKeys: Record<string, string> = {
+  'animal-crossing-new-horizons': 'acnh',
+  'neverness-to-everness': 'nte',
+  'stardew-valley': 'stardew',
 };
 
-const defaultCopy: HubCopy = {
-  charactersTitle: 'Characters',
-  charactersDescription: 'Discover every companion, their roles, and cozy lore snippets.',
-  featuredSectionTitle: 'Featured characters',
-  primaryCta: { label: 'Browse guides', path: 'guides' },
-  secondaryCta: { label: 'Meet characters', path: 'characters' },
+const hubPathsBySlug: Record<string, { primary: string; secondary: string }> = {
+  'animal-crossing-new-horizons': { primary: 'houses', secondary: 'island-tours' },
+  'neverness-to-everness': { primary: 'teams', secondary: 'guides' },
+  'stardew-valley': { primary: 'guides', secondary: 'characters' },
 };
 
-export function getHubCopy(game: Game): HubCopy {
-  return hubCopyBySlug[game.slug] ?? defaultCopy;
+const defaultPaths = { primary: 'guides', secondary: 'characters' };
+
+function hubT(game: Game, key: string, locale: Locale): string {
+  const id = gameHubKeys[game.slug] ?? 'default';
+  return t(`hub.${id}.${key}`, locale);
 }
 
-export function getCharactersPageTitle(game: Game): string {
-  return getHubCopy(game).charactersTitle;
+export function getHubCopy(game: Game, locale: Locale = defaultLocale): HubCopy {
+  const paths = hubPathsBySlug[game.slug] ?? defaultPaths;
+  return {
+    charactersTitle: hubT(game, 'charactersTitle', locale),
+    charactersDescription: hubT(game, 'charactersDescription', locale),
+    featuredSectionTitle: hubT(game, 'featuredSectionTitle', locale),
+    primaryCta: {
+      label: hubT(game, 'primaryCtaLabel', locale),
+      path: paths.primary,
+    },
+    secondaryCta: {
+      label: hubT(game, 'secondaryCtaLabel', locale),
+      path: paths.secondary,
+    },
+  };
+}
+
+export function getCharactersPageTitle(game: Game, locale: Locale = defaultLocale): string {
+  return getHubCopy(game, locale).charactersTitle;
 }

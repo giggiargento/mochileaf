@@ -1,5 +1,7 @@
 ---
 import type { Game } from '../../../types';
+import { defaultLocale, type Locale } from '../../../i18n/config';
+import { t } from '../../../i18n/messages';
 import {
   acnhItemCatalogMeta,
   getAcnhItemCatalogForClient,
@@ -8,12 +10,23 @@ import {
 
 interface Props {
   game: Game;
+  locale?: Locale;
 }
 
-const { game } = Astro.props;
+const { game, locale = defaultLocale } = Astro.props;
 const tabs = getAcnhItemTabsWithCounts();
 const catalogJson = getAcnhItemCatalogForClient();
 const defaultTab = tabs[0]?.id ?? 'housewares';
+const itemsI18n = {
+  loading: t('page.items.loading', locale),
+  noMatch: t('page.items.noMatch', locale),
+  showingAll: t('page.items.showingAll', locale, { total: '{total}' }),
+  loadMore: t('page.items.loadMore', locale),
+  countOf: t('page.items.countOf', locale, { shown: '{shown}', total: '{total}', label: '{label}' }),
+  matchCount: t('page.items.matchCount', locale, { match: '{match}', total: '{total}' }),
+  buy: t('page.items.buy', locale),
+  sell: t('page.items.sell', locale),
+};
 ---
 
 <div
@@ -23,12 +36,12 @@ const defaultTab = tabs[0]?.id ?? 'housewares';
   data-default-tab={defaultTab}
 >
   <div class="acnh-item-directory__toolbar">
-    <label class="sr-only" for="acnh-item-search">Search items</label>
+    <label class="sr-only" for="acnh-item-search">{t('page.items.searchLabel', locale)}</label>
     <input
       id="acnh-item-search"
       type="search"
       class="acnh-item-directory__search"
-      placeholder="Search in this tab…"
+      placeholder={t('page.items.searchPlaceholder', locale)}
       autocomplete="off"
       spellcheck="false"
     />
@@ -36,7 +49,7 @@ const defaultTab = tabs[0]?.id ?? 'housewares';
     </p>
   </div>
 
-  <div class="acnh-item-tabs" role="tablist" aria-label="Item categories">
+  <div class="acnh-item-tabs" role="tablist" aria-label={t('page.items.tablist', locale)}>
     {
       tabs.map((tab, index) => (
         <button
@@ -67,7 +80,7 @@ const defaultTab = tabs[0]?.id ?? 'housewares';
           hidden={index !== 0 ? true : undefined}
         >
           <div class="item-card-grid" data-item-grid>
-            <p class="col-span-full text-sm text-muted">Loading items…</p>
+            <p class="col-span-full text-sm text-muted">{itemsI18n.loading}</p>
           </div>
           <div class="acnh-item-pagination" data-item-pagination hidden></div>
         </section>
@@ -76,7 +89,9 @@ const defaultTab = tabs[0]?.id ?? 'housewares';
   </div>
 
   <p class="mt-10 text-center text-xs text-muted">
-    {acnhItemCatalogMeta.total.toLocaleString()} items · Data from{' '}
+    {t('page.items.catalogFooter', locale, {
+      total: acnhItemCatalogMeta.total.toLocaleString(),
+    })}{' '}
     <a
       href={acnhItemCatalogMeta.source}
       class="cozy-link"
@@ -85,10 +100,11 @@ const defaultTab = tabs[0]?.id ?? 'housewares';
     >
       Nookipedia
     </a>
-    {' '}· Images via {acnhItemCatalogMeta.imageCredit}
+    {' '}· {t('page.items.imageCredit', locale)} {acnhItemCatalogMeta.imageCredit}
   </p>
 
   <script type="application/json" id="acnh-items-catalog" set:html={catalogJson} />
+  <script type="application/json" id="acnh-items-i18n" set:html={JSON.stringify(itemsI18n)} />
 </div>
 
 <script>

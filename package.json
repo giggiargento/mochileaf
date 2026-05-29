@@ -7,8 +7,11 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "node scripts/ensure-articles-content-schema.mjs && astro sync && astro dev",
-    "build": "node scripts/ensure-articles-content-schema.mjs && astro sync && astro build",
+    "dev": "node scripts/ensure-articles-content-schema.mjs && node scripts/generate-es-pages.mjs && astro sync && astro dev",
+    "build": "node scripts/ensure-articles-content-schema.mjs && node scripts/generate-es-pages.mjs && astro sync && astro build",
+    "i18n:sync": "node scripts/i18n-sync.mjs",
+    "i18n:sync:free": "node scripts/i18n-sync.mjs --free",
+    "i18n:check": "node scripts/i18n-check.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "sync:images": "node scripts/sync-game-images.mjs",
@@ -37,7 +40,7 @@
     "@astrojs/sitemap": "^3.7.2",
     "@phosphor-icons/web": "^2.1.2",
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.3.5",
+    "astro": "^6.4.2",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {

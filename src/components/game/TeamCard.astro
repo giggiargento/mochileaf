@@ -1,5 +1,6 @@
 ---
 import type { Team } from '../../types';
+import { localePath, resolveLocale } from '../../i18n/locale';
 import Badge from '../ui/Badge.astro';
 import { getCharacter } from '../../data/characters';
 
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const { team, gameSlug, index } = Astro.props;
+const locale = resolveLocale(Astro.currentLocale);
 
 const difficultyLabels = {
   easy: 'Relaxed',
@@ -109,7 +111,7 @@ const cycles = roster
           roster.map(({ slot, character }) => (
             <li class="team-comp-slot min-w-0">
               <a
-                href={`/${gameSlug}/characters/${character.slug}`}
+                href={localePath(`/${gameSlug}/characters/${character.slug}`, resolveLocale(Astro.currentLocale))}
                 class="team-comp-slot__link block rounded-[calc(var(--radius-card)-0.35rem)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage-400"
                 data-astro-reload
               >

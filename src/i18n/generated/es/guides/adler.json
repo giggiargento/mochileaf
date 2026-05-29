@@ -1,0 +1,61 @@
+{
+  "buildSummary": "Defensor del caos con una fantasía de guardia tormentosa: apóyate en módulos de defensa y habilidades que mantienen estable la primera fila.",
+  "diskSets": [
+    {
+      "name": "Your Happiness is Priceless (S)",
+      "note": "Un arco defensivo que ayuda a los de primera línea a mantenerse erguidos durante las peleas más largas."
+    },
+    {
+      "name": "Umbrella (A)",
+      "note": "Un arco de tanque resistente para los primeros capítulos mientras persigues conjuntos defensivos de ensueño."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Tank Modules",
+      "note": "Líneas DEF/HP para estabilidad en primera línea."
+    },
+    {
+      "name": "A-tier Tank Modules",
+      "note": "Tiradas de defensa mixtas hasta que aparece un conjunto de tanques premium."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Habilidad",
+      "scales": "Valores de mitigación/escudo y control de primera línea."
+    },
+    {
+      "skill": "Habilidad de apoyo",
+      "scales": "Protección de equipo y utilidad de burla/control."
+    },
+    {
+      "skill": "Último",
+      "scales": "Impacto de ráfaga defensiva y ventanas de supervivencia de embrague."
+    },
+    {
+      "skill": "Ataque básico",
+      "scales": "Daños personales de bajo impacto en tanques."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Puntos de interrupción del tanque para contenido de jefe.",
+      "location": "Rabbit Hole > Simulaciones de crecimiento de personajes",
+      "tip": "Aumenta las unidades DEF temprano si tu equipo tiene un solo disparo en anomalías."
+    },
+    {
+      "name": "Defense skill materials",
+      "purpose": "Escalado de escudo/mitigación.",
+      "location": "Madriguera del conejo > Anomalías en el material de habilidades",
+      "tip": "Mejora las habilidades de mitigación antes que las habilidades de daño en los tanques."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Progresión de línea DEF/HP.",
+      "location": "Investigación de anomalías > Dominios del módulo",
+      "tip": "Enfócate primero en los subestados defensivos y luego en la utilidad."
+    }
+  ]
+}

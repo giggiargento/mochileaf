@@ -1,6 +1,8 @@
 ---
 import type { Game } from '../../types';
 import { gameCardImagePath } from '../../utils/game-images';
+import { localePath, resolveLocale } from '../../i18n/locale';
+import { t } from '../../i18n/messages';
 import Badge from '../ui/Badge.astro';
 import Icon from '../ui/Icon.astro';
 
@@ -9,6 +11,7 @@ interface Props {
 }
 
 const { game } = Astro.props;
+const locale = resolveLocale(Astro.currentLocale);
 const accentVariants = {
   sage: 'sage' as const,
   blossom: 'blossom' as const,
@@ -19,7 +22,8 @@ const accentVariants = {
 
 const cardSrc = gameCardImagePath(game.slug);
 const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
-const hubHref = game.status === 'active' ? `/${game.slug}` : '/games';
+const hubHref =
+  game.status === 'active' ? localePath(`/${game.slug}`, locale) : localePath('/games', locale);
 ---
 
 <a
@@ -64,14 +68,14 @@ const hubHref = game.status === 'active' ? `/${game.slug}` : '/games';
         {game.name}
       </h3>
       <Badge variant={accentVariants[game.accent]}>
-        {game.status === 'coming-soon' ? 'Soon' : 'Hub'}
+        {game.status === 'coming-soon' ? t('gameCard.soon', locale) : t('gameCard.hub', locale)}
       </Badge>
     </div>
     <p class="mt-2 text-sm text-secondary line-clamp-2">{game.tagline}</p>
     {
       game.status === 'active' && (
         <span class="mt-auto inline-flex items-center gap-1.5 pt-4 text-sm font-semibold text-accent">
-          Enter hub
+          {t('gameCard.enterHub', locale)}
           <Icon name="arrow-right" size={16} class="transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       )

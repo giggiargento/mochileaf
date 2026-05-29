@@ -1,0 +1,37 @@
+{
+  "role": "Cachorro de oso presumido",
+  "description": "Cachorro de ojos brillantes con un pulido encanto presumido: sus interiores suaves y su ambiente brillante combinan con la estética isleña de ensueño y disfraces.",
+  "houseStyle": "sala de estar en colores pastel",
+  "houseDescription": "Lindos escenarios en rosa y crema con iluminación suave, creados para recorridos de captura de pantalla de ensueño.",
+  "seoTitle": "Judy - Cachorro de oso presumido",
+  "seoDescription": "Judy, la cachorra presumida de ACNH: ojos brillantes, estilo de habitación elegante y un ambiente de lujo suave para las islas de disfraces.",
+  "acnh": {
+    "appearance": "Cachorro color pastel con ojos morados estrellados: energía de maquillaje brillante y estética de boutique.",
+    "personality": "Cachorro brillante y presumido con gusto de boutique: Judy puede parecer directa sobre la moda, pero sus interiores de ensueño conquistan a la gente.",
+    "house": {
+      "roof": "techo de tejas de madera azul",
+      "siding": "adoquines de color azul claro",
+      "door": "puerta sencilla rosa",
+      "wallpaper": "pared estrellada",
+      "flooring": "Pisos de punto azul",
+      "music": "KK Canción de cuna"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Música",
+      "defaultClothing": "vestido de cuento de hadas (rosa)",
+      "umbrella": "sombrilla blanca con lazos brillantes",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Lindo",
+        "Elegante"
+      ],
+      "favoriteColors": [
+        "Rosa",
+        "Blanco"
+      ]
+    }
+  }
+}

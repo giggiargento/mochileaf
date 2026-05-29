@@ -1,0 +1,37 @@
+{
+  "role": "Ardilla engreída",
+  "description": "Suaves mejillas verde azulado y un pequeño ceño fruncido que de alguna manera se lee como encanto: su guitarra de campamento y su ambiente acogedor y engreído se adaptan a los tranquilos núcleos de la isla.",
+  "houseStyle": "Camping acogedor",
+  "houseDescription": "Centro de mesa tipo tipi con muebles de troncos y un ambiente de fogata: cálido, compacto y muy apto para catálogos.",
+  "seoTitle": "Mariscal - Ardilla engreída",
+  "seoDescription": "Dirige a la engreída ardilla en ACNH: mejillas verde azulado, ambiente musical acogedor y un suave favorito para islas tranquilas.",
+  "acnh": {
+    "appearance": "Ardilla de mejillas verde azulado en crema y lavanda: un pequeño ceño fruncido, energía de campamento lista para tocar la guitarra.",
+    "personality": "Ardilla presumida con un pequeño ceño fruncido y una guitarra: Marshal es educado, un poco coqueto y querido en los pacíficos núcleos isleños.",
+    "house": {
+      "roof": "techo de piedra gris claro",
+      "siding": "exterior de estuco blanco",
+      "door": "puerta común gris",
+      "wallpaper": "Pared azul de flores delicadas",
+      "flooring": "Pisos de madera modernos",
+      "music": "KK jefea"
+    },
+    "villagerInfo": {
+      "gender": "Masculino",
+      "hobby": "Música",
+      "defaultClothing": "chaleco acolchado (azul marino)",
+      "umbrella": "paraguas con logotipo",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Elegante",
+        "Fresco"
+      ],
+      "favoriteColors": [
+        "Agua",
+        "Azul"
+      ]
+    }
+  }
+}

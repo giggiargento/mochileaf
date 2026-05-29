@@ -3,8 +3,10 @@ import BaseLayout from './BaseLayout.astro';
 import Sidebar from '../components/layout/Sidebar.astro';
 import MobileNav from '../components/layout/MobileNav.astro';
 import Footer from '../components/layout/Footer.astro';
-import ThemeToggle from '../components/ui/ThemeToggle.astro';
-import { globalNav } from '../utils/navigation';
+import LocaleToolbar from '../components/ui/LocaleToolbar.astro';
+import { getGlobalNav } from '../utils/navigation';
+import type { Locale } from '../i18n/config';
+import { t } from '../i18n/messages';
 
 interface Props {
   title: string;
@@ -12,22 +14,24 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const locale = (Astro.currentLocale ?? 'en') as Locale;
+const globalNav = getGlobalNav(locale);
 ---
 
 <BaseLayout title={title} description={description} ambient="home">
-  <Sidebar items={globalNav} persistKey="mochi-sidebar-home">
+  <Sidebar items={globalNav} persistKey={`mochi-sidebar-home-${locale}`}>
     <div slot="footer" class="space-y-3">
-      <ThemeToggle />
-      <p class="text-xs text-muted">Soft fantasy · Peaceful play</p>
+      <LocaleToolbar />
+      <p class="text-xs text-muted">{t('footer.motto', locale)}</p>
     </div>
   </Sidebar>
 
-  <MobileNav items={globalNav} title="Menu" />
+  <MobileNav items={globalNav} />
 
   <div class="lg:pl-64 bg-page min-h-screen transition-colors duration-300">
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer locale={locale} />
   </div>
 </BaseLayout>

@@ -1,5 +1,7 @@
 ---
 import type { Character } from '../../types';
+import { localePath, resolveLocale } from '../../i18n/locale';
+import { t } from '../../i18n/messages';
 import Badge from '../ui/Badge.astro';
 import Icon from '../ui/Icon.astro';
 
@@ -9,6 +11,15 @@ interface Props {
 }
 
 const { character, gameSlug } = Astro.props;
+const locale = resolveLocale(Astro.currentLocale);
+
+function personalityLabel(value: string | undefined): string | undefined {
+  if (!value) return undefined;
+  const key = `acnh.personality.${value.replace(/\s+/g, '')}`;
+  const translated = t(key, locale);
+  return translated !== key ? translated : value;
+}
+const characterHref = localePath(`/${gameSlug}/characters/${character.slug}`, locale);
 
 const tierVariants: Record<string, 'sage' | 'mist' | 'lavender' | 'default'> = {
   S: 'sage',
@@ -17,7 +28,7 @@ const tierVariants: Record<string, 'sage' | 'mist' | 'lavender' | 'default'> = {
   C: 'default',
 };
 
-const cornerLabel = character.tier ?? character.personality;
+const cornerLabel = character.tier ?? personalityLabel(character.personality);
 const cornerVariant = character.tier
   ? tierVariants[character.tier]
   : 'mist';
@@ -41,8 +52,8 @@ const accentLine =
 const sublineParts = personalityInCorner
   ? []
   : [
-      ...(character.personality && character.personality !== cornerLabel
-        ? [character.personality]
+      ...(character.personality && personalityLabel(character.personality) !== cornerLabel
+        ? [personalityLabel(character.personality)!]
         : []),
       ...(character.species ? [character.species] : []),
       ...(character.element ? [character.element] : []),
@@ -52,7 +63,7 @@ const portraitAlt = `${character.name} — ${character.role}`;
 ---
 
 <a
-  href={`/${gameSlug}/characters/${character.slug}`}
+  href={characterHref}
   class="cozy-card group relative block p-5 sm:p-6"
   data-astro-reload
 >

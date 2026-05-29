@@ -1,0 +1,37 @@
+{
+  "role": "cabra perezosa",
+  "description": "Chistes sobre tarta de arándanos y energía para la siesta. Uno de los aldeanos más relajados para disfrutar del ambiente tranquilo de la isla.",
+  "houseStyle": "heladería",
+  "houseDescription": "Muebles de pastelería en colores pastel con una suave paleta de fresas: delicados, redondos y muy acogedores.",
+  "seoTitle": "Sherb - Cabra perezosa",
+  "seoDescription": "Chistes sobre tarta de arándanos y energía para la siesta. Uno de los aldeanos más relajados para disfrutar del ambiente tranquilo de la isla.",
+  "acnh": {
+    "appearance": "Cabra perezosa azul con colores de cabaña: ojos redondos y suavidad de pueblo invernal.",
+    "personality": "Cabra perezosa con aires de cabaña de invierno: Sherb es relajado, le gustan los bocadillos y es perfecto para los jugadores que buscan un humor amable.",
+    "house": {
+      "roof": "techo de madera blanca",
+      "siding": "exterior de estuco azul menta",
+      "door": "puerta rústica azul",
+      "wallpaper": "Muro marroquí morado",
+      "flooring": "Pisos morados simples",
+      "music": "Hipno K.K."
+    },
+    "villagerInfo": {
+      "gender": "Masculino",
+      "hobby": "Naturaleza",
+      "defaultClothing": "suéter nevado (Gris)",
+      "umbrella": "paraguas de vinilo",
+      "bag": "estampado vegetal",
+      "food": "donut de chocolate",
+      "drink": "Lata de té o taza amarilla.",
+      "favoriteStyles": [
+        "Simple",
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Gris",
+        "Azul"
+      ]
+    }
+  }
+}

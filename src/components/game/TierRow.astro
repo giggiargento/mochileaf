@@ -1,5 +1,6 @@
 ---
 import type { TierEntry } from '../../types';
+import { localePath, resolveLocale } from '../../i18n/locale';
 
 interface Props {
   entry: TierEntry;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const { entry, gameSlug } = Astro.props;
+const locale = resolveLocale(Astro.currentLocale);
 
 const tierColors: Record<TierEntry['tier'], string> = {
   S: 'bg-sage-200 text-sage-600 dark:bg-sage-600/30 dark:text-sage-200',
@@ -30,7 +32,9 @@ const tierColors: Record<TierEntry['tier'], string> = {
     {
       entry.members.map((member) => {
         const href =
-          gameSlug && member.slug ? `/${gameSlug}/characters/${member.slug}` : undefined;
+          gameSlug && member.slug
+            ? localePath(`/${gameSlug}/characters/${member.slug}`, locale)
+            : undefined;
         return href ? (
           <a
             href={href}

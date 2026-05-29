@@ -2,19 +2,18 @@
 import GlobalLayout from '../../layouts/GlobalLayout.astro';
 import PageHeader from '../../components/game/PageHeader.astro';
 import GameCard from '../../components/home/GameCard.astro';
-import { routableGames } from '../../lib/content/registry';
+import { getAllGames } from '../../data/games';
+import { usePageLocale } from '../../lib/i18n/use-page-locale';
 
-const activeGames = routableGames;
+const { locale, tr } = usePageLocale(Astro.currentLocale);
+const activeGames = getAllGames(locale).filter((g) => g.status === 'active');
 ---
 
-<GlobalLayout
-  title="Games"
-  description="Explore cozy game hubs on Mochileaf — guides, builds, characters, and gentle stories for every world."
->
+<GlobalLayout title={tr('games.title')} description={tr('games.meta')}>
   <PageHeader
-    badge="All worlds"
-    title="Games"
-    description="Each game has its own hub with characters, builds, tier lists, guides, and news."
+    badge={tr('games.badge')}
+    title={tr('games.title')}
+    description={tr('games.description')}
   />
 
   <div class="page-container-below-header">

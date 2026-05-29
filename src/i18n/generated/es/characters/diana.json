@@ -1,0 +1,37 @@
+{
+  "role": "ciervo presumido",
+  "description": "Graciosa y un poco reservada. Excelente aldeano ancla para islas sofisticadas de bosque o spa.",
+  "houseStyle": "Cabina elegante",
+  "houseDescription": "Piezas clásicas y elegantes con una fresca paleta plateada y blanca, pulidas sin sensación de frío.",
+  "seoTitle": "Diana - Ciervo presumido",
+  "seoDescription": "Graciosa y un poco reservada. Excelente aldeano ancla para islas sofisticadas de bosque o spa.",
+  "acnh": {
+    "appearance": "Ciervo blanco con detalles en rosa: estilo elegante y presumido desde las pezuñas hasta la cinta del pelo.",
+    "personality": "Un ciervo presumido y pulido que critica la moda y luego se calienta: Diana aprecia la conversación madura y los temas elegantes en las habitaciones.",
+    "house": {
+      "roof": "techo de paja gris claro",
+      "siding": "adoquines blancos",
+      "door": "puerta de parrilla de hierro blanco",
+      "wallpaper": "Pared de azulejos botánicos blancos",
+      "flooring": "Azulejo de piedra",
+      "music": "Despedida"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Educación",
+      "defaultClothing": "vestido misterioso (púrpura)",
+      "umbrella": "paraguas negro elegante",
+      "bag": "estampado vegetal",
+      "food": "donut de chocolate",
+      "drink": "Lata de té o taza amarilla.",
+      "favoriteStyles": [
+        "Elegante",
+        "Espléndido"
+      ],
+      "favoriteColors": [
+        "Púrpura",
+        "Rosa"
+      ]
+    }
+  }
+}

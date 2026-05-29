@@ -11,24 +11,24 @@ import AdPlaceholder from '../components/ui/AdPlaceholder.astro';
 import { getFeaturedGames } from '../data/games';
 import { getFeaturedArticles, getTrendingArticles } from '../data/articles';
 import { updates } from '../data/updates';
+import { localePath, resolveLocale } from '../i18n/locale';
+import { t } from '../i18n/messages';
 
-const featuredGames = getFeaturedGames();
-const featuredArticles = await getFeaturedArticles();
-const trendingArticles = (await getTrendingArticles()).slice(0, 2);
+const locale = resolveLocale(Astro.currentLocale);
+const featuredGames = getFeaturedGames(locale);
+const featuredArticles = await getFeaturedArticles(locale);
+const trendingArticles = (await getTrendingArticles(locale)).slice(0, 2);
 ---
 
-<GlobalLayout
-  title="Mochileaf"
-  description="A warm cozy gaming platform — game hubs, guides, and gentle stories for Animal Crossing, Stardew Valley, NTE, and more."
->
+<GlobalLayout title={t('home.meta.title', locale)} description={t('home.meta.description', locale)}>
   <Hero />
 
   <section class="page-container py-16">
     <SectionHeader
-      title="Featured games"
-      subtitle="Each world has its own cozy content hub — guides, builds, and stories."
-      href="/games"
-      linkLabel="All games"
+      title={t('home.section.featuredGames', locale)}
+      subtitle={t('home.section.featuredGamesSub', locale)}
+      href={localePath('/games', locale)}
+      linkLabel={t('home.section.allGames', locale)}
     />
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {featuredGames.map((game) => <GameCard game={game} />)}
@@ -43,8 +43,8 @@ const trendingArticles = (await getTrendingArticles()).slice(0, 2);
     <div class="grid gap-10 lg:grid-cols-3 lg:items-stretch">
       <div class="lg:col-span-2 flex flex-col">
         <SectionHeader
-          title="Latest updates"
-          subtitle="Patch notes, events, and gentle announcements."
+          title={t('home.section.latestUpdates', locale)}
+          subtitle={t('home.section.latestUpdatesSub', locale)}
         />
         <ul class="panel-soft flex-1 divide-y divide-[var(--border-default)] px-6">
           {updates.slice(0, 5).map((update) => <UpdateItem update={update} />)}
@@ -52,10 +52,10 @@ const trendingArticles = (await getTrendingArticles()).slice(0, 2);
       </div>
       <div class="flex min-w-0 flex-col lg:min-h-0">
         <SectionHeader
-          title="Trending"
-          subtitle="What the community is reading."
-          href="/articles"
-          linkLabel="All articles"
+          title={t('home.section.trending', locale)}
+          subtitle={t('home.section.trendingSub', locale)}
+          href={localePath('/articles', locale)}
+          linkLabel={t('home.section.allArticles', locale)}
         />
         <div class="trending-stack min-w-0">
           {trendingArticles.map((article) => (
@@ -67,18 +67,18 @@ const trendingArticles = (await getTrendingArticles()).slice(0, 2);
   </section>
 
   <PromoBanner
-    title="Slow down. Play softly."
-    description="Mochileaf celebrates games that breathe — no rush, no noise. Just warm light and thoughtful guides."
-    ctaLabel="Our philosophy"
-    ctaHref="/about"
+    title={t('home.promo.title', locale)}
+    description={t('home.promo.description', locale)}
+    ctaLabel={t('home.promo.cta', locale)}
+    ctaHref={localePath('/about', locale)}
   />
 
   <section class="page-container py-16">
     <SectionHeader
-      title="Featured articles"
-      subtitle="Editorial guides and cozy stories from across our hubs."
-      href="/articles"
-      linkLabel="All articles"
+      title={t('home.section.featuredArticles', locale)}
+      subtitle={t('home.section.featuredArticlesSub', locale)}
+      href={localePath('/articles', locale)}
+      linkLabel={t('home.section.allArticles', locale)}
     />
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {featuredArticles.map((article) => <ArticleCard article={article} />)}

@@ -1,0 +1,36 @@
+{
+  "role": "pulpo normal",
+  "description": "Uno de los pocos aldeanos pulpos. Líneas de voz dulces y un house que aparece en las giras.",
+  "houseStyle": "Dulces del océano",
+  "houseDescription": "Lindo conjunto en rosa y verde azulado con la energía de un reproductor de música: burbujeante, redondo y listo para la cámara.",
+  "seoTitle": "Marina — Pulpo normal",
+  "seoDescription": "Uno de los pocos aldeanos pulpos. Líneas de voz dulces y un house que aparece en las giras.",
+  "acnh": {
+    "appearance": "Pulpo rosa con un lazo ordenado: ambiente suave y normal y encanto de especie rara.",
+    "personality": "Pulpo normal y espacial que sueña despierto a mitad de una frase. Marina es amable, un poco mística y una de las pocas vecinas pulpos de la serie.",
+    "house": {
+      "roof": "techo de paja marrón",
+      "siding": "adoquines beige",
+      "door": "puerta sencilla rosa",
+      "wallpaper": "Muro de fresa y chocolate",
+      "flooring": "Suelos de chocolate y bayas",
+      "music": "Conmovedor K.K."
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Música",
+      "defaultClothing": "suéter de ensueño (rosa)",
+      "umbrella": "paraguas de caramelo",
+      "bag": "estampado vegetal",
+      "food": "donut de chocolate",
+      "drink": "Lata de té o taza amarilla.",
+      "favoriteStyles": [
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Rosa",
+        "Rojo"
+      ]
+    }
+  }
+}

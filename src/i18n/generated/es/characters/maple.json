@@ -1,0 +1,37 @@
+{
+  "role": "Cachorro de oso normal",
+  "description": "Cachorro normal y gentil que se adapta a las temporadas de cabañas y huertos de calabazas sin esforzarse.",
+  "houseStyle": "Bosque cálido",
+  "houseDescription": "Muebles de bloques de madera y un edredón acolchado: sencillo, suave y muy otoñal.",
+  "seoTitle": "Arce - Cachorro de oso normal",
+  "seoDescription": "Cachorro normal y gentil que se adapta a las temporadas de cabañas y huertos de calabazas sin esforzarse.",
+  "acnh": {
+    "appearance": "Cachorro marrón con hocico color crema y lazo rojo: otoño de calabaza en forma de aldeano.",
+    "personality": "Cachorro normal y tranquilo al que le gusta la comodidad y el orden. Maple se preocupa por el desorden como lo haría un amigo y luego te invita a entrar de todos modos.",
+    "house": {
+      "roof": "techo de madera marrón",
+      "siding": "exterior de arcilla beige",
+      "door": "puerta con ventana",
+      "wallpaper": "Muro floreciente verde",
+      "flooring": "Pisos con nudos de madera",
+      "music": "vida forestal"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Educación",
+      "defaultClothing": "suéter de árbol",
+      "umbrella": "paraguas de caramelo",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Simple",
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "Verde"
+      ]
+    }
+  }
+}

@@ -1,5 +1,7 @@
 ---
 import type { Character } from '../../../types';
+import { localePath, resolveLocale } from '../../../i18n/locale';
+import { t } from '../../../i18n/messages';
 import Badge from '../../ui/Badge.astro';
 
 interface Props {
@@ -8,10 +10,11 @@ interface Props {
 }
 
 const { villager, gameSlug } = Astro.props;
+const locale = resolveLocale(Astro.currentLocale);
 ---
 
 <a
-  href={`/${gameSlug}/characters/${villager.slug}#house`}
+  href={`${localePath(`/${gameSlug}/characters/${villager.slug}`, locale)}#house`}
   class="cozy-card group flex flex-col overflow-hidden sm:flex-row"
   data-astro-reload
 >
@@ -44,6 +47,6 @@ const { villager, gameSlug } = Astro.props;
     {villager.houseDescription && (
       <p class="mt-2 text-sm text-secondary line-clamp-2">{villager.houseDescription}</p>
     )}
-    <span class="mt-auto pt-3 text-xs font-semibold text-accent">See interior notes →</span>
+    <span class="mt-auto pt-3 text-xs font-semibold text-accent">{t('page.houses.interiorCta', locale)}</span>
   </div>
 </a>

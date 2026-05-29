@@ -3,7 +3,7 @@ import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import Badge from '../../../components/ui/Badge.astro';
 import Button from '../../../components/ui/Button.astro';
 import Icon from '../../../components/ui/Icon.astro';
-import { getCharacter } from '../../../data/characters';
+import { getCharacterBySlug } from '../../../data/characters';
 import { routableCharacters, routableGames } from '../../../lib/content/registry';
 import { getHubCopy } from '../../../utils/game-hub';
 import DecorInspirationGallery from '../../../components/game/acnh/DecorInspirationGallery.astro';
@@ -11,9 +11,11 @@ import VillagerDetailSections from '../../../components/game/acnh/VillagerDetail
 import { getAcnhDecorForCharacter } from '../../../data/character-decor-acnh';
 import { villagerPortrait } from '../../../data/characters-acnh';
 import { acnhPinterestBoards } from '../../../data/pinterest-boards-acnh';
-import { getAcnhVillagerDetails } from '../../../utils/acnh-villager-details';
 import { getNteCharacterGuide } from '../../../data/nte-character-guides';
 import { resolveContentSeo } from '../../../lib/content/seo';
+import { localePath, resolveLocale } from '../../../i18n/locale';
+import { localizeCharacterSeo } from '../../../lib/i18n/content';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return routableCharacters.map((character) => {
@@ -25,18 +27,32 @@ export function getStaticPaths() {
     });
 }
 
-const { game, character } = Astro.props;
-const hubCopy = getHubCopy(game);
+const { game, character: rawCharacter } = Astro.props;
+const locale = resolveLocale(Astro.currentLocale);
+const character = getCharacterBySlug(rawCharacter.slug, locale) ?? rawCharacter;
+const hubCopy = getHubCopy(game, locale);
+const charactersListHref = localePath(`/${game.slug}/characters`, locale);
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
 const isNte = game.slug === 'neverness-to-everness';
-const acnhDetails = isAcnh ? getAcnhVillagerDetails(character.slug) : undefined;
-const nteGuide = isNte ? getNteCharacterGuide(character) : undefined;
+const acnhDetails = isAcnh ? character.acnh : undefined;
+const nteGuide = isNte ? getNteCharacterGuide(character, locale) : undefined;
 const portraitAlt = `${character.name} — ${character.role} in ${game.name}`;
 const listLabel = hubCopy.charactersTitle.toLowerCase();
-const characterSeo = resolveContentSeo(character.seo, {
-  title: character.name,
-  description: character.description,
-});
+const characterSeo = localizeCharacterSeo(
+  resolveContentSeo(character.seo, {
+    title: character.name,
+    description: character.description,
+  }),
+  character.slug,
+  locale,
+);
+
+function personalityLabel(value: string | undefined): string | undefined {
+  if (!value) return undefined;
+  const key = `acnh.personality.${value.replace(/\s+/g, '')}`;
+  const translated = t(key, locale);
+  return translated !== key ? translated : value;
+}
 const characterDecor = isAcnh ? getAcnhDecorForCharacter(character.slug) : [];
 const characterPinterestBoard =
   isAcnh && character.slug in acnhPinterestBoards
@@ -56,46 +72,49 @@ const nteElementIconPath: Record<string, string> = {
 const villagerInfoRows =
   acnhDetails?.villagerInfo
     ? ([
-        { label: 'Birthday', value: acnhDetails.villagerInfo.birthday },
-        { label: 'Star sign', value: acnhDetails.villagerInfo.starSign },
-        { label: 'Personality', value: acnhDetails.villagerInfo.personality },
-        { label: 'Subtype', value: acnhDetails.villagerInfo.subPersonality },
+        { label: t('character.field.birthday', locale), value: acnhDetails.villagerInfo.birthday },
+        { label: t('character.field.starSign', locale), value: acnhDetails.villagerInfo.starSign },
         {
-          label: 'Catchphrase',
+          label: t('character.field.personality', locale),
+          value: personalityLabel(acnhDetails.villagerInfo.personality),
+        },
+        { label: t('character.field.subPersonality', locale), value: acnhDetails.villagerInfo.subPersonality },
+        {
+          label: t('character.field.catchphrase', locale),
           value: acnhDetails.villagerInfo.catchphrase
             ? `“${acnhDetails.villagerInfo.catchphrase}”`
             : undefined,
         },
         {
-          label: 'Picture quote',
+          label: t('character.field.quote', locale),
           value: acnhDetails.villagerInfo.quote ? `“${acnhDetails.villagerInfo.quote}”` : undefined,
         },
-        { label: 'Gender', value: acnhDetails.villagerInfo.gender },
-        { label: 'Default clothing', value: acnhDetails.villagerInfo.defaultClothing },
-        { label: 'Hobby', value: acnhDetails.villagerInfo.hobby },
+        { label: t('character.field.gender', locale), value: acnhDetails.villagerInfo.gender },
+        { label: t('character.field.clothing', locale), value: acnhDetails.villagerInfo.defaultClothing },
+        { label: t('character.field.hobby', locale), value: acnhDetails.villagerInfo.hobby },
         {
-          label: 'Favorite styles',
+          label: t('character.field.styles', locale),
           value: acnhDetails.villagerInfo.favoriteStyles?.length
             ? acnhDetails.villagerInfo.favoriteStyles.join(', ')
             : undefined,
         },
         {
-          label: 'Favorite colors',
+          label: t('character.field.colors', locale),
           value: acnhDetails.villagerInfo.favoriteColors?.length
             ? acnhDetails.villagerInfo.favoriteColors.join(', ')
             : undefined,
         },
-        { label: 'Bag', value: acnhDetails.villagerInfo.bag },
-        { label: 'Snack', value: acnhDetails.villagerInfo.food },
-        { label: 'Drink', value: acnhDetails.villagerInfo.drink },
+        { label: t('character.field.bag', locale), value: acnhDetails.villagerInfo.bag },
+        { label: t('character.field.snack', locale), value: acnhDetails.villagerInfo.food },
+        { label: t('character.field.drink', locale), value: acnhDetails.villagerInfo.drink },
       ] as { label: string; value?: string }[]).filter((row) => row.value)
     : [];
 ---
 
 <GameHubLayout game={game} title={characterSeo.title} description={characterSeo.description}>
   <div class="page-container-below-header">
-    <a href={`/${game.slug}/characters`} class="cozy-link text-sm font-medium">
-      ← All {listLabel}
+    <a href={charactersListHref} class="cozy-link text-sm font-medium" data-astro-reload>
+      ← {t('character.backAll', locale, { list: listLabel })}
     </a>
     <div class="character-detail-grid mt-8">
       <div class="min-w-0 space-y-4">
@@ -139,8 +158,12 @@ const villagerInfoRows =
         <div class="character-detail-intro">
           <div class="mb-4 flex flex-wrap gap-2">
             {character.rarity && <Badge variant="blossom">{character.rarity}-rank</Badge>}
-            {character.tier && <Badge variant="sage">Tier {character.tier}</Badge>}
-            {character.personality && <Badge variant="mist">{character.personality}</Badge>}
+            {character.tier && (
+              <Badge variant="sage">{t('character.tier', locale, { tier: character.tier })}</Badge>
+            )}
+            {character.personality && (
+              <Badge variant="mist">{personalityLabel(character.personality)}</Badge>
+            )}
             {character.species && <Badge variant="lavender">{character.species}</Badge>}
             {character.element && <Badge variant="mist">{character.element}</Badge>}
           </div>
@@ -166,17 +189,16 @@ const villagerInfoRows =
           {
             isAcnh && (
               <div class="mt-8">
-                <h2 class="font-display text-xl text-primary">Explore this villager</h2>
+                <h2 class="font-display text-xl text-primary">{t('character.explore.title', locale)}</h2>
                 <p class="mt-2 text-base leading-relaxed text-secondary">
-                  Jump into house details and decor inspiration — perfect for planning themes and cozy
-                  neighborhoods.
+                  {t('character.explore.description', locale)}
                 </p>
                 <div class="mt-4 flex flex-wrap gap-2">
                   <a
                     href="#house"
                     class="inline-flex items-center justify-center rounded-[var(--radius-pill)] bg-sage-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition-colors hover:bg-sage-600"
                   >
-                    House
+                    {t('character.explore.house', locale)}
                   </a>
                   {
                     characterDecor.length > 0 && (
@@ -184,7 +206,7 @@ const villagerInfoRows =
                         href="#decor"
                         class="inline-flex items-center justify-center rounded-[var(--radius-pill)] border border-default bg-page px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-sage-300 hover:text-accent"
                       >
-                        Decor inspiration
+                        {t('character.explore.decor', locale)}
                       </a>
                     )
                   }
@@ -195,13 +217,13 @@ const villagerInfoRows =
 
           {
             acnhDetails && (acnhDetails.appearance || acnhDetails.personality) && (
-              <section class="mt-8" aria-label="Characteristics">
-                <h2 class="section-title mb-4">Characteristics</h2>
+              <section class="mt-8" aria-label={t('character.characteristics', locale)}>
+                <h2 class="section-title mb-4">{t('character.characteristics', locale)}</h2>
                 <div class="prose-cozy max-w-3xl space-y-4">
                   {acnhDetails.appearance && (
                     <div>
                       <h3 class="text-sm font-semibold uppercase tracking-wide text-muted">
-                        Appearance
+                        {t('character.appearance', locale)}
                       </h3>
                       <p class="mt-2">{acnhDetails.appearance}</p>
                     </div>
@@ -209,7 +231,7 @@ const villagerInfoRows =
                   {acnhDetails.personality && (
                     <div>
                       <h3 class="text-sm font-semibold uppercase tracking-wide text-muted">
-                        Personality
+                        {t('character.personalitySection', locale)}
                       </h3>
                       <p class="mt-2">{acnhDetails.personality}</p>
                     </div>
@@ -224,15 +246,15 @@ const villagerInfoRows =
 
     {
       nteGuide && (
-        <section class="mt-16 space-y-8" aria-label="Build and progression">
+        <section class="mt-16 space-y-8" aria-label={t('character.buildGuide', locale)}>
           <div>
-            <h2 class="section-title mb-2">Build and progression guide</h2>
+            <h2 class="section-title mb-2">{t('character.buildGuide', locale)}</h2>
             <p class="text-sm text-secondary">{nteGuide.buildSummary}</p>
           </div>
 
           <div class="grid gap-6 lg:grid-cols-2">
             <article class="cozy-card p-6">
-              <h3 class="font-display text-xl text-primary">Recommended Disks</h3>
+              <h3 class="font-display text-xl text-primary">{t('character.recommendedDisks', locale)}</h3>
               <ul class="mt-4 space-y-3">
                 {nteGuide.diskSets.map((disk) => (
                   <li class="flex items-center gap-3 rounded-xl border border-default bg-card p-3">
@@ -257,7 +279,7 @@ const villagerInfoRows =
             </article>
 
             <article class="cozy-card p-6">
-              <h3 class="font-display text-xl text-primary">Recommended Modules</h3>
+              <h3 class="font-display text-xl text-primary">{t('character.recommendedModules', locale)}</h3>
               <ul class="mt-4 space-y-3">
                 {nteGuide.modules.map((module) => (
                   <li class="flex items-center gap-3 rounded-xl border border-default bg-card p-3">
@@ -284,7 +306,7 @@ const villagerInfoRows =
 
           <div class="grid gap-6 lg:grid-cols-2">
             <article class="cozy-card p-6">
-              <h3 class="font-display text-xl text-primary">Esper skill priority</h3>
+              <h3 class="font-display text-xl text-primary">{t('character.skillPriority', locale)}</h3>
               <ol class="mt-4 space-y-2">
                 {nteGuide.skillPriority.map((skill, i) => (
                   <li class="flex min-h-[80px] flex-col justify-center rounded-xl border border-default bg-card p-3">
@@ -301,7 +323,7 @@ const villagerInfoRows =
             </article>
 
             <article class="cozy-card p-6">
-              <h3 class="font-display text-xl text-primary">What to farm first</h3>
+              <h3 class="font-display text-xl text-primary">{t('character.farming', locale)}</h3>
               <ul class="mt-4 space-y-3">
                 {nteGuide.farming.map((item) => (
                   <li class="rounded-xl border border-default bg-card p-3">
@@ -311,12 +333,12 @@ const villagerInfoRows =
                     </p>
                     <p class="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-accent">
                       <Icon name="map-pin" size={12} />
-                      <span>Where: {item.location}</span>
+                      <span>{t('character.where', locale, { location: item.location })}</span>
                     </p>
                     {item.tip && (
                       <p class="mt-1 inline-flex items-start gap-1.5 text-xs text-muted">
                         <Icon name="lightbulb" size={12} class="mt-0.5" />
-                        <span>Tip: {item.tip}</span>
+                        <span>{t('character.tip', locale, { tip: item.tip })}</span>
                       </p>
                     )}
                   </li>
@@ -328,16 +350,18 @@ const villagerInfoRows =
       )
     }
 
-    {acnhDetails && <VillagerDetailSections character={character} details={acnhDetails} />}
+    {acnhDetails && (
+      <VillagerDetailSections character={character} details={acnhDetails} locale={locale} />
+    )}
 
     {
       characterDecor.length > 0 && (
         <section class="mt-16" id="decor">
           <h2 class="font-display text-2xl text-primary">
-            Decor inspiration for {character.name}
+            {t('character.decorTitle', locale, { name: character.name })}
           </h2>
         <p class="mt-2 max-w-2xl text-sm text-secondary">
-          Moodboard pins curated for this villager — tap a photo for a preview, then open the pin on Pinterest if you like it.
+          {t('character.decorDescription', locale)}
         </p>
         <div class="mt-8">
           <DecorInspirationGallery items={characterDecor} emptyBoardKey={character.slug in acnhPinterestBoards ? (character.slug as keyof typeof acnhPinterestBoards) : 'homes'} />
@@ -346,7 +370,7 @@ const villagerInfoRows =
           characterPinterestBoard && (
             <div class="mt-10 flex flex-col items-center gap-3 text-center">
               <p class="max-w-md text-sm text-muted">
-                Showing {characterDecor.length} ideas here — the full moodboard has more on Pinterest.
+                {t('character.decorMore', locale, { count: String(characterDecor.length) })}
               </p>
               <Button
                 href={characterPinterestBoard}
@@ -356,7 +380,7 @@ const villagerInfoRows =
                 rel="noopener noreferrer"
               >
                 <Icon name="arrow-square-out" size={18} />
-                See more on Pinterest
+                {t('character.pinterestCta', locale)}
               </Button>
             </div>
           )

@@ -4,6 +4,9 @@ import Logo from './Logo.astro';
 import NavLinks from './NavLinks.astro';
 import Icon from '../ui/Icon.astro';
 import { normalizeNavPath } from '../../utils/navigation';
+import { pathForLocale, stripLocalePrefix } from '../../i18n/routing';
+import { t } from '../../i18n/messages';
+import type { Locale } from '../../i18n/config';
 import { hasBrandLogotipo, hasBrandIsologo } from '../../utils/brand';
 
 const hasBrandHeader = hasBrandLogotipo || hasBrandIsologo;
@@ -22,11 +25,13 @@ const {
   title,
   items,
   backHref = '/',
-  backLabel = 'Back to home',
+  backLabel,
   persistKey,
 } = Astro.props;
 
-const currentPath = normalizeNavPath(Astro.url.pathname);
+const locale = (Astro.currentLocale ?? 'en') as Locale;
+const resolvedBackLabel = backLabel ?? t('nav.backHome', locale);
+const currentPath = stripLocalePrefix(normalizeNavPath(Astro.url.pathname));
 const backPath = normalizeNavPath(backHref);
 const showBackLink = backPath !== currentPath;
 ---
@@ -39,14 +44,14 @@ const showBackLink = backPath !== currentPath;
 >
   <div class="flex h-full min-w-0 flex-col p-6">
     <div class="mb-8 min-w-0">
-      <Logo variant="wordmark" fullWidth />
+      <Logo variant="wordmark" fullWidth href={pathForLocale('/', locale)} />
       {showBackLink && (
         <a
           href={backHref}
           class="mt-5 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent"
         >
           <Icon name="arrow-left" size={16} />
-          {backLabel}
+          {resolvedBackLabel}
         </a>
       )}
       {

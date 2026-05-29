@@ -5,22 +5,22 @@ import CreatorCard from '../../components/creators/CreatorCard.astro';
 import Icon from '../../components/ui/Icon.astro';
 import { BEACONS_PROFILE } from '../../utils/beacons';
 import { cozyCreators } from '../../data/cozy-creators';
+import { usePageLocale } from '../../lib/i18n/use-page-locale';
+
+const { tr } = usePageLocale(Astro.currentLocale);
 ---
 
-<GlobalLayout
-  title="Cozy Creators"
-  description="Discover cozy gaming creators we love — link in bio pages, channels, and gentle communities to explore."
->
+<GlobalLayout title={tr('cozyCreators.title')} description={tr('cozyCreators.meta')}>
   <PageHeader
-    badge="Community"
-    title="Cozy Creators"
-    description="Friends of Mochileaf who share slow, beautiful play. Visit their pages, say hi."
+    badge={tr('cozyCreators.badge')}
+    title={tr('cozyCreators.title')}
+    description={tr('cozyCreators.description')}
   />
 
   <div class="page-container-below-header space-y-14">
     {
       cozyCreators.length > 0 && (
-        <section aria-label="Cozy creators">
+        <section aria-label={tr('cozyCreators.title')}>
           <div class="flex flex-col gap-4">
             {cozyCreators.map((creator) => (
               <CreatorCard creator={creator} />
@@ -32,9 +32,7 @@ import { cozyCreators } from '../../data/cozy-creators';
 
     {
       cozyCreators.length === 0 && (
-        <p class="text-secondary text-center max-w-lg mx-auto">
-          We are lining up our first cozy collaborators — check back soon.
-        </p>
+        <p class="text-secondary text-center max-w-lg mx-auto">{tr('cozyCreators.empty')}</p>
       )
     }
 
@@ -49,11 +47,10 @@ import { cozyCreators } from '../../data/cozy-creators';
         <Icon name="heart" size={26} weight="regular" />
       </div>
       <h2 id="collab-heading" class="font-display text-xl text-primary md:text-2xl">
-        Want to join Cozy Creators?
+        {tr('cozyCreators.collabTitle')}
       </h2>
       <p class="mt-3 text-sm leading-relaxed text-secondary">
-        If you make gentle gaming content and want a spot on this page, reach out — we link to your
-        Beacons, channel, or site so Mochileaf visitors can discover you.
+        {tr('cozyCreators.collabBody')}
       </p>
       <a
         href={BEACONS_PROFILE}
@@ -61,7 +58,7 @@ import { cozyCreators } from '../../data/cozy-creators';
         rel="noopener noreferrer"
         class="mt-6 inline-flex items-center justify-center gap-2 rounded-[var(--radius-pill)] border border-default bg-page px-6 py-3 text-sm font-semibold text-primary transition-all duration-300 hover:border-sage-300 hover:text-accent"
       >
-        Contact via Beacons
+        {tr('cozyCreators.collabCta')}
         <Icon name="arrow-square-out" size={16} />
       </a>
     </section>

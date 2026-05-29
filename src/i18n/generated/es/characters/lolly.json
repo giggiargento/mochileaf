@@ -1,0 +1,36 @@
+{
+  "role": "gato normal",
+  "description": "Ambiente cálido de galletas y libros. Un favorito constante para barrios tranquilos e higiénicos.",
+  "houseStyle": "Rincón del libro",
+  "houseDescription": "Estanterías de madera y un cálido rincón de lectura: cafetería biblioteca en casa.",
+  "seoTitle": "Lolly - Gato normal",
+  "seoDescription": "Ambiente cálido de galletas y libros. Un favorito constante para barrios tranquilos e higiénicos.",
+  "acnh": {
+    "appearance": "Atigrado gris azulado con cara redonda: un gato normal y acogedor que parece estar en casa.",
+    "personality": "Dulce gato normal con un tono acogedor y maternal: Lolly perdona las visitas desordenadas y hace que los paseos por el vecindario se sientan hogareños.",
+    "house": {
+      "roof": "techo de pizarra turquesa",
+      "siding": "exterior de estuco marrón claro",
+      "door": "puerta con ventana blanca",
+      "wallpaper": "Pared de madera moderna",
+      "flooring": "Pisos de vinilo verde",
+      "music": "vida forestal"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Música",
+      "defaultClothing": "suéter nevado (Gris)",
+      "umbrella": "paraguas de copo de nieve",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Gris",
+        "Rosa"
+      ]
+    }
+  }
+}

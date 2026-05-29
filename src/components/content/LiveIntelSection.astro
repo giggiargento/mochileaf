@@ -1,18 +1,20 @@
 ---
 import type { LiveFeed } from '../../utils/live-content';
 import { getLiveUpdatedAt } from '../../utils/live-content';
+import { usePageLocale } from '../../lib/i18n/use-page-locale';
 
 interface Props {
   feeds: LiveFeed[];
 }
 
 const { feeds } = Astro.props;
+const { locale, tr } = usePageLocale(Astro.currentLocale);
 const updatedAt = getLiveUpdatedAt();
 
 if (feeds.length === 0) return null;
 
 const formattedDate = updatedAt
-  ? new Date(updatedAt).toLocaleString('en-US', {
+  ? new Date(updatedAt).toLocaleString(locale === 'es' ? 'es' : 'en-US', {
       dateStyle: 'medium',
       timeStyle: 'short',
     })
@@ -22,12 +24,13 @@ const formattedDate = updatedAt
 <section class="border-t border-default py-12" aria-labelledby="live-intel-heading">
   <div class="page-container">
     <h2 id="live-intel-heading" class="font-display text-2xl text-primary">
-      Live intel
+      {tr('liveIntel.title')}
     </h2>
     <p class="mt-2 max-w-2xl text-sm text-secondary">
-      Pulled from the web via search API — a cozy snapshot, not a wiki scrape. Review sources
-      before treating codes or meta as gospel.
-      {formattedDate && <span class="block mt-1 text-muted">Last refresh: {formattedDate}</span>}
+      {tr('liveIntel.description')}
+      {formattedDate && (
+        <span class="block mt-1 text-muted">{tr('liveIntel.refresh', { date: formattedDate })}</span>
+      )}
     </p>
     <div class="mt-8 grid gap-6 md:grid-cols-2">
       {
@@ -42,15 +45,12 @@ const formattedDate = updatedAt
                     <li>
                       <a
                         href={source.url}
+                        class="cozy-link text-sm"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="cozy-link text-sm font-medium"
                       >
                         {source.title}
                       </a>
-                      {source.snippet && (
-                        <p class="mt-0.5 text-xs text-muted line-clamp-2">{source.snippet}</p>
-                      )}
                     </li>
                   ))}
                 </ul>
@@ -60,9 +60,5 @@ const formattedDate = updatedAt
         ))
       }
     </div>
-    <p class="mt-6 text-xs text-muted">
-      Refresh locally with <code class="text-sage-500">npm run content:refresh</code> (requires
-      <code class="text-sage-500">TAVILY_API_KEY</code> in <code class="text-sage-500">.env</code>).
-    </p>
   </div>
 </section>

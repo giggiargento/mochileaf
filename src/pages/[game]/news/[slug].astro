@@ -3,10 +3,10 @@ import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
 import ArticleDetail from '../../../components/article/ArticleDetail.astro';
 import { getGame } from '../../../data/games';
-import { articleSlugFromId, loadArticleEntries } from '../../../data/articles';
+import { articleSlugFromId, loadArticleEntries, renderArticleForLocale, articleSeoForLocale } from '../../../data/articles';
 import { isNewsCategory } from '../../../utils/article-routes';
-import { render } from 'astro:content';
-import { resolveContentSeo } from '../../../lib/content/seo';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export async function getStaticPaths() {
   const entries = await loadArticleEntries();
@@ -15,34 +15,23 @@ export async function getStaticPaths() {
     .map((entry) => {
       const slug = articleSlugFromId(entry.id);
       const game = getGame(entry.data.gameSlug!)!;
-      const article = {
-        slug,
-        title: entry.data.title,
-        excerpt: entry.data.excerpt,
-        category: entry.data.category,
-        gameSlug: entry.data.gameSlug,
-        publishedAt: entry.data.publishedAt,
-        readTime: entry.data.readTime,
-        featured: entry.data.featured,
-        trending: entry.data.trending,
-        coverImage: entry.data.coverImage,
-        coverCaption: entry.data.coverCaption,
-      };
       return {
         params: { game: entry.data.gameSlug, slug },
-        props: { article, game, entry },
+        props: { slug, game },
       };
     });
 }
 
-const { article, game, entry } = Astro.props;
-const { Content } = await render(entry);
-const seo = resolveContentSeo(entry.data.seo, {
-  title: article.title,
-  description: article.excerpt,
-  image: entry.data.coverImage ?? entry.data.seo?.image,
-});
-const badge = article.category === 'update' ? 'Update' : 'News';
+const { slug, game } = Astro.props;
+const { locale } = usePageLocale(Astro.currentLocale);
+const rendered = await renderArticleForLocale(slug, locale);
+if (!rendered) {
+  return Astro.redirect(`/${game.slug}/news`, 302);
+}
+const { article, entry, html, Content } = rendered;
+const seo = articleSeoForLocale(entry, article, locale);
+const badge =
+  article.category === 'update' ? t('badge.update', locale) : t('badge.news', locale);
 ---
 
 <GameHubLayout game={game} title={seo.title} description={seo.description}>
@@ -51,10 +40,21 @@ const badge = article.category === 'update' ? 'Update' : 'News';
     <ArticleDetail
       article={article}
       game={game}
+      locale={locale}
       coverImage={entry.data.coverImage}
-      coverCaption={entry.data.coverCaption}
+      coverCaption={article.coverCaption ?? entry.data.coverCaption}
     >
-      <Content />
+      {
+        html ? (
+          <div class="prose-cozy space-y-6" set:html={html} />
+        ) : (
+          Content && (
+            <div class="prose-cozy space-y-6">
+              <Content />
+            </div>
+          )
+        )
+      }
     </ArticleDetail>
   </div>
 </GameHubLayout>

@@ -1,0 +1,37 @@
+{
+  "role": "perro normal",
+  "description": "Energía amigable de beagle con un pasatiempo por la naturaleza. Los patios estilo cabaña y los rincones de picnic estilo abuela le sientan perfectamente.",
+  "houseStyle": "Café de barrio",
+  "houseDescription": "Pupitres de conferencias, teteras para sopa y rincones de café expreso: su interior parece una acogedora panadería en un rincón y una parada para tomar café.",
+  "seoTitle": "Bea - Perro normal",
+  "seoDescription": "Energía amigable de beagle con un pasatiempo por la naturaleza. Los patios estilo cabaña y los rincones de picnic estilo abuela le sientan perfectamente.",
+  "acnh": {
+    "appearance": "Oso marrón chocolate con una suave sonrisa normal: bordes suaves y calma al aire libre.",
+    "personality": "Una osita amable y normal que se comporta con buenos modales durante el día. Bea es dulce, un poco tímida y más feliz cuando las conversaciones son amables.",
+    "house": {
+      "roof": "techo de paja naranja",
+      "siding": "adoquines de color marrón claro",
+      "door": "puerta común",
+      "wallpaper": "Pared de pizarra",
+      "flooring": "Suelos de corcho",
+      "music": "Conduciendo"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Naturaleza",
+      "defaultClothing": "vestido largo a rayas (Naranja)",
+      "umbrella": "paraguas de menta",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Simple",
+        "Fresco"
+      ],
+      "favoriteColors": [
+        "Agua",
+        "Verde"
+      ]
+    }
+  }
+}

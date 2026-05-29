@@ -3,8 +3,11 @@ import type { NavItem } from '../../types';
 import Logo from './Logo.astro';
 import NavLinks from './NavLinks.astro';
 import Icon from '../ui/Icon.astro';
-import ThemeToggle from '../ui/ThemeToggle.astro';
+import LocaleToolbar from '../ui/LocaleToolbar.astro';
 import { normalizeNavPath } from '../../utils/navigation';
+import { pathForLocale, stripLocalePrefix } from '../../i18n/routing';
+import { t } from '../../i18n/messages';
+import type { Locale } from '../../i18n/config';
 
 interface Props {
   title?: string;
@@ -14,21 +17,24 @@ interface Props {
 }
 
 const {
-  title = 'Menu',
+  title,
   items,
   backHref = '/',
-  backLabel = 'Back to home',
+  backLabel,
 } = Astro.props;
-const currentPath = normalizeNavPath(Astro.url.pathname);
+const locale = (Astro.currentLocale ?? 'en') as Locale;
+const resolvedTitle = title ?? t('nav.menu', locale);
+const resolvedBackLabel = backLabel ?? t('nav.backHome', locale);
+const currentPath = stripLocalePrefix(normalizeNavPath(Astro.url.pathname));
 const backPath = normalizeNavPath(backHref);
 const showBackLink = backPath !== currentPath;
 ---
 
 <header class="sticky top-0 z-50 border-b border-default bg-nav backdrop-blur-md lg:hidden transition-colors duration-300">
   <div class="flex items-center justify-between gap-4 px-4 py-3">
-    <Logo variant="icon" />
+    <Logo variant="icon" href={pathForLocale('/', locale)} />
     <div class="flex items-center gap-2">
-      <ThemeToggle />
+      <LocaleToolbar />
       <button
         type="button"
         id="mobile-menu-btn"
@@ -45,7 +51,7 @@ const showBackLink = backPath !== currentPath;
   <nav
     id="mobile-menu"
     class="mobile-menu-panel hidden border-t border-default bg-nav px-4 py-4"
-    aria-label={title}
+    aria-label={resolvedTitle}
   >
     {
       showBackLink && (
@@ -54,7 +60,7 @@ const showBackLink = backPath !== currentPath;
           class="mb-4 inline-flex min-h-11 items-center gap-1.5 text-sm text-muted transition-colors hover:text-accent"
         >
           <Icon name="arrow-left" size={16} />
-          {backLabel}
+          {resolvedBackLabel}
         </a>
       )
     }

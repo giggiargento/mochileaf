@@ -5,6 +5,8 @@ import ContentGrid from '../../../components/game/ContentGrid.astro';
 import IslandTourCard from '../../../components/game/IslandTourCard.astro';
 import { games } from '../../../data/games';
 import { getIslandToursByGame } from '../../../data/island-tours-acnh';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return games
@@ -13,27 +15,18 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
+const { locale, tr } = usePageLocale(Astro.currentLocale);
 const tours = getIslandToursByGame(game.slug);
 ---
 
-<GameHubLayout
-  game={game}
-  title="Island tours"
-  description={`YouTube island tours for ${game.name} inspiration.`}
->
-  <PageHeader
-    title="Island tours"
-    description="Cozy YouTube walks through themed islands — opens on YouTube in a new tab. Save layouts you love for your own build sessions."
-  />
+<GameHubLayout game={game} title={t('nav.islandTours', locale)} description={tr('island.meta', { game: game.name })}>
+  <PageHeader title={tr('island.title')} description={tr('island.description')} />
   <div class="page-container-below-header">
     <ContentGrid columns={2}>
       {tours.map((tour) => (
         <IslandTourCard tour={tour} />
       ))}
     </ContentGrid>
-    <p class="mt-12 max-w-2xl text-sm text-muted">
-      Videos are third-party content. Channels and tours may update or move — search YouTube for
-      “ACNH island tour” anytime for fresh ideas.
-    </p>
+    <p class="mt-12 max-w-2xl text-sm text-muted">{tr('island.footer')}</p>
   </div>
 </GameHubLayout>

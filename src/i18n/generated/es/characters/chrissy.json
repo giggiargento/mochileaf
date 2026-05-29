@@ -1,0 +1,36 @@
+{
+  "role": "Conejo lleno de vida",
+  "description": "Conejo lleno de vida, color chicle, con ojos estrellados y alegría ilimitada: los fanáticos la aman junto a Francine por las historias de islas hermanas.",
+  "houseStyle": "estallido del globo",
+  "houseDescription": "Lindo y brillante conjunto con un diseño festivo y alegre: una fiesta de cumpleaños que nunca termina.",
+  "seoTitle": "Chrissy - Conejo lleno de vida",
+  "seoDescription": "Chrissy, la alegre coneja de Animal Crossing: energía deslumbrante y encanto de isla hermana junto a Francine.",
+  "acnh": {
+    "appearance": "Conejo rosa lleno de vida con ojos estrellados: alegría de chicle en una silueta compacta.",
+    "personality": "Chrissy es un conejito alegre y lleno de vida que salta entre ideas. Chrissy es excitable, alegre y más feliz cuando la isla se siente como una fiesta.",
+    "house": {
+      "roof": "techo de tejas de madera rosa",
+      "siding": "exterior de estuco azul menta",
+      "door": "puerta de parrilla de hierro rosa",
+      "wallpaper": "Pared punteada roja",
+      "flooring": "Lindo piso de baldosas rojas",
+      "music": "Chicle K.K."
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Moda",
+      "defaultClothing": "vestido con lunares de mármol (Blanco)",
+      "umbrella": "sombrilla blanca con lazos brillantes",
+      "bag": "Rosa",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Rosa",
+        "Blanco"
+      ]
+    }
+  }
+}

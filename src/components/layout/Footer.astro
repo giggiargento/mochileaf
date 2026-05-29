@@ -2,7 +2,15 @@
 import Logo from './Logo.astro';
 import { getFeaturedGames } from '../../data/games';
 import { getGameDisplayName } from '../../utils/game-display';
+import { defaultLocale, type Locale } from '../../i18n/config';
+import { pathForLocale } from '../../i18n/routing';
+import { t } from '../../i18n/messages';
 
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = defaultLocale } = Astro.props;
 const featuredGames = getFeaturedGames();
 ---
 
@@ -14,33 +22,33 @@ const featuredGames = getFeaturedGames();
           <Logo variant="isologo" fullWidth size="footer" />
         </div>
         <p class="mt-6 max-w-sm text-sm text-secondary leading-relaxed">
-          A calming home for cozy gaming — guides, builds, and stories wrapped in soft fantasy warmth.
+          {t('footer.tagline', locale)}
         </p>
       </div>
 
       <nav aria-labelledby="footer-site-nav">
         <h2 id="footer-site-nav" class="text-sm font-semibold text-primary">
-          Cozy games, guides &amp; articles
+          {t('footer.siteNavTitle', locale)}
         </h2>
         <ul class="mt-4 space-y-2 text-sm">
-          <li><a href="/games" class="cozy-link">Browse cozy games</a></li>
-          <li><a href="/articles" class="cozy-link">Read guides &amp; articles</a></li>
-          <li><a href="/cozy-creators" class="cozy-link">Cozy Creators</a></li>
-          <li><a href="/about" class="cozy-link">About Mochileaf</a></li>
-          <li><a href="/privacy" class="cozy-link">Privacy policy</a></li>
+          <li><a href={pathForLocale('/games', locale)} class="cozy-link">{t('footer.browseGames', locale)}</a></li>
+          <li><a href={pathForLocale('/articles', locale)} class="cozy-link">{t('footer.readArticles', locale)}</a></li>
+          <li><a href={pathForLocale('/cozy-creators', locale)} class="cozy-link">{t('footer.cozyCreators', locale)}</a></li>
+          <li><a href={pathForLocale('/about', locale)} class="cozy-link">{t('footer.about', locale)}</a></li>
+          <li><a href={pathForLocale('/privacy', locale)} class="cozy-link">{t('footer.privacy', locale)}</a></li>
         </ul>
       </nav>
 
       <nav aria-labelledby="footer-game-hubs">
         <h2 id="footer-game-hubs" class="text-sm font-semibold text-primary">
-          Featured cozy game hubs
+          {t('footer.hubsTitle', locale)}
         </h2>
         <ul class="mt-4 space-y-2 text-sm">
           {
             featuredGames.map((game) => (
               <li>
-                <a href={`/${game.slug}`} class="cozy-link">
-                  {getGameDisplayName(game, 'short')} guides &amp; wiki
+                <a href={pathForLocale(`/${game.slug}`, locale)} class="cozy-link">
+                  {t('footer.hubLink', locale, { game: getGameDisplayName(game, 'short') })}
                 </a>
               </li>
             ))
@@ -50,10 +58,8 @@ const featuredGames = getFeaturedGames();
     </div>
 
     <div class="mt-12 flex flex-col gap-4 border-t border-default pt-8 text-sm text-muted md:flex-row md:items-center md:justify-between">
-      <p>&copy; {new Date().getFullYear()} Mochileaf. Crafted with care.</p>
-      <p class="text-xs">
-        Fan site · Not affiliated with Nintendo or other publishers.
-      </p>
+      <p>&copy; {new Date().getFullYear()} Mochileaf. {t('footer.copyright', locale)}</p>
+      <p class="text-xs">{t('footer.disclaimer', locale)}</p>
     </div>
   </div>
 </footer>

@@ -2,6 +2,8 @@
 import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
 import { games } from '../../../data/games';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return games
@@ -10,39 +12,38 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
+const { locale, tr, hub } = usePageLocale(Astro.currentLocale);
 ---
 
-<GameHubLayout game={game} title="Search">
-  <PageHeader title="Search" description={`Find guides, characters, and news in ${game.name}.`} />
+<GameHubLayout game={game} title={t('nav.search', locale)}>
+  <PageHeader title={tr('search.title')} description={tr('search.description', { game: game.name })} />
   <div class="page-container-below-header">
     <form
       role="search"
       class="cozy-card max-w-xl p-6"
-      action={`/${game.slug}/search`}
+      action={hub(game.slug, 'search')}
       method="get"
     >
       <label for="q" class="block text-sm font-medium text-secondary mb-2">
-        Search this hub
+        {tr('search.label')}
       </label>
       <div class="flex gap-3">
         <input
           type="search"
           id="q"
           name="q"
-          placeholder="Lantern festival, Elara, builds..."
+          placeholder={tr('search.placeholder')}
           class="flex-1 rounded-xl border border-default bg-card px-4 py-3 text-sm text-primary focus:outline-none focus:ring-2 focus:ring-sage-300"
         />
         <button
           type="submit"
           class="rounded-xl bg-sage-400 px-5 py-3 text-sm font-semibold text-white hover:bg-sage-500 transition-colors"
         >
-          Search
+          {tr('search.submit')}
         </button>
       </div>
     </form>
-    <p class="mt-6 text-sm text-muted">
-      Client-side search can be wired to Pagefind, Fuse.js, or your API. This form is ready for integration.
-    </p>
+    <p class="mt-6 text-sm text-muted">{tr('search.hint')}</p>
     <div id="search-results" class="mt-8 space-y-4" hidden>
       <!-- API / client search results mount here -->
     </div>

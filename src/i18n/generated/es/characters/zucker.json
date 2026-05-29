@@ -1,0 +1,37 @@
+{
+  "role": "pulpo perezoso",
+  "description": "Cara de Takoyaki y chistes perezosos. Favorito de los fanáticos para las islas tropicales y de temática gastronómica.",
+  "houseStyle": "takoyaki de playa",
+  "houseDescription": "Suelo de arena, mesas de playa y puestos de comida: literalmente, la energía de un snack bar junto al mar en el interior.",
+  "seoTitle": "Zucker - Pulpo perezoso",
+  "seoDescription": "Cara de Takoyaki y chistes perezosos. Favorito de los fanáticos para las islas tropicales y de temática gastronómica.",
+  "acnh": {
+    "appearance": "Pulpo rojo como un bocadillo de takoyaki: encanto tonto y perezoso y humor gastronómico de festival.",
+    "personality": "Pulpo perezoso que habla como un fanático del takoyaki: Zucker es apacible, amigable y maravillosamente tonto en las islas con temática gastronómica.",
+    "house": {
+      "roof": "techo de paja de color marrón oscuro",
+      "siding": "revestimiento de panel color canela",
+      "door": "puerta rústica roja",
+      "wallpaper": "Valla de tela metálica",
+      "flooring": "Césped del patio trasero",
+      "music": "Flores de primavera"
+    },
+    "villagerInfo": {
+      "gender": "Masculino",
+      "hobby": "Naturaleza",
+      "defaultClothing": "camiseta feliz (Azul)",
+      "umbrella": "paraguas azul",
+      "bag": "estampado vegetal",
+      "food": "donut de chocolate",
+      "drink": "Lata de té o taza amarilla.",
+      "favoriteStyles": [
+        "Simple",
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Azul",
+        "Amarillo"
+      ]
+    }
+  }
+}

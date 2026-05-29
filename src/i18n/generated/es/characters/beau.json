@@ -1,0 +1,37 @@
+{
+  "role": "ciervo perezoso",
+  "description": "Energía somnolienta del rollo de canela. Combina bien con senderos cubiertos de musgo y lugares para picnic al aire libre.",
+  "houseStyle": "cabaña natural",
+  "houseDescription": "Lámparas de troncos y setas en tonos tierra: ambiente de picnic en el bosque durante todo el año.",
+  "seoTitle": "Beau - Ciervo perezoso",
+  "seoDescription": "Energía somnolienta del rollo de canela. Combina bien con senderos cubiertos de musgo y lugares para picnic al aire libre.",
+  "acnh": {
+    "appearance": "Ciervo pálido y perezoso con ojos somnolientos: colores brumosos que combinan con los senderos del bosque iluminados por la luna.",
+    "personality": "Ciervo perezoso y soñoliento con una sonrisa soñadora: Beau deambula lentamente, habla de bocadillos y hace que las tardes de pereza parezcan intencionadas.",
+    "house": {
+      "roof": "tejado de pizarra natural",
+      "siding": "exterior de troncos de color marrón claro",
+      "door": "puerta simple amarilla",
+      "wallpaper": "Vista del prado",
+      "flooring": "pradera de margaritas",
+      "music": "Canción de montaña"
+    },
+    "villagerInfo": {
+      "gender": "Masculino",
+      "hobby": "Naturaleza",
+      "defaultClothing": "suéter de reno (verde)",
+      "umbrella": "paraguas de melón",
+      "bag": "Papel",
+      "food": "Chupete",
+      "drink": "lata de refresco",
+      "favoriteStyles": [
+        "Simple",
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "Naranja"
+      ]
+    }
+  }
+}

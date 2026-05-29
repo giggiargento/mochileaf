@@ -1,0 +1,52 @@
+---
+import Icon from './Icon.astro';
+import { locales, localeLabels, type Locale } from '../../i18n/config';
+import { pathForLocale, stripLocalePrefix } from '../../i18n/routing';
+import { t } from '../../i18n/messages';
+
+const current = (Astro.currentLocale ?? 'en') as Locale;
+const basePath = stripLocalePrefix(Astro.url.pathname);
+const menuId = 'locale-menu';
+---
+
+<div class="locale-dropdown" data-locale-dropdown>
+  <button
+    type="button"
+    class="icon-btn locale-dropdown-trigger"
+    aria-label={t('lang.menuLabel', current)}
+    aria-haspopup="menu"
+    aria-expanded="false"
+    aria-controls={menuId}
+    data-locale-trigger
+  >
+    <Icon name="globe" size={20} />
+  </button>
+  <div
+    id={menuId}
+    class="locale-dropdown-menu"
+    role="menu"
+    hidden
+    data-locale-menu
+  >
+    {
+      locales.map((code) => {
+        const href = pathForLocale(basePath, code);
+        const isCurrent = code === current;
+        return (
+          <a
+            href={href}
+            role="menuitem"
+            class:list={['locale-dropdown-item', isCurrent && 'locale-dropdown-item--active']}
+            aria-current={isCurrent ? 'true' : undefined}
+            data-locale-pick={code}
+            data-locale-exempt
+            data-astro-reload
+          >
+            <span class="locale-dropdown-code">{localeLabels[code]}</span>
+            <span class="locale-dropdown-name">{t(`lang.name.${code}`, current)}</span>
+          </a>
+        );
+      })
+    }
+  </div>
+</div>

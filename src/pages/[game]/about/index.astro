@@ -6,6 +6,7 @@ import { getGameNavForGame } from '../../../data/game-nav';
 import type { GameContent } from '../../../content/schemas';
 import { displayStringList } from '../../../content/schemas/shared';
 import { resolveContentSeo } from '../../../lib/content/seo';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
 
 export function getStaticPaths() {
   return games
@@ -14,90 +15,88 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
-const hub = game as GameContent;
-const seo = resolveContentSeo(hub.seo, {
-  title: `About ${game.name}`,
-  description: hub.about ?? game.description,
+const { locale, tr, hub } = usePageLocale(Astro.currentLocale);
+const hubData = game as GameContent;
+const seo = resolveContentSeo(hubData.seo, {
+  title: tr('aboutHub.title', { game: game.name }),
+  description: hubData.about ?? game.description,
 });
-const navItems = getGameNavForGame(game).filter((item) => item.href !== `/${game.slug}`);
+const navItems = getGameNavForGame(game, locale).filter((item) => item.href !== hub(game.slug));
 const isStardew = game.slug === 'stardew-valley';
 ---
 
 <GameHubLayout game={game} title={seo.title} description={seo.description}>
-  <PageHeader title={`About ${game.name}`} description={game.tagline} />
+  <PageHeader title={tr('aboutHub.title', { game: game.name })} description={game.tagline} />
   <div class="page-container-below-header">
     <article class="prose-cozy">
-      <p>{hub.about ?? game.description}</p>
-      <p>
-        This hub is part of Mochileaf — an editorial cozy gaming site with guides, news, and reference
-        pages written in plain language. We are not affiliated with the game's publisher or developer.
-      </p>
+      <p>{hubData.about ?? game.description}</p>
+      <p>{tr('aboutHub.intro')}</p>
       {
         isStardew && (
           <p>
-            Stardew Valley is a farming and life sim by ConcernedApe. On PC, many players extend the
-            game with community mods — see our <a href={`/${game.slug}/mods`} class="cozy-link">mods list</a> for
-            frameworks and quality-of-life tools.
+            {tr('aboutHub.stardewBefore')}{' '}
+            <a href={hub(game.slug, 'mods')} class="cozy-link">{tr('aboutHub.modsLink')}</a>{' '}
+            {tr('aboutHub.stardewAfter')}
           </p>
         )
       }
 
       {
-        displayStringList(hub.genres).length > 0 && (
+        displayStringList(hubData.genres).length > 0 && (
           <>
-            <h2 class="font-display text-xl text-primary mt-8">Genres</h2>
+            <h2 class="font-display text-xl text-primary mt-8">{tr('aboutHub.genres')}</h2>
             <ul class="list-disc pl-6 space-y-2 mt-4">
-              {displayStringList(hub.genres).map((genre) => <li>{genre}</li>)}
+              {displayStringList(hubData.genres).map((genre) => <li>{genre}</li>)}
             </ul>
           </>
         )
       }
 
       {
-        displayStringList(hub.platforms).length > 0 && (
+        displayStringList(hubData.platforms).length > 0 && (
           <>
-            <h2 class="font-display text-xl text-primary mt-8">Platforms</h2>
+            <h2 class="font-display text-xl text-primary mt-8">{tr('aboutHub.platforms')}</h2>
             <ul class="list-disc pl-6 space-y-2 mt-4">
-              {displayStringList(hub.platforms).map((platform) => <li>{platform}</li>)}
+              {displayStringList(hubData.platforms).map((platform) => <li>{platform}</li>)}
             </ul>
           </>
         )
       }
 
       {
-        displayStringList(hub.cozyMechanics).length > 0 && (
+        displayStringList(hubData.cozyMechanics).length > 0 && (
           <>
-            <h2 class="font-display text-xl text-primary mt-8">Cozy mechanics</h2>
+            <h2 class="font-display text-xl text-primary mt-8">{tr('aboutHub.cozyMechanics')}</h2>
             <ul class="list-disc pl-6 space-y-2 mt-4">
-              {displayStringList(hub.cozyMechanics).map((item) => <li>{item}</li>)}
+              {displayStringList(hubData.cozyMechanics).map((item) => <li>{item}</li>)}
             </ul>
           </>
         )
       }
 
       {
-        displayStringList(hub.beginnerTips).length > 0 && (
+        displayStringList(hubData.beginnerTips).length > 0 && (
           <>
-            <h2 class="font-display text-xl text-primary mt-8">Beginner tips</h2>
+            <h2 class="font-display text-xl text-primary mt-8">{tr('aboutHub.beginnerTips')}</h2>
             <ul class="list-disc pl-6 space-y-2 mt-4">
-              {displayStringList(hub.beginnerTips).map((tip) => <li>{tip}</li>)}
+              {displayStringList(hubData.beginnerTips).map((tip) => <li>{tip}</li>)}
             </ul>
           </>
         )
       }
 
       {
-        displayStringList(hub.similarGames).length > 0 && (
+        displayStringList(hubData.similarGames).length > 0 && (
           <>
-            <h2 class="font-display text-xl text-primary mt-8">Similar games</h2>
+            <h2 class="font-display text-xl text-primary mt-8">{tr('aboutHub.similarGames')}</h2>
             <ul class="list-disc pl-6 space-y-2 mt-4">
-              {displayStringList(hub.similarGames).map((title) => <li>{title}</li>)}
+              {displayStringList(hubData.similarGames).map((title) => <li>{title}</li>)}
             </ul>
           </>
         )
       }
 
-      <h2 class="font-display text-xl text-primary mt-8">What you will find here</h2>
+      <h2 class="font-display text-xl text-primary mt-8">{tr('aboutHub.findHere')}</h2>
       <ul class="list-disc pl-6 space-y-2 mt-4">
         {
           navItems.map((item) => (

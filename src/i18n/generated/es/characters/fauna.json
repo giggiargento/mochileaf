@@ -1,0 +1,37 @@
+{
+  "role": "ciervo normal",
+  "description": "El ciervo cottagecore que todos reconocen. Dulces diálogos y jardines forestales que fotografían maravillosamente en cada estación.",
+  "houseStyle": "cabaña en el bosque",
+  "houseDescription": "Piezas de madera clásicas con iluminación tenue y plantas: una cabaña en el bosque que se siente habitada y tranquila.",
+  "seoTitle": "Fauna — Ciervo normal",
+  "seoDescription": "El ciervo cottagecore que todos reconocen. Dulces diálogos y jardines forestales que fotografían maravillosamente en cada estación.",
+  "acnh": {
+    "appearance": "Ciervo marrón con una paleta de bosque: vibraciones suaves y normales y encanto de cabaña.",
+    "personality": "Ciervo normal de voz suave a quien le encanta el ambiente del bosque: la fauna es maternal, gentil y un elemento básico de las islas rurales.",
+    "house": {
+      "roof": "techo de piedra marrón",
+      "siding": "exterior de estuco beige",
+      "door": "puerta rústica de arce",
+      "wallpaper": "Pared de ladrillo rojo",
+      "flooring": "Pisos de puntos de menta",
+      "music": "KK Paseo"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Naturaleza",
+      "defaultClothing": "Vestido túnica bohemio (Rojo)",
+      "umbrella": "paraguas de gota de lluvia",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Simple",
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "Blanco"
+      ]
+    }
+  }
+}

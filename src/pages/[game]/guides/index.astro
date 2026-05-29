@@ -5,6 +5,8 @@ import ArticleCard from '../../../components/home/ArticleCard.astro';
 import ContentGrid from '../../../components/game/ContentGrid.astro';
 import { games } from '../../../data/games';
 import { getGuidesByGame } from '../../../data/articles';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return games
@@ -13,21 +15,19 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
-const guides = await getGuidesByGame(game.slug);
+const { locale, tr } = usePageLocale(Astro.currentLocale);
+const guides = await getGuidesByGame(game.slug, locale);
 ---
 
-<GameHubLayout game={game} title="Guides">
-  <PageHeader
-    title="Guides"
-    description="Step-by-step walkthroughs with editorial calm — take your time."
-  />
+<GameHubLayout game={game} title={t('nav.guides', locale)}>
+  <PageHeader title={tr('guides.title')} description={tr('guides.description')} />
   <div class="page-container-below-header">
     {guides.length > 0 ? (
       <ContentGrid columns={2}>
         {guides.map((a) => <ArticleCard article={a} />)}
       </ContentGrid>
     ) : (
-      <p class="prose-cozy text-center py-16">Guides are being illustrated. Check back soon.</p>
+      <p class="prose-cozy text-center py-16">{tr('guides.empty')}</p>
     )}
   </div>
 </GameHubLayout>

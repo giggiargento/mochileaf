@@ -68,6 +68,13 @@ import rehypeRaw from 'rehype-raw';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mochileaf.com',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'es'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   markdown: {
     rehypePlugins: [rehypeRaw],
   },

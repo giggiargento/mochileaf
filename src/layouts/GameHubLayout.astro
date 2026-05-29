@@ -3,9 +3,12 @@ import BaseLayout from './BaseLayout.astro';
 import Sidebar from '../components/layout/Sidebar.astro';
 import MobileNav from '../components/layout/MobileNav.astro';
 import Footer from '../components/layout/Footer.astro';
-import ThemeToggle from '../components/ui/ThemeToggle.astro';
+import LocaleToolbar from '../components/ui/LocaleToolbar.astro';
 import AdPlaceholder from '../components/ui/AdPlaceholder.astro';
 import { getGameNav } from '../utils/navigation';
+import type { Locale } from '../i18n/config';
+import { t } from '../i18n/messages';
+import { pathForLocale } from '../i18n/routing';
 import type { Game } from '../types';
 
 interface Props {
@@ -15,7 +18,8 @@ interface Props {
 }
 
 const { game, title, description } = Astro.props;
-const navItems = getGameNav(game);
+const locale = (Astro.currentLocale ?? 'en') as Locale;
+const navItems = getGameNav(game, locale);
 const pageDescription = description ?? game.description;
 const hubTitle = game.shortName ?? game.name;
 ---
@@ -24,22 +28,27 @@ const hubTitle = game.shortName ?? game.name;
   <Sidebar
     title={hubTitle}
     items={navItems}
-    backHref="/"
-    backLabel="All games"
-    persistKey={`mochi-sidebar-${game.slug}`}
+    backHref={pathForLocale('/', locale)}
+    backLabel={t('nav.allGames', locale)}
+    persistKey={`mochi-sidebar-${game.slug}-${locale}`}
   >
     <div slot="footer" class="space-y-4">
-      <ThemeToggle />
+      <LocaleToolbar />
       <AdPlaceholder slot="sidebar" label="Sidebar ad" />
     </div>
   </Sidebar>
 
-  <MobileNav items={navItems} title={hubTitle} backHref="/" backLabel="All games" />
+  <MobileNav
+    items={navItems}
+    title={hubTitle}
+    backHref={pathForLocale('/', locale)}
+    backLabel={t('nav.allGames', locale)}
+  />
 
   <div class="lg:pl-64 bg-page min-h-screen transition-colors duration-300">
     <main class="min-h-[60vh]">
       <slot />
     </main>
-    <Footer />
+    <Footer locale={locale} />
   </div>
 </BaseLayout>

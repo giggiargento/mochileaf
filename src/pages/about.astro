@@ -2,12 +2,12 @@
 import GlobalLayout from '../layouts/GlobalLayout.astro';
 import Icon from '../components/ui/Icon.astro';
 import { BEACONS_PROFILE } from '../utils/beacons';
+import { usePageLocale } from '../lib/i18n/use-page-locale';
+
+const { tr } = usePageLocale(Astro.currentLocale);
 ---
 
-<GlobalLayout
-  title="About Giggi"
-  description="Meet Giggi — cozy gaming creator from Argentina sharing dreamy games, desk setups, and a little corner of comfort on Mochileaf."
->
+<GlobalLayout title={tr('aboutGiggi.metaTitle')} description={tr('aboutGiggi.metaDescription')}>
   <header class="animate-fade-in">
     <div class="page-container pt-10 pb-4 text-left lg:pt-12">
       <div class="flex items-start gap-4 sm:gap-5">
@@ -18,8 +18,8 @@ import { BEACONS_PROFILE } from '../utils/beacons';
           <Icon name="user-circle" size={36} weight="regular" />
         </div>
         <div class="min-w-0">
-          <p class="mb-2 text-xs font-medium uppercase tracking-widest text-accent">About me</p>
-          <h1 class="font-display text-3xl text-primary md:text-4xl">Hi lovelies! 🌸✨</h1>
+          <p class="mb-2 text-xs font-medium uppercase tracking-widest text-accent">{tr('aboutGiggi.eyebrow')}</p>
+          <h1 class="font-display text-3xl text-primary md:text-4xl">{tr('aboutGiggi.heading')}</h1>
         </div>
       </div>
     </div>
@@ -27,86 +27,39 @@ import { BEACONS_PROFILE } from '../utils/beacons';
 
   <div class="page-container-below-header space-y-14">
     <article class="prose-cozy max-w-3xl">
-      <p>
-        I’m Giggi, a cozy content creator from Argentina who’s completely in love with cozy gaming,
-        Studio Ghibli vibes, pastel aesthetics, and cute little things that make everyday life feel
-        magical 🧸🎐
-      </p>
-      <p>
-        I created this space to share cozy games, dreamy desk setups, gaming inspiration, and a little
-        corner of comfort for anyone who loves slow mornings, soft lights, relaxing worlds, and wholesome
-        communities. Whether you’re here looking for your next cozy game obsession or just want to feel
-        inspired while sipping your favorite drink, you’re always welcome here 💕
-      </p>
-      <p>
-        When I’m not creating content, you’ll probably find me collecting manga, building cute keyboard
-        setups, organizing my desk, watching anime, or spending time with my two pitbulls, Pipo and Nina
-        🌷✨
-      </p>
-      <p>
-        This website is my little cozy world on the internet, and I’m so happy you’re here 🍃
-      </p>
+      <p>{tr('aboutGiggi.p1')}</p>
+      <p>{tr('aboutGiggi.p2')}</p>
+      <p>{tr('aboutGiggi.p3')}</p>
+      <p>{tr('aboutGiggi.p4')}</p>
     </article>
 
     <section aria-labelledby="mochileaf-story-heading">
       <h2 id="mochileaf-story-heading" class="section-title mb-6 flex items-center gap-2">
         <Icon name="plant" size={22} weight="regular" class="text-accent" aria-hidden="true" />
-        How Mochileaf began
+        {tr('aboutGiggi.storyTitle')}
       </h2>
       <article class="prose-cozy max-w-3xl">
-        <p>
-          Mochileaf started as a small personal dream — a cozy little corner on the internet made for people
-          who love relaxing games, comforting spaces, and creative inspiration 🌿✨
-        </p>
-        <p>
-          At first, I simply wanted to build a place where cozy gamers could discover new games, setups,
-          creators, and wholesome projects. But along the way, Mochileaf became something much more personal
-          to me. It turned into a fun creative project where I could learn, experiment, and improve my web
-          design and development skills while building something that truly feels like “me” 🧸💻
-        </p>
-        <p>
-          One of my biggest goals with Mochileaf is to create a collaborative space where content creators and
-          indie game developers can share little pieces of their projects, passions, and creativity with the
-          community. I love the idea of supporting talented people, discovering hidden gems, and helping cozy
-          projects feel seen and appreciated 🌸
-        </p>
-        <p>
-          At the same time, I hope Mochileaf can continue growing into a real business and creative journey
-          that allows me to keep evolving professionally, create new opportunities, and generate extra income
-          to support my dreams. One of my biggest dreams is to visit Japan someday — a place that has inspired
-          so much of the cozy and magical aesthetic behind everything I create 🍃✨
-        </p>
-        <p>
-          More than anything, Mochileaf is a space built with love, creativity, curiosity, and the hope of
-          making the internet feel a little softer and more inspiring for cozy gamers around the world 🤍
-        </p>
+        <p>{tr('aboutGiggi.story1')}</p>
+        <p>{tr('aboutGiggi.story2')}</p>
+        <p>{tr('aboutGiggi.story3')}</p>
+        <p>{tr('aboutGiggi.story4')}</p>
+        <p>{tr('aboutGiggi.story5')}</p>
       </article>
     </section>
 
     <section aria-labelledby="mochileaf-name-heading">
       <h2 id="mochileaf-name-heading" class="section-title mb-6 flex items-center gap-2">
         <Icon name="sparkle" size={22} weight="regular" class="text-accent" aria-hidden="true" />
-        Why Mochileaf?
+        {tr('aboutGiggi.nameTitle')}
       </h2>
       <article class="prose-cozy max-w-3xl">
-        <p>
-          When I was choosing a name, I knew I wanted something cozy — a little generic and open enough to
-          hold the worlds I love, but still tender and warm. Something that could wrap around games, setups,
-          creators, and quiet inspiration without feeling boxed in.
-        </p>
-        <p>
-          I played with a few ideas, and Mochileaf was the one that felt most like home: soft, peaceful, and
-          comforting, like a place you’d want to settle into with a warm drink. It’s cozy on purpose — the
-          kind of name that whispers “take your time” instead of shouting for attention 🍃
-        </p>
+        <p>{tr('aboutGiggi.name1')}</p>
+        <p>{tr('aboutGiggi.name2')}</p>
       </article>
     </section>
 
     <article class="prose-cozy max-w-3xl">
-      <p>
-        I really hope you enjoy what I’m building here. Make yourself comfortable, wander at your own pace,
-        and if any ideas, feedback, or cozy discoveries come to mind — I’d genuinely love to hear from you 💕
-      </p>
+      <p>{tr('aboutGiggi.closing')}</p>
     </article>
 
     <section
@@ -120,19 +73,16 @@ import { BEACONS_PROFILE } from '../utils/beacons';
         <Icon name="chat-circle" size={26} weight="regular" />
       </div>
       <h2 id="about-contact-heading" class="font-display text-xl text-primary md:text-2xl">
-        Share an idea with me
+        {tr('aboutGiggi.contactTitle')}
       </h2>
-      <p class="mt-3 text-sm leading-relaxed text-secondary">
-        Whether it’s a game we should cover, a creator to feature, a typo you spotted, or just a cozy hello —
-        reach out anytime. I read every message when I can and I’m always happy to chat.
-      </p>
+      <p class="mt-3 text-sm leading-relaxed text-secondary">{tr('aboutGiggi.contactBody')}</p>
       <a
         href={BEACONS_PROFILE}
         target="_blank"
         rel="noopener noreferrer"
         class="mt-6 inline-flex items-center justify-center gap-2 rounded-[var(--radius-pill)] border border-default bg-page px-6 py-3 text-sm font-semibold text-primary transition-all duration-300 hover:border-sage-300 hover:text-accent"
       >
-        Contact via Beacons
+        {tr('aboutGiggi.contactCta')}
         <Icon name="arrow-square-out" size={16} />
       </a>
     </section>

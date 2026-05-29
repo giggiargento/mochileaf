@@ -4,6 +4,8 @@ import PageHeader from '../../../components/game/PageHeader.astro';
 import ItemDirectory from '../../../components/game/acnh/ItemDirectory.astro';
 import { games } from '../../../data/games';
 import { hasAcnhItems } from '../../../data/items-acnh';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return games
@@ -12,19 +14,17 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
+const { locale, tr } = usePageLocale(Astro.currentLocale);
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
 ---
 
 <GameHubLayout
   game={game}
-  title="Items"
-  description={`Browse furniture and interior items in ${game.name} — by type, with icons from Nookipedia.`}
+  title={t('nav.items', locale)}
+  description={tr('items.meta', { game: game.name })}
 >
-  <PageHeader
-    title="Items & decor"
-    description="Housewares, wallpaper, rugs, and more — grouped like Nookipedia. Search within each tab to find something fast."
-  />
+  <PageHeader title={tr('items.title')} description={tr('items.description')} />
   <div class="page-container-below-header">
-    {isAcnh && <ItemDirectory game={game} />}
+    {isAcnh && <ItemDirectory game={game} locale={locale} />}
   </div>
 </GameHubLayout>

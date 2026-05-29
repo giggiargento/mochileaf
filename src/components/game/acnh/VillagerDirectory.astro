@@ -3,19 +3,20 @@ import type { Game } from '../../../types';
 import CharacterCard from '../CharacterCard.astro';
 import ContentGrid from '../ContentGrid.astro';
 import { getAcnhVillagers } from '../../../data/characters-acnh';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
 
 interface Props {
   game: Game;
 }
 
 const { game } = Astro.props;
+const { tr } = usePageLocale(Astro.currentLocale);
 const villagers = getAcnhVillagers();
 ---
 
 <div class="acnh-villager-directory">
   <p class="prose-cozy mb-6 max-w-2xl text-sm">
-    Every villager on Mochileaf so far — personalities, home styles, and decor moodboards where we
-    have them.
+    {tr('villagerDir.description')}
   </p>
   <ContentGrid columns={3}>
     {villagers.map((c) => (

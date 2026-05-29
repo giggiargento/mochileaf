@@ -1,0 +1,31 @@
+{
+  "role": "Pato normal",
+  "description": "Pico amarillo suave y diálogo tranquilo. Una vecina reconfortante para quienes quieren mañanas calmadas.",
+  "houseStyle": "Cocina rústica",
+  "houseDescription": "Horno de pan, encimeras de madera y luz cálida — cottagecore antes del hashtag.",
+  "seoTitle": "Molly — Pato normal",
+  "seoDescription": "Pico amarillo suave y diálogo tranquilo. Una vecina reconfortante para quienes quieren mañanas calmadas.",
+  "acnh": {
+    "appearance": "Pato con paso de lectura — energía de regadera y sonrisa de pico amarillo impecable.",
+    "personality": "Pato normal hogareña que lleva regadera: Molly es maternal, suave y orgullosa en silencio de su casa ordenada.",
+    "villagerInfo": {
+      "gender": "Femenino",
+      "defaultClothing": "vestido plisado (lima)",
+      "umbrella": "parasol blanco con lazos brillantes",
+      "hobby": "Naturaleza",
+      "favoriteStyles": ["Lindo", "Simple"],
+      "favoriteColors": ["Amarillo", "Rosa"],
+      "bag": "Elegante",
+      "food": "Sándwich",
+      "drink": "Batido o taza de café"
+    },
+    "house": {
+      "roof": "techo de paja naranja",
+      "siding": "exterior de troncos marrón claro",
+      "door": "puerta de madera de arce",
+      "wallpaper": "Pared celosía",
+      "flooring": "Suelo espiga claro",
+      "music": "K.K. Balada"
+    }
+  }
+}

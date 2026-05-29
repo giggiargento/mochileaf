@@ -3,18 +3,17 @@ import GlobalLayout from '../../layouts/GlobalLayout.astro';
 import PageHeader from '../../components/game/PageHeader.astro';
 import ArticleCard from '../../components/home/ArticleCard.astro';
 import { loadArticles } from '../../data/articles';
+import { usePageLocale } from '../../lib/i18n/use-page-locale';
 
-const sorted = await loadArticles();
+const { locale, tr } = usePageLocale(Astro.currentLocale);
+const sorted = await loadArticles(locale);
 ---
 
-<GlobalLayout
-  title="Articles"
-  description="Cozy guides, editorials, and gentle gaming stories from the Mochileaf community."
->
+<GlobalLayout title={tr('articles.title')} description={tr('articles.meta')}>
   <PageHeader
-    badge="Editorial"
-    title="Articles"
-    description="Walkthroughs, patch notes, and slow-living stories from across our game hubs."
+    badge={tr('articles.badge')}
+    title={tr('articles.title')}
+    description={tr('articles.description')}
   />
 
   <div class="page-container-below-header">

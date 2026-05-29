@@ -2,56 +2,60 @@
 import GlobalLayout from '../../layouts/GlobalLayout.astro';
 import PageHeader from '../../components/game/PageHeader.astro';
 import ArticleDetail from '../../components/article/ArticleDetail.astro';
-import { articleSlugFromId, loadArticleEntries } from '../../data/articles';
+import { articleSlugFromId, loadArticleEntries, renderArticleForLocale, articleSeoForLocale } from '../../data/articles';
 import { getArticleHref } from '../../utils/article-routes';
-import { render } from 'astro:content';
-import { resolveContentSeo } from '../../lib/content/seo';
+import { usePageLocale } from '../../lib/i18n/use-page-locale';
+import { t } from '../../i18n/messages';
 
 export async function getStaticPaths() {
   const entries = await loadArticleEntries();
   return entries
     .filter((entry) => !entry.data.gameSlug)
-    .map((entry) => {
-      const slug = articleSlugFromId(entry.id);
-      const article = {
-        slug,
-        title: entry.data.title,
-        excerpt: entry.data.excerpt,
-        category: entry.data.category,
-        gameSlug: entry.data.gameSlug,
-        publishedAt: entry.data.publishedAt,
-        readTime: entry.data.readTime,
-        featured: entry.data.featured,
-        trending: entry.data.trending,
-        coverImage: entry.data.coverImage,
-        coverCaption: entry.data.coverCaption,
-      };
-      return { params: { slug }, props: { article, entry } };
-    });
+    .map((entry) => ({
+      params: { slug: articleSlugFromId(entry.id) },
+      props: { slug: articleSlugFromId(entry.id) },
+    }));
 }
 
-const { article, entry } = Astro.props;
+const { slug } = Astro.props;
+const { locale, p } = usePageLocale(Astro.currentLocale);
+const rendered = await renderArticleForLocale(slug, locale);
+if (!rendered) {
+  return Astro.redirect(p('/articles'), 302);
+}
+const { article, entry, html, Content } = rendered;
 
 if (article.gameSlug) {
-  return Astro.redirect(getArticleHref(article), 301);
+  return Astro.redirect(getArticleHref(article, locale), 301);
 }
 
-const { Content } = await render(entry);
-const seo = resolveContentSeo(entry.data.seo, {
-  title: article.title,
-  description: article.excerpt,
-});
+const seo = articleSeoForLocale(entry, article, locale);
 ---
 
 <GlobalLayout title={seo.title} description={seo.description}>
-  <PageHeader badge={article.category} title={article.title} description={article.excerpt} />
+  <PageHeader
+    badge={t(`badge.${article.category}`, locale)}
+    title={article.title}
+    description={article.excerpt}
+  />
   <div class="page-container-below-header">
     <ArticleDetail
       article={article}
+      locale={locale}
       coverImage={entry.data.coverImage}
-      coverCaption={entry.data.coverCaption}
+      coverCaption={article.coverCaption ?? entry.data.coverCaption}
     >
-      <Content />
+      {
+        html ? (
+          <div class="prose-cozy space-y-6" set:html={html} />
+        ) : (
+          Content && (
+            <div class="prose-cozy space-y-6">
+              <Content />
+            </div>
+          )
+        )
+      }
     </ArticleDetail>
   </div>
 </GlobalLayout>

@@ -4,16 +4,21 @@ import Badge from '../ui/Badge.astro';
 import { getGame } from '../../data/games';
 import { getArticleHref } from '../../utils/article-routes';
 import { getGameDisplayName } from '../../utils/game-display';
+import { defaultLocale, type Locale } from '../../i18n/config';
+import { pathForLocale } from '../../i18n/routing';
+import { t } from '../../i18n/messages';
 
 interface Props {
   article: Article;
+  locale?: Locale;
   /** Hide hub badge when listing news inside that game's hub */
   hideGameBadge?: boolean;
 }
 
-const { article, hideGameBadge = true } = Astro.props;
+const { article, locale = defaultLocale, hideGameBadge = true } = Astro.props;
 const game = article.gameSlug ? getGame(article.gameSlug) : undefined;
-const href = getArticleHref(article);
+const href = getArticleHref(article, locale);
+const gameHref = game ? pathForLocale(`/${game.slug}`, locale) : undefined;
 const hasCover = Boolean(article.coverImage);
 
 const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' | 'lavender'> = {
@@ -48,15 +53,17 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
     }
     <div class="flex min-w-0 flex-col p-6">
       <div class="mb-3 flex min-w-0 flex-wrap items-center gap-2">
-        <Badge variant={categoryVariants[article.category]}>{article.category}</Badge>
+        <Badge variant={categoryVariants[article.category]}>
+      {t(`badge.${article.category}`, locale)}
+    </Badge>
         {
           !hideGameBadge && game && (
-            <a href={`/${game.slug}`} class="hover:opacity-90">
+            <a href={gameHref} class="hover:opacity-90">
               <Badge variant="default">{getGameDisplayName(game, 'short')}</Badge>
             </a>
           )
         }
-        {article.trending && <Badge variant="blossom">Trending</Badge>}
+        {article.trending && <Badge variant="blossom">{t('badge.trending', locale)}</Badge>}
       </div>
       <h3 class="article-card-title--lines-2 font-display min-w-0 text-lg text-primary">
         <a href={href} class="hover:text-accent transition-colors" data-astro-reload>
@@ -68,14 +75,14 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
       </p>
       <footer class="mt-4 flex shrink-0 items-center gap-3 text-xs text-muted">
         <time datetime={article.publishedAt}>
-          {new Date(article.publishedAt).toLocaleDateString('en-US', {
+          {new Date(article.publishedAt).toLocaleDateString(locale === 'es' ? 'es' : 'en-US', {
             month: 'short',
             day: 'numeric',
             year: 'numeric',
           })}
         </time>
         <span aria-hidden="true">·</span>
-        <span>{article.readTime} read</span>
+        <span>{t('article.readTime', locale, { time: article.readTime })}</span>
       </footer>
     </div>
   </div>

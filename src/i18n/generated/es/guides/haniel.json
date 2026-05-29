@@ -1,0 +1,61 @@
+{
+  "buildSummary": "Lakshana ayuda para peleas pausadas: aquí las pequeñas mejoras y el tiempo importan más que las estadísticas explosivas.",
+  "diskSets": [
+    {
+      "name": "Marching Beyond Time (S)",
+      "note": "Arc de utilidad de alto valor para equipos que se benefician de la aceleración del ciclo de soporte."
+    },
+    {
+      "name": "A Time Will Come (A)",
+      "note": "Opción flexible de rango A que se adapta a composiciones de equipos de tipo mixto."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Assist Modules",
+      "note": "Configuración centrada en la velocidad del ciclo para un uso frecuente."
+    },
+    {
+      "name": "A-tier Assist Modules",
+      "note": "Configuración híbrida que equilibra el tiempo de actividad y la supervivencia."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Habilidad de apoyo",
+      "scales": "Utilidad de asistencia principal y tiempo de actividad de mejora del equipo."
+    },
+    {
+      "skill": "Último",
+      "scales": "Grandes picos de utilidad y aceleración de rotación."
+    },
+    {
+      "skill": "Habilidad",
+      "scales": "Efectos suplementarios de control/configuración."
+    },
+    {
+      "skill": "Ataque básico",
+      "scales": "Ganancia mínima frente a actualizaciones centradas en el soporte."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Desbloquee los puntos de control de la utilidad de asistencia.",
+      "location": "Rabbit Hole > Simulaciones de crecimiento de personajes",
+      "tip": "Brinda asistencia a los puntos de interrupción de la ascensión que desbloquean nodos pasivos clave."
+    },
+    {
+      "name": "Support upgrade mats",
+      "purpose": "Mejorar la consistencia de mejora/control.",
+      "location": "Madriguera del conejo > Anomalías en el material de habilidades",
+      "tip": "Priorice los rangos de habilidades de control/mejora sobre el DPS personal."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Escalado de ciclos y servicios públicos.",
+      "location": "Investigación de anomalías > Dominios del módulo",
+      "tip": "Las líneas de utilidad Cycle Rate + generalmente superan al ATK puro en asistencias."
+    }
+  ]
+}

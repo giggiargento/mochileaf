@@ -4,6 +4,8 @@ import PageHeader from '../../../components/game/PageHeader.astro';
 import NewsArticleCard from '../../../components/article/NewsArticleCard.astro';
 import { games } from '../../../data/games';
 import { getNewsByGame } from '../../../data/articles';
+import { t } from '../../../i18n/messages';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
 
 export function getStaticPaths() {
   return games
@@ -12,20 +14,24 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
-const news = await getNewsByGame(game.slug);
+const { locale } = usePageLocale(Astro.currentLocale);
+const news = await getNewsByGame(game.slug, locale);
 ---
 
-<GameHubLayout game={game} title="News">
-  <PageHeader title="News &amp; updates" description="Patch notes, events, and hub announcements." />
+<GameHubLayout game={game} title={t('nav.news', locale)}>
+  <PageHeader
+    title={t('news.pageTitle', locale)}
+    description={t('news.pageDescription', locale)}
+  />
   <div class="page-container-below-header">
     {news.length > 0 ? (
       <div class="news-masonry" role="list">
         {news.map((a) => (
-          <NewsArticleCard article={a} />
+          <NewsArticleCard article={a} locale={locale} />
         ))}
       </div>
     ) : (
-      <p class="prose-cozy text-center py-16">No news yet — the forest is quiet today.</p>
+      <p class="prose-cozy text-center py-16">{t('news.empty', locale)}</p>
     )}
   </div>
 </GameHubLayout>

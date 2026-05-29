@@ -1,0 +1,37 @@
+{
+  "role": "gato engreído",
+  "description": "El aldeano que provocó interminables cacerías en el campamento. Tranquilas, formales e infinitamente fotogénicas en tomas de habitaciones minimalistas.",
+  "houseStyle": "Loft de oficina",
+  "houseDescription": "Paneles de madera oscura, un escritorio y piezas de madera de hierro: parece un pequeño estudio con un gran gusto de catálogo.",
+  "seoTitle": "Raymond - Gato engreído",
+  "seoDescription": "El aldeano que provocó interminables cacerías en el campamento. Tranquilas, formales e infinitamente fotogénicas en tomas de habitaciones minimalistas.",
+  "acnh": {
+    "appearance": "Gato gris con gafas: pelaje elegante de oficina y un aspecto moderno listo para tomar fotografías.",
+    "personality": "Gato fotogénico engreído con estilo de oficina: Raymond es educado, un poco vanidoso y famoso por sus habitaciones modernas y ordenadas.",
+    "house": {
+      "roof": "techo de pizarra negra",
+      "siding": "adornos simples de ladrillo negro",
+      "door": "puerta de parrilla de hierro verde",
+      "wallpaper": "pared de la oficina",
+      "flooring": "suelos de baldosas monocromáticas",
+      "music": "KK Crucero"
+    },
+    "villagerInfo": {
+      "gender": "Masculino",
+      "hobby": "Naturaleza",
+      "defaultClothing": "chaleco (gris)",
+      "umbrella": "paraguas de murciélago",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Elegante",
+        "Fresco"
+      ],
+      "favoriteColors": [
+        "Negro",
+        "Gris"
+      ]
+    }
+  }
+}

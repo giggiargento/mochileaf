@@ -1,0 +1,37 @@
+{
+  "role": "gato presumido",
+  "description": "Regio, misterioso e icónico. Su casa es una pieza que a los jugadores les encanta reconstruir en la isla de Harv.",
+  "houseStyle": "oro egipcio",
+  "houseDescription": "Exterior con techo piramidal con sarcófago dorado y antigüedades reales en el interior: espectacular e inconfundible.",
+  "seoTitle": "Ankha - Gato presumido",
+  "seoDescription": "Regio, misterioso e icónico. Su casa es una pieza que a los jugadores les encanta reconstruir en la isla de Harv.",
+  "acnh": {
+    "appearance": "Gato dorado con estilo egipcio: energía audaz del delineador de ojos y un hogar que parece un palacio en el desierto.",
+    "personality": "Regia y un poco misteriosa: Ankha se comporta como la realeza del desierto, luego se suaviza cuando respetas su estilo. Su casa parece un escenario que vale la pena recorrer.",
+    "house": {
+      "roof": "techo de piedra naranja",
+      "siding": "exterior de estuco amarillo",
+      "door": "puerta decorativa de metal violeta",
+      "wallpaper": "Muralla antigua",
+      "flooring": "Azulejo piramidal",
+      "music": "KK Bazar"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Naturaleza",
+      "defaultClothing": "vestido palaciego sin mangas",
+      "umbrella": "paraguas fantasma",
+      "bag": "Papel",
+      "food": "Chupete",
+      "drink": "lata de refresco",
+      "favoriteStyles": [
+        "Espléndido",
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Vistoso",
+        "Marrón"
+      ]
+    }
+  }
+}

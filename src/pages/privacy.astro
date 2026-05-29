@@ -1,82 +1,66 @@
 ---
 import GlobalLayout from '../layouts/GlobalLayout.astro';
 import PageHeader from '../components/game/PageHeader.astro';
+import { usePageLocale } from '../lib/i18n/use-page-locale';
+
+const { p, tr } = usePageLocale(Astro.currentLocale);
 ---
 
-<GlobalLayout
-  title="Privacy"
-  description="How Mochileaf uses cookies and third-party services including Google AdSense."
->
+<GlobalLayout title={tr('privacy.metaTitle')} description={tr('privacy.metaDescription')}>
   <div class="page-container-below-header max-w-3xl pb-16">
-    <PageHeader
-      title="Privacy policy"
-      description="Plain-language notes for visitors and ad partners."
-    />
+    <PageHeader title={tr('privacy.title')} description={tr('privacy.description')} />
 
     <div class="prose-cozy space-y-6 text-sm">
-      <p>
-        Mochileaf (“we”, “the site”) is a fan-made cozy gaming site at mochileaf.com. This page
-        explains what data may be collected when you browse.
-      </p>
+      <p>{tr('privacy.intro')}</p>
 
       <section>
-        <h2 class="font-display text-xl text-primary">What we collect</h2>
+        <h2 class="font-display text-xl text-primary">{tr('privacy.collectTitle')}</h2>
         <ul class="mt-3 list-disc space-y-2 pl-5">
-          <li>
-            <strong>Theme preference</strong> — stored in your browser (<code>localStorage</code>,
-            key <code>mochileaf-theme</code>) so light/dark mode persists.
-          </li>
-          <li>
-            <strong>Hosting analytics</strong> — our host (e.g. Vercel) may log requests, IPs, and
-            user agents for security and performance. See their privacy policy for details.
-          </li>
+          <li>{tr('privacy.theme')}</li>
+          <li>{tr('privacy.analytics')}</li>
         </ul>
       </section>
 
       <section>
-        <h2 class="font-display text-xl text-primary">Google AdSense</h2>
+        <h2 class="font-display text-xl text-primary">{tr('privacy.adsTitle')}</h2>
         <p class="mt-3">
-          We may show ads through Google AdSense. Google and its partners use cookies to serve ads
-          based on your visits to this and other sites. You can learn more or opt out of
-          personalized advertising at{' '}
+          {tr('privacy.adsBody')}{' '}
           <a
             href="https://www.google.com/settings/ads"
             class="cozy-link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Google Ads Settings
+            {tr('privacy.adsSettings')}
           </a>
-          {' '}and{' '}
+          {' '}{tr('privacy.adsAnd')}{' '}
           <a
             href="https://policies.google.com/technologies/ads"
             class="cozy-link"
             target="_blank"
             rel="noopener noreferrer"
           >
-            How Google uses data
+            {tr('privacy.adsHow')}
           </a>
           .
         </p>
       </section>
 
       <section>
-        <h2 class="font-display text-xl text-primary">External images &amp; links</h2>
-        <p class="mt-3">
-          Some pages load images from third-party CDNs (for example item icons) or link to Pinterest,
-          YouTube, and game wikis. Those services have their own privacy policies.
-        </p>
+        <h2 class="font-display text-xl text-primary">{tr('privacy.externalTitle')}</h2>
+        <p class="mt-3">{tr('privacy.externalBody')}</p>
       </section>
 
       <section>
-        <h2 class="font-display text-xl text-primary">Contact</h2>
+        <h2 class="font-display text-xl text-primary">{tr('privacy.contactTitle')}</h2>
         <p class="mt-3">
-          Questions about this policy? Reach out via the contact method listed on our{' '}
-          <a href="/about" class="cozy-link">About</a> page.
+          {tr('privacy.contactBody')}{' '}
+          <a href={p('/about')} class="cozy-link">{tr('privacy.aboutLink')}</a>
+          {tr('privacy.contactSuffix')}
         </p>
       </section>
 
-      <p class="text-xs text-muted">Last updated: May 2026</p>
+      <p class="text-xs text-muted">{tr('privacy.updated')}</p>
     </div>
   </div>
 </GlobalLayout>

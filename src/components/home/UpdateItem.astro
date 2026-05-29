@@ -4,6 +4,7 @@ import { loadArticles } from '../../data/articles';
 import { getGame } from '../../data/games';
 import { getArticleHref } from '../../utils/article-routes';
 import { getGameDisplayName } from '../../utils/game-display';
+import { localePath, resolveLocale } from '../../i18n/locale';
 import Icon from '../ui/Icon.astro';
 
 interface Props {
@@ -11,16 +12,20 @@ interface Props {
 }
 
 const { update } = Astro.props;
-const game = update.gameSlug ? getGame(update.gameSlug) : undefined;
-const articles = await loadArticles();
+const locale = resolveLocale(Astro.currentLocale);
+const game = update.gameSlug ? getGame(update.gameSlug, locale) : undefined;
+const articles = await loadArticles(locale);
 
-let href = update.gameSlug ? `/${update.gameSlug}/news` : '/articles';
+let href = update.gameSlug
+  ? localePath(`/${update.gameSlug}/news`, locale)
+  : localePath('/articles', locale);
 if (update.articleSlug && update.gameSlug) {
   const article = articles.find(
     (a) => a.slug === update.articleSlug && a.gameSlug === update.gameSlug,
   );
-  if (article) href = getArticleHref(article);
+  if (article) href = getArticleHref(article, locale);
 }
+const gameHref = game ? localePath(`/${game.slug}`, locale) : undefined;
 
 const typeLabels: Record<Update['type'], string> = {
   patch: 'Patch',
@@ -59,7 +64,7 @@ const typeIcons: Record<Update['type'], string> = {
       {
         game ? (
           <>
-            <a href={`/${game.slug}`} class="cozy-link no-underline hover:underline">
+            <a href={gameHref} class="cozy-link no-underline hover:underline">
               {getGameDisplayName(game, 'short')}
             </a>
             {' · '}

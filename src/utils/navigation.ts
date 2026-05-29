@@ -2,6 +2,9 @@ import type { Game, NavItem } from '../types';
 import { routableGames } from '../lib/content/registry';
 import { getGameNavForGame } from '../data/game-nav';
 import { getGameDisplayName } from './game-display';
+import { defaultLocale, type Locale } from '../i18n/config';
+import { pathForLocale, stripLocalePrefix } from '../i18n/routing';
+import { t } from '../i18n/messages';
 
 export function normalizeNavPath(path: string): string {
   const trimmed = path.replace(/\/$/, '');
@@ -15,7 +18,7 @@ export function flattenNavItems(items: NavItem[]): NavItem[] {
 export function findBestNavMatch(items: NavItem[], currentPath: string): NavItem | undefined {
   const path = normalizeNavPath(currentPath);
   const matches = flattenNavItems(items).filter((nav) => {
-    const navHref = normalizeNavPath(nav.href);
+    const navHref = stripLocalePrefix(normalizeNavPath(nav.href));
     return path === navHref || (navHref !== '/' && path.startsWith(`${navHref}/`));
   });
   return matches.sort(
@@ -29,38 +32,44 @@ export function isNavItemActive(item: NavItem, bestMatch: NavItem | undefined): 
 }
 
 export function isNavParentActive(item: NavItem, currentPath: string): boolean {
-  const path = normalizeNavPath(currentPath);
-  const href = normalizeNavPath(item.href);
+  const path = stripLocalePrefix(normalizeNavPath(currentPath));
+  const href = stripLocalePrefix(normalizeNavPath(item.href));
   if (path === href || (href !== '/' && path.startsWith(`${href}/`))) return true;
   return (
     item.children?.some((child) => {
-      const childHref = normalizeNavPath(child.href);
+      const childHref = stripLocalePrefix(normalizeNavPath(child.href));
       return path === childHref || path.startsWith(`${childHref}/`);
     }) ?? false
   );
 }
 
-function activeGameNavChildren(): NavItem[] {
-  return routableGames
-    .map((game) => ({
-      label: getGameDisplayName(game, 'short'),
-      href: `/${game.slug}`,
-    }));
+function activeGameNavChildren(locale: Locale): NavItem[] {
+  return routableGames.map((game) => ({
+    label: getGameDisplayName(game, 'short'),
+    href: pathForLocale(`/${game.slug}`, locale),
+  }));
 }
 
-export const globalNav: NavItem[] = [
-  { label: 'Home', href: '/', icon: 'house' },
-  {
-    label: 'Games',
-    href: '/games',
-    icon: 'game-controller',
-    children: activeGameNavChildren(),
-  },
-  { label: 'Articles', href: '/articles', icon: 'article' },
-  { label: 'Cozy Creators', href: '/cozy-creators', icon: 'heart' },
-  { label: 'About', href: '/about', icon: 'user-circle' },
-];
+const globalNavKeys = [
+  { labelKey: 'nav.home', href: '/', icon: 'house' },
+  { labelKey: 'nav.games', href: '/games', icon: 'game-controller', children: true },
+  { labelKey: 'nav.articles', href: '/articles', icon: 'article' },
+  { labelKey: 'nav.cozyCreators', href: '/cozy-creators', icon: 'heart' },
+  { labelKey: 'nav.about', href: '/about', icon: 'user-circle' },
+] as const;
 
-export function getGameNav(game: Game): NavItem[] {
-  return getGameNavForGame(game);
+export function getGlobalNav(locale: Locale = defaultLocale): NavItem[] {
+  return globalNavKeys.map((item) => ({
+    label: t(item.labelKey, locale),
+    href: pathForLocale(item.href, locale),
+    icon: item.icon,
+    ...(item.children ? { children: activeGameNavChildren(locale) } : {}),
+  }));
+}
+
+/** @deprecated Use getGlobalNav(locale) */
+export const globalNav = getGlobalNav(defaultLocale);
+
+export function getGameNav(game: Game, locale: Locale = defaultLocale): NavItem[] {
+  return getGameNavForGame(game, locale);
 }

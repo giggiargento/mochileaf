@@ -1,0 +1,37 @@
+{
+  "role": "gato perezoso",
+  "description": "Gato perezoso legendario con el eslogan del meme que todos citan: siestas, refrigerios y una sonrisa tonta que nunca pasa de moda.",
+  "houseStyle": "retro juguetón",
+  "houseDescription": "Artículos para niños y colores pastel con un encanto suelto y desordenado: se sienten vividos y tontos.",
+  "seoTitle": "Bob - Gato perezoso",
+  "seoDescription": "Bob, el gato perezoso en Animal Crossing: eslogan famoso en memes, energía acogedora para la siesta y encanto isleño que los fanáticos aún adoran.",
+  "acnh": {
+    "appearance": "Gato perezoso de color morado con una sonrisa permanente: redondo, listo para los memes e imposible de no reconocer.",
+    "personality": "Un icónico gato perezoso con una legendaria energía para la siesta: Bob es amigable, se motiva con la comida y es famoso por su tontería una vez que conoces su eslogan.",
+    "house": {
+      "roof": "techo de pizarra turquesa",
+      "siding": "exterior de estuco amarillo",
+      "door": "puerta de madera roja",
+      "wallpaper": "pared azul de la sala de juegos",
+      "flooring": "suelo de rompecabezas de colores",
+      "music": "napolitano"
+    },
+    "villagerInfo": {
+      "gender": "Masculino",
+      "hobby": "Jugar",
+      "defaultClothing": "camiseta de flores (rosa)",
+      "umbrella": "sombrilla de huevo",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Simple",
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Vistoso",
+        "Rojo"
+      ]
+    }
+  }
+}

@@ -1,7 +1,13 @@
 /** Mobile menu + collapsible nav groups (touch-friendly, survives View Transitions). */
 
+function stripLocalePrefix(pathname: string): string {
+  if (pathname === '/es' || pathname === '/es/') return '/';
+  if (pathname.startsWith('/es/')) return pathname.slice(3) || '/';
+  return pathname;
+}
+
 function normalizeNavPath(path: string): string {
-  const trimmed = path.replace(/\/$/, '');
+  const trimmed = stripLocalePrefix(path).replace(/\/$/, '');
   return trimmed === '' ? '/' : trimmed;
 }
 
@@ -33,7 +39,7 @@ function isNavParentActiveForPath(
 
 /** Re-apply active nav styles after View Transitions (persisted sidebar keeps stale SSR classes). */
 function syncNavActiveState() {
-  const path = normalizeNavPath(location.pathname);
+  const path = normalizeNavPath(stripLocalePrefix(location.pathname));
 
   document.querySelectorAll<HTMLElement>('[data-nav-sidebar] nav, #mobile-menu').forEach((navRoot) => {
     const links = Array.from(navRoot.querySelectorAll<HTMLAnchorElement>('a.nav-link[href]'));

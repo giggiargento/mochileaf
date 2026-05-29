@@ -1,0 +1,37 @@
+{
+  "role": "gato lleno de vida",
+  "description": "Energía de rodaja de naranja en el diálogo y el diseño. Ancla divertida para islas de frutas y restaurantes.",
+  "houseStyle": "salón de cítricos",
+  "houseDescription": "Piezas retro naranjas y verdes: parecen una sala de estar soleada de los años sesenta.",
+  "seoTitle": "Tangy - Gato lleno de vida",
+  "seoDescription": "Energía de rodaja de naranja en el diálogo y el diseño. Ancla divertida para islas de frutas y restaurantes.",
+  "acnh": {
+    "appearance": "Gato naranja con forma de mechón de hojas de cítricos, silueta brillante y llena de vida, actitud alegre.",
+    "personality": "Gato lleno de vida con energía cítrica: Tangy es optimista, dramático con los bocadillos y se recupera rápidamente de los pequeños desaires.",
+    "house": {
+      "roof": "techo rayado verde",
+      "siding": "exterior de estuco naranja",
+      "door": "puerta de madera blanca",
+      "wallpaper": "pared naranja",
+      "flooring": "Suelo retro verde",
+      "music": "Te amo"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Música",
+      "defaultClothing": "vestido retro (verde)",
+      "umbrella": "paraguas de fresa",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Simple",
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Verde",
+        "Amarillo"
+      ]
+    }
+  }
+}

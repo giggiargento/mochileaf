@@ -1,23 +1,26 @@
 ---
 import type { Character, AcnhVillagerDetails } from '../../../types';
+import { defaultLocale, type Locale } from '../../../i18n/config';
+import { t } from '../../../i18n/messages';
 import Badge from '../../ui/Badge.astro';
 
 interface Props {
   character: Character;
   details: AcnhVillagerDetails;
+  locale?: Locale;
 }
 
-const { character, details } = Astro.props;
+const { character, details, locale = defaultLocale } = Astro.props;
 const info = details.villagerInfo;
 const house = details.house;
 
 const houseRows: { label: string; value?: string }[] = [
-  { label: 'Roof', value: house.roof },
-  { label: 'Siding', value: house.siding },
-  { label: 'Door', value: house.door },
-  { label: 'Wallpaper', value: house.wallpaper },
-  { label: 'Flooring', value: house.flooring },
-  { label: 'Music', value: house.music },
+  { label: t('character.field.roof', locale), value: house.roof },
+  { label: t('character.field.siding', locale), value: house.siding },
+  { label: t('character.field.door', locale), value: house.door },
+  { label: t('character.field.wallpaper', locale), value: house.wallpaper },
+  { label: t('character.field.flooring', locale), value: house.flooring },
+  { label: t('character.field.music', locale), value: house.music },
 ].filter((row) => row.value);
 
 const showHouse =
@@ -33,9 +36,13 @@ const showHouse =
     showHouse && (
       <div id="house">
         <h2 class="section-title mb-4 scroll-mt-24">
-          {character.houseStyle ? `House — ${character.houseStyle}` : 'House'}
+          {
+            character.houseStyle
+              ? t('character.house.titleStyle', locale, { style: character.houseStyle })
+              : t('character.house.title', locale)
+          }
         </h2>
-        <p class="mb-4 max-w-2xl text-sm text-secondary">In New Horizons</p>
+        <p class="mb-4 max-w-2xl text-sm text-secondary">{t('character.house.inNh', locale)}</p>
         {
           character.houseDescription && (
             <p class="prose-cozy mb-6 max-w-3xl text-sm">{character.houseDescription}</p>
@@ -101,7 +108,9 @@ const showHouse =
         {
           house.furniture && house.furniture.length > 0 && (
             <div>
-              <h3 class="text-sm font-semibold text-primary">Notable furniture</h3>
+              <h3 class="text-sm font-semibold text-primary">
+                {t('character.house.notableFurniture', locale)}
+              </h3>
               <div class="mt-2 flex flex-wrap gap-2">
                 {house.furniture.map((item) => (
                   <Badge variant="mist" size="sm">
@@ -122,14 +131,14 @@ const showHouse =
         {
           details.languages.length > 0 && (
             <div id="languages" class="scroll-mt-24 flex min-h-0 flex-col w-full">
-              <h2 class="section-title mb-4">Names in other languages</h2>
+              <h2 class="section-title mb-4">{t('character.languages.title', locale)}</h2>
               <div class="cozy-table-wrap flex-1 min-h-0 w-full" style="height: fit-content;">
                 <table class="cozy-table">
                   <thead>
                     <tr>
-                      <th scope="col">Language</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Romanization</th>
+                      <th scope="col">{t('character.languages.language', locale)}</th>
+                      <th scope="col">{t('character.languages.name', locale)}</th>
+                      <th scope="col">{t('character.languages.romanization', locale)}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -150,7 +159,7 @@ const showHouse =
         {
           details.amiibo && (
             <div id="amiibo" class="scroll-mt-24 flex min-h-0 flex-col flex-1" style="width: 100%;">
-              <h2 class="section-title mb-4">amiibo card</h2>
+              <h2 class="section-title mb-4">{t('character.amiibo.title', locale)}</h2>
               <div
                 class="cozy-table-wrap flex-1 min-h-0 flex items-center justify-center p-3"
                 style="width: 370px; height: fit-content;"
@@ -179,7 +188,7 @@ const showHouse =
   {
     details.sourceUrl && (
       <p class="text-xs text-muted">
-        New Horizons reference data from{' '}
+        {t('character.source', locale)}{' '}
         <a href={details.sourceUrl} class="cozy-link" target="_blank" rel="noopener noreferrer">
           Nookipedia
         </a>

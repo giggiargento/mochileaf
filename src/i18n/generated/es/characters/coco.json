@@ -1,0 +1,37 @@
+{
+  "role": "conejo normal",
+  "description": "Ícono del juego con los ojos vacíos. Los jugadores la adoran por sus construcciones extrañas, liminales y aterradoras.",
+  "houseStyle": "lindo embrujado",
+  "houseDescription": "Coro giroide y encanto de ojos hundidos: espeluznante, pero aún extrañamente acogedor.",
+  "seoTitle": "Coco — Conejo normal",
+  "seoDescription": "Ícono del juego con los ojos vacíos. Los jugadores la adoran por sus construcciones extrañas, liminales y aterradoras.",
+  "acnh": {
+    "appearance": "Conejo en tono arcilla con ojos huecos: inquietantemente lindo y perfecto para islas de cabañas encantadas.",
+    "personality": "Un conejo tranquilo y normal con una calma de otro mundo: Coco habla en voz baja y hace que las espeluznantes islas se sientan extrañamente pacíficas.",
+    "house": {
+      "roof": "techo de paja color beige",
+      "siding": "exterior zen con clase",
+      "door": "puerta rustica",
+      "wallpaper": "Muro de tierra apisonada",
+      "flooring": "Pisos florales de estera",
+      "music": "KK Jongara"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Educación",
+      "defaultClothing": "vestido sin mangas a capas (Beige)",
+      "umbrella": "paraguas de hoja",
+      "bag": "estampado vegetal",
+      "food": "donut de chocolate",
+      "drink": "Lata de té o taza amarilla.",
+      "favoriteStyles": [
+        "Simple",
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "Verde"
+      ]
+    }
+  }
+}

@@ -3,6 +3,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import Button from '../ui/Button.astro';
 import Icon from '../ui/Icon.astro';
+import { localePath, resolveLocale } from '../../i18n/locale';
+import { t } from '../../i18n/messages';
+
+const locale = resolveLocale(Astro.currentLocale);
 
 const heroImagePath = '/images/hero-image.png';
 const heroImageExists = fs.existsSync(
@@ -20,24 +24,23 @@ const heroImageAlt =
         class="mb-4 inline-flex items-center gap-2 rounded-[var(--radius-pill)] border border-default bg-nav px-4 py-1.5 text-sm font-medium text-accent"
       >
         <Icon name="sparkle" size={16} weight="regular" />
-        Cozy gaming, beautifully told
+        {t('home.hero.eyebrow', locale)}
       </p>
       <h1 class="font-display text-4xl text-primary text-balance leading-tight md:text-5xl lg:text-[3.25rem]">
-        Where peaceful play meets
-        <span class="italic text-accent">cozy guides</span>
+        {t('home.hero.title', locale)}
+        <span class="italic text-accent">{t('home.hero.titleAccent', locale)}</span>
       </h1>
       <p class="mt-6 max-w-xl text-lg text-secondary leading-relaxed">
-        Mochileaf is your warm corner for game hubs — villagers, team comps, island tips, and
-        stories at a calm pace, without the spreadsheet panic.
+        {t('home.hero.description', locale)}
       </p>
       <div class="mt-8 flex flex-wrap items-center justify-start gap-3 md:mt-10 md:gap-4">
-        <Button href="/games" size="lg">
+        <Button href={localePath('/games', locale)} size="lg">
           <Icon name="game-controller" size={18} weight="regular" class="text-white" />
-          Explore games
+          {t('home.hero.ctaGames', locale)}
         </Button>
-        <Button href="/articles" variant="secondary" size="lg">
+        <Button href={localePath('/articles', locale)} variant="secondary" size="lg">
           <Icon name="article" size={18} weight="regular" />
-          Read articles
+          {t('home.hero.ctaArticles', locale)}
         </Button>
       </div>
     </div>

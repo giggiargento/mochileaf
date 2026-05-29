@@ -1,0 +1,37 @@
+{
+  "role": "Cachorro de oso perezoso",
+  "description": "Cachorro de patchwork con una sonrisa permanente. Amado en las islas kidcore y de colores dulces.",
+  "houseStyle": "caja de juguetes",
+  "houseDescription": "Mezcle y combine muebles coloridos con la sensación de un dormitorio infantil: lindos mosaicos.",
+  "seoTitle": "Puntos — Cachorro de oso perezoso",
+  "seoDescription": "Cachorro de patchwork con una sonrisa permanente. Amado en las islas kidcore y de colores dulces.",
+  "acnh": {
+    "appearance": "Cachorro perezoso y retazos: extremidades que no coinciden, frente morada, sonrisa de animal de peluche.",
+    "personality": "Cachorro perezoso y perezoso con una sonrisa permanente: Stitches es tranquilo, amante de la comida y uno de los favoritos de los niños.",
+    "house": {
+      "roof": "techo rayado verde",
+      "siding": "exterior de estuco amarillo",
+      "door": "puerta básica burdeos",
+      "wallpaper": "Pared de edredón azul",
+      "flooring": "Pisos de mosaicos",
+      "music": "Te amo"
+    },
+    "villagerInfo": {
+      "gender": "Masculino",
+      "hobby": "Jugar",
+      "defaultClothing": "tanque estrellado",
+      "umbrella": "paraguas panda",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Simple",
+        "Lindo"
+      ],
+      "favoriteColors": [
+        "Vistoso",
+        "Blanco"
+      ]
+    }
+  }
+}

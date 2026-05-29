@@ -5,6 +5,8 @@ import ContentGrid from '../../../components/game/ContentGrid.astro';
 import BuildCard from '../../../components/game/BuildCard.astro';
 import { games } from '../../../data/games';
 import { getBuildsByGame } from '../../../data/builds';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return games
@@ -13,40 +15,41 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
+const { locale, tr, hub } = usePageLocale(Astro.currentLocale);
 const builds = getBuildsByGame(game.slug);
 const isStardew = game.slug === 'stardew-valley';
 const isNte = game.slug === 'neverness-to-everness';
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
 ---
 
-<GameHubLayout game={game} title="Builds">
-  <PageHeader
-    title="Builds"
-    description="Relaxed loadouts and thoughtful setups — no sweaty meta required."
-  />
+<GameHubLayout game={game} title={t('nav.builds', locale)}>
+  <PageHeader title={tr('builds.title')} description={tr('builds.description')} />
   <div class="page-container-below-header">
     {
       isStardew ? (
         <div class="prose-cozy py-16">
           <p>
-            Stardew Valley does not use character builds or loadouts. For PC enhancements, visit our
-            <a href={`/${game.slug}/mods`} class="cozy-link">recommended mods</a> page instead.
+            {tr('builds.stardewBefore')}{' '}
+            <a href={hub(game.slug, 'mods')} class="cozy-link">{tr('builds.stardewLink')}</a>{' '}
+            {tr('builds.stardewAfter')}
           </p>
         </div>
       ) : isNte ? (
         <div class="prose-cozy py-16">
           <p>
-            Per-character weapon and Arc Disc builds are on the way. For now, browse recommended{' '}
-            <a href={`/${game.slug}/teams`} class="cozy-link">team comps</a> and character profiles.
+            {tr('builds.nteBefore')}{' '}
+            <a href={hub(game.slug, 'teams')} class="cozy-link">{tr('builds.nteTeams')}</a>{' '}
+            {tr('builds.nteAfter')}
           </p>
         </div>
       ) : isAcnh ? (
         <div class="prose-cozy py-16">
           <p>
-            Animal Crossing hubs focus on villagers and decorating. Visit{' '}
-            <a href={`/${game.slug}/characters`} class="cozy-link">villagers</a>,{' '}
-            <a href={`/${game.slug}/houses`} class="cozy-link">homes</a>, or{' '}
-            <a href={`/${game.slug}/items`} class="cozy-link">items</a> instead.
+            {tr('builds.acnhBefore')}{' '}
+            <a href={hub(game.slug, 'characters')} class="cozy-link">{tr('builds.acnhVillagers')}</a>,{' '}
+            <a href={hub(game.slug, 'houses')} class="cozy-link">{tr('builds.acnhHomes')}</a>, or{' '}
+            <a href={hub(game.slug, 'items')} class="cozy-link">{tr('builds.acnhItems')}</a>{' '}
+            {tr('builds.acnhAfter')}
           </p>
         </div>
       ) : builds.length > 0 ? (
@@ -56,7 +59,7 @@ const isAcnh = game.slug === 'animal-crossing-new-horizons';
           ))}
         </ContentGrid>
       ) : (
-        <p class="prose-cozy text-center py-16">Build guides are being written with care. Check back soon.</p>
+        <p class="prose-cozy text-center py-16">{tr('builds.empty')}</p>
       )
     }
   </div>

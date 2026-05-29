@@ -1,0 +1,37 @@
+{
+  "role": "Ardilla normal",
+  "description": "Pequeña ardilla roja con una personalidad amable y normal: fácil de amar, fácil de ubicar.",
+  "houseStyle": "retro suave",
+  "houseDescription": "Muebles lindos y clásicos en rojos apagados: compactos y alegres sin colores llamativos.",
+  "seoTitle": "Amapola - Ardilla normal",
+  "seoDescription": "Pequeña ardilla roja con una personalidad amable y normal: fácil de amar, fácil de ubicar.",
+  "acnh": {
+    "appearance": "Pequeña ardilla roja: detalles en crema y un rostro amable que rara vez guarda rencor.",
+    "personality": "Pequeña ardilla normal con un corazón tierno. Poppy rara vez se enoja y trata a los vecinos como a una familia a la que está controlando.",
+    "house": {
+      "roof": "techo de tejas marrones",
+      "siding": "exterior de estuco gris claro",
+      "door": "puerta roja de paneles verticales",
+      "wallpaper": "Muro de otoño",
+      "flooring": "Pisos de hojas de colores",
+      "music": "vida forestal"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Educación",
+      "defaultClothing": "vestido alpinista (verde)",
+      "umbrella": "paraguas con estampado de flores pequeñas",
+      "bag": "estampado vegetal",
+      "food": "donut de chocolate",
+      "drink": "Lata de té o taza amarilla.",
+      "favoriteStyles": [
+        "Lindo",
+        "Elegante"
+      ],
+      "favoriteColors": [
+        "Verde",
+        "Amarillo"
+      ]
+    }
+  }
+}

@@ -4,6 +4,8 @@ import PageHeader from '../../../components/game/PageHeader.astro';
 import TierRow from '../../../components/game/TierRow.astro';
 import { games } from '../../../data/games';
 import { getTierListForGame } from '../../../data/tier-list';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return games
@@ -12,30 +14,14 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
+const { locale, tr } = usePageLocale(Astro.currentLocale);
 const tiers = getTierListForGame(game.slug);
 ---
 
-<GameHubLayout game={game} title="Tier List">
-  <PageHeader
-    title="Tier list"
-    description="A gentle ranking for cozy strategists — updated with community warmth, not rage."
-  />
+<GameHubLayout game={game} title={t('nav.tierList', locale)}>
+  <PageHeader title={tr('tier.title')} description={tr('tier.description')} />
   <div class="page-container-below-header space-y-4">
     {tiers.map((entry) => <TierRow entry={entry} gameSlug={game.slug} />)}
-    {
-      game.slug !== 'neverness-to-everness' && (
-        <p class="text-sm text-muted mt-8">
-          Tier lists are placeholder data. Connect your API or CMS for live rankings.
-        </p>
-      )
-    }
-    {
-      game.slug === 'neverness-to-everness' && (
-        <p class="text-sm text-muted mt-8">
-          Rankings favor story comfort and F2P value — not speedrun leaderboards. Patch shifts will be
-          noted in hub news.
-        </p>
-      )
-    }
+    <p class="text-sm text-muted mt-8">{tr('tier.placeholder')}</p>
   </div>
 </GameHubLayout>

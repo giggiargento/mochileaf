@@ -1,0 +1,37 @@
+{
+  "role": "rinoceronte normal",
+  "description": "Rinoceronte de tarta de fresas. Uno de los normales más dulces para construcciones con temas gastronómicos.",
+  "houseStyle": "Panadería dulce",
+  "houseDescription": "Pasteles, mesas de repostería y rosa suave: una tienda de postres disfrazada de hogar.",
+  "seoTitle": "Merengue - Rinoceronte normal",
+  "seoDescription": "Rinoceronte de tarta de fresas. Uno de los normales más dulces para construcciones con temas gastronómicos.",
+  "acnh": {
+    "appearance": "Rinoceronte rosa fresa: con forma de postre e increíblemente dulce en las islas infantiles.",
+    "personality": "Un rinoceronte normal con forma de postre: el merengue es hospitalario, ordenado e increíblemente lindo en islas de colores dulces.",
+    "house": {
+      "roof": "techo de pizarra roja",
+      "siding": "adoquines beige",
+      "door": "puerta básica beige",
+      "wallpaper": "Pared punteada pastel",
+      "flooring": "Pisos de puntos de menta",
+      "music": "KK Balada"
+    },
+    "villagerInfo": {
+      "gender": "Femenino",
+      "hobby": "Naturaleza",
+      "defaultClothing": "traje de chef (rojo)",
+      "umbrella": "sombrilla de encaje",
+      "bag": "De buen tono",
+      "food": "Sándwich",
+      "drink": "Taza de café o batido",
+      "favoriteStyles": [
+        "Lindo",
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Blanco",
+        "Rojo"
+      ]
+    }
+  }
+}

@@ -10,6 +10,8 @@ import {
   acnhPinterestBoardUrl,
   getAcnhHomesGallery,
 } from '../../../data/decor-inspiration-acnh';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
 
 export function getStaticPaths() {
   return games
@@ -18,19 +20,13 @@ export function getStaticPaths() {
 }
 
 const { game } = Astro.props;
+const { locale, tr, hub } = usePageLocale(Astro.currentLocale);
 const galleryItems = getAcnhHomesGallery();
 const hasMoreOnPinterest = acnhDecorInspiration.length > galleryItems.length;
 ---
 
-<GameHubLayout
-  game={game}
-  title="Homes"
-  description="Interior decor inspiration for Animal Crossing: New Horizons — cozy room ideas and moodboard layouts."
->
-  <PageHeader
-    title="Homes & decor inspiration"
-    description="A calm moodboard of interior ideas — cottage corners, minimalist studies, and soft lighting setups to bookmark before you open the catalog."
-  />
+<GameHubLayout game={game} title={t('nav.homes', locale)} description={tr('houses.meta')}>
+  <PageHeader title={tr('houses.title')} description={tr('houses.description')} />
   <div class="page-container-below-header">
     <DecorInspirationGallery items={galleryItems} showEmptyHelp emptyBoardKey="homes" />
     {
@@ -39,7 +35,7 @@ const hasMoreOnPinterest = acnhDecorInspiration.length > galleryItems.length;
           {
             hasMoreOnPinterest && (
               <p class="max-w-md text-sm text-muted">
-                Showing {galleryItems.length} ideas here — the full moodboard has more on Pinterest.
+                {tr('houses.decorMore', { count: String(galleryItems.length) })}
               </p>
             )
           }
@@ -51,15 +47,15 @@ const hasMoreOnPinterest = acnhDecorInspiration.length > galleryItems.length;
             rel="noopener noreferrer"
           >
             <Icon name="arrow-square-out" size={18} />
-            See more on Pinterest
+            {tr('houses.pinterest')}
           </Button>
         </div>
       )
     }
     <p class="mt-10 max-w-2xl text-sm text-muted">
-      Looking for each villager’s default interior notes?
-      <a href={`/${game.slug}/characters`} class="cozy-link">
-        Browse villagers →
+      {tr('houses.villagersBefore')}{' '}
+      <a href={hub(game.slug, 'characters')} class="cozy-link">
+        {tr('houses.villagersLink')}
       </a>
     </p>
   </div>

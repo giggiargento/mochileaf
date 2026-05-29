@@ -4,19 +4,24 @@ import type { Game } from '../../types';
 import ArticleCover from './ArticleCover.astro';
 import { getArticleListHref, getArticleListLabel } from '../../utils/article-routes';
 import { getGameDisplayName } from '../../utils/game-display';
+import { defaultLocale, type Locale } from '../../i18n/config';
+import { pathForLocale } from '../../i18n/routing';
+import { t } from '../../i18n/messages';
 
 interface Props {
   article: Article;
   game?: Game;
+  locale?: Locale;
   coverImage?: string;
   coverCaption?: string;
 }
 
-const { article, game, coverImage, coverCaption } = Astro.props;
+const { article, game, locale = defaultLocale, coverImage, coverCaption } = Astro.props;
 const heroSrc = coverImage ?? article.coverImage;
 const heroCaption = coverCaption ?? article.coverCaption;
-const backHref = getArticleListHref(article);
-const backLabel = getArticleListLabel(article);
+const backHref = getArticleListHref(article, locale);
+const backLabel = getArticleListLabel(article, locale);
+const gameHref = game ? pathForLocale(`/${game.slug}`, locale) : undefined;
 ---
 
 <a href={backHref} class="cozy-link text-sm font-medium" data-astro-reload>
@@ -25,11 +30,14 @@ const backLabel = getArticleListLabel(article);
 
 <article class="article-column mt-8">
   <p class="text-sm text-muted mb-8">
-    {article.readTime} · {new Date(article.publishedAt).toLocaleDateString('en-US', { dateStyle: 'long' })}
+    {article.readTime} ·{' '}
+    {new Date(article.publishedAt).toLocaleDateString(locale === 'es' ? 'es' : 'en-US', {
+      dateStyle: 'long',
+    })}
     {game && (
       <>
         {' '}
-        · <a href={`/${game.slug}`} class="cozy-link">{getGameDisplayName(game, 'short')}</a>
+        · <a href={gameHref} class="cozy-link">{getGameDisplayName(game, 'short')}</a>
       </>
     )}
   </p>
