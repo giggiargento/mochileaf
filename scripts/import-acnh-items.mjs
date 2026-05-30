@@ -24,11 +24,25 @@ const SOURCES = [
 ];
 
 function stripHtml(html) {
-  return html
-    .replace(/<br\s*\/?>/gi, ', ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+  return decodeHtmlEntities(
+    html
+      .replace(/<br\s*\/?>/gi, ', ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim(),
+  );
+}
+
+function decodeHtmlEntities(text) {
+  return text
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCharCode(Number.parseInt(hex, 16)))
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'");
 }
 
 function slugify(name) {

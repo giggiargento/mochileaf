@@ -5,6 +5,7 @@ import { t } from '../../../i18n/messages';
 import {
   acnhItemCatalogMeta,
   getAcnhItemCatalogForClient,
+  getAcnhItemNamesEsForClient,
   getAcnhItemTabsWithCounts,
 } from '../../../data/items-acnh';
 
@@ -16,6 +17,7 @@ interface Props {
 const { game, locale = defaultLocale } = Astro.props;
 const tabs = getAcnhItemTabsWithCounts();
 const catalogJson = getAcnhItemCatalogForClient();
+const namesEsJson = getAcnhItemNamesEsForClient();
 const defaultTab = tabs[0]?.id ?? 'housewares';
 const itemsI18n = {
   loading: t('page.items.loading', locale),
@@ -26,6 +28,7 @@ const itemsI18n = {
   matchCount: t('page.items.matchCount', locale, { match: '{match}', total: '{total}' }),
   buy: t('page.items.buy', locale),
   sell: t('page.items.sell', locale),
+  source: t('page.items.source', locale),
 };
 ---
 
@@ -104,6 +107,7 @@ const itemsI18n = {
   </p>
 
   <script type="application/json" id="acnh-items-catalog" set:html={catalogJson} />
+  <script type="application/json" id="acnh-items-names-es" set:html={namesEsJson} />
   <script type="application/json" id="acnh-items-i18n" set:html={JSON.stringify(itemsI18n)} />
 </div>
 

@@ -1,5 +1,6 @@
 ---
 import type { AcnhCatalogItem } from '../../data/items-acnh';
+import CozyImage from '../ui/CozyImage.astro';
 
 interface Props {
   item: AcnhCatalogItem;
@@ -19,14 +20,13 @@ const titleAttr = [howToGet, priceBits].filter(Boolean).join(' — ');
   title={titleAttr || item.name}
 >
   <div class="item-card__media">
-    <img
+    <CozyImage
       src={item.image}
       alt=""
-      width={compact ? 64 : 96}
-      height={compact ? 64 : 96}
+      width={96}
+      height={96}
       class="item-card__img"
       loading="lazy"
-      decoding="async"
     />
   </div>
   <div class="item-card__body">

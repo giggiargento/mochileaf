@@ -1,4 +1,5 @@
 import catalog from './items-acnh-catalog.json';
+import namesEsData from './items-acnh-names-es.json';
 
 export type AcnhItemTabId =
   | 'housewares'
@@ -49,6 +50,11 @@ export function getAcnhItemTabsWithCounts(): (AcnhItemTab & { count: number })[]
 /** Serialized catalog for client-side tab rendering (avoids 2800+ nodes in static HTML). */
 export function getAcnhItemCatalogForClient(): string {
   return JSON.stringify(catalog.categories);
+}
+
+/** Spanish display names keyed by `{categoryId}:{slug}`. */
+export function getAcnhItemNamesEsForClient(): string {
+  return JSON.stringify(namesEsData.names ?? {});
 }
 
 export function hasAcnhItems(gameSlugParam: string): boolean {

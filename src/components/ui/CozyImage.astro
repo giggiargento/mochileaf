@@ -1,13 +1,13 @@
 ---
 /**
- * Optimized raster images via astro:assets (WebP + responsive widths).
- * Import images in src/assets and pass ImageMetadata — not public/ URL strings.
+ * Optimized raster images via astro:assets when src is ImageMetadata.
+ * Public URL strings use a plain img (synced/dynamic content) and opt out of the dev audit.
  */
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 
 interface Props {
-  src: ImageMetadata;
+  src: ImageMetadata | string;
   alt: string;
   class?: string;
   width?: number;
@@ -31,19 +31,37 @@ const {
   fetchpriority,
   quality = 85,
 } = Astro.props;
+
+const isAsset = typeof src === 'object' && src !== null && 'src' in src;
 ---
 
-<Image
-  src={src}
-  alt={alt}
-  class={className}
-  width={width}
-  height={height}
-  widths={widths}
-  sizes={sizes}
-  loading={loading}
-  fetchpriority={fetchpriority}
-  decoding="async"
-  quality={quality}
-  format="webp"
-/>
+{
+  isAsset ? (
+    <Image
+      src={src}
+      alt={alt}
+      class={className}
+      width={width}
+      height={height}
+      widths={widths}
+      sizes={sizes}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      decoding="async"
+      quality={quality}
+      format="webp"
+    />
+  ) : (
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      class={className}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      decoding="async"
+      data-image-component="true"
+    />
+  )
+}

@@ -220,6 +220,7 @@
   "page.items.matchCount": "{match} coincidencias · {total} en la pestaña",
   "page.items.buy": "Compra",
   "page.items.sell": "Venta",
+  "page.items.source": "Origen",
   "page.items.catalogFooter": "{total} objetos · Datos de",
   "page.items.imageCredit": "Imágenes vía",
   "page.houses.interiorCta": "Ver notas del interior →",

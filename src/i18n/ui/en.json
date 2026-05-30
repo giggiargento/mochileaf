@@ -220,6 +220,7 @@
   "page.items.matchCount": "{match} match · {total} in tab",
   "page.items.buy": "Buy",
   "page.items.sell": "Sell",
+  "page.items.source": "From",
   "page.items.catalogFooter": "{total} items · Data from",
   "page.items.imageCredit": "Images via",
   "page.houses.interiorCta": "See interior notes →",

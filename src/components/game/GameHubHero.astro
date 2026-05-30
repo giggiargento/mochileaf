@@ -36,14 +36,12 @@ const showCover = coverAsset ?? publicCover;
   }
   {
     !coverAsset && publicCover && (
-      <img
+      <CozyImage
         src={publicCover}
         alt=""
         class="absolute inset-0 h-full w-full object-cover object-bottom"
         loading="eager"
         fetchpriority="high"
-        decoding="async"
-        aria-hidden="true"
       />
     )
   }

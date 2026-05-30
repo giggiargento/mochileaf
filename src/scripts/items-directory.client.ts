@@ -1,3 +1,8 @@
+import {
+  formatCatalogPrice,
+  formatCatalogSource,
+} from '../lib/acnh-item-text';
+
 type AcnhCatalogItem = {
   slug: string;
   name: string;
@@ -24,9 +29,11 @@ type ItemsI18n = {
   matchCount: string;
   buy: string;
   sell: string;
+  source: string;
 };
 
 const PAGE_SIZE = 72;
+const ITEM_IMG_FALLBACK = '/favicon.png';
 
 function escapeHtml(text: string): string {
   return text
@@ -43,22 +50,103 @@ function formatTemplate(template: string, vars: Record<string, string>): string 
   );
 }
 
-function itemCardHtml(item: AcnhCatalogItem, i18n: ItemsI18n): string {
-  const bits = [
-    item.source && item.source !== '—' ? item.source : '',
-    item.buy ? `${i18n.buy}: ${item.buy}` : '',
-    item.sell ? `${i18n.sell}: ${item.sell}` : '',
-  ].filter(Boolean);
-  const title = bits.length ? `${item.name} — ${bits.join(' · ')}` : item.name;
+function itemKey(categoryId: string, item: AcnhCatalogItem): string {
+  return `${categoryId}:${item.slug}`;
+}
 
-  return `<article class="item-card item-card--compact cozy-card" title="${escapeHtml(title)}">
-  <div class="item-card__media">
-    <img src="${escapeHtml(item.image)}" alt="" width="64" height="64" class="item-card__img" loading="lazy" decoding="async" />
-  </div>
-  <div class="item-card__body">
-    <h3 class="item-card__name">${escapeHtml(item.name)}</h3>
-  </div>
-</article>`;
+function itemNameEs(
+  categoryId: string,
+  item: AcnhCatalogItem,
+  namesEs: Record<string, string>,
+): string | undefined {
+  return namesEs[itemKey(categoryId, item)];
+}
+
+function itemTooltipLines(
+  categoryId: string,
+  item: AcnhCatalogItem,
+  i18n: ItemsI18n,
+  namesEs: Record<string, string>,
+): string[] {
+  const lines: string[] = [item.name];
+  const es = itemNameEs(categoryId, item, namesEs);
+  if (es && es !== item.name) lines.push(es);
+
+  const buy = formatCatalogPrice(item.buy);
+  const sell = formatCatalogPrice(item.sell);
+  const source = formatCatalogSource(item.source);
+
+  if (buy) lines.push(`${i18n.buy}: ${buy}`);
+  if (sell) lines.push(`${i18n.sell}: ${sell}`);
+  if (source) lines.push(`${i18n.source}: ${source}`);
+
+  return lines;
+}
+
+function createItemCard(
+  categoryId: string,
+  item: AcnhCatalogItem,
+  i18n: ItemsI18n,
+  namesEs: Record<string, string>,
+  showTooltip: (anchor: HTMLElement, lines: string[]) => void,
+  hideTooltip: () => void,
+): HTMLElement {
+  const article = document.createElement('article');
+  article.className = 'item-card item-card--compact cozy-card';
+  article.tabIndex = 0;
+
+  const media = document.createElement('div');
+  media.className = 'item-card__media';
+
+  const img = document.createElement('img');
+  img.src = item.image;
+  img.alt = item.name;
+  img.width = 96;
+  img.height = 96;
+  img.loading = 'lazy';
+  img.decoding = 'async';
+  img.referrerPolicy = 'no-referrer';
+  img.className = 'item-card__img';
+  img.setAttribute('data-image-component', 'true');
+  img.addEventListener('error', () => {
+    if (img.src.endsWith(ITEM_IMG_FALLBACK)) return;
+    img.src = ITEM_IMG_FALLBACK;
+    img.classList.add('item-card__img--fallback');
+  });
+
+  media.appendChild(img);
+
+  const body = document.createElement('div');
+  body.className = 'item-card__body';
+
+  const name = document.createElement('h3');
+  name.className = 'item-card__name';
+  name.textContent = item.name;
+
+  body.appendChild(name);
+
+  const nameEs = itemNameEs(categoryId, item, namesEs);
+  if (nameEs && nameEs !== item.name) {
+    const es = document.createElement('p');
+    es.className = 'item-card__name-es';
+    es.textContent = nameEs;
+    body.appendChild(es);
+  }
+
+  article.append(media, body);
+
+  const lines = itemTooltipLines(categoryId, item, i18n, namesEs);
+  const reveal = () => showTooltip(article, lines);
+  const conceal = () => hideTooltip();
+
+  article.addEventListener('mouseenter', reveal);
+  article.addEventListener('mouseleave', conceal);
+  article.addEventListener('focusin', reveal);
+  article.addEventListener('focusout', (event) => {
+    if (!article.contains(event.relatedTarget as Node | null)) conceal();
+  });
+
+  return article;
 }
 
 function readItemsI18n(): ItemsI18n {
@@ -73,9 +161,16 @@ function readItemsI18n(): ItemsI18n {
       matchCount: '{match} match · {total} in tab',
       buy: 'Buy',
       sell: 'Sell',
+      source: 'From',
     };
   }
   return JSON.parse(el.textContent) as ItemsI18n;
+}
+
+function readNamesEs(): Record<string, string> {
+  const el = document.getElementById('acnh-items-names-es');
+  if (!el?.textContent) return {};
+  return JSON.parse(el.textContent) as Record<string, string>;
 }
 
 function initDirectory(root: HTMLElement) {
@@ -84,6 +179,7 @@ function initDirectory(root: HTMLElement) {
 
   const catalog = JSON.parse(catalogEl.textContent) as CatalogCategories;
   const i18n = readItemsI18n();
+  const namesEs = readNamesEs();
   const defaultTab = root.dataset.defaultTab ?? 'housewares';
   let activeTab = defaultTab;
   let query = '';
@@ -95,6 +191,56 @@ function initDirectory(root: HTMLElement) {
   const tabButtons = [...root.querySelectorAll<HTMLButtonElement>('[data-tab]')];
   const panels = [...root.querySelectorAll<HTMLElement>('[data-tab-panel]')];
 
+  const tooltip = document.createElement('div');
+  tooltip.className = 'item-card-tooltip';
+  tooltip.hidden = true;
+  tooltip.setAttribute('role', 'tooltip');
+  root.appendChild(tooltip);
+
+  let tooltipAnchor: HTMLElement | null = null;
+
+  function hideTooltip() {
+    tooltip.hidden = true;
+    tooltipAnchor = null;
+  }
+
+  function showTooltip(anchor: HTMLElement, lines: string[]) {
+    tooltipAnchor = anchor;
+    tooltip.replaceChildren();
+    lines.forEach((line, index) => {
+      const p = document.createElement('p');
+      if (index === 0) p.className = 'item-card-tooltip__title';
+      else if (index === 1 && line !== lines[0]) p.className = 'item-card-tooltip__es';
+      else p.className = 'item-card-tooltip__line';
+      p.textContent = line;
+      tooltip.append(p);
+    });
+    tooltip.hidden = false;
+    positionTooltip(anchor);
+  }
+
+  function positionTooltip(anchor: HTMLElement) {
+    const rect = anchor.getBoundingClientRect();
+    const tipRect = tooltip.getBoundingClientRect();
+    const margin = 8;
+    let left = rect.left + rect.width / 2 - tipRect.width / 2;
+    let top = rect.top - tipRect.height - margin;
+
+    if (top < margin) top = rect.bottom + margin;
+    left = Math.max(margin, Math.min(left, window.innerWidth - tipRect.width - margin));
+
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${top}px`;
+  }
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (tooltipAnchor && !tooltip.hidden) positionTooltip(tooltipAnchor);
+    },
+    true,
+  );
+
   function itemsForTab(tabId: string): AcnhCatalogItem[] {
     return catalog[tabId]?.items ?? [];
   }
@@ -103,7 +249,13 @@ function initDirectory(root: HTMLElement) {
     const items = itemsForTab(activeTab);
     const q = query.trim().toLowerCase();
     if (!q) return items;
-    return items.filter((item) => item.name.toLowerCase().includes(q));
+    return items.filter((item) => {
+      const haystack = [item.name, itemNameEs(activeTab, item, namesEs), formatCatalogSource(item.source)]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase();
+      return haystack.includes(q);
+    });
   }
 
   function renderPagination(total: number, shown: number) {
@@ -138,6 +290,7 @@ function initDirectory(root: HTMLElement) {
   }
 
   function renderGrid() {
+    hideTooltip();
     const panel = panels.find((p) => p.dataset.tabPanel === activeTab);
     const grid = panel?.querySelector('[data-item-grid]');
     if (!grid) return;
@@ -145,10 +298,19 @@ function initDirectory(root: HTMLElement) {
     const items = filteredItems();
     const total = items.length;
     const slice = items.slice(0, visibleCount);
-    grid.innerHTML =
-      slice.length > 0
-        ? slice.map((item) => itemCardHtml(item, i18n)).join('')
-        : `<p class="col-span-full text-sm text-muted">${escapeHtml(i18n.noMatch)}</p>`;
+    grid.replaceChildren();
+    if (slice.length > 0) {
+      for (const item of slice) {
+        grid.append(
+          createItemCard(activeTab, item, i18n, namesEs, showTooltip, hideTooltip),
+        );
+      }
+    } else {
+      const empty = document.createElement('p');
+      empty.className = 'col-span-full text-sm text-muted';
+      empty.textContent = i18n.noMatch;
+      grid.append(empty);
+    }
 
     if (countEl) {
       const label = catalog[activeTab]?.label ?? activeTab;
@@ -202,4 +364,15 @@ function initDirectory(root: HTMLElement) {
   setActiveTab(defaultTab);
 }
 
-document.querySelectorAll<HTMLElement>('[data-acnh-item-directory]').forEach(initDirectory);
+const initializedDirectories = new WeakSet<HTMLElement>();
+
+function bootItemDirectories() {
+  document.querySelectorAll<HTMLElement>('[data-acnh-item-directory]').forEach((root) => {
+    if (initializedDirectories.has(root)) return;
+    initializedDirectories.add(root);
+    initDirectory(root);
+  });
+}
+
+document.addEventListener('astro:page-load', bootItemDirectories);
+bootItemDirectories();

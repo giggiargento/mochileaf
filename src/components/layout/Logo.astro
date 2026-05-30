@@ -1,5 +1,7 @@
 ---
 import Icon from '../ui/Icon.astro';
+import CozyImage from '../ui/CozyImage.astro';
+import { getBrandAsset } from '../../data/brand-assets';
 import {
   brandIsologo,
   brandLogotipo,
@@ -33,17 +35,51 @@ const lightSrc = isIcon
 
 const darkSrc = isIcon ? brandIconDark ?? brandIcon : brandLogoDark;
 
+const lightAsset = getBrandAsset(lightSrc);
+const darkAsset = getBrandAsset(darkSrc);
+
 const useImage = isIcon ? hasBrandIcon || Boolean(lightSrc) : Boolean(lightSrc);
+
+/** Keep Astro Image aspect ratio aligned with the source file (isologo is ~square, not 672×120). */
+function brandImageDimensions(asset: typeof lightAsset, fallback: { width: number; height: number }) {
+  if (asset?.width && asset?.height) {
+    return { width: asset.width, height: asset.height };
+  }
+  return fallback;
+}
+
+const lightDimensions = brandImageDimensions(
+  lightAsset,
+  isIcon
+    ? { width: 36, height: 36 }
+    : fullWidth
+      ? size === 'footer'
+        ? { width: 504, height: 504 }
+        : { width: 208, height: 56 }
+      : isWordmark
+        ? { width: 208, height: 48 }
+        : { width: 220, height: 44 },
+);
+
+const darkDimensions = brandImageDimensions(
+  darkAsset,
+  lightDimensions,
+);
 
 const imgClass = isIcon
   ? 'h-9 w-9 object-contain'
   : fullWidth
     ? size === 'footer'
-      ? 'w-full h-auto min-h-[5.25rem] max-h-[10.5rem] object-contain object-left'
+      ? 'w-full h-auto max-h-[10.5rem] object-contain object-left'
       : 'w-full h-auto min-h-10 object-contain object-left'
     : isWordmark
       ? 'h-12 w-auto max-w-full object-contain object-left'
       : 'h-11 w-auto max-w-[220px] object-contain object-left';
+
+const responsiveWidths =
+  fullWidth && size === 'footer' ? [168, 336, 504] : [144, 208, 320];
+const responsiveSizes =
+  fullWidth && size === 'footer' ? '(min-width: 768px) 31.5rem, 100vw' : undefined;
 ---
 
 <a
@@ -57,24 +93,29 @@ const imgClass = isIcon
   {
     useImage && lightSrc ? (
       <>
-        <img
-          src={lightSrc}
+        <CozyImage
+          src={lightAsset ?? lightSrc}
           alt={brandAlt}
-          width={isIcon ? 36 : fullWidth ? (size === 'footer' ? 672 : 208) : undefined}
-          height={isIcon ? 36 : fullWidth ? (size === 'footer' ? 120 : 56) : isWordmark ? 48 : 44}
+          width={lightDimensions.width}
+          height={lightDimensions.height}
           class:list={[imgClass, darkSrc && darkSrc !== lightSrc && 'dark:hidden']}
+          widths={responsiveWidths}
+          sizes={responsiveSizes}
           loading="eager"
-          decoding="async"
+          fetchpriority={fullWidth ? 'high' : undefined}
+          quality={88}
         />
         {darkSrc && darkSrc !== lightSrc && (
-          <img
-            src={darkSrc}
+          <CozyImage
+            src={darkAsset ?? darkSrc}
             alt={brandAlt}
-            width={isIcon ? 36 : fullWidth ? (size === 'footer' ? 672 : 208) : undefined}
-            height={isIcon ? 36 : fullWidth ? (size === 'footer' ? 120 : 56) : isWordmark ? 48 : 44}
+            width={darkDimensions.width}
+            height={darkDimensions.height}
             class:list={[imgClass, 'hidden dark:block']}
+            widths={responsiveWidths}
+            sizes={responsiveSizes}
             loading="eager"
-            decoding="async"
+            quality={88}
           />
         )}
       </>

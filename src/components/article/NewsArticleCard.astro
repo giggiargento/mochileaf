@@ -1,5 +1,6 @@
 ---
 import type { Article } from '../../types';
+import CozyImage from '../ui/CozyImage.astro';
 import Badge from '../ui/Badge.astro';
 import { getGame } from '../../data/games';
 import { getArticleHref } from '../../utils/article-routes';
@@ -39,14 +40,13 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
           data-astro-reload
           aria-label={`Read: ${article.title}`}
         >
-          <img
-            src={article.coverImage}
+          <CozyImage
+            src={article.coverImage!}
             alt={article.title}
             width={640}
             height={360}
             class="news-masonry-img"
             loading="lazy"
-            decoding="async"
           />
         </a>
       )

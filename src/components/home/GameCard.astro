@@ -1,6 +1,8 @@
 ---
 import type { Game } from '../../types';
 import { gameCardImagePath } from '../../utils/game-images';
+import { getGameCardAsset } from '../../data/game-assets';
+import CozyImage from '../ui/CozyImage.astro';
 import { localePath, resolveLocale } from '../../i18n/locale';
 import { t } from '../../i18n/messages';
 import Badge from '../ui/Badge.astro';
@@ -20,7 +22,7 @@ const accentVariants = {
   honey: 'honey' as const,
 };
 
-const cardSrc = gameCardImagePath(game.slug);
+const cardSrc = getGameCardAsset(game.slug) ?? gameCardImagePath(game.slug);
 const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
 const hubHref =
   game.status === 'active' ? localePath(`/${game.slug}`, locale) : localePath('/games', locale);
@@ -41,14 +43,15 @@ const hubHref =
         <div
           class="h-full w-full origin-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
         >
-          <img
+          <CozyImage
             src={cardSrc}
             alt={cardAlt}
             width={640}
             height={400}
             class="game-card-image h-full w-full object-cover"
+            widths={[480, 640, 960]}
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             loading="lazy"
-            decoding="async"
           />
         </div>
       ) : (

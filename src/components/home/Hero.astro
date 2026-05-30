@@ -1,17 +1,12 @@
 ---
-import fs from 'node:fs';
-import path from 'node:path';
+import heroImage from '../../assets/home/hero-image.png';
+import CozyImage from '../ui/CozyImage.astro';
 import Button from '../ui/Button.astro';
 import Icon from '../ui/Icon.astro';
 import { localePath, resolveLocale } from '../../i18n/locale';
 import { t } from '../../i18n/messages';
 
 const locale = resolveLocale(Astro.currentLocale);
-
-const heroImagePath = '/images/hero-image.png';
-const heroImageExists = fs.existsSync(
-  path.join(process.cwd(), 'public', 'images', 'hero-image.png'),
-);
 
 const heroImageAlt =
   'Illustration of a cozy fantasy gaming world — warm light, soft nature, and peaceful adventure';
@@ -55,25 +50,18 @@ const heroImageAlt =
     </div>
 
     <div class="animate-fade-in lg:justify-self-end">
-      {
-        heroImageExists ? (
-          <img
-            src={heroImagePath}
-            alt={heroImageAlt}
-            width={640}
-            height={640}
-            class="mx-auto w-full max-w-lg object-contain lg:max-w-none"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          />
-        ) : (
-          <div
-            class="mx-auto aspect-square w-full max-w-lg rounded-[var(--radius-card)] bg-gradient-to-br from-sage-200 via-mist-100 to-blossom-100 shadow-card dark:from-sage-600/25 dark:via-mist-300/15 dark:to-blossom-300/15 lg:max-w-none"
-            aria-hidden="true"
-          />
-        )
-      }
+      <CozyImage
+        src={heroImage}
+        alt={heroImageAlt}
+        width={640}
+        height={640}
+        class="mx-auto w-full max-w-lg object-contain lg:max-w-none"
+        widths={[480, 640, 960, 1280]}
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        loading="eager"
+        fetchpriority="high"
+        quality={88}
+      />
     </div>
   </div>
 </section>

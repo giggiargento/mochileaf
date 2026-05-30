@@ -64,6 +64,7 @@ const removedGameRedirects = {
 };
 
 import rehypeRaw from 'rehype-raw';
+import { rehypeMarkdownImages } from './src/rehype/markdown-images.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -76,7 +77,7 @@ export default defineConfig({
     },
   },
   markdown: {
-    rehypePlugins: [rehypeRaw],
+    rehypePlugins: [rehypeRaw, rehypeMarkdownImages],
   },
   integrations: [
     sitemap({

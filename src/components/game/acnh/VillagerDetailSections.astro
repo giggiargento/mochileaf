@@ -1,5 +1,6 @@
 ---
 import type { Character, AcnhVillagerDetails } from '../../../types';
+import CozyImage from '../../ui/CozyImage.astro';
 import { defaultLocale, type Locale } from '../../../i18n/config';
 import { t } from '../../../i18n/messages';
 import Badge from '../../ui/Badge.astro';
@@ -54,14 +55,13 @@ const showHouse =
               {
                 house.exteriorImage && (
                   <figure class="aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] border border-default bg-card p-2 shadow-soft">
-                    <img
+                    <CozyImage
                       src={house.exteriorImage}
                       alt={`${character.name} house exterior in New Horizons`}
                       width={400}
                       height={300}
                       class="h-full w-full object-contain"
                       loading="lazy"
-                      decoding="async"
                     />
                   </figure>
                 )
@@ -69,14 +69,13 @@ const showHouse =
               {
                 house.interiorImage && (
                   <figure class="aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] border border-default bg-card shadow-soft">
-                    <img
+                    <CozyImage
                       src={house.interiorImage}
                       alt={`${character.name} house interior in New Horizons`}
                       width={400}
                       height={300}
                       class="h-full w-full object-cover"
                       loading="lazy"
-                      decoding="async"
                     />
                   </figure>
                 )
@@ -166,14 +165,13 @@ const showHouse =
               >
                 {
                   details.amiibo.image && (
-                    <img
+                    <CozyImage
                       src={details.amiibo.image}
                       alt={`${character.name} amiibo card #${details.amiibo.number}`}
                       width={180}
                       height={280}
                       class="h-full w-[520px] max-w-full object-contain"
                       loading="lazy"
-                      decoding="async"
                     />
                   )
                 }

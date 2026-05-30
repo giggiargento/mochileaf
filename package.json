@@ -19,6 +19,7 @@
     "inspiration:import": "node scripts/import-pinterest-board.mjs",
     "items:import": "node scripts/import-acnh-items.mjs",
     "items:optimize-images": "node scripts/optimize-acnh-item-images.mjs",
+    "items:sync-names-es": "node scripts/sync-acnh-item-names-es.mjs",
     "villagers:optimize-images": "node scripts/optimize-acnh-villagers.mjs",
     "villagers:import-details": "node scripts/import-acnh-villager-details.mjs",
     "creators:sync-avatar": "node scripts/sync-creator-avatar.mjs",

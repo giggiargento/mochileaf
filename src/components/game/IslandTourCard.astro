@@ -1,5 +1,6 @@
 ---
 import type { IslandTour } from '../../types';
+import CozyImage from '../ui/CozyImage.astro';
 import Badge from '../ui/Badge.astro';
 import Icon from '../ui/Icon.astro';
 
@@ -15,14 +16,13 @@ const thumb = `https://img.youtube.com/vi/${tour.youtubeId}/hqdefault.jpg`;
 <article class="cozy-card group overflow-hidden">
   <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" class="block">
     <div class="relative aspect-video overflow-hidden bg-muted">
-      <img
+      <CozyImage
         src={thumb}
         alt=""
         width={480}
         height={270}
         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
         loading="lazy"
-        decoding="async"
       />
       <span
         class="absolute inset-0 flex items-center justify-center bg-black/25 transition-colors group-hover:bg-black/35"

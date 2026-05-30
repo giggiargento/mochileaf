@@ -1,4 +1,6 @@
 ---
+import CozyImage from '../ui/CozyImage.astro';
+
 interface Props {
   src: string;
   alt: string;
@@ -9,6 +11,6 @@ const { src, alt, caption } = Astro.props;
 ---
 
 <figure class="article-cover">
-  <img src={src} alt={alt} width="1200" height="675" loading="eager" decoding="async" />
+  <CozyImage src={src} alt={alt} width={1200} height={675} loading="eager" />
   {caption && <figcaption class="article-cover-caption">{caption}</figcaption>}
 </figure>
