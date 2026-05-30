@@ -1,0 +1,96 @@
+---
+import Icon from '../ui/Icon.astro';
+import type { NteBondGift, NteCharacterBondProfile } from '../../data/nte-bond-gifts';
+import { nteUniversalBondGifts } from '../../data/nte-bond-gifts';
+import { giftVisual } from '../../lib/nte/gift-slug';
+import { t } from '../../i18n/messages';
+
+interface Props {
+  profile: NteCharacterBondProfile;
+  locale?: string;
+}
+
+const { profile, locale } = Astro.props;
+
+const toneClass: Record<string, string> = {
+  sage: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--sage',
+  blossom: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--blossom',
+  lavender: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--lavender',
+  mist: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--mist',
+  accent: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--accent',
+};
+
+function affinityLabel(points: number): string {
+  return t('character.bondGifts.affinity', locale, { points: String(points) });
+}
+
+function renderGift(gift: NteBondGift) {
+  const visual = giftVisual(gift);
+  return { gift, visual, toneClasses: toneClass[visual.tone] ?? toneClass.lavender };
+}
+
+const universal = nteUniversalBondGifts.map(renderGift);
+const favorites = profile.gifts.map(renderGift);
+---
+
+<section class="mt-16" aria-label={t('character.bondGifts.title', locale)}>
+  <div class="mb-4">
+    <h2 class="section-title mb-1">{t('character.bondGifts.title', locale)}</h2>
+    <p class="max-w-2xl text-xs text-secondary leading-relaxed">{t('character.bondGifts.description', locale)}</p>
+    {profile.tip && <p class="mt-1 text-xs text-accent leading-relaxed">{profile.tip}</p>}
+  </div>
+
+  <article class="cozy-card p-4 sm:p-5 space-y-4">
+    <div>
+      <h3 class="font-display text-base text-primary">{t('character.bondGifts.universalTitle', locale)}</h3>
+      <p class="mt-0.5 text-[11px] leading-snug text-muted">{t('character.bondGifts.universalNote', locale)}</p>
+      <ul class="bond-gift-grid mt-2">
+        {universal.map(({ gift, visual, toneClasses }) => (
+          <li class="bond-gift-tile">
+            <div class="bond-gift-tile-inner">
+              <div class={toneClasses} aria-hidden="true">
+                <Icon name={visual.icon} size={26} />
+              </div>
+              <div class="bond-gift-tile-body">
+                <p class="text-xs font-semibold leading-snug text-primary">
+                  {gift.name}
+                  <span class="font-medium text-accent"> · {affinityLabel(gift.affinity)}</span>
+                </p>
+                <p class="mt-0.5 inline-flex items-start gap-1 text-[11px] leading-snug text-secondary">
+                  <Icon name="map-pin" size={10} class="mt-px shrink-0" />
+                  <span>{gift.source}</span>
+                </p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="border-t border-default pt-4">
+      <h3 class="font-display text-base text-primary">{t('character.bondGifts.favoritesTitle', locale)}</h3>
+      <p class="mt-0.5 text-[11px] leading-snug text-muted">{t('character.bondGifts.favoritesNote', locale)}</p>
+      <ul class="bond-gift-grid mt-2">
+        {favorites.map(({ gift, visual, toneClasses }) => (
+          <li class="bond-gift-tile">
+            <div class="bond-gift-tile-inner">
+              <div class={toneClasses} aria-hidden="true">
+                <Icon name={visual.icon} size={26} />
+              </div>
+              <div class="bond-gift-tile-body">
+                <p class="text-xs font-semibold leading-snug text-primary">
+                  {gift.name}
+                  <span class="font-medium text-accent"> · {affinityLabel(gift.affinity)}</span>
+                </p>
+                <p class="mt-0.5 inline-flex items-start gap-1 text-[11px] leading-snug text-secondary">
+                  <Icon name="map-pin" size={10} class="mt-px shrink-0" />
+                  <span>{gift.source}</span>
+                </p>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </article>
+</section>

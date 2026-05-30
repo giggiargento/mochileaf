@@ -5,7 +5,6 @@ import { games, getGame } from '../../../data/games';
 import { getGameNavForGame } from '../../../data/game-nav';
 import type { GameContent } from '../../../content/schemas';
 import { displayStringList } from '../../../content/schemas/shared';
-import { resolveContentSeo } from '../../../lib/content/seo';
 import { usePageLocale } from '../../../lib/i18n/use-page-locale';
 
 export function getStaticPaths() {
@@ -17,10 +16,10 @@ export function getStaticPaths() {
 const { game } = Astro.props;
 const { locale, tr, hub } = usePageLocale(Astro.currentLocale);
 const hubData = game as GameContent;
-const seo = resolveContentSeo(hubData.seo, {
+const seo = {
   title: tr('aboutHub.title', { game: game.name }),
-  description: hubData.about ?? game.description,
-});
+  description: tr('aboutHub.metaDescription', { game: game.name }),
+};
 const navItems = getGameNavForGame(game, locale).filter((item) => item.href !== hub(game.slug));
 const isStardew = game.slug === 'stardew-valley';
 ---

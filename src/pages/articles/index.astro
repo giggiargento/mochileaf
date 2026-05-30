@@ -6,7 +6,7 @@ import { loadArticles } from '../../data/articles';
 import { usePageLocale } from '../../lib/i18n/use-page-locale';
 
 const { locale, tr } = usePageLocale(Astro.currentLocale);
-const sorted = await loadArticles(locale);
+const sorted = (await loadArticles(locale)).filter((article) => !article.gameSlug);
 ---
 
 <GlobalLayout title={tr('articles.title')} description={tr('articles.meta')}>

@@ -12,6 +12,8 @@ import { getAcnhDecorForCharacter } from '../../../data/character-decor-acnh';
 import { villagerPortrait } from '../../../data/characters-acnh';
 import { acnhPinterestBoards } from '../../../data/pinterest-boards-acnh';
 import { getNteCharacterGuide } from '../../../data/nte-character-guides';
+import { getNteBondGiftsForCharacter } from '../../../data/nte-bond-gifts';
+import NteBondGiftsSection from '../../../components/game/NteBondGiftsSection.astro';
 import { resolveContentSeo } from '../../../lib/content/seo';
 import { localePath, resolveLocale } from '../../../i18n/locale';
 import { localizeCharacterSeo } from '../../../lib/i18n/content';
@@ -36,6 +38,7 @@ const isAcnh = game.slug === 'animal-crossing-new-horizons';
 const isNte = game.slug === 'neverness-to-everness';
 const acnhDetails = isAcnh ? character.acnh : undefined;
 const nteGuide = isNte ? getNteCharacterGuide(character, locale) : undefined;
+const nteBondGifts = isNte ? getNteBondGiftsForCharacter(character.slug) : undefined;
 const portraitAlt = `${character.name} — ${character.role} in ${game.name}`;
 const listLabel = hubCopy.charactersTitle.toLowerCase();
 const characterSeo = localizeCharacterSeo(
@@ -349,6 +352,8 @@ const villagerInfoRows =
         </section>
       )
     }
+
+    {nteBondGifts && <NteBondGiftsSection profile={nteBondGifts} locale={locale} />}
 
     {acnhDetails && (
       <VillagerDetailSections character={character} details={acnhDetails} locale={locale} />

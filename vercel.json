@@ -21,6 +21,16 @@
       "permanent": true
     },
     {
+      "source": "/neverness-to-everness/tier-list",
+      "destination": "/neverness-to-everness",
+      "permanent": true
+    },
+    {
+      "source": "/neverness-to-everness/tier-list/",
+      "destination": "/neverness-to-everness/",
+      "permanent": true
+    },
+    {
       "source": "/acnh",
       "destination": "/animal-crossing-new-horizons",
       "permanent": true
@@ -48,6 +58,386 @@
     {
       "source": "/moonlit-tides/:path*",
       "destination": "/games",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-five-star-island-tips",
+      "destination": "/animal-crossing-new-horizons/guides/acnh-five-star-island-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-five-star-island-tips/",
+      "destination": "/animal-crossing-new-horizons/guides/acnh-five-star-island-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-five-star-island-tips",
+      "destination": "/es/animal-crossing-new-horizons/guides/acnh-five-star-island-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-five-star-island-tips/",
+      "destination": "/es/animal-crossing-new-horizons/guides/acnh-five-star-island-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-hub-welcome",
+      "destination": "/animal-crossing-new-horizons/news/acnh-hub-welcome/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-hub-welcome/",
+      "destination": "/animal-crossing-new-horizons/news/acnh-hub-welcome/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-hub-welcome",
+      "destination": "/es/animal-crossing-new-horizons/news/acnh-hub-welcome/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-hub-welcome/",
+      "destination": "/es/animal-crossing-new-horizons/news/acnh-hub-welcome/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-island-setup-beginner",
+      "destination": "/animal-crossing-new-horizons/guides/acnh-island-setup-beginner/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-island-setup-beginner/",
+      "destination": "/animal-crossing-new-horizons/guides/acnh-island-setup-beginner/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-island-setup-beginner",
+      "destination": "/es/animal-crossing-new-horizons/guides/acnh-island-setup-beginner/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-island-setup-beginner/",
+      "destination": "/es/animal-crossing-new-horizons/guides/acnh-island-setup-beginner/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-update-3-0-3-leaf-statue",
+      "destination": "/animal-crossing-new-horizons/news/acnh-update-3-0-3-leaf-statue/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-update-3-0-3-leaf-statue/",
+      "destination": "/animal-crossing-new-horizons/news/acnh-update-3-0-3-leaf-statue/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-update-3-0-3-leaf-statue",
+      "destination": "/es/animal-crossing-new-horizons/news/acnh-update-3-0-3-leaf-statue/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-update-3-0-3-leaf-statue/",
+      "destination": "/es/animal-crossing-new-horizons/news/acnh-update-3-0-3-leaf-statue/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-villager-hunting-tips",
+      "destination": "/animal-crossing-new-horizons/guides/acnh-villager-hunting-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-villager-hunting-tips/",
+      "destination": "/animal-crossing-new-horizons/guides/acnh-villager-hunting-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-villager-hunting-tips",
+      "destination": "/es/animal-crossing-new-horizons/guides/acnh-villager-hunting-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-villager-hunting-tips/",
+      "destination": "/es/animal-crossing-new-horizons/guides/acnh-villager-hunting-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-beginner-guide",
+      "destination": "/neverness-to-everness/guides/nte-beginner-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-beginner-guide/",
+      "destination": "/neverness-to-everness/guides/nte-beginner-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-beginner-guide",
+      "destination": "/es/neverness-to-everness/guides/nte-beginner-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-beginner-guide/",
+      "destination": "/es/neverness-to-everness/guides/nte-beginner-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-city-tycoon-chiz",
+      "destination": "/neverness-to-everness/guides/nte-city-tycoon-chiz/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-city-tycoon-chiz/",
+      "destination": "/neverness-to-everness/guides/nte-city-tycoon-chiz/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-city-tycoon-chiz",
+      "destination": "/es/neverness-to-everness/guides/nte-city-tycoon-chiz/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-city-tycoon-chiz/",
+      "destination": "/es/neverness-to-everness/guides/nte-city-tycoon-chiz/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-daily-routine",
+      "destination": "/neverness-to-everness/guides/nte-daily-routine/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-daily-routine/",
+      "destination": "/neverness-to-everness/guides/nte-daily-routine/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-daily-routine",
+      "destination": "/es/neverness-to-everness/guides/nte-daily-routine/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-daily-routine/",
+      "destination": "/es/neverness-to-everness/guides/nte-daily-routine/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-element-esper-cycle",
+      "destination": "/neverness-to-everness/guides/nte-element-esper-cycle/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-element-esper-cycle/",
+      "destination": "/neverness-to-everness/guides/nte-element-esper-cycle/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-element-esper-cycle",
+      "destination": "/es/neverness-to-everness/guides/nte-element-esper-cycle/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-element-esper-cycle/",
+      "destination": "/es/neverness-to-everness/guides/nte-element-esper-cycle/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-f2p-friendly",
+      "destination": "/neverness-to-everness/guides/nte-f2p-friendly/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-f2p-friendly/",
+      "destination": "/neverness-to-everness/guides/nte-f2p-friendly/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-f2p-friendly",
+      "destination": "/es/neverness-to-everness/guides/nte-f2p-friendly/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-f2p-friendly/",
+      "destination": "/es/neverness-to-everness/guides/nte-f2p-friendly/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-gacha-pity",
+      "destination": "/neverness-to-everness/guides/nte-gacha-pity/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-gacha-pity/",
+      "destination": "/neverness-to-everness/guides/nte-gacha-pity/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-gacha-pity",
+      "destination": "/es/neverness-to-everness/guides/nte-gacha-pity/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-gacha-pity/",
+      "destination": "/es/neverness-to-everness/guides/nte-gacha-pity/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-launch-welcome",
+      "destination": "/neverness-to-everness/news/nte-launch-welcome/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-launch-welcome/",
+      "destination": "/neverness-to-everness/news/nte-launch-welcome/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-launch-welcome",
+      "destination": "/es/neverness-to-everness/news/nte-launch-welcome/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-launch-welcome/",
+      "destination": "/es/neverness-to-everness/news/nte-launch-welcome/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-redeem-codes",
+      "destination": "/neverness-to-everness/guides/nte-redeem-codes/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-redeem-codes/",
+      "destination": "/neverness-to-everness/guides/nte-redeem-codes/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-redeem-codes",
+      "destination": "/es/neverness-to-everness/guides/nte-redeem-codes/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-redeem-codes/",
+      "destination": "/es/neverness-to-everness/guides/nte-redeem-codes/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-tier-list-notes",
+      "destination": "/neverness-to-everness/news/nte-tier-list-notes/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-tier-list-notes/",
+      "destination": "/neverness-to-everness/news/nte-tier-list-notes/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-tier-list-notes",
+      "destination": "/es/neverness-to-everness/news/nte-tier-list-notes/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-tier-list-notes/",
+      "destination": "/es/neverness-to-everness/news/nte-tier-list-notes/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-version-1-1-dreamwalk-corridor",
+      "destination": "/neverness-to-everness/news/nte-version-1-1-dreamwalk-corridor/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-version-1-1-dreamwalk-corridor/",
+      "destination": "/neverness-to-everness/news/nte-version-1-1-dreamwalk-corridor/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-version-1-1-dreamwalk-corridor",
+      "destination": "/es/neverness-to-everness/news/nte-version-1-1-dreamwalk-corridor/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-version-1-1-dreamwalk-corridor/",
+      "destination": "/es/neverness-to-everness/news/nte-version-1-1-dreamwalk-corridor/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-1-7-clint-sandy-romance",
+      "destination": "/stardew-valley/news/stardew-1-7-clint-sandy-romance/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-1-7-clint-sandy-romance/",
+      "destination": "/stardew-valley/news/stardew-1-7-clint-sandy-romance/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-1-7-clint-sandy-romance",
+      "destination": "/es/stardew-valley/news/stardew-1-7-clint-sandy-romance/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-1-7-clint-sandy-romance/",
+      "destination": "/es/stardew-valley/news/stardew-1-7-clint-sandy-romance/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-community-center-bundles",
+      "destination": "/stardew-valley/guides/stardew-community-center-bundles/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-community-center-bundles/",
+      "destination": "/stardew-valley/guides/stardew-community-center-bundles/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-community-center-bundles",
+      "destination": "/es/stardew-valley/guides/stardew-community-center-bundles/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-community-center-bundles/",
+      "destination": "/es/stardew-valley/guides/stardew-community-center-bundles/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-spring-crops-profit",
+      "destination": "/stardew-valley/guides/stardew-spring-crops-profit/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-spring-crops-profit/",
+      "destination": "/stardew-valley/guides/stardew-spring-crops-profit/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-spring-crops-profit",
+      "destination": "/es/stardew-valley/guides/stardew-spring-crops-profit/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-spring-crops-profit/",
+      "destination": "/es/stardew-valley/guides/stardew-spring-crops-profit/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-valley-year-one-guide",
+      "destination": "/stardew-valley/guides/stardew-valley-year-one-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-valley-year-one-guide/",
+      "destination": "/stardew-valley/guides/stardew-valley-year-one-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-valley-year-one-guide",
+      "destination": "/es/stardew-valley/guides/stardew-valley-year-one-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-valley-year-one-guide/",
+      "destination": "/es/stardew-valley/guides/stardew-valley-year-one-guide/",
       "permanent": true
     }
   ]

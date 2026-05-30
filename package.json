@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "node scripts/ensure-articles-content-schema.mjs && node scripts/generate-es-pages.mjs && astro sync && astro dev",
-    "build": "node scripts/ensure-articles-content-schema.mjs && node scripts/generate-es-pages.mjs && astro sync && astro build",
+    "build": "node scripts/ensure-articles-content-schema.mjs && node scripts/generate-es-pages.mjs && node scripts/sync-vercel-redirects.mjs && astro sync && astro build",
     "i18n:sync": "node scripts/i18n-sync.mjs",
     "i18n:sync:free": "node scripts/i18n-sync.mjs --free",
     "i18n:check": "node scripts/i18n-check.mjs",

@@ -80,6 +80,13 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en-US',
+          es: 'es-ES',
+        },
+      },
       // Utility search UIs — thin pages, not useful in organic results.
       filter: (page) => !page.includes('/search'),
     }),

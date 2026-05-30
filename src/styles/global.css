@@ -195,6 +195,85 @@ html.dark {
     @apply translate-y-0 shadow-[var(--shadow-card)];
   }
 
+  .bond-gift-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.625rem;
+    border: 1px solid var(--border-default);
+  }
+
+  .bond-gift-icon--tile {
+    align-self: stretch;
+    width: 3.25rem;
+    min-height: 3.25rem;
+  }
+
+  .bond-gift-icon--sage {
+    background: var(--label-sage-bg);
+    color: var(--label-sage-text);
+  }
+
+  .bond-gift-icon--blossom {
+    background: var(--label-blossom-bg);
+    color: var(--label-blossom-text);
+  }
+
+  .bond-gift-icon--lavender {
+    background: var(--label-lavender-bg);
+    color: var(--label-lavender-text);
+  }
+
+  .bond-gift-icon--mist {
+    background: var(--label-mist-bg);
+    color: var(--label-mist-text);
+  }
+
+  .bond-gift-icon--accent {
+    background: var(--label-honey-bg);
+    color: var(--label-honey-text);
+  }
+
+  .bond-gift-tile-inner {
+    display: flex;
+    align-items: stretch;
+    gap: 0.625rem;
+  }
+
+  .bond-gift-tile-body {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bond-gift-tile {
+    border-radius: 0.625rem;
+    border: 1px solid var(--border-default);
+    background-color: var(--bg-card);
+    padding: 0.625rem;
+  }
+
+  .bond-gift-grid {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  @media (min-width: 480px) {
+    .bond-gift-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .bond-gift-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
   /* Hub banner fade — follows light/dark via --bg-page (not Tailwind dark: variant) */
   .game-hub-hero-overlay {
     pointer-events: none;
