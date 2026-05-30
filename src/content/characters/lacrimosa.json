@@ -1,0 +1,26 @@
+{
+  "slug": "lacrimosa",
+  "name": "Lacrimosa",
+  "role": "Attack",
+  "element": "Chaos",
+  "rarity": "S",
+  "tier": "S",
+  "gameSlug": "neverness-to-everness",
+  "image": "/images/games/neverness-to-everness/characters/lacrimosa.webp",
+  "description": "Chaos main DPS from ETD-4 who stacks Nightmare and detonates DoT—she swaps between Tomato Metal and Tomato Percussion for burst windows. Featured on the v1.1 Dreamwalk Corridor banner.",
+  "seo": {
+    "title": "Lacrimosa — Attack",
+    "description": "Lacrimosa is a Chaos attack Esper in NTE—Nightmare stacking, stance swaps, and a limited banner pick in the Dreamwalk Corridor update."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Chaos",
+    "ETD-4"
+  ]
+}

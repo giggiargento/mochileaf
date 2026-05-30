@@ -3,15 +3,8 @@ Neverness to Everness — Mochileaf fan site cache
 Character portraits (characters/*.webp)
   Public paths on nteguide.com — unofficial fan reference.
 
-Home card (header.png)
-  Fan promo art supplied for Mochileaf (© Hotta Studio per on-image notice).
-
 Hub images (cover.jpg, header.jpg, card.jpg)
   Key art / icon from neverness.gg (DotGG fan wiki), or nteguide.com og fallback.
   Game © Hotta Studio / Level Infinite. This hub is unofficial.
-
-news/dreamwalk-corridor-1-1.jpg
-  Version 1.1 "Dreamwalk Corridor" promotional key art (press / special program).
-  © Hotta Studio / Perfect World Games. Unofficial fan reference.
 
 Replace or remove assets if requested by rights holders.

@@ -1,0 +1,67 @@
+{
+  "characterSlug": "lacrimosa",
+  "gameSlug": "neverness-to-everness",
+  "buildSummary": "Chaos DoT carry—keep Nightmare uptime, swap stances with Flavor Variation, and detonate with her ultimate once stacks are ready.",
+  "diskSets": [
+    {
+      "name": "Chaos-focused S Arc (TBD on banner)",
+      "note": "Prioritize ATK%, Crit Rate, and Crit DMG lines that reward sustained Nightmare damage."
+    },
+    {
+      "name": "Flexible A Arc placeholder",
+      "note": "Use a solid A-rank Chaos or neutral damage Arc until her signature is refined."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Module line",
+      "note": "Attack and crit substats amplify detonation windows."
+    },
+    {
+      "name": "A-tier Module fallback",
+      "note": "Attack and cycle rate placeholders while you farm Hard Rewind pulls."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Ultimate",
+      "scales": "Working Day Judgement—main AoE detonation and Nightmare application."
+    },
+    {
+      "skill": "Skill",
+      "scales": "Morning Tomato—Nightmare setup and combo entry."
+    },
+    {
+      "skill": "Basic Attack",
+      "scales": "Tomato Metal / Tomato Percussion chains and shatter procs."
+    },
+    {
+      "skill": "Support Skill",
+      "scales": "Microwake—swap-in area damage and filler cycle."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Level cap and ascension breakpoints.",
+      "location": "Rabbit Hole > Character Growth simulations",
+      "tip": "Level Lacrimosa before pushing module gambling—Awakening 3 is her biggest spike."
+    },
+    {
+      "name": "Weapon/Arc upgrade mats",
+      "purpose": "Main damage multiplier.",
+      "location": "Bubble Can Factory > Arc ascension materials",
+      "tip": "Farm ascension mats on days matching her Arc element route."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Crit/ATK scaling for detonation builds.",
+      "location": "Rabbit Hole > Carrota Rewind (Hard at Hunter 30)",
+      "tip": "Pair with Incantation or Psyche supports for Discord Esper Cycle reactions."
+    }
+  ],
+  "seo": {
+    "title": "Lacrimosa build guide",
+    "description": "Chaos DoT carry—keep Nightmare uptime, swap stances with Flavor Variation, and detonate with her ultimate once stacks are ready."
+  }
+}

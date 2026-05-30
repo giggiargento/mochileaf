@@ -7,6 +7,7 @@ const nteTierList: TierEntry[] = [
       { label: 'Baicang', slug: 'baicang' },
       { label: 'Chiz', slug: 'chiz' },
       { label: 'Daffodil', slug: 'daffodil' },
+      { label: 'Lacrimosa', slug: 'lacrimosa' },
       { label: 'Nanally', slug: 'nanally' },
       { label: 'Sakiri', slug: 'sakiri' },
     ],
@@ -26,7 +27,6 @@ const nteTierList: TierEntry[] = [
     members: [
       { label: 'Aurelia', slug: 'aurelia' },
       { label: 'Haniel', slug: 'haniel' },
-      { label: 'Xun', slug: 'xun' },
       { label: 'Zero (M)', slug: 'zero-male' },
     ],
   },

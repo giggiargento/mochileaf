@@ -29,7 +29,15 @@ const hubBase = hub(game.slug);
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
 const featuredCount =
   game.slug === 'neverness-to-everness' || isAcnh ? 6 : 3;
-const characters = getCharactersByGame(game.slug).slice(0, featuredCount);
+let characters = getCharactersByGame(game.slug);
+if (game.slug === 'neverness-to-everness') {
+  characters = [...characters].sort((a, b) => {
+    if (a.slug === 'lacrimosa') return -1;
+    if (b.slug === 'lacrimosa') return 1;
+    return a.name.localeCompare(b.name, 'en');
+  });
+}
+characters = characters.slice(0, featuredCount);
 const hubArticles = [
   ...(await getNewsByGame(game.slug, locale)),
   ...(await getGuidesByGame(game.slug, locale)),

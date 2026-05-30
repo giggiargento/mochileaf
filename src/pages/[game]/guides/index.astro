@@ -3,8 +3,10 @@ import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
 import ArticleCard from '../../../components/home/ArticleCard.astro';
 import ContentGrid from '../../../components/game/ContentGrid.astro';
+import IslandTourCard from '../../../components/game/IslandTourCard.astro';
 import { games } from '../../../data/games';
 import { getGuidesByGame } from '../../../data/articles';
+import { getVideoGuidesByGame } from '../../../data/nte-video-guides';
 import { usePageLocale } from '../../../lib/i18n/use-page-locale';
 import { t } from '../../../i18n/messages';
 
@@ -17,17 +19,36 @@ export function getStaticPaths() {
 const { game } = Astro.props;
 const { locale, tr } = usePageLocale(Astro.currentLocale);
 const guides = await getGuidesByGame(game.slug, locale);
+const videoGuides = getVideoGuidesByGame(game.slug);
+const hasVideos = videoGuides.length > 0;
+const hasArticles = guides.length > 0;
 ---
 
 <GameHubLayout game={game} title={t('nav.guides', locale)}>
   <PageHeader title={tr('guides.title')} description={tr('guides.description')} />
-  <div class="page-container-below-header">
-    {guides.length > 0 ? (
-      <ContentGrid columns={2}>
-        {guides.map((a) => <ArticleCard article={a} />)}
-      </ContentGrid>
+  <div class="page-container-below-header space-y-14">
+    {hasVideos && (
+      <section>
+        <h2 class="font-display text-2xl text-primary">{tr('guides.videosTitle')}</h2>
+        <p class="mt-2 max-w-2xl text-sm text-secondary">{tr('guides.videosDescription')}</p>
+        <ContentGrid columns={2} class="mt-8">
+          {videoGuides.map((video) => (
+            <IslandTourCard tour={video} />
+          ))}
+        </ContentGrid>
+      </section>
+    )}
+    {hasArticles ? (
+      <section>
+        {hasVideos && (
+          <h2 class="font-display text-2xl text-primary">{tr('guides.articlesTitle')}</h2>
+        )}
+        <ContentGrid columns={2} class={hasVideos ? 'mt-8' : ''}>
+          {guides.map((a) => <ArticleCard article={a} />)}
+        </ContentGrid>
+      </section>
     ) : (
-      <p class="prose-cozy text-center py-16">{tr('guides.empty')}</p>
+      !hasVideos && <p class="prose-cozy text-center py-16">{tr('guides.empty')}</p>
     )}
   </div>
 </GameHubLayout>

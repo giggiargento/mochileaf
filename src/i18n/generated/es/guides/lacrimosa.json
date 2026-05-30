@@ -1,0 +1,61 @@
+{
+  "buildSummary": "Transporte de Chaos DoT: mantén el tiempo activo de Nightmare, intercambia posturas con Flavor Variation y detona con su habilidad definitiva una vez que las acumulaciones estén listas.",
+  "diskSets": [
+    {
+      "name": "Chaos-focused S Arc (TBD on banner)",
+      "note": "Prioriza las líneas de ATK%, Crit Rate y Crit DMG que recompensan el daño sostenido de Nightmare."
+    },
+    {
+      "name": "Flexible A Arc placeholder",
+      "note": "Utilice un Caos sólido de rango A o un Arco de daño neutral hasta que se refine su firma."
+    }
+  ],
+  "modules": [
+    {
+      "name": "S-tier Module line",
+      "note": "Los subestados de ataque y críticos amplifican las ventanas de detonación."
+    },
+    {
+      "name": "A-tier Module fallback",
+      "note": "Marcadores de posición de velocidad de ataque y ciclo mientras cultivas tirones de Hard Rewind."
+    }
+  ],
+  "skillPriority": [
+    {
+      "skill": "Último",
+      "scales": "Juicio del día laboral: detonación principal de área de efecto y aplicación de Pesadilla."
+    },
+    {
+      "skill": "Habilidad",
+      "scales": "Morning Tomato: configuración de Nightmare y entrada combinada."
+    },
+    {
+      "skill": "Ataque básico",
+      "scales": "Tomato Metal / Tomato Cadenas de percusión y procesos de destrucción."
+    },
+    {
+      "skill": "Habilidad de apoyo",
+      "scales": "Microondas: daño del área de intercambio y ciclo de llenado."
+    }
+  ],
+  "farming": [
+    {
+      "name": "Esper EXP materials",
+      "purpose": "Límite de nivel y puntos de interrupción de ascensión.",
+      "location": "Rabbit Hole > Simulaciones de crecimiento de personajes",
+      "tip": "Nivele a Lacrimosa antes de impulsar el juego de módulos: Awakening 3 es su mayor pico."
+    },
+    {
+      "name": "Weapon/Arc upgrade mats",
+      "purpose": "Multiplicador de daño principal.",
+      "location": "Bubble Can Factory > Materiales de ascensión de arco.",
+      "tip": "Cultive tapetes de ascensión en los días que coincidan con la ruta de su elemento Arc."
+    },
+    {
+      "name": "Module enhancement chips",
+      "purpose": "Escalado de críticos/ATK para construcciones de detonación.",
+      "location": "Madriguera de conejo > Rebobinado de zanahoria (difícil en Hunter 30)",
+      "tip": "Combínalo con soportes de Incantation o Psyche para reacciones de Discord Esper Cycle."
+    }
+  ]
+}

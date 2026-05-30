@@ -30,7 +30,7 @@ const PORTRAITS = [
   'hathor',
   'chiz',
   'aurelia',
-  'xun',
+  'lacrimosa',
 ];
 
 /** Official fan-site key art (neverness.gg). */
