@@ -16,7 +16,7 @@ const SOURCES: CreatorSource[] = [
   {
     slug: 'giggiland',
     instagram: 'giggiland',
-    nameFallback: 'Giggiland',
+    nameFallback: 'Giggi',
     linkLabel: 'Follow on Instagram',
     accent: 'sage',
     featured: true,
@@ -27,6 +27,13 @@ const SOURCES: CreatorSource[] = [
     nameFallback: 'Cozy Quartzz',
     linkLabel: 'Follow on Instagram',
     accent: 'blossom',
+  },
+  {
+    slug: 'madisons-horizons',
+    instagram: 'madisons.horizons',
+    nameFallback: "Madison's Horizons",
+    linkLabel: 'Follow on Instagram',
+    accent: 'lavender',
   },
 ];
 

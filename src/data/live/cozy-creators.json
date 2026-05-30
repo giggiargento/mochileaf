@@ -1,12 +1,13 @@
 {
-  "updatedAt": "2026-05-25T23:54:15.598Z",
+  "updatedAt": "2026-05-28T00:00:00.000Z",
   "creators": {
     "giggiland": {
       "slug": "giggiland",
       "handle": "giggiland",
-      "name": "Giggiland",
-      "error": "Instagram rate limit (429). Wait and retry, or configure INSTAGRAM_ACCESS_TOKEN + INSTAGRAM_BUSINESS_USER_ID.",
-      "syncedAt": "2026-05-25T23:54:12.519Z"
+      "name": "Giggi",
+      "image": "/images/creators/giggiland.jpg",
+      "syncedAt": "2026-05-28T00:00:00.000Z",
+      "source": "instagram-page"
     },
     "cozyquartzz": {
       "slug": "cozyquartzz",
@@ -14,6 +15,14 @@
       "name": "courtney ₊˚✩",
       "image": "/images/creators/cozyquartzz.jpg",
       "syncedAt": "2026-05-26T00:00:00.000Z",
+      "source": "instagram-page"
+    },
+    "madisons-horizons": {
+      "slug": "madisons-horizons",
+      "handle": "madisons.horizons",
+      "name": "Madison's Horizons",
+      "image": "/images/creators/madisons-horizons.jpg",
+      "syncedAt": "2026-05-28T00:00:00.000Z",
       "source": "instagram-page"
     }
   }
