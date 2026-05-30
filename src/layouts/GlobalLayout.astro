@@ -4,6 +4,7 @@ import Sidebar from '../components/layout/Sidebar.astro';
 import MobileNav from '../components/layout/MobileNav.astro';
 import Footer from '../components/layout/Footer.astro';
 import LocaleToolbar from '../components/ui/LocaleToolbar.astro';
+import AdPlaceholder from '../components/ui/AdPlaceholder.astro';
 import { getGlobalNav } from '../utils/navigation';
 import type { Locale } from '../i18n/config';
 import { t } from '../i18n/messages';
@@ -20,8 +21,9 @@ const globalNav = getGlobalNav(locale);
 
 <BaseLayout title={title} description={description} ambient="home">
   <Sidebar items={globalNav} persistKey={`mochi-sidebar-home-${locale}`}>
-    <div slot="footer" class="space-y-3">
+    <div slot="footer" class="space-y-4">
       <LocaleToolbar />
+      <AdPlaceholder slot="sidebar" label="Sidebar ad" />
       <p class="text-xs text-muted">{t('footer.motto', locale)}</p>
     </div>
   </Sidebar>

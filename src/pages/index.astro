@@ -9,15 +9,21 @@ import Newsletter from '../components/home/Newsletter.astro';
 import PromoBanner from '../components/home/PromoBanner.astro';
 import AdPlaceholder from '../components/ui/AdPlaceholder.astro';
 import { getFeaturedGames } from '../data/games';
-import { getFeaturedArticles, getTrendingArticles } from '../data/articles';
+import { getTrendingArticles, loadArticles, sortArticlesByDateDesc } from '../data/articles';
+import { isNewsCategory } from '../utils/article-routes';
 import { updates } from '../data/updates';
 import { localePath, resolveLocale } from '../i18n/locale';
 import { t } from '../i18n/messages';
 
 const locale = resolveLocale(Astro.currentLocale);
 const featuredGames = getFeaturedGames(locale);
-const featuredArticles = await getFeaturedArticles(locale);
-const trendingArticles = (await getTrendingArticles(locale)).slice(0, 2);
+const allArticles = await loadArticles(locale);
+const featuredArticles = sortArticlesByDateDesc(
+  allArticles.filter((a) => a.gameSlug && isNewsCategory(a.category) && a.featured),
+).slice(0, 4);
+const trendingArticles = sortArticlesByDateDesc(
+  (await getTrendingArticles(locale)).filter((a) => a.gameSlug && isNewsCategory(a.category)),
+).slice(0, 2);
 ---
 
 <GlobalLayout title={t('home.meta.title', locale)} description={t('home.meta.description', locale)}>
