@@ -33,13 +33,22 @@ const heroImageAlt =
       <p class="mt-6 max-w-xl text-lg text-secondary leading-relaxed">
         {t('home.hero.description', locale)}
       </p>
-      <div class="mt-8 flex flex-wrap items-center justify-start gap-3 md:mt-10 md:gap-4">
-        <Button href={localePath('/games', locale)} size="lg">
-          <Icon name="game-controller" size={18} weight="regular" class="text-white" />
+      <div class="mt-8 grid grid-cols-2 gap-3 md:mt-10 md:flex md:flex-wrap md:items-center md:justify-start md:gap-4">
+        <Button
+          href={localePath('/games', locale)}
+          size="lg"
+          class="hero-cta-btn w-full min-w-0 justify-center md:w-auto"
+        >
+          <Icon name="game-controller" size={18} weight="regular" class="hero-cta-btn-icon shrink-0 text-white" />
           {t('home.hero.ctaGames', locale)}
         </Button>
-        <Button href={localePath('/articles', locale)} variant="secondary" size="lg">
-          <Icon name="article" size={18} weight="regular" />
+        <Button
+          href={localePath('/articles', locale)}
+          variant="secondary"
+          size="lg"
+          class="hero-cta-btn w-full min-w-0 justify-center md:w-auto"
+        >
+          <Icon name="article" size={18} weight="regular" class="hero-cta-btn-icon shrink-0" />
           {t('home.hero.ctaArticles', locale)}
         </Button>
       </div>
