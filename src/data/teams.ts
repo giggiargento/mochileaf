@@ -204,6 +204,26 @@ export const teams: Team[] = [
     difficulty: 'easy',
   },
   {
+    slug: 'lacrimosa-hybrid-sustain',
+    name: 'Lacrimosa hybrid sustain',
+    gameSlug,
+    members: [
+      { slug: 'lacrimosa', compRole: 'Main DPS' },
+      { slug: 'sakiri', compRole: 'DoT amp' },
+      { slug: 'nanally', compRole: 'Heal' },
+      { slug: 'hotori', compRole: 'Burst' },
+    ],
+    focus: 'Scorch + Blossom + Hexed',
+    summary:
+      'Practical Lacrimosa lane with units you likely already have. Nanally sustains; Hotori adds Cosmos Blossom; Sakiri links Scorch and Hexed without a second on-field DPS.',
+    synergies: [
+      'Scorch (Lacrimosa + Sakiri), Hexed (Sakiri + Nanally), Blossom (Nanally + Hotori) in one rotation.',
+      'Swap Hotori for Daffodil when you need dedicated Break on boss fights.',
+    ],
+    tags: ['Lacrimosa', 'Scorch', 'Blossom', 'Stable'],
+    difficulty: 'medium',
+  },
+  {
     slug: 'lacrimosa-mono-scorch',
     name: 'Mono Scorch (Lacrimosa)',
     gameSlug,
@@ -215,34 +235,12 @@ export const teams: Team[] = [
     ],
     focus: 'Scorch-only DoT',
     summary:
-      'Two Chaos and two Incantation — the only reaction here is Scorch. Sakiri amplifies DoT on Scorched targets; Baicang and Lacrimosa stack different burns on top. Synergy is real, but Lacrimosa and Baicang both want field time, so rotations need practice to avoid feeling clunky.',
+      'Pure Scorch lane: Sakiri amps DoT, Lacrimosa and Baicang stack burns. Both DPS want field time—plan swaps during boss phases.',
     synergies: [
-      'Pure Scorch lane: every swap that mixes Chaos + Incantation refreshes the 15s DoT window.',
-      'Sakiri’s Scorch-friendly buffs plus Baicang Power Words and Lacrimosa Nightmare reward patient DoT stacking.',
-      'Daffodil Break setup helps, but plan who stays on-field during long boss phases.',
+      'Chaos + Incantation swaps refresh the 15s Scorch DoT window.',
+      'Daffodil Break helps; decide who holds field in long fights.',
     ],
     tags: ['Lacrimosa', 'Scorch', 'DoT', 'Experimental'],
-    difficulty: 'hard',
-  },
-  {
-    slug: 'lacrimosa-passionate-combo',
-    name: 'ETD-4 Passionate Combo',
-    gameSlug,
-    members: [
-      { slug: 'lacrimosa', compRole: 'Main DPS' },
-      { slug: 'baicang', compRole: 'Burst / swap' },
-      { slug: 'daffodil', compRole: 'Break' },
-      { slug: 'haniel', compRole: 'Support' },
-    ],
-    focus: 'Discord + faction swap',
-    summary:
-      'Lacrimosa and Baicang share Passionate Combo: swap to Baicang during Lacrimosa’s bat form for a free attack, Power Word Silence, super-jump, and +20% team ATK. Daffodil handles Break; Haniel completes the Psyche leg for Nova and Discord with Scorch.',
-    synergies: [
-      'Passionate Combo is one of the strongest swap interactions in 1.0 — time it before burst windows.',
-      'Tomato Banquet on Lacrimosa spikes when Discord hits an already Broken target.',
-      'Triple-element bottom row (Chaos + Incantation + Psyche) enables Discord break-bar pressure.',
-    ],
-    tags: ['Lacrimosa', 'ETD-4', 'Discord', 'Meta'],
     difficulty: 'hard',
   },
   {
@@ -257,11 +255,10 @@ export const teams: Team[] = [
     ],
     focus: 'Nova + Scorch → Discord',
     summary:
-      'Lacrimosa leads as flexible Chaos carry while Daffodil drives Break and Sakiri keeps targets controlled. Haniel adds Psyche for Nova — overlap Nova and Scorch for Discord break-bar chip throughout the fight.',
+      'Lacrimosa carry with Daffodil Break and Sakiri CC. Haniel adds Nova—overlap with Scorch for Discord break-bar pressure.',
     synergies: [
-      'Same Discord loop as the classic Incantation boss comp, with Lacrimosa replacing Baicang as primary carry.',
-      'Daffodil Insight + Break windows amplify Lacrimosa Nightmare detonations.',
-      'Sakiri CC extends safe setup for Haniel buff cycles.',
+      'Classic Discord loop with Lacrimosa as primary carry.',
+      'Break windows amplify Lacrimosa Nightmare detonations.',
     ],
     tags: ['Lacrimosa', 'Discord', 'Chaos', 'Bossing'],
     difficulty: 'hard',
@@ -307,27 +304,6 @@ export const teams: Team[] = [
     ],
     tags: ['Cosmos', 'Chiz', 'Reactions'],
     difficulty: 'medium',
-  },
-  {
-    slug: 'skia-lakshana-starter',
-    name: 'Lakshana beginner lane',
-    gameSlug,
-    members: [
-      { slug: 'skia', compRole: 'Main DPS' },
-      { slug: 'sakiri', compRole: 'Control' },
-      { slug: 'zero-female', compRole: 'Cycle' },
-      { slug: 'haniel', compRole: 'Buff' },
-    ],
-    focus: 'Remora + Stain',
-    summary:
-      'Beginner-friendly Lakshana lane: Skia on sustained damage, Sakiri on CC, Zero keeping Esper Cycle procs flowing. Stain raises Psyche and Lakshana damage taken without risky HP mechanics.',
-    synergies: [
-      'Remora (Cosmos + Lakshana) and Stain (Psyche + Lakshana) fit a low-execution rotation.',
-      'Zero Skill helps trigger cycles without waiting on the meter.',
-      'Swap Fadia in for Haniel if you need more survivability without breaking the lane.',
-    ],
-    tags: ['Lakshana', 'Beginner', 'F2P-friendly'],
-    difficulty: 'easy',
   },
 ];
 
