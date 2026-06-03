@@ -259,14 +259,14 @@ const villagerInfoRows =
               <h3 class="font-display text-xl text-primary">{t('character.recommendedDisks', locale)}</h3>
               <ul class="mt-4 space-y-3">
                 {nteGuide.diskSets.map((disk) => (
-                  <li class="flex items-center gap-3 rounded-xl border border-default bg-card p-3">
+                  <li class="nte-disk-row flex items-start gap-4">
                     {disk.image && (
                       <CozyImage
                         src={disk.image}
                         alt={disk.name}
-                        width={32}
-                        height={32}
-                        class="h-8 w-8 rounded-full border border-default object-cover"
+                        width={72}
+                        height={72}
+                        class="nte-disk-row__img"
                         loading="lazy"
                       />
                     )}

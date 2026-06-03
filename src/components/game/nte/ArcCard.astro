@@ -1,0 +1,40 @@
+---
+import CozyImage from '../../ui/CozyImage.astro';
+import type { NteArc } from '../../../lib/nte-arcs';
+
+interface Props {
+  arc: NteArc;
+  locale?: 'en' | 'es';
+}
+
+const { arc, locale = 'en' } = Astro.props;
+---
+
+<article class="nte-arc-card cozy-card">
+  <div class="nte-arc-card__media">
+    {
+      arc.image ? (
+        <CozyImage
+          src={arc.image}
+          alt={arc.name}
+          width={128}
+          height={128}
+          class="nte-arc-card__img"
+          loading="lazy"
+        />
+      ) : (
+        <div class="nte-arc-card__placeholder" aria-hidden="true" />
+      )
+    }
+    <span class={`nte-arc-card__rarity nte-arc-card__rarity--${arc.rarity.toLowerCase()}`}>
+      {arc.rarity}
+    </span>
+  </div>
+  <div class="nte-arc-card__body">
+    <h3 class="nte-arc-card__name">{arc.name}</h3>
+    <p class="nte-arc-card__meta text-xs text-muted">
+      {arc.type} · ATK {arc.atk} · {arc.substat}
+    </p>
+    <p class="nte-arc-card__effect text-xs text-secondary">{arc.effect}</p>
+  </div>
+</article>

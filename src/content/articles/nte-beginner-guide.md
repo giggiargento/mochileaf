@@ -15,7 +15,7 @@ Neverness to Everness opens quickly—new faces, elements, and menus arrive with
 
 ## Pick a small team early
 
-If you are playing without spending, Chiz from City Tycoon is a welcoming first striker—earned through the city mode, not the banner. Pair him with whichever Cosmos or Anima support you already have (Mint, Jiuyuan, or Nanally feel especially friendly).
+If you are playing without spending, Chiz from City Tycoon is a welcoming first striker—earned through the city mode, not the banner. Pair him with Anima allies you already have (Mint, Jiuyuan, or Nanally feel especially friendly).
 
 Lucky enough to welcome Baicang or Daffodil early? Browse the Teams page for ideas, then focus upgrades on one squad before spreading resources across the whole roster.
 

@@ -2,12 +2,12 @@
   "buildSummary": "Apoyo de ánima que mantiene al grupo respirando: invierte en curación y protección antes de las estadísticas de daño.",
   "diskSets": [
     {
-      "name": "Eternal Waltz (S)",
-      "note": "Un arco de sostenido suave para soportes que se apoyan en su Ultimate con frecuencia."
+      "name": "Ready-Ready (S)",
+      "note": "Best overall on neverness.gg: Psyche support kit that rewards fast skill rotations and team buffs."
     },
     {
-      "name": "Call of the Twisted City (A)",
-      "note": "Un arco de apoyo tranquilo mientras cultivas algo más especializado."
+      "name": "Fluff of Fortitude (S)",
+      "note": "Strong alternative when you want extra survivability without giving up team utility."
     }
   ],
   "modules": [

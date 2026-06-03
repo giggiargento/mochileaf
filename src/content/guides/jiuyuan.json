@@ -4,12 +4,12 @@
   "buildSummary": "Anima support with garden-quiet utility—healing and swap skills come before personal damage.",
   "diskSets": [
     {
-      "name": "Eternal Waltz (S)",
-      "note": "A gentle sustain Arc for supports who lean on their Ultimate often."
+      "name": "Reality Refuge (S)",
+      "note": "Best overall on neverness.gg: Anima support Arc that amplifies shields and team protection."
     },
     {
-      "name": "Call of the Twisted City (A)",
-      "note": "A calm support Arc while you farm something more specialized."
+      "name": "Fluff of Fearlessness (S)",
+      "note": "Strong alternative when you want more offensive buffs after Ultimate windows."
     }
   ],
   "modules": [

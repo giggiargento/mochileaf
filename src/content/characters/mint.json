@@ -1,16 +1,16 @@
 {
   "slug": "mint",
   "name": "Mint",
-  "role": "Assist",
-  "element": "Cosmos",
+  "role": "Attack",
+  "element": "Anima",
   "rarity": "A",
-  "tier": "C",
+  "tier": "B",
   "gameSlug": "neverness-to-everness",
   "image": "/images/games/neverness-to-everness/characters/mint.webp",
-  "description": "Cosmos assist with breezy battlefield tricks—handy for open-world strolls and co-op where a little off-field help keeps exploration relaxed.",
+  "description": "Anima attacker with breezy dual-blade energy—a free story pick from the Bureau of Anomaly Control who shines in early exploration before stronger carries arrive.",
   "seo": {
-    "title": "Mint — Assist",
-    "description": "Mint is a Cosmos assist Esper in NTE—light utility, exploration-friendly tools, and an easygoing support angle for casual play."
+    "title": "Mint — Attack",
+    "description": "Mint is an Anima attack Esper in NTE—story-unlocked dual blades, lively Anima resonance, and a friendly early-game damage option."
   },
   "likes": [],
   "dislikes": [],
@@ -20,6 +20,6 @@
   "relationships": [],
   "trivia": [],
   "tags": [
-    "Cosmos"
+    "Anima"
   ]
 }

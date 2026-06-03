@@ -9,7 +9,7 @@ seo:
   title: "NTE Tier List — How We Rank"
   description: "How Mochileaf ranks NTE characters—story comfort, accessibility, and vibe rather than competitive speedrun tiers."
 ---
-Tier labels on Mochileaf are a **compass, not a verdict**. We group characters by how welcoming they feel in everyday play—not by day-one banner hype or spreadsheet panic.
+Tier labels on Mochileaf are a **compass, not a verdict**. Rankings follow [neverness.gg’s tier list](https://neverness.gg/tier-list/) (S+ and S tiers are shown together as **S** here). Lacrimosa stays **A** while that site still lists her as TBD.
 
 ## What we look at
 

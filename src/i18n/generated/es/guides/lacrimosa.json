@@ -2,12 +2,12 @@
   "buildSummary": "Transporte de Chaos DoT: mantén el tiempo activo de Nightmare, intercambia posturas con Flavor Variation y detona con su habilidad definitiva una vez que las acumulaciones estén listas.",
   "diskSets": [
     {
-      "name": "Chaos-focused S Arc (TBD on banner)",
-      "note": "Prioriza las líneas de ATK%, Crit Rate y Crit DMG que recompensan el daño sostenido de Nightmare."
+      "name": "Youthful Fantasy (S)",
+      "note": "Placeholder best pick while neverness.gg’s Lacrimosa build is under construction—same Chaos break focus as Daffodil until an official Arc is listed."
     },
     {
-      "name": "Flexible A Arc placeholder",
-      "note": "Utilice un Caos sólido de rango A o un Arco de daño neutral hasta que se refine su firma."
+      "name": "Shiny Days (A)",
+      "note": "Best A-rank alt for Nightmare detonation teams: bonus damage against broken targets."
     }
   ],
   "modules": [

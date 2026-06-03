@@ -2,15 +2,15 @@
   "slug": "aurelia",
   "name": "Aurelia",
   "role": "Defense",
-  "element": "Anima",
+  "element": "Psyche",
   "rarity": "A",
   "tier": "B",
   "gameSlug": "neverness-to-everness",
   "image": "/images/games/neverness-to-everness/characters/aurelia.webp",
-  "description": "Soft-spoken Anima guardian who reads like a calm breath between blows—ideal if you want a forgiving defender while you learn how the element feels in battle.",
+  "description": "Soft-spoken Psyche guardian who reads like a calm breath between blows—ideal if you want a forgiving defender while you learn how the element feels in battle.",
   "seo": {
     "title": "Aurelia — Defense",
-    "description": "Aurelia is an Anima defense character in NTE—gentle kit, lifelike aesthetics, and a patient frontline vibe suited to newer players."
+    "description": "Aurelia is a Psyche defense character in NTE—gentle kit, mind-tinted aesthetics, and a patient frontline vibe suited to newer players."
   },
   "likes": [],
   "dislikes": [],
@@ -20,6 +20,6 @@
   "relationships": [],
   "trivia": [],
   "tags": [
-    "Anima"
+    "Psyche"
   ]
 }

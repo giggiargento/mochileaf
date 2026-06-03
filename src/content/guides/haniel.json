@@ -1,15 +1,15 @@
 {
   "characterSlug": "haniel",
   "gameSlug": "neverness-to-everness",
-  "buildSummary": "Lakshana assist for unhurried fights—small buffs and timing matter more than burst stats here.",
+  "buildSummary": "Psyche assist for unhurried fights—small buffs and timing matter more than burst stats here.",
   "diskSets": [
     {
-      "name": "Marching Beyond Time (S)",
-      "note": "High-value utility Arc for teams that benefit from support-cycle acceleration."
+      "name": "Blow up the Crowd (S)",
+      "note": "Best overall on neverness.gg: Psyche assist Arc tuned for charge teams and frequent Ultimates."
     },
     {
       "name": "A Time Will Come (A)",
-      "note": "Flexible A-rank option that fits mixed-type team compositions."
+      "note": "Budget assist Arc while you farm copies of her best-in-slot weapon."
     }
   ],
   "modules": [
@@ -62,6 +62,6 @@
   ],
   "seo": {
     "title": "Haniel build guide",
-    "description": "Lakshana assist for unhurried fights—small buffs and timing matter more than burst stats here."
+    "description": "Psyche assist for unhurried fights—small buffs and timing matter more than burst stats here."
   }
 }

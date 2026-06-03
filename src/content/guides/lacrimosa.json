@@ -4,12 +4,12 @@
   "buildSummary": "Chaos DoT carry—keep Nightmare uptime, swap stances with Flavor Variation, and detonate with her ultimate once stacks are ready.",
   "diskSets": [
     {
-      "name": "Chaos-focused S Arc (TBD on banner)",
-      "note": "Prioritize ATK%, Crit Rate, and Crit DMG lines that reward sustained Nightmare damage."
+      "name": "Youthful Fantasy (S)",
+      "note": "Placeholder best pick while neverness.gg’s Lacrimosa build is under construction—same Chaos break focus as Daffodil until an official Arc is listed."
     },
     {
-      "name": "Flexible A Arc placeholder",
-      "note": "Use a solid A-rank Chaos or neutral damage Arc until her signature is refined."
+      "name": "Shiny Days (A)",
+      "note": "Best A-rank alt for Nightmare detonation teams: bonus damage against broken targets."
     }
   ],
   "modules": [

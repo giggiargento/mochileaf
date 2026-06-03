@@ -13,27 +13,27 @@ Elements in Neverness to Everness are less about memorizing charts and more abou
 
 ## Cosmos
 
-Starlit and forward-moving—Cosmos strikers often feel like comets: bright bursts, then a steady glow. Hotori, Chiz, and the Zero variants embody that skyward energy.
+Starlit and forward-moving—Cosmos strikers often feel like comets: bright bursts, then a steady glow. Hotori, Chiz, Edgar, and the Zero variants embody that skyward energy.
 
 ## Anima
 
-Life-aligned and restorative—Anima supports like Nanally and Jiuyuan read as gardeners on the battlefield, keeping everyone breathing during longer fights.
+Life-aligned and restorative—Anima supports like Nanally and Jiuyuan read as gardeners on the battlefield, keeping everyone breathing during longer fights. Mint brings Anima offense for early story accounts.
 
 ## Incantation
 
-Ink, verse, and ceremony—Incantation characters (Baicang, Sakiri, Skia) favor deliberate pacing and precise skill timing over chaos.
+Ink, verse, and ceremony—Incantation characters (Baicang, Sakiri, Adler) favor deliberate pacing and precise skill timing over chaos.
 
 ## Chaos
 
-Theatrical and unpredictable—Chaos allies such as Daffodil and Adler add spectacle; awakenings can turn a quiet fight into a spotlight moment.
+Theatrical and unpredictable—only Lacrimosa and Daffodil carry Chaos; awakenings can turn a quiet fight into a spotlight moment.
 
 ## Psyche
 
-Mind-tinted and moody—Psyche units like Edgar and Fadia lean shields, setup, and story weight rather than loud damage numbers.
+Mind-tinted and moody—Psyche units like Fadia, Haniel, and Aurelia lean shields, setup, and story weight rather than loud damage numbers.
 
 ## Lakshana
 
-Patterned and patient—Lakshana assists and supports (Haniel, Hathor) reward players who enjoy slower fights where small buffs accumulate.
+Patterned and patient—Lakshana assists and attackers (Hathor, Skia) reward players who enjoy slower fights where small buffs accumulate.
 
 ## Building without stress
 

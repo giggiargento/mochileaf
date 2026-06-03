@@ -2,12 +2,12 @@
   "buildSummary": "Tanque de encantamiento con presencia ceremonial: prioriza el control y la protección para que los aliados puedan mantener el ritmo.",
   "diskSets": [
     {
-      "name": "Your Happiness is Priceless (S)",
-      "note": "Un arco defensivo que ayuda a los de primera línea a mantenerse erguidos durante las peleas más largas."
+      "name": "Camellia Society (S)",
+      "note": "Best overall on neverness.gg: Anima burst Arc tuned for his on-field DPS and cycle damage."
     },
     {
-      "name": "Umbrella (A)",
-      "note": "Un arco de tanque resistente para los primeros capítulos mientras persigues conjuntos defensivos de ensueño."
+      "name": "Fluff of Ferocity (S)",
+      "note": "Strong alternative when you want more aggressive ATK scaling in shorter fights."
     }
   ],
   "modules": [

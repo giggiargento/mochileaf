@@ -2,15 +2,15 @@
   "slug": "adler",
   "name": "Adler",
   "role": "Defense",
-  "element": "Chaos",
+  "element": "Incantation",
   "rarity": "A",
-  "tier": "C",
+  "tier": "B",
   "gameSlug": "neverness-to-everness",
   "image": "/images/games/neverness-to-everness/characters/adler.webp",
-  "description": "A Chaos defender with a stormy, unpredictable edge—more niche pick than headline hero, but satisfying if you like holding the line when fights turn messy.",
+  "description": "Incantation defender with calm poise and a cane-sword guard—shields and damage-over-time make him a steady frontline pick from the Eibon Antique Shop story.",
   "seo": {
     "title": "Adler — Defense",
-    "description": "Meet Adler, a Chaos defense Esper in Neverness to Everness—steady guard presence with an offbeat mood for players who enjoy defensive play."
+    "description": "Meet Adler, an Incantation defense Esper in Neverness to Everness—shielding, survival utility, and a measured guard for players who like holding the line."
   },
   "likes": [],
   "dislikes": [],
@@ -20,6 +20,6 @@
   "relationships": [],
   "trivia": [],
   "tags": [
-    "Chaos"
+    "Incantation"
   ]
 }

@@ -1,41 +1,42 @@
 import type { TierEntry } from '../types';
 
+/** Aligned with https://neverness.gg/tier-list/ (S+ and S → S; Lacrimosa TBD there → A until updated). */
 const nteTierList: TierEntry[] = [
   {
     tier: 'S',
     members: [
       { label: 'Baicang', slug: 'baicang' },
       { label: 'Chiz', slug: 'chiz' },
-      { label: 'Daffodil', slug: 'daffodil' },
-      { label: 'Lacrimosa', slug: 'lacrimosa' },
+      { label: 'Haniel', slug: 'haniel' },
+      { label: 'Hotori', slug: 'hotori' },
+      { label: 'Jiuyuan', slug: 'jiuyuan' },
       { label: 'Nanally', slug: 'nanally' },
       { label: 'Sakiri', slug: 'sakiri' },
+      { label: 'Zero (F)', slug: 'zero-female' },
+      { label: 'Zero (M)', slug: 'zero-male' },
     ],
   },
   {
     tier: 'A',
     members: [
-      { label: 'Fadia', slug: 'fadia' },
+      { label: 'Daffodil', slug: 'daffodil' },
       { label: 'Hathor', slug: 'hathor' },
-      { label: 'Hotori', slug: 'hotori' },
-      { label: 'Jiuyuan', slug: 'jiuyuan' },
-      { label: 'Zero (F)', slug: 'zero-female' },
+      { label: 'Lacrimosa', slug: 'lacrimosa' },
     ],
   },
   {
     tier: 'B',
     members: [
+      { label: 'Adler', slug: 'adler' },
       { label: 'Aurelia', slug: 'aurelia' },
-      { label: 'Haniel', slug: 'haniel' },
-      { label: 'Zero (M)', slug: 'zero-male' },
+      { label: 'Fadia', slug: 'fadia' },
+      { label: 'Mint', slug: 'mint' },
     ],
   },
   {
     tier: 'C',
     members: [
-      { label: 'Adler', slug: 'adler' },
       { label: 'Edgar', slug: 'edgar' },
-      { label: 'Mint', slug: 'mint' },
       { label: 'Skia', slug: 'skia' },
     ],
   },

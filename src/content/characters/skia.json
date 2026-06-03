@@ -2,15 +2,15 @@
   "slug": "skia",
   "name": "Skia",
   "role": "Attack",
-  "element": "Incantation",
+  "element": "Lakshana",
   "rarity": "A",
   "tier": "C",
   "gameSlug": "neverness-to-everness",
   "image": "/images/games/neverness-to-everness/characters/skia.webp",
-  "description": "Incantation attacker with story-chapter ties—flashy without being fussy, a character pick for players who want narrative flavor beside their damage dealer.",
+  "description": "Lakshana attacker with story-chapter ties—shadow manipulation and patterned pacing suit players who want narrative flavor beside their damage dealer.",
   "seo": {
     "title": "Skia — Attack",
-    "description": "Skia is an Incantation attacker linked to later NTE story—stylish kit and a character-forward pick for Incantation-themed squads."
+    "description": "Skia is a Lakshana attacker linked to later NTE story—stylish kit and a character-forward pick for Lakshana-themed squads."
   },
   "likes": [],
   "dislikes": [],
@@ -20,6 +20,6 @@
   "relationships": [],
   "trivia": [],
   "tags": [
-    "Incantation"
+    "Lakshana"
   ]
 }

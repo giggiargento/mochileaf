@@ -65,7 +65,7 @@ export const teams: Team[] = [
   },
   {
     slug: 'chiz-hathor-jiuyuan-haniel',
-    name: 'Chiz Lakshana support shell',
+    name: 'Chiz mixed support shell',
     gameSlug,
     members: [
       { slug: 'chiz', compRole: 'Main DPS' },
@@ -73,11 +73,11 @@ export const teams: Team[] = [
       { slug: 'jiuyuan', compRole: 'Heal' },
       { slug: 'haniel', compRole: 'Control' },
     ],
-    focus: 'Chiz carry + control shell',
+    focus: 'Chiz carry + mixed support',
     summary:
-      'Chiz-centered carry team with Hathor/Haniel control tools and Jiuyuan sustain, strong for players wanting a safer but still high-uptime setup.',
+      'Chiz-centered carry team with Hathor and Haniel utility tools and Jiuyuan sustain, strong for players wanting a safer but still high-uptime setup.',
     synergies: [
-      'Lakshana pair (Hathor + Haniel) increases control consistency around Chiz uptime.',
+      'Hathor Lakshana control plus Haniel Psyche setup keeps Chiz on field longer.',
       'Jiuyuan healing keeps Chiz in sustained DPS cycles with fewer defensive swaps.',
     ],
     tags: ['Popular', 'Chiz', 'Control'],
@@ -109,18 +109,18 @@ export const teams: Team[] = [
     gameSlug,
     members: [
       { slug: 'chiz', compRole: 'Main DPS' },
-      { slug: 'mint', compRole: 'Utility' },
+      { slug: 'mint', compRole: 'DPS' },
       { slug: 'jiuyuan', compRole: 'Heal' },
       { slug: 'hotori', compRole: 'Burst' },
     ],
-    focus: 'Cosmos / free roster',
+    focus: 'Cosmos + Anima starter',
     summary:
-      'No gacha required for the main DPS — level Chiz through City Tycoon. Mint and Jiuyuan cover utility; Hotori adds Cosmos damage until you pull stronger carries.',
+      'No gacha required for the main DPS — level Chiz through City Tycoon. Mint and Jiuyuan cover Anima utility; Hotori adds Cosmos damage until you pull stronger carries.',
     synergies: [
-      'Cosmos trio (Chiz, Mint, Hotori) stabilizes resonance uptime for beginner accounts.',
+      'Cosmos pair (Chiz + Hotori) with Mint and Jiuyuan covering Anima support for beginner accounts.',
       'Jiuyuan healing + utility keeps Chiz rotations uninterrupted.',
     ],
-    tags: ['F2P', 'Beginner', 'Cosmos'],
+    tags: ['F2P', 'Beginner', 'Cosmos', 'Anima'],
     difficulty: 'easy',
   },
   {
@@ -130,14 +130,14 @@ export const teams: Team[] = [
     members: [
       { slug: 'nanally', compRole: 'Heal' },
       { slug: 'jiuyuan', compRole: 'Support' },
-      { slug: 'aurelia', compRole: 'Tank' },
-      { slug: 'sakiri', compRole: 'DPS' },
+      { slug: 'mint', compRole: 'DPS' },
+      { slug: 'sakiri', compRole: 'Burst' },
     ],
     focus: 'Survival + reactions',
     summary:
-      'Double Anima support with Aurelia on the front. Sakiri provides damage once buffs are online — forgiving for story and long anomalies.',
+      'Triple Anima core with Mint on damage and Nanally plus Jiuyuan keeping everyone upright. Sakiri adds Incantation burst once buffs are online.',
     synergies: [
-      'Anima sustain core (Nanally + Jiuyuan + Aurelia) greatly increases team uptime.',
+      'Anima sustain core (Nanally + Jiuyuan + Mint) greatly increases team uptime.',
       'Sakiri converts long safe fights into consistent Incantation damage.',
     ],
     tags: ['Anima', 'Safe', 'Story'],
@@ -160,7 +160,7 @@ export const teams: Team[] = [
       'ETD-4 themed pairing keeps Break utility online with Daffodil + Fadia.',
       'Baicang front-line control gives Skia safer damage windows.',
     ],
-    tags: ['Theme', 'Incantation'],
+    tags: ['Theme', 'Mixed'],
     difficulty: 'medium',
   },
   {
@@ -169,15 +169,15 @@ export const teams: Team[] = [
     gameSlug,
     members: [
       { slug: 'hathor', compRole: 'Control' },
-      { slug: 'haniel', compRole: 'Control' },
-      { slug: 'sakiri', compRole: 'DPS' },
+      { slug: 'skia', compRole: 'DPS' },
+      { slug: 'sakiri', compRole: 'Burst' },
       { slug: 'jiuyuan', compRole: 'Heal' },
     ],
     focus: 'Lakshana + Incantation',
     summary:
-      'Hathor and Haniel slow the fight down; Jiuyuan patches HP. Sakiri converts control time into Incantation damage spikes.',
+      'Hathor and Skia slow the fight down with Lakshana tools; Jiuyuan patches HP. Sakiri converts control time into Incantation damage spikes.',
     synergies: [
-      'Lakshana control pair (Hathor + Haniel) extends enemy downtime.',
+      'Lakshana pair (Hathor + Skia) extends enemy downtime.',
       'Jiuyuan sustain enables Sakiri burst timing instead of panic swaps.',
     ],
     tags: ['Lakshana', 'Control'],
@@ -189,16 +189,16 @@ export const teams: Team[] = [
     gameSlug,
     members: [
       { slug: 'fadia', compRole: 'Support' },
-      { slug: 'edgar', compRole: 'DPS' },
+      { slug: 'aurelia', compRole: 'Tank' },
       { slug: 'daffodil', compRole: 'Break' },
       { slug: 'nanally', compRole: 'Heal' },
     ],
     focus: 'Mixed Psyche / Chaos',
     summary:
-      'Early-account friendly when Psyche units are what you have. Swap Edgar for Sakiri or Hotori as pulls arrive.',
+      'Early-account friendly when Psyche units are what you have. Swap Aurelia for Sakiri or Hotori as stronger pulls arrive.',
     synergies: [
       'Fadia + Daffodil maintain reliable debuff and Break value for weaker rosters.',
-      'Nanally healing lets Edgar stay on field for longer DPS windows.',
+      'Nanally healing lets Aurelia hold the front line for longer windows.',
     ],
     tags: ['Early game', 'Psyche'],
     difficulty: 'easy',

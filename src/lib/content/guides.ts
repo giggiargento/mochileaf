@@ -1,6 +1,7 @@
 import type { Character, NteCharacterGuide } from '../../types';
 import { defaultLocale, type Locale } from '../../i18n/config';
 import { displayText } from '../../content/schemas/shared';
+import { enrichGuideDiskSets } from '../nte-arcs';
 import { localizeNteGuide } from '../i18n/content';
 import {
   getGuideByCharacterSlug,
@@ -28,7 +29,7 @@ export function getGuideForCharacter(
 
   const guide: NteCharacterGuide = {
     buildSummary: displayText(buildSummary, buildSummary),
-    diskSets: custom?.diskSets ?? defaults!.diskSets,
+    diskSets: enrichGuideDiskSets(custom?.diskSets ?? defaults!.diskSets),
     modules: custom?.modules ?? defaults!.modules,
     skillPriority: custom?.skillPriority ?? defaults!.skillPriority,
     farming: custom?.farming ?? defaults!.farming,

@@ -1,0 +1,65 @@
+---
+import GameHubLayout from '../../../layouts/GameHubLayout.astro';
+import PageHeader from '../../../components/game/PageHeader.astro';
+import ArcCard from '../../../components/game/nte/ArcCard.astro';
+import { games } from '../../../data/games';
+import {
+  getNteArcsByRarity,
+  hasNteArcs,
+  nteArcCatalogMeta,
+} from '../../../lib/nte-arcs';
+import { usePageLocale } from '../../../lib/i18n/use-page-locale';
+import { t } from '../../../i18n/messages';
+
+export function getStaticPaths() {
+  return games
+    .filter((g) => g.status === 'active' && hasNteArcs(g.slug))
+    .map((game) => ({ params: { game: game.slug }, props: { game } }));
+}
+
+const { game } = Astro.props;
+const { locale, tr } = usePageLocale(Astro.currentLocale);
+const rarities = ['S', 'A', 'B'] as const;
+---
+
+<GameHubLayout
+  game={game}
+  title={t('nav.arcs', locale)}
+  description={tr('arcs.meta', { game: game.name })}
+>
+  <PageHeader title={tr('arcs.title')} description={tr('arcs.description')} />
+
+  <div class="page-container-below-header nte-arc-directory">
+    {
+      rarities.map((rarity) => {
+        const arcs = getNteArcsByRarity(rarity);
+        if (arcs.length === 0) return null;
+        return (
+          <section class="nte-arc-section" aria-labelledby={`nte-arcs-${rarity}`}>
+            <h2 id={`nte-arcs-${rarity}`} class="nte-arc-section__title">
+              {tr('arcs.rarityHeading', { rarity })}
+              <span class="nte-arc-section__count text-muted">{arcs.length}</span>
+            </h2>
+            <div class="nte-arc-grid">
+              {arcs.map((arc) => (
+                <ArcCard arc={arc} locale={locale} />
+              ))}
+            </div>
+          </section>
+        );
+      })
+    }
+
+    <p class="mt-10 text-center text-xs text-muted">
+      {tr('arcs.footer', { total: nteArcCatalogMeta.total.toLocaleString() })}{' '}
+      <a
+        href={nteArcCatalogMeta.source}
+        class="cozy-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        neverness.gg
+      </a>
+    </p>
+  </div>
+</GameHubLayout>

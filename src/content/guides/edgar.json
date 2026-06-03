@@ -1,15 +1,15 @@
 {
   "characterSlug": "edgar",
   "gameSlug": "neverness-to-everness",
-  "buildSummary": "Early Psyche striker with a simple kit—steady skill upgrades carry you through story and exploration.",
+  "buildSummary": "Early Cosmos support with a simple kit—healing and sustain upgrades carry you through story and exploration.",
   "diskSets": [
     {
-      "name": "The Rain That Shook the World (S)",
-      "note": "A versatile damage Arc that suits strikers who like clear burst moments."
+      "name": "Call of the Twisted City (A)",
+      "note": "Best overall on neverness.gg: Cosmos support lines that amplify healing and team sustain."
     },
     {
-      "name": "First Step to Success (A)",
-      "note": "A dependable early Arc while you work toward fancier sets."
+      "name": "Mind Royale (A)",
+      "note": "Situational alt when you want more Ultimate energy for burst healing windows."
     }
   ],
   "modules": [
@@ -62,6 +62,6 @@
   ],
   "seo": {
     "title": "Edgar build guide",
-    "description": "Early Psyche striker with a simple kit—steady skill upgrades carry you through story and exploration."
+    "description": "Early Cosmos support with a simple kit—healing and sustain upgrades carry you through story and exploration."
   }
 }
