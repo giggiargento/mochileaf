@@ -1,0 +1,133 @@
+{
+  "slug": "shino",
+  "name": "Shino",
+  "role": "Peppy deer",
+  "personality": "Peppy",
+  "species": "Deer",
+  "popularRank": 7,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/shino-128.webp",
+  "houseStyle": "Festival courtyard",
+  "houseDescription": "Lanterns, warm wood, and paper screens — a serene interior that still feels celebratory.",
+  "description": "Zen-market deer with festival charm. Shino is bright, stylish, and one of the most sought-after newer villagers for Japanese-inspired cores.",
+  "seo": {
+    "title": "Shino — Peppy deer",
+    "description": "Zen-market deer with festival charm. Shino is bright, stylish, and one of the most sought-after newer villagers for Japanese-inspired cores."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Lollipop"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Peppy",
+    "Deer"
+  ],
+  "acnh": {
+    "intro": "Shino is a peppy deer villager in the. She was added to as part of the on November 4, 2021, and she was added to between the announcement and release of the update. As of the release of, she is the only peppy deer in the series.",
+    "appearance": "Shino is a cream-white deer with a white muzzle, small fangs, and gold hooves. Her ears and tail blend into light gray towards the tip. She has elongated eyeshadow and '' '' styled eyebrows, making her facial expression resemble a Noh mask. Two red horns protrude from her forehead in the fashion of a '' '' mask. Her fangs and horn shape might also be in reference to a, a type of deer with tusks and short curved antlers. She is the only female deer with horns on her head.",
+    "personality": "As a peppy villager, Shino will appear cheerful and friendly, and sometimes will reward others with gifts and compliments. To some villagers however, Shino can appear to be rude sometimes. She has a short attention span and may have the tendency to overreact about small things. She will be easy to befriend, taking comfort in those she talks to most. She may, however, feel insulted when talking to snooty or cranky villagers, who may gossip about her or disagree with her style. She may also find it difficult to talk with lazy villagers, but she gives out comfort to jocks, who are the male equivalent to the peppy villagers. She also gets along well with normal, big sister, and smug villagers.",
+    "villagerInfo": {
+      "birthday": "October 31",
+      "starSign": "Scorpio",
+      "personality": "Peppy",
+      "subPersonality": "A",
+      "catchphrase": "okaaay",
+      "quote": "Better the demon you know than the one you do not.",
+      "gender": "Female",
+      "defaultClothing": "morning-glory yukata (Pale green)",
+      "umbrella": "paper parasol",
+      "hobby": "Education",
+      "favoriteStyles": [
+        "Elegant",
+        "Gorgeous"
+      ],
+      "favoriteColors": [
+        "Red",
+        "Black"
+      ],
+      "bag": "Paper",
+      "food": "Lollipop",
+      "drink": "Soda can"
+    },
+    "house": {
+      "roof": "orange thatch roof",
+      "siding": "plain zen exterior",
+      "door": "latticework door",
+      "wallpaper": "shoji screen",
+      "flooring": "Tatami",
+      "music": "King K.K.",
+      "furniture": [
+        "clay furnace",
+        "cherry blossom bonsai",
+        "noh mask",
+        "zen cushion",
+        "bamboo speaker",
+        "zen lowboard",
+        "japanese dresser",
+        "zen low table",
+        "tokonoma",
+        "yunomi teacup"
+      ],
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Shino_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "よしの",
+        "romanization": "Yoshino"
+      },
+      {
+        "language": "Korean",
+        "name": "요비",
+        "romanization": "Yobi"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "佳芝",
+        "romanization": "Jiā zhī"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "佳芝"
+      },
+      {
+        "language": "French",
+        "name": "Shino"
+      },
+      {
+        "language": "Spanish",
+        "name": "Yuki"
+      },
+      {
+        "language": "Italian",
+        "name": "Sakura"
+      },
+      {
+        "language": "German",
+        "name": "Yoshino"
+      },
+      {
+        "language": "Dutch",
+        "name": "Shino"
+      },
+      {
+        "language": "Russian",
+        "name": "Сино",
+        "romanization": "Sino"
+      }
+    ],
+    "amiibo": {
+      "number": "436",
+      "series": "Animal Crossing amiibo",
+      "starSign": "Scorpio",
+      "birthday": "October 31",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/436_Shino_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Shino"
+  }
+}

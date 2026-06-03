@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { ACNH_VILLAGER_WIKI } from './acnh-villager-roster.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = path.join(ROOT, 'public', 'images', 'games', 'animal-crossing-new-horizons');
@@ -29,33 +30,12 @@ const HUB_ART = {
 const FALLBACK_IMAGES = {
   /** Fandom CDN often 404s; Nookipedia redirect is reliable. */
   raymond: 'https://nookipedia.com/wiki/Special:Redirect/file/Raymond%20NH.png',
+  marshal: 'https://nookipedia.com/wiki/Special:Redirect/file/Marshal%20NH.png',
+  cherry: 'https://nookipedia.com/wiki/Special:Redirect/file/Cherry%20NH.png',
+  chevre: 'https://nookipedia.com/wiki/Special:Redirect/file/Chevre%20NH.png',
 };
 
-/** slug → Fandom wiki page title */
-const WIKI_NAMES = {
-  raymond: 'Raymond',
-  marshal: 'Marshal',
-  judy: 'Judy',
-  ankha: 'Ankha',
-  sherb: 'Sherb',
-  diana: 'Diana',
-  bob: 'Bob',
-  molly: 'Molly',
-  marina: 'Marina',
-  zucker: 'Zucker',
-  beau: 'Beau',
-  bea: 'Bea',
-  audie: 'Audie',
-  stitches: 'Stitches',
-  maple: 'Maple',
-  fauna: 'Fauna',
-  coco: 'Coco',
-  chrissy: 'Chrissy',
-  tangy: 'Tangy',
-  merengue: 'Merengue',
-  lolly: 'Lolly',
-  poppy: 'Poppy',
-};
+const WIKI_NAMES = ACNH_VILLAGER_WIKI;
 
 async function download(url, dest) {
   fs.mkdirSync(path.dirname(dest), { recursive: true });

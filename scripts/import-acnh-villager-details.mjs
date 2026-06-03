@@ -6,37 +6,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseVillagerWikitext } from './lib/parse-nookipedia-villager.mjs';
+import { ACNH_VILLAGER_WIKI } from './acnh-villager-roster.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_PATH = path.join(ROOT, 'src', 'data', 'acnh-villager-details.json');
 const CACHE_DIR = path.join(ROOT, 'scripts', '.cache', 'villager-wikitext');
 const USER_AGENT = 'Mochileaf/1.0 (fan site; ACNH villager details import)';
 
-/** Slug → Nookipedia page title */
-const VILLAGERS = [
-  ['raymond', 'Raymond'],
-  ['marshal', 'Marshal'],
-  ['judy', 'Judy'],
-  ['ankha', 'Ankha'],
-  ['sherb', 'Sherb'],
-  ['diana', 'Diana'],
-  ['bob', 'Bob'],
-  ['molly', 'Molly'],
-  ['marina', 'Marina'],
-  ['zucker', 'Zucker'],
-  ['beau', 'Beau'],
-  ['bea', 'Bea'],
-  ['audie', 'Audie'],
-  ['stitches', 'Stitches'],
-  ['maple', 'Maple'],
-  ['fauna', 'Fauna'],
-  ['coco', 'Coco'],
-  ['chrissy', 'Chrissy'],
-  ['tangy', 'Tangy'],
-  ['merengue', 'Merengue'],
-  ['lolly', 'Lolly'],
-  ['poppy', 'Poppy'],
-];
+const VILLAGERS = Object.entries(ACNH_VILLAGER_WIKI);
 
 async function fetchWikitext(pageTitle) {
   const cacheFile = path.join(CACHE_DIR, `${pageTitle}.json`);

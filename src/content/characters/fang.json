@@ -1,0 +1,134 @@
+{
+  "slug": "fang",
+  "name": "Fang",
+  "role": "Cranky wolf",
+  "personality": "Cranky",
+  "species": "Wolf",
+  "popularRank": 22,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/fang-128.webp",
+  "houseStyle": "Midnight lounge",
+  "houseDescription": "Dark walls, jukebox energy, and comfortable seating — a late-night hangout disguised as a living room.",
+  "description": "Sleepy-eyed wolf with a dry sense of humor. Fang is laid-back for a cranky type and fits midnight, music-heavy islands.",
+  "seo": {
+    "title": "Fang — Cranky wolf",
+    "description": "Sleepy-eyed wolf with a dry sense of humor. Fang is laid-back for a cranky type and fits midnight, music-heavy islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cranky",
+    "Wolf"
+  ],
+  "acnh": {
+    "intro": "Fang is a cranky wolf villager in the who appears in all games to date except. His name may come from the, a tooth found in carnivores. His Japanese name comes from, a region in northern Asia that is mostly an arctic environment.",
+    "appearance": "Fang is a light gray wolf with a white muzzle, cream tipped paws, and purple eyelids. His inner ears are purple as well as the inside of his mouth. In, his fur is slightly lighter, and his eyes are much larger with brown eyelids as opposed to purple.",
+    "personality": "Fang has a cranky personality, meaning that he can be quite rude to the player and be all around grumpy. He will warm up to the player as time goes on, and may eventually become a close friend.",
+    "villagerInfo": {
+      "birthday": "December 18",
+      "starSign": "Sagittarius",
+      "personality": "Cranky",
+      "subPersonality": "B",
+      "catchphrase": "cha-chomp",
+      "quote": "You mess with the wolf, you get the fangs.",
+      "gender": "Male",
+      "defaultClothing": "snowy sweater (Blue)",
+      "umbrella": "snowflake umbrella",
+      "hobby": "Education",
+      "favoriteStyles": [
+        "Simple",
+        "Cool"
+      ],
+      "favoriteColors": [
+        "White",
+        "Aqua"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "white wooden-tile roof",
+      "siding": "white stucco exterior",
+      "door": "white iron grill door",
+      "wallpaper": "Arched-Window Wall",
+      "flooring": "Brown Honeycomb Tile",
+      "music": "K.K. Steppe",
+      "furniture": [
+        "Antique Bed",
+        "Hi Fi Stereo",
+        "Double Sofa",
+        "Antique Bureau",
+        "Antique Clock",
+        "Antique Console Table",
+        "Snow Globe",
+        "Fireplace",
+        "Book Stands",
+        "Floor Lamp"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Fang_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Fang_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "シベリア",
+        "romanization": "Shiberia"
+      },
+      {
+        "language": "Korean",
+        "name": "시베리아",
+        "romanization": "Siberia"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "史培亚",
+        "romanization": "Shǐ Péiyà"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "史培亞"
+      },
+      {
+        "language": "French",
+        "name": "Pierrot"
+      },
+      {
+        "language": "Spanish",
+        "name": "Colmillo"
+      },
+      {
+        "language": "Italian",
+        "name": "Zanna"
+      },
+      {
+        "language": "German",
+        "name": "Grimm"
+      },
+      {
+        "language": "Dutch",
+        "name": "Fang"
+      },
+      {
+        "language": "Russian",
+        "name": "Фанг",
+        "romanization": "Fang"
+      }
+    ],
+    "amiibo": {
+      "number": "338",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Sagittarius",
+      "birthday": "December 18",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/338_Fang_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Fang"
+  }
+}

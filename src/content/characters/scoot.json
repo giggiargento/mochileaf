@@ -1,0 +1,134 @@
+{
+  "slug": "scoot",
+  "name": "Scoot",
+  "role": "Lazy duck",
+  "personality": "Lazy",
+  "species": "Duck",
+  "popularRank": 25,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/scoot-128.webp",
+  "houseStyle": "Retro racetrack",
+  "houseDescription": "Bold stripes, playful gear, and bright flooring — a clubhouse that never takes itself too seriously.",
+  "description": "Rubber-duck lazy villager with race-day dreams. Scoot is goofy, water-loving, and always good for a laugh on kid-friendly islands.",
+  "seo": {
+    "title": "Scoot — Lazy duck",
+    "description": "Rubber-duck lazy villager with race-day dreams. Scoot is goofy, water-loving, and always good for a laugh on kid-friendly islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Lollipop"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Lazy",
+    "Duck"
+  ],
+  "acnh": {
+    "intro": "Scoot is a jock duck villager in the who appears in all games to date except. His name relates to his catchphrase.",
+    "appearance": "Scoot is a green duck with pink cheeks, determined eyes, and white headgear with 1–5 written on it. The headgear appears to be a Japanese swimming cap, with the number on it showing him to be in the second class of first grade, or a first year high school student, given by how the Japanese grade system works, and how it is organized in a hallway at a Japanese school. This is supported by the indoor pool theme of his house. In, Scoot's skin is slightly lighter, while his eyes are somewhat bigger.",
+    "personality": "As a jock villager, Scoot is energetic and has an interest in physical fitness and activity. He often talks about exercise or sports and may brag about his physical fitness. While often friendly to the player, he may comment on their fitness. During conversations with other villagers, he generally gets along well with peppy villagers due to their similar hyper personalities and will also get along with smug villagers, while he may offend snooty villagers by critiquing their fitness and annoy cranky villagers with his hyper personality. In, Scoot goes to sleep at 12:30 AM and wakes up at 6:30 AM.",
+    "villagerInfo": {
+      "birthday": "June 13",
+      "starSign": "Gemini",
+      "personality": "Jock",
+      "subPersonality": "B",
+      "catchphrase": "zip zoom",
+      "quote": "Some birds avoid the water, ducks look for it.",
+      "gender": "Male",
+      "defaultClothing": "frog tee",
+      "umbrella": "blue umbrella",
+      "hobby": "Fitness",
+      "favoriteStyles": [
+        "Active",
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "Blue"
+      ],
+      "bag": "Paper",
+      "food": "Lollipop",
+      "drink": "Soda can"
+    },
+    "house": {
+      "roof": "turquoise slate roof",
+      "siding": "white stucco exterior",
+      "door": "pale-blue basic door",
+      "wallpaper": "Backyard-Fence Wall",
+      "flooring": "Backyard Lawn",
+      "music": "My Place",
+      "furniture": [
+        "Hose Reel",
+        "Simple DIY Workbench",
+        "Beach Towel",
+        "Garden Faucet",
+        "Plastic Pool",
+        "Log Bench",
+        "Portable Toilet",
+        "Poolside Bed",
+        "Handy Water Cooler",
+        "Cute Music Player"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Scoot_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Scoot_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "マモル",
+        "romanization": "Mamoru"
+      },
+      {
+        "language": "Korean",
+        "name": "지키미",
+        "romanization": "Jikimi"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "阿守",
+        "romanization": "Ā shǒu"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "阿守"
+      },
+      {
+        "language": "French",
+        "name": "Scooter"
+      },
+      {
+        "language": "Spanish",
+        "name": "Chema"
+      },
+      {
+        "language": "Italian",
+        "name": "Guizzo"
+      },
+      {
+        "language": "German",
+        "name": "Helmut"
+      },
+      {
+        "language": "Dutch",
+        "name": "Scoot"
+      },
+      {
+        "language": "Russian",
+        "name": "Скут",
+        "romanization": "Skut"
+      }
+    ],
+    "amiibo": {
+      "number": "147",
+      "series": "Animal Crossing amiibo",
+      "starSign": "Gemini",
+      "birthday": "June 13",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/147_Scoot_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Scoot"
+  }
+}

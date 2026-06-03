@@ -1,0 +1,133 @@
+{
+  "slug": "apollo",
+  "name": "Apollo",
+  "role": "Cranky eagle",
+  "personality": "Cranky",
+  "species": "Eagle",
+  "popularRank": 18,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/apollo-128.webp",
+  "houseStyle": "Rock den",
+  "houseDescription": "Dark wood, amps, and stage lights — a basement rehearsal room that never quite grew up.",
+  "description": "A stoic eagle with rock-star daydreams. Apollo is blunt, loyal once befriended, and perfect for players who like a little grump with their guitar.",
+  "seo": {
+    "title": "Apollo — Cranky eagle",
+    "description": "A stoic eagle with rock-star daydreams. Apollo is blunt, loyal once befriended, and perfect for players who like a little grump with their guitar."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cranky",
+    "Eagle"
+  ],
+  "acnh": {
+    "intro": "Apollo is a cranky eagle villager in the who appears in all games to date as well as in. His name may be a reference to the by in the United States, as the Apollo program's first lunar landing was accomplished by the Lunar Module \"Eagle\". Further, his species is the national bird of the U.S., and his birthday, July 4, is in the U.S.",
+    "appearance": "Apollo is an eagle who resembles a. He has dark gray body feathers and white head feathers. He has a yellow beak and feet with white claws at the end of them.",
+    "personality": "As a cranky villager, Apollo will appear mature compared to other personality types. This will make him appear belittling and insensitive to other villagers, including the player. Despite this, he will learn to confide in the player, considering them his only friend. He will enjoy the usual hobbies, but for relaxation and peace than competition. He will find it difficult to socialize with peppy villagers, who he will criticize when talking to other villagers. He will get along with normal and snooty villagers, as well as other cranky villagers, who he will share deeper conversations with, and will also admire lazy villagers for their lifestyle. He will, on occasion, annoy a normal villager, usually when being mean about something or someone. In, Apollo retains his cranky personality from the game series, being more mature than the other villagers and wanting to keep to himself. Throughout the film, he is silent most of the time (likely due to the fact that his garden was messed up by Ai), but he finally talked towards the end of the movie when Ai tries to apologize to him. Apollo then says to her that he wasn't angry at her at all. This means Apollo might have a soft side. It is rumored by the other residents of Animal Village that he was in a relationship with Whitney, and he is implied to be the one who left a bouquet of blue roses on her doorstep. Apollo is an example of all cranky villagers in the entire series, but a little bit more mature in the film.",
+    "villagerInfo": {
+      "birthday": "July 4",
+      "starSign": "Cancer",
+      "personality": "Cranky",
+      "subPersonality": "B",
+      "catchphrase": "pah",
+      "quote": "What goes up must come down.",
+      "gender": "Male",
+      "defaultClothing": "flight jacket (Black)",
+      "umbrella": "bat umbrella",
+      "hobby": "Music",
+      "favoriteStyles": [
+        "Cool",
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Black"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "black slate roof",
+      "siding": "light-gray stucco exterior",
+      "door": "white vertical-panes door",
+      "wallpaper": "Shutter Wall",
+      "flooring": "Slate Flooring",
+      "music": "K.K. Rock",
+      "furniture": [
+        "Rattan Bed",
+        "Diner Sofa",
+        "Diner Mini Table",
+        "Billiard Table",
+        "Wall Mounted TV (50 in.)",
+        "High End Stereo",
+        "Fan Palm",
+        "Diner Counter Table",
+        "Folding Floor Lamp",
+        "Magazine"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Apollo_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Apollo_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "アポロ",
+        "romanization": "Aporo"
+      },
+      {
+        "language": "Korean",
+        "name": "아폴로",
+        "romanization": "Apollo"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "阿波罗",
+        "romanization": "Ā Bōluó"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "阿波羅"
+      },
+      {
+        "language": "French",
+        "name": "Apollon"
+      },
+      {
+        "language": "Spanish",
+        "name": "Apolo"
+      },
+      {
+        "language": "Italian",
+        "name": "Apollo"
+      },
+      {
+        "language": "German",
+        "name": "Apollo"
+      },
+      {
+        "language": "Dutch",
+        "name": "Apollo"
+      },
+      {
+        "language": "Russian",
+        "name": "Аполло",
+        "romanization": "Apollo"
+      }
+    ],
+    "amiibo": {
+      "number": "297",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Cancer",
+      "birthday": "July 4",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/297_Apollo_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Apollo"
+  }
+}

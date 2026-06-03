@@ -7,7 +7,6 @@ import ArticleCard from '../components/home/ArticleCard.astro';
 import UpdateItem from '../components/home/UpdateItem.astro';
 import Newsletter from '../components/home/Newsletter.astro';
 import PromoBanner from '../components/home/PromoBanner.astro';
-import AdPlaceholder from '../components/ui/AdPlaceholder.astro';
 import { getFeaturedGames } from '../data/games';
 import { getTrendingArticles, loadArticles, sortArticlesByDateDesc } from '../data/articles';
 import { isNewsCategory } from '../utils/article-routes';
@@ -39,10 +38,6 @@ const trendingArticles = sortArticlesByDateDesc(
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {featuredGames.map((game) => <GameCard game={game} />)}
     </div>
-  </section>
-
-  <section class="page-container py-8">
-    <AdPlaceholder slot="inline" />
   </section>
 
   <section class="page-container py-16">

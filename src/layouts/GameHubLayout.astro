@@ -5,6 +5,7 @@ import MobileNav from '../components/layout/MobileNav.astro';
 import Footer from '../components/layout/Footer.astro';
 import LocaleToolbar from '../components/ui/LocaleToolbar.astro';
 import AdPlaceholder from '../components/ui/AdPlaceholder.astro';
+import FooterAdStrip from '../components/layout/FooterAdStrip.astro';
 import { getGameNav } from '../utils/navigation';
 import type { Locale } from '../i18n/config';
 import { t } from '../i18n/messages';
@@ -49,6 +50,7 @@ const hubTitle = game.shortName ?? game.name;
     <main class="min-h-[60vh]">
       <slot />
     </main>
+    <FooterAdStrip locale={locale} />
     <Footer locale={locale} />
   </div>
 </BaseLayout>

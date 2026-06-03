@@ -1,0 +1,135 @@
+{
+  "slug": "genji",
+  "name": "Genji",
+  "role": "Jock rabbit",
+  "personality": "Jock",
+  "species": "Rabbit",
+  "popularRank": 19,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/genji-128.webp",
+  "houseStyle": "Zen dojo",
+  "houseDescription": "Bamboo, tatami mood, and training props — a disciplined space that still feels peaceful.",
+  "description": "Zen jock rabbit in traditional dress. Genji is polite about workouts, proud of his yard, and iconic on bamboo-and-stone islands.",
+  "seo": {
+    "title": "Genji — Jock rabbit",
+    "description": "Zen jock rabbit in traditional dress. Genji is polite about workouts, proud of his yard, and iconic on bamboo-and-stone islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Lollipop"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Jock",
+    "Rabbit"
+  ],
+  "acnh": {
+    "intro": "Genji is a jock rabbit villager in the who appears in all games to date. His name could refer to two things. ''Genji'' could refer either to in Japanese history or the titular character in '' '' by, which is often considered to be the world's first novel. His physical appearance corroborates the latter, with his design being based on the appearance of Japanese noblemen like the title character of the Shikibu novel. His catchphrase prior to, \"otaku,\" is a Japanese pejorative for people with life-consuming interests (also used in English as a loanword for fans of Japanese media), while his catchphrase in, \"mochi,\" is a type of Japanese rice cake made with rice flour pounded into paste.",
+    "appearance": "Genji is a snowy white rabbit with dark mahogany brown ears and pink cheeks. The brown from his ears go down to circle all the way around his head. His paws, feet, and bunny tail are tipped chocolate brown while the rest is white except his ears. He has pale blue eyes in lines with black pupils which are opened wide and are triangles whenever he is angry. He also has small, round eyebrows that are black.",
+    "personality": "As a jock villager, Genji is energetic and has an interest in physical fitness and activity. He often talks about exercise or sports and may brag about his physical fitness. While often friendly to the player, he may comment on their fitness. During conversations with other villagers, he generally gets along well with peppy villagers due to their similar hyper personalities and will also get along with smug villagers, while he may offend snooty villagers by critiquing their fitness and annoy cranky villagers with his hyper personality. In, Genji goes to sleep at 12:30 AM and wakes up at 6:30 AM.",
+    "villagerInfo": {
+      "birthday": "January 21",
+      "starSign": "Aquarius",
+      "personality": "Jock",
+      "subPersonality": "B",
+      "catchphrase": "mochi",
+      "quote": "Fall down seven times, get up eight.",
+      "gender": "Male",
+      "defaultClothing": "misty tee",
+      "umbrella": "maple-leaf umbrella",
+      "hobby": "Fitness",
+      "favoriteStyles": [
+        "Elegant",
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Green",
+        "Purple"
+      ],
+      "bag": "Paper",
+      "food": "Lollipop",
+      "drink": "Soda can"
+    },
+    "house": {
+      "roof": "purple tile roof",
+      "siding": "white & brown asian siding",
+      "door": "white zen door",
+      "wallpaper": "Gold-Screen Wall",
+      "flooring": "Mossy-Garden Flooring",
+      "music": "King K.K.",
+      "musicNote": "Does not contain a stereo initially",
+      "furniture": [
+        "Bonsai Shelf",
+        "Pond Stone",
+        "Cherry Blossom Branches",
+        "Screen",
+        "Bamboo Bench",
+        "Hanging Scroll",
+        "Bamboo Sphere",
+        "Deer Scare",
+        "Tatami Bed",
+        "Paper Lantern"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Genji_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Genji_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ゲンジ",
+        "romanization": "Genji"
+      },
+      {
+        "language": "Korean",
+        "name": "토시",
+        "romanization": "Tosi"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "儒林",
+        "romanization": "Rú lín"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "儒林"
+      },
+      {
+        "language": "French",
+        "name": "Kali"
+      },
+      {
+        "language": "Spanish",
+        "name": "Sumo"
+      },
+      {
+        "language": "Italian",
+        "name": "Genji"
+      },
+      {
+        "language": "German",
+        "name": "Aki"
+      },
+      {
+        "language": "Dutch",
+        "name": "Genji"
+      },
+      {
+        "language": "Russian",
+        "name": "Гэндзи",
+        "romanization": "Gendzi"
+      }
+    ],
+    "amiibo": {
+      "number": "253",
+      "series": "Series 5",
+      "starSign": "Aquarius",
+      "birthday": "January 21",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/253_Genji_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Genji"
+  }
+}

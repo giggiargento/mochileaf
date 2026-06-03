@@ -1,0 +1,131 @@
+{
+  "slug": "octavian",
+  "name": "Octavian",
+  "role": "Cranky octopus",
+  "personality": "Cranky",
+  "species": "Octopus",
+  "popularRank": 12,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/octavian-128.webp",
+  "houseStyle": "Space lab",
+  "houseDescription": "Lunar flooring, satellite gear, and rocket furniture — his interior feels like mission control with snack breaks.",
+  "description": "Space-obsessed octopus with a rocket yard. Octavian is dry, dramatic, and one of only a few octopus neighbors — a longtime favorite for sci-fi cores.",
+  "seo": {
+    "title": "Octavian — Cranky octopus",
+    "description": "Space-obsessed octopus with a rocket yard. Octavian is dry, dramatic, and one of only a few octopus neighbors — a longtime favorite for sci-fi cores."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Lollipop"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cranky",
+    "Octopus"
+  ],
+  "acnh": {
+    "intro": "Octavian is a cranky octopus villager in the who appears in all games to date. His name is a pun on his species and the given name \"Octavian\". His catchphrase also references his species, as octopuses have suckers on their tentacles; it may also reference his cranky personality.",
+    "appearance": "Octavian is a light red octopus with a jet relocated to mimic a mouth. He has a white patch in an \"x\" shape on the back of his head, made out of two bandages. Being an octopus, his mouth is puckered. He has two tentacle arms with suckers and six legs, adding up to be eight, as a real octopus would have. He has puffy, puckering cheeks with peachy pink marks and angry-looking, squinted eyes. His eyebrows are pointed down, giving him a very serious, profound expression. Based on his star-patterned shirt and his moon-themed home interior, Octavian may be a reference to the octopus-like Martians from the sci-fi horror fiction, '' '', which are commonly used to represent aliens in Japanese pop culture. His description also alludes to his alien nature.",
+    "personality": "Octavian is a cranky villager. He may seem rude at first but will open up to the player eventually if they talk to him enough and be nice to him by doing favors he asks, etc. Sometimes, if the player is friends with him and the beach is in view, he will say that the sea brings back memories of his youthful days and his mother and father.",
+    "villagerInfo": {
+      "birthday": "September 20",
+      "starSign": "Virgo",
+      "personality": "Cranky",
+      "subPersonality": "B",
+      "catchphrase": "sucker",
+      "quote": "Don't be a sucker!",
+      "gender": "Male",
+      "defaultClothing": "gold-print tee (Black)",
+      "umbrella": "vinyl umbrella",
+      "hobby": "Play",
+      "favoriteStyles": [
+        "Cool",
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Black",
+        "White"
+      ],
+      "bag": "Paper",
+      "food": "Lollipop",
+      "drink": "Soda can"
+    },
+    "house": {
+      "roof": "brown tile roof",
+      "siding": "white & red asian siding",
+      "door": "red rustic door",
+      "wallpaper": "Starry-Sky Wall",
+      "flooring": "Lunar Surface",
+      "music": "K.K. D&B",
+      "musicNote": "Does not contain a stereo initially",
+      "furniture": [
+        "Asteroid",
+        "Crewed Spaceship",
+        "Rocket",
+        "Flying Saucer",
+        "Astronaut Suit",
+        "Satellite"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Octavian_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Octavian_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "おくたろう",
+        "romanization": "Okutarō"
+      },
+      {
+        "language": "Korean",
+        "name": "문복",
+        "romanization": "Munbok"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "张瑜",
+        "romanization": "Zhāng Yú"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "張瑜"
+      },
+      {
+        "language": "French",
+        "name": "Octave"
+      },
+      {
+        "language": "Spanish",
+        "name": "Octavio"
+      },
+      {
+        "language": "Italian",
+        "name": "Ottavio"
+      },
+      {
+        "language": "German",
+        "name": "Ottfried"
+      },
+      {
+        "language": "Dutch",
+        "name": "Octavian"
+      },
+      {
+        "language": "Russian",
+        "name": "Октавиан",
+        "romanization": "Oktavian"
+      }
+    ],
+    "amiibo": {
+      "number": "045",
+      "series": "Series 1–4",
+      "starSign": "Virgo",
+      "birthday": "September 20",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/045_Octavian_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Octavian"
+  }
+}

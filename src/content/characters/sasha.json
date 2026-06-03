@@ -1,0 +1,143 @@
+{
+  "slug": "sasha",
+  "name": "Sasha",
+  "role": "Lazy rabbit",
+  "personality": "Lazy",
+  "species": "Rabbit",
+  "popularRank": 8,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/sasha-128.webp",
+  "houseStyle": "Greenhouse hideaway",
+  "houseDescription": "Plants, natural tones, and gentle clutter — a sunroom where naps are always scheduled.",
+  "description": "Mint-green lazy rabbit with garden-daydream energy. Sasha is mellow, snack-happy, and perfect for players who want soft humor without drama.",
+  "seo": {
+    "title": "Sasha — Lazy rabbit",
+    "description": "Mint-green lazy rabbit with garden-daydream energy. Sasha is mellow, snack-happy, and perfect for players who want soft humor without drama."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Lazy",
+    "Rabbit"
+  ],
+  "acnh": {
+    "intro": "Sasha is a lazy rabbit villager in the. He was added to as part of the on November 4, 2021, and he was added to between the announcement and release of the update. His catchphrase, \"hoppity,\" is a nonsense variation of the word \"hop,\" which is related to his species.",
+    "appearance": "Sasha is a mint green rabbit with white-tipped ears, white feet, a white muzzle, and a yellow tail. He has large round dark blue eyes with sparkles in them, and a tiny eyelash sticking out of the bottom-outer side of each eye. His ears are orange on the inside. When he is shocked, his eyes become gray pupils, with a smaller, dark blue pupil in the middle. He has blond bangs on his forehead.",
+    "personality": "As a lazy villager, Sasha has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Sasha goes to sleep at 11 PM and wakes up at 8 AM.",
+    "villagerInfo": {
+      "birthday": "May 19",
+      "starSign": "Taurus",
+      "personality": "Lazy",
+      "subPersonality": "B",
+      "catchphrase": "hoppity",
+      "quote": "Timing is everything.",
+      "gender": "Male",
+      "defaultClothing": "letter jacket (Blue)",
+      "umbrella": "patterned vinyl umbrella",
+      "hobby": "Fashion",
+      "favoriteStyles": [
+        "Simple",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Blue",
+        "White"
+      ],
+      "bag": "Leather",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "yellow wooden-tile roof",
+      "siding": "mint-blue stucco exterior",
+      "door": "white basic door",
+      "wallpaper": "White Painted-Wood Wall",
+      "flooring": "Blue Dot Flooring",
+      "music": "K.K. Lovers",
+      "furniture": [
+        "Simple Kettle",
+        "Mini DIY Workbench",
+        "Gas Range",
+        "Cute Music Player",
+        "Wooden Block Stool",
+        "Fluffy Rug",
+        "Wooden Toolbox",
+        "Board Game",
+        "Mini Fridge",
+        "Dreamy Bed",
+        "Dreamy Wall Rack",
+        "Dreamy Shelves",
+        "Schefflera",
+        "Skateboard Wall Rack",
+        "Patchwork Low Table",
+        "Dreamy Bear Toy",
+        "Dreamy Rabbit Toy",
+        "Dreamy Unicorn Toy",
+        "Instant Noodles"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Sasha_NH_Exterior.jpg",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Sasha_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ミッチェル",
+        "romanization": "Mitcheru"
+      },
+      {
+        "language": "Korean",
+        "name": "미첼",
+        "romanization": "Michel"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "蜜雪儿",
+        "romanization": "Mì xuě ér"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "蜜雪兒"
+      },
+      {
+        "language": "French",
+        "name": "Alix"
+      },
+      {
+        "language": "Spanish",
+        "name": "Ariel"
+      },
+      {
+        "language": "Italian",
+        "name": "Sasha"
+      },
+      {
+        "language": "German",
+        "name": "Gerrit"
+      },
+      {
+        "language": "Dutch",
+        "name": "Sasha"
+      },
+      {
+        "language": "Russian",
+        "name": "Геррит",
+        "romanization": "Gerrit"
+      }
+    ],
+    "amiibo": {
+      "number": "433",
+      "series": "Animal Crossing amiibo",
+      "starSign": "Taurus",
+      "birthday": "May 19",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/433_Sasha_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Sasha"
+  }
+}

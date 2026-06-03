@@ -4,7 +4,6 @@ import PageHeader from '../../components/game/PageHeader.astro';
 import ContentGrid from '../../components/game/ContentGrid.astro';
 import CharacterCard from '../../components/game/CharacterCard.astro';
 import ArticleCard from '../../components/home/ArticleCard.astro';
-import AdPlaceholder from '../../components/ui/AdPlaceholder.astro';
 import { games, getGame as getLocalizedGame } from '../../data/games';
 import { getCharactersByGame } from '../../data/characters';
 import { getNewsByGame, getGuidesByGame } from '../../data/articles';
@@ -123,8 +122,4 @@ const liveFeeds = getLiveFeedsForGame(game.slug);
   </section>
 
   <LiveIntelSection feeds={liveFeeds} />
-
-  <div class="page-container py-8">
-    <AdPlaceholder slot="inline" />
-  </div>
 </GameHubLayout>

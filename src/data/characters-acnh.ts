@@ -1,3 +1,4 @@
+import { defaultLocale, type Locale } from '../i18n/config';
 import { getCharactersByGame } from '../lib/content/characters';
 import type { Character } from '../types';
 
@@ -8,6 +9,8 @@ export const villagerPortrait = (slug: string, size: 128 | 256 = 128) =>
   `/images/games/${gameSlug}/villagers/${slug}-${size}.webp`;
 
 /** All ACNH villagers for the directory — alphabetical by name. */
-export function getAcnhVillagers(): Character[] {
-  return getCharactersByGame(gameSlug).sort((a, b) => a.name.localeCompare(b.name, 'en'));
+export function getAcnhVillagers(locale: Locale = defaultLocale): Character[] {
+  return getCharactersByGame(gameSlug, locale).sort((a, b) =>
+    a.name.localeCompare(b.name, 'en'),
+  );
 }

@@ -1,0 +1,137 @@
+{
+  "slug": "cherry",
+  "name": "Cherry",
+  "role": "Sisterly dog",
+  "personality": "Sisterly",
+  "species": "Dog",
+  "popularRank": 14,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/cherry-128.webp",
+  "houseStyle": "Industrial loft",
+  "houseDescription": "Concrete, ironwork, and moody lamps — an urban studio that matches her leather-jacket attitude.",
+  "description": "Cool big-sister dog with punk style. Cherry is protective, a little tough, and surprisingly sweet once she trusts you.",
+  "seo": {
+    "title": "Cherry — Sisterly dog",
+    "description": "Cool big-sister dog with punk style. Cherry is protective, a little tough, and surprisingly sweet once she trusts you."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Sisterly",
+    "Dog"
+  ],
+  "acnh": {
+    "appearance": "Cherry is a red dog with teal eyes. She has a gray circle around her left eye. She has black ears and a purple nose. Her left ear has white markings around them that appear to be earrings. She also has red arms and a red tail, and black paws, torso and legs. She has six eyelashes on each eye: three on the top, and three on the bottom. Her resting mouth expression is a smile that is curved to her left.",
+    "personality": "Cherry is a big sister villager, meaning she is very caring, tomboyish and proactive. At times, she is quite blunt, not afraid of sharing her own opinion and speaking her mind. She is very concerned about the player, treating them like her little sibling, as she often gives the player advice about numerous things. Cherry is very versatile and has many hobbies, causing her to get along with most villagers, such as jock and lazy villagers. Snooty and cranky villagers, however, have a hard time conversing with her due to their hobby of gossiping and spreading rumors about others which she dislikes.",
+    "villagerInfo": {
+      "birthday": "May 11",
+      "starSign": "Taurus",
+      "personality": "Big sister",
+      "subPersonality": "A",
+      "catchphrase": "what what",
+      "quote": "One dog barks at something, the rest bark at him.",
+      "gender": "Female",
+      "defaultClothing": "spider-web tee",
+      "umbrella": "spider umbrella",
+      "hobby": "Music",
+      "favoriteStyles": [
+        "Cool",
+        "Elegant"
+      ],
+      "favoriteColors": [
+        "Black",
+        "Purple"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "red striped roof",
+      "siding": "black & white panel siding",
+      "door": "iron door",
+      "wallpaper": "Cityscape Wall",
+      "flooring": "Skull-Print Flooring",
+      "music": "K.K. D&B",
+      "musicNote": "Does not contain a stereo initially",
+      "furniture": [
+        "Rose Bed",
+        "Whirlpool Bath",
+        "Beach Towel",
+        "Open Frame Kitchen",
+        "Ironwood DIY Workbench",
+        "Antique Mini Table",
+        "Fragrance Sticks",
+        "Bathroom Towel Rack",
+        "Mum Cushion",
+        "Shower Set",
+        "Mum Cushion",
+        "Black Wooden Deck Rug",
+        "Bathrobe"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Cherry_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Cherry_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ハンナ",
+        "romanization": "Hanna"
+      },
+      {
+        "language": "Korean",
+        "name": "한나",
+        "romanization": "Hanna"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "花娜",
+        "romanization": "Huā Nà"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "花娜"
+      },
+      {
+        "language": "French",
+        "name": "Anna"
+      },
+      {
+        "language": "Spanish",
+        "name": "Luna"
+      },
+      {
+        "language": "Italian",
+        "name": "Amarena"
+      },
+      {
+        "language": "German",
+        "name": "Bella"
+      },
+      {
+        "language": "Dutch",
+        "name": "Cherry"
+      },
+      {
+        "language": "Russian",
+        "name": "Черри",
+        "romanization": "Cherri"
+      }
+    ],
+    "amiibo": {
+      "number": "077",
+      "series": "Series 1–4",
+      "starSign": "Taurus",
+      "birthday": "May 11",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/077_Cherry_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Cherry"
+  }
+}

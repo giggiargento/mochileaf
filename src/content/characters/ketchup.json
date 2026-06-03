@@ -1,0 +1,129 @@
+{
+  "slug": "ketchup",
+  "name": "Ketchup",
+  "role": "Peppy duck",
+  "personality": "Peppy",
+  "species": "Duck",
+  "popularRank": 11,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/ketchup-128.webp",
+  "houseStyle": "Diner nook",
+  "houseDescription": "Bright checks, cute tables, and snack vibes — like a corner café that never closes.",
+  "description": "Tomato-themed peppy duck with endless enthusiasm. Ketchup is playful, a little chaotic, and a staple of food-core island tours.",
+  "seo": {
+    "title": "Ketchup — Peppy duck",
+    "description": "Tomato-themed peppy duck with endless enthusiasm. Ketchup is playful, a little chaotic, and a staple of food-core island tours."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Peppy",
+    "Duck"
+  ],
+  "acnh": {
+    "intro": "Ketchup is a peppy duck villager in the. After her debut in, she would remain absent from the series until. Her name comes from, a condiment made from tomatoes, which references her tomato-like appearance. Her favorite saying also refers to her appearance.",
+    "appearance": "Ketchup in.\nKetchup is a red duck that appears similar to a tomato, hence her name. She possesses an orange beak, orange cheeks, black legs and green hair that has the appearance of leaves on her forehead. Her stomach and the tips of her wings are yellow and lime green colored.",
+    "personality": "As a peppy villager, Ketchup will appear cheerful and friendly. To some people, she can appear rude. She has a short attention span and may have the tendency to overreact about small things. She will be easy to befriend, taking comfort in those she talks to most. She may, however, feel insulted when talking to snooty or cranky villagers, who may gossip about her or disagree with her style. She gives out comfort to jocks, who are the equivalent to the peppy villagers, along with other peppy villagers. She also gets along well with lazy, big sister and smug villagers.",
+    "villagerInfo": {
+      "birthday": "July 27",
+      "starSign": "Leo",
+      "personality": "Peppy",
+      "subPersonality": "A",
+      "catchphrase": "bitty",
+      "quote": "When in doubt, eat a tomato!",
+      "gender": "Female",
+      "defaultClothing": "lacy dress (Blue)",
+      "umbrella": "fairy-tale umbrella",
+      "hobby": "Play",
+      "favoriteStyles": [
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Aqua",
+        "White"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "orange stone roof",
+      "siding": "orange clay exterior",
+      "door": "yellow vertical-panes door",
+      "wallpaper": "Ivy Wall",
+      "flooring": "Backyard Lawn",
+      "music": "Neapolitan",
+      "furniture": [
+        "Cute Music Player",
+        "Brick Oven",
+        "Smoker",
+        "Firewood",
+        "Garden Faucet",
+        "Inflatable Sofa",
+        "Director's Chair",
+        "Log Round Table",
+        "Soup Kettle",
+        "Outdoor Table",
+        "Red Vinyl Sheet",
+        "Picnic Basket",
+        "Handy Water Cooler"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Ketchup_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Ketchup_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ケチャップ",
+        "romanization": "Kechappu"
+      },
+      {
+        "language": "Korean",
+        "name": "케첩",
+        "romanization": "Kecheop"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "番茄酱",
+        "romanization": "Fānqié jiàng"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "番茄醬"
+      },
+      {
+        "language": "French",
+        "name": "Ketchup"
+      },
+      {
+        "language": "Spanish",
+        "name": "Kétchup"
+      },
+      {
+        "language": "Italian",
+        "name": "Ketchup"
+      },
+      {
+        "language": "German",
+        "name": "Pullunda"
+      },
+      {
+        "language": "Dutch",
+        "name": "Ketchup"
+      },
+      {
+        "language": "Russian",
+        "name": "Кетчуп",
+        "romanization": "Ketchup"
+      }
+    ],
+    "sourceUrl": "https://nookipedia.com/wiki/Ketchup"
+  }
+}

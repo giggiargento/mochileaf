@@ -1,0 +1,138 @@
+{
+  "slug": "whitney",
+  "name": "Whitney",
+  "role": "Snooty wolf",
+  "personality": "Snooty",
+  "species": "Wolf",
+  "popularRank": 16,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/whitney-128.webp",
+  "houseStyle": "Modern salon",
+  "houseDescription": "Sleek seating, glass tables, and cool tones — minimalist glam that photographs well in every season.",
+  "description": "Elegant white wolf with boutique taste. Whitney can sound aloof, but her polished rooms are a decor moodboard on their own.",
+  "seo": {
+    "title": "Whitney — Snooty wolf",
+    "description": "Elegant white wolf with boutique taste. Whitney can sound aloof, but her polished rooms are a decor moodboard on their own."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Snooty",
+    "Wolf"
+  ],
+  "acnh": {
+    "appearance": "Whitney is a white, possibly arctic, wolf, with blue eyes, a red-brown nose, and a wavy tuft of fur on her forehead. The insides of her ears are pink. She wears pink eyeshadow with winged eyeliner, and her eyebrows are shaped with precision. Her tail is long and spiky at the tip. In, her eyes are purple and her nose is deep brown.",
+    "personality": "Whitney has a snooty personality. She will appear uptown, classy, and chic. With this, she will appear rude, belittling and snobbish when talking to others, usually criticizing their dress sense or fashion. She is able to get on with cranky, big sister, smug, and other snooty villagers. She will have her fitness questioned by a jock villager. She will not get along with normal villagers, due to their kindness and politeness towards their neighbors.",
+    "villagerInfo": {
+      "birthday": "September 17",
+      "starSign": "Virgo",
+      "personality": "Snooty",
+      "subPersonality": "B",
+      "catchphrase": "snappy",
+      "quote": "Don't cry wolf unless you mean it.",
+      "gender": "Female",
+      "defaultClothing": "sleeveless shirtdress (Blue)",
+      "umbrella": "purple chic umbrella",
+      "hobby": "Fashion",
+      "favoriteStyles": [
+        "Elegant",
+        "Cool"
+      ],
+      "favoriteColors": [
+        "Blue",
+        "Aqua"
+      ],
+      "bag": "Pink",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "white wooden-tile roof",
+      "siding": "mint-blue stucco exterior",
+      "door": "white common door",
+      "wallpaper": "Blue Intricate Wall",
+      "flooring": "Blue-Paint Flooring",
+      "music": "K.K. Soul",
+      "furniture": [
+        "Rose Bed",
+        "Wooden Full Length Mirror",
+        "Wooden Block Stool",
+        "Hi Fi Stereo",
+        "Iron Hanger Stand",
+        "Vinyl Round Toed Pumps",
+        "Rattan End Table",
+        "Wall Mounted TV (50 in.)",
+        "Ring",
+        "Fireplace",
+        "Monochromatic Dotted Rug",
+        "Fragrance Sticks",
+        "Rattan Wardrobe",
+        "Animal Print Coat",
+        "Retro Radiator"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Whitney_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Whitney_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ビアンカ",
+        "romanization": "Bianka"
+      },
+      {
+        "language": "Korean",
+        "name": "비앙카",
+        "romanization": "Biangka"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "毕安卡",
+        "romanization": "Bì ān kǎ"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "畢安卡"
+      },
+      {
+        "language": "French",
+        "name": "Blanche"
+      },
+      {
+        "language": "Spanish",
+        "name": "Lupe"
+      },
+      {
+        "language": "Italian",
+        "name": "Bianca"
+      },
+      {
+        "language": "German",
+        "name": "Lupa"
+      },
+      {
+        "language": "Dutch",
+        "name": "Whitney"
+      },
+      {
+        "language": "Russian",
+        "name": "Уитни",
+        "romanization": "Uitni"
+      }
+    ],
+    "amiibo": {
+      "number": "148",
+      "series": "Animal Crossing amiibo",
+      "starSign": "Virgo",
+      "birthday": "September 17",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/148_Whitney_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Whitney"
+  }
+}

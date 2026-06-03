@@ -1,0 +1,131 @@
+{
+  "slug": "lucky",
+  "name": "Lucky",
+  "role": "Lazy dog",
+  "personality": "Lazy",
+  "species": "Dog",
+  "popularRank": 6,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/lucky-128.webp",
+  "houseStyle": "Haunted lounge",
+  "houseDescription": "Bone motifs, iron armor, and a retro TV glow — reads like a cozy crypt with surprisingly soft lighting.",
+  "description": "The mummy-wrapped legend of lazy villagers. Lucky is goofy, food-motivated, and somehow always photogenic on spooky-cute islands.",
+  "seo": {
+    "title": "Lucky — Lazy dog",
+    "description": "The mummy-wrapped legend of lazy villagers. Lucky is goofy, food-motivated, and somehow always photogenic on spooky-cute islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Lollipop"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Lazy",
+    "Dog"
+  ],
+  "acnh": {
+    "intro": "Lucky is a lazy dog villager in the who appears in all games to date. His name is ironic, given how his appearance makes him resemble an injured person wrapped in bandages.",
+    "appearance": "Lucky is a black dog wrapped in white bandages, which gives the look of a full body cast and makes him resemble a mummy. He has a glowing yellow left eye, which can be seen through his bandages alongside his ears and tail.",
+    "personality": "As a lazy villager, Lucky has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Lucky goes to sleep at 11 PM and wakes up at 8 AM.",
+    "villagerInfo": {
+      "birthday": "November 4",
+      "starSign": "Scorpio",
+      "personality": "Lazy",
+      "subPersonality": "B",
+      "catchphrase": "rrr-owch",
+      "quote": "Don't bite the hand that feeds you.",
+      "gender": "Male",
+      "defaultClothing": "open-collar shirt (Coral)",
+      "umbrella": "orange umbrella",
+      "hobby": "Play",
+      "favoriteStyles": [
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "White"
+      ],
+      "bag": "Paper",
+      "food": "Lollipop",
+      "drink": "Soda can"
+    },
+    "house": {
+      "roof": "gray striped roof",
+      "siding": "black & white panel siding",
+      "door": "black rustic door",
+      "wallpaper": "Ramshackle Wall",
+      "flooring": "Swamp Flooring",
+      "music": "K.K. Dirge",
+      "furniture": [
+        "Tin Bucket",
+        "Tiki Torch",
+        "Western Style Stone",
+        "Western Style Stone",
+        "Western Style Stone",
+        "Red Leaf Pile",
+        "Skeleton",
+        "Throwback Skull Radio"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Lucky_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Lucky_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ラッキー",
+        "romanization": "Rakkī"
+      },
+      {
+        "language": "Korean",
+        "name": "럭키",
+        "romanization": "Reokki"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "大吉",
+        "romanization": "Dàjí"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "大吉"
+      },
+      {
+        "language": "French",
+        "name": "Ramsès"
+      },
+      {
+        "language": "Spanish",
+        "name": "Pupas"
+      },
+      {
+        "language": "Italian",
+        "name": "Felice"
+      },
+      {
+        "language": "German",
+        "name": "Viktor"
+      },
+      {
+        "language": "Dutch",
+        "name": "Lucky"
+      },
+      {
+        "language": "Russian",
+        "name": "Лаки",
+        "romanization": "Laki"
+      }
+    ],
+    "amiibo": {
+      "number": "385",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Scorpio",
+      "birthday": "November 4",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/385_Lucky_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Lucky"
+  }
+}

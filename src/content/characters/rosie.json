@@ -1,0 +1,136 @@
+{
+  "slug": "rosie",
+  "name": "Rosie",
+  "role": "Peppy cat",
+  "personality": "Peppy",
+  "species": "Cat",
+  "popularRank": 20,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/rosie-128.webp",
+  "houseStyle": "Pop apartment",
+  "houseDescription": "Colorful sleek furniture and playful patterns — like a tiny downtown flat with great natural light.",
+  "description": "Bubblegum peppy energy in cat form. Rosie is cheerful, chatty, and easy to love on bright, pastel neighborhoods.",
+  "seo": {
+    "title": "Rosie — Peppy cat",
+    "description": "Bubblegum peppy energy in cat form. Rosie is cheerful, chatty, and easy to love on bright, pastel neighborhoods."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Sandwich"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Peppy",
+    "Cat"
+  ],
+  "acnh": {
+    "intro": "Rosie is a peppy cat villager in the who appears in all games to date as well as in, where she is a major character and is one of Ai's best friends.",
+    "appearance": "Rosie is a cerulean blue cat with dark blue hair and fur. She has big black pie-eyed symbol shaped eyes that appear to be looking off to the right, which are pointed in opposite directions whenever she is angry or sad. Rosie has some light pink blush on her cheeks as well (hence her name), and also has white tips on her paws, tail, feet, and ears. The insides of her ears transition from pink to light pink. She appears to have no nose, but she does have a curly smile.",
+    "personality": "As a peppy villager, Rosie will appear cheerful and friendly, and sometimes will reward others with gifts and compliments. To some villagers however, Rosie can appear to be rude sometimes. She has a short attention span and may have the tendency to overreact about small things. She will be easy to befriend, taking comfort in those she talks to most. She may, however, feel insulted when talking to snooty or cranky villagers, who may gossip about her or disagree with her style. She may also find it difficult to talk with lazy villagers, but she gives out comfort to jocks, who are the male equivalent to the peppy villagers. She also gets along well with normal, big sister, and smug villagers.",
+    "villagerInfo": {
+      "birthday": "February 27",
+      "starSign": "Pisces",
+      "personality": "Peppy",
+      "subPersonality": "A",
+      "catchphrase": "silly",
+      "quote": "One good purr deserves another.",
+      "gender": "Female",
+      "defaultClothing": "dazed dress (Pink)",
+      "umbrella": "candy umbrella",
+      "hobby": "Music",
+      "favoriteStyles": [
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Pink",
+        "Red"
+      ],
+      "bag": "Classy",
+      "food": "Sandwich",
+      "drink": "Smoothie or coffee cup"
+    },
+    "house": {
+      "roof": "beige stone roof",
+      "siding": "white stucco exterior",
+      "door": "pink iron grill door",
+      "wallpaper": "Purple Dotted Wall",
+      "flooring": "Blue-Paint Flooring",
+      "music": "Bubblegum K.K.",
+      "furniture": [
+        "Cute Floor Lamp",
+        "Claw Foot Tub",
+        "Cute Tea Table",
+        "Cute Sofa",
+        "Cute DIY Table",
+        "Cute Vanity",
+        "Cute Wardrobe",
+        "Cute Chair",
+        "Wooden Simple Bed",
+        "Cute Wall Mounted Clock",
+        "Wooden Full Length Mirror",
+        "Wall Mounted TV (50 in.)",
+        "Cute Music Player"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Rosie_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Rosie_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ブーケ",
+        "romanization": "Būke"
+      },
+      {
+        "language": "Korean",
+        "name": "부케",
+        "romanization": "Buke"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "彭花",
+        "romanization": "Pénghuā"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "彭花"
+      },
+      {
+        "language": "French",
+        "name": "Rosie"
+      },
+      {
+        "language": "Spanish",
+        "name": "Minina"
+      },
+      {
+        "language": "Italian",
+        "name": "Grinfia"
+      },
+      {
+        "language": "German",
+        "name": "Sophie"
+      },
+      {
+        "language": "Dutch",
+        "name": "Rosie"
+      },
+      {
+        "language": "Russian",
+        "name": "Рози",
+        "romanization": "Rozi"
+      }
+    ],
+    "amiibo": {
+      "number": "386",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Pisces",
+      "birthday": "February 27",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/386_Rosie_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Rosie"
+  }
+}

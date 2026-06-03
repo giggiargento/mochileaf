@@ -2,25 +2,103 @@
 import type { Game } from '../../../types';
 import CharacterCard from '../CharacterCard.astro';
 import ContentGrid from '../ContentGrid.astro';
+import { defaultLocale, type Locale } from '../../../i18n/config';
+import { t } from '../../../i18n/messages';
 import { getAcnhVillagers } from '../../../data/characters-acnh';
+import {
+  getAcnhVillagerSpecies,
+  villagerSearchBlob,
+} from '../../../data/acnh-villager-directory';
 import { usePageLocale } from '../../../lib/i18n/use-page-locale';
 
 interface Props {
   game: Game;
+  locale?: Locale;
 }
 
-const { game } = Astro.props;
+const { game, locale = defaultLocale } = Astro.props;
 const { tr } = usePageLocale(Astro.currentLocale);
-const villagers = getAcnhVillagers();
+const villagers = getAcnhVillagers(locale);
+const speciesList = getAcnhVillagerSpecies(villagers);
+
+const dirI18n = {
+  noMatch: t('page.villagerDir.noMatch', locale),
+  matchCount: t('page.villagerDir.matchCount', locale),
+  showingAll: t('page.villagerDir.showingAll', locale, { total: '{total}' }),
+  filterSpecies: t('page.villagerDir.filterSpecies', locale),
+  filterAll: t('page.villagerDir.filterAll', locale),
+};
 ---
 
-<div class="acnh-villager-directory">
+<div class="acnh-villager-directory" data-acnh-villager-directory>
   <p class="prose-cozy mb-6 max-w-2xl text-sm">
     {tr('villagerDir.description')}
   </p>
-  <ContentGrid columns={3}>
-    {villagers.map((c) => (
-      <CharacterCard character={c} gameSlug={game.slug} />
-    ))}
+
+  <div class="acnh-villager-directory__toolbar">
+    <label class="sr-only" for="acnh-villager-search">{t('page.villagerDir.searchLabel', locale)}</label>
+    <input
+      id="acnh-villager-search"
+      type="search"
+      class="acnh-villager-directory__search"
+      placeholder={t('page.villagerDir.searchPlaceholder', locale)}
+      autocomplete="off"
+      spellcheck="false"
+    />
+    <p class="acnh-villager-directory__count text-sm text-muted" data-villager-count aria-live="polite">
+    </p>
+  </div>
+
+  <div class="acnh-villager-directory__filters">
+    <fieldset class="acnh-villager-filter-group">
+      <legend class="acnh-villager-filter-group__label">{dirI18n.filterSpecies}</legend>
+      <div class="acnh-villager-filter-chips" role="group">
+        <button
+          type="button"
+          class="acnh-villager-filter-chip is-active"
+          data-species-filter="all"
+          aria-pressed="true"
+        >
+          {dirI18n.filterAll}
+        </button>
+        {
+          speciesList.map((species) => (
+            <button
+              type="button"
+              class="acnh-villager-filter-chip"
+              data-species-filter={species}
+              aria-pressed="false"
+            >
+              {species}
+            </button>
+          ))
+        }
+      </div>
+    </fieldset>
+  </div>
+
+  <ContentGrid columns={3} class="acnh-villager-directory__grid" data-villager-grid>
+    {
+      villagers.map((character) => (
+        <div
+          class="acnh-villager-directory__item"
+          data-villager-card
+          data-species={character.species ?? ''}
+          data-search={villagerSearchBlob(character)}
+        >
+          <CharacterCard character={character} gameSlug={game.slug} />
+        </div>
+      ))
+    }
   </ContentGrid>
+
+  <p class="acnh-villager-directory__empty text-center text-sm text-muted hidden" data-villager-empty>
+    {dirI18n.noMatch}
+  </p>
+
+  <script type="application/json" id="acnh-villager-dir-i18n" set:html={JSON.stringify(dirI18n)} />
 </div>
+
+<script>
+  import '../../../scripts/villagers-directory.client.ts';
+</script>

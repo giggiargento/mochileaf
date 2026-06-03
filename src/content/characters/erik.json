@@ -1,0 +1,129 @@
+{
+  "slug": "erik",
+  "name": "Erik",
+  "role": "Cranky deer",
+  "personality": "Cranky",
+  "species": "Deer",
+  "popularRank": 21,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/erik-128.webp",
+  "houseStyle": "Snow cabin",
+  "houseDescription": "Log furniture, stone hearth mood, and cool blues — a mountain lodge that smells like stew.",
+  "description": "Bearded deer with cabin charisma. Erik is gruff, snack-proud, and a cozy pick for snowy, woodsy island themes.",
+  "seo": {
+    "title": "Erik — Cranky deer",
+    "description": "Bearded deer with cabin charisma. Erik is gruff, snack-proud, and a cozy pick for snowy, woodsy island themes."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Lollipop"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Cranky",
+    "Deer"
+  ],
+  "acnh": {
+    "appearance": "Erik is a brown deer with an amount of beige on his hooves. His snout is light brown, and he has white eyes with black pupils. He has short bangs near the top of his head. He has moose-like antlers on his head.",
+    "personality": "As a lazy villager, Erik has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Erik goes to sleep at 11 PM and wakes up at 8 AM.",
+    "villagerInfo": {
+      "birthday": "July 27",
+      "starSign": "Leo",
+      "personality": "Lazy",
+      "subPersonality": "A",
+      "catchphrase": "chow down",
+      "quote": "If you're afraid of wolves, don't go to the woods.",
+      "gender": "Male",
+      "defaultClothing": "yodel sweater (Camel)",
+      "umbrella": "snowflake umbrella",
+      "hobby": "Nature",
+      "favoriteStyles": [
+        "Simple"
+      ],
+      "favoriteColors": [
+        "Beige",
+        "Red"
+      ],
+      "bag": "Paper",
+      "food": "Lollipop",
+      "drink": "Soda can"
+    },
+    "house": {
+      "roof": "brown thatch roof",
+      "siding": "natural log exterior",
+      "door": "rustic door",
+      "wallpaper": "Ski-Slope Wall",
+      "flooring": "Ski-Slope Flooring",
+      "music": "Drivin'",
+      "furniture": [
+        "Sleigh",
+        "Frozen Table",
+        "Cute Music Player",
+        "Frozen Bed",
+        "Frozen Counter",
+        "Frozen Partition",
+        "Frozen Chair"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Erik_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Erik_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "チャック",
+        "romanization": "Chakku"
+      },
+      {
+        "language": "Korean",
+        "name": "자끄",
+        "romanization": "Jakkeu"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "查克",
+        "romanization": "Chá kè"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "查克"
+      },
+      {
+        "language": "French",
+        "name": "Abraham"
+      },
+      {
+        "language": "Spanish",
+        "name": "Cervasio"
+      },
+      {
+        "language": "Italian",
+        "name": "Cervasio"
+      },
+      {
+        "language": "German",
+        "name": "Erik"
+      },
+      {
+        "language": "Dutch",
+        "name": "Erik"
+      },
+      {
+        "language": "Russian",
+        "name": "Эрик",
+        "romanization": "Erik"
+      }
+    ],
+    "amiibo": {
+      "number": "334",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Leo",
+      "birthday": "July 27",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/334_Erik_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Erik"
+  }
+}

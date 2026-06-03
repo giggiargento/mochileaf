@@ -1,0 +1,134 @@
+{
+  "slug": "dom",
+  "name": "Dom",
+  "role": "Jock sheep",
+  "personality": "Jock",
+  "species": "Sheep",
+  "popularRank": 9,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/dom-128.webp",
+  "houseStyle": "Home gym",
+  "houseDescription": "Exercise gear, bold colors, and open floor space — a loft that doubles as a friendly training studio.",
+  "description": "Workout-motivated sheep with pure sunshine energy. Dom is earnest, loud about fitness, and beloved on wholesome, active islands.",
+  "seo": {
+    "title": "Dom — Jock sheep",
+    "description": "Workout-motivated sheep with pure sunshine energy. Dom is earnest, loud about fitness, and beloved on wholesome, active islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [
+    "Chocolate donut"
+  ],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Jock",
+    "Sheep"
+  ],
+  "acnh": {
+    "appearance": "Dom is a sheep with cream colored wool, light coral pink skin, white hooves, and pale crimson and light pink striped horns. He has large black eyes with two white glints of light in each, and a mouth shaped like the number three.",
+    "personality": "As a jock villager, Dom is energetic and has an interest in physical fitness and activity. He often talks about exercise or sports and may brag about his physical fitness. While often friendly to the player, he may comment on their fitness. During conversations with other villagers, he generally gets along well with peppy villagers due to their similar hyper personalities and will also get along with smug villagers, while he may offend snooty villagers by critiquing their fitness and annoy cranky villagers with his hyper personality. In, Dom goes to sleep at 12:30 AM and wakes up at 6:30 AM.",
+    "villagerInfo": {
+      "birthday": "March 18",
+      "starSign": "Pisces",
+      "personality": "Jock",
+      "subPersonality": "A",
+      "catchphrase": "indeedaroo",
+      "quote": "Be true to your most shiny self.",
+      "gender": "Male",
+      "defaultClothing": "tie-dye shirt",
+      "umbrella": "red umbrella",
+      "hobby": "Play",
+      "favoriteStyles": [
+        "Active",
+        "Cute"
+      ],
+      "favoriteColors": [
+        "Red",
+        "Colorful"
+      ],
+      "bag": "Veggie-print",
+      "food": "Chocolate donut",
+      "drink": "Tea can or yellow mug"
+    },
+    "house": {
+      "roof": "red wooden-tile roof",
+      "siding": "white log exterior",
+      "door": "pink rustic door",
+      "wallpaper": "Backyard-Fence Wall",
+      "flooring": "Backyard Lawn",
+      "music": "K.K. Country",
+      "furniture": [
+        "Hay Bed",
+        "Cassette Player",
+        "Log Stool",
+        "Firewood",
+        "Inflatable Sofa",
+        "Log Stakes",
+        "Lawn Mower",
+        "Log Bench",
+        "Brick Oven",
+        "Garden Faucet",
+        "Picnic Basket"
+      ],
+      "exteriorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Dom_NH_Model.png",
+      "interiorImage": "https://nookipedia.com/wiki/Special:Redirect/file/House_of_Dom_NH.jpg"
+    },
+    "languages": [
+      {
+        "language": "Japanese",
+        "name": "ちゃちゃまる",
+        "romanization": "Chachamaru"
+      },
+      {
+        "language": "Korean",
+        "name": "차둘",
+        "romanization": "Chadul"
+      },
+      {
+        "language": "Chinese (Simplified)",
+        "name": "茶茶丸",
+        "romanization": "Chácháwán"
+      },
+      {
+        "language": "Chinese (Traditional)",
+        "name": "茶茶丸"
+      },
+      {
+        "language": "French",
+        "name": "Bouloche"
+      },
+      {
+        "language": "Spanish",
+        "name": "Fibrilio"
+      },
+      {
+        "language": "Italian",
+        "name": "Ovilio"
+      },
+      {
+        "language": "German",
+        "name": "Dominik"
+      },
+      {
+        "language": "Dutch",
+        "name": "Donny"
+      },
+      {
+        "language": "Russian",
+        "name": "Дом",
+        "romanization": "Dom"
+      }
+    ],
+    "amiibo": {
+      "number": "427",
+      "series": "Series 1–5 (New Horizons)",
+      "starSign": "Pisces",
+      "birthday": "March 18",
+      "image": "https://nookipedia.com/wiki/Special:Redirect/file/427_Dom_amiibo_card_NA.png"
+    },
+    "sourceUrl": "https://nookipedia.com/wiki/Dom"
+  }
+}

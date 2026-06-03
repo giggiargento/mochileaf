@@ -1,0 +1,37 @@
+{
+  "slug": "chevre",
+  "name": "Chèvre",
+  "role": "Normal goat",
+  "personality": "Normal",
+  "species": "Goat",
+  "popularRank": 24,
+  "gameSlug": "animal-crossing-new-horizons",
+  "image": "/images/games/animal-crossing-new-horizons/villagers/chevre-128.webp",
+  "houseStyle": "Classic parlor",
+  "houseDescription": "Regal furniture, soft rugs, and warm wallpaper — a tidy living room that loves afternoon tea.",
+  "description": "Chic normal goat with salon manners. Chèvre is gentle, a little fussy about style, and easy to befriend on elegant cottage islands.",
+  "seo": {
+    "title": "Chèvre — Normal goat",
+    "description": "Chic normal goat with salon manners. Chèvre is gentle, a little fussy about style, and easy to befriend on elegant cottage islands."
+  },
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": [],
+  "routines": [],
+  "relationships": [],
+  "trivia": [],
+  "tags": [
+    "Normal",
+    "Goat"
+  ],
+  "acnh": {
+    "villagerInfo": {
+      "favoriteStyles": [],
+      "favoriteColors": []
+    },
+    "house": {},
+    "languages": [],
+    "sourceUrl": "https://nookipedia.com/wiki/Ch%C3%A8vre"
+  }
+}
