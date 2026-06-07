@@ -1,0 +1,38 @@
+---
+import type { Wallpaper } from '../../types';
+import CozyImage from '../ui/CozyImage.astro';
+import Icon from '../ui/Icon.astro';
+import { t } from '../../i18n/messages';
+import { resolveLocale } from '../../i18n/locale';
+
+interface Props {
+  wallpaper: Wallpaper;
+}
+
+const { wallpaper } = Astro.props;
+const locale = resolveLocale(Astro.currentLocale);
+const downloadLabel = t('page.wallpapers.download', locale);
+---
+
+<article class="wallpaper-card cozy-card">
+  <div class="wallpaper-card__frame aspect-video">
+    <CozyImage
+      src={wallpaper.image}
+      alt={wallpaper.title}
+      width={640}
+      height={360}
+      class="wallpaper-card__img"
+      loading="lazy"
+    />
+    <div class="wallpaper-card__scrim" aria-hidden="true"></div>
+    <a
+      href={wallpaper.downloadUrl}
+      download={wallpaper.downloadFilename}
+      class="wallpaper-card__download"
+      aria-label={downloadLabel}
+      title={downloadLabel}
+    >
+      <Icon name="download-simple" size={18} />
+    </a>
+  </div>
+</article>

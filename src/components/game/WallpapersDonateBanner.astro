@@ -1,0 +1,30 @@
+---
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+import { PAYPAL_DONATE_URL } from '../../data/wallpapers';
+import { t } from '../../i18n/messages';
+import { resolveLocale } from '../../i18n/locale';
+
+const locale = resolveLocale(Astro.currentLocale);
+---
+
+<section class="wallpapers-donate panel-soft p-8 md:p-10">
+  <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+    <div class="max-w-xl">
+      <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-sage-100 text-accent">
+        <Icon name="heart" size={22} weight="regular" />
+      </div>
+      <h2 class="font-display text-2xl text-primary">{t('page.wallpapers.donateTitle', locale)}</h2>
+      <p class="mt-2 text-secondary">{t('page.wallpapers.donateDescription', locale)}</p>
+    </div>
+    <Button
+      href={PAYPAL_DONATE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="shrink-0"
+    >
+      {t('page.wallpapers.donateCta', locale)}
+      <Icon name="arrow-square-out" size={16} class="ml-1" />
+    </Button>
+  </div>
+</section>

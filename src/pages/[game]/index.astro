@@ -13,6 +13,8 @@ import LiveIntelSection from '../../components/content/LiveIntelSection.astro';
 import GameHubHero from '../../components/game/GameHubHero.astro';
 import { getLiveFeedsForGame } from '../../utils/live-content';
 import { usePageLocale } from '../../lib/i18n/use-page-locale';
+import { getWallpapersByGame } from '../../data/wallpapers';
+import WallpaperCard from '../../components/game/WallpaperCard.astro';
 
 export function getStaticPaths() {
   return games
@@ -44,6 +46,8 @@ const hubArticles = [
   .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
   .slice(0, 2);
 const liveFeeds = getLiveFeedsForGame(game.slug);
+const nteWallpapers =
+  game.slug === 'neverness-to-everness' ? getWallpapersByGame(game.slug, locale).slice(0, 3) : [];
 ---
 
 <GameHubLayout game={game} title={tr('hub.home')}>
@@ -80,6 +84,26 @@ const liveFeeds = getLiveFeedsForGame(game.slug);
     </div>
   </section>
 
+  {
+    nteWallpapers.length > 0 && (
+      <section class="pb-12 border-t border-default">
+        <PageHeader title={tr('wallpapers.title')} description={tr('wallpapers.description', { hub: game.shortName ?? 'NTE' })} />
+        <div class="page-container pt-8 pb-0">
+          <ContentGrid columns={3}>
+            {nteWallpapers.map((wallpaper) => (
+              <WallpaperCard wallpaper={wallpaper} />
+            ))}
+          </ContentGrid>
+          <div class="mt-6 text-center">
+            <a href={`${hubBase}/wallpapers`} class="cozy-link text-sm font-semibold">
+              {tr('hub.wallpapers')}
+            </a>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   <section class="pb-12 border-t border-default">
     <PageHeader
       title={tr('hub.latest')}
@@ -100,9 +124,14 @@ const liveFeeds = getLiveFeedsForGame(game.slug);
         </a>
         {
           game.slug === 'neverness-to-everness' && (
-            <a href={`${hubBase}/teams`} class="cozy-link">
-              {tr('hub.teamComps')}
-            </a>
+            <>
+              <a href={`${hubBase}/teams`} class="cozy-link">
+                {tr('hub.teamComps')}
+              </a>
+              <a href={`${hubBase}/wallpapers`} class="cozy-link">
+                {tr('hub.wallpapers')}
+              </a>
+            </>
           )
         }
         {

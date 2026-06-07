@@ -13,9 +13,14 @@ import { isNewsCategory } from '../utils/article-routes';
 import { updates } from '../data/updates';
 import { localePath, resolveLocale } from '../i18n/locale';
 import { t } from '../i18n/messages';
+import { getWallpapersByGame } from '../data/wallpapers';
+import WallpaperCard from '../components/game/WallpaperCard.astro';
+import ContentGrid from '../components/game/ContentGrid.astro';
 
 const locale = resolveLocale(Astro.currentLocale);
 const featuredGames = getFeaturedGames(locale);
+const nteWallpaperPreview = getWallpapersByGame('neverness-to-everness', locale).slice(0, 3);
+const nteWallpapersHref = localePath('/neverness-to-everness/wallpapers', locale);
 const allArticles = await loadArticles(locale);
 const featuredArticles = sortArticlesByDateDesc(
   allArticles.filter((a) => a.gameSlug && isNewsCategory(a.category) && a.featured),
@@ -39,6 +44,24 @@ const trendingArticles = sortArticlesByDateDesc(
       {featuredGames.map((game) => <GameCard game={game} />)}
     </div>
   </section>
+
+  {
+    nteWallpaperPreview.length > 0 && (
+      <section class="page-container py-16 border-t border-default">
+        <SectionHeader
+          title={t('home.section.wallpapers', locale)}
+          subtitle={t('home.section.wallpapersSub', locale)}
+          href={nteWallpapersHref}
+          linkLabel={t('home.section.allWallpapers', locale)}
+        />
+        <ContentGrid columns={3}>
+          {nteWallpaperPreview.map((wallpaper) => (
+            <WallpaperCard wallpaper={wallpaper} />
+          ))}
+        </ContentGrid>
+      </section>
+    )
+  }
 
   <section class="page-container py-16">
     <div class="grid gap-10 lg:grid-cols-3 lg:items-stretch">

@@ -176,6 +176,17 @@ export interface IslandTour {
   tags: string[];
 }
 
+export interface Wallpaper {
+  slug: string;
+  title: string;
+  gameSlug: string;
+  /** Public path for preview and download. */
+  image: string;
+  downloadUrl: string;
+  /** Suggested filename for the browser download attribute. */
+  downloadFilename: string;
+}
+
 export interface TeamMemberSlot {
   slug: string;
   /** Squad role on the comp card (e.g. "Main DPS"). */
