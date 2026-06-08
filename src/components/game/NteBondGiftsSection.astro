@@ -1,7 +1,8 @@
 ---
-import Icon from '../ui/Icon.astro';
+import BondGiftTile from './BondGiftTile.astro';
 import type { NteBondGift, NteCharacterBondProfile } from '../../data/nte-bond-gifts';
 import { nteUniversalBondGifts } from '../../data/nte-bond-gifts';
+import { bondGiftToneClass } from '../../lib/bond-gift';
 import { giftVisual } from '../../lib/nte/gift-slug';
 import { t } from '../../i18n/messages';
 
@@ -12,21 +13,14 @@ interface Props {
 
 const { profile, locale } = Astro.props;
 
-const toneClass: Record<string, string> = {
-  sage: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--sage',
-  blossom: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--blossom',
-  lavender: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--lavender',
-  mist: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--mist',
-  accent: 'bond-gift-icon bond-gift-icon--tile bond-gift-icon--accent',
-};
-
 function affinityLabel(points: number): string {
   return t('character.bondGifts.affinity', locale, { points: String(points) });
 }
 
 function renderGift(gift: NteBondGift) {
   const visual = giftVisual(gift);
-  return { gift, visual, toneClasses: toneClass[visual.tone] ?? toneClass.lavender };
+  const toneClasses = bondGiftToneClass[visual.tone] ?? bondGiftToneClass.lavender;
+  return { gift, visual, toneClasses };
 }
 
 const universal = nteUniversalBondGifts.map(renderGift);
@@ -46,23 +40,14 @@ const favorites = profile.gifts.map(renderGift);
       <p class="mt-0.5 text-[11px] leading-snug text-muted">{t('character.bondGifts.universalNote', locale)}</p>
       <ul class="bond-gift-grid mt-2">
         {universal.map(({ gift, visual, toneClasses }) => (
-          <li class="bond-gift-tile">
-            <div class="bond-gift-tile-inner">
-              <div class={toneClasses} aria-hidden="true">
-                <Icon name={visual.icon} size={26} />
-              </div>
-              <div class="bond-gift-tile-body">
-                <p class="text-xs font-semibold leading-snug text-primary">
-                  {gift.name}
-                  <span class="font-medium text-accent"> · {affinityLabel(gift.affinity)}</span>
-                </p>
-                <p class="mt-0.5 inline-flex items-start gap-1 text-[11px] leading-snug text-secondary">
-                  <Icon name="map-pin" size={10} class="mt-px shrink-0" />
-                  <span>{gift.source}</span>
-                </p>
-              </div>
-            </div>
-          </li>
+          <BondGiftTile
+            name={gift.name}
+            icon={visual.icon}
+            toneClasses={toneClasses}
+            affinityLabel={affinityLabel(gift.affinity)}
+            subtitle={gift.source}
+            subtitleIcon="map-pin"
+          />
         ))}
       </ul>
     </div>
@@ -72,23 +57,14 @@ const favorites = profile.gifts.map(renderGift);
       <p class="mt-0.5 text-[11px] leading-snug text-muted">{t('character.bondGifts.favoritesNote', locale)}</p>
       <ul class="bond-gift-grid mt-2">
         {favorites.map(({ gift, visual, toneClasses }) => (
-          <li class="bond-gift-tile">
-            <div class="bond-gift-tile-inner">
-              <div class={toneClasses} aria-hidden="true">
-                <Icon name={visual.icon} size={26} />
-              </div>
-              <div class="bond-gift-tile-body">
-                <p class="text-xs font-semibold leading-snug text-primary">
-                  {gift.name}
-                  <span class="font-medium text-accent"> · {affinityLabel(gift.affinity)}</span>
-                </p>
-                <p class="mt-0.5 inline-flex items-start gap-1 text-[11px] leading-snug text-secondary">
-                  <Icon name="map-pin" size={10} class="mt-px shrink-0" />
-                  <span>{gift.source}</span>
-                </p>
-              </div>
-            </div>
-          </li>
+          <BondGiftTile
+            name={gift.name}
+            icon={visual.icon}
+            toneClasses={toneClasses}
+            affinityLabel={affinityLabel(gift.affinity)}
+            subtitle={gift.source}
+            subtitleIcon="map-pin"
+          />
         ))}
       </ul>
     </div>

@@ -1,0 +1,67 @@
+{
+  "slug": "sandy",
+  "name": "Sandy",
+  "role": "Desert Shopkeeper",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/sandy.png",
+  "description": "Runs the Oasis in Calico Desert. Cactus fruit, daffodils, and mango sweeten long desert trips.",
+  "seo": {
+    "title": "Sandy — Desert Shopkeeper",
+    "description": "Runs the Oasis in Calico Desert. Cactus fruit, daffodils, and mango sweeten long desert trips."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Your friend in the desert — cheerful, lonely, and thrilled when the bus brings visitors to her shop.",
+    "villagerInfo": {
+      "birthday": "Fall 15",
+      "livesIn": "Calico Desert",
+      "address": "Oasis shop",
+      "occupation": "Shopkeeper"
+    },
+    "gifts": {
+      "love": [
+        "Cactus Fruit",
+        "Daffodil",
+        "Mango",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Coconut"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Sandy"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 5:00 PM",
+      "location": "Oasis shop (Desert)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Emily",
+      "note": "Close friend — Emily visits when the desert is open."
+    },
+    {
+      "name": "Pam",
+      "note": "Pam's bus route is Sandy's lifeline to Pelican Town."
+    }
+  ],
+  "trivia": [
+    "She only appears after the bus is repaired — plan Fall 15 gifts with a desert run."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

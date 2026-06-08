@@ -73,6 +73,8 @@ export interface Character {
   tags?: string[];
   /** ACNH extended reference blocks (content/characters/*.json). */
   acnh?: AcnhVillagerDetails;
+  /** Stardew Valley villager reference (curated wiki fields). */
+  stardew?: StardewVillagerDetails;
 }
 
 export interface NteBuildItem {
@@ -155,6 +157,27 @@ export interface AcnhVillagerDetails {
   sourceUrl?: string;
 }
 
+/** Stardew Valley villager reference (curated from the official wiki). */
+export interface StardewVillagerDetails {
+  intro?: string;
+  villagerInfo?: {
+    birthday?: string;
+    livesIn?: string;
+    address?: string;
+    marriageCandidate?: boolean;
+    occupation?: string;
+    family?: { name: string; relation?: string }[];
+  };
+  gifts?: {
+    love?: string[];
+    like?: string[];
+    dislike?: string[];
+    hate?: string[];
+  };
+  heartEvents?: { hearts: number | string; title: string; summary: string }[];
+  sourceUrl?: string;
+}
+
 export interface GameItem {
   slug: string;
   name: string;
@@ -174,6 +197,8 @@ export interface IslandTour {
   channel: string;
   summary: string;
   tags: string[];
+  /** Optional YYYY-MM-DD for newest-first ordering on hub lists. */
+  publishedAt?: string;
 }
 
 export interface Wallpaper {
@@ -226,6 +251,8 @@ export interface Mod {
   tags: string[];
   /** Official download or project page (Nexus, SMAPI site, etc.) */
   url: string;
+  /** Card hero image, e.g. /images/games/stardew-valley/mods/spring-recolor.jpg */
+  coverImage?: string;
 }
 
 export interface TierMember {

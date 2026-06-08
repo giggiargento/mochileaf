@@ -1,0 +1,113 @@
+{
+  "slug": "haley",
+  "name": "Haley",
+  "role": "Photographer",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/haley.png",
+  "description": "Sun-loving and image-conscious at first glance. Coconut, fruit salad, and patience reveal a softer side.",
+  "seo": {
+    "title": "Haley — Photographer",
+    "description": "Sun-loving and image-conscious at first glance. Coconut, fruit salad, and patience reveal a softer side."
+  },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "Emily's younger sister and an aspiring photographer. She can seem shallow until you notice how she cares behind the camera.",
+    "villagerInfo": {
+      "birthday": "Summer 14",
+      "livesIn": "Pelican Town",
+      "address": "2 Willow Lane",
+      "marriageCandidate": true,
+      "family": [
+        {
+          "name": "Emily",
+          "relation": "sister"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Coconut",
+        "Fruit Salad",
+        "Pink Cake",
+        "Sunflower",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Daffodil",
+        "Quartz"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Lost bracelet",
+        "summary": "Help her search the beach for a bracelet she lost in the sand."
+      },
+      {
+        "hearts": 4,
+        "title": "Darkroom reveal",
+        "summary": "She shows you her photography setup at home — a side no one else sees."
+      },
+      {
+        "hearts": 6,
+        "title": "Cow rescue",
+        "summary": "A cow is stuck in the fence; helping her frees it and earns real gratitude."
+      },
+      {
+        "hearts": 8,
+        "title": "Fair cake",
+        "summary": "At the Stardew Valley Fair she asks you to taste her entry and shares a sweet moment."
+      },
+      {
+        "hearts": 10,
+        "title": "Darkroom kiss",
+        "summary": "She develops photos of you together and kisses you in the darkroom."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Haley"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "10:00 AM – 5:00 PM",
+      "location": "Home → town square → river (photos)"
+    },
+    {
+      "label": "Rainy day",
+      "time": "All day",
+      "location": "Home (reading or photos)"
+    },
+    {
+      "label": "Tuesday",
+      "time": "Morning",
+      "location": "Aerobics at clinic"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Emily",
+      "note": "Older sister and roommate — they bicker but clearly depend on each other."
+    },
+    {
+      "name": "Alex",
+      "note": "Childhood friend; they still hang out around the square."
+    }
+  ],
+  "trivia": [
+    "Coconut from the Desert or Ginger Island is an easy loved gift once you unlock travel."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

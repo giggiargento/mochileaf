@@ -1,0 +1,86 @@
+{
+  "slug": "vincent",
+  "name": "Vincent",
+  "role": "Child",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/vincent.png",
+  "description": "Jodi's younger son and Jas's playmate. Grapes, snails, and crayons beat fancy jewelry.",
+  "seo": {
+    "title": "Vincent — Child",
+    "description": "Jodi's younger son and Jas's playmate. Grapes, snails, and crayons beat fancy jewelry."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Energetic kid who loves bugs, grapes, and heroes. Penny tutors him alongside Jas.",
+    "villagerInfo": {
+      "birthday": "Spring 10",
+      "livesIn": "Pelican Town",
+      "address": "1 Willow Lane",
+      "family": [
+        {
+          "name": "Jodi",
+          "relation": "mother"
+        },
+        {
+          "name": "Sam",
+          "relation": "brother"
+        },
+        {
+          "name": "Kent",
+          "relation": "father"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Coconut",
+        "Ginger",
+        "Grape",
+        "Snail",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Daffodil"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Chanterelle",
+        "Common Mushroom"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Vincent"
+  },
+  "routines": [
+    {
+      "label": "School days",
+      "time": "9:00 AM – 2:00 PM",
+      "location": "Museum library with Penny"
+    },
+    {
+      "label": "Afternoons",
+      "time": "After school",
+      "location": "Town or home"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Jas",
+      "note": "Best friend and classmate."
+    },
+    {
+      "name": "Sam",
+      "note": "Looks up to his older brother's skateboard tricks."
+    }
+  ],
+  "trivia": [
+    "Grapes are a loved gift and grow on summer trellises — easy for Spring 10 if planted early."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

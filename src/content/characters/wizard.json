@@ -1,0 +1,69 @@
+{
+  "slug": "wizard",
+  "name": "Wizard",
+  "role": "Wizard",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/wizard.png",
+  "description": "Reclusive mage in the tower west of town. Purple mushrooms, solar essences, and void eggs intrigue him.",
+  "seo": {
+    "title": "Wizard — Wizard",
+    "description": "Reclusive mage in the tower west of town. Purple mushrooms, solar essences, and void eggs intrigue him."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Lives in the wizard's tower and studies the valley's elemental forces. Cryptic, powerful, and key to late-game secrets.",
+    "villagerInfo": {
+      "birthday": "Winter 17",
+      "livesIn": "Pelican Town",
+      "address": "Wizard's Tower",
+      "occupation": "Wizard"
+    },
+    "gifts": {
+      "love": [
+        "Book of Stars",
+        "Purple Mushroom",
+        "Solar Essence",
+        "Super Cucumber",
+        "Void Essence",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Gold Bar"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Wizard"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "All day",
+      "location": "Wizard's Tower (basement or study)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Krobus & Dwarf",
+      "note": "Mediator between shadows and dwarves — helps you translate and trade."
+    },
+    {
+      "name": "Caroline",
+      "note": "Old connection hinted in community lore — the wizard knows many secrets."
+    }
+  ],
+  "trivia": [
+    "Unlock his tower by visiting after the Community Center or Joja route triggers his cutscene."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

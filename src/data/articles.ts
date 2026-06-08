@@ -19,12 +19,16 @@ import { loadArticles, sortArticlesByDateDesc } from '../lib/content/articles';
 
 export async function getNewsByGame(gameSlug: string, locale: Locale = 'en') {
   const all = await loadArticles(locale);
-  return all.filter((a) => a.gameSlug === gameSlug && isNewsCategory(a.category));
+  return sortArticlesByDateDesc(
+    all.filter((a) => a.gameSlug === gameSlug && isNewsCategory(a.category)),
+  );
 }
 
 export async function getGuidesByGame(gameSlug: string, locale: Locale = 'en') {
   const all = await loadArticles(locale);
-  return all.filter((a) => a.gameSlug === gameSlug && isGuideCategory(a.category));
+  return sortArticlesByDateDesc(
+    all.filter((a) => a.gameSlug === gameSlug && isGuideCategory(a.category)),
+  );
 }
 
 /** All hub news/update posts across games, newest first. */

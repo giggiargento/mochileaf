@@ -1,0 +1,69 @@
+{
+  "slug": "gus",
+  "name": "Gus",
+  "role": "Saloon Owner",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/gus.png",
+  "description": "Cooks hearty meals at the Stardrop Saloon. Oranges, tropical curry, and quality ingredients keep him cheerful.",
+  "seo": {
+    "title": "Gus — Saloon Owner",
+    "description": "Cooks hearty meals at the Stardrop Saloon. Oranges, tropical curry, and quality ingredients keep him cheerful."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Owner and chef of the Stardrop Saloon — the town's evening hub. Friendly, hard-working, and proud of his menu.",
+    "villagerInfo": {
+      "birthday": "Summer 8",
+      "livesIn": "Pelican Town",
+      "address": "Stardrop Saloon",
+      "occupation": "Saloon owner"
+    },
+    "gifts": {
+      "love": [
+        "Diamond",
+        "Escargot",
+        "Fish Taco",
+        "Orange",
+        "Tropical Curry",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Daffodil"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Gus"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "8:00 AM – 12:00 AM",
+      "location": "Stardrop Saloon (kitchen or bar)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Emily",
+      "note": "Evening bartender at the saloon."
+    },
+    {
+      "name": "Pam",
+      "note": "Regular at the bar — Gus knows everyone's usual order."
+    }
+  ],
+  "trivia": [
+    "Oranges from the Desert are a simple loved gift once the bus is running."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

@@ -1,0 +1,87 @@
+{
+  "slug": "jodi",
+  "name": "Jodi",
+  "role": "Homemaker",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/jodi.png",
+  "description": "Sam and Vincent's mom. Chocolate cake, crispy bass, and diamond make her busy days brighter.",
+  "seo": {
+    "title": "Jodi — Homemaker",
+    "description": "Sam and Vincent's mom. Chocolate cake, crispy bass, and diamond make her busy days brighter."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Keeps 1 Willow Lane running while Kent is away and after he returns. Overworked but endlessly caring.",
+    "villagerInfo": {
+      "birthday": "Fall 11",
+      "livesIn": "Pelican Town",
+      "address": "1 Willow Lane",
+      "family": [
+        {
+          "name": "Kent",
+          "relation": "husband"
+        },
+        {
+          "name": "Sam",
+          "relation": "son"
+        },
+        {
+          "name": "Vincent",
+          "relation": "son"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Chocolate Cake",
+        "Crispy Bass",
+        "Diamond",
+        "Egg",
+        "Pan Fried Trout",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Daffodil"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Fish Taco",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Jodi"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 3:30 PM",
+      "location": "Home → Pierre's (shopping) → home"
+    },
+    {
+      "label": "Tuesday",
+      "time": "Morning",
+      "location": "Aerobics at clinic"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Kent",
+      "note": "Husband returning from military service in year 2 — adjustment takes time."
+    },
+    {
+      "name": "Caroline",
+      "note": "Friend and fellow aerobics regular."
+    }
+  ],
+  "trivia": [
+    "Chocolate Cake works for both Jodi and Abigail — bake once, gift twice."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

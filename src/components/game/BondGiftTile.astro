@@ -1,0 +1,43 @@
+---
+import Icon from '../ui/Icon.astro';
+
+interface Props {
+  name: string;
+  icon: string;
+  toneClasses: string;
+  affinityLabel?: string;
+  subtitle?: string;
+  subtitleIcon?: string;
+}
+
+const {
+  name,
+  icon,
+  toneClasses,
+  affinityLabel,
+  subtitle,
+  subtitleIcon = 'tag',
+} = Astro.props;
+---
+
+<li class="bond-gift-tile">
+  <div class="bond-gift-tile-inner">
+    <div class={toneClasses} aria-hidden="true">
+      <Icon name={icon} size={26} />
+    </div>
+    <div class="bond-gift-tile-body">
+      <p class="text-xs font-semibold leading-snug text-primary">
+        {name}
+        {affinityLabel && <span class="font-medium text-accent"> · {affinityLabel}</span>}
+      </p>
+      {
+        subtitle && (
+          <p class="mt-0.5 inline-flex items-start gap-1 text-[11px] leading-snug text-secondary">
+            <Icon name={subtitleIcon} size={10} class="mt-px shrink-0" />
+            <span>{subtitle}</span>
+          </p>
+        )
+      }
+    </div>
+  </div>
+</li>

@@ -25,6 +25,7 @@
     "villagers:scaffold": "node scripts/scaffold-acnh-villager-content.mjs",
     "villagers:import-details": "node scripts/import-acnh-villager-details.mjs",
     "villagers:merge-details": "node scripts/merge-acnh-villager-details.mjs",
+    "villagers:stardew": "node scripts/sync-stardew-villager-content.mjs",
     "creators:sync-avatar": "node scripts/sync-creator-avatar.mjs",
     "creators:sync": "node scripts/sync-cozy-creators.mjs",
     "creators:download-avatar": "node scripts/download-creator-from-ig-page.mjs",

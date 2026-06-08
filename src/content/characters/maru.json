@@ -1,0 +1,127 @@
+{
+  "slug": "maru",
+  "name": "Maru",
+  "role": "Inventor & Nurse",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/maru.png",
+  "description": "Splits time between Harvey's clinic and gadgets in the mountain lab. Batteries, gold bars, and rare minerals impress her most.",
+  "seo": {
+    "title": "Maru — Inventor & Nurse",
+    "description": "Splits time between Harvey's clinic and gadgets in the mountain lab. Batteries, gold bars, and rare minerals impress her most."
+  },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "Demetrius and Robin's daughter, Harvey's nurse, and tinkerer extraordinaire. Brilliant, busy, and a little competitive with Sebastian.",
+    "villagerInfo": {
+      "birthday": "Summer 10",
+      "livesIn": "Pelican Town",
+      "address": "Mountain (Robin's house)",
+      "marriageCandidate": true,
+      "family": [
+        {
+          "name": "Robin",
+          "relation": "mother"
+        },
+        {
+          "name": "Demetrius",
+          "relation": "father"
+        },
+        {
+          "name": "Sebastian",
+          "relation": "stepbrother"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Battery Pack",
+        "Cactus Fruit",
+        "Diamond",
+        "Gold Bar",
+        "Iridium Bar",
+        "Miner's Treat",
+        "Radioactive Bar",
+        "Rhubarb Pie",
+        "Strawberry",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Copper Bar",
+        "Iron Bar"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Holly",
+        "Salmonberry"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Telescope night",
+        "summary": "Visit the mountain at night while she stargazes with her telescope."
+      },
+      {
+        "hearts": 4,
+        "title": "Hospital visit",
+        "summary": "She treats a patient at the clinic and shows her competent, caring side."
+      },
+      {
+        "hearts": 6,
+        "title": "Gadget test",
+        "summary": "She asks you to test a homemade device — do not flinch when it sparks."
+      },
+      {
+        "hearts": 8,
+        "title": "Confession on the hill",
+        "summary": "On the mountain she admits she has been thinking about you a lot."
+      },
+      {
+        "hearts": 10,
+        "title": "Planetarium kiss",
+        "summary": "Under the stars at her telescope, she kisses you."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Maru"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "8:00 AM – 4:00 PM",
+      "location": "Clinic → home lab (evenings)"
+    },
+    {
+      "label": "Tuesday",
+      "time": "Morning",
+      "location": "Aerobics at clinic"
+    },
+    {
+      "label": "Rainy day",
+      "time": "Afternoon",
+      "location": "Home (inventing)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Harvey",
+      "note": "Works as his nurse — professional and fond of her boss."
+    },
+    {
+      "name": "Sebastian",
+      "note": "Step-siblings who share a roof but not much overlap in daily life."
+    }
+  ],
+  "trivia": [
+    "Battery packs from lightning rods are a top-tier loved gift once your farm scales up."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

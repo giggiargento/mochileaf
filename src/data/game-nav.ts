@@ -21,7 +21,6 @@ const defaultSections: NavSection[] = [
   { labelKey: 'nav.tierList', path: 'tier-list', icon: 'medal' },
   { labelKey: 'nav.news', path: 'news', icon: 'newspaper' },
   { labelKey: 'nav.guides', path: 'guides', icon: 'book-open' },
-  { labelKey: 'nav.search', path: 'search', icon: 'magnifying-glass' },
   { labelKey: 'nav.about', path: 'about', icon: 'info' },
 ];
 
@@ -45,7 +44,6 @@ const navBySlug: Record<string, NavSection[]> = {
     { labelKey: 'nav.wallpapers', path: 'wallpapers', icon: 'image' },
     { labelKey: 'nav.guides', path: 'guides', icon: 'book-open' },
     { labelKey: 'nav.news', path: 'news', icon: 'newspaper' },
-    { labelKey: 'nav.search', path: 'search', icon: 'magnifying-glass' },
     { labelKey: 'nav.about', path: 'about', icon: 'info' },
   ],
   'stardew-valley': [
@@ -54,7 +52,6 @@ const navBySlug: Record<string, NavSection[]> = {
     { labelKey: 'nav.mods', path: 'mods', icon: 'package' },
     { labelKey: 'nav.guides', path: 'guides', icon: 'book-open' },
     { labelKey: 'nav.news', path: 'news', icon: 'newspaper' },
-    { labelKey: 'nav.search', path: 'search', icon: 'magnifying-glass' },
     { labelKey: 'nav.about', path: 'about', icon: 'info' },
   ],
 };

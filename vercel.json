@@ -121,6 +121,26 @@
       "permanent": true
     },
     {
+      "source": "/articles/acnh-june-2026-wedding-bug-off",
+      "destination": "/animal-crossing-new-horizons/news/acnh-june-2026-wedding-bug-off/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-june-2026-wedding-bug-off/",
+      "destination": "/animal-crossing-new-horizons/news/acnh-june-2026-wedding-bug-off/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-june-2026-wedding-bug-off",
+      "destination": "/es/animal-crossing-new-horizons/news/acnh-june-2026-wedding-bug-off/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-june-2026-wedding-bug-off/",
+      "destination": "/es/animal-crossing-new-horizons/news/acnh-june-2026-wedding-bug-off/",
+      "permanent": true
+    },
+    {
       "source": "/articles/acnh-update-3-0-3-leaf-statue",
       "destination": "/animal-crossing-new-horizons/news/acnh-update-3-0-3-leaf-statue/",
       "permanent": true
@@ -158,6 +178,46 @@
     {
       "source": "/es/articles/acnh-villager-hunting-tips/",
       "destination": "/es/animal-crossing-new-horizons/guides/acnh-villager-hunting-tips/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-wedding-season-heart-crystals",
+      "destination": "/animal-crossing-new-horizons/guides/acnh-wedding-season-heart-crystals/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/acnh-wedding-season-heart-crystals/",
+      "destination": "/animal-crossing-new-horizons/guides/acnh-wedding-season-heart-crystals/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-wedding-season-heart-crystals",
+      "destination": "/es/animal-crossing-new-horizons/guides/acnh-wedding-season-heart-crystals/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/acnh-wedding-season-heart-crystals/",
+      "destination": "/es/animal-crossing-new-horizons/guides/acnh-wedding-season-heart-crystals/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-1-1-is-live-sunward-lacrimosa",
+      "destination": "/neverness-to-everness/news/nte-1-1-is-live-sunward-lacrimosa/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-1-1-is-live-sunward-lacrimosa/",
+      "destination": "/neverness-to-everness/news/nte-1-1-is-live-sunward-lacrimosa/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-1-1-is-live-sunward-lacrimosa",
+      "destination": "/es/neverness-to-everness/news/nte-1-1-is-live-sunward-lacrimosa/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-1-1-is-live-sunward-lacrimosa/",
+      "destination": "/es/neverness-to-everness/news/nte-1-1-is-live-sunward-lacrimosa/",
       "permanent": true
     },
     {
@@ -321,6 +381,26 @@
       "permanent": true
     },
     {
+      "source": "/articles/nte-sunward-island-cozy-guide",
+      "destination": "/neverness-to-everness/guides/nte-sunward-island-cozy-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/nte-sunward-island-cozy-guide/",
+      "destination": "/neverness-to-everness/guides/nte-sunward-island-cozy-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-sunward-island-cozy-guide",
+      "destination": "/es/neverness-to-everness/guides/nte-sunward-island-cozy-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/nte-sunward-island-cozy-guide/",
+      "destination": "/es/neverness-to-everness/guides/nte-sunward-island-cozy-guide/",
+      "permanent": true
+    },
+    {
       "source": "/articles/nte-tier-list-notes",
       "destination": "/neverness-to-everness/news/nte-tier-list-notes/",
       "permanent": true
@@ -381,6 +461,26 @@
       "permanent": true
     },
     {
+      "source": "/articles/stardew-1-7-festivals-quest-board-teases",
+      "destination": "/stardew-valley/news/stardew-1-7-festivals-quest-board-teases/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-1-7-festivals-quest-board-teases/",
+      "destination": "/stardew-valley/news/stardew-1-7-festivals-quest-board-teases/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-1-7-festivals-quest-board-teases",
+      "destination": "/es/stardew-valley/news/stardew-1-7-festivals-quest-board-teases/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-1-7-festivals-quest-board-teases/",
+      "destination": "/es/stardew-valley/news/stardew-1-7-festivals-quest-board-teases/",
+      "permanent": true
+    },
+    {
       "source": "/articles/stardew-community-center-bundles",
       "destination": "/stardew-valley/guides/stardew-community-center-bundles/",
       "permanent": true
@@ -398,6 +498,26 @@
     {
       "source": "/es/articles/stardew-community-center-bundles/",
       "destination": "/es/stardew-valley/guides/stardew-community-center-bundles/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-restart-farm-2026",
+      "destination": "/stardew-valley/guides/stardew-restart-farm-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/articles/stardew-restart-farm-2026/",
+      "destination": "/stardew-valley/guides/stardew-restart-farm-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-restart-farm-2026",
+      "destination": "/es/stardew-valley/guides/stardew-restart-farm-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/es/articles/stardew-restart-farm-2026/",
+      "destination": "/es/stardew-valley/guides/stardew-restart-farm-2026/",
       "permanent": true
     },
     {

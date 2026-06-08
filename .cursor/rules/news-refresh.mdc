@@ -1,0 +1,34 @@
+---
+description: Refresh game hub news — web research, new articles, images
+globs: src/content/articles/**
+alwaysApply: false
+---
+
+# News refresh workflow
+
+When the user asks to complete/update **news** articles (e.g. "nuevas noticias", "completar artículos"):
+
+## Research
+
+1. Search the web for **recent** news per **active** game hub (`neverness-to-everness`, `animal-crossing-new-horizons`, `stardew-valley`).
+2. Prefer: version updates, new characters, events, official patch notes, credible gaming press.
+3. Skip duplicates — read existing `src/content/articles/*.md` for that `gameSlug` first.
+
+## Add content
+
+- Add **1–2 new** `category: news` articles per game (or as many as the user specifies).
+- Lists use **`publishedAt` newest first** (`getNewsByGame` / `getGuidesByGame` sort desc).
+- File: `src/content/articles/{slug}.md` — cozy magazine tone per `docs/EDITORIAL.md`, not tier-list speak.
+- Frontmatter: `title`, `excerpt`, `gameSlug`, `publishedAt` (YYYY-MM-DD), `readTime`, `seo.title`, `seo.description`.
+- Optional: `featured`, `trending`, `coverImage`, `coverCaption`.
+
+## Images
+
+- Put assets under `public/images/games/{game-slug}/` (often `news/`).
+- Prefer `coverImage` on the article; add `<figure class="article-inline-figure">` in body when useful.
+- Reuse existing hub images when no safe new download; otherwise fetch official/promotional art and note source in caption or footer.
+
+## Verify
+
+- Run `npm run content:lint` (or `npm run build` if needed).
+- Do not commit unless the user asks.

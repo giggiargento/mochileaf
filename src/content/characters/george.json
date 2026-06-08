@@ -1,0 +1,75 @@
+{
+  "slug": "george",
+  "name": "George",
+  "role": "Retiree",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/george.png",
+  "description": "Gruff veteran who watches TV by the window. Warm up with leeks, fried mushrooms, or respectful patience.",
+  "seo": {
+    "title": "George — Retiree",
+    "description": "Gruff veteran who watches TV by the window. Warm up with leeks, fried mushrooms, or respectful patience."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Evelyn's husband and Alex's grandfather. Blunt and stationary, with a soft spot he rarely shows.",
+    "villagerInfo": {
+      "birthday": "Fall 24",
+      "livesIn": "Pelican Town",
+      "address": "1 River Road",
+      "family": [
+        {
+          "name": "Evelyn",
+          "relation": "wife"
+        },
+        {
+          "name": "Alex",
+          "relation": "grandson"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Fried Mushroom",
+        "Leek",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Daffodil",
+        "Quartz"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/George"
+  },
+  "routines": [
+    {
+      "label": "Most days",
+      "time": "All day",
+      "location": "Home (chair by the window)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Evelyn",
+      "note": "Devoted wife who handles what he cannot get up to do."
+    },
+    {
+      "name": "Alex",
+      "note": "Proud of his grandson but shows it in gruff one-liners."
+    }
+  ],
+  "trivia": [
+    "Leeks forage in Spring — an easy loved gift before Fall 24."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

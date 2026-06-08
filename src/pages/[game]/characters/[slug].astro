@@ -8,6 +8,7 @@ import { routableCharacters, routableGames } from '../../../lib/content/registry
 import { getHubCopy } from '../../../utils/game-hub';
 import DecorInspirationGallery from '../../../components/game/acnh/DecorInspirationGallery.astro';
 import VillagerDetailSections from '../../../components/game/acnh/VillagerDetailSections.astro';
+import StardewVillagerDetailSections from '../../../components/game/stardew/StardewVillagerDetailSections.astro';
 import { getAcnhDecorForCharacter } from '../../../data/character-decor-acnh';
 import { villagerPortrait } from '../../../data/characters-acnh';
 import { acnhPinterestBoards } from '../../../data/pinterest-boards-acnh';
@@ -36,8 +37,10 @@ const character = getCharacterBySlug(rawCharacter.slug, locale) ?? rawCharacter;
 const hubCopy = getHubCopy(game, locale);
 const charactersListHref = localePath(`/${game.slug}/characters`, locale);
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
+const isStardew = game.slug === 'stardew-valley';
 const isNte = game.slug === 'neverness-to-everness';
 const acnhDetails = isAcnh ? character.acnh : undefined;
+const stardewDetails = isStardew ? character.stardew : undefined;
 const nteGuide = isNte ? getNteCharacterGuide(character, locale) : undefined;
 const nteBondGifts = isNte ? getNteBondGiftsForCharacter(character.slug) : undefined;
 const portraitAlt = `${character.name} — ${character.role} in ${game.name}`;
@@ -112,7 +115,47 @@ const villagerInfoRows =
         { label: t('character.field.snack', locale), value: acnhDetails.villagerInfo.food },
         { label: t('character.field.drink', locale), value: acnhDetails.villagerInfo.drink },
       ] as { label: string; value?: string }[]).filter((row) => row.value)
-    : [];
+    : stardewDetails?.villagerInfo
+      ? ([
+          { label: t('character.field.birthday', locale), value: stardewDetails.villagerInfo.birthday },
+          { label: t('character.field.livesIn', locale), value: stardewDetails.villagerInfo.livesIn },
+          { label: t('character.field.address', locale), value: stardewDetails.villagerInfo.address },
+          { label: t('character.field.occupation', locale), value: stardewDetails.villagerInfo.occupation },
+          {
+            label: t('character.field.marriage', locale),
+            value:
+              stardewDetails.villagerInfo.marriageCandidate === true
+                ? t('character.field.marriageYes', locale)
+                : stardewDetails.villagerInfo.marriageCandidate === false
+                  ? t('character.field.marriageNo', locale)
+                  : undefined,
+          },
+          {
+            label: t('character.field.family', locale),
+            value: stardewDetails.villagerInfo.family?.length
+              ? stardewDetails.villagerInfo.family
+                  .map((member) =>
+                    member.relation ? `${member.name} (${member.relation})` : member.name,
+                  )
+                  .join(', ')
+              : undefined,
+          },
+        ] as { label: string; value?: string }[]).filter((row) => row.value)
+      : [];
+
+const stardewHasGifts = Boolean(
+  stardewDetails?.gifts &&
+    (stardewDetails.gifts.love?.length ||
+      stardewDetails.gifts.like?.length ||
+      stardewDetails.gifts.dislike?.length ||
+      stardewDetails.gifts.hate?.length),
+);
+const stardewHasSchedule = (character.routines?.length ?? 0) > 0;
+const stardewHasHeartEvents = (stardewDetails?.heartEvents?.length ?? 0) > 0;
+const stardewHasRelationships = (character.relationships?.length ?? 0) > 0;
+const stardewHasTrivia = (character.trivia?.length ?? 0) > 0;
+const stardewExploreLinks =
+  stardewHasGifts || stardewHasSchedule || stardewHasHeartEvents || stardewHasRelationships || stardewHasTrivia;
 ---
 
 <GameHubLayout game={game} title={characterSeo.title} description={characterSeo.description}>
@@ -169,6 +212,9 @@ const villagerInfoRows =
             )}
             {character.species && <Badge variant="lavender">{character.species}</Badge>}
             {character.element && <Badge variant="mist">{character.element}</Badge>}
+            {stardewDetails?.villagerInfo?.marriageCandidate && (
+              <Badge variant="blossom">{t('character.stardew.marriageCandidate', locale)}</Badge>
+            )}
           </div>
           <h1 class="font-display text-4xl text-primary flex items-center gap-3">
             {
@@ -187,6 +233,7 @@ const villagerInfoRows =
           </h1>
           <p class="mt-2 text-lg font-medium text-accent">{character.role}</p>
           <p class="mt-6 prose-cozy">{character.description}</p>
+          {stardewDetails?.intro && <p class="mt-4 prose-cozy text-secondary">{stardewDetails.intro}</p>}
 
           {
             isAcnh && (
@@ -209,6 +256,49 @@ const villagerInfoRows =
                         class="inline-flex items-center justify-center rounded-[var(--radius-pill)] border border-default bg-page px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-sage-300 hover:text-accent"
                       >
                         {t('character.explore.decor', locale)}
+                      </a>
+                    )
+                  }
+                </div>
+              </div>
+            )
+          }
+
+          {
+            isStardew && stardewExploreLinks && (
+              <div class="mt-8">
+                <h2 class="font-display text-xl text-primary">{t('character.explore.title', locale)}</h2>
+                <p class="mt-2 text-base leading-relaxed text-secondary">
+                  {t('character.explore.stardewDescription', locale)}
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  {
+                    stardewHasGifts && (
+                      <a
+                        href="#gifts"
+                        class="inline-flex items-center justify-center rounded-[var(--radius-pill)] bg-sage-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition-colors hover:bg-sage-600"
+                      >
+                        {t('character.explore.gifts', locale)}
+                      </a>
+                    )
+                  }
+                  {
+                    stardewHasSchedule && (
+                      <a
+                        href="#schedule"
+                        class="inline-flex items-center justify-center rounded-[var(--radius-pill)] border border-default bg-page px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-sage-300 hover:text-accent"
+                      >
+                        {t('character.explore.schedule', locale)}
+                      </a>
+                    )
+                  }
+                  {
+                    stardewHasHeartEvents && (
+                      <a
+                        href="#heart-events"
+                        class="inline-flex items-center justify-center rounded-[var(--radius-pill)] border border-default bg-page px-4 py-2 text-sm font-semibold text-primary transition-colors hover:border-sage-300 hover:text-accent"
+                      >
+                        {t('character.explore.heartEvents', locale)}
                       </a>
                     )
                   }
@@ -354,6 +444,10 @@ const villagerInfoRows =
 
     {acnhDetails && (
       <VillagerDetailSections character={character} details={acnhDetails} locale={locale} />
+    )}
+
+    {stardewDetails && (
+      <StardewVillagerDetailSections character={character} details={stardewDetails} locale={locale} />
     )}
 
     {

@@ -1,0 +1,109 @@
+{
+  "slug": "elliott",
+  "name": "Elliott",
+  "role": "Writer",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/elliott.png",
+  "description": "Rents a cabin on the beach and writes dramatic prose. Loves crab cakes, pomegranates, and a good metaphor.",
+  "seo": {
+    "title": "Elliott — Writer",
+    "description": "Rents a cabin on the beach and writes dramatic prose. Loves crab cakes, pomegranates, and a good metaphor."
+  },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "The beach cabin poet of Pelican Town. Flamboyant, romantic, and always one draft away from finishing his novel.",
+    "villagerInfo": {
+      "birthday": "Fall 5",
+      "livesIn": "Pelican Town",
+      "address": "Beach cabin",
+      "marriageCandidate": true
+    },
+    "gifts": {
+      "love": [
+        "Crab Cakes",
+        "Duck Feather",
+        "Lobster",
+        "Pomegranate",
+        "Tom Kha Soup",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Octopus",
+        "Quartz",
+        "Squid Ink"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Amaranth",
+        "Holly"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Beach reading",
+        "summary": "Visit his cabin while he reads — he asks what you think of his latest passage."
+      },
+      {
+        "hearts": 4,
+        "title": "Piano at the saloon",
+        "summary": "Find him playing piano at the Stardrop Saloon on a rainy afternoon."
+      },
+      {
+        "hearts": 6,
+        "title": "Rowboat confession",
+        "summary": "He takes you rowing and reads a love poem he wrote about someone mysterious."
+      },
+      {
+        "hearts": 8,
+        "title": "Galaxy sword",
+        "summary": "After you bring a Galaxy Sword, he imagines you as the hero of his next book."
+      },
+      {
+        "hearts": 10,
+        "title": "Beach kiss",
+        "summary": "On a warm evening at the pier, he finally stops writing and kisses you."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Elliott"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 6:00 PM",
+      "location": "Cabin → beach → saloon (evenings)"
+    },
+    {
+      "label": "Rainy day",
+      "time": "Afternoon",
+      "location": "Stardrop Saloon"
+    },
+    {
+      "label": "Friday",
+      "time": "Evening",
+      "location": "Stardrop Saloon"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Willy",
+      "note": "Friendly with the fisherman — they share the beach and the saloon."
+    },
+    {
+      "name": "Leah",
+      "note": "Fellow artist soul; they appreciate each other’s creative streak."
+    }
+  ],
+  "trivia": [
+    "Crab Cakes need crab, egg, flour, and oil — a solid gift once you reach the beach mines."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

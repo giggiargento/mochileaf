@@ -1,0 +1,32 @@
+---
+description: Refresh game hub guides — articles + curated YouTube videos
+globs: src/content/articles/**,src/data/game-video-guides.ts
+alwaysApply: false
+---
+
+# Guides refresh workflow
+
+When the user asks to complete/update **guides** (e.g. "completar guías", "dos videos"):
+
+## Written guides
+
+1. Search the web for useful, **current** guide topics per active game hub.
+2. Read existing `src/content/articles/*.md` with `category: guide` — avoid duplicates.
+3. Add **1–2** new `category: guide` articles per game unless the user specifies otherwise.
+4. Use recent `publishedAt` dates; lists sort **newest first** automatically.
+5. Cozy magazine tone (`docs/EDITORIAL.md`); step-by-step but not optimizer-speak.
+6. Use `coverImage` + optional inline `<figure class="article-inline-figure">` when helpful.
+
+## Video guides (two per game)
+
+- Curate **2 YouTube videos per active game** on `src/data/game-video-guides.ts`.
+- Each entry: `slug`, `title`, `gameSlug`, `youtubeId`, `channel`, `summary`, `tags[]`, optional `publishedAt` (YYYY-MM-DD).
+- List **newest first** (`publishedAt` desc); `getVideoGuidesByGame` sorts automatically.
+- Prefer recent, clear walkthroughs; verify the video ID loads on YouTube.
+- Videos render on `/{game}/guides` via `IslandTourCard` (new tab, 3-column grid).
+- NTE may keep older evergreen videos; swap or add when 1.x content ships.
+
+## Verify
+
+- `npm run content:lint`
+- Do not commit unless asked.

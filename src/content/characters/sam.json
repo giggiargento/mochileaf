@@ -1,0 +1,121 @@
+{
+  "slug": "sam",
+  "name": "Sam",
+  "role": "Musician",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/sam.png",
+  "description": "Skateboards around town and jams in the garage with Sebastian. Loves cactus, pizza, and anything with a good beat.",
+  "seo": {
+    "title": "Sam — Musician",
+    "description": "Skateboards around town and jams in the garage with Sebastian. Loves cactus, pizza, and anything with a good beat."
+  },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "Jodi’s eldest, bandmate of Sebastian, and perpetual optimist. Music, skateboarding, and Joja cola fuel most of his days.",
+    "villagerInfo": {
+      "birthday": "Summer 17",
+      "livesIn": "Pelican Town",
+      "address": "1 Willow Lane",
+      "marriageCandidate": true,
+      "family": [
+        {
+          "name": "Jodi",
+          "relation": "mother"
+        },
+        {
+          "name": "Vincent",
+          "relation": "brother"
+        },
+        {
+          "name": "Kent",
+          "relation": "father"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Cactus Fruit",
+        "Maple Bar",
+        "Pizza",
+        "Tigerseye",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Joja Cola"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Coal",
+        "Copper Ore"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Skateboard trick",
+        "summary": "Watch him land a trick in the town square and cheer him on."
+      },
+      {
+        "hearts": 4,
+        "title": "Band practice",
+        "summary": "Visit the Sam-Shane-Sebastian garage session behind his house."
+      },
+      {
+        "hearts": 6,
+        "title": "City audition",
+        "summary": "He asks you to come to the city for an audition — your support matters."
+      },
+      {
+        "hearts": 8,
+        "title": "Song for you",
+        "summary": "He plays a new track he wrote and asks how you feel about him."
+      },
+      {
+        "hearts": 10,
+        "title": "Boardwalk night",
+        "summary": "A late walk on the beach ends with him kissing you under the stars."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Sam"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 8:00 PM",
+      "location": "Home → town/skate spot → saloon (evenings)"
+    },
+    {
+      "label": "Rainy day",
+      "time": "Afternoon",
+      "location": "Stardrop Saloon or home (practice)"
+    },
+    {
+      "label": "Friday",
+      "time": "Evening",
+      "location": "Stardrop Saloon with bandmates"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Sebastian & Abigail",
+      "note": "Close friends — arcade nights and band practice are a trio affair."
+    },
+    {
+      "name": "Penny",
+      "note": "Childhood friend; they still look out for each other around town."
+    }
+  ],
+  "trivia": [
+    "Pizza is loved and buyable from the Saloon once you unlock the recipe — handy for Summer 17 birthdays."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

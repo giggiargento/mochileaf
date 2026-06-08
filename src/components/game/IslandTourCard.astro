@@ -1,7 +1,6 @@
 ---
 import type { IslandTour } from '../../types';
 import CozyImage from '../ui/CozyImage.astro';
-import Badge from '../ui/Badge.astro';
 import Icon from '../ui/Icon.astro';
 
 interface Props {
@@ -13,9 +12,14 @@ const youtubeUrl = `https://www.youtube.com/watch?v=${tour.youtubeId}`;
 const thumb = `https://img.youtube.com/vi/${tour.youtubeId}/hqdefault.jpg`;
 ---
 
-<article class="cozy-card group overflow-hidden">
-  <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" class="block">
-    <div class="relative aspect-video overflow-hidden bg-muted">
+<article class="cozy-card group flex h-full overflow-hidden">
+  <a
+    href={youtubeUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="flex h-full w-full flex-col"
+  >
+    <div class="relative aspect-video shrink-0 overflow-hidden bg-muted">
       <CozyImage
         src={thumb}
         alt=""
@@ -25,28 +29,25 @@ const thumb = `https://img.youtube.com/vi/${tour.youtubeId}/hqdefault.jpg`;
         loading="lazy"
       />
       <span
-        class="absolute inset-0 flex items-center justify-center bg-black/25 transition-colors group-hover:bg-black/35"
+        class="island-tour-play-overlay absolute inset-0 flex items-center justify-center"
         aria-hidden="true"
       >
-        <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-accent shadow-soft">
-          <Icon name="play-circle" size={28} />
+        <span class="island-tour-play-btn flex h-14 w-14 items-center justify-center rounded-full">
+          <Icon name="play-circle" size={32} />
         </span>
       </span>
     </div>
-    <div class="p-6">
+    <div class="flex min-w-0 flex-1 flex-col p-6">
       <p class="text-xs font-medium text-muted">{tour.channel}</p>
-      <h3 class="mt-1 font-display text-lg text-primary transition-colors group-hover:text-accent">
+      <h3
+        class="article-card-title--lines-2 mt-1 min-w-0 font-display text-lg text-primary transition-colors group-hover:text-accent"
+      >
         {tour.title}
       </h3>
-      <p class="mt-2 text-sm text-secondary line-clamp-2">{tour.summary}</p>
-      <div class="mt-4 flex flex-wrap gap-2">
-        {tour.tags.map((tag) => (
-          <Badge variant="lavender" size="sm">
-            {tag}
-          </Badge>
-        ))}
-      </div>
-      <p class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+      <p class="island-tour-card-summary--lines-2 mt-2 text-sm leading-snug text-secondary">
+        {tour.summary}
+      </p>
+      <p class="mt-auto inline-flex items-center gap-1.5 self-start pt-4 text-sm font-semibold text-accent">
         Watch on YouTube
         <Icon name="arrow-square-out" size={16} />
       </p>

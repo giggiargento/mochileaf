@@ -9,12 +9,109 @@
     "title": "Emily — Salon Stylist",
     "description": "Works at the saloon and practices crystal healing on the side. Bright, creative, and happiest when you bring gems or cloth."
   },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "Haley's sister and the saloon's evening bartender. Spiritual, colorful, and always interpreting signs from the universe.",
+    "villagerInfo": {
+      "birthday": "Spring 27",
+      "livesIn": "Pelican Town",
+      "address": "2 Willow Lane",
+      "marriageCandidate": true,
+      "family": [
+        {
+          "name": "Haley",
+          "relation": "sister"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Amethyst",
+        "Aquamarine",
+        "Cloth",
+        "Emerald",
+        "Jade",
+        "Ruby",
+        "Survival Burger",
+        "Wool",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Daffodil",
+        "Quartz"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Fish Taco"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Dream visit",
+        "summary": "Enter her house while she sleeps — you appear in her abstract dreamscape."
+      },
+      {
+        "hearts": 4,
+        "title": "Injured parrot",
+        "summary": "A parrot hits her window in town; she nurses it back to health in her room."
+      },
+      {
+        "hearts": 6,
+        "title": "Secret dance",
+        "summary": "She performs a private dance routine in her room — react kindly."
+      },
+      {
+        "hearts": 8,
+        "title": "Clothing therapy",
+        "summary": "At the Mayor's Manor she hosts a group fashion session for the town."
+      },
+      {
+        "hearts": 10,
+        "title": "Camping in the woods",
+        "summary": "A bear visit during a Secret Woods campout leads to a romantic night."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Emily"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 3:30 PM",
+      "location": "Home → town errands → saloon (work)"
+    },
+    {
+      "label": "Tuesday",
+      "time": "Morning",
+      "location": "Aerobics at Harvey's clinic"
+    },
+    {
+      "label": "Friday",
+      "time": "Evening",
+      "location": "Stardrop Saloon (bar)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Haley",
+      "note": "Sisters with opposite personalities — Emily is the free spirit, Haley the perfectionist."
+    },
+    {
+      "name": "Gus",
+      "note": "Employer at the Stardrop Saloon; she tends bar most evenings."
+    }
+  ],
+  "trivia": [
+    "Cloth from your loom is a reliable loved gift once you have sheep or rabbits."
+  ],
   "likes": [],
   "dislikes": [],
   "favoriteGifts": [],
-  "favoriteFoods": [],
-  "routines": [],
-  "relationships": [],
-  "trivia": [],
-  "tags": []
+  "favoriteFoods": []
 }

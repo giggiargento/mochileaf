@@ -45,6 +45,51 @@ const acnhHouseSchema = z
   })
   .passthrough();
 
+const stardewFamilyMemberSchema = z.object({
+  name: z.string().min(1),
+  relation: optionalText,
+});
+
+const stardewVillagerInfoSchema = z
+  .object({
+    birthday: optionalText,
+    livesIn: optionalText,
+    address: optionalText,
+    marriageCandidate: z.boolean().optional(),
+    occupation: optionalText,
+    family: z.array(stardewFamilyMemberSchema).optional(),
+  })
+  .passthrough();
+
+const stardewGiftTiersSchema = z.object({
+  love: stringListSchema,
+  like: stringListSchema,
+  dislike: stringListSchema,
+  hate: stringListSchema,
+});
+
+const stardewHeartEventSchema = z.object({
+  hearts: z.union([z.number().int().positive(), z.string().min(1)]),
+  title: z.string().min(1),
+  summary: z.string().min(1),
+});
+
+/** Stardew Valley villager reference (curated from wiki — not a full data dump).
+ *  Wiki source: https://stardewvalleywiki.com/Villagers
+ *  Map: infobox → villagerInfo; Gifts → gifts tiers; Schedule → routines (simplified);
+ *  Relationships → relationships; Heart Events → heartEvents (summaries); Trivia → trivia.
+ */
+export const stardewDetailsSchema = z
+  .object({
+    intro: optionalText,
+    villagerInfo: stardewVillagerInfoSchema.optional(),
+    gifts: stardewGiftTiersSchema.optional(),
+    heartEvents: z.array(stardewHeartEventSchema).optional(),
+    sourceUrl: optionalText,
+  })
+  .passthrough()
+  .optional();
+
 export const acnhDetailsSchema = z
   .object({
     intro: optionalText,
@@ -93,6 +138,7 @@ export const characterSchema = z
     trivia: stringListSchema,
     tags: stringListSchema,
     acnh: acnhDetailsSchema,
+    stardew: stardewDetailsSchema,
     draft: z.boolean().optional(),
     publishable: z.boolean().optional(),
   })

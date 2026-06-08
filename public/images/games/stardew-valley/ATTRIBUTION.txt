@@ -5,8 +5,13 @@ Steam store art (cover.jpg, card.jpg, header.jpg)
   https://store.steampowered.com/app/413150/
   Used for promotional context on this fan hub.
 
+Mod card covers (mods/*)
+  Nexus Mods headers/thumbnails and mod-author previews where noted.
+  Sea Breeze farmhouse/cellar cards use Sea Breeze Farm Map previews (same author) until dedicated headers are synced.
+  Global God Rays preview from the mod author's GitHub readme asset.
+
 Villager portraits (characters/*.png)
   Primary: stardew-valley-data npm package (MIT), if available
-  Fallback: Stardew Valley Wiki (Fandom) portrait files
+  Fallback: Stardew Valley Wiki API thumbnails (https://stardewvalleywiki.com/)
 
 Trademarks belong to their respective owners. This site is unofficial.

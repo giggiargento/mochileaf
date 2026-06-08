@@ -1,0 +1,117 @@
+{
+  "slug": "leah",
+  "name": "Leah",
+  "role": "Sculptor",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/leah.png",
+  "description": "Moved to the valley to make art in her forest cottage. Foraged salads, goat cheese, and wild mushrooms win her over.",
+  "seo": {
+    "title": "Leah — Sculptor",
+    "description": "Moved to the valley to make art in her forest cottage. Foraged salads, goat cheese, and wild mushrooms win her over."
+  },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "The valley's sculptor, living in a cabin north of town. Grounded, nature-loving, and happiest with mud on her hands.",
+    "villagerInfo": {
+      "birthday": "Winter 23",
+      "livesIn": "Cindersap Forest",
+      "address": "Leah's Cottage",
+      "marriageCandidate": true
+    },
+    "gifts": {
+      "love": [
+        "Goat Cheese",
+        "Poppyseed Muffin",
+        "Salad",
+        "Stir Fry",
+        "Stardrop Tea",
+        "Wine"
+      ],
+      "like": [
+        "Chanterelle",
+        "Common Mushroom",
+        "Daffodil",
+        "Ginger",
+        "Hazelnut",
+        "Leek",
+        "Morel",
+        "Quartz",
+        "Snow Yam",
+        "Wild Horseradish",
+        "Winter Root"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Bread",
+        "Pancakes"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Forest foraging",
+        "summary": "Meet her foraging in the woods — she talks about leaving the city for art."
+      },
+      {
+        "hearts": 4,
+        "title": "Saloon art show",
+        "summary": "She displays sculptures at the saloon; show up to support her."
+      },
+      {
+        "hearts": 6,
+        "title": "Ex arrives",
+        "summary": "Her old partner Kel shows up uninvited — your response shapes the scene."
+      },
+      {
+        "hearts": 8,
+        "title": "Sculpture invite",
+        "summary": "She asks you to model for a piece she is carving in the rain."
+      },
+      {
+        "hearts": 10,
+        "title": "Cottage kiss",
+        "summary": "Inside her cottage after finishing a sculpture, she kisses you."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Leah"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "10:00 AM – 6:00 PM",
+      "location": "Cottage → forest → saloon (some days)"
+    },
+    {
+      "label": "Rainy day",
+      "time": "All day",
+      "location": "Cottage (sculpting)"
+    },
+    {
+      "label": "Monday",
+      "time": "Morning",
+      "location": "Pierre's (shopping)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Elliott",
+      "note": "Fellow creative on the beach — mutual respect for each other's work."
+    },
+    {
+      "name": "Evelyn",
+      "note": "Sometimes visits George and Evelyn; gentle intergenerational friendship."
+    }
+  ],
+  "trivia": [
+    "Salad uses foraged greens from Spring — easy to gift before Winter 23 if you pick dandelions and leeks."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

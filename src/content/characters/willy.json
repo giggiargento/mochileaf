@@ -1,0 +1,69 @@
+{
+  "slug": "willy",
+  "name": "Willy",
+  "role": "Fisherman",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/willy.png",
+  "description": "Runs the pier shop and lives for the sea. Octopus, megalodon, and seafoam pudding hook his attention.",
+  "seo": {
+    "title": "Willy — Fisherman",
+    "description": "Runs the pier shop and lives for the sea. Octopus, megalodon, and seafoam pudding hook his attention."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Old salt on the Pelican Town pier. Sells rods and tackle, tells fish tales, and respects anyone who respects the ocean.",
+    "villagerInfo": {
+      "birthday": "Summer 24",
+      "livesIn": "Pelican Town",
+      "address": "Fish Shop (beach)",
+      "occupation": "Fisherman"
+    },
+    "gifts": {
+      "love": [
+        "Diamond",
+        "Goat Cheese",
+        "Mead",
+        "Octopus",
+        "Seafoam Pudding",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Sardine"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Willy"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "6:00 AM – 5:00 PM",
+      "location": "Fish Shop (beach pier)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Elliott",
+      "note": "Beach neighbors — fishing and writing share the shoreline."
+    },
+    {
+      "name": "Leo",
+      "note": "Eventually connects Leo's island life with the wider valley."
+    }
+  ],
+  "trivia": [
+    "He gives you your first fishing rod — returning with an octopus makes a strong early impression."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

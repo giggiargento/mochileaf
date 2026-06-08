@@ -1,0 +1,71 @@
+{
+  "slug": "dwarf",
+  "name": "Dwarf",
+  "role": "Mine Merchant",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/dwarf.png",
+  "description": "Hidden merchant in the mines once you understand his language. Loves gems, minerals, and mining talk.",
+  "seo": {
+    "title": "Dwarf — Mine Merchant",
+    "description": "Hidden merchant in the mines once you understand his language. Loves gems, minerals, and mining talk."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "A mysterious figure behind a broken wall in the mines. Sells bombs, rings, and mining gear once you earn his trust.",
+    "villagerInfo": {
+      "birthday": "Summer 22",
+      "livesIn": "The Mines",
+      "address": "Dwarf's shop (Mines)",
+      "occupation": "Merchant"
+    },
+    "gifts": {
+      "love": [
+        "Amethyst",
+        "Aquamarine",
+        "Emerald",
+        "Jade",
+        "Omni Geode",
+        "Ruby",
+        "Topaz",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Earth Crystal",
+        "Fire Quartz",
+        "Frozen Tear"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Dwarf Scroll I",
+        "Dwarf Scroll II",
+        "Dwarf Scroll III",
+        "Dwarf Scroll IV"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Dwarf"
+  },
+  "routines": [
+    {
+      "label": "Always",
+      "time": "All day",
+      "location": "Shop in the Mines (east cavern)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Wizard",
+      "note": "Old acquaintance — the Wizard helps you learn Dwarvish."
+    }
+  ],
+  "trivia": [
+    "Find four dwarf scrolls and donate them to unlock his shop and friendship."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

@@ -6,7 +6,7 @@ import ContentGrid from '../../../components/game/ContentGrid.astro';
 import IslandTourCard from '../../../components/game/IslandTourCard.astro';
 import { games } from '../../../data/games';
 import { getGuidesByGame } from '../../../data/articles';
-import { getVideoGuidesByGame } from '../../../data/nte-video-guides';
+import { getVideoGuidesByGame } from '../../../data/game-video-guides';
 import { usePageLocale } from '../../../lib/i18n/use-page-locale';
 import { t } from '../../../i18n/messages';
 
@@ -31,7 +31,7 @@ const hasArticles = guides.length > 0;
       <section>
         <h2 class="font-display text-2xl text-primary">{tr('guides.videosTitle')}</h2>
         <p class="mt-2 max-w-2xl text-sm text-secondary">{tr('guides.videosDescription')}</p>
-        <ContentGrid columns={2} class="mt-8">
+        <ContentGrid columns={3} class="mt-8">
           {videoGuides.map((video) => (
             <IslandTourCard tour={video} />
           ))}
@@ -43,7 +43,7 @@ const hasArticles = guides.length > 0;
         {hasVideos && (
           <h2 class="font-display text-2xl text-primary">{tr('guides.articlesTitle')}</h2>
         )}
-        <ContentGrid columns={2} class={hasVideos ? 'mt-8' : ''}>
+        <ContentGrid columns={3} class={hasVideos ? 'mt-8' : ''}>
           {guides.map((a) => <ArticleCard article={a} />)}
         </ContentGrid>
       </section>

@@ -4,7 +4,7 @@ import PageHeader from '../../../components/game/PageHeader.astro';
 import ContentGrid from '../../../components/game/ContentGrid.astro';
 import ModCard from '../../../components/game/ModCard.astro';
 import { games } from '../../../data/games';
-import { getModsByGame } from '../../../data/mods';
+import { getEssentialModsByGame, getVisualModsByGame } from '../../../data/mods';
 import { usePageLocale } from '../../../lib/i18n/use-page-locale';
 import { t } from '../../../i18n/messages';
 
@@ -16,7 +16,9 @@ export function getStaticPaths() {
 
 const { game } = Astro.props;
 const { locale, tr } = usePageLocale(Astro.currentLocale);
-const gameMods = getModsByGame(game.slug);
+const visualMods = getVisualModsByGame(game.slug);
+const essentialMods = getEssentialModsByGame(game.slug);
+const hasMods = visualMods.length > 0 || essentialMods.length > 0;
 const isStardew = game.slug === 'stardew-valley';
 ---
 
@@ -29,14 +31,34 @@ const isStardew = game.slug === 'stardew-valley';
     title={isStardew ? tr('mods.titleStardew') : tr('mods.title')}
     description={isStardew ? tr('mods.descriptionStardew') : tr('mods.descriptionDefault')}
   />
-  <div class="page-container-below-header">
+  <div class="page-container-below-header space-y-14">
     {
-      gameMods.length > 0 ? (
-        <ContentGrid columns={2}>
-          {gameMods.map((mod) => (
-            <ModCard mod={mod} />
-          ))}
-        </ContentGrid>
+      hasMods ? (
+        <>
+          {visualMods.length > 0 && (
+            <section>
+              <h2 class="font-display text-2xl text-primary">{tr('mods.visualTitle')}</h2>
+              <p class="mt-2 max-w-2xl text-sm text-secondary">{tr('mods.visualDescription')}</p>
+              <ContentGrid columns={3} class="mt-8">
+                {visualMods.map((mod) => (
+                  <ModCard mod={mod} />
+                ))}
+              </ContentGrid>
+            </section>
+          )}
+          {essentialMods.length > 0 && (
+            <section>
+              {visualMods.length > 0 && (
+                <h2 class="font-display text-2xl text-primary">{tr('mods.essentialsTitle')}</h2>
+              )}
+              <ContentGrid columns={2} class={visualMods.length > 0 ? 'mt-8' : ''}>
+                {essentialMods.map((mod) => (
+                  <ModCard mod={mod} />
+                ))}
+              </ContentGrid>
+            </section>
+          )}
+        </>
       ) : (
         <p class="prose-cozy text-center py-16">{tr('mods.empty')}</p>
       )

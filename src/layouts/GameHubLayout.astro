@@ -2,6 +2,7 @@
 import BaseLayout from './BaseLayout.astro';
 import Sidebar from '../components/layout/Sidebar.astro';
 import MobileNav from '../components/layout/MobileNav.astro';
+import GameHubMobileTabs from '../components/game/GameHubMobileTabs.astro';
 import Footer from '../components/layout/Footer.astro';
 import LocaleToolbar from '../components/ui/LocaleToolbar.astro';
 import AdPlaceholder from '../components/ui/AdPlaceholder.astro';
@@ -39,12 +40,20 @@ const hubTitle = game.shortName ?? game.name;
     </div>
   </Sidebar>
 
-  <MobileNav
-    items={navItems}
-    title={hubTitle}
-    backHref={pathForLocale('/', locale)}
-    backLabel={t('nav.allGames', locale)}
-  />
+  <div class="game-hub-mobile-shell sticky top-0 z-50 border-b border-default bg-nav backdrop-blur-md lg:hidden">
+    <MobileNav
+      embedded
+      items={navItems}
+      title={hubTitle}
+      backHref={pathForLocale('/', locale)}
+      backLabel={t('nav.allGames', locale)}
+    />
+    <GameHubMobileTabs
+      items={navItems}
+      label={hubTitle}
+      persistKey={`mochi-game-tabs-${game.slug}-${locale}`}
+    />
+  </div>
 
   <div class="lg:pl-64 bg-page min-h-screen transition-colors duration-300">
     <main class="min-h-[60vh]">

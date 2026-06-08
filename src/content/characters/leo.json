@@ -1,0 +1,101 @@
+{
+  "slug": "leo",
+  "name": "Leo",
+  "role": "Island Child",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/leo.png",
+  "description": "Raised by parrots on Ginger Island until you befriend him. Duck feathers, mangoes, and patience matter most.",
+  "seo": {
+    "title": "Leo — Island Child",
+    "description": "Raised by parrots on Ginger Island until you befriend him. Duck feathers, mangoes, and patience matter most."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "A wild child on Ginger Island who joins Pelican Town after you earn his trust. Gentle, curious, and bird-loving.",
+    "villagerInfo": {
+      "birthday": "Summer 26",
+      "livesIn": "Ginger Island → Pelican Town",
+      "address": "Treehouse → tent near Linus",
+      "occupation": "Forager"
+    },
+    "gifts": {
+      "love": [
+        "Duck Feather",
+        "Mango",
+        "Ostrich Egg",
+        "Poi",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Coconut",
+        "Ginger"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Beer",
+        "Mead"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Island welcome",
+        "summary": "First real conversation at his Ginger Island treehouse."
+      },
+      {
+        "hearts": 4,
+        "title": "Parrot family",
+        "summary": "He introduces you to the birds who raised him."
+      },
+      {
+        "hearts": 6,
+        "title": "Moving to town",
+        "summary": "Linus offers him a tent — Leo considers joining the valley."
+      },
+      {
+        "hearts": 8,
+        "title": "Town integration",
+        "summary": "Vincent and Jas include him in play; he starts to belong."
+      },
+      {
+        "hearts": 10,
+        "title": "Stargazing",
+        "summary": "A quiet night together solidifies your bond."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Leo"
+  },
+  "routines": [
+    {
+      "label": "Before friendship",
+      "time": "All day",
+      "location": "Ginger Island (treehouse)"
+    },
+    {
+      "label": "After moving",
+      "time": "Daytime",
+      "location": "Town with Linus or forest"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Linus",
+      "note": "Mentor figure who helps him adjust to town life."
+    },
+    {
+      "name": "Jas & Vincent",
+      "note": "First friends his age once he leaves the island."
+    }
+  ],
+  "trivia": [
+    "Unlock Ginger Island before trying to befriend him — he is not in Pelican Town at first."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

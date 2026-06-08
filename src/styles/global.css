@@ -297,18 +297,15 @@ html.dark {
     }
   }
 
-  /* Hub banner fade — follows light/dark via --bg-page (not Tailwind dark: variant) */
-  .game-hub-hero-overlay {
-    pointer-events: none;
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to top,
-      var(--bg-page) 0%,
-      color-mix(in srgb, var(--bg-page) 78%, transparent) 42%,
-      transparent 100%
-    );
-    transition: background 300ms ease;
+  /* Game hub header — circular logo mark, no frame (unlike character-card-avatar) */
+  .game-hub-logo {
+    display: block;
+    width: 5.75rem;
+    height: 5.75rem;
+    margin-bottom: 1rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .cozy-link {
@@ -1352,6 +1349,113 @@ html.dark {
     color: var(--label-honey-text);
   }
 
+}
+
+/* Game hub underline tabs — outside @layer so View Transitions / preview cannot drop rules */
+.game-hub-mobile-tabs {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  padding: 0 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--border-default) 65%, transparent);
+}
+
+.game-hub-mobile-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.game-hub-mobile-tab {
+  position: relative;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  min-height: 2.75rem;
+  padding: 0.75rem 0.75rem 0.625rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  white-space: nowrap;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.game-hub-mobile-tab::after {
+  content: '';
+  position: absolute;
+  right: 0.375rem;
+  bottom: -1px;
+  left: 0.375rem;
+  height: 2px;
+  border-radius: 2px 2px 0 0;
+  background-color: transparent;
+  transition: background-color 200ms ease;
+}
+
+.game-hub-mobile-tab:hover {
+  color: var(--text-secondary);
+}
+
+.game-hub-mobile-tab.is-active {
+  font-weight: 600;
+  color: var(--text-accent);
+}
+
+.game-hub-mobile-tab.is-active::after {
+  background-color: var(--text-accent);
+}
+
+.game-hub-mobile-tab:focus-visible {
+  outline: 2px solid var(--color-sage-400);
+  outline-offset: -2px;
+  border-radius: 0.25rem;
+}
+
+/* YouTube / island tour cards — translucent play control */
+.island-tour-play-overlay {
+  background-color: rgb(0 0 0 / 0.12);
+  transition: background-color 200ms ease;
+}
+
+.group:hover .island-tour-play-overlay {
+  background-color: rgb(0 0 0 / 0.22);
+}
+
+.island-tour-play-btn {
+  border: 1px solid rgb(255 255 255 / 0.45);
+  background-color: rgb(255 255 255 / 0.28);
+  color: rgb(255 255 255 / 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.15);
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.group:hover .island-tour-play-btn {
+  background-color: rgb(255 255 255 / 0.38);
+  border-color: rgb(255 255 255 / 0.6);
+  transform: scale(1.04);
+}
+
+/* Video guide cards — always two description lines, ellipsis when clipped */
+.island-tour-card-summary--lines-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.375;
+  min-height: calc(1.375em * 2);
+  min-width: 0;
 }
 
 @layer utilities {

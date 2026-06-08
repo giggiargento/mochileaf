@@ -1,0 +1,83 @@
+{
+  "slug": "marnie",
+  "name": "Marnie",
+  "role": "Rancher",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/marnie.png",
+  "description": "Runs the livestock shop with Jas and Shane. Pink cake, farmer's lunch, and pumpkin pie feel like home.",
+  "seo": {
+    "title": "Marnie — Rancher",
+    "description": "Runs the livestock shop with Jas and Shane. Pink cake, farmer's lunch, and pumpkin pie feel like home."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Owner of the ranch and animal shop east of town. Warm, practical, and tied closely to Lewis and her family.",
+    "villagerInfo": {
+      "birthday": "Fall 18",
+      "livesIn": "Pelican Town",
+      "address": "Marnie's Ranch",
+      "occupation": "Rancher",
+      "family": [
+        {
+          "name": "Shane",
+          "relation": "nephew"
+        },
+        {
+          "name": "Jas",
+          "relation": "goddaughter"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Diamond",
+        "Farmer's Lunch",
+        "Pink Cake",
+        "Pumpkin Pie",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Egg"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Marnie"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 4:00 PM",
+      "location": "Ranch shop → saloon (some evenings)"
+    },
+    {
+      "label": "Monday",
+      "time": "Closed",
+      "location": "Ranch (not at shop counter)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Lewis",
+      "note": "Secret romance — they meet discreetly when schedules align."
+    },
+    {
+      "name": "Shane & Jas",
+      "note": "Runs the household Shane and Jas depend on."
+    }
+  ],
+  "trivia": [
+    "Buy your first chicken or cow from her shop — friendship grows naturally from visits."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

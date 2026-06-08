@@ -1,5 +1,6 @@
 ---
 import type { Mod } from '../../types';
+import CozyImage from '../ui/CozyImage.astro';
 import Badge from '../ui/Badge.astro';
 import Icon from '../ui/Icon.astro';
 
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const { mod } = Astro.props;
+const hasImage = Boolean(mod.coverImage);
 
 const categoryLabels = {
   framework: 'Framework',
@@ -15,31 +17,75 @@ const categoryLabels = {
   content: 'Content',
   visual: 'Visual',
 } as const;
-
 ---
 
 <a
   href={mod.url}
   target="_blank"
   rel="noopener noreferrer"
-  class="cozy-card group block p-6 h-full"
+  class:list={[
+    'cozy-card group block h-full',
+    hasImage ? 'flex flex-col overflow-hidden' : 'p-6',
+  ]}
 >
-  <div class="flex flex-wrap gap-2 mb-3">
-    <Badge variant="honey" size="sm">{categoryLabels[mod.category]}</Badge>
-    {mod.tags.map((tag) => (
-      <Badge variant="sage" size="sm">{tag}</Badge>
-    ))}
+  {
+    hasImage && (
+      <div class="relative aspect-video shrink-0 overflow-hidden bg-muted">
+        <CozyImage
+          src={mod.coverImage!}
+          alt=""
+          width={640}
+          height={360}
+          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          loading="lazy"
+        />
+      </div>
+    )
+  }
+  <div class:list={['flex min-w-0 flex-1 flex-col', hasImage && 'p-6']}>
+    <div class="mb-3 flex min-w-0 flex-wrap items-center gap-2">
+      <Badge variant="honey" size="sm">
+        {categoryLabels[mod.category]}
+      </Badge>
+      {
+        !hasImage &&
+          mod.tags.map((tag) => (
+            <Badge variant="sage" size="sm">
+              {tag}
+            </Badge>
+          ))
+      }
+    </div>
+    <h3
+      class:list={[
+        'font-display text-lg text-primary transition-colors duration-300 group-hover:text-accent',
+        hasImage && 'article-card-title--lines-2 min-w-0',
+      ]}
+    >
+      {mod.name}
+    </h3>
+    <p
+      class:list={[
+        'mt-2 text-sm leading-snug text-secondary',
+        hasImage
+          ? 'island-tour-card-summary--lines-2 min-w-0'
+          : 'leading-relaxed',
+      ]}
+    >
+      {mod.summary}
+    </p>
+    <span
+      class:list={[
+        'inline-flex items-center gap-1.5 text-sm font-semibold text-accent',
+        hasImage ? 'mt-auto self-start pt-4' : 'mt-4',
+      ]}
+    >
+      View mod page
+      <Icon
+        name="arrow-square-out"
+        size={16}
+        class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+      />
+    </span>
   </div>
-  <h3 class="font-display text-lg text-primary group-hover:text-accent transition-colors duration-300">
-    {mod.name}
-  </h3>
-  <p class="mt-2 text-sm text-secondary leading-relaxed">{mod.summary}</p>
-  <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-    View mod page
-    <Icon
-      name="arrow-square-out"
-      size={16}
-      class="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-    />
-  </span>
 </a>

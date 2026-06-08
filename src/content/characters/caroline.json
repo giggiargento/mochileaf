@@ -1,0 +1,81 @@
+{
+  "slug": "caroline",
+  "name": "Caroline",
+  "role": "Homemaker",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/caroline.png",
+  "description": "Pierre's wife and Abigail's mom. Enjoys tea in the sunroom and fresh produce from the valley.",
+  "seo": {
+    "title": "Caroline — Homemaker",
+    "description": "Pierre's wife and Abigail's mom. Enjoys tea in the sunroom and fresh produce from the valley."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Runs the household above the general store and tends her sunroom tea plants. Warm but protective of her daughter.",
+    "villagerInfo": {
+      "birthday": "Winter 7",
+      "livesIn": "Pelican Town",
+      "address": "Pierre's General Store",
+      "family": [
+        {
+          "name": "Pierre",
+          "relation": "husband"
+        },
+        {
+          "name": "Abigail",
+          "relation": "daughter"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Fish Taco",
+        "Green Tea",
+        "Summer Spangle",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Daffodil",
+        "Quartz"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Void Mayonnaise",
+        "Rabbit's Foot"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Caroline"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 3:00 PM",
+      "location": "Store → sunroom → home"
+    },
+    {
+      "label": "Tuesday",
+      "time": "Morning",
+      "location": "Aerobics at clinic"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Pierre & Abigail",
+      "note": "Family above the store — Caroline worries about Abigail's adventurous streak."
+    },
+    {
+      "name": "Jodi",
+      "note": "Friends who sometimes exercise together at the clinic."
+    }
+  ],
+  "trivia": [
+    "Green Tea comes from her sunroom plants — she may gift you a tea sapling at 2 hearts."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

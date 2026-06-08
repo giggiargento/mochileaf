@@ -20,7 +20,7 @@ async function download(url, dest) {
   });
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
   const buf = Buffer.from(await res.arrayBuffer());
-  if (buf.length < 500) throw new Error(`File too small (${buf.length} bytes): ${url}`);
+  if (buf.length < 200) throw new Error(`File too small (${buf.length} bytes): ${url}`);
   fs.writeFileSync(dest, buf);
   return buf.length;
 }
@@ -48,15 +48,8 @@ async function syncStardewValley() {
     path.join(base, 'header.jpg'),
   );
 
-  const villagers = [
-    'pierre',
-    'robin',
-    'abigail',
-    'sebastian',
-    'lewis',
-    'emily',
-    'linus',
-  ];
+  const { STARDEW_VILLAGER_SLUGS } = await import('./stardew-villager-data.mjs');
+  const villagers = STARDEW_VILLAGER_SLUGS;
 
   const dataPkg = path.join(ROOT, 'node_modules', 'stardew-valley-data');
   if (!fs.existsSync(dataPkg)) {
@@ -88,27 +81,76 @@ async function syncStardewValley() {
     }
   }
 
+  const modsDir = path.join(base, 'mods');
+  console.log('Stardew Valley — mod card art (Nexus headers / previews)…');
+  const modCovers = [
+    {
+      file: '14434.jpg',
+      url: 'https://staticdelivery.nexusmods.com/mods/1303/images/headers/14434_1668153081.jpg',
+    },
+    {
+      file: '4852.jpg',
+      url: 'https://images.nexusmods.com/mod-headers/1303/4852.jpg',
+    },
+    {
+      file: '5407.jpg',
+      url: 'https://images.nexusmods.com/mod-headers/1303/5407.jpg',
+    },
+    {
+      file: '21531.jpg',
+      url: 'https://staticdelivery.nexusmods.com/mods/1303/images/headers/21531_1712857406.jpg',
+    },
+    {
+      file: '13752.jpg',
+      url: 'https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/13752/13752-1665815047-1842292892.png',
+    },
+    {
+      file: '26340.jpg',
+      url: 'https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/26340/26340-1722987501-380541643.png',
+    },
+    {
+      file: '22966.jpg',
+      url: 'https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/22966/22966-1714304662-1696729932.png',
+    },
+    {
+      file: '22350.jpg',
+      url: 'https://staticdelivery.nexusmods.com/mods/1303/images/headers/22350_1712948054.jpg',
+    },
+    {
+      file: '40483.jpg',
+      url: 'https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/40483/40483-1766431559-1603908778.png',
+    },
+    {
+      file: '40635.jpg',
+      url: 'https://staticdelivery.nexusmods.com/mods/1303/images/thumbnails/40635/40635-1767032408-551277235.png',
+    },
+  ];
+  for (const { file, url } of modCovers) {
+    try {
+      await download(url, path.join(modsDir, file));
+    } catch (err) {
+      console.warn(`  skip ${file} — ${err.message}`);
+    }
+  }
+
   const missing = villagers.filter((s) => !fs.existsSync(path.join(charsDir, `${s}.png`)));
   if (missing.length) {
-    console.log(`Stardew Valley — Fandom fallback for: ${missing.join(', ')}…`);
-    const fandom = {
-      abigail:
-        'https://static.wikia.nocookie.net/stardewvalley/images/8/88/Abigail.png/revision/latest?cb=20171021194604',
-      pierre:
-        'https://static.wikia.nocookie.net/stardewvalley/images/7/7e/Pierre.png/revision/latest?cb=20160321193844',
-      robin:
-        'https://static.wikia.nocookie.net/stardewvalley/images/1/1b/Robin.png/revision/latest?cb=20160321193844',
-      sebastian:
-        'https://static.wikia.nocookie.net/stardewvalley/images/a/a8/Sebastian.png/revision/latest?cb=20160321193844',
-      lewis:
-        'https://static.wikia.nocookie.net/stardewvalley/images/2/2b/Lewis.png/revision/latest?cb=20160321193844',
-      emily:
-        'https://static.wikia.nocookie.net/stardewvalley/images/2/28/Emily.png/revision/latest?cb=20160321193844',
-      linus:
-        'https://static.wikia.nocookie.net/stardewvalley/images/3/31/Linus.png/revision/latest?cb=20160321193844',
-    };
+    console.log(`Stardew Valley — wiki portraits for ${missing.length} villager(s)…`);
     for (const slug of missing) {
-      await download(fandom[slug], path.join(charsDir, `${slug}.png`));
+      const wikiTitle = slug.charAt(0).toUpperCase() + slug.slice(1);
+      const dest = path.join(charsDir, `${slug}.png`);
+      try {
+        const api = `https://stardewvalleywiki.com/mediawiki/api.php?action=query&titles=${encodeURIComponent(wikiTitle)}&prop=pageimages&format=json&pithumbsize=256`;
+        const res = await fetch(api, { headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' } });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const page = Object.values(data.query?.pages ?? {})[0];
+        const thumb = page?.thumbnail?.source;
+        if (!thumb) throw new Error(`no thumbnail for ${wikiTitle}`);
+        await download(thumb, dest);
+      } catch (err) {
+        console.warn(`  skip ${slug} portrait — ${err.message}`);
+      }
     }
   }
 
@@ -119,9 +161,14 @@ Steam store art (cover.jpg, card.jpg, header.jpg)
   https://store.steampowered.com/app/413150/
   Used for promotional context on this fan hub.
 
+Mod card covers (mods/*)
+  Nexus Mods headers/thumbnails and mod-author previews where noted.
+  Sea Breeze farmhouse/cellar cards use Sea Breeze Farm Map previews (same author) until dedicated headers are synced.
+  Global God Rays preview from the mod author's GitHub readme asset.
+
 Villager portraits (characters/*.png)
   Primary: stardew-valley-data npm package (MIT), if available
-  Fallback: Stardew Valley Wiki (Fandom) portrait files
+  Fallback: Stardew Valley Wiki API thumbnails (https://stardewvalleywiki.com/)
 
 Trademarks belong to their respective owners. This site is unofficial.
 `;

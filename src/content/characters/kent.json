@@ -1,0 +1,84 @@
+{
+  "slug": "kent",
+  "name": "Kent",
+  "role": "Soldier",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/kent.png",
+  "description": "Returns to town in year 2 after military service. Loves fusing, super meals, and quiet understanding.",
+  "seo": {
+    "title": "Kent — Soldier",
+    "description": "Returns to town in year 2 after military service. Loves fusing, super meals, and quiet understanding."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Jodi's husband and Sam and Vincent's father. Appears from Spring Year 2 onward, adjusting to civilian life.",
+    "villagerInfo": {
+      "birthday": "Spring 4",
+      "livesIn": "Pelican Town",
+      "address": "1 Willow Lane",
+      "family": [
+        {
+          "name": "Jodi",
+          "relation": "wife"
+        },
+        {
+          "name": "Sam",
+          "relation": "son"
+        },
+        {
+          "name": "Vincent",
+          "relation": "son"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Fiddlehead Risotto",
+        "Roasted Hazelnuts",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Daffodil"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Kent"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 5:00 PM",
+      "location": "Home → town → saloon (some evenings)"
+    },
+    {
+      "label": "Before year 2",
+      "time": "—",
+      "location": "Away on deployment"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Jodi & sons",
+      "note": "Rebuilding family rhythm after years away."
+    },
+    {
+      "name": "Sam",
+      "note": "Father-son dynamic is loving but strained by what Kent experienced."
+    }
+  ],
+  "trivia": [
+    "He is not in town until Spring 1 of Year 2 — plan gifts accordingly."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

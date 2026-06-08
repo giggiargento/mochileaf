@@ -9,12 +9,120 @@
     "title": "Sebastian — Programmer",
     "description": "Lives in the basement, codes by night, and rides his motorcycle when the coast is clear. Responds well to patience and thoughtful gifts."
   },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "Robin’s introverted stepson who works from home and escapes on his motorcycle. Warmer than he first appears — if you meet him on his schedule.",
+    "villagerInfo": {
+      "birthday": "Winter 10",
+      "livesIn": "Pelican Town",
+      "address": "Mountain (Robin's house)",
+      "marriageCandidate": true,
+      "family": [
+        {
+          "name": "Robin",
+          "relation": "mother"
+        },
+        {
+          "name": "Maru",
+          "relation": "stepsister"
+        },
+        {
+          "name": "Demetrius",
+          "relation": "stepfather"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Frozen Tear",
+        "Obsidian",
+        "Pumpkin Soup",
+        "Sashimi",
+        "Void Egg",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Green Frog Egg",
+        "Frog Egg"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Chanterelle",
+        "Common Mushroom"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Garage hangout",
+        "summary": "Find him in Robin’s garage with Sam — stay for awkward small talk."
+      },
+      {
+        "hearts": 4,
+        "title": "Board game night",
+        "summary": "Rainy-day invite to play Solarion Chronicles in his room."
+      },
+      {
+        "hearts": 6,
+        "title": "Pool at the lake",
+        "summary": "He opens up about feeling like an outsider in his own family."
+      },
+      {
+        "hearts": 8,
+        "title": "Motorcycle ride",
+        "summary": "He offers a night ride and asks if you want to leave town together someday."
+      },
+      {
+        "hearts": 10,
+        "title": "Obsidian gift",
+        "summary": "Bring obsidian to the mountain after dark for a quiet confession and kiss."
+      },
+      {
+        "hearts": 14,
+        "title": "Frog encounter",
+        "summary": "A rainy-day cutscene on the farm ties back to his love of frogs."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Sebastian"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "10:00 AM – 6:00 PM",
+      "location": "Basement desk → lake (smoking) → home"
+    },
+    {
+      "label": "Rainy day",
+      "time": "All day",
+      "location": "Basement (coding or games)"
+    },
+    {
+      "label": "Friday",
+      "time": "Evening",
+      "location": "Stardrop Saloon with Sam"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Sam & Abigail",
+      "note": "His closest friends — band practice and arcade nights."
+    },
+    {
+      "name": "Maru & Demetrius",
+      "note": "Home life is tense; he keeps to the basement to avoid friction."
+    }
+  ],
+  "trivia": [
+    "Sashimi is loved and only needs any fish — Linus mails you the recipe at 3 hearts."
+  ],
   "likes": [],
   "dislikes": [],
   "favoriteGifts": [],
-  "favoriteFoods": [],
-  "routines": [],
-  "relationships": [],
-  "trivia": [],
-  "tags": []
+  "favoriteFoods": []
 }

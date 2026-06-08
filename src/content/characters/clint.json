@@ -1,0 +1,79 @@
+{
+  "slug": "clint",
+  "name": "Clint",
+  "role": "Blacksmith",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/clint.png",
+  "description": "Forges tools at the smithy and harbors a crush on Emily. Gems and ore keep the conversation going.",
+  "seo": {
+    "title": "Clint — Blacksmith",
+    "description": "Forges tools at the smithy and harbors a crush on Emily. Gems and ore keep the conversation going."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "The town blacksmith — awkward, earnest, and shy around Emily. Upgrade your tools through him as the farm grows.",
+    "villagerInfo": {
+      "birthday": "Winter 26",
+      "livesIn": "Pelican Town",
+      "address": "Blacksmith",
+      "occupation": "Blacksmith"
+    },
+    "gifts": {
+      "love": [
+        "Amethyst",
+        "Aquamarine",
+        "Emerald",
+        "Jade",
+        "Omni Geode",
+        "Ruby",
+        "Topaz",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Copper Bar",
+        "Gold Bar",
+        "Iron Bar",
+        "Quartz",
+        "Refined Quartz"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Clint"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 4:00 PM",
+      "location": "Blacksmith"
+    },
+    {
+      "label": "Friday",
+      "time": "Evening",
+      "location": "Stardrop Saloon (Emily shifts)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Emily",
+      "note": "Has a crush he cannot quite express — shows up at the saloon on her nights."
+    },
+    {
+      "name": "Robin",
+      "note": "Supplies materials for farm buildings and tool upgrades."
+    }
+  ],
+  "trivia": [
+    "Any refined gem is loved — drop a topaz or aquamarine from the mines for easy friendship."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

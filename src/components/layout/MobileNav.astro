@@ -14,6 +14,8 @@ interface Props {
   items: NavItem[];
   backHref?: string;
   backLabel?: string;
+  /** Inside game-hub sticky shell (tabs below); no own sticky/border. */
+  embedded?: boolean;
 }
 
 const {
@@ -21,6 +23,7 @@ const {
   items,
   backHref = '/',
   backLabel,
+  embedded = false,
 } = Astro.props;
 const locale = (Astro.currentLocale ?? 'en') as Locale;
 const resolvedTitle = title ?? t('nav.menu', locale);
@@ -30,7 +33,12 @@ const backPath = normalizeNavPath(backHref);
 const showBackLink = backPath !== currentPath;
 ---
 
-<header class="sticky top-0 z-50 border-b border-default bg-nav backdrop-blur-md lg:hidden transition-colors duration-300">
+<header
+  class:list={[
+    'bg-nav backdrop-blur-md lg:hidden transition-colors duration-300',
+    !embedded && 'sticky top-0 z-50 border-b border-default',
+  ]}
+>
   <div class="flex items-center justify-between gap-4 px-4 py-3">
     <Logo variant="icon" href={pathForLocale('/', locale)} />
     <div class="flex items-center gap-2">

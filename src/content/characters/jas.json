@@ -1,0 +1,81 @@
+{
+  "slug": "jas",
+  "name": "Jas",
+  "role": "Child",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/jas.png",
+  "description": "Shane and Marnie's goddaughter who loves fairy roses and purple things. Gentle gifts beat expensive ones.",
+  "seo": {
+    "title": "Jas — Child",
+    "description": "Shane and Marnie's goddaughter who loves fairy roses and purple things. Gentle gifts beat expensive ones."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "The quiet kid at Marnie's ranch. She reads, plays outside, and opens up slowly to kind neighbors.",
+    "villagerInfo": {
+      "birthday": "Summer 4",
+      "livesIn": "Pelican Town",
+      "address": "Marnie's Ranch",
+      "family": [
+        {
+          "name": "Marnie",
+          "relation": "aunt"
+        },
+        {
+          "name": "Shane",
+          "relation": "godfather"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Fairy Rose",
+        "Pink Cake",
+        "Plum Pudding",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Coconut"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Wild Horseradish",
+        "Triple Shot Espresso"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Jas"
+  },
+  "routines": [
+    {
+      "label": "School days",
+      "time": "9:00 AM – 2:00 PM",
+      "location": "Museum library with Penny"
+    },
+    {
+      "label": "Afternoons",
+      "time": "After school",
+      "location": "Ranch or Cindersap Forest"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Vincent",
+      "note": "Classmate and playmate — Penny tutors them together."
+    },
+    {
+      "name": "Shane",
+      "note": "Godfather figure at the ranch; he tries to protect her."
+    }
+  ],
+  "trivia": [
+    "Fairy Roses bloom in Fall — plant in Summer for her Summer 4 birthday."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

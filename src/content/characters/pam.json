@@ -1,0 +1,81 @@
+{
+  "slug": "pam",
+  "name": "Pam",
+  "role": "Bus Driver",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/pam.png",
+  "description": "Drives the bus to the desert once repaired. Glazed yams, mead, and beer suit her straightforward taste.",
+  "seo": {
+    "title": "Pam — Bus Driver",
+    "description": "Drives the bus to the desert once repaired. Glazed yams, mead, and beer suit her straightforward taste."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Penny's mother, Gus's regular, and the valley's bus driver. Rough around the edges, loyal once you respect her.",
+    "villagerInfo": {
+      "birthday": "Spring 18",
+      "livesIn": "Pelican Town",
+      "address": "Trailer (east of town)",
+      "family": [
+        {
+          "name": "Penny",
+          "relation": "daughter"
+        }
+      ],
+      "occupation": "Bus driver"
+    },
+    "gifts": {
+      "love": [
+        "Beer",
+        "Cactus Fruit",
+        "Glazed Yams",
+        "Mead",
+        "Pale Ale",
+        "Parsnip Soup",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Daffodil"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Pam"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "10:00 AM – 5:00 PM",
+      "location": "Trailer → saloon (evenings)"
+    },
+    {
+      "label": "Bus fixed",
+      "time": "Midday",
+      "location": "Bus stop (Desert runs)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Penny",
+      "note": "Lives with her daughter in the trailer — tough love on both sides."
+    },
+    {
+      "name": "Gus",
+      "note": "Evening regular at the Stardrop Saloon."
+    }
+  ],
+  "trivia": [
+    "Repair the community center or Joja bus to unlock Desert trips — and more time with Pam at the wheel."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

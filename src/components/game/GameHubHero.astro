@@ -1,7 +1,6 @@
 ---
 import CozyImage from '../ui/CozyImage.astro';
-import { getGameCoverAsset } from '../../data/game-assets';
-import { gameHeaderImagePath } from '../../utils/game-images';
+import { gameLogoImagePath } from '../../utils/game-images';
 import type { Game } from '../../types';
 
 interface Props {
@@ -9,48 +8,25 @@ interface Props {
 }
 
 const { game } = Astro.props;
-const coverAsset = getGameCoverAsset(game.slug);
-const publicCover = gameHeaderImagePath(game.slug) ?? game.coverImage;
-const showCover = coverAsset ?? publicCover;
+const logoSrc = gameLogoImagePath(game.slug);
+const logoAlt = `${game.name} logo`;
 ---
 
-<div
-  class:list={[
-    'relative flex min-h-[20rem] flex-col justify-end overflow-hidden md:min-h-[24rem]',
-    !showCover && `bg-gradient-to-br ${game.coverGradient}`,
-  ]}
->
-  {
-    coverAsset && (
-      <CozyImage
-        src={coverAsset}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover object-bottom"
-        widths={[640, 960, 1280, 1920]}
-        sizes="100vw"
-        loading="eager"
-        fetchpriority="high"
-        quality={88}
-      />
-    )
-  }
-  {
-    !coverAsset && publicCover && (
-      <CozyImage
-        src={publicCover}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover object-bottom"
-        loading="eager"
-        fetchpriority="high"
-      />
-    )
-  }
-  {
-    showCover && (
-      <div class="game-hub-hero-overlay" aria-hidden="true" />
-    )
-  }
-  <div class="page-container relative z-10 w-full pb-10 pt-28 text-left md:pb-14 md:pt-36">
+<header class="animate-fade-in">
+  <div class="page-container pb-10 pt-10 text-left md:pb-14 md:pt-14">
+    {
+      logoSrc && (
+        <CozyImage
+          src={logoSrc}
+          alt={logoAlt}
+          width={92}
+          height={92}
+          class="game-hub-logo"
+          loading="eager"
+          fetchpriority="high"
+        />
+      )
+    }
     <slot />
   </div>
-</div>
+</header>

@@ -9,12 +9,65 @@
     "title": "Lewis — Mayor of Pelican Town",
     "description": "Keeps the community center project on track and hosts seasonal festivals. Loves local produce and a well-kept farm."
   },
+  "tags": [],
+  "stardew": {
+    "intro": "Pelican Town's longtime mayor. Official, festival-obsessed, and secretly juggling more drama than he admits.",
+    "villagerInfo": {
+      "birthday": "Spring 7",
+      "livesIn": "Pelican Town",
+      "address": "Mayor's Manor",
+      "occupation": "Mayor"
+    },
+    "gifts": {
+      "love": [
+        "Autumn's Bounty",
+        "Glazed Yams",
+        "Hot Pepper",
+        "Purple Mushroom",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Daffodil"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Lewis"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "8:00 AM – 5:00 PM",
+      "location": "Manor → town errands → manor"
+    },
+    {
+      "label": "Festival days",
+      "time": "All day",
+      "location": "Festival grounds (hosting)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Marnie",
+      "note": "Long-running secret relationship — observant players may notice clues."
+    },
+    {
+      "name": "Pierre",
+      "note": "Fellow merchant leader; they coordinate town events."
+    }
+  ],
+  "trivia": [
+    "Purple Mushrooms from the mines are a top loved gift for Spring 7 birthdays."
+  ],
   "likes": [],
   "dislikes": [],
   "favoriteGifts": [],
-  "favoriteFoods": [],
-  "routines": [],
-  "relationships": [],
-  "trivia": [],
-  "tags": []
+  "favoriteFoods": []
 }

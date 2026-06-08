@@ -1,0 +1,65 @@
+{
+  "slug": "krobus",
+  "name": "Krobus",
+  "role": "Shadow Merchant",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/krobus.png",
+  "description": "Friendly shadow who sells rare goods in the sewers. Void eggs and diamonds feel like home.",
+  "seo": {
+    "title": "Krobus — Shadow Merchant",
+    "description": "Friendly shadow who sells rare goods in the sewers. Void eggs and diamonds feel like home."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "A shadow who prefers peace with humans. Lives in the sewers, sells unique items, and can become a roommate.",
+    "villagerInfo": {
+      "birthday": "Winter 1",
+      "livesIn": "The Sewers",
+      "address": "Krobus's shop",
+      "occupation": "Merchant"
+    },
+    "gifts": {
+      "love": [
+        "Diamond",
+        "Iridium Bar",
+        "Pumpkin",
+        "Void Egg",
+        "Wild Horseradish",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Gold Bar"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Bread",
+        "Crab Cakes"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Krobus"
+  },
+  "routines": [
+    {
+      "label": "Always",
+      "time": "All day",
+      "location": "Sewers shop (unlock via museum donations)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Wizard",
+      "note": "The Wizard vouches that Krobus means no harm."
+    }
+  ],
+  "trivia": [
+    "Friendship caps at 10 hearts — he cannot receive a bouquet but can move in as a roommate."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

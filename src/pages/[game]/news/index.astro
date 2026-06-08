@@ -2,6 +2,7 @@
 import GameHubLayout from '../../../layouts/GameHubLayout.astro';
 import PageHeader from '../../../components/game/PageHeader.astro';
 import NewsArticleCard from '../../../components/article/NewsArticleCard.astro';
+import ContentGrid from '../../../components/game/ContentGrid.astro';
 import { games } from '../../../data/games';
 import { getNewsByGame } from '../../../data/articles';
 import { t } from '../../../i18n/messages';
@@ -25,11 +26,11 @@ const news = await getNewsByGame(game.slug, locale);
   />
   <div class="page-container-below-header">
     {news.length > 0 ? (
-      <div class="news-masonry" role="list">
+      <ContentGrid columns={2}>
         {news.map((a) => (
           <NewsArticleCard article={a} locale={locale} />
         ))}
-      </div>
+      </ContentGrid>
     ) : (
       <p class="prose-cozy text-center py-16">{t('news.empty', locale)}</p>
     )}

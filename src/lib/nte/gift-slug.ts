@@ -9,7 +9,7 @@ export function giftSlug(name: string): string {
     .replace(/^-|-$/g, '');
 }
 
-export type GiftVisualTone = 'sage' | 'blossom' | 'lavender' | 'mist' | 'accent';
+export type GiftVisualTone = import('../bond-gift').BondGiftTone;
 
 /** Category icon when a unique item sprite is unavailable. */
 export function giftVisual(gift: { name: string; source: string }): {

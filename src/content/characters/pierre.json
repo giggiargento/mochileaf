@@ -9,12 +9,73 @@
     "title": "Pierre — General Store Owner",
     "description": "Runs the town shop and competes with JojaMart prices. Loves garden-fresh produce and quiet evenings on the town square."
   },
+  "tags": [],
+  "stardew": {
+    "intro": "Caroline's husband, Abigail's father, and merchant rival to Joja. Business-first, but devoted to his family.",
+    "villagerInfo": {
+      "birthday": "Spring 26",
+      "livesIn": "Pelican Town",
+      "address": "Pierre's General Store",
+      "occupation": "Shopkeeper",
+      "family": [
+        {
+          "name": "Caroline",
+          "relation": "wife"
+        },
+        {
+          "name": "Abigail",
+          "relation": "daughter"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Daffodil",
+        "Dandelion",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Melon"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Pierre"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 5:00 PM",
+      "location": "General Store (counter)"
+    },
+    {
+      "label": "Wednesday",
+      "time": "Closed",
+      "location": "Town errands or home"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Caroline & Abigail",
+      "note": "Family above the store — Pierre worries about Joja competition more than they do."
+    },
+    {
+      "name": "Morris",
+      "note": "Business rival if Joja arrives in the valley."
+    }
+  ],
+  "trivia": [
+    "Daffodils forage free in Spring — an easy birthday gift on Spring 26."
+  ],
   "likes": [],
   "dislikes": [],
   "favoriteGifts": [],
-  "favoriteFoods": [],
-  "routines": [],
-  "relationships": [],
-  "trivia": [],
-  "tags": []
+  "favoriteFoods": []
 }

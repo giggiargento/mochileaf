@@ -1,0 +1,116 @@
+{
+  "slug": "penny",
+  "name": "Penny",
+  "role": "Tutor",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/penny.png",
+  "description": "Teaches Jas and Vincent and lives in the trailer with Pam. Melons, poppies, and emerald make her smile.",
+  "seo": {
+    "title": "Penny — Tutor",
+    "description": "Teaches Jas and Vincent and lives in the trailer with Pam. Melons, poppies, and emerald make her smile."
+  },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "Quiet, bookish, and devoted to the town's kids. She dreams of a home that is not a trailer but never complains out loud.",
+    "villagerInfo": {
+      "birthday": "Fall 2",
+      "livesIn": "Pelican Town",
+      "address": "Trailer (east of town)",
+      "marriageCandidate": true,
+      "family": [
+        {
+          "name": "Pam",
+          "relation": "mother"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Diamond",
+        "Emerald",
+        "Melon",
+        "Poppy",
+        "Poppyseed Muffin",
+        "Sandfish",
+        "Tom Kha Soup",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Daffodil"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Beer",
+        "Wine"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Tutoring session",
+        "summary": "Visit the trailer while she teaches Jas and Vincent — lend a hand."
+      },
+      {
+        "hearts": 4,
+        "title": "Library reading",
+        "summary": "Find her in the museum library and talk about books."
+      },
+      {
+        "hearts": 6,
+        "title": "Bathhouse repair",
+        "summary": "She asks for help fixing the old community bathhouse in town."
+      },
+      {
+        "hearts": 8,
+        "title": "Spa reopening",
+        "summary": "The restored bathhouse opens — a tender moment in the steam."
+      },
+      {
+        "hearts": 10,
+        "title": "Trailer confession",
+        "summary": "At the edge of the trailer she tells you she wants a future with you."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Penny"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 4:00 PM",
+      "location": "Trailer → museum library (tutoring)"
+    },
+    {
+      "label": "Tuesday",
+      "time": "Morning",
+      "location": "Spirits Eve prep or library"
+    },
+    {
+      "label": "Friday",
+      "time": "Evening",
+      "location": "Stardrop Saloon (rare)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Pam",
+      "note": "Lives with her mother in the trailer — complicated but loving."
+    },
+    {
+      "name": "Jas & Vincent",
+      "note": "Tutors both children most weekdays at the library."
+    }
+  ],
+  "trivia": [
+    "Melon in Fall is a loved gift — plant in Summer to have one ready for Fall 2 birthdays."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

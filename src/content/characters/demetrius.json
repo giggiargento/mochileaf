@@ -1,0 +1,85 @@
+{
+  "slug": "demetrius",
+  "name": "Demetrius",
+  "role": "Scientist",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/demetrius.png",
+  "description": "Studies the valley's ecosystem from the mountain lab. Strawberries and ice cream suit his analytical cheer.",
+  "seo": {
+    "title": "Demetrius — Scientist",
+    "description": "Studies the valley's ecosystem from the mountain lab. Strawberries and ice cream suit his analytical cheer."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "Robin's husband, Maru's father, and Sebastian's stepfather. Enthusiastic about science, occasionally oblivious at home.",
+    "villagerInfo": {
+      "birthday": "Summer 19",
+      "livesIn": "Pelican Town",
+      "address": "Mountain (Robin's house)",
+      "family": [
+        {
+          "name": "Robin",
+          "relation": "wife"
+        },
+        {
+          "name": "Maru",
+          "relation": "daughter"
+        },
+        {
+          "name": "Sebastian",
+          "relation": "stepson"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Ice Cream",
+        "Rice Pudding",
+        "Strawberry",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Purple Mushroom"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Holly"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Demetrius"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "8:00 AM – 5:00 PM",
+      "location": "Home lab → mountain for samples"
+    },
+    {
+      "label": "Rainy day",
+      "time": "All day",
+      "location": "Indoor lab"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Robin & Maru",
+      "note": "Family on the mountain — he is proud of Maru's inventions."
+    },
+    {
+      "name": "Sebastian",
+      "note": "Stepfather relationship is polite but distant."
+    }
+  ],
+  "trivia": [
+    "He may ask to study crops on your farm — say yes for a friendly boost."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

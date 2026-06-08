@@ -37,6 +37,25 @@ function isNavParentActiveForPath(
   });
 }
 
+/** Strip preview/HMR inline overrides on game hub tabs (same issue as character portraits). */
+function clearGameHubTabPreviewStyles(doc: Document = document) {
+  doc.querySelectorAll('[data-game-hub-tabs], .game-hub-mobile-tab').forEach((el) => {
+    el.removeAttribute('style');
+  });
+}
+
+/** Persisted tabs keep old markup — sync from incoming page before swap. */
+function mergeGameHubTabsFromNewDocument(newDoc: Document) {
+  const incoming = newDoc.querySelector('[data-game-hub-tabs]');
+  const current = document.querySelector('[data-game-hub-tabs]');
+  if (!incoming || !current) return;
+
+  current.innerHTML = incoming.innerHTML;
+  const ariaLabel = incoming.getAttribute('aria-label');
+  if (ariaLabel) current.setAttribute('aria-label', ariaLabel);
+  clearGameHubTabPreviewStyles();
+}
+
 /** Re-apply active nav styles after View Transitions (persisted sidebar keeps stale SSR classes). */
 function syncNavActiveState() {
   const path = normalizeNavPath(stripLocalePrefix(location.pathname));
@@ -92,6 +111,32 @@ function syncNavActiveState() {
       }
     });
   });
+
+  syncGameHubTabs();
+}
+
+function syncGameHubTabs() {
+  const row = document.querySelector('[data-game-hub-tabs]');
+  if (!row) return;
+
+  clearGameHubTabPreviewStyles();
+
+  const path = normalizeNavPath(stripLocalePrefix(location.pathname));
+  const links = Array.from(
+    row.querySelectorAll<HTMLAnchorElement>('a.game-hub-mobile-tab[href]'),
+  );
+
+  links.forEach((a) => {
+    a.classList.remove('is-active', 'nav-link', 'nav-link-active');
+    a.removeAttribute('aria-current');
+  });
+
+  const best = findBestNavLink(links, path);
+  if (!best) return;
+
+  best.classList.add('is-active');
+  best.setAttribute('aria-current', 'page');
+  best.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'instant' });
 }
 
 function syncMenuIcon() {
@@ -150,10 +195,21 @@ function onNavClick(event: Event) {
   }
 }
 
+document.addEventListener('astro:before-swap', (event) => {
+  mergeGameHubTabsFromNewDocument(event.newDocument);
+  clearGameHubTabPreviewStyles(event.newDocument);
+});
+
 document.addEventListener('click', onNavClick);
 document.addEventListener('astro:page-load', () => {
   closeMobileMenu();
+  clearGameHubTabPreviewStyles();
   syncNavActiveState();
 });
+document.addEventListener('astro:after-swap', () => {
+  clearGameHubTabPreviewStyles();
+  syncGameHubTabs();
+});
+
 closeMobileMenu();
 syncNavActiveState();

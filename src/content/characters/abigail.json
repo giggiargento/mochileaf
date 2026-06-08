@@ -9,12 +9,128 @@
     "title": "Abigail — Explorer & Adventurer",
     "description": "Spends rainy days in the mines and loves unusual minerals. A good friend if you enjoy combat, puzzles, and pumpkin-related gifts."
   },
+  "tags": [
+    "Marriage candidate",
+    "Adventurer"
+  ],
+  "stardew": {
+    "intro": "Lives above Pierre's General Store with her parents. Curious, occult-leaning, and happiest when the day involves a sword, a game, or something purple.",
+    "villagerInfo": {
+      "birthday": "Fall 13",
+      "livesIn": "Pelican Town",
+      "address": "Pierre's General Store",
+      "marriageCandidate": true,
+      "family": [
+        {
+          "name": "Pierre",
+          "relation": "father"
+        },
+        {
+          "name": "Caroline",
+          "relation": "mother"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Amethyst",
+        "Banana Pudding",
+        "Blackberry Cobbler",
+        "Chocolate Cake",
+        "Monster Compendium",
+        "Pumpkin",
+        "Pufferfish",
+        "Magic Rock Candy",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Ancient Sword",
+        "Combat Quarterly",
+        "Basilisk Paw",
+        "Bone Flute"
+      ],
+      "dislike": [
+        "Sugar",
+        "Wild Horseradish"
+      ],
+      "hate": [
+        "Clay",
+        "Holly"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Console co-op",
+        "summary": "Help her beat a level of Journey of the Prairie King in her room at the store."
+      },
+      {
+        "hearts": 4,
+        "title": "Rainy duet",
+        "summary": "Find her playing flute by the mountain lake on a rainy afternoon — she invites you to play along."
+      },
+      {
+        "hearts": 6,
+        "title": "Graveyard practice",
+        "summary": "She's been training with a sword at night; a tense moment with Pierre leads to a quiet talk in the bushes."
+      },
+      {
+        "hearts": 8,
+        "title": "Spirit board",
+        "summary": "A late visit to her room turns into an awkwardly sweet moment with her spirit board."
+      },
+      {
+        "hearts": 10,
+        "title": "Mines confession",
+        "summary": "She's spooked in the mines and opens up about liking you as more than a friend."
+      },
+      {
+        "hearts": 14,
+        "title": "Backwoods rescue",
+        "summary": "After a monster ambush in the Backwoods, she saves you — and marks the spot where it happened."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Abigail"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 8:00 PM",
+      "location": "Room → Pierre's store → mountain lake (flute) → home"
+    },
+    {
+      "label": "Rainy day",
+      "time": "Afternoon",
+      "location": "Store or Stardrop Saloon arcade"
+    },
+    {
+      "label": "Wednesday",
+      "time": "10:00 AM – 10:00 PM",
+      "location": "Museum library → graveyard → home"
+    },
+    {
+      "label": "Friday",
+      "time": "3:00 PM – 9:00 PM",
+      "location": "Stardrop Saloon (arcade sofa)"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Pierre & Caroline",
+      "note": "Lives with her parents above the store; Caroline worries about her hobbies, and Abigail pushes back."
+    },
+    {
+      "name": "Sam & Sebastian",
+      "note": "Close friends — you will often see the trio hanging out around town."
+    }
+  ],
+  "trivia": [
+    "After her 10-heart event, she may appear in the mines on rainy days to keep you company.",
+    "Birthday gifts on Fall 13 count for extra friendship — amethyst is a safe favorite."
+  ],
   "likes": [],
   "dislikes": [],
   "favoriteGifts": [],
-  "favoriteFoods": [],
-  "routines": [],
-  "relationships": [],
-  "trivia": [],
-  "tags": []
+  "favoriteFoods": []
 }

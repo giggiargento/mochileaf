@@ -1,0 +1,80 @@
+{
+  "slug": "evelyn",
+  "name": "Evelyn",
+  "role": "Grandmother",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/evelyn.png",
+  "description": "George's wife and Alex's grandmother. Bakes cookies, tends flowers, and appreciates anything sweet.",
+  "seo": {
+    "title": "Evelyn — Grandmother",
+    "description": "George's wife and Alex's grandmother. Bakes cookies, tends flowers, and appreciates anything sweet."
+  },
+  "tags": [],
+  "stardew": {
+    "intro": "The valley's kindest grandmother. She gardens, bakes, and keeps George (and Alex) grounded with warmth.",
+    "villagerInfo": {
+      "birthday": "Winter 20",
+      "livesIn": "Pelican Town",
+      "address": "1 River Road",
+      "family": [
+        {
+          "name": "George",
+          "relation": "husband"
+        },
+        {
+          "name": "Alex",
+          "relation": "grandson"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Beet",
+        "Chocolate Cake",
+        "Diamond",
+        "Fairy Rose",
+        "Stuffing",
+        "Tulip",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Daffodil",
+        "Quartz"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Evelyn"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 3:00 PM",
+      "location": "Home → town square (garden) → home"
+    },
+    {
+      "label": "Tuesday",
+      "time": "Morning",
+      "location": "Aerobics at clinic"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "George & Alex",
+      "note": "Keeps the household running and worries about both men in her life."
+    }
+  ],
+  "trivia": [
+    "Chocolate Cake is loved — a cozy gift if you already cook for Abigail."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

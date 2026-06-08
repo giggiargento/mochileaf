@@ -1,0 +1,117 @@
+{
+  "slug": "shane",
+  "name": "Shane",
+  "role": "Joja Clerk",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/shane.png",
+  "description": "Works at JojaMart and retreats to Marnie’s coop with his chickens. Pepper poppers and a little patience go a long way.",
+  "seo": {
+    "title": "Shane — Joja Clerk",
+    "description": "Works at JojaMart and retreats to Marnie’s coop with his chickens. Pepper poppers and a little patience go a long way."
+  },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "Marnie’s nephew, Jas’s guardian figure, and struggling with depression. Blunt at first, deeply loyal once you earn his trust.",
+    "villagerInfo": {
+      "birthday": "Spring 20",
+      "livesIn": "Pelican Town",
+      "address": "Marnie's Ranch",
+      "marriageCandidate": true,
+      "family": [
+        {
+          "name": "Marnie",
+          "relation": "aunt"
+        },
+        {
+          "name": "Jas",
+          "relation": "goddaughter"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Beer",
+        "Hot Pepper",
+        "Pepper Poppers",
+        "Pizza",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Egg"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Pickles",
+        "Wild Horseradish"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Coop chores",
+        "summary": "Help him at Marnie’s chicken coop when he is in a foul mood."
+      },
+      {
+        "hearts": 4,
+        "title": "Cliffside cans",
+        "summary": "Find him drinking alone on the cliff — choose words carefully."
+      },
+      {
+        "hearts": 6,
+        "title": "Gridball on TV",
+        "summary": "Watch a game at the saloon; he loosens up if you share the moment."
+      },
+      {
+        "hearts": 8,
+        "title": "Hospital scare",
+        "summary": "A crisis at the clinic leads to Shane admitting he needs help."
+      },
+      {
+        "hearts": 10,
+        "title": "Stargazing",
+        "summary": "He invites you to the ranch at night and kisses you by the coop."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Shane"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 5:00 PM",
+      "location": "JojaMart → ranch (evenings)"
+    },
+    {
+      "label": "Saturday",
+      "time": "Evening",
+      "location": "Stardrop Saloon"
+    },
+    {
+      "label": "Rainy day",
+      "time": "Afternoon",
+      "location": "Stardrop Saloon"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Marnie & Jas",
+      "note": "Lives at the ranch and helps raise Jas when he is not at Joja."
+    },
+    {
+      "name": "Emily",
+      "note": "Works opposite shifts at the saloon — she tries to look out for him."
+    }
+  ],
+  "trivia": [
+    "Pepper poppers need hot peppers and cheese — a cozy gift once you have a kitchen."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

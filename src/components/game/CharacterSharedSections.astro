@@ -1,0 +1,157 @@
+---
+import type { Character } from '../../types';
+import BondGiftTile from './BondGiftTile.astro';
+import { bondGiftToneClass } from '../../lib/bond-gift';
+import { stardewGiftTierTone, stardewGiftVisual } from '../../lib/stardew/gift-visual';
+import { defaultLocale, type Locale } from '../../i18n/config';
+import { t } from '../../i18n/messages';
+
+export interface GiftTiers {
+  love?: string[];
+  like?: string[];
+  dislike?: string[];
+  hate?: string[];
+}
+
+interface Props {
+  character: Character;
+  locale?: Locale;
+  gifts?: GiftTiers;
+  giftsSectionId?: string;
+  scheduleSectionId?: string;
+}
+
+const { character, locale = defaultLocale, gifts, giftsSectionId = 'gifts', scheduleSectionId = 'schedule' } =
+  Astro.props;
+
+const giftTiers: {
+  key: keyof GiftTiers;
+  labelKey: string;
+  affinityKey: string;
+}[] = [
+  { key: 'love', labelKey: 'character.gifts.love', affinityKey: 'character.gifts.affinity.love' },
+  { key: 'like', labelKey: 'character.gifts.like', affinityKey: 'character.gifts.affinity.like' },
+  { key: 'dislike', labelKey: 'character.gifts.dislike', affinityKey: 'character.gifts.affinity.dislike' },
+  { key: 'hate', labelKey: 'character.gifts.hate', affinityKey: 'character.gifts.affinity.hate' },
+];
+
+const populatedGiftTiers = giftTiers.filter((tier) => (gifts?.[tier.key]?.length ?? 0) > 0);
+
+const hasGifts = populatedGiftTiers.length > 0;
+const hasRoutines = (character.routines?.length ?? 0) > 0;
+const hasRelationships = (character.relationships?.length ?? 0) > 0;
+const hasTrivia = (character.trivia?.length ?? 0) > 0;
+const showSection = hasGifts || hasRoutines || hasRelationships || hasTrivia;
+---
+
+{
+  showSection && (
+    <section class="character-shared-sections mt-16 space-y-12" aria-label={t('character.shared.aria', locale)}>
+      {
+        hasGifts && gifts && (
+          <div id={giftsSectionId} class="scroll-mt-24">
+            <div class="mb-4">
+              <h2 class="section-title mb-1">{t('character.gifts.title', locale)}</h2>
+              <p class="max-w-2xl text-xs text-secondary leading-relaxed">{t('character.gifts.intro', locale)}</p>
+            </div>
+            <article class="cozy-card p-4 sm:p-5 space-y-4">
+              {populatedGiftTiers.map((tier, index) => {
+                const items = gifts[tier.key]!;
+                const tone = stardewGiftTierTone[tier.key];
+                const toneClasses = bondGiftToneClass[tone];
+                return (
+                  <div class:list={[index > 0 && 'border-t border-default pt-4']}>
+                    <h3 class="font-display text-base text-primary">{t(tier.labelKey, locale)}</h3>
+                    <ul class="bond-gift-grid mt-2">
+                      {items.map((item) => {
+                        const visual = stardewGiftVisual(item);
+                        return (
+                          <BondGiftTile
+                            name={item}
+                            icon={visual.icon}
+                            toneClasses={toneClasses}
+                            affinityLabel={t(tier.affinityKey, locale)}
+                            subtitle={t(visual.categoryKey, locale)}
+                          />
+                        );
+                      })}
+                    </ul>
+                  </div>
+                );
+              })}
+            </article>
+          </div>
+        )
+      }
+
+      {
+        hasRoutines && (
+          <div id={scheduleSectionId} class="scroll-mt-24">
+            <h2 class="section-title mb-2">{t('character.schedule.title', locale)}</h2>
+            <p class="mb-4 max-w-2xl text-sm text-secondary">{t('character.schedule.intro', locale)}</p>
+            <div class="cozy-table-wrap">
+              <table class="cozy-table">
+                <thead>
+                  <tr>
+                    <th scope="col">{t('character.schedule.when', locale)}</th>
+                    <th scope="col">{t('character.schedule.where', locale)}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {character.routines!.map((row) => (
+                    <tr>
+                      <th scope="row">
+                        {row.time ? `${row.time} · ${row.label}` : row.label}
+                      </th>
+                      <td>{row.location}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )
+      }
+
+      {
+        (hasRelationships || hasTrivia) && (
+          <div
+            class:list={[
+              'scroll-mt-24',
+              hasRelationships && hasTrivia && 'grid gap-8 md:grid-cols-2 md:items-start',
+            ]}
+          >
+            {
+              hasRelationships && (
+                <div id="relationships" class="min-w-0">
+                  <h2 class="section-title mb-4">{t('character.relationships.title', locale)}</h2>
+                  <ul class="space-y-3">
+                    {character.relationships!.map((rel) => (
+                      <li class="rounded-xl border border-default bg-card p-4">
+                        <p class="text-sm font-semibold text-primary">{rel.name}</p>
+                        <p class="mt-1 text-sm leading-relaxed text-secondary">{rel.note}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            }
+
+            {
+              hasTrivia && (
+                <div id="trivia" class="min-w-0">
+                  <h2 class="section-title mb-4">{t('character.trivia.title', locale)}</h2>
+                  <ul class="prose-cozy list-disc space-y-2 pl-5">
+                    {character.trivia!.map((line) => (
+                      <li>{line}</li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            }
+          </div>
+        )
+      }
+    </section>
+  )
+}

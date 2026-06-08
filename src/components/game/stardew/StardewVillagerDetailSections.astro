@@ -1,0 +1,58 @@
+---
+import type { Character, StardewVillagerDetails } from '../../../types';
+import CharacterSharedSections, { type GiftTiers } from '../CharacterSharedSections.astro';
+import { defaultLocale, type Locale } from '../../../i18n/config';
+import { t } from '../../../i18n/messages';
+
+interface Props {
+  character: Character;
+  details: StardewVillagerDetails;
+  locale?: Locale;
+}
+
+const { character, details, locale = defaultLocale } = Astro.props;
+const gifts: GiftTiers | undefined = details.gifts;
+const hasHeartEvents = (details.heartEvents?.length ?? 0) > 0;
+---
+
+<section class="stardew-villager-sections" aria-label={t('character.stardew.aria', locale)}>
+  <CharacterSharedSections
+    character={character}
+    locale={locale}
+    gifts={gifts}
+    giftsSectionId="gifts"
+    scheduleSectionId="schedule"
+  />
+
+  {
+    hasHeartEvents && (
+      <div id="heart-events" class="scroll-mt-24 mt-12">
+        <h2 class="section-title mb-2">{t('character.heartEvents.title', locale)}</h2>
+        <p class="mb-6 max-w-2xl text-sm text-secondary">{t('character.heartEvents.intro', locale)}</p>
+        <ol class="grid list-none gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
+          {details.heartEvents!.map((event) => (
+            <li class="flex h-full flex-col rounded-xl border border-default bg-card p-5">
+              <p class="text-xs font-semibold uppercase tracking-wide text-accent">
+                {t('character.heartEvents.hearts', locale, { count: String(event.hearts) })}
+              </p>
+              <h3 class="mt-1 font-display text-lg text-primary">{event.title}</h3>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-secondary">{event.summary}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    )
+  }
+
+  {
+    details.sourceUrl && (
+      <p class="mt-10 text-xs text-muted">
+        {t('character.stardew.source', locale)}{' '}
+        <a href={details.sourceUrl} class="cozy-link" target="_blank" rel="noopener noreferrer">
+          Stardew Valley Wiki
+        </a>
+        .
+      </p>
+    )
+  }
+</section>

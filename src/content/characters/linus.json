@@ -4,17 +4,74 @@
   "role": "Forager",
   "gameSlug": "stardew-valley",
   "image": "/images/games/stardew-valley/characters/linus.png",
-  "description": "Lives in a tent north of town and respects the valley’s wild places. Appreciates foraged goods and kindness more than expensive gifts.",
+  "description": "Lives in a tent north of town and respects the valley's wild places. Appreciates foraged goods and kindness more than expensive gifts.",
   "seo": {
     "title": "Linus — Forager",
-    "description": "Lives in a tent north of town and respects the valley’s wild places. Appreciates foraged goods and kindness more than expensive gifts."
+    "description": "Lives in a tent north of town and respects the valley's wild places. Appreciates foraged goods and kindness more than expensive gifts."
   },
+  "tags": [],
+  "stardew": {
+    "intro": "The valley's gentle hermit. He forages, lives lightly, and teaches you to appreciate nature without taking too much.",
+    "villagerInfo": {
+      "birthday": "Winter 3",
+      "livesIn": "Pelican Town",
+      "address": "Tent (mountain)",
+      "occupation": "Forager"
+    },
+    "gifts": {
+      "love": [
+        "Blueberry Tart",
+        "Cactus Fruit",
+        "Coconut",
+        "Dish O' The Sea",
+        "Eggplant Parmesan",
+        "Fried Eel",
+        "Honey",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Chanterelle",
+        "Common Mushroom"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Linus"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 6:00 PM",
+      "location": "Tent → foraging spots → mountain lake"
+    },
+    {
+      "label": "Rainy day",
+      "time": "All day",
+      "location": "Tent or bus stop shelter"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Leo",
+      "note": "Takes Leo under his wing when the boy moves to the mainland."
+    },
+    {
+      "name": "Town",
+      "note": "Some villagers misunderstand him; kindness from the farmer means a lot."
+    }
+  ],
+  "trivia": [
+    "He mails you the Sashimi recipe at 3 hearts — useful for Sebastian too."
+  ],
   "likes": [],
   "dislikes": [],
   "favoriteGifts": [],
-  "favoriteFoods": [],
-  "routines": [],
-  "relationships": [],
-  "trivia": [],
-  "tags": []
+  "favoriteFoods": []
 }

@@ -1,0 +1,121 @@
+{
+  "slug": "alex",
+  "name": "Alex",
+  "role": "Gridball Athlete",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/alex.png",
+  "description": "Trains in the town square and dreams of going pro. Responds well to hearty meals and anything that feels like a win.",
+  "seo": {
+    "title": "Alex — Gridball Athlete",
+    "description": "Trains in the town square and dreams of going pro. Responds well to hearty meals and anything that feels like a win."
+  },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "Lives with grandparents George and Evelyn. Competitive, a little vain, and secretly worried he will not make it as an athlete.",
+    "villagerInfo": {
+      "birthday": "Summer 13",
+      "livesIn": "Pelican Town",
+      "address": "1 River Road",
+      "marriageCandidate": true,
+      "family": [
+        {
+          "name": "George",
+          "relation": "grandfather"
+        },
+        {
+          "name": "Evelyn",
+          "relation": "grandmother"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Complete Breakfast",
+        "Jack Be Nimble, Jack Be Thirsty",
+        "Salmon Dinner",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Egg",
+        "Quartz"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Chanterelle",
+        "Common Mushroom"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Gridball toss",
+        "summary": "Catch the gridball in the town square when he asks for a throw."
+      },
+      {
+        "hearts": 4,
+        "title": "Book on the pier",
+        "summary": "Find him reading alone at the pier — he opens up about his mom and his fears."
+      },
+      {
+        "hearts": 5,
+        "title": "Recipe mail",
+        "summary": "He sends you the Salmon Dinner recipe in the mail."
+      },
+      {
+        "hearts": 6,
+        "title": "Cliffside talk",
+        "summary": "Visit him on the cliff east of town; he admits he is unsure about his future."
+      },
+      {
+        "hearts": 8,
+        "title": "Gridball letter",
+        "summary": "A letter invites you to his house — he asks if you think he has what it takes."
+      },
+      {
+        "hearts": 10,
+        "title": "Midnight gridball",
+        "summary": "Meet him at the gridball cage after dark for a private game and a kiss."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Alex"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "8:00 AM – 5:00 PM",
+      "location": "House → town square (training) → home"
+    },
+    {
+      "label": "Rainy day",
+      "time": "Morning",
+      "location": "Stardrop Saloon (arcade)"
+    },
+    {
+      "label": "Winter 16",
+      "time": "All day",
+      "location": "Night Market"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "George & Evelyn",
+      "note": "Raised by his grandparents; their health weighs on him more than he lets on."
+    },
+    {
+      "name": "Dustin & Haley",
+      "note": "Childhood friends — you will see them around town together."
+    }
+  ],
+  "trivia": [
+    "Birthday on Summer 13 — Complete Breakfast is an easy loved gift if you have chickens and a kitchen."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}

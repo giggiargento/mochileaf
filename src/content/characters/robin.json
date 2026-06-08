@@ -9,12 +9,78 @@
     "title": "Robin — Carpenter",
     "description": "Builds farm buildings and sells house upgrades. Friendly, practical, and always ready to sketch a new coop or barn."
   },
+  "tags": [],
+  "stardew": {
+    "intro": "The valley's carpenter and Demetrius's wife. Upgrades your farmhouse, builds barns, and keeps the mountain household running.",
+    "villagerInfo": {
+      "birthday": "Fall 21",
+      "livesIn": "Pelican Town",
+      "address": "Mountain (carpenter's shop)",
+      "occupation": "Carpenter",
+      "family": [
+        {
+          "name": "Demetrius",
+          "relation": "husband"
+        },
+        {
+          "name": "Maru",
+          "relation": "daughter"
+        },
+        {
+          "name": "Sebastian",
+          "relation": "stepson"
+        }
+      ]
+    },
+    "gifts": {
+      "love": [
+        "Goat Cheese",
+        "Peach",
+        "Spaghetti",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Quartz",
+        "Wood"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Wild Horseradish"
+      ]
+    },
+    "sourceUrl": "https://stardewvalleywiki.com/Robin"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "9:00 AM – 5:00 PM",
+      "location": "Carpenter shop (counter)"
+    },
+    {
+      "label": "Tuesday",
+      "time": "Afternoon",
+      "location": "Aerobics at clinic"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Demetrius & Maru",
+      "note": "Family team on the mountain — Robin balances science and carpentry chaos."
+    },
+    {
+      "name": "Sebastian",
+      "note": "Worries about her stepson but gives him space in the basement."
+    }
+  ],
+  "trivia": [
+    "Every farm building you order from her counter is a chance to say hello and gift spaghetti."
+  ],
   "likes": [],
   "dislikes": [],
   "favoriteGifts": [],
-  "favoriteFoods": [],
-  "routines": [],
-  "relationships": [],
-  "trivia": [],
-  "tags": []
+  "favoriteFoods": []
 }

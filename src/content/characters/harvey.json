@@ -1,0 +1,117 @@
+{
+  "slug": "harvey",
+  "name": "Harvey",
+  "role": "Town Doctor",
+  "gameSlug": "stardew-valley",
+  "image": "/images/games/stardew-valley/characters/harvey.png",
+  "description": "Runs the clinic and worries about everyone’s health — including yours after a long day in the mines.",
+  "seo": {
+    "title": "Harvey — Town Doctor",
+    "description": "Runs the clinic and worries about everyone’s health — including yours after a long day in the mines."
+  },
+  "tags": [
+    "Marriage candidate"
+  ],
+  "stardew": {
+    "intro": "Pelican Town’s doctor. Gentle, anxious, and happiest when you show up for a check-up instead of collapsing in the mines.",
+    "villagerInfo": {
+      "birthday": "Winter 14",
+      "livesIn": "Pelican Town",
+      "address": "Harvey's Clinic",
+      "marriageCandidate": true
+    },
+    "gifts": {
+      "love": [
+        "Coffee",
+        "Pickles",
+        "Super Meal",
+        "Truffle Oil",
+        "Wine",
+        "Stardrop Tea"
+      ],
+      "like": [
+        "Chanterelle",
+        "Common Mushroom",
+        "Daffodil",
+        "Ginger",
+        "Hazelnut",
+        "Leek",
+        "Morel",
+        "Quartz",
+        "Snow Yam",
+        "Wild Horseradish",
+        "Winter Root"
+      ],
+      "dislike": [
+        "Clay",
+        "Holly"
+      ],
+      "hate": [
+        "Salmonberry",
+        "Spice Berry"
+      ]
+    },
+    "heartEvents": [
+      {
+        "hearts": 2,
+        "title": "Aerobics class",
+        "summary": "Walk into the clinic while he leads an aerobics session with Maru and Emily."
+      },
+      {
+        "hearts": 4,
+        "title": "Model planes",
+        "summary": "Visit his apartment — he shows off his radio-controlled plane collection."
+      },
+      {
+        "hearts": 6,
+        "title": "Balcony worry",
+        "summary": "He spots you working too hard and lectures you about rest on the clinic balcony."
+      },
+      {
+        "hearts": 8,
+        "title": "Radio confession",
+        "summary": "A late-night radio chat turns into Harvey admitting he is falling for you."
+      },
+      {
+        "hearts": 10,
+        "title": "Hot air balloon",
+        "summary": "He nervously invites you on a balloon ride above the valley."
+      }
+    ],
+    "sourceUrl": "https://stardewvalleywiki.com/Harvey"
+  },
+  "routines": [
+    {
+      "label": "Regular day",
+      "time": "8:00 AM – 4:00 PM",
+      "location": "Clinic (counter or exam room)"
+    },
+    {
+      "label": "Tuesday",
+      "time": "Morning",
+      "location": "Aerobics at clinic with Maru & Emily"
+    },
+    {
+      "label": "Friday",
+      "time": "Evening",
+      "location": "Stardrop Saloon"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Maru",
+      "note": "Works at the clinic as his nurse — professional and warm."
+    },
+    {
+      "name": "George",
+      "note": "Regular patient; Harvey worries about his mobility."
+    }
+  ],
+  "trivia": [
+    "Coffee from the Saloon is an easy early loved gift if you are saving crops for later hearts."
+  ],
+  "likes": [],
+  "dislikes": [],
+  "favoriteGifts": [],
+  "favoriteFoods": []
+}
