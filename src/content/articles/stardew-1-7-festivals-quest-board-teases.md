@@ -6,7 +6,7 @@ gameSlug: "stardew-valley"
 publishedAt: "2026-06-08"
 readTime: "5 min"
 featured: true
-coverImage: "/images/games/stardew-valley/card.jpg"
+coverImage: "/images/games/stardew-valley/cover.jpg"
 coverCaption: "Pelican Town still has room to grow — 1.7 is shaping up beyond new romance routes."
 seo:
   title: "Stardew Valley 1.7 — festivals & quest board teases"
@@ -23,7 +23,7 @@ Barone said he wants to **revisit festivals** so they remain engaging even after
 For cozy players who keep a decade-old save, that is arguably as meaningful as another heart event.
 
 <figure class="article-inline-figure">
-  <img src="/images/games/stardew-valley/cover.jpg" alt="Stardew Valley farm landscape at sunset" width="1200" height="675" loading="lazy" decoding="async" />
+  <img src="/images/games/stardew-valley/header.jpg" alt="Stardew Valley farm landscape at sunset" width="1200" height="675" loading="lazy" decoding="async" />
   <figcaption>Festivals anchor Pelican Town's rhythm — 1.7 may give veterans a reason to show up again.</figcaption>
 </figure>
 

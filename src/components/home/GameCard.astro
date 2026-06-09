@@ -2,8 +2,10 @@
 import type { Game } from '../../types';
 import { gameCardImagePath } from '../../utils/game-images';
 import { getGameCardAsset } from '../../data/game-assets';
+import { getGameCardDisplay } from '../../lib/game-card-display';
 import CozyImage from '../ui/CozyImage.astro';
 import { localePath, resolveLocale } from '../../i18n/locale';
+import { t } from '../../i18n/messages';
 import { t } from '../../i18n/messages';
 import Badge from '../ui/Badge.astro';
 import Icon from '../ui/Icon.astro';
@@ -22,10 +24,18 @@ const accentVariants = {
   honey: 'honey' as const,
 };
 
-const cardSrc = getGameCardAsset(game.slug) ?? gameCardImagePath(game.slug);
-const cardAlt = `${game.name} — cozy game hub on Mochileaf`;
+const cardDisplay = getGameCardDisplay(game.slug);
+const fallbackSrc = getGameCardAsset(game.slug) ?? gameCardImagePath(game.slug);
+const cardAlt = t('gameCard.alt', locale, { game: game.name });
 const hubHref =
   game.status === 'active' ? localePath(`/${game.slug}`, locale) : localePath('/games', locale);
+
+const isLayered = cardDisplay?.mode === 'layered';
+const singleDisplay = cardDisplay?.mode === 'single' ? cardDisplay : undefined;
+const cardSrc = singleDisplay?.src ?? fallbackSrc;
+const objectFit = singleDisplay?.objectFit ?? 'cover';
+const objectPosition = singleDisplay?.objectPosition ?? 'center center';
+const containBackground = singleDisplay?.containBackground ?? objectFit === 'contain';
 ---
 
 <a
@@ -37,18 +47,48 @@ const hubHref =
   ]}
   aria-disabled={game.status === 'coming-soon' ? true : undefined}
 >
-  <div class="game-card-media relative aspect-[16/10] overflow-hidden">
+  <div
+    class:list={[
+      'game-card-media relative aspect-[16/10] overflow-hidden',
+      containBackground && 'game-card-media--contain',
+    ]}
+  >
     {
-      cardSrc ? (
-        <div
-          class="h-full w-full origin-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105"
-        >
+      isLayered && cardDisplay.mode === 'layered' ? (
+        <div class="h-full w-full origin-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
+          <CozyImage
+            src={cardDisplay.background}
+            alt=""
+            width={640}
+            height={400}
+            class="game-card-image game-card-image--bg absolute inset-0 h-full w-full object-cover"
+            widths={[480, 640, 960]}
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            loading="lazy"
+            aria-hidden="true"
+          />
+          <div class="game-card-logo-overlay">
+            <CozyImage
+              src={cardDisplay.logo}
+              alt={cardDisplay.logoAlt ?? `${game.name} logo`}
+              width={480}
+              height={160}
+              class="game-card-logo-mark"
+              widths={[320, 480, 640]}
+              sizes="(min-width: 1024px) 28vw, 70vw"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      ) : cardSrc ? (
+        <div class="h-full w-full origin-center transition-transform duration-500 ease-out will-change-transform group-hover:scale-105">
           <CozyImage
             src={cardSrc}
             alt={cardAlt}
             width={640}
             height={400}
-            class="game-card-image h-full w-full object-cover"
+            class="game-card-image h-full w-full"
+            style={`object-fit: ${objectFit}; object-position: ${objectPosition};`}
             widths={[480, 640, 960]}
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             loading="lazy"

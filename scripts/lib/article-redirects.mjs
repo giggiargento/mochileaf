@@ -32,7 +32,7 @@ export function buildLegacyArticleRedirects() {
     const section = category === 'guide' ? 'guides' : 'news';
     const destination = `/${gameSlug}/${section}/${slug}/`;
 
-    for (const prefix of ['', '/es']) {
+    for (const prefix of ['']) {
       redirects[`${prefix}/articles/${slug}`] = { status: 301, destination: `${prefix}${destination}` };
       redirects[`${prefix}/articles/${slug}/`] = { status: 301, destination: `${prefix}${destination}` };
     }

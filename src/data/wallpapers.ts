@@ -7,19 +7,36 @@ const ROOT = process.cwd();
 
 export const PAYPAL_DONATE_URL = 'https://paypal.me/giggiargento';
 
-const gamesWithWallpapers = new Set(['neverness-to-everness']);
-
 const imagePattern = /\.(png|jpe?g|webp|avif)$/i;
 
+const timestampPattern = /^(\d{2})_(\d{2})_(\d{2})_(\d{2})_(\d{2})_(\d{2})/;
+
+function parseWallpaperTimestamp(filename: string): number {
+  const match = filename.match(timestampPattern);
+  if (!match) return 0;
+  const [, yy, mm, dd, hh, min, sec] = match;
+  return new Date(
+    2000 + Number(yy),
+    Number(mm) - 1,
+    Number(dd),
+    Number(hh),
+    Number(min),
+    Number(sec),
+  ).getTime();
+}
+
 function formatWallpaperTitle(filename: string, locale: Locale): string {
-  const match = filename.match(/^(\d{2})_(\d{2})_(\d{2})_/);
+  const match = filename.match(timestampPattern);
   if (!match) return filename.replace(/\.[^.]+$/, '');
-  const [, yy, mm, dd] = match;
-  const date = new Date(2000 + Number(yy), Number(mm) - 1, Number(dd));
-  return date.toLocaleDateString(locale === 'es' ? 'es-ES' : 'en-US', {
+
+  const [, yy, mm, dd, hh, min] = match;
+  const date = new Date(2000 + Number(yy), Number(mm) - 1, Number(dd), Number(hh), Number(min));
+  return date.toLocaleString('en-US', {
     month: 'short',
     day: 'numeric',
     year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
   });
 }
 
@@ -30,16 +47,13 @@ function downloadFilename(gameSlug: string, file: string): string {
 }
 
 export function getWallpapersByGame(gameSlug: string, locale: Locale = 'en'): Wallpaper[] {
-  if (!gamesWithWallpapers.has(gameSlug)) return [];
-
   const dir = path.join(ROOT, 'public', 'images', 'games', gameSlug, 'wallpapers');
   if (!fs.existsSync(dir)) return [];
 
   return fs
     .readdirSync(dir)
     .filter((file) => imagePattern.test(file))
-    .sort()
-    .reverse()
+    .sort((a, b) => parseWallpaperTimestamp(b) - parseWallpaperTimestamp(a))
     .map((file) => {
       const publicPath = `/images/games/${gameSlug}/wallpapers/${file}`;
       return {
@@ -55,4 +69,24 @@ export function getWallpapersByGame(gameSlug: string, locale: Locale = 'en'): Wa
 
 export function gameHasWallpapers(gameSlug: string): boolean {
   return getWallpapersByGame(gameSlug).length > 0;
+}
+
+/** i18n keys under page.* for wallpapers copy per game hub. */
+export function getWallpaperPageCopyKeys(gameSlug: string): {
+  description: string;
+  meta: string;
+  footer: string;
+} {
+  if (gameSlug === 'animal-crossing-new-horizons') {
+    return {
+      description: 'wallpapers.descriptionAcnh',
+      meta: 'wallpapers.metaAcnh',
+      footer: 'wallpapers.footerAcnh',
+    };
+  }
+  return {
+    description: 'wallpapers.description',
+    meta: 'wallpapers.meta',
+    footer: 'wallpapers.footer',
+  };
 }

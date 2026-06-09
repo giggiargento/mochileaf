@@ -10,11 +10,19 @@ export const updates: Update[] = [
     type: 'patch',
   },
   {
+    id: 'nte-3',
+    title: 'Bagel SNS — post, earn Praise Jam, and shop rewards in 1.1',
+    gameSlug: 'neverness-to-everness',
+    articleSlug: 'nte-bagel-sns-whats-baking',
+    date: '2026-06-09',
+    type: 'content',
+  },
+  {
     id: 'nte-2',
-    title: 'NTE 1.1 Dreamwalk Corridor launches June 3',
+    title: 'NTE 1.1 calendar — Chaos banner, outfits, and events through July 8',
     gameSlug: 'neverness-to-everness',
     articleSlug: 'nte-version-1-1-dreamwalk-corridor',
-    date: '2026-05-28',
+    date: '2026-06-08',
     type: 'patch',
   },
   {

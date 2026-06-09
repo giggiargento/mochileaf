@@ -9,6 +9,7 @@ import {
   localizeArticleSeo,
 } from '../i18n/content';
 import { renderMarkdownToHtml } from '../i18n/render-markdown';
+import { readArticleFrontmatterField } from './article-frontmatter';
 
 type ArticleEntry = CollectionEntry<'articles'>;
 
@@ -28,6 +29,11 @@ export function sortArticlesByDateDesc<T extends { publishedAt: string }>(articl
 }
 
 function entryToArticle(entry: ArticleEntry): Article {
+  const coverImage =
+    readArticleFrontmatterField(entry.id, 'coverImage') ?? entry.data.coverImage;
+  const coverCaption =
+    readArticleFrontmatterField(entry.id, 'coverCaption') ?? entry.data.coverCaption;
+
   return {
     slug: articleSlugFromId(entry.id),
     title: entry.data.title,
@@ -38,8 +44,8 @@ function entryToArticle(entry: ArticleEntry): Article {
     readTime: entry.data.readTime,
     featured: entry.data.featured,
     trending: entry.data.trending,
-    coverImage: entry.data.coverImage,
-    coverCaption: entry.data.coverCaption,
+    coverImage,
+    coverCaption,
   };
 }
 

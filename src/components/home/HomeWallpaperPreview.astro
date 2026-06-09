@@ -1,0 +1,60 @@
+---
+import type { Wallpaper } from '../../types';
+import ContentGrid from '../game/ContentGrid.astro';
+
+interface Props {
+  wallpapers: Wallpaper[];
+  slotCount?: number;
+}
+
+const { wallpapers, slotCount = 3 } = Astro.props;
+const visible = wallpapers.slice(0, Math.min(slotCount, wallpapers.length));
+const poolJson = JSON.stringify(wallpapers);
+---
+
+{
+  visible.length > 0 && (
+    <div class="home-wallpaper-preview" data-home-wallpaper-preview>
+      <ContentGrid columns={3}>
+        {visible.map((wallpaper, index) => (
+          <article
+            class="wallpaper-card cozy-card home-wallpaper-preview__slot"
+            data-wallpaper-slot
+            data-slug={wallpaper.slug}
+          >
+            <div class="wallpaper-card__frame aspect-video">
+              <div class="home-wallpaper-preview__stack" data-wallpaper-stack>
+                <img
+                  src={wallpaper.image}
+                  alt={wallpaper.title}
+                  width={640}
+                  height={360}
+                  class="wallpaper-card__img home-wallpaper-preview__layer is-visible"
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                  data-wallpaper-layer
+                />
+                <img
+                  src={wallpaper.image}
+                  alt=""
+                  width={640}
+                  height={360}
+                  class="wallpaper-card__img home-wallpaper-preview__layer"
+                  loading="lazy"
+                  decoding="async"
+                  data-wallpaper-layer
+                  aria-hidden="true"
+                />
+              </div>
+            </div>
+          </article>
+        ))}
+      </ContentGrid>
+      <script type="application/json" data-wallpaper-pool set:html={poolJson} />
+    </div>
+  )
+}
+
+<script>
+  import '../../scripts/home-wallpaper-preview.client.ts';
+</script>

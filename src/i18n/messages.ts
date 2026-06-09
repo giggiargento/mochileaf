@@ -1,18 +1,17 @@
 import en from './ui/en.json';
-import es from './ui/es.json';
-import { defaultLocale, type Locale } from './config';
-
-const catalogs: Record<Locale, Record<string, string>> = { en, es };
 
 export function t(
   key: string,
-  locale: Locale = defaultLocale,
+  _localeOrVars?: unknown,
   vars?: Record<string, string>,
 ): string {
-  const catalog = catalogs[locale] ?? catalogs[defaultLocale];
-  let text = catalog[key] ?? catalogs[defaultLocale][key] ?? key;
-  if (vars) {
-    for (const [name, value] of Object.entries(vars)) {
+  let v = vars;
+  if (_localeOrVars && typeof _localeOrVars === 'object') {
+    v = _localeOrVars as Record<string, string>;
+  }
+  let text = en[key as keyof typeof en] ?? key;
+  if (v) {
+    for (const [name, value] of Object.entries(v)) {
       text = text.replaceAll(`{${name}}`, value);
     }
   }

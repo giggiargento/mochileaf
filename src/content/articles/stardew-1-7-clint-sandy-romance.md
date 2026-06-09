@@ -6,7 +6,7 @@ gameSlug: "stardew-valley"
 publishedAt: "2026-05-28"
 readTime: "5 min"
 featured: true
-coverImage: "/images/games/stardew-valley/cover.jpg"
+coverImage: "/images/games/stardew-valley/Card.webp"
 coverCaption: "Pelican Town at golden hour — soon with two more neighbors to court."
 seo:
   title: "Stardew Valley 1.7 — Clint and Sandy Romance"

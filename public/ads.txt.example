@@ -1,3 +1,5 @@
-# Copy to public/ads.txt and replace pub-XXXXXXXXXXXXXXXX with your AdSense publisher ID.
-# AdSense → Account → Account information → Publisher ID (without "ca-" prefix in some UIs — use full ca-pub-… in the line below as Google documents).
+# Generated automatically — do not edit by hand.
+# Source: src/data/adsense.ts → npm run build (scripts/generate-ads-txt.mjs)
+# Live URL: https://mochileaf.com/ads.txt
+# Verify: npm run ads:verify
 google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

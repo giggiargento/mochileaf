@@ -22,7 +22,7 @@ const tours = getIslandToursByGame(game.slug);
 <GameHubLayout game={game} title={t('nav.islandTours', locale)} description={tr('island.meta', { game: game.name })}>
   <PageHeader title={tr('island.title')} description={tr('island.description')} />
   <div class="page-container-below-header">
-    <ContentGrid columns={2}>
+    <ContentGrid columns={3}>
       {tours.map((tour) => (
         <IslandTourCard tour={tour} />
       ))}

@@ -6,7 +6,7 @@ gameSlug: "stardew-valley"
 publishedAt: "2026-06-08"
 readTime: "8 min"
 featured: true
-coverImage: "/images/games/stardew-valley/card.jpg"
+coverImage: "/images/games/stardew-valley/header.jpg"
 coverCaption: "A new save in 2026 still begins with one watering can and nowhere to rush."
 seo:
   title: "Stardew Valley 2026 farm restart guide"

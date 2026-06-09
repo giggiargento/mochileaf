@@ -6,8 +6,8 @@ gameSlug: "neverness-to-everness"
 publishedAt: "2026-06-08"
 readTime: "8 min"
 featured: true
-coverImage: "/images/games/neverness-to-everness/news/dreamwalk-corridor-1-1.jpg"
-coverCaption: "Sunward Island arrives with version 1.1 — take the story slow before chasing 100% checklists."
+coverImage: "/images/games/neverness-to-everness/wallpapers/26_06_05_22_19_07.png"
+coverCaption: "Sunward Island after the Dreamwalk Corridor story beat — explore at your own pace."
 seo:
   title: "NTE Sunward Island cozy guide — post 1.1"
   description: "A calm first-visit route for Neverness to Everness Sunward Island: Dreamwalk story, Long Dream dailies, and Strange Tales without burnout."

@@ -6,7 +6,6 @@ import CharacterCard from '../../../components/game/CharacterCard.astro';
 import VillagerDirectory from '../../../components/game/acnh/VillagerDirectory.astro';
 import { games } from '../../../data/games';
 import { getCharactersByGame } from '../../../data/characters';
-import { getGame } from '../../../data/games';
 import { getHubCopy } from '../../../utils/game-hub';
 import { resolveLocale } from '../../../i18n/locale';
 import { t } from '../../../i18n/messages';
@@ -20,7 +19,6 @@ export function getStaticPaths() {
 const { game } = Astro.props;
 const locale = resolveLocale(Astro.currentLocale);
 const characters = getCharactersByGame(game.slug, locale);
-const localizedGame = getGame(game.slug, locale) ?? game;
 const hubCopy = getHubCopy(game, locale);
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
 ---
@@ -28,7 +26,7 @@ const isAcnh = game.slug === 'animal-crossing-new-horizons';
 <GameHubLayout
   game={game}
   title={hubCopy.charactersTitle}
-  description={`${hubCopy.charactersTitle} in ${localizedGame.name} — profiles and cozy summaries.`}
+  description={hubCopy.charactersDescription}
 >
   <PageHeader title={hubCopy.charactersTitle} description={hubCopy.charactersDescription} />
   <div class="page-container-below-header">

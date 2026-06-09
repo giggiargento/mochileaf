@@ -69,25 +69,11 @@ import { rehypeMarkdownImages } from './src/rehype/markdown-images.mjs';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://mochileaf.com',
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'es'],
-    routing: {
-      prefixDefaultLocale: false,
-    },
-  },
   markdown: {
     rehypePlugins: [rehypeRaw, rehypeMarkdownImages],
   },
   integrations: [
     sitemap({
-      i18n: {
-        defaultLocale: 'en',
-        locales: {
-          en: 'en-US',
-          es: 'es-ES',
-        },
-      },
       // Utility search UIs — thin pages, not useful in organic results.
       filter: (page) => !page.includes('/search'),
     }),

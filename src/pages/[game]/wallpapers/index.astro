@@ -5,7 +5,7 @@ import ContentGrid from '../../../components/game/ContentGrid.astro';
 import WallpaperCard from '../../../components/game/WallpaperCard.astro';
 import WallpapersDonateBanner from '../../../components/game/WallpapersDonateBanner.astro';
 import { games } from '../../../data/games';
-import { getWallpapersByGame } from '../../../data/wallpapers';
+import { getWallpapersByGame, getWallpaperPageCopyKeys } from '../../../data/wallpapers';
 import { usePageLocale } from '../../../lib/i18n/use-page-locale';
 import { t } from '../../../i18n/messages';
 
@@ -18,17 +18,18 @@ export function getStaticPaths() {
 const { game } = Astro.props;
 const { locale, tr } = usePageLocale(Astro.currentLocale);
 const wallpapers = getWallpapersByGame(game.slug, locale);
+const wallpaperCopy = getWallpaperPageCopyKeys(game.slug);
 const hubLabel = game.shortName ?? game.name;
 ---
 
 <GameHubLayout
   game={game}
   title={t('nav.wallpapers', locale)}
-  description={tr('wallpapers.meta', { game: game.name })}
+  description={tr(wallpaperCopy.meta, { game: game.name })}
 >
   <PageHeader
     title={tr('wallpapers.title')}
-    description={tr('wallpapers.description', { hub: hubLabel })}
+    description={tr(wallpaperCopy.description, { hub: hubLabel })}
   />
   <div class="page-container-below-header space-y-12">
     <ContentGrid columns={3}>
@@ -39,6 +40,6 @@ const hubLabel = game.shortName ?? game.name;
 
     <WallpapersDonateBanner />
 
-    <p class="max-w-2xl text-sm text-muted">{tr('wallpapers.footer')}</p>
+    <p class="max-w-2xl text-sm text-muted">{tr(wallpaperCopy.footer)}</p>
   </div>
 </GameHubLayout>

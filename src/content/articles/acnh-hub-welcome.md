@@ -5,6 +5,8 @@ category: "news"
 gameSlug: "animal-crossing-new-horizons"
 publishedAt: "2026-05-19"
 readTime: "2 min"
+coverImage: "/images/games/animal-crossing-new-horizons/inspiration/02-inspiration-2.jpg"
+coverCaption: "Your calm corner for villagers, decor inspiration, and island tours."
 seo:
   title: "ACNH Hub on Mochileaf"
   description: "Welcome to Mochileaf's Animal Crossing: New Horizons hub—villagers, decor inspiration, items, and cozy island tours."

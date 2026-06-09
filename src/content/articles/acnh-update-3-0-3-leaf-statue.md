@@ -7,8 +7,8 @@ publishedAt: "2026-05-28"
 readTime: "5 min"
 featured: true
 trending: true
-coverImage: "/images/games/animal-crossing-new-horizons/cover.jpg"
-coverCaption: "A calm island evening — the kind of scene worth decorating after a small patch."
+coverImage: "/images/games/animal-crossing-new-horizons/card.jpg"
+coverCaption: "Official box art — a gentle nudge to log in after a quiet patch."
 seo:
   title: "ACNH 3.0.3 — Anniversary Leaf Statue in Nook Shopping"
   description: "Animal Crossing New Horizons version 3.0.3 adds the 25th-anniversary leaf statue to Nook Shopping and small stability fixes—what changed in late April 2026."

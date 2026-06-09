@@ -1,6 +1,7 @@
 ---
 import CozyImage from '../ui/CozyImage.astro';
 import { gameLogoImagePath } from '../../utils/game-images';
+import { getGameHubLogo } from '../../lib/game-card-display';
 import type { Game } from '../../types';
 
 interface Props {
@@ -8,8 +9,12 @@ interface Props {
 }
 
 const { game } = Astro.props;
-const logoSrc = gameLogoImagePath(game.slug);
+const hubLogo = getGameHubLogo(game.slug);
+const logoSrc = hubLogo?.src ?? gameLogoImagePath(game.slug);
 const logoAlt = `${game.name} logo`;
+const logoStyle = hubLogo
+  ? `object-fit: ${hubLogo.objectFit ?? 'cover'}; object-position: ${hubLogo.objectPosition ?? 'center'};`
+  : undefined;
 ---
 
 <header class="animate-fade-in">
@@ -22,6 +27,7 @@ const logoAlt = `${game.name} logo`;
           width={92}
           height={92}
           class="game-hub-logo"
+          style={logoStyle}
           loading="eager"
           fetchpriority="high"
         />

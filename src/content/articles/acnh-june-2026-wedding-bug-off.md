@@ -6,7 +6,7 @@ gameSlug: "animal-crossing-new-horizons"
 publishedAt: "2026-06-08"
 readTime: "5 min"
 featured: true
-coverImage: "/images/games/animal-crossing-new-horizons/cover.jpg"
+coverImage: "/images/games/animal-crossing-new-horizons/inspiration/14-inspiration-14.jpg"
 coverCaption: "June on the island — wedding decor indoors, bugs in the plaza outdoors."
 seo:
   title: "ACNH June 2026 — Wedding Season & Bug-Off dates"
@@ -23,7 +23,7 @@ From **June 1 through June 30**, Reese and Cyrus return to **Harv's Island** for
 Decorate the room with wedding furniture, snap a photo, and earn **Heart Crystals** plus wedding-series items. Crystals trade with Cyrus for more decor — up to eight purchases per day. Better styling generally means more crystals, so treat it like a gentle daily creative prompt, not a min-max race.
 
 <figure class="article-inline-figure">
-  <img src="/images/games/animal-crossing-new-horizons/inspiration/14-inspiration-14.jpg" alt="Cozy decorated room in Animal Crossing New Horizons" width="1200" height="800" loading="lazy" decoding="async" />
+  <img src="/images/games/animal-crossing-new-horizons/inspiration/07-inspiration-7.jpg" alt="Bright outdoor plaza area in Animal Crossing New Horizons" width="1200" height="800" loading="lazy" decoding="async" />
   <figcaption>Wedding furniture mixes beautifully with cottage corners you may already have — Heart Crystals are the currency, not Bells.</figcaption>
 </figure>
 

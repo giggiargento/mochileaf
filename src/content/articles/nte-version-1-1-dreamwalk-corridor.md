@@ -1,62 +1,86 @@
 ---
-title: "NTE 1.1 Dreamwalk Corridor Arrives June 3"
-excerpt: "Sunward Island, two new characters, city mini-games, and a Porsche collaboration—Hotta Studio's next chapter opens early June 2026."
+title: "NTE 1.1 Calendar — Chaos Banner, Lacrimosa Outfits, and Events Through July 8"
+excerpt: "Sunward Island is open — here is what still matters in Dreamwalk Corridor: Chaos on June 24, Lacrimosa and Chaos outfit lines, Skin Perks, and the summer event stack."
 category: "news"
 gameSlug: "neverness-to-everness"
-publishedAt: "2026-05-28"
-readTime: "6 min"
+publishedAt: "2026-06-08"
+readTime: "7 min"
 featured: true
-trending: true
-coverImage: "/images/games/neverness-to-everness/news/dreamwalk-corridor-1-1.jpg"
-coverCaption: "Version 1.1 Dreamwalk Corridor — key art from Hotta Studio's May 2026 special program."
+coverImage: "/images/games/neverness-to-everness/cover.jpg"
+coverCaption: "The 1.1 window runs through July 8 — pace yourself around banners, outfits, and optional city modes."
 seo:
-  title: "Neverness to Everness 1.1 Dreamwalk Corridor — June 2026"
-  description: "NTE version 1.1 Dreamwalk Corridor launches June 3, 2026 with Lacrimosa, Chaos, Sunward Island, and new city activities—a calm overview for returning players."
+  title: "NTE 1.1 event calendar — Chaos, outfits, summer events"
+  description: "Neverness to Everness 1.1 after launch: Chaos banner June 24, Lacrimosa and Chaos outfit collections, Skin Perks, Ghost Train, Underground Circuit, and July 8 deadlines."
 ---
-Neverness to Everness is gearing up for its next major chapter. **Version 1.1**, titled **Dreamwalk Corridor**, is scheduled for **June 3, 2026**, according to Hotta Studio and Perfect World Games' recent special program and press coverage.
+**Dreamwalk Corridor** is live — maintenance wrapped June 3 and the summer patch cycle runs until **July 8**. If you already set foot on **Sunward Island**, this note is intentionally **not** another launch recap. It is the **what is still ahead** calendar: banners, wardrobe, and timed modes worth marking before the window closes.
 
-If you have been exploring Hethereau at your own pace, this update reads less like a spreadsheet patch and more like a **new neighborhood to stroll through**—new faces, new hangouts, and a sunnier map to photograph.
+For island pacing, use our [Sunward Island cozy guide](/neverness-to-everness/guides/nte-sunward-island-cozy-guide). For Bagel SNS and creator rewards, see [Bagel SNS in 1.1](/neverness-to-everness/news/nte-bagel-sns-whats-baking).
 
-## New story and places
+## Chaos arrives June 24 — second banner, no overlap
 
-The update continues the Dreamwalk storyline and adds **Sunward Island**, a summery area tied to new anomaly content—including a location called the **Corridor of Echoes**, which preview footage suggests will feel more dreamlike than your usual commission route.
+**Lacrimosa** (Chaos element) occupies the **Fading Reverie** board through **June 24, 05:59 UTC+8**, paired with the **Nocturne Special** arc banner.
 
-That combination—bright tourism vibes plus surreal combat spaces—is very on-brand for NTE's urban fantasy mood.
+**Chaos** (Lakshana element) — NTE's first limited **male** S-rank on a dedicated board — opens **June 24** on **Forsaken Path** through **July 8**. Preview material highlights teleport mobility plus scythe-and-gun hybrid combat; exact role labels may firm up once the banner is playable.
 
-## Two new playable characters
+The two limited boards **do not overlap**, which is good news for casual pull budgets: you can finish Lacrimosa's window before Chaos arrives, or skip both and still enjoy story content.
 
-Two S-rank characters headline the banners across June:
+<figure class="article-inline-figure">
+  <img src="/images/games/neverness-to-everness/icons/Chaos.webp" alt="Chaos element icon in Neverness to Everness" width="256" height="256" loading="lazy" decoding="async" />
+  <figcaption>Chaos (Lakshana) headlines the second half of 1.1 — we will add character notes on Mochileaf once his kit is live in-game.</figcaption>
+</figure>
 
-**Lacrimosa** (Chaos element) appears first, with preview material showing nightmare-themed mechanics and versatile skill expression. **Chaos** (Lakshana element) follows later in the month on a separate banner window.
+## Outfit lines — Lacrimosa and Chaos wardrobes
 
-Exact banner dates have been communicated as roughly **June 3–24** and **June 24–July 8** in official summaries—worth double-checking in-game once maintenance ends, since schedules can shift by region.
+Version 1.1 expands fashion alongside combat. Official previews and event pages describe **Skin Perks** running alongside the limited boards — outfits can drop from pulls with a **pity guarantee** at a set threshold (confirm exact numbers in-game before spending).
 
-## City life gets louder—in a fun way
+### Lacrimosa — five outfits teased for 1.1
 
-Beyond combat, 1.1 expands everyday Hethereau activities:
+Community-facing names from Hotta's preview program include:
 
-- **Fight Club** and related hangout content previewed like street-level set pieces  
-- **Underground Circuit**, a six-player racing mode with random vehicles and weaponized bumper chaos  
-- Side jobs and social systems teased during the stream (including Bagel SNS and new apartment-style housing such as **Pegasus Residence**)
+- **Yesterday's Melody**
+- **Nightingale's Crescendo**
+- **Gilded Rhapsody**
+- **Piano Key Sonatina**
+- **New Moon Lullaby**
 
-If you enjoy NTE as a **lifestyle sim with fights**, this update seems aimed squarely at you.
+Tomato-metal aesthetics aside, they give collectors a reason to stay engaged after the banner ends — pick one signature look instead of chasing the full set if crystals are tight.
 
-## Porsche collaboration
+### Chaos — two outfits at launch window
 
-A licensed **Porsche 918 Spyder** arrives as a drivable vehicle, with collaboration outfits and a themed property. Preview materials describe limited-time acquisition through the game's usual pull currencies, with player choice between currencies—treat exact costs and rates as in-game facts once the event is live.
+- **Clear Skies**
+- **Never Skip**
 
-## More places to play
+If you only want one cosmetic statement piece for the summer arc, waiting until Chaos's board opens avoids splitting budget across two S-ranks *and* two wardrobe lines in the same week.
 
-The same announcements mention wider distribution: **Epic Games Store**, **Samsung Galaxy Store**, **NVIDIA GeForce NOW**, and a **Steam** release targeted around **July 2026** in official store listings.
+<figure class="article-inline-figure">
+  <img src="/images/games/neverness-to-everness/characters/lacrimosa.webp" alt="Lacrimosa character portrait in Neverness to Everness" width="512" height="512" loading="lazy" decoding="async" />
+  <figcaption>Lacrimosa's outfit collection is the deeper wardrobe this patch — our build notes live on her character page when you are ready to theory-craft.</figcaption>
+</figure>
 
-That does not change how cozy your current squad feels—it simply means friends on other platforms may finally join your city walks.
+## Events still on the clock (June 3 – July 8)
 
-## How to approach 1.1 without burnout
+Several modes share the long 1.1 window:
 
-- Finish dailies and story chapters you already enjoy before chasing every new mini-game.  
-- Pick **one** new character to learn if banners tempt you—Lacrimosa or Chaos, not both on day one.  
-- Treat Porsche and racing modes as optional flavor, not homework.
+| Event | Vibe | Cozy note |
+| --- | --- | --- |
+| **The Long Dream** | Daily Lacrimosa world encounters | Eight stops total — fine to miss a day |
+| **Sunward Travelogue** | Strange Tales progress rewards | Pairs with the island guide above |
+| **Underground Circuit** | Six-player vehicular brawl | Optional chaos — great for clips, not homework |
+| **What's Baking** | Bagel creator push | See our [Bagel SNS post](/neverness-to-everness/news/nte-bagel-sns-whats-baking) |
+| **Beyond the Rails: Uncharted Circle** | Ghost Train anomaly metro | Follow the passenger manual — intentionally weird |
 
-We will refresh character notes on Mochileaf once Lacrimosa and Chaos are playable and we have had time to explore Sunward Island properly.
+Shorter windows worth penciling in:
 
-*Release timing and banner windows based on developer broadcasts and press coverage from May 2026. Always verify dates in-game after maintenance.*
+- **Fons Rush** — June 8–15 (double hobby Fons with a stamina cap)  
+- **Hunter's Crucible** — June 18 – July 8  
+- **Debt Collector** — new Anomaly Pilgrimage after the **Danger at home, return** quest chain  
+
+## Collaboration and platforms — optional footnotes
+
+The **Porsche 918 Spyder** collab, **Pegasus Residence** property, and wider store launches (Steam, Epic, Galaxy, GeForce NOW) still belong to 1.1 — treat them as **flavor goals**, not prerequisites for enjoying Chaos or Sunward story beats.
+
+## One-line pacing advice
+
+Pick **one** chase for the remaining patch weeks: **Chaos pulls**, **Lacrimosa outfits**, **Bagel creator rewards**, or **story/collectibles**. The July 8 end date is real; burnout is optional.
+
+*Banner times UTC+8 per official summaries (May–June 2026). Outfits and pity rules may receive hotfixes — verify before spending.*

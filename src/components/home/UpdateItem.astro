@@ -5,6 +5,7 @@ import { getGame } from '../../data/games';
 import { getArticleHref } from '../../utils/article-routes';
 import { getGameDisplayName } from '../../utils/game-display';
 import { localePath, resolveLocale } from '../../i18n/locale';
+import { t } from '../../i18n/messages';
 import Icon from '../ui/Icon.astro';
 
 interface Props {
@@ -19,20 +20,16 @@ const articles = await loadArticles(locale);
 let href = update.gameSlug
   ? localePath(`/${update.gameSlug}/news`, locale)
   : localePath('/articles', locale);
-if (update.articleSlug && update.gameSlug) {
-  const article = articles.find(
-    (a) => a.slug === update.articleSlug && a.gameSlug === update.gameSlug,
-  );
-  if (article) href = getArticleHref(article, locale);
-}
-const gameHref = game ? localePath(`/${game.slug}`, locale) : undefined;
 
-const typeLabels: Record<Update['type'], string> = {
-  patch: 'Patch',
-  event: 'Event',
-  content: 'New content',
-  community: 'Community',
-};
+const linkedArticle =
+  update.articleSlug && update.gameSlug
+    ? articles.find((a) => a.slug === update.articleSlug && a.gameSlug === update.gameSlug)
+    : undefined;
+
+if (linkedArticle) href = getArticleHref(linkedArticle, locale);
+
+const gameHref = game ? localePath(`/${game.slug}`, locale) : undefined;
+const displayTitle = linkedArticle?.title ?? update.title;
 
 const typeIcons: Record<Update['type'], string> = {
   patch: 'cloud',
@@ -40,6 +37,8 @@ const typeIcons: Record<Update['type'], string> = {
   content: 'book-open',
   community: 'users-three',
 };
+
+const dateLocale = 'en-US';
 ---
 
 <li class="flex gap-4 py-4">
@@ -50,14 +49,16 @@ const typeIcons: Record<Update['type'], string> = {
     <Icon name={typeIcons[update.type]} size={20} weight="regular" />
   </div>
   <div class="min-w-0 flex-1">
-    <p class="text-xs font-medium uppercase tracking-wide text-accent">{typeLabels[update.type]}</p>
+    <p class="text-xs font-medium uppercase tracking-wide text-accent">
+      {t(`update.type.${update.type}`, locale)}
+    </p>
     <h3 class="mt-0.5 font-medium leading-snug">
       <a
         href={href}
         class="cozy-link no-underline hover:underline"
         {...(update.articleSlug ? { 'data-astro-reload': true } : {})}
       >
-        {update.title}
+        {displayTitle}
       </a>
     </h3>
     <p class="mt-1 text-sm text-muted">
@@ -72,7 +73,7 @@ const typeIcons: Record<Update['type'], string> = {
         ) : null
       }
       <time datetime={update.date}>
-        {new Date(update.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+        {new Date(update.date).toLocaleDateString(dateLocale, { month: 'short', day: 'numeric' })}
       </time>
     </p>
   </div>

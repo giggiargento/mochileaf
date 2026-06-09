@@ -14,13 +14,12 @@ import { updates } from '../data/updates';
 import { localePath, resolveLocale } from '../i18n/locale';
 import { t } from '../i18n/messages';
 import { getWallpapersByGame } from '../data/wallpapers';
-import WallpaperCard from '../components/game/WallpaperCard.astro';
-import ContentGrid from '../components/game/ContentGrid.astro';
+import HomeWallpaperPreview from '../components/home/HomeWallpaperPreview.astro';
 
 const locale = resolveLocale(Astro.currentLocale);
 const featuredGames = getFeaturedGames(locale);
-const nteWallpaperPreview = getWallpapersByGame('neverness-to-everness', locale).slice(0, 3);
-const nteWallpapersHref = localePath('/neverness-to-everness/wallpapers', locale);
+const acnhWallpapers = getWallpapersByGame('animal-crossing-new-horizons', locale);
+const acnhWallpapersHref = localePath('/animal-crossing-new-horizons/wallpapers', locale);
 const allArticles = await loadArticles(locale);
 const featuredArticles = sortArticlesByDateDesc(
   allArticles.filter((a) => a.gameSlug && isNewsCategory(a.category) && a.featured),
@@ -46,19 +45,15 @@ const trendingArticles = sortArticlesByDateDesc(
   </section>
 
   {
-    nteWallpaperPreview.length > 0 && (
+    acnhWallpapers.length > 0 && (
       <section class="page-container py-16 border-t border-default">
         <SectionHeader
           title={t('home.section.wallpapers', locale)}
           subtitle={t('home.section.wallpapersSub', locale)}
-          href={nteWallpapersHref}
+          href={acnhWallpapersHref}
           linkLabel={t('home.section.allWallpapers', locale)}
         />
-        <ContentGrid columns={3}>
-          {nteWallpaperPreview.map((wallpaper) => (
-            <WallpaperCard wallpaper={wallpaper} />
-          ))}
-        </ContentGrid>
+        <HomeWallpaperPreview wallpapers={acnhWallpapers} />
       </section>
     )
   }

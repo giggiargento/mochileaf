@@ -308,6 +308,36 @@ html.dark {
     object-position: center;
   }
 
+  .game-card-media--contain {
+    background-color: var(--bg-muted);
+  }
+
+  .game-card-logo-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    pointer-events: none;
+  }
+
+  .game-card-logo-mark {
+    display: block;
+    width: min(58%, 12.5rem);
+    aspect-ratio: 5 / 3;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+    object-position: center top;
+    filter: drop-shadow(0 3px 14px rgb(20 19 18 / 0.38));
+  }
+
+  .game-card-image--bg {
+    z-index: 0;
+  }
+
   .cozy-link {
     color: var(--text-accent);
     @apply transition-colors underline-offset-4 hover:underline;
@@ -1645,6 +1675,59 @@ html.dark {
     transition: none;
     transform: none;
   }
+}
+
+.home-wallpaper-preview__stack {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+
+.home-wallpaper-preview__layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity var(--home-wallpaper-crossfade-duration, 1.2s) ease-in-out;
+}
+
+.home-wallpaper-preview__layer.is-visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.home-wallpaper-preview__slot.is-crossfading .home-wallpaper-preview__layer.is-fading-in {
+  opacity: 1;
+  z-index: 2;
+}
+
+.home-wallpaper-preview__slot.is-crossfading .home-wallpaper-preview__layer.is-fading-out {
+  opacity: 0;
+  z-index: 1;
+}
+
+.home-wallpaper-preview__slot:hover .home-wallpaper-preview__stack {
+  transform: scale(1.05);
+}
+
+.home-wallpaper-preview__slot .wallpaper-card__img {
+  transform: none;
+  will-change: opacity;
+}
+
+.home-wallpaper-preview__slot:hover .wallpaper-card__img {
+  transform: none;
+}
+
+.home-wallpaper-preview__slot .wallpaper-card__frame {
+  background-color: var(--bg-muted);
 }
 
 /* NTE Arc catalog */

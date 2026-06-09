@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const PUBLIC_GAMES = path.join(process.cwd(), 'public', 'images', 'games');
 
-const CARD_FILES = ['card.jpg', 'cover.jpg', 'header.jpg', 'header.png'] as const;
+const CARD_FILES = ['card.webp', 'Card.webp', 'card.jpg', 'cover.jpg', 'header.jpg', 'header.png'] as const;
 
 const COVER_FILES = ['cover.jpg', 'header.jpg', 'card.jpg', 'header.png'] as const;
 
@@ -14,6 +14,7 @@ const LOGO_FILES = [
   'icon.webp',
   'icon.png',
   'icon.jpg',
+  'Card.webp',
   'card.webp',
   'card.jpg',
 ] as const;

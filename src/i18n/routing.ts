@@ -1,21 +1,16 @@
 import { defaultLocale, type Locale } from './config';
 
-/** Strip `/es` prefix for path matching (nav active state, etc.). */
+/** Path without legacy `/es` prefix (English-only). */
 export function stripLocalePrefix(pathname: string): string {
   if (pathname === '/es' || pathname === '/es/') return '/';
   if (pathname.startsWith('/es/')) return pathname.slice(3) || '/';
   return pathname;
 }
 
-export function getLocaleFromPath(pathname: string): Locale {
-  if (pathname === '/es' || pathname.startsWith('/es/')) return 'es';
+export function getLocaleFromPath(_pathname: string): Locale {
   return defaultLocale;
 }
 
-/** Prefix path for locale (`en` stays unprefixed). */
-export function pathForLocale(path: string, locale: Locale): string {
-  const normalized = path.replace(/\/$/, '') || '/';
-  if (locale === defaultLocale) return normalized;
-  if (normalized === '/') return '/es';
-  return `/es${normalized}`;
+export function pathForLocale(path: string, _locale?: Locale): string {
+  return path.replace(/\/$/, '') || '/';
 }

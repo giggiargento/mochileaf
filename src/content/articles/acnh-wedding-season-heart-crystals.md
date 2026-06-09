@@ -6,7 +6,7 @@ gameSlug: "animal-crossing-new-horizons"
 publishedAt: "2026-06-08"
 readTime: "7 min"
 featured: true
-coverImage: "/images/games/animal-crossing-new-horizons/cover.jpg"
+coverImage: "/images/games/animal-crossing-new-horizons/inspiration/06-cozy-bedroom-with-a-reading-nook-acnh-ac.jpg"
 coverCaption: "Reese and Cyrus return every June — a little styling patience goes a long way."
 seo:
   title: "ACNH Wedding Season guide — Heart Crystals"
@@ -39,7 +39,7 @@ Practical tips that stay cozy:
 - Repeat the shoot daily even if you only earn the minimum — June has **30** days, not 30 perfect rooms.
 
 <figure class="article-inline-figure">
-  <img src="/images/games/animal-crossing-new-horizons/inspiration/06-cozy-bedroom-with-a-reading-nook-acnh-ac.jpg" alt="Soft pink and white cozy room decor in Animal Crossing" width="1200" height="800" loading="lazy" decoding="async" />
+  <img src="/images/games/animal-crossing-new-horizons/inspiration/05-inspiration-5.jpg" alt="Soft pastel wedding-style room decor in Animal Crossing" width="1200" height="800" loading="lazy" decoding="async" />
   <figcaption>Pastel rooms you already love can become wedding sets with a few Cyrus pieces.</figcaption>
 </figure>
 

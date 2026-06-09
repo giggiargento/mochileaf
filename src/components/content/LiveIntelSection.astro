@@ -14,7 +14,7 @@ const updatedAt = getLiveUpdatedAt();
 if (feeds.length === 0) return null;
 
 const formattedDate = updatedAt
-  ? new Date(updatedAt).toLocaleString(locale === 'es' ? 'es' : 'en-US', {
+  ? new Date(updatedAt).toLocaleString('en-US', {
       dateStyle: 'medium',
       timeStyle: 'short',
     })

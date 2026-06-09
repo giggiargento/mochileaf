@@ -13,7 +13,7 @@ import LiveIntelSection from '../../components/content/LiveIntelSection.astro';
 import GameHubHero from '../../components/game/GameHubHero.astro';
 import { getLiveFeedsForGame } from '../../utils/live-content';
 import { usePageLocale } from '../../lib/i18n/use-page-locale';
-import { getWallpapersByGame } from '../../data/wallpapers';
+import { getWallpapersByGame, getWallpaperPageCopyKeys, gameHasWallpapers } from '../../data/wallpapers';
 import WallpaperCard from '../../components/game/WallpaperCard.astro';
 
 export function getStaticPaths() {
@@ -30,7 +30,7 @@ const hubBase = hub(game.slug);
 const isAcnh = game.slug === 'animal-crossing-new-horizons';
 const featuredCount =
   game.slug === 'neverness-to-everness' || isAcnh ? 6 : 3;
-let characters = getCharactersByGame(game.slug);
+let characters = getCharactersByGame(game.slug, locale);
 if (game.slug === 'neverness-to-everness') {
   characters = [...characters].sort((a, b) => {
     if (a.slug === 'lacrimosa') return -1;
@@ -44,8 +44,8 @@ const hubArticles = sortArticlesByDateDesc([
   ...(await getGuidesByGame(game.slug, locale)),
 ]).slice(0, 2);
 const liveFeeds = getLiveFeedsForGame(game.slug);
-const nteWallpapers =
-  game.slug === 'neverness-to-everness' ? getWallpapersByGame(game.slug, locale).slice(0, 3) : [];
+const featuredWallpapers = getWallpapersByGame(game.slug, locale).slice(0, 3);
+const wallpaperCopy = getWallpaperPageCopyKeys(game.slug);
 ---
 
 <GameHubLayout game={game} title={tr('hub.home')}>
@@ -83,12 +83,15 @@ const nteWallpapers =
   </section>
 
   {
-    nteWallpapers.length > 0 && (
+    featuredWallpapers.length > 0 && (
       <section class="pb-12 border-t border-default">
-        <PageHeader title={tr('wallpapers.title')} description={tr('wallpapers.description', { hub: game.shortName ?? 'NTE' })} />
+        <PageHeader
+          title={tr('wallpapers.title')}
+          description={tr(wallpaperCopy.description, { hub: game.shortName ?? game.name })}
+        />
         <div class="page-container pt-8 pb-0">
           <ContentGrid columns={3}>
-            {nteWallpapers.map((wallpaper) => (
+            {featuredWallpapers.map((wallpaper) => (
               <WallpaperCard wallpaper={wallpaper} />
             ))}
           </ContentGrid>
@@ -122,14 +125,16 @@ const nteWallpapers =
         </a>
         {
           game.slug === 'neverness-to-everness' && (
-            <>
-              <a href={`${hubBase}/teams`} class="cozy-link">
-                {tr('hub.teamComps')}
-              </a>
-              <a href={`${hubBase}/wallpapers`} class="cozy-link">
-                {tr('hub.wallpapers')}
-              </a>
-            </>
+            <a href={`${hubBase}/teams`} class="cozy-link">
+              {tr('hub.teamComps')}
+            </a>
+          )
+        }
+        {
+          (game.slug === 'neverness-to-everness' || gameHasWallpapers(game.slug)) && (
+            <a href={`${hubBase}/wallpapers`} class="cozy-link">
+              {tr('hub.wallpapers')}
+            </a>
           )
         }
         {

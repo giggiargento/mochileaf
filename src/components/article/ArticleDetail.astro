@@ -31,7 +31,7 @@ const gameHref = game ? pathForLocale(`/${game.slug}`, locale) : undefined;
 <article class="article-column mt-8">
   <p class="text-sm text-muted mb-8">
     {article.readTime} ·{' '}
-    {new Date(article.publishedAt).toLocaleDateString(locale === 'es' ? 'es' : 'en-US', {
+    {new Date(article.publishedAt).toLocaleDateString('en-US', {
       dateStyle: 'long',
     })}
     {game && (

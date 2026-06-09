@@ -1,8 +1,6 @@
 # build output
 dist/
 
-# Generated Spanish route mirrors (scripts/generate-es-pages.mjs)
-src/pages/es/
 # generated types
 .astro/
 

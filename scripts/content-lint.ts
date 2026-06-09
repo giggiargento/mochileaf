@@ -88,6 +88,14 @@ lintCollection(
 );
 
 const articlesDir = join(contentRoot, 'articles');
+/** @type {{ id: string; gameSlug?: string; coverImage?: string; body: string }[]} */
+const parsedArticles: {
+  id: string;
+  gameSlug?: string;
+  coverImage?: string;
+  body: string;
+}[] = [];
+
 for (const file of readdirSync(articlesDir).filter((f) => f.endsWith('.md'))) {
   const id = file.replace(/\.md$/, '');
   const raw = readFileSync(join(articlesDir, file), 'utf8');
@@ -112,6 +120,46 @@ for (const file of readdirSync(articlesDir).filter((f) => f.endsWith('.md'))) {
     warnings.push({
       level: 'warn',
       message: `[articles] ${id} — TODO in ${todo.field}`,
+    });
+  }
+
+  const body = raw.slice(match[0].length);
+  parsedArticles.push({
+    id,
+    gameSlug: result.data.gameSlug,
+    coverImage: result.data.coverImage,
+    body,
+  });
+}
+
+/** Warn when two hub articles share the same coverImage (card grids look duplicated). */
+const coverByGame = new Map<string, Map<string, string[]>>();
+for (const article of parsedArticles) {
+  if (!article.gameSlug || !article.coverImage) continue;
+  if (!coverByGame.has(article.gameSlug)) coverByGame.set(article.gameSlug, new Map());
+  const byCover = coverByGame.get(article.gameSlug)!;
+  const list = byCover.get(article.coverImage) ?? [];
+  list.push(article.id);
+  byCover.set(article.coverImage, list);
+}
+for (const [gameSlug, byCover] of coverByGame) {
+  for (const [coverImage, ids] of byCover) {
+    if (ids.length < 2) continue;
+    warnings.push({
+      level: 'warn',
+      message: `[articles] duplicate coverImage for ${gameSlug}: ${coverImage} used by ${ids.join(', ')}`,
+    });
+  }
+}
+
+/** Warn when hero cover repeats as an inline <img> in the same article. */
+for (const article of parsedArticles) {
+  if (!article.coverImage) continue;
+  const inlineImages = [...article.body.matchAll(/<img[^>]+src=["']([^"']+)["']/g)].map((m) => m[1]);
+  if (inlineImages.includes(article.coverImage)) {
+    warnings.push({
+      level: 'warn',
+      message: `[articles] ${article.id}: coverImage also used inline in body (${article.coverImage})`,
     });
   }
 }

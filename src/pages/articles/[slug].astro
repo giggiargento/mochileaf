@@ -42,8 +42,8 @@ const seo = articleSeoForLocale(entry, article, locale);
     <ArticleDetail
       article={article}
       locale={locale}
-      coverImage={entry.data.coverImage}
-      coverCaption={article.coverCaption ?? entry.data.coverCaption}
+      coverImage={article.coverImage}
+      coverCaption={article.coverCaption}
     >
       {
         html ? (

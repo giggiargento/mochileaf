@@ -70,7 +70,7 @@ const categoryVariants: Record<Article['category'], 'default' | 'sage' | 'mist' 
     ]}
   >
     <time datetime={article.publishedAt}>
-      {new Date(article.publishedAt).toLocaleDateString(locale === 'es' ? 'es' : 'en-US', {
+      {new Date(article.publishedAt).toLocaleDateString('en-US', {
         month: 'short',
         day: 'numeric',
         year: 'numeric',

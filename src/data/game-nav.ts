@@ -32,6 +32,7 @@ const navBySlug: Record<string, NavSection[]> = {
     { labelKey: 'nav.homes', path: 'houses', icon: 'armchair' },
     { labelKey: 'nav.items', path: 'items', icon: 'package' },
     { labelKey: 'nav.islandTours', path: 'island-tours', icon: 'television' },
+    { labelKey: 'nav.wallpapers', path: 'wallpapers', icon: 'image' },
     { labelKey: 'nav.guides', path: 'guides', icon: 'book-open' },
     { labelKey: 'nav.news', path: 'news', icon: 'newspaper' },
     { labelKey: 'nav.about', path: 'about', icon: 'info' },

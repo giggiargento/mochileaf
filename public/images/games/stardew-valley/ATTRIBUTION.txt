@@ -5,6 +5,9 @@ Steam store art (cover.jpg, card.jpg, header.jpg)
   https://store.steampowered.com/app/413150/
   Used for promotional context on this fan hub.
 
+Card.webp — home / games hub card cover (custom layout, Canva export)
+  Used on Mochileaf game cards only.
+
 Mod card covers (mods/*)
   Nexus Mods headers/thumbnails and mod-author previews where noted.
   Sea Breeze farmhouse/cellar cards use Sea Breeze Farm Map previews (same author) until dedicated headers are synced.
