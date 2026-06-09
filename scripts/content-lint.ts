@@ -2,7 +2,7 @@
  * Validates Mochileaf content JSON/Markdown without a full site build.
  * Run: npm run content:lint
  */
-import { readdirSync, readFileSync } from 'node:fs';
+import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse as parseYaml } from 'yaml';
@@ -19,6 +19,42 @@ type LintIssue = { level: 'error' | 'warn'; message: string };
 
 const errors: LintIssue[] = [];
 const warnings: LintIssue[] = [];
+
+/** ads.txt must exist locally and match src/data/adsense.ts (AdSense authorization). */
+function lintAdsTxt() {
+  const adsenseTs = join(root, 'src', 'data', 'adsense.ts');
+  const adsTxt = join(root, 'public', 'ads.txt');
+  const GOOGLE_ADS_CERT = 'f08c47fec0942fa0';
+
+  if (!existsSync(adsTxt)) {
+    errors.push({
+      level: 'error',
+      message: '[ads.txt] missing public/ads.txt — run npm run dev or node scripts/generate-ads-txt.mjs',
+    });
+    return;
+  }
+
+  const source = readFileSync(adsenseTs, 'utf8');
+  const match = source.match(/ADSENSE_CLIENT\s*=\s*['"]([^'"]+)['"]/);
+  if (!match) {
+    errors.push({ level: 'error', message: '[ads.txt] ADSENSE_CLIENT not found in src/data/adsense.ts' });
+    return;
+  }
+
+  const client = match[1].trim();
+  const publisherId = client.startsWith('ca-pub-') ? client.replace(/^ca-pub-/, 'pub-') : client;
+  const expected = `google.com, ${publisherId}, DIRECT, ${GOOGLE_ADS_CERT}`;
+  const actual = readFileSync(adsTxt, 'utf8').trim();
+
+  if (actual !== expected) {
+    errors.push({
+      level: 'error',
+      message: `[ads.txt] stale public/ads.txt — run node scripts/generate-ads-txt.mjs (expected: ${expected})`,
+    });
+  }
+}
+
+lintAdsTxt();
 
 function readJsonDir(dir: string): { id: string; data: unknown }[] {
   const abs = join(contentRoot, dir);
@@ -145,8 +181,8 @@ for (const article of parsedArticles) {
 for (const [gameSlug, byCover] of coverByGame) {
   for (const [coverImage, ids] of byCover) {
     if (ids.length < 2) continue;
-    warnings.push({
-      level: 'warn',
+    errors.push({
+      level: 'error',
       message: `[articles] duplicate coverImage for ${gameSlug}: ${coverImage} used by ${ids.join(', ')}`,
     });
   }
@@ -157,8 +193,8 @@ for (const article of parsedArticles) {
   if (!article.coverImage) continue;
   const inlineImages = [...article.body.matchAll(/<img[^>]+src=["']([^"']+)["']/g)].map((m) => m[1]);
   if (inlineImages.includes(article.coverImage)) {
-    warnings.push({
-      level: 'warn',
+    errors.push({
+      level: 'error',
       message: `[articles] ${article.id}: coverImage also used inline in body (${article.coverImage})`,
     });
   }

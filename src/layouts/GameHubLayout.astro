@@ -17,16 +17,17 @@ interface Props {
   game: Game;
   title: string;
   description?: string;
+  noIndex?: boolean;
 }
 
-const { game, title, description } = Astro.props;
+const { game, title, description, noIndex = false } = Astro.props;
 const locale = (Astro.currentLocale ?? 'en') as Locale;
 const navItems = getGameNav(game, locale);
 const pageDescription = description ?? game.description;
 const hubTitle = game.shortName ?? game.name;
 ---
 
-<BaseLayout title={`${game.name} — ${title}`} description={pageDescription} ambient="game">
+<BaseLayout title={`${game.name} — ${title}`} description={pageDescription} ambient="game" noIndex={noIndex}>
   <Sidebar
     title={hubTitle}
     items={navItems}

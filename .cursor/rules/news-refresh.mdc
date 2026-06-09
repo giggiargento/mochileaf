@@ -24,11 +24,12 @@ When the user asks to complete/update **news** articles (e.g. "nuevas noticias",
 
 ## Images
 
-- Put assets under `public/images/games/{game-slug}/` (often `news/`).
-- Prefer `coverImage` on the article; add `<figure class="article-inline-figure">` in body when useful.
-- Reuse existing hub images when no safe new download; otherwise fetch official/promotional art and note source in caption or footer.
+- Put assets under `public/images/games/{game-slug}/` (often `news/` or `inspiration/`).
+- **Every news article needs a unique `coverImage`** within its `gameSlug` — never reuse `cover.jpg` / `header.jpg` across multiple cards (they are often the same asset).
+- Inline body images must differ from the hero `coverImage`.
+- Add `<figure class="article-inline-figure">` when useful; note source in caption or footer when not original.
 
 ## Verify
 
-- Run `npm run content:lint` (or `npm run build` if needed).
+- Run `npm run content:lint` — duplicate or hero=inline covers **fail** the lint.
 - Do not commit unless the user asks.

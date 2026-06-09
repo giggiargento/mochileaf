@@ -15,7 +15,7 @@ const { game } = Astro.props;
 const { locale, tr, hub } = usePageLocale(Astro.currentLocale);
 ---
 
-<GameHubLayout game={game} title={t('nav.search', locale)}>
+<GameHubLayout game={game} title={t('nav.search', locale)} noIndex>
   <PageHeader title={tr('search.title')} description={tr('search.description', { game: game.name })} />
   <div class="page-container-below-header">
     <form

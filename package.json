@@ -29,6 +29,7 @@
     "creators:download-avatar": "node scripts/download-creator-from-ig-page.mjs",
     "content:migrate": "tsx scripts/migrate-content.ts",
     "content:lint": "tsx scripts/content-lint.ts",
+    "seo:verify": "npm run content:lint && npm run ads:verify",
     "export:all": "tsx scripts/export/cli.ts all",
     "export:characters": "tsx scripts/export/cli.ts characters",
     "export:games": "tsx scripts/export/cli.ts games",
