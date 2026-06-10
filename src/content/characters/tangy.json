@@ -28,8 +28,8 @@
   ],
   "acnh": {
     "intro": "Tangy is a peppy cat villager in the who appears in all games to date. Her name is derived from ''tangerine'', a citrus fruit similar to oranges, which relates to her appearance, as well as ''tangy'', an adjective used to describe those fruits. Her Japanese catchphrase, \",\" is a type of mandarin orange.",
-    "appearance": "Tangy is a cat with an orange fruit appearance, as well as a green leaf on her head, similar to Tank. The insides of her ears are pink. Her eyes seem to be looking southeast, but she will become cross-eyed when looking up or down. She has small indents all over her body, making her resemble an orange, tangerine, or a clementine (which are all tangy fruits, hence her name).",
-    "personality": "Tangy, as a peppy villager, will always appear to be in a good mood. She will get along with other villagers, including the player, making it easy to befriend her and gain her picture in. She will enjoy the usual hobbies, and may ask the player for bugs or fish that she finds cute or has read about in Ms. Nintendique, an unseen magazine read by snooty and peppy villagers in. Often she says she's \"feeling kinda bloated\" because she \"ate, like, 50 pounds of.\" She will easily get upset, but due to a short attention span she will forget ever having the conversation. Like all peppy villagers, she dreams of becoming famous in the future. She will get on well with normal, lazy, and other peppy villagers, but may annoy snooty and cranky villagers with her upbeat personality.",
+    "appearance": "Tangy is an orange cat shaped like citrus — a green leaf on her head similar to Tank's style, pink inner ears, and southeast-angled eyes that turn cross-eyed when she looks up or down. Small indents pock her body like peel texture; tangerine, clementine, and orange notes explain her name in one sunny glance.",
+    "personality": "Tangy stays peppy-upbeat — good moods, easy befriending, cute bugs and fish requests, and magazine daydreams shared with other stylish villagers who read unseen fashion pages. She jokes about feeling bloated after absurd snacking, flares up fast, then forgets why, attention span short as her temper is quick. Fame fantasies pop up now and then, dreams of spotlight she shares with peppy neighbors who chase the same glitter. Normal, lazy, and peppy villagers suit her; snooty and cranky types groan at the sparkle she refuses to dim. Short fuse, shorter grudge — she keeps the island tasting bright through every season ahead.",
     "villagerInfo": {
       "birthday": "June 17",
       "starSign": "Gemini",
@@ -136,6 +136,7 @@
       "birthday": "June 17",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/244_Tangy_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Tangy"
+    "sourceUrl": "https://nookipedia.com/wiki/Tangy",
+    "proseStatus": "original"
   }
 }

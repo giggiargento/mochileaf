@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Fang is a cranky wolf villager in the who appears in all games to date except. His name may come from the, a tooth found in carnivores. His Japanese name comes from, a region in northern Asia that is mostly an arctic environment.",
-    "appearance": "Fang is a light gray wolf with a white muzzle, cream tipped paws, and purple eyelids. His inner ears are purple as well as the inside of his mouth. In, his fur is slightly lighter, and his eyes are much larger with brown eyelids as opposed to purple.",
-    "personality": "Fang has a cranky personality, meaning that he can be quite rude to the player and be all around grumpy. He will warm up to the player as time goes on, and may eventually become a close friend.",
+    "appearance": "Fang is a cool gray wolf with a white muzzle, cream-tipped paws, and purple eyelids. Purple lines the inside of his mouth and ears; in earlier games his fur ran slightly lighter and his eyes larger, with brown lids instead of purple.",
+    "personality": "Fang's cranky mood shows as grump and distance early on. Keep showing up with patience and the frost melts — close friendship is possible for neighbors who respect his pace.",
     "villagerInfo": {
       "birthday": "December 18",
       "starSign": "Sagittarius",
@@ -129,6 +129,7 @@
       "birthday": "December 18",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/338_Fang_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Fang"
+    "sourceUrl": "https://nookipedia.com/wiki/Fang",
+    "proseStatus": "original"
   }
 }

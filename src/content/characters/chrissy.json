@@ -27,8 +27,8 @@
     "Rabbit"
   ],
   "acnh": {
-    "appearance": "Chrissy in.\nChrissy is a white rabbit with a pink polka-dot hood, a blonde fringe, a green nose, and pink blush. She has two pink eyelashes near the bottom of her eyes. She has black eyes with white sparkles in them, although her eyes change to pink when she is shocked. She is almost identical in appearance to Francine, the differences being that Chrissy is pink instead of blue, and Francine has different eyes. She is almost always smiling.",
-    "personality": "As a peppy villager, Chrissy will have the tendency to over-react in conversations about trivial subjects such as appearing in competitions and the chance of her losing. This sometimes triggers her to ask for a certain item of clothing or furniture which she needs to enter a competition. She, like other peppy villagers, will rarely be discouraged from doing anything, including the usual hobbies. She will also have a short attention span, which means she will soon forget arguments or tasks given to the player which were not completed. She says that the color pink suits her best. She will be, like all peppy villagers, friendly and excitable, and she will come out of her house often. She will rarely get discouraged from doing anything. She will often ask the player for a fossil because she is interested in hunting for them. Keep in mind that she may have a mean attitude to snooty villagers and will blame the player for something she dislikes. Rather than becoming sad when other villagers make rude comments, she will become enraged. She doesn't eat too much, so this will not be a problem for her since jocks won't make fun of her. Cranky and snooty villagers will make fun of her, calling her names. She will get along with jock, lazy, normal and other peppy villagers who seem to be open minded to her, but may annoy snooty and cranky villagers due to her upbeat and cheery personality.",
+    "appearance": "Chrissy is a white rabbit in a pink polka-dot hood, blonde fringe peeking out, green nose, and pink blush on her cheeks. Two pink lashes sit low on each eye; black eyes hold white sparkles that flash pink when she is shocked. She mirrors Francine in silhouette — pink where her sister wears blue, different eyes — and wears a smile so often it feels like her default expression.",
+    "personality": "Chrissy bubbles with peppy voltage — excitable, rarely discouraged, and always ready to bounce out of her house. She overreacts to tiny stakes, especially competitions; ask her about clothing or furniture and she may need something specific to enter one. Fossils fascinate her, and she often requests one for her collection because she loves the hunt. Pink, she insists, suits her best, and she says so often enough that neighbors smile and nod. Arguments with snooty villagers turn sharp; she may blame the player for tastes she dislikes and rage rather than sulk when cranky or snooty neighbors tease her. Jocks do not mock her eating habits — she keeps meals modest — but peppy openness still clashes with snooty barbs and name-calling. Jock, lazy, normal, and fellow peppy villagers tend to accept her open-minded cheer; cranky and snooty types stir drama she refuses to swallow quietly. Her attention span is short: unfinished tasks and old spats slip from memory fast, though she rarely stays discouraged from hobbies she loves. Stay friendly and she remains a starry-eyed neighbor who treats the island like a runway and a playground at once, forever smiling unless someone insults her favorite color.",
     "villagerInfo": {
       "birthday": "August 28",
       "starSign": "Virgo",
@@ -127,6 +127,7 @@
       "birthday": "August 28",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/300_Chrissy_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Chrissy"
+    "sourceUrl": "https://nookipedia.com/wiki/Chrissy",
+    "proseStatus": "original"
   }
 }

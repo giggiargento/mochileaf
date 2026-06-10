@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Rosie is a peppy cat villager in the who appears in all games to date as well as in, where she is a major character and is one of Ai's best friends.",
-    "appearance": "Rosie is a cerulean blue cat with dark blue hair and fur. She has big black pie-eyed symbol shaped eyes that appear to be looking off to the right, which are pointed in opposite directions whenever she is angry or sad. Rosie has some light pink blush on her cheeks as well (hence her name), and also has white tips on her paws, tail, feet, and ears. The insides of her ears transition from pink to light pink. She appears to have no nose, but she does have a curly smile.",
-    "personality": "As a peppy villager, Rosie will appear cheerful and friendly, and sometimes will reward others with gifts and compliments. To some villagers however, Rosie can appear to be rude sometimes. She has a short attention span and may have the tendency to overreact about small things. She will be easy to befriend, taking comfort in those she talks to most. She may, however, feel insulted when talking to snooty or cranky villagers, who may gossip about her or disagree with her style. She may also find it difficult to talk with lazy villagers, but she gives out comfort to jocks, who are the male equivalent to the peppy villagers. She also gets along well with normal, big sister, and smug villagers.",
+    "appearance": "Rosie is cerulean blue with darker blue hair and fur, big pie-eyed symbols angled as if glancing off to the right — cross when angry or sad, pointed in opposite directions when moods shift. Pink blush warms her cheeks; white tips her paws, tail, feet, and ears while inner ears fade pink to light pink. No nose shows, yet her curly smile carries all the expression she needs, hence the rosy name.",
+    "personality": "Rosie shines peppy-bright — gifts, compliments, quick forgiveness, and moods that flip fast over tiny slights before she forgets them. Snooty and cranky gossip stings; she may feel insulted when style or tone turns sharp. Lazy neighbors can feel mismatched while jocks get her cheer in return, the male mirror to her energy. Normal, big sister, and smug villagers round out her easy friendships with warmth she hands out freely. Show up with kindness and she becomes one of the villagers who makes the plaza feel like a daily celebration, rewarding friends with praise and little surprises.",
     "villagerInfo": {
       "birthday": "February 27",
       "starSign": "Pisces",
@@ -131,6 +131,7 @@
       "birthday": "February 27",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/386_Rosie_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Rosie"
+    "sourceUrl": "https://nookipedia.com/wiki/Rosie",
+    "proseStatus": "original"
   }
 }

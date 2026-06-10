@@ -28,8 +28,8 @@
     "Deer"
   ],
   "acnh": {
-    "appearance": "Erik is a brown deer with an amount of beige on his hooves. His snout is light brown, and he has white eyes with black pupils. He has short bangs near the top of his head. He has moose-like antlers on his head.",
-    "personality": "As a lazy villager, Erik has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Erik goes to sleep at 11 PM and wakes up at 8 AM.",
+    "appearance": "Erik is a brown deer with beige hooves, a light brown snout, and short bangs above white eyes and black pupils. Moose-like antlers crown a sturdy, northern look — more forest edge than pampered garden.",
+    "personality": "Erik's cranky gruffness hides a slow thaw — blunt at first, warmer after steady friendship. He shares the mature, sometimes insensitive edge common to cranky villagers, yet opens up when treated kindly. Peppy sparkle annoys him; normal and snooty neighbors suit him better, and he respects lazy villagers' calm. Give him time and he treats the player like someone worth honest talk.",
     "villagerInfo": {
       "birthday": "July 27",
       "starSign": "Leo",
@@ -124,6 +124,7 @@
       "birthday": "July 27",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/334_Erik_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Erik"
+    "sourceUrl": "https://nookipedia.com/wiki/Erik",
+    "proseStatus": "original"
   }
 }

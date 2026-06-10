@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Genji is a jock rabbit villager in the who appears in all games to date. His name could refer to two things. ''Genji'' could refer either to in Japanese history or the titular character in '' '' by, which is often considered to be the world's first novel. His physical appearance corroborates the latter, with his design being based on the appearance of Japanese noblemen like the title character of the Shikibu novel. His catchphrase prior to, \"otaku,\" is a Japanese pejorative for people with life-consuming interests (also used in English as a loanword for fans of Japanese media), while his catchphrase in, \"mochi,\" is a type of Japanese rice cake made with rice flour pounded into paste.",
-    "appearance": "Genji is a snowy white rabbit with dark mahogany brown ears and pink cheeks. The brown from his ears go down to circle all the way around his head. His paws, feet, and bunny tail are tipped chocolate brown while the rest is white except his ears. He has pale blue eyes in lines with black pupils which are opened wide and are triangles whenever he is angry. He also has small, round eyebrows that are black.",
-    "personality": "As a jock villager, Genji is energetic and has an interest in physical fitness and activity. He often talks about exercise or sports and may brag about his physical fitness. While often friendly to the player, he may comment on their fitness. During conversations with other villagers, he generally gets along well with peppy villagers due to their similar hyper personalities and will also get along with smug villagers, while he may offend snooty villagers by critiquing their fitness and annoy cranky villagers with his hyper personality. In, Genji goes to sleep at 12:30 AM and wakes up at 6:30 AM.",
+    "appearance": "Genji is a snow-white rabbit with mahogany ears that band brown around his head, pink cheeks, and chocolate-tipped paws, feet, and tail while the rest stays bright white. Pale blue eyes sit wide open — triangular when angry — under small round black brows, a crisp silhouette that feels both martial and cute on the plaza path.",
+    "personality": "Genji carries jock fire — workouts, sports talk, and proud notes about staying fit. He is friendly to the player yet may comment on exercise habits with a competitive grin, bragging about reps the way others brag about catches. Peppy and smug villagers share his spark; snooty neighbors take offense at fitness jabs, and cranky villagers groan at his volume and endless energy. While often encouraging, he can sound boastful until you know his earnest streak. He turns in after midnight and wakes at half past six, already eager to move through another active day.",
     "villagerInfo": {
       "birthday": "January 21",
       "starSign": "Aquarius",
@@ -130,6 +130,7 @@
       "birthday": "January 21",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/253_Genji_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Genji"
+    "sourceUrl": "https://nookipedia.com/wiki/Genji",
+    "proseStatus": "original"
   }
 }

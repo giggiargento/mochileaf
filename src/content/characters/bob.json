@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Bob is a lazy cat villager in the who appears in all games to date. His name may be derived from. His Japanese catchphrase, ''neko'', means \"cat,\" relating to his species. According to series co-creator Hisashi Nogami, Bob was the first villager created, and his January 1 birthday came as a result of that.",
-    "appearance": "Bob is a purple cat with dark purple polka dots, half-closed lazy yellow eyes, and light purple paws. The inside of his ears are pink, and his tail is purple with darker purple stripes.",
-    "personality": "As a lazy villager, Bob has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Bob goes to sleep at 11 PM and wakes up at 8 AM.",
+    "appearance": "Bob is a lavender cat dotted in deeper purple spots, with half-closed lazy yellow eyes and pale purple paws. Pink fills the inside of his ears, and his tail stripes alternate purple shades like a cozy quilt.",
+    "personality": "Bob's lazy rhythm makes every day feel unhurried — friendly hellos, food on the mind, and humor that lands softly. He meshes well with peppy, smug, and cranky neighbors, though snooty and jock villagers may side-eye his snack-and-nap lifestyle. Sleep finds him at eleven; he wakes at eight with the same mellow energy that made him a fan favorite for decades.",
     "villagerInfo": {
       "birthday": "January 1",
       "starSign": "Capricorn",
@@ -129,6 +129,7 @@
       "birthday": "January 1",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/018_Bob_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Bob"
+    "sourceUrl": "https://nookipedia.com/wiki/Bob",
+    "proseStatus": "original"
   }
 }

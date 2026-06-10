@@ -4,6 +4,7 @@ import {
   getAdSlot,
   getAdUnitAttrs,
   hasManualAdUnit,
+  isAdSenseEnabled,
   isAdSenseTestMode,
   shouldRenderAdUnits,
   type AdPlacement,
@@ -25,7 +26,7 @@ const variantClass = slot === 'sidebar' ? 'ad-slot--sidebar' : 'ad-slot--horizon
 ---
 
 {
-  showUnit && client && adSlot ? (
+  !isAdSenseEnabled() ? null : showUnit && client && adSlot ? (
     <aside
       class:list={['ad-slot', 'ad-slot-frame', variantClass]}
       data-ad-slot={slot}

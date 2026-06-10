@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Scoot is a jock duck villager in the who appears in all games to date except. His name relates to his catchphrase.",
-    "appearance": "Scoot is a green duck with pink cheeks, determined eyes, and white headgear with 1–5 written on it. The headgear appears to be a Japanese swimming cap, with the number on it showing him to be in the second class of first grade, or a first year high school student, given by how the Japanese grade system works, and how it is organized in a hallway at a Japanese school. This is supported by the indoor pool theme of his house. In, Scoot's skin is slightly lighter, while his eyes are somewhat bigger.",
-    "personality": "As a jock villager, Scoot is energetic and has an interest in physical fitness and activity. He often talks about exercise or sports and may brag about his physical fitness. While often friendly to the player, he may comment on their fitness. During conversations with other villagers, he generally gets along well with peppy villagers due to their similar hyper personalities and will also get along with smug villagers, while he may offend snooty villagers by critiquing their fitness and annoy cranky villagers with his hyper personality. In, Scoot goes to sleep at 12:30 AM and wakes up at 6:30 AM.",
+    "appearance": "Scoot is a green duck with pink cheeks, determined eyes, and white headgear marked 1–5 like a Japanese swimming cap — numbering that suggests second class of first grade or first-year high school depending on hallway context at a typical school. The cap gag pairs with an indoor-pool home theme; New Horizons lightens his green slightly and widens his eyes compared to earlier outings on the plaza path.",
+    "personality": "Scoot carries jock energy — sports talk, fitness pride, friendly nudges about exercise, and comments on the player's stamina with earnest bravado. Peppy and smug villagers match his pace; snooty neighbors bristle at critiques of their routines, and cranky villagers tire of hype that never quite winds down. While often friendly, his hyper personality can annoy quieter types until they see the encouragement beneath it. He sleeps around half past midnight and wakes at half past six, cap on, ready to lap the plaza before breakfast.",
     "villagerInfo": {
       "birthday": "June 13",
       "starSign": "Gemini",
@@ -129,6 +129,7 @@
       "birthday": "June 13",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/147_Scoot_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Scoot"
+    "sourceUrl": "https://nookipedia.com/wiki/Scoot",
+    "proseStatus": "original"
   }
 }

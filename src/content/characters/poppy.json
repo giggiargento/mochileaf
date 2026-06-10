@@ -27,8 +27,8 @@
     "Squirrel"
   ],
   "acnh": {
-    "appearance": "Poppy is a red squirrel with a cream muzzle, tail stripe, and tipped paws. Her ears are turquoise blue on the inside, and her nose is orange.",
-    "personality": "Poppy has a normal personality, which means she is very friendly, and likes to talk to the player. She rarely gets mad, even if hit with a net. But doing so may make her depressed. She will act motherly to the player and other villagers. She will act sweet and hospitable to the player.",
+    "appearance": "Poppy is a red squirrel with cream muzzle, tail stripe, and paw tips. Turquoise fills her inner ears; an orange nose brightens her friendly face.",
+    "personality": "Poppy's normal warmth is steady friendliness — sweet, hospitable, rarely angry even when startled, though meanness can leave her downcast. She mother hens the player and neighbors with gentle talk that makes small moments feel cared for.",
     "villagerInfo": {
       "birthday": "August 5",
       "starSign": "Leo",
@@ -129,6 +129,7 @@
       "birthday": "August 5",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/052_Poppy_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Poppy"
+    "sourceUrl": "https://nookipedia.com/wiki/Poppy",
+    "proseStatus": "original"
   }
 }

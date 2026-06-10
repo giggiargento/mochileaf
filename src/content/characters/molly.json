@@ -28,8 +28,8 @@
     "Duck"
   ],
   "acnh": {
-    "appearance": "Molly is a mallard duck with black oval eyes and a golden yellow beak. There are dark brown markings on top of her beak, forming what looks like a crown. Molly has a white stomach, and yellow striped legs. Her wings and markings on top of her head are a shade of brown. She has round pink cheeks.",
-    "personality": "Molly is a normal villager, meaning she is very kind-hearted, sweet and hospitable. She is very motherly and caring, even to flowers around town as she is often carrying a watering can around. She is a self-proclaimed bookworm, often talking about book titles she enjoys reading. She is quite the clean freak, often worrying about the cleanliness of her home. Molly is very kind and neighborly and is easy to befriend due to her generally kind nature.",
+    "appearance": "Molly is a mallard duck with black oval eyes, golden-yellow beak, and dark brown markings atop the beak like a little crown. White belly, yellow striped legs, brown wings and head markings, and round pink cheeks finish a gentle pond-side look.",
+    "personality": "Molly's normal heart is sweet and motherly — watering-can kindness to flowers and neighbors alike, always checking whether someone needs help. She talks about books she enjoys with genuine delight and fusses over home cleanliness with loving anxiety, worrying her space never looks quite right to guests. Easy to befriend, she makes new islands feel tended and calm, offering hospitality that lands soft rather than fussy once you know her rhythm.",
     "villagerInfo": {
       "birthday": "March 7",
       "starSign": "Pisces",
@@ -132,6 +132,7 @@
       "birthday": "March 7",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/099_Molly_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Molly"
+    "sourceUrl": "https://nookipedia.com/wiki/Molly",
+    "proseStatus": "original"
   }
 }

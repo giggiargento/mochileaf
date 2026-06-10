@@ -28,8 +28,8 @@
     "Squirrel"
   ],
   "acnh": {
-    "appearance": "Marshal is a white squirrel with pink cheeks and pastel purple on the inside of his ears. His slanted eyes and frown bear some resemblance to Static's pre- appearance. In, his eyes are dark green, whereas in previous installments, they were black. He has cream-tipped hands and feet as well as a cream swirl in his tail. These features make him resemble a marshmallow.",
-    "personality": "Marshal is a villager that falls under the smug personality. He will not find it hard to converse with other villagers, as he is very polite and lively. He also may be seen flirting with the player, regardless of their gender. He may sometimes appear conceited when talking to himself. His unseen hobby is dancing, and will also enjoy the usual hobbies. He will appear enthusiastic when going to the player's house. Marshal will wake up at 7:00 AM and fall asleep at 2:00 AM.",
+    "appearance": "Marshal is a white squirrel with pink cheeks, pastel purple inner ears, slanted eyes and a small frown reminiscent of Static's older look before redesign. New Horizons gives him dark green eyes where earlier games used black; cream tips his hands, feet, and tail swirl — marshmallow-soft all over, down to the puffy silhouette.",
+    "personality": "Marshal's smug charm is polite, lively, and faintly flirtatious with any neighbor he likes, player included regardless of gender. He can sound conceited when monologuing to himself, yet greets house visits with enthusiasm and enjoys the usual hobbies alongside an unseen love of dancing. He wakes at seven and sleeps at two — tidy, confident, quick to converse, and rarely at a loss for a compliment or a poised remark.",
     "villagerInfo": {
       "birthday": "September 29",
       "starSign": "Libra",
@@ -137,6 +137,7 @@
       "birthday": "September 29",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/264_Marshal_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Marshal"
+    "sourceUrl": "https://nookipedia.com/wiki/Marshal",
+    "proseStatus": "original"
   }
 }

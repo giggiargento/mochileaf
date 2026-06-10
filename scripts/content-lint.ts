@@ -11,6 +11,7 @@ import { characterSchema } from '../src/content/schemas/character';
 import { gameSchema } from '../src/content/schemas/game';
 import { guideDefaultsSchema, guideSchema } from '../src/content/schemas/guide';
 import { collectTodoStrings } from '../src/lib/content/todo-report';
+import { lintAcnhProse } from '../src/lib/content/originality';
 
 const root = join(fileURLToPath(import.meta.url), '..', '..');
 const contentRoot = join(root, 'src/content');
@@ -109,6 +110,12 @@ const characters = lintCollection('characters', readJsonDir('characters'), chara
     throw new Error(`unknown gameSlug "${c.gameSlug}"`);
   }
 });
+
+for (const character of characters) {
+  for (const message of lintAcnhProse(character)) {
+    errors.push({ level: 'error', message });
+  }
+}
 
 lintCollection('guides', readJsonDir('guides'), guideSchema, (g, id) => {
   if (g.characterSlug !== id) throw new Error(`characterSlug "${g.characterSlug}" must match filename`);

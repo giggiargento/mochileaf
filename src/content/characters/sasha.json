@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Sasha is a lazy rabbit villager in the. He was added to as part of the on November 4, 2021, and he was added to between the announcement and release of the update. His catchphrase, \"hoppity,\" is a nonsense variation of the word \"hop,\" which is related to his species.",
-    "appearance": "Sasha is a mint green rabbit with white-tipped ears, white feet, a white muzzle, and a yellow tail. He has large round dark blue eyes with sparkles in them, and a tiny eyelash sticking out of the bottom-outer side of each eye. His ears are orange on the inside. When he is shocked, his eyes become gray pupils, with a smaller, dark blue pupil in the middle. He has blond bangs on his forehead.",
-    "personality": "As a lazy villager, Sasha has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Sasha goes to sleep at 11 PM and wakes up at 8 AM.",
+    "appearance": "Sasha is a mint-green rabbit with white-tipped ears, feet, and muzzle, a sunny yellow tail, and blond bangs on his forehead. Round dark blue eyes hold sparkles; a tiny eyelash sticks from each outer corner. Orange inner ears and shocked gray pupils with deep blue centers finish a look that feels freshly minted and camera-ready.",
+    "personality": "Sasha keeps lazy ease — friendly, food-loving, gently humorous, and slow to take offense even when talk turns silly. Peppy, smug, and cranky villagers usually get along with his relaxed pace; snooty and jock personalities may clash with naps and snacks that define his days. Eleven to eight is his sleep cycle, unhurried as his greeting, with naivete that reads charming rather than careless once you know him.",
     "villagerInfo": {
       "birthday": "May 19",
       "starSign": "Taurus",
@@ -138,6 +138,7 @@
       "birthday": "May 19",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/433_Sasha_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Sasha"
+    "sourceUrl": "https://nookipedia.com/wiki/Sasha",
+    "proseStatus": "original"
   }
 }

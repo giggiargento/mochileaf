@@ -28,8 +28,8 @@
   ],
   "acnh": {
     "intro": "Coco is a normal rabbit villager in the who appears in all games to date. She is the only normal rabbit in the series. Her English name may come from her coconut-like head. Her Japanese name comes from the historical era known as the during which small clay figures known as '' '' were produced. Like the gyroids, these ''haniwa'' figures are what Coco's appearance is based on.",
-    "appearance": "Coco is a tan, clay-like rabbit with hollow eyes and mouth, similar in appearance to a Gyroid. Her legs are slightly darker than the rest of her body. There is what appears to be a seam or fold around the top of her head. Her face is always expressionless, regardless of her emotions, though when surprised, her eyes become slightly bigger.",
-    "personality": "Coco has a normal personality, so she will act shy, but caring toward the player. She will get along well with villagers of any personality type. She will have hygiene concerns, represented when the player visits her house, and she will state her embarrassment at the supposedly unclean appearance of her home. She will mention her interest in reading and the various books she reads. She also will enjoy writing and receiving letters.",
+    "appearance": "Coco looks sculpted from warm clay — a tan rabbit with hollow, gyroid-like eyes and mouth, legs slightly darker than her body. A seam rings the top of her head like folded pottery, and her face stays eerily blank even when she is delighted; only surprise widens those empty eyes a little, giving the faintest hint of life beneath the stillness.",
+    "personality": "Coco's normal personality reads shy and caring beneath an unsettling exterior. She gets along with villagers of every type, yet frets over housekeeping — visit her home and she may apologize for mess she alone notices. Letters and reading matter to her; she mentions titles she loves and delights in mail. The blank expression belies a gentle neighbor who values quiet kindness.",
     "villagerInfo": {
       "birthday": "March 1",
       "starSign": "Pisces",
@@ -127,6 +127,7 @@
       "birthday": "March 1",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/150_Coco_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Coco"
+    "sourceUrl": "https://nookipedia.com/wiki/Coco",
+    "proseStatus": "original"
   }
 }

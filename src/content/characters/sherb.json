@@ -28,8 +28,8 @@
     "Goat"
   ],
   "acnh": {
-    "appearance": "Sherb is a goat with pale blue fur and a deeper blue tuft of hair leaning to the left. He has pale gray hooves, and horns which are striped with light gray and a darker shade of gray. His pupils are large and black, and his eyes are slightly slanted upwards. He has a coral pink nose and a 3-shaped mouth which connects to his nose. His inner ears are pale orange and he has pale pink cheeks just below his eyes. Much like Kidd, he does not have a beard, making him look fairly youthful compared to the other male goats.",
-    "personality": "As a lazy villager, Sherb has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Sherb goes to sleep at 11 PM and wakes up at 8 AM.",
+    "appearance": "Sherb is a pale blue goat with a deeper blue tuft of hair leaning left, gray-striped horns, pale gray hooves, and large slanted black pupils that give him a gentle upward gaze. Coral pink nose and cheeks, pale orange inner ears, and a three-shaped mouth connect nose to smile in one soft line. Like Kidd he skips the beard — youthful next to other male goats, fleece bright as winter sky on cold island mornings ahead.",
+    "personality": "Sherb drifts through island days with lazy warmth — snacks, jokes, gentle naivete, and friendly hellos that make mornings feel slower in the best way. Peppy, smug, and cranky neighbors usually suit him; snooty and jock villagers may side-eye his slow rhythm and love of food talk. Eleven to eight keeps his schedule as soft as his fleece, with humor that lands lightly even when he sounds absent-minded.",
     "villagerInfo": {
       "birthday": "January 18",
       "starSign": "Capricorn",
@@ -127,6 +127,7 @@
       "birthday": "January 18",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/425_Sherb_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Sherb"
+    "sourceUrl": "https://nookipedia.com/wiki/Sherb",
+    "proseStatus": "original"
   }
 }

@@ -84,6 +84,33 @@ Character **descriptions** and **excerpts** skew editorial. **Build guides** (`s
 - If uncertain or community-speculative: soften wording, omit, or use `TODO: …` in draft content.
 - Do not invent banners, stats, patch timings, or tier placements.
 
+## Originality & sources
+
+**Wikis are fact sources, not copy sources.** Nookipedia / Fandom may inform birthday, hobby, house layout, and similar data — never paste their prose into public fields.
+
+| OK to import | Must be rewritten |
+|--------------|-------------------|
+| Birthday, hobby, catchphrase, furniture lists | `acnh.appearance` |
+| House wallpaper/flooring names | `acnh.personality` |
+| Image URLs, amiibo metadata | Article/guide body paragraphs |
+| `sourceUrl` for attribution | Card `description`, `seo.*` (already editorial, keep that way) |
+
+### ACNH character prose
+
+- Publishable characters with `acnh.appearance` or `acnh.personality` require **`acnh.proseStatus: "original"`**.
+- Voice: cozy magazine — see [Writing style](#writing-style). Same facts, new sentences.
+- Target length: roughly **±20%** of the previous block so page layout stays consistent.
+- `npm run content:lint` enforces `proseStatus` and flags common wiki boilerplate.
+
+### Import commands
+
+```bash
+npm run villagers:import-details   # facts → src/data/acnh-villager-details.json
+node scripts/merge-acnh-villager-details.mjs   # merges facts only; never overwrites original prose
+```
+
+Agents must follow `.cursor/rules/content-originality.mdc`.
+
 ## Out of scope
 
 - **`src/pages/about.astro`** — personal creator page; do not rewrite unless Giggi asks.
@@ -101,4 +128,4 @@ Character **descriptions** and **excerpts** skew editorial. **Build guides** (`s
 
 ## Cursor / AI
 
-Agents should follow `.cursor/rules/editorial-direction.mdc` when writing or rewriting Mochileaf content.
+Agents should follow `.cursor/rules/editorial-direction.mdc` when writing or rewriting Mochileaf content. For originality and import rules, also follow `.cursor/rules/content-originality.mdc`.

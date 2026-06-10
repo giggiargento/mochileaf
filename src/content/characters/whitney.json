@@ -28,8 +28,8 @@
     "Wolf"
   ],
   "acnh": {
-    "appearance": "Whitney is a white, possibly arctic, wolf, with blue eyes, a red-brown nose, and a wavy tuft of fur on her forehead. The insides of her ears are pink. She wears pink eyeshadow with winged eyeliner, and her eyebrows are shaped with precision. Her tail is long and spiky at the tip. In, her eyes are purple and her nose is deep brown.",
-    "personality": "Whitney has a snooty personality. She will appear uptown, classy, and chic. With this, she will appear rude, belittling and snobbish when talking to others, usually criticizing their dress sense or fashion. She is able to get on with cranky, big sister, smug, and other snooty villagers. She will have her fitness questioned by a jock villager. She will not get along with normal villagers, due to their kindness and politeness towards their neighbors.",
+    "appearance": "Whitney is a white wolf — possibly arctic — with blue eyes, a red-brown nose, and a wavy tuft of fur on her forehead. Pink inner ears, pink eyeshadow with winged liner, precisely shaped eyebrows, and a long spiky tail finish the look. Older games used purple eyes and a deeper brown nose before her current palette settled in.",
+    "personality": "Whitney wears snooty elegance — classy, chic, and quick to critique outfits or manners when talk turns to fashion. Cranky, big sister, smug, and fellow snooty villagers share her wavelength; jocks challenge her fitness and normal villagers' relentless politeness can irritate her sharper tastes. Under the polish is someone who notices detail and expects effort, belittling only until respect is mutual.",
     "villagerInfo": {
       "birthday": "September 17",
       "starSign": "Virgo",
@@ -133,6 +133,7 @@
       "birthday": "September 17",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/148_Whitney_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Whitney"
+    "sourceUrl": "https://nookipedia.com/wiki/Whitney",
+    "proseStatus": "original"
   }
 }

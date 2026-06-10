@@ -28,8 +28,8 @@
     "Cat"
   ],
   "acnh": {
-    "appearance": "Raymond is a gray cat with a black tail, black paws, black ears with pink insides, and blonde hair that is neatly combed to the right. He wears glasses and has eyes like the cats that have complete, with his left eye being green and his right eye being brown. He appears to be designed after white-collar workers, featuring an appearance, house, catchphrase, and picture quote that all reference elements of a typical businessperson or office worker.",
-    "personality": "Raymond is a villager that falls under the smug personality. He will not find it hard to converse with other villagers, as he is very polite and lively. He also may be seen flirting with the player, regardless of their gender. He may sometimes appear conceited when talking to himself. In, he goes to sleep at 2:00 AM and wakes up at 7:00 AM if no ordinances are in place.",
+    "appearance": "Raymond is a gray office-cat fantasy — black tail, paws, and ears with pink insides, blonde hair combed neatly to the right, round glasses, and heterochromia with a green left eye and brown right. His house, catchphrase, and picture quote all wink at white-collar routine, a villager dressed for spreadsheets, espresso, and polished first impressions at the plaza.",
+    "personality": "Raymond's smug poise is polite and animated — easy conversation, occasional flirting regardless of gender, and bursts of self-confidence when he mutters to himself about looking sharp. He enjoys the usual hobbies with enthusiasm when visitors arrive, though conceited asides slip out now and then. Without town ordinances he sleeps at two and rises at seven, always groomed for the day ahead.",
     "villagerInfo": {
       "birthday": "October 1",
       "starSign": "Libra",
@@ -135,6 +135,7 @@
       "birthday": "October 1",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/431_Raymond_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Raymond"
+    "sourceUrl": "https://nookipedia.com/wiki/Raymond",
+    "proseStatus": "original"
   }
 }

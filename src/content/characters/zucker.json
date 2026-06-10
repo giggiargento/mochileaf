@@ -28,8 +28,8 @@
     "Octopus"
   ],
   "acnh": {
-    "appearance": "Zucker is an octopus, resembling the Japanese snack takoyaki, with a bamboo toothpick stuck in his head. His head resembles a takoyaki ball with his green freckles resembling seasonings put on takoyaki, and his \"hair\" representing a sauce that is usually served with takoyaki. He has black, oval-shaped eyes, which turn to white with black outlines when he is shocked. His body is a similar shade of red as Octavian's.",
-    "personality": "As a lazy villager, Zucker has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Zucker goes to sleep at 11 PM and wakes up at 8 AM.",
+    "appearance": "Zucker is an octopus built like takoyaki — round red head freckled green like seasoning on the ball, bamboo toothpick skewering the top, sauce-like hair dripping over the side, and black oval eyes that flash white with black rims when shocked. His body red matches Octavian's family tone, snack-stall cute and villager-soft at once on the beach.",
+    "personality": "Zucker keeps lazy ease — friendly hellos, food on the mind, gentle humor, and patience with most neighbors who share his unhurried rhythm. Peppy, smug, and cranky villagers usually mesh with his jokes; snooty and jock personalities may clash with his snack-and-rest lifestyle and love of comfort. Eleven to eight is his schedule, takoyaki warmth in every greeting he offers across the plaza.",
     "villagerInfo": {
       "birthday": "March 8",
       "starSign": "Pisces",
@@ -132,6 +132,7 @@
       "birthday": "March 8",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/364_Zucker_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Zucker"
+    "sourceUrl": "https://nookipedia.com/wiki/Zucker",
+    "proseStatus": "original"
   }
 }

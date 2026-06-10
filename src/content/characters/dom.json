@@ -28,8 +28,8 @@
     "Sheep"
   ],
   "acnh": {
-    "appearance": "Dom is a sheep with cream colored wool, light coral pink skin, white hooves, and pale crimson and light pink striped horns. He has large black eyes with two white glints of light in each, and a mouth shaped like the number three.",
-    "personality": "As a jock villager, Dom is energetic and has an interest in physical fitness and activity. He often talks about exercise or sports and may brag about his physical fitness. While often friendly to the player, he may comment on their fitness. During conversations with other villagers, he generally gets along well with peppy villagers due to their similar hyper personalities and will also get along with smug villagers, while he may offend snooty villagers by critiquing their fitness and annoy cranky villagers with his hyper personality. In, Dom goes to sleep at 12:30 AM and wakes up at 6:30 AM.",
+    "appearance": "Dom is a cream-wool sheep with coral-pink skin, white hooves, and horns striped in pale crimson and pink. Large black eyes hold twin white glints, and his mouth curves like a tiny numeral three — earnest, bright, impossible to miss on the plaza.",
+    "personality": "Dom burns with jock enthusiasm — fitness, sports, and friendly brags about reps and runs. He compliments effort and may nudge the player about workouts with a grin, not malice, commenting on stamina the way others comment on weather. Peppy and smug villagers match his energy; snooty neighbors bristle at fitness critiques, and cranky villagers tire of his hype and loud optimism. While often friendly, his hyper personality can grate on quieter types until they learn he means well. He sleeps around half past midnight and rises at half past six, already stretching for the day with tie-dye confidence and sheepish charm.",
     "villagerInfo": {
       "birthday": "March 18",
       "starSign": "Pisces",
@@ -129,6 +129,7 @@
       "birthday": "March 18",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/427_Dom_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Dom"
+    "sourceUrl": "https://nookipedia.com/wiki/Dom",
+    "proseStatus": "original"
   }
 }

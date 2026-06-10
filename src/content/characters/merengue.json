@@ -27,8 +27,8 @@
     "Rhino"
   ],
   "acnh": {
-    "appearance": "Merengue is a pink rhinoceros with white hooves and hair. Her horn is red with dark red spots and is surrounded by green semicircles so it resembles a strawberry.",
-    "personality": "As a normal villager, Merengue will appear friendly and hospitable towards the player and other villagers. Like other normal villagers, she will have an unseen obsession with hygiene and cleanliness, which she mentions when the player visits her in her home. Other than her hygiene interests, she will appear neutral and open-minded when discussing hobbies. She will get along easily with other villagers, but may conflict with lazy villagers when they talk about food and leading her on to suggesting making them dinner or lunch.",
+    "appearance": "Merengue is a pink rhino with white hooves and hair, a red horn spotted in dark red and ringed by green semicircles — strawberry-sweet from tip to toe.",
+    "personality": "Merengue's normal hospitality is warm and open about hobbies without strong opinions either way, friendly toward the player and easy with most neighbors. Cleanliness matters to her; she mentions hygiene when guests arrive and shares the unseen obsession many normal villagers carry. Lazy villagers who ramble about food may accidentally trigger dinner offers she did not plan, leading conversations into cozy meals. Most neighbors find her easy company — hospitable, neutral on hobbies, and gentle when talk turns domestic.",
     "villagerInfo": {
       "birthday": "March 19",
       "starSign": "Pisces",
@@ -133,6 +133,7 @@
       "birthday": "March 19",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/285_Merengue_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Merengue"
+    "sourceUrl": "https://nookipedia.com/wiki/Merengue",
+    "proseStatus": "original"
   }
 }

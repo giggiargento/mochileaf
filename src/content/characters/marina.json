@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Marina is a normal octopus in the. She first appeared in as an islander, and she appears in all subsequent games as a villager. Her name comes from \"marinus,\" Latin for \"of the sea,\" which relates to her species.",
-    "appearance": "Marina in.\nMarina is a pink octopus with yellow cheeks and black eyes. Her eyes gain smaller, white pupils when she is shocked. She has a tuft of hair on her forehead. On the back of her head is a pink bow.",
-    "personality": "==== ====\nAs a normal islander in, Marina has a peaceful, spacey nature prone to daydreaming and getting lost in thought. In conversation, she frequently reads the player's aura or comments on the natural beauty of the island. Due to her fanciful outlook on life, she is often kind in dealing with the player but can easily wander off into mystical, eccentric, or even nonsensical conversation. She meditates frequently in her pursuit of harmony and tranquility and will request furniture from the player that she believes will improve her meditation. ==== onwards====\nMarina is a normal villager. She will appear friendly and motherly to the player. When she asks the player for favors, she will feel bad asking the player to do so. She will be easy to befriend. She may not get along well with cranky and snooty villagers. She has a very kind personality.",
+    "appearance": "Marina is a pink octopus with round yellow cheeks, black eyes that shrink to smaller white pupils when shocked, a tuft of hair on her forehead, and a pink bow perched on the back of her head like a gentle accessory.",
+    "personality": "Marina's normal gentleness once read dreamy on the islands — aura comments, wandering thoughts, meditation requests, and furniture aimed at harmony and tranquility. She meditated often, lost in fanciful outlooks that could turn mystical or gently nonsensical, yet always kind when dealing with neighbors she met along the shore. In town life she is friendly and motherly, apologetic when asking favors, easy to befriend, and uneasy around cranky or snooty edges that clash with her spacey calm. Kindness is her default; even eccentric tangents feel sincere rather than performative, and she keeps a very kind personality through every season on your island, daydreams intact and gentle.",
     "villagerInfo": {
       "birthday": "June 26",
       "starSign": "Cancer",
@@ -127,6 +127,7 @@
       "birthday": "June 26",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/234_Marina_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Marina"
+    "sourceUrl": "https://nookipedia.com/wiki/Marina",
+    "proseStatus": "original"
   }
 }

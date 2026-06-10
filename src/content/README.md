@@ -123,5 +123,7 @@ Inferred shapes also live in `src/content/schemas/*.ts` as `GameContent`, `Chara
 
 ```bash
 npm run villagers:import-details
-npm run content:migrate
+node scripts/merge-acnh-villager-details.mjs   # facts only — never overwrites appearance/personality
 ```
+
+Public `acnh.appearance` / `acnh.personality` must be original copy with `acnh.proseStatus: "original"`. See `docs/EDITORIAL.md` → Originality & sources.

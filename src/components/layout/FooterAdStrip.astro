@@ -1,5 +1,6 @@
 ---
 import AdPlaceholder from '../ui/AdPlaceholder.astro';
+import { isAdSenseEnabled } from '../../utils/ads';
 import { defaultLocale, type Locale } from '../../i18n/config';
 import { t } from '../../i18n/messages';
 
@@ -10,6 +11,10 @@ interface Props {
 const { locale = defaultLocale } = Astro.props;
 ---
 
-<section class="page-container py-8">
-  <AdPlaceholder slot="footer" label={t('ads.footerLabel', locale)} />
-</section>
+{
+  isAdSenseEnabled() && (
+    <section class="page-container py-8">
+      <AdPlaceholder slot="footer" label={t('ads.footerLabel', locale)} />
+    </section>
+  )
+}

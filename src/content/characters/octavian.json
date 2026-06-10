@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Octavian is a cranky octopus villager in the who appears in all games to date. His name is a pun on his species and the given name \"Octavian\". His catchphrase also references his species, as octopuses have suckers on their tentacles; it may also reference his cranky personality.",
-    "appearance": "Octavian is a light red octopus with a jet relocated to mimic a mouth. He has a white patch in an \"x\" shape on the back of his head, made out of two bandages. Being an octopus, his mouth is puckered. He has two tentacle arms with suckers and six legs, adding up to be eight, as a real octopus would have. He has puffy, puckering cheeks with peachy pink marks and angry-looking, squinted eyes. His eyebrows are pointed down, giving him a very serious, profound expression. Based on his star-patterned shirt and his moon-themed home interior, Octavian may be a reference to the octopus-like Martians from the sci-fi horror fiction, '' '', which are commonly used to represent aliens in Japanese pop culture. His description also alludes to his alien nature.",
-    "personality": "Octavian is a cranky villager. He may seem rude at first but will open up to the player eventually if they talk to him enough and be nice to him by doing favors he asks, etc. Sometimes, if the player is friends with him and the beach is in view, he will say that the sea brings back memories of his youthful days and his mother and father.",
+    "appearance": "Octavian is a light red octopus with a jet piece standing in for a puckered mouth, puffy peach-pink cheek marks, and angry squinted eyes beneath sharp brows that give him a serious, profound expression. Two bandages cross the back of his head in an X; suckered tentacle arms and six legs make eight limbs total, true to a real octopus. Star-pattern shirts and lunar home decor nod to sci-fi Martian octopi from classic horror fiction — aliens common in Japanese pop culture — and his description leans into extraterrestrial roots, a cranky neighbor dressed like he stepped off a vintage poster for the stars.",
+    "personality": "Octavian opens cranky-cold — rude edges that soften when the player keeps showing up kind, doing favors and talking often enough to earn trust. Near the beach he sometimes grows quiet, the sea stirring memories of parents and younger days he rarely shares aloud, a rare glimpse beneath the scowl.",
     "villagerInfo": {
       "birthday": "September 20",
       "starSign": "Virgo",
@@ -126,6 +126,7 @@
       "birthday": "September 20",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/045_Octavian_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Octavian"
+    "sourceUrl": "https://nookipedia.com/wiki/Octavian",
+    "proseStatus": "original"
   }
 }

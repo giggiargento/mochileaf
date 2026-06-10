@@ -1,0 +1,36 @@
+---
+description: Original prose only — never publish imported wiki copy on Mochileaf
+alwaysApply: true
+---
+
+# Content originality (Mochileaf)
+
+## Rule
+
+**Never publish third-party prose verbatim.** Nookipedia, Fandom, and other wikis are **fact sources**, not copy sources.
+
+Applies to:
+
+- `acnh.appearance` and `acnh.personality` on character pages
+- `stardew.intro` and similar narrative blocks
+- Articles, guides, and UI copy
+
+## ACNH villager workflow
+
+1. **Import scripts** (`villagers:import-details`, `merge-acnh-villager-details`) may fetch wiki data for **facts only**: birthday, hobby, house furniture, catchphrase, images metadata.
+2. **Do not** write imported `appearance` / `personality` paragraphs into publishable character JSON.
+3. Public prose must be **original**, warm, cozy-magazine voice (see `editorial-direction.mdc`).
+4. When adding or updating public prose, set `acnh.proseStatus: "original"`.
+5. Match **similar length** to the replaced block (roughly ±20% characters) so layout stays stable.
+6. Keep `acnh.sourceUrl` for attribution; it does not license copying prose.
+
+## Before finishing character content work
+
+- Run `npm run content:lint` — fails if publishable ACNH characters have prose without `proseStatus: "original"`.
+- Lint also flags known wiki boilerplate still present in prose fields.
+
+## Re-import safety
+
+Running merge after prose is marked original **must not overwrite** `appearance`, `personality`, or `proseStatus`.
+
+Full reference: `docs/EDITORIAL.md` → Originality & sources

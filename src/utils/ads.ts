@@ -2,6 +2,7 @@ import {
   ADSENSE_CLIENT as DEFAULT_CLIENT,
   ADSENSE_SLOT_HORIZONTAL,
   ADSENSE_SLOT_SQUARE,
+  ADSENSE_ENABLED as DEFAULT_ADS_ENABLED,
 } from '../data/adsense';
 
 export type AdPlacement = 'banner' | 'sidebar' | 'inline' | 'footer';
@@ -57,9 +58,17 @@ export function allowAdSenseOnLocalhost(): boolean {
   return import.meta.env.PUBLIC_ADSENSE_ALLOW_LOCALHOST === 'true';
 }
 
+/** Master switch — false hides all ad slots and skips AdSense scripts. */
+export function isAdSenseEnabled(): boolean {
+  const env = import.meta.env.PUBLIC_ADSENSE_ENABLED?.trim();
+  if (env === 'true') return true;
+  if (env === 'false') return false;
+  return DEFAULT_ADS_ENABLED;
+}
+
 /** Render real units in build; skip in `astro dev` and on disallowed hosts (client). */
 export function shouldRenderAdUnits(): boolean {
-  return isAdSenseConfigured() && !import.meta.env.DEV;
+  return isAdSenseEnabled() && isAdSenseConfigured() && !import.meta.env.DEV;
 }
 
 /** Shows Google test ads (use only to verify markup while the account is new). */

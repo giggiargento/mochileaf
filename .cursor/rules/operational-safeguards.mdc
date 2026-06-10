@@ -12,6 +12,7 @@ alwaysApply: true
 - **Never delete** `public/ads.txt` or remove the generate step from `npm run dev` / `npm run build`.
 - **Headers:** `vercel.json` must keep `Content-Type: text/plain` for `/ads.txt`.
 - After AdSense changes, run `npm run ads:verify` (checks https://mochileaf.com/ads.txt).
+- **Display toggle:** `ADSENSE_ENABLED` in `src/data/adsense.ts` (or `PUBLIC_ADSENSE_ENABLED` env). When false, hide all ad UI and skip AdSense scripts; keep `ads.txt` and config in place.
 
 ## Article cover images
 

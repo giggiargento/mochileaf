@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Goldie is a normal dog villager in the who appears in all games to date. Her name is likely derived from the, a breed of dog which she bears a resemblance to. Her catchphrase is onomatopoeia of a dog's bark, relating to her species.",
-    "appearance": "Goldie is a golden dog that resembles a Golden Retriever, hence her name. She has a few darker patches of beige on her muzzle, paws, feet, tail, and ears, as well as a beige spot on her left eye. Her eyes are oblong with brown sclera and white pupils.",
-    "personality": "Goldie has a normal personality, meaning that she is friendly and motherly towards the player, asking what she can do to help them often. She also enjoys the usual hobbies, though she feels neutral about them, hence her personality name. When asking the player for favors, Goldie often feels bad asking the player to do so, as she is sensitive and easily gets sad, although she rarely gets angry. She gets along with most villagers, except those who are cranky, and sometimes even snooty. Most normal villagers take a moderate amount of time to befriend, and the player must be patient in attempting to receive her picture. She wakes up at 5 AM like other normal villagers, and goes to sleep at 1 AM. At a point she will want to collect clothing, so she will ask the player to try and find a certain piece of clothing, as some villagers do the same. The player may also receive her picture if they do this many times.",
+    "appearance": "Goldie resembles a Golden Retriever in villager form — golden fur with beige patches on muzzle, paws, feet, tail, and ears, plus a beige spot by her left eye. Her eyes are oblong, brown around the sclera with bright white pupils.",
+    "personality": "Goldie's normal kindness feels motherly — she asks how she can help and means it. Hobbies interest her without obsession; she stays neutral and gentle about fishing, fashion, or furniture. Favors make her anxious to impose; she apologizes for asking and rarely angers, though sadness comes easily. Cranky villagers test her patience; snooty neighbors can too. Friendship takes patience — photos and close trust arrive after many kind visits. She rises at five in the morning and sleeps at one, early bird in every sense. Like many normal villagers she may request specific clothing to collect, rewarding loyal helpers with her picture over time. Her sensitivity is the through-line: a golden dog who wants everyone comfortable, even when that means swallowing her own worry.",
     "villagerInfo": {
       "birthday": "December 27",
       "starSign": "Capricorn",
@@ -131,6 +131,7 @@
       "birthday": "December 27",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/317_Goldie_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Goldie"
+    "sourceUrl": "https://nookipedia.com/wiki/Goldie",
+    "proseStatus": "original"
   }
 }

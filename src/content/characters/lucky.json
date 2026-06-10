@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Lucky is a lazy dog villager in the who appears in all games to date. His name is ironic, given how his appearance makes him resemble an injured person wrapped in bandages.",
-    "appearance": "Lucky is a black dog wrapped in white bandages, which gives the look of a full body cast and makes him resemble a mummy. He has a glowing yellow left eye, which can be seen through his bandages alongside his ears and tail.",
-    "personality": "As a lazy villager, Lucky has a relaxed, laid-back lifestyle and will appear friendly toward the player. He often talks about food and is humorous or naïve during conversations. During conversations with other villagers, he generally gets along well with peppy, smug, and cranky villagers, while snooty and jock villagers may not get along with him due to their conflicting lifestyles. In, Lucky goes to sleep at 11 PM and wakes up at 8 AM.",
+    "appearance": "Lucky is a black dog wrapped in white bandages like a full-body cast, mummy-soft and slightly uncanny. A glowing yellow left eye shines through the wrappings, with ears and tail peeking out the same pale wrap.",
+    "personality": "Lucky's lazy calm makes him instantly approachable — food jokes, gentle naivete, and unhurried friendship that never feels performative. Peppy, smug, and cranky villagers usually mesh with his humor; snooty and jock personalities may clash with his slow lifestyle and love of rest. He sleeps at eleven and wakes at eight, bandaged and unbothered, glowing yellow eye steady through every season.",
     "villagerInfo": {
       "birthday": "November 4",
       "starSign": "Scorpio",
@@ -126,6 +126,7 @@
       "birthday": "November 4",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/385_Lucky_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Lucky"
+    "sourceUrl": "https://nookipedia.com/wiki/Lucky",
+    "proseStatus": "original"
   }
 }

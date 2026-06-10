@@ -95,6 +95,8 @@ export const acnhDetailsSchema = z
     intro: optionalText,
     appearance: optionalText,
     personality: optionalText,
+    /** Required when appearance/personality are set on publishable characters. */
+    proseStatus: z.enum(['original']).optional(),
     villagerInfo: acnhVillagerInfoSchema.optional(),
     house: acnhHouseSchema.optional(),
     languages: z

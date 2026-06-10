@@ -27,8 +27,8 @@
     "Cat"
   ],
   "acnh": {
-    "appearance": "Lolly in.\nLolly is a blue-gray tabby cat with a big round head and no visible nose. She has black ears and black stripes on her arms, tail, and ears, as well as her head sides, back, and top; they were changed to look more dark gray in New Horizons. The inside of her ears are pink and light pink. Her paws are tipped white, and her muzzle is white and circular. She has a \"3\" shaped mouth, and her eyes resemble the number 6. When she looks up, her eyes resemble the number 9.",
-    "personality": "Like most normal or \"sweet\" villagers, Lolly will be very sensitive and kind. She will be easily upset or offended by other villagers, particularly lazy or cranky villagers. She enjoys the usual hobbies, which are fashion, bug catching, fishing, and furniture. As with all other villagers, she will enjoy the player's company at her house where she may tell the player to \"ignore the mess\", a concern she shares with other normal villagers. She will get along well with other normal villagers and peppy villagers, appearing mother-like in conversation.",
+    "appearance": "Lolly is a blue-gray tabby with a big round head and no visible nose — black ears, stripes along arms, tail, head sides, back, and top, softened to dark gray in New Horizons. Pink and light pink fill her inner ears; white tips her paws and a circular white muzzle. Her mouth forms a tiny three; eyes echo the number six, flipping to nines when she looks up toward the sky above her.",
+    "personality": "Lolly's normal sweetness runs sensitive — kind, easily hurt by lazy or cranky teasing, devoted to fashion, bugs, fish, and furniture hobbies that keep her gently busy. She welcomes visitors though she may ask you to ignore clutter she alone sees, sharing that worry with other normal neighbors who fuss over tidiness. Peppy and normal villagers get motherly warmth from her; patience and gentle talk earn a loyal, soft-spoken friend who rarely stays angry long.",
     "villagerInfo": {
       "birthday": "March 27",
       "starSign": "Aries",
@@ -128,6 +128,7 @@
       "birthday": "March 27",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/333_Lolly_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Lolly"
+    "sourceUrl": "https://nookipedia.com/wiki/Lolly",
+    "proseStatus": "original"
   }
 }

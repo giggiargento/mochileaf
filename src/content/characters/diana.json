@@ -28,8 +28,8 @@
     "Deer"
   ],
   "acnh": {
-    "appearance": "Diana is a white deer with pink cheeks. She also has pinkish-purple hair and a black nose. Her hooves are pink with light blue rings at the cuffs. The inside of her ears are light blue and have the same pinkish-purple color around the edges. Her ears also have pink tips.",
-    "personality": "Diana is a snooty villager, and will first appear rude and arrogant towards the player, often talking about herself and her own experiences, but will be nice and pleasurable if the conversation is mature and non-insulting. She may also talk about the style and appearance of other villagers, usually other female villagers such as normal, peppy, big sister, and other snooty villagers. Diana will soon warm up to the player, confiding in them about her own personal feelings but still keeping subtly rude. She will find it hard to get along with other villagers, specifically jock and lazy villagers who have conflicting lifestyles compared to her own. She may get on with cranky villagers, who also enjoy gossiping about the appearance and lifestyles of others, as well as smug villagers, who share a love and knowledge for fashion.",
+    "appearance": "Diana is a pale deer with pink cheeks, pinkish-purple hair, and a black nose that anchors her refined face. Her hooves blush pink with pale blue cuffs; inner ears wash light blue with the same purple at the edges, and pink tips finish each ear like careful makeup.",
+    "personality": "Diana's snooty polish shows up as confidence that can sound rude before friendship forms — talk turns to her experiences, her look, her standards. Mature, non-insulting conversation earns warmer replies; she may still comment on other villagers' fashion, especially among normal, peppy, big sister, and snooty neighbors. Jocks and lazy villagers clash with her lifestyle, stirring anger or discomfort when food and fitness dominate chat. Cranky and smug types share gossip and style talk she appreciates, swapping notes on appearances and habits with relish. Over time she confides personal feelings while keeping a subtle edge — elegance with a sharp tongue never fully filed down, though trusted neighbors hear a softer Diana beneath the poise.",
     "villagerInfo": {
       "birthday": "January 4",
       "starSign": "Capricorn",
@@ -129,6 +129,7 @@
       "birthday": "January 4",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/089_Diana_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Diana"
+    "sourceUrl": "https://nookipedia.com/wiki/Diana",
+    "proseStatus": "original"
   }
 }

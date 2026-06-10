@@ -29,8 +29,8 @@
   ],
   "acnh": {
     "intro": "Ketchup is a peppy duck villager in the. After her debut in, she would remain absent from the series until. Her name comes from, a condiment made from tomatoes, which references her tomato-like appearance. Her favorite saying also refers to her appearance.",
-    "appearance": "Ketchup in.\nKetchup is a red duck that appears similar to a tomato, hence her name. She possesses an orange beak, orange cheeks, black legs and green hair that has the appearance of leaves on her forehead. Her stomach and the tips of her wings are yellow and lime green colored.",
-    "personality": "As a peppy villager, Ketchup will appear cheerful and friendly. To some people, she can appear rude. She has a short attention span and may have the tendency to overreact about small things. She will be easy to befriend, taking comfort in those she talks to most. She may, however, feel insulted when talking to snooty or cranky villagers, who may gossip about her or disagree with her style. She gives out comfort to jocks, who are the equivalent to the peppy villagers, along with other peppy villagers. She also gets along well with lazy, big sister and smug villagers.",
+    "appearance": "Ketchup is a tomato-red duck — orange beak and cheeks, black legs, and green leaf-like hair above a yellow belly with lime-green wing tips. Every line of her design reads picnic-sweet, from seasonings to stem, name and silhouette aligned like a farm-stand label.",
+    "personality": "Ketchup sparkles with peppy cheer, easy friendship, and bursts of emotion over small things that fade as quickly as they flare. Snooty and cranky barbs sting; she may feel insulted when fashion or gossip turns sharp. Lazy neighbors can feel awkward in conversation, while jocks, smug villagers, big sister types, and fellow peppy neighbors keep her bouncing with shared energy. Short memory for slights, long memory for kindness — she settles quickly into the villagers she trusts and rewards them with gifts and compliments.",
     "villagerInfo": {
       "birthday": "July 27",
       "starSign": "Leo",
@@ -124,6 +124,7 @@
         "romanization": "Ketchup"
       }
     ],
-    "sourceUrl": "https://nookipedia.com/wiki/Ketchup"
+    "sourceUrl": "https://nookipedia.com/wiki/Ketchup",
+    "proseStatus": "original"
   }
 }

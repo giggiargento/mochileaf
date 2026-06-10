@@ -28,8 +28,8 @@
     "Dog"
   ],
   "acnh": {
-    "appearance": "Cherry is a red dog with teal eyes. She has a gray circle around her left eye. She has black ears and a purple nose. Her left ear has white markings around them that appear to be earrings. She also has red arms and a red tail, and black paws, torso and legs. She has six eyelashes on each eye: three on the top, and three on the bottom. Her resting mouth expression is a smile that is curved to her left.",
-    "personality": "Cherry is a big sister villager, meaning she is very caring, tomboyish and proactive. At times, she is quite blunt, not afraid of sharing her own opinion and speaking her mind. She is very concerned about the player, treating them like her little sibling, as she often gives the player advice about numerous things. Cherry is very versatile and has many hobbies, causing her to get along with most villagers, such as jock and lazy villagers. Snooty and cranky villagers, however, have a hard time conversing with her due to their hobby of gossiping and spreading rumors about others which she dislikes.",
+    "appearance": "Cherry is a bold red dog with teal eyes and a gray ring around her left one. Black ears frame a purple nose; white markings on her left ear read like stud earrings. Her torso and legs run black against red arms and tail, with black paws anchoring the look. Six lashes line each eye — three above, three below — and her smile curves slightly to the left even at rest.",
+    "personality": "Cherry brings big-sister energy — protective, blunt, and ready with advice whether you asked or not. She treats the player like a younger sibling, offering tips on everything from gifts to island etiquette. Gossip and rumor-mongering rub her wrong; snooty and cranky villagers who trade in that talk get short shrift. Jocks and lazy neighbors fit her easygoing hobbies, and most villagers find her tomboy warmth approachable. She speaks her mind without much filter, but the care underneath is genuine.",
     "villagerInfo": {
       "birthday": "May 11",
       "starSign": "Taurus",
@@ -132,6 +132,7 @@
       "birthday": "May 11",
       "image": "https://nookipedia.com/wiki/Special:Redirect/file/077_Cherry_amiibo_card_NA.png"
     },
-    "sourceUrl": "https://nookipedia.com/wiki/Cherry"
+    "sourceUrl": "https://nookipedia.com/wiki/Cherry",
+    "proseStatus": "original"
   }
 }
