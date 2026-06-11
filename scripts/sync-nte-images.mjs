@@ -12,6 +12,9 @@ const BASE = path.join(ROOT, 'public', 'images', 'games', 'neverness-to-everness
 const CHARS = path.join(BASE, 'characters');
 const USER_AGENT = 'Mochileaf/1.0 (fan site; local asset sync)';
 
+/** nteguide.com serves wrong art for these slugs — keep repo copies. */
+const PORTRAITS_SKIP_SYNC = new Set(['daffodil', 'jiuyuan', 'hathor', 'baicang']);
+
 const PORTRAITS = [
   'nanally',
   'sakiri',
@@ -70,6 +73,10 @@ async function tryDownload(url, dest) {
 export async function syncNevernessToEverness() {
   console.log('Neverness to Everness — portraits (nteguide.com paths)…');
   for (const slug of PORTRAITS) {
+    if (PORTRAITS_SKIP_SYNC.has(slug)) {
+      console.log(`  skip ${slug}.webp — pinned in repo (nteguide mismatch)`);
+      continue;
+    }
     const remote = `https://nteguide.com/images/characters/${slug}.webp`;
     await tryDownload(remote, path.join(CHARS, `${slug}.webp`));
   }
