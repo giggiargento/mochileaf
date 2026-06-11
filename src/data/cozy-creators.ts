@@ -16,7 +16,7 @@ const SOURCES: CreatorSource[] = [
   {
     slug: 'giggiland',
     instagram: 'giggiland',
-    nameFallback: 'Giggi',
+    nameFallback: 'Giggi シシランド',
     linkLabel: 'Follow on Instagram',
     accent: 'sage',
     featured: true,
