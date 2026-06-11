@@ -133,6 +133,23 @@ function decodeJsonString(s) {
   return s.replace(/\\u0026/g, '&').replace(/\\"/g, '"').replace(/\\\//g, '/').replace(/&amp;/g, '&');
 }
 
+function decodeHtmlEntities(s) {
+  return decodeJsonString(s)
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, num) => String.fromCodePoint(parseInt(num, 10)))
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"');
+}
+
+function parseOgTitle(title) {
+  const decoded = decodeHtmlEntities(title).trim();
+  const beforeHandle = decoded.match(/^(.+?)\s*\(@/);
+  if (beforeHandle?.[1]) return beforeHandle[1].trim();
+  const beforeBullet = decoded.split(/\s*[•|]\s*/)[0]?.trim();
+  return beforeBullet || decoded;
+}
+
 function extractFromPageHtml(html) {
   const og =
     html.match(/property="og:image" content="([^"]+)"/i) ||
@@ -148,11 +165,7 @@ function extractFromPageHtml(html) {
   const title =
     html.match(/property="og:title" content="([^"]+)"/i)?.[1] ||
     html.match(/content="([^"]+)" property="og:title"/i)?.[1];
-  let name = '';
-  if (title) {
-    const m = decodeJsonString(title).match(/^(.+?)\s*\(@/);
-    name = (m?.[1] ?? title.split('|')[0]).trim();
-  }
+  const name = title ? parseOgTitle(title) : '';
 
   return { profilePicUrl, name };
 }

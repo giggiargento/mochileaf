@@ -35,6 +35,13 @@ const SOURCES: CreatorSource[] = [
     linkLabel: 'Follow on Instagram',
     accent: 'lavender',
   },
+  {
+    slug: 'sadgirltypes',
+    instagram: 'sadgirltypes',
+    nameFallback: 'sad girl',
+    linkLabel: 'Follow on Instagram',
+    accent: 'mist',
+  },
 ];
 
 type LiveEntry = {

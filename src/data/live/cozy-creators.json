@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-05-28T00:00:00.000Z",
+  "updatedAt": "2026-06-11T02:40:39.381Z",
   "creators": {
     "giggiland": {
       "slug": "giggiland",
       "handle": "giggiland",
       "name": "Giggi",
       "image": "/images/creators/giggiland.jpg",
-      "syncedAt": "2026-05-28T00:00:00.000Z",
+      "syncedAt": "2026-06-11T02:40:31.151Z",
       "source": "instagram-page"
     },
     "cozyquartzz": {
@@ -14,7 +14,7 @@
       "handle": "cozyquartzz",
       "name": "courtney ₊˚✩",
       "image": "/images/creators/cozyquartzz.jpg",
-      "syncedAt": "2026-05-26T00:00:00.000Z",
+      "syncedAt": "2026-06-11T02:40:33.357Z",
       "source": "instagram-page"
     },
     "madisons-horizons": {
@@ -22,7 +22,15 @@
       "handle": "madisons.horizons",
       "name": "Madison's Horizons",
       "image": "/images/creators/madisons-horizons.jpg",
-      "syncedAt": "2026-05-28T00:00:00.000Z",
+      "syncedAt": "2026-06-11T02:40:35.610Z",
+      "source": "instagram-page"
+    },
+    "sadgirltypes": {
+      "slug": "sadgirltypes",
+      "handle": "sadgirltypes",
+      "name": "sad girl",
+      "image": "/images/creators/sadgirltypes.jpg",
+      "syncedAt": "2026-06-11T02:40:37.872Z",
       "source": "instagram-page"
     }
   }
